@@ -1,8 +1,6 @@
 import { Users, Target, Heart } from "lucide-react";
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-card">
+  return <section id="about" className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
@@ -19,9 +17,7 @@ const About = () => {
             <p className="text-lg leading-relaxed mb-6">
               Nossa equipe é formada por 21 colaboradores dedicados, distribuídos em 11 setores especializados, todos comprometidos em oferecer um atendimento humanizado e personalizado. Acreditamos que cada cliente tem uma história única e merece atenção individualizada.
             </p>
-            <p className="text-lg leading-relaxed mb-6">
-              Fundado pelo Dr. Thiago Cantarelli e pela Dra. Izabela Farias, nosso escritório se destaca pela ética, transparência e resultados comprovados, com mais de 9.200 processos protocolados ao longo de nossa trajetória.
-            </p>
+            <p className="text-lg leading-relaxed mb-6">Fundado pelo Dr. Thiago Cantarelli e direcionado juntamente com a Dra. Izabela Farias , nosso escritório se destaca pela ética, transparência e resultados comprovados ao longo de nossa trajetória.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mt-16">
@@ -35,7 +31,9 @@ const About = () => {
               </p>
             </div>
 
-            <div className="text-center animate-slide-up" style={{ animationDelay: "0.1s" }}>
+            <div className="text-center animate-slide-up" style={{
+            animationDelay: "0.1s"
+          }}>
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-primary" />
               </div>
@@ -45,7 +43,9 @@ const About = () => {
               </p>
             </div>
 
-            <div className="text-center animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            <div className="text-center animate-slide-up" style={{
+            animationDelay: "0.2s"
+          }}>
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-primary" />
               </div>
@@ -57,8 +57,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
