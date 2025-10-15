@@ -20,7 +20,7 @@ const Hero = () => {
             <span className="text-sm font-body text-foreground">4.9 estrelas no Google</span>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-display mb-6 leading-tight font-extrabold text-slate-600 lg:text-7xl">Especialistas em Direito Pr evidenciário
+          <h1 className="text-5xl md:text-6xl font-display mb-6 leading-tight font-extrabold text-slate-600 lg:text-7xl">Especialistas em Direito Previdenciário
         </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground font-body mb-8 leading-relaxed">Transformando conhecimento jurídico em amparo real.
