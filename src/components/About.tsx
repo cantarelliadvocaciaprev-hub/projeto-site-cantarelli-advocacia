@@ -118,7 +118,7 @@ const About = () => {
                 <img 
                   src={izabelaFarias}
                   alt="Dra. Izabela Farias"
-                  className="w-full h-80 object-cover rounded-lg mb-4"
+                  className="w-full h-80 object-cover object-top rounded-lg mb-4"
                 />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dra. Izabela Farias
