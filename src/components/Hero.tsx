@@ -24,7 +24,7 @@ const Hero = () => {
             Especialistas em Direito Previdenciário
           </h1>
           
-          <p className="text-xl md:text-2xl text-foreground/80 font-body mb-8 leading-relaxed">
+          <p className="text-xl text-foreground/80 font-body mb-8 leading-relaxed text-left font-normal md:text-lg">
             Transformando conhecimento jurídico em amparo real. Com equipe altamente qualificada, unimos técnica, estratégia e empatia para proteger o presente e garantir o futuro de quem confia em nós.
           </p>
 

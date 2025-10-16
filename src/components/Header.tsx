@@ -47,7 +47,7 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <button onClick={() => scrollToSection("home")} className="flex items-center gap-2">
-            <img src={logo} alt="Cantarelli Advocacia" className="h-6 w-auto" />
+            <img src={logo} alt="Cantarelli Advocacia" className="h-10 w-auto" />
           </button>
 
           {/* Desktop Menu */}
