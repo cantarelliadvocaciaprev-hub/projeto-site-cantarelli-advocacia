@@ -62,9 +62,9 @@ const About = () => {
           {/* Biografias dos Fundadores */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {/* Dr. Thiago Cantarelli */}
-            <div className="bg-background p- shadow-md animate-fade-in rounded">
-              <div className="mb-6">
-                <img src={thiagoCantarelli} alt="Dr. Thiago Cantarelli" className="w-full h-80 object-cover rounded-lg mb-4" />
+            <div className="bg-background p-8 rounded-lg shadow-md animate-fade-in">
+              <div className="mb-4 ">
+                <img src={thiagoCantarelli} alt="Dr. Thiago Cantarelli" className="min-w-full h-80 object-cover object-center rounded-lg mb-4" />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dr. Thiago Cantarelli
                 </h3>
@@ -94,7 +94,7 @@ const About = () => {
             animationDelay: "0.1s"
           }}>
               <div className="mb-0">
-                <img src={izabelaFarias} alt="Dra. Izabela Farias" className="min-w-full h-80 object-cover object-top rounded-lg mb-4" />
+                <img src={izabelaFarias} alt="Dra. Izabela Farias" className="min-w-full h-80 object-cover object-center rounded-lg mb-4" />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dra. Izabela Farias
                 </h3>
