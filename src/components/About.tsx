@@ -13,14 +13,19 @@ import gallery2 from "@/assets/gallery/IMG_7271.jpg";
 import gallery3 from "@/assets/gallery/IMG_7426.jpg";
 import gallery4 from "@/assets/gallery/IMG_7821.jpg";
 import gallery5 from "@/assets/gallery/IMG_8484.jpg";
-import gallery6 from "@/assets/gallery/office-1.jpg";
-import gallery7 from "@/assets/gallery/office-2.jpg";
-import gallery8 from "@/assets/gallery/office-3.jpg";
+import gallery6 from "@/assets/gallery/IMG_8660.jpg";
+import gallery7 from "@/assets/gallery/IMG_8771.jpg";
+import gallery8 from "@/assets/gallery/IMG_8698.jpg";
+import gallery9 from "@/assets/gallery/office-1.jpg";
+import gallery10 from "@/assets/gallery/office-2.jpg";
+import gallery11 from "@/assets/gallery/office-3.jpg";
+import thiagoCantarelli from "@/assets/team/thiago-cantarelli.jpg";
+import izabelaFarias from "@/assets/team/izabela-farias.jpg";
 
 const About = () => {
   const galleryImages = [
-    gallery6, gallery7, gallery8, gallery1, gallery2, 
-    gallery3, gallery4, gallery5
+    gallery1, gallery2, gallery3, gallery4, gallery5,
+    gallery6, gallery7, gallery8, gallery9, gallery10, gallery11
   ];
 
   const sectors = [
@@ -79,7 +84,7 @@ const About = () => {
             <div className="bg-background p-8 rounded-lg shadow-md animate-fade-in">
               <div className="mb-6">
                 <img 
-                  src={gallery4}
+                  src={thiagoCantarelli}
                   alt="Dr. Thiago Cantarelli"
                   className="w-full h-80 object-cover rounded-lg mb-4"
                 />
@@ -111,7 +116,7 @@ const About = () => {
             <div className="bg-background p-8 rounded-lg shadow-md animate-fade-in" style={{ animationDelay: "0.1s" }}>
               <div className="mb-6">
                 <img 
-                  src={gallery3}
+                  src={izabelaFarias}
                   alt="Dra. Izabela Farias"
                   className="w-full h-80 object-cover rounded-lg mb-4"
                 />
