@@ -113,7 +113,7 @@ const About = () => {
             animationDelay: "0.1s"
           }}>
               <div className="mb-0">
-                <img src={izabelaFarias} alt="Dra. Izabela Farias" className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover object-top rounded-lg mb-4" />
+                <img src={izabelaFarias} alt="Dra. Izabela Farias" className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover object-center rounded-lg mb-4" />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dra. Izabela Farias
                 </h3>
