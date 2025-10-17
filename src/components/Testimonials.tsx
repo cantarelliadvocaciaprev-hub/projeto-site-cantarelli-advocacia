@@ -1,5 +1,6 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const Testimonials = () => {
   const testimonials = [
@@ -25,6 +26,18 @@ const Testimonials = () => {
       text: "O planejamento previdenciário me ajudou a entender exatamente quando e como me aposentar melhor.",
       author: "Carlos Mendes",
       location: "Recife, PE",
+      rating: 5,
+    },
+    {
+      text: "Equipe extremamente preparada e dedicada. Consegui minha aposentadoria especial com o apoio deles!",
+      author: "Roberto Lima",
+      location: "Recife, PE",
+      rating: 5,
+    },
+    {
+      text: "Transparência e honestidade em cada etapa do processo. Super recomendo!",
+      author: "Fernanda Costa",
+      location: "Paulista, PE",
       rating: 5,
     },
   ];
@@ -68,14 +81,26 @@ const Testimonials = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
           <a
             href="https://g.page/r/CRjPlDrLjgBcEAE/review"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-primary/80 font-body underline"
           >
-            Ver mais avaliações no Google
+            <Button variant="outline" className="gap-2">
+              <ExternalLink className="w-4 h-4" />
+              Ver mais avaliações no Google
+            </Button>
+          </a>
+          <a
+            href="https://g.page/r/CRjPlDrLjgBcEAE/review"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="gap-2 bg-primary hover:bg-primary/90">
+              <Star className="w-4 h-4" />
+              Avaliar no Google
+            </Button>
           </a>
         </div>
       </div>

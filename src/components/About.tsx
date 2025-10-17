@@ -13,10 +13,14 @@ import gallery8 from "@/assets/gallery/IMG_8698.jpg";
 import gallery9 from "@/assets/gallery/office-1.jpg";
 import gallery10 from "@/assets/gallery/office-2.jpg";
 import gallery11 from "@/assets/gallery/office-3.jpg";
+import gallery12 from "@/assets/gallery/IMG_7349.jpg";
+import gallery13 from "@/assets/gallery/IMG_8009.jpg";
+import gallery14 from "@/assets/gallery/IMG_8585.jpg";
+import gallery15 from "@/assets/gallery/IMG_8799.jpg";
 import thiagoCantarelli from "@/assets/team/thiago-cantarelli.jpg";
 import izabelaFarias from "@/assets/team/izabela-farias.jpg";
 const About = () => {
-  const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11];
+  const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15];
   const sectors = ["Marketing", "Comercial", "Recepção", "Atendimento", "Inicial", "Gestão", "Administração", "Controladoria", "Prazos", "Suporte Digital", "Financeiro"];
   return <section id="about" className="py-20 bg-card">
       <div className="container mx-auto px-4">
@@ -31,16 +35,35 @@ const About = () => {
             </p>
           </div>
 
+          {/* Texto Institucional */}
+          <div className="prose prose-lg max-w-none mb-12 text-foreground font-body">
+            <p className="text-lg leading-relaxed mb-6">
+              <strong>Desde 2008</strong>, a Cantarelli Advocacia transforma histórias através do Direito Previdenciário. Fundado pelo Dr. Thiago Cantarelli com a missão de garantir dignidade e amparo jurídico aos trabalhadores brasileiros, o escritório nasceu da convicção de que cada pessoa merece ter seus direitos respeitados e sua contribuição reconhecida.
+            </p>
+            <p className="text-lg leading-relaxed mb-6">
+              Ao longo de mais de <strong>17 anos de atuação</strong>, construímos uma trajetória marcada por conquistas significativas: mais de <strong>5.800 processos protocolados</strong> desde 2018, <strong>3.100 clientes ativos</strong> e <strong>2.900 direitos assegurados</strong>. Cada número representa uma vida transformada, uma família amparada, um futuro garantido.
+            </p>
+            <p className="text-lg leading-relaxed mb-6">
+              Dirigido pelo Dr. Thiago Cantarelli e pela Dra. Izabela Farias, nosso escritório cresceu de forma sólida e humanizada. Nossa equipe é formada por <strong>21 colaboradores dedicados</strong>, distribuídos em <strong>11 setores especializados</strong>, todos unidos pelo compromisso com a excelência técnica e o atendimento personalizado.
+            </p>
+            <p className="text-lg leading-relaxed mb-6">
+              Nos destacamos pela <strong>ética, transparência e resultados comprovados</strong>. Somos referência no Nordeste em planejamento previdenciário, revisões de benefícios, conquista de aposentadorias e defesa de direitos junto ao INSS. Acreditamos que cada cliente tem uma história única e merece atenção individualizada - por isso, tratamos cada caso com o cuidado e a dedicação que ele merece.
+            </p>
+          </div>
+
           {/* Galeria de Imagens */}
           <div className="mb-16">
-            <Carousel className="w-full max-w-5xl mx-auto" opts={{
-            align: "start",
-            loop: true
-          }}>
-              <CarouselContent>
-                {galleryImages.map((image, index) => <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-2">
-                      <img src={image} alt={`Cantarelli Advocacia - Escritório ${index + 1}`} className="w-full h-64 object-cover rounded-lg shadow-md" />
+            <Carousel 
+              className="w-full max-w-5xl mx-auto" 
+              opts={{
+                align: "start",
+                loop: true
+              }}
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <img src={image} alt={`Cantarelli Advocacia - Escritório ${index + 1}`} className="w-full h-80 object-cover rounded-lg shadow-md" />
                     </div>
                   </CarouselItem>)}
               </CarouselContent>
@@ -49,22 +72,12 @@ const About = () => {
             </Carousel>
           </div>
 
-          {/* Texto Institucional */}
-          <div className="prose prose-lg max-w-none mb-12 text-foreground font-body">
-            <p className="text-lg leading-relaxed mb-6">
-              Nossa equipe é formada por 21 colaboradores dedicados, distribuídos em 11 setores especializados, todos comprometidos em oferecer um atendimento humanizado e personalizado. Acreditamos que cada cliente tem uma história única e merece atenção individualizada.
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              Fundado pelo Dr. Thiago Cantarelli e direcionado juntamente com a Dra. Izabela Farias, nosso escritório se destaca pela ética, transparência e resultados comprovados ao longo de sua trajetória.
-            </p>
-          </div>
-
           {/* Biografias dos Fundadores */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {/* Dr. Thiago Cantarelli */}
             <div className="bg-background p-8 rounded-lg shadow-md animate-fade-in">
-              <div className="mb-4 ">
-                <img src={thiagoCantarelli} alt="Dr. Thiago Cantarelli" className="min-w-full h-80 object-cover object-center rounded-lg mb-4" />
+              <div className="mb-4">
+                <img src={thiagoCantarelli} alt="Dr. Thiago Cantarelli" className="w-full h-80 object-cover rounded-lg mb-4" />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dr. Thiago Cantarelli
                 </h3>
@@ -157,10 +170,17 @@ const About = () => {
           {/* Setores do Escritório */}
           <div className="text-center">
             <h3 className="text-2xl font-display font-bold text-foreground mb-6">Nossos Setores</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {sectors.map((sector, index) => <span key={index} className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-body hover:bg-primary/20 transition-colors">
-                  {sector}
-                </span>)}
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex flex-wrap justify-center gap-3">
+                {sectors.slice(0, 6).map((sector, index) => <span key={index} className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-body hover:bg-primary/20 transition-colors">
+                    {sector}
+                  </span>)}
+              </div>
+              <div className="flex flex-wrap justify-center gap-3">
+                {sectors.slice(6).map((sector, index) => <span key={index + 6} className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-body hover:bg-primary/20 transition-colors">
+                    {sector}
+                  </span>)}
+              </div>
             </div>
           </div>
         </div>

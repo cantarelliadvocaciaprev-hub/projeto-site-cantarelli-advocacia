@@ -46,16 +46,14 @@ const Contact = () => {
                     Tel: (81) 3049-3799<br />
                     WhatsApp: (81) 98342-1727
                   </p>
-                  <a
-                    href="https://wa.me/5581983421727"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => window.open("https://wa.me/5581988884914?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.", "_blank")}
                     className="inline-block mt-2"
                   >
                     <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                       Chamar no WhatsApp
                     </Button>
-                  </a>
+                  </button>
                 </div>
               </div>
 

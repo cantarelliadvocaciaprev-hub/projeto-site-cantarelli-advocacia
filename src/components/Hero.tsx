@@ -29,7 +29,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button onClick={scrollToContact} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6">
+            <Button 
+              onClick={() => window.open("https://wa.me/5581988884914?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.", "_blank")} 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
+            >
               Agende seu atendimento
             </Button>
             <Button onClick={() => document.getElementById("about")?.scrollIntoView({
@@ -39,7 +43,7 @@ const Hero = () => {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="flex items-center gap-3 bg-card p-6 rounded-lg shadow-sm border border-border">
               <Shield className="w-12 h-12 text-primary flex-shrink-0" />
               <div>
@@ -52,6 +56,13 @@ const Hero = () => {
               <div>
                 <p className="text-3xl font-display font-bold text-primary">+2.900</p>
                 <p className="text-muted-foreground font-body">direitos assegurados</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 bg-card p-6 rounded-lg shadow-sm border border-border sm:col-span-2 lg:col-span-1">
+              <Shield className="w-12 h-12 text-primary flex-shrink-0" />
+              <div>
+                <p className="text-3xl font-display font-bold text-primary">+5.800</p>
+                <p className="text-muted-foreground font-body">processos protocolados</p>
               </div>
             </div>
           </div>

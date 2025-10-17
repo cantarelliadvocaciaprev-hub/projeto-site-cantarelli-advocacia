@@ -37,8 +37,8 @@ const Header = () => {
     label: "Depoimentos",
     id: "testimonials"
   }, {
-    label: "Blog",
-    id: "blog"
+    label: "FAQ",
+    id: "faq"
   }, {
     label: "Contato",
     id: "contact"
@@ -60,7 +60,10 @@ const Header = () => {
           </ul>
 
           <div className="hidden lg:block">
-            <Button onClick={() => scrollToSection("contact")} className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button 
+              onClick={() => window.open("https://wa.me/5581988884914?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.", "_blank")} 
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
               Agende seu atendimento
             </Button>
           </div>
@@ -80,7 +83,10 @@ const Header = () => {
                   </button>
                 </li>)}
               <li>
-                <Button onClick={() => scrollToSection("contact")} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button 
+                  onClick={() => window.open("https://wa.me/5581988884914?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.", "_blank")} 
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                >
                   Agende seu atendimento
                 </Button>
               </li>
