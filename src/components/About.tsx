@@ -36,25 +36,9 @@ const About = () => {
             </p>
           </div>
 
-          {/* Texto Institucional */}
-          <div className="prose prose-lg max-w-none mb-12 text-foreground font-body">
-            <p className="text-lg leading-relaxed mb-6">
-              <strong>Desde 2008</strong>, a Cantarelli Advocacia transforma histórias através do Direito Previdenciário. Fundado pelo Dr. Thiago Cantarelli com a missão de garantir dignidade e amparo jurídico aos trabalhadores brasileiros, o escritório nasceu da convicção de que cada pessoa merece ter seus direitos respeitados e sua contribuição reconhecida.
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              Ao longo de mais de <strong>17 anos de atuação</strong>, construímos uma trajetória marcada por conquistas significativas: mais de <strong>5.800 processos protocolados</strong> desde 2018, <strong>3.100 clientes ativos</strong> e <strong>2.900 direitos assegurados</strong>. Cada número representa uma vida transformada, uma família amparada, um futuro garantido.
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              Dirigido pelo Dr. Thiago Cantarelli e pela Dra. Izabela Farias, nosso escritório cresceu de forma sólida e humanizada. Nossa equipe é formada por <strong>21 colaboradores dedicados</strong>, distribuídos em <strong>11 setores especializados</strong>, todos unidos pelo compromisso com a excelência técnica e o atendimento personalizado.
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              Nos destacamos pela <strong>ética, transparência e resultados comprovados</strong>. Somos referência no Nordeste em planejamento previdenciário, revisões de benefícios, conquista de aposentadorias e defesa de direitos junto ao INSS. Acreditamos que cada cliente tem uma história única e merece atenção individualizada - por isso, tratamos cada caso com o cuidado e a dedicação que ele merece.
-            </p>
-          </div>
-
           {/* Galeria de Imagens */}
-          <div className="mb-16">
-            <Carousel 
+          <div className="mb-12">
+            <Carousel
               className="w-full max-w-5xl mx-auto" 
               opts={{
                 align: "start",
@@ -76,6 +60,22 @@ const About = () => {
               <CarouselPrevious />
               <CarouselNext />
             </Carousel>
+          </div>
+
+          {/* Texto Institucional */}
+          <div className="prose prose-lg max-w-none mb-16 text-foreground font-body">
+            <p className="text-lg leading-relaxed mb-6">
+              <strong>Desde 2008</strong>, a Cantarelli Advocacia transforma histórias através do Direito Previdenciário. Fundado pelo Dr. Thiago Cantarelli com a missão de garantir dignidade e amparo jurídico aos trabalhadores brasileiros, o escritório nasceu da convicção de que cada pessoa merece ter seus direitos respeitados e sua contribuição reconhecida.
+            </p>
+            <p className="text-lg leading-relaxed mb-6">
+              Ao longo de mais de <strong>17 anos de atuação</strong>, construímos uma trajetória marcada por conquistas significativas: mais de <strong>5.800 processos protocolados</strong> desde 2018, <strong>3.100 clientes ativos</strong> e <strong>2.900 direitos assegurados</strong>. Cada número representa uma vida transformada, uma família amparada, um futuro garantido.
+            </p>
+            <p className="text-lg leading-relaxed mb-6">
+              Dirigido pelo Dr. Thiago Cantarelli e pela Dra. Izabela Farias, nosso escritório cresceu de forma sólida e humanizada. Nossa equipe é formada por <strong>21 colaboradores dedicados</strong>, distribuídos em <strong>11 setores especializados</strong>, todos unidos pelo compromisso com a excelência técnica e o atendimento personalizado.
+            </p>
+            <p className="text-lg leading-relaxed mb-6">
+              Nos destacamos pela <strong>ética, transparência e resultados comprovados</strong>. Somos referência no Nordeste em planejamento previdenciário, revisões de benefícios, conquista de aposentadorias e defesa de direitos junto ao INSS. Acreditamos que cada cliente tem uma história única e merece atenção individualizada - por isso, tratamos cada caso com o cuidado e a dedicação que ele merece.
+            </p>
           </div>
 
           {/* Biografias dos Fundadores */}
