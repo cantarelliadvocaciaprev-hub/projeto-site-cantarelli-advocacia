@@ -46,14 +46,14 @@ const About = () => {
               }}
               plugins={[
                 Autoplay({
-                  delay: 3000,
+                  delay: 5000,
                 })
               ]}
             >
               <CarouselContent className="-ml-2 md:-ml-4">
                 {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                     <div className="p-1">
-                      <img src={image} alt={`Cantarelli Advocacia - Escritório ${index + 1}`} className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded-lg shadow-md" />
+                      <img src={image} alt={`Cantarelli Advocacia - Escritório ${index + 1}`} className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-lg shadow-md" />
                     </div>
                   </CarouselItem>)}
               </CarouselContent>

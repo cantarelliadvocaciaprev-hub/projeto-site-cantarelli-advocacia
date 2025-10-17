@@ -1,7 +1,60 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validação básica
+    if (!formData.name || !formData.email || !formData.message) {
+      toast.error("Por favor, preencha todos os campos obrigatórios.");
+      return;
+    }
+
+    if (formData.name.length > 100 || formData.email.length > 255 || formData.message.length > 1000) {
+      toast.error("Algum campo excedeu o limite de caracteres permitido.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    // Criar mensagem para WhatsApp
+    const whatsappMessage = encodeURIComponent(
+      `*Nova mensagem do site*\n\n` +
+      `*Nome:* ${formData.name}\n` +
+      `*Email:* ${formData.email}\n` +
+      `*Telefone:* ${formData.phone || "Não informado"}\n\n` +
+      `*Mensagem:*\n${formData.message}`
+    );
+
+    // Abrir WhatsApp
+    window.open(`https://wa.me/5581988884914?text=${whatsappMessage}`, "_blank");
+
+    toast.success("Mensagem enviada! Entraremos em contato em breve.");
+    
+    // Limpar formulário
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
+    
+    setIsSubmitting(false);
+  };
+
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -89,9 +142,65 @@ const Contact = () => {
 
           <div className="animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <h3 className="text-2xl font-display font-bold text-foreground mb-6">
+              Envie sua Mensagem
+            </h3>
+            <form onSubmit={handleSubmit} className="space-y-4 mb-8">
+              <div>
+                <Input
+                  type="text"
+                  placeholder="Nome completo *"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  maxLength={100}
+                  required
+                  className="w-full"
+                />
+              </div>
+              <div>
+                <Input
+                  type="email"
+                  placeholder="E-mail *"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  maxLength={255}
+                  required
+                  className="w-full"
+                />
+              </div>
+              <div>
+                <Input
+                  type="tel"
+                  placeholder="Telefone (opcional)"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  maxLength={20}
+                  className="w-full"
+                />
+              </div>
+              <div>
+                <Textarea
+                  placeholder="Sua mensagem *"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  maxLength={1000}
+                  required
+                  rows={5}
+                  className="w-full resize-none"
+                />
+              </div>
+              <Button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
+                {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
+              </Button>
+            </form>
+
+            <h3 className="text-2xl font-display font-bold text-foreground mb-6">
               Localização
             </h3>
-            <div className="rounded-lg overflow-hidden border border-border h-[400px] mb-6">
+            <div className="rounded-lg overflow-hidden border border-border h-[300px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.319282937658!2d-34.9164!3d-8.0442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18cc8fa0dd9f%3A0x5c408e0b4e2f1898!2sCantarelli%20Advocacia!5e0!3m2!1spt-BR!2sbr!4v1234567890"
                 width="100%"
@@ -103,16 +212,6 @@ const Contact = () => {
                 title="Localização Cantarelli Advocacia"
               />
             </div>
-            <a
-              href="https://forms.gle/3oft8yBcRsfeZzht6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                Preencher Formulário de Contato
-              </Button>
-            </a>
           </div>
         </div>
       </div>
