@@ -9,7 +9,7 @@ const Hero = () => {
   };
   return <section id="home" className="relative min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 z-0">
-        <img src={heroBackground} alt="Cantarelli Advocacia - Escritório" className="w-full h-full object-cover opacity-60" />
+        <img src={heroBackground} alt="Cantarelli Advocacia - Escritório" className="w-full h-full object-cover object-center opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
       </div>
 

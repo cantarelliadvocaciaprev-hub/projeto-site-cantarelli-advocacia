@@ -1,5 +1,6 @@
 import { Users, Target, Heart } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 // Importar imagens da galeria
 import gallery1 from "@/assets/gallery/IMG_7269.jpg";
@@ -59,11 +60,16 @@ const About = () => {
                 align: "start",
                 loop: true
               }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                })
+              ]}
             >
               <CarouselContent className="-ml-2 md:-ml-4">
                 {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                     <div className="p-1">
-                      <img src={image} alt={`Cantarelli Advocacia - Escritório ${index + 1}`} className="w-full h-80 object-cover rounded-lg shadow-md" />
+                      <img src={image} alt={`Cantarelli Advocacia - Escritório ${index + 1}`} className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded-lg shadow-md" />
                     </div>
                   </CarouselItem>)}
               </CarouselContent>
@@ -77,7 +83,7 @@ const About = () => {
             {/* Dr. Thiago Cantarelli */}
             <div className="bg-background p-8 rounded-lg shadow-md animate-fade-in">
               <div className="mb-4">
-                <img src={thiagoCantarelli} alt="Dr. Thiago Cantarelli" className="w-full h-80 object-cover rounded-lg mb-4" />
+                <img src={thiagoCantarelli} alt="Dr. Thiago Cantarelli" className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded-lg mb-4" />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dr. Thiago Cantarelli
                 </h3>
@@ -107,7 +113,7 @@ const About = () => {
             animationDelay: "0.1s"
           }}>
               <div className="mb-0">
-                <img src={izabelaFarias} alt="Dra. Izabela Farias" className="min-w-full h-80 object-cover object-center rounded-lg mb-4" />
+                <img src={izabelaFarias} alt="Dra. Izabela Farias" className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover object-top rounded-lg mb-4" />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dra. Izabela Farias
                 </h3>
