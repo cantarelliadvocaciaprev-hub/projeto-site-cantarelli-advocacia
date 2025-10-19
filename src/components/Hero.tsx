@@ -30,17 +30,17 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Conteúdo à esquerda */}
           <div className="animate-slide-in-left">
-            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6 hover:scale-105 transition-transform duration-300 cursor-pointer">
               <Award className="w-4 h-4 text-primary" />
               <span className="text-sm font-body text-foreground">4.9 estrelas no Google</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl font-alexandria mb-6 leading-tight text-foreground font-extrabold lg:text-6xl">
-              Especialistas em Direito Previdenciário
+            <h1 className="text-4xl md:text-5xl font-alexandria mb-6 leading-tight font-extrabold lg:text-6xl bg-gradient-to-r from-foreground via-primary to-primary/80 bg-clip-text text-transparent">
+              Segurança financeira e o futuro que você merece.
             </h1>
             
             <p className="text-lg md:text-xl text-foreground/80 font-body mb-8 leading-relaxed text-left font-normal">
-              Transformando conhecimento jurídico em amparo real. Com equipe altamente qualificada, unimos técnica, estratégia e empatia para proteger o presente e garantir o futuro de quem confia em nós.
+              Com planejamento e sensibilidade, transformamos anos de trabalho em um futuro de tranquilidade e reconhecimento.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -55,21 +55,21 @@ const Hero = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div ref={clientsRef} className="flex items-center gap-3 bg-card p-4 rounded-lg shadow-sm border border-border">
+              <div ref={clientsRef} className="flex items-center gap-3 bg-card p-4 rounded-lg shadow-sm border border-border hover:shadow-xl hover:scale-105 transition-all duration-300">
                 <Shield className="w-10 h-10 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-2xl font-display font-bold text-primary">+{clientsCount.toLocaleString('pt-BR')}</p>
                   <p className="text-sm text-muted-foreground font-body">clientes ativos</p>
                 </div>
               </div>
-              <div ref={rightsRef} className="flex items-center gap-3 bg-card p-4 rounded-lg shadow-sm border border-border">
+              <div ref={rightsRef} className="flex items-center gap-3 bg-card p-4 rounded-lg shadow-sm border border-border hover:shadow-xl hover:scale-105 transition-all duration-300">
                 <Award className="w-10 h-10 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-2xl font-display font-bold text-primary">+{rightsCount.toLocaleString('pt-BR')}</p>
                   <p className="text-sm text-muted-foreground font-body">direitos assegurados</p>
                 </div>
               </div>
-              <div ref={processesRef} className="flex items-center gap-3 bg-card p-4 rounded-lg shadow-sm border border-border sm:col-span-2">
+              <div ref={processesRef} className="flex items-center gap-3 bg-card p-4 rounded-lg shadow-sm border border-border sm:col-span-2 hover:shadow-xl hover:scale-105 transition-all duration-300">
                 <Shield className="w-10 h-10 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-2xl font-display font-bold text-primary">+{processesCount.toLocaleString('pt-BR')}</p>
