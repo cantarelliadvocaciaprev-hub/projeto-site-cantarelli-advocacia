@@ -1,6 +1,8 @@
 import { Users, Target, Heart } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Autoplay from "embla-carousel-autoplay";
+import { useState } from "react";
 
 // Importar imagens da galeria
 import gallery1 from "@/assets/gallery/IMG_7269.jpg";
@@ -21,6 +23,7 @@ import gallery15 from "@/assets/gallery/IMG_8799.jpg";
 import thiagoCantarelli from "@/assets/team/thiago-cantarelli.jpg";
 import izabelaFarias from "@/assets/team/izabela-farias.jpg";
 const About = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15];
   const sectors = ["Marketing", "Comercial", "Recepção", "Atendimento", "Inicial", "Gestão", "Administração", "Controladoria", "Prazos", "Suporte Digital", "Financeiro"];
   return <section id="about" className="py-20 bg-card">
@@ -53,7 +56,23 @@ const About = () => {
               <CarouselContent className="-ml-2 md:-ml-4">
                 {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                     <div className="p-1">
-                      <img src={image} alt={`Cantarelli Advocacia - Escritório ${index + 1}`} className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-lg shadow-md" />
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <img 
+                            src={image} 
+                            alt={`Cantarelli Advocacia - Escritório ${index + 1}`} 
+                            className="w-full h-56 md:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
+                            onClick={() => setSelectedImage(image)}
+                          />
+                        </DialogTrigger>
+                        <DialogContent className="max-w-[90vw] max-h-[90vh] p-0">
+                          <img 
+                            src={image} 
+                            alt={`Cantarelli Advocacia - Escritório ${index + 1}`} 
+                            className="w-full h-full object-contain rounded-lg" 
+                          />
+                        </DialogContent>
+                      </Dialog>
                     </div>
                   </CarouselItem>)}
               </CarouselContent>
@@ -83,7 +102,7 @@ const About = () => {
             {/* Dr. Thiago Cantarelli */}
             <div className="bg-background p-8 rounded-lg shadow-md animate-fade-in">
               <div className="mb-4">
-                <img src={thiagoCantarelli} alt="Dr. Thiago Cantarelli" className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded-lg mb-4" />
+                <img src={thiagoCantarelli} alt="Dr. Thiago Cantarelli" className="w-full aspect-[3/4] object-cover rounded-lg mb-4" />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dr. Thiago Cantarelli
                 </h3>
@@ -113,7 +132,7 @@ const About = () => {
             animationDelay: "0.1s"
           }}>
               <div className="mb-0">
-                <img src={izabelaFarias} alt="Dra. Izabela Farias" className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover object-center rounded-lg mb-4" />
+                <img src={izabelaFarias} alt="Dra. Izabela Farias" className="w-full aspect-[3/4] object-cover rounded-lg mb-4" />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dra. Izabela Farias
                 </h3>
