@@ -1,7 +1,9 @@
 import { Users, Target, Heart } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useCarouselCenter } from "@/hooks/useCarouselCenter";
+import { useState } from "react";
 
 // Importar imagens da galeria
 import gallery1 from "@/assets/gallery/IMG_7269.jpg";
@@ -27,6 +29,9 @@ const About = () => {
   const { isVisible: textVisible, elementRef: textRef } = useScrollAnimation(0.1);
   const { isVisible: biosVisible, elementRef: biosRef } = useScrollAnimation(0.1);
   
+  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
+  const centerIndex = useCarouselCenter(carouselApi);
+  
   const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15];
   const sectors = ["Marketing", "Comercial", "Recepção", "Atendimento", "Inicial", "Gestão", "Administração", "Controladoria", "Prazos", "Suporte Digital", "Financeiro"];
   return <section id="about" className="py-20 bg-card">
@@ -45,27 +50,39 @@ const About = () => {
           {/* Galeria de Imagens */}
           <div ref={galleryRef} className={`mb-12 transition-all duration-700 ${galleryVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
             <Carousel
+              setApi={setCarouselApi}
               className="w-full max-w-5xl mx-auto" 
               opts={{
-                align: "start",
+                align: "center",
                 loop: true
               }}
               plugins={[
                 Autoplay({
-                  delay: 5000,
+                  delay: 3000,
+                  stopOnInteraction: false,
+                  stopOnMouseEnter: true,
                 })
               ]}
             >
               <CarouselContent className="-ml-2 md:-ml-4">
-                {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1 overflow-hidden rounded-lg">
-                      <img 
-                        src={image} 
-                        alt={`Cantarelli Advocacia - Escritório ${index + 1}`} 
-                        className="w-full h-56 md:h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105" 
-                      />
-                    </div>
-                  </CarouselItem>)}
+                {galleryImages.map((image, index) => {
+                  const isCenterSlide = index === centerIndex;
+                  return (
+                    <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                      <div className="p-1 overflow-hidden">
+                        <img 
+                          src={image} 
+                          alt={`Cantarelli Advocacia - Escritório ${index + 1}`} 
+                          className={`w-full h-72 md:h-80 lg:h-96 object-contain bg-neutral-50 shadow-md transition-all duration-500 ease-in-out ${
+                            isCenterSlide 
+                              ? 'carousel-center-item' 
+                              : 'carousel-side-item'
+                          }`}
+                        />
+                      </div>
+                    </CarouselItem>
+                  );
+                })}
               </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />

@@ -189,4 +189,18 @@ All colors MUST be HSL.
       transform: translateX(0);
     }
   }
+
+  /* Carousel center effect */
+  .carousel-center-item {
+    transform: scale(1.1);
+    z-index: 20;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    filter: brightness(1);
+  }
+
+  .carousel-side-item {
+    transform: scale(0.85);
+    opacity: 0.6;
+    filter: grayscale(50%);
+  }
 }
