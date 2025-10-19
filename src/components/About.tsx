@@ -84,16 +84,16 @@ Nascemos com o propósito de acolher pessoas, compreender suas histórias e luta
           {/* Texto Institucional */}
           <div ref={textRef} className={`prose prose-lg max-w-none mb-16 text-foreground font-body transition-all duration-700 ${textVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
             <p className="text-lg leading-relaxed mb-6">
-              <strong>Desde 2008</strong>, a Cantarelli Advocacia transforma histórias através do Direito Previdenciário. Fundado pelo Dr. Thiago Cantarelli com a missão de garantir dignidade e amparo jurídico aos trabalhadores brasileiros, o escritório nasceu da convicção de que cada pessoa merece ter seus direitos respeitados e sua contribuição reconhecida.
+              Em abril de 2008, nascia a Cantarelli Advocacia, um pequeno escritório movido por um grande propósito: defender pessoas e transformar vidas por meio do Direito. O que começou de forma simples, guiado pela coragem e pela vontade de fazer a diferença, tornou-se uma história construída com empatia, ética e resultados que mudam destinos.
             </p>
             <p className="text-lg leading-relaxed mb-6">
-              Ao longo de mais de <strong>17 anos de atuação</strong>, construímos uma trajetória marcada por conquistas significativas: mais de <strong>5.800 processos protocolados</strong> desde 2018, <strong>3.100 clientes ativos</strong> e <strong>2.900 direitos assegurados</strong>. Cada número representa uma vida transformada, uma família amparada, um futuro garantido.
+              Fundado pelo Dr. Thiago Cantarelli, o escritório nasceu do desejo de garantir dignidade e amparo a quem dedicou uma vida inteira ao trabalho. Com o tempo, essa missão ganhou força e forma, reunindo profissionais que acreditam que cada cliente carrega uma história única e merece ser ouvido com atenção e respeito.
             </p>
             <p className="text-lg leading-relaxed mb-6">
-              Dirigido pelo Dr. Thiago Cantarelli e pela Dra. Izabela Farias, nosso escritório cresceu de forma sólida e humanizada. Nossa equipe é formada por <strong>21 colaboradores dedicados</strong>, distribuídos em <strong>11 setores especializados</strong>, todos unidos pelo compromisso com a excelência técnica e o atendimento personalizado.
+              Hoje, sob a direção do Dr. Thiago Cantarelli e da Dra. Izabela Farias, somos uma equipe que cresceu mantendo o mesmo propósito do início: cuidar de pessoas, assegurar direitos e oferecer esperança. Cada conquista representa mais do que um processo concluído — representa uma história de superação, um futuro protegido e o sentimento de dever cumprido.
             </p>
             <p className="text-lg leading-relaxed mb-6">
-              Nos destacamos pela <strong>ética, transparência e resultados comprovados</strong>. Somos referência no Nordeste em planejamento previdenciário, revisões de benefícios, conquista de aposentadorias e defesa de direitos junto ao INSS. Acreditamos que cada cliente tem uma história única e merece atenção individualizada - por isso, tratamos cada caso com o cuidado e a dedicação que ele merece.
+              Mais do que um escritório de advocacia, a Cantarelli é feita de gente que acredita na justiça como instrumento de transformação.
             </p>
           </div>
 
