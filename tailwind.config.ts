@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         display: ['Playfair Display', 'serif'],
         body: ['Lato', 'sans-serif'],
+        alexandria: ['Alexandria', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
