@@ -3,10 +3,18 @@ import { Shield, Award } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import { useCountUp } from "@/hooks/useCountUp";
 const Hero = () => {
-  const { count: clientsCount, elementRef: clientsRef } = useCountUp(3100, 2000);
-  const { count: rightsCount, elementRef: rightsRef } = useCountUp(2900, 2000);
-  const { count: processesCount, elementRef: processesRef } = useCountUp(5800, 2000);
-
+  const {
+    count: clientsCount,
+    elementRef: clientsRef
+  } = useCountUp(3100, 2000);
+  const {
+    count: rightsCount,
+    elementRef: rightsRef
+  } = useCountUp(2900, 2000);
+  const {
+    count: processesCount,
+    elementRef: processesRef
+  } = useCountUp(5800, 2000);
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({
       behavior: "smooth"
@@ -27,7 +35,7 @@ const Hero = () => {
               <span className="text-sm font-body text-foreground">4.9 estrelas no Google</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6 leading-tight font-extrabold text-foreground">
+            <h1 className="text-4xl md:text-5xl font-alexandria mb-6 leading-tight text-foreground font-extrabold lg:text-6xl">
               Especialistas em Direito Previdenciário
             </h1>
             
@@ -36,16 +44,12 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button 
-                onClick={() => window.open("https://wa.me/5581988884914?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.", "_blank")} 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
-              >
+              <Button onClick={() => window.open("https://wa.me/5581988884914?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.", "_blank")} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6">
                 Agende seu atendimento
               </Button>
               <Button onClick={() => document.getElementById("about")?.scrollIntoView({
-                behavior: "smooth"
-              })} variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6">
+              behavior: "smooth"
+            })} variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6">
                 Conheça nosso trabalho
               </Button>
             </div>
@@ -76,15 +80,11 @@ const Hero = () => {
           </div>
 
           {/* Vídeo à direita */}
-          <div className="animate-slide-in-left" style={{ animationDelay: "0.3s" }}>
+          <div className="animate-slide-in-left" style={{
+          animationDelay: "0.3s"
+        }}>
             <div className="relative rounded-lg overflow-hidden shadow-2xl aspect-video">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/VHGLArs8qTI"
-                title="Dr. Thiago Cantarelli - Cantarelli Advocacia"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              <iframe className="w-full h-full" src="https://www.youtube.com/embed/VHGLArs8qTI" title="Dr. Thiago Cantarelli - Cantarelli Advocacia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
             </div>
           </div>
         </div>
