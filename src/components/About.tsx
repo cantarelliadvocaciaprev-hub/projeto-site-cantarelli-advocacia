@@ -24,14 +24,24 @@ import gallery15 from "@/assets/gallery/IMG_8799.jpg";
 import thiagoCantarelli from "@/assets/team/thiago-cantarelli.jpg";
 import izabelaFarias from "@/assets/team/izabela-farias.jpg";
 const About = () => {
-  const { isVisible: titleVisible, elementRef: titleRef } = useScrollAnimation(0.1);
-  const { isVisible: galleryVisible, elementRef: galleryRef } = useScrollAnimation(0.1);
-  const { isVisible: textVisible, elementRef: textRef } = useScrollAnimation(0.1);
-  const { isVisible: biosVisible, elementRef: biosRef } = useScrollAnimation(0.1);
-  
+  const {
+    isVisible: titleVisible,
+    elementRef: titleRef
+  } = useScrollAnimation(0.1);
+  const {
+    isVisible: galleryVisible,
+    elementRef: galleryRef
+  } = useScrollAnimation(0.1);
+  const {
+    isVisible: textVisible,
+    elementRef: textRef
+  } = useScrollAnimation(0.1);
+  const {
+    isVisible: biosVisible,
+    elementRef: biosRef
+  } = useScrollAnimation(0.1);
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const centerIndex = useCarouselCenter(carouselApi);
-  
   const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15];
   const sectors = ["Marketing", "Comercial", "Recepção", "Atendimento", "Inicial", "Gestão", "Administração", "Controladoria", "Prazos", "Suporte Digital", "Financeiro"];
   return <section id="about" className="py-20 bg-card">
@@ -42,47 +52,29 @@ const About = () => {
               Quem Somos
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto">
-              A Cantarelli Advocacia é um escritório especializado em Direito Previdenciário, com mais de 17 anos de experiência transformando vidas através da conquista de direitos previdenciários.
-            </p>
+            <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto">Há mais de 17 anos, a Cantarelli Advocacia transforma vidas por meio da justiça e do reconhecimento de direitos.
+Nascemos com o propósito de acolher pessoas, compreender suas histórias e lutar com técnica e sensibilidade para garantir segurança, dignidade e futuro a quem confiou uma vida inteira ao trabalho.</p>
           </div>
 
           {/* Galeria de Imagens */}
           <div ref={galleryRef} className={`mb-12 transition-all duration-700 ${galleryVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
-            <Carousel
-              setApi={setCarouselApi}
-              className="w-full max-w-5xl mx-auto" 
-              opts={{
-                align: "center",
-                loop: true
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 3000,
-                  stopOnInteraction: false,
-                  stopOnMouseEnter: true,
-                })
-              ]}
-            >
+            <Carousel setApi={setCarouselApi} className="w-full max-w-5xl mx-auto" opts={{
+            align: "center",
+            loop: true
+          }} plugins={[Autoplay({
+            delay: 3000,
+            stopOnInteraction: false,
+            stopOnMouseEnter: true
+          })]}>
               <CarouselContent className="-ml-2 md:-ml-4">
                 {galleryImages.map((image, index) => {
-                  const isCenterSlide = index === centerIndex;
-                  return (
-                    <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                const isCenterSlide = index === centerIndex;
+                return <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                       <div className="p-1 overflow-hidden">
-                        <img 
-                          src={image} 
-                          alt={`Cantarelli Advocacia - Escritório ${index + 1}`} 
-                          className={`w-full h-72 md:h-80 lg:h-96 object-contain bg-neutral-50 shadow-md transition-all duration-500 ease-in-out ${
-                            isCenterSlide 
-                              ? 'carousel-center-item' 
-                              : 'carousel-side-item'
-                          }`}
-                        />
+                        <img src={image} alt={`Cantarelli Advocacia - Escritório ${index + 1}`} className={`w-full h-72 md:h-80 lg:h-96 object-contain bg-neutral-50 shadow-md transition-all duration-500 ease-in-out ${isCenterSlide ? 'carousel-center-item' : 'carousel-side-item'}`} />
                       </div>
-                    </CarouselItem>
-                  );
-                })}
+                    </CarouselItem>;
+              })}
               </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />
