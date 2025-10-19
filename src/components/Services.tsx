@@ -1,5 +1,9 @@
 import { Scale, FileCheck, Shield, Heart, Briefcase, ClipboardCheck, Building2, Gavel, Users, Target, BadgeCheck, Calculator, TrendingUp, FileText, UserCheck, Baby, Lock } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const Services = () => {
+  const { isVisible: primaryVisible, elementRef: primaryRef } = useScrollAnimation(0.1);
+  const { isVisible: secondaryVisible, elementRef: secondaryRef } = useScrollAnimation(0.1);
   const primaryServices = [{
     icon: ClipboardCheck,
     title: "Planejamento Previdenciário",
@@ -85,12 +89,10 @@ const Services = () => {
         {/* Serviços Carro-Chefe */}
         <div className="mb-16">
           <h3 className="text-3xl font-display font-bold text-foreground text-center mb-8">Serviços em destaque</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div ref={primaryRef} className={`grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto transition-all duration-700 ${primaryVisible ? 'opacity-100 animate-slide-up-scroll' : 'opacity-0'}`}>
             {primaryServices.map((service, index) => {
             const Icon = service.icon;
-            return <div key={index} className="bg-card p-6 rounded-lg border-2 border-primary/30 hover:border-primary transition-all duration-300 hover:shadow-xl animate-slide-up" style={{
-              animationDelay: `${index * 0.05}s`
-            }}>
+            return <div key={index} className="bg-card p-6 rounded-lg border-2 border-primary/30 hover:border-primary transition-all duration-300 hover:shadow-xl">
                   <div className="w-14 h-14 bg-primary/20 rounded-lg flex items-center justify-center mb-4">
                     <Icon className="w-7 h-7 text-primary" />
                   </div>
@@ -110,12 +112,10 @@ const Services = () => {
           <h3 className="text-2xl font-display font-bold text-foreground text-center mb-8">
             Outros Serviços
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+          <div ref={secondaryRef} className={`grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto transition-all duration-700 ${secondaryVisible ? 'opacity-100 animate-slide-up-scroll' : 'opacity-0'}`}>
             {secondaryServices.map((service, index) => {
             const Icon = service.icon;
-            return <div key={index} className="bg-card p-5 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-md animate-fade-in flex gap-4" style={{
-              animationDelay: `${index * 0.03}s`
-            }}>
+            return <div key={index} className="bg-card p-5 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-md flex gap-4">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Icon className="w-5 h-5 text-primary" />
                   </div>

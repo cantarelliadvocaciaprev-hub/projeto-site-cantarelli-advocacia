@@ -1,8 +1,7 @@
 import { Users, Target, Heart } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Autoplay from "embla-carousel-autoplay";
-import { useState } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 // Importar imagens da galeria
 import gallery1 from "@/assets/gallery/IMG_7269.jpg";
@@ -23,13 +22,17 @@ import gallery15 from "@/assets/gallery/IMG_8799.jpg";
 import thiagoCantarelli from "@/assets/team/thiago-cantarelli.jpg";
 import izabelaFarias from "@/assets/team/izabela-farias.jpg";
 const About = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const { isVisible: titleVisible, elementRef: titleRef } = useScrollAnimation(0.1);
+  const { isVisible: galleryVisible, elementRef: galleryRef } = useScrollAnimation(0.1);
+  const { isVisible: textVisible, elementRef: textRef } = useScrollAnimation(0.1);
+  const { isVisible: biosVisible, elementRef: biosRef } = useScrollAnimation(0.1);
+  
   const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15];
   const sectors = ["Marketing", "Comercial", "Recepção", "Atendimento", "Inicial", "Gestão", "Administração", "Controladoria", "Prazos", "Suporte Digital", "Financeiro"];
   return <section id="about" className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 animate-fade-in">
+          <div ref={titleRef} className={`text-center mb-12 transition-all duration-700 ${titleVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
               Quem Somos
             </h2>
@@ -40,7 +43,7 @@ const About = () => {
           </div>
 
           {/* Galeria de Imagens */}
-          <div className="mb-12">
+          <div ref={galleryRef} className={`mb-12 transition-all duration-700 ${galleryVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
             <Carousel
               className="w-full max-w-5xl mx-auto" 
               opts={{
@@ -55,24 +58,12 @@ const About = () => {
             >
               <CarouselContent className="-ml-2 md:-ml-4">
                 {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <img 
-                            src={image} 
-                            alt={`Cantarelli Advocacia - Escritório ${index + 1}`} 
-                            className="w-full h-56 md:h-64 object-cover rounded-lg shadow-md cursor-pointer hover:opacity-90 transition-opacity" 
-                            onClick={() => setSelectedImage(image)}
-                          />
-                        </DialogTrigger>
-                        <DialogContent className="max-w-[90vw] max-h-[90vh] p-0">
-                          <img 
-                            src={image} 
-                            alt={`Cantarelli Advocacia - Escritório ${index + 1}`} 
-                            className="w-full h-full object-contain rounded-lg" 
-                          />
-                        </DialogContent>
-                      </Dialog>
+                    <div className="p-1 overflow-hidden rounded-lg">
+                      <img 
+                        src={image} 
+                        alt={`Cantarelli Advocacia - Escritório ${index + 1}`} 
+                        className="w-full h-56 md:h-64 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105" 
+                      />
                     </div>
                   </CarouselItem>)}
               </CarouselContent>
@@ -82,7 +73,7 @@ const About = () => {
           </div>
 
           {/* Texto Institucional */}
-          <div className="prose prose-lg max-w-none mb-16 text-foreground font-body">
+          <div ref={textRef} className={`prose prose-lg max-w-none mb-16 text-foreground font-body transition-all duration-700 ${textVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
             <p className="text-lg leading-relaxed mb-6">
               <strong>Desde 2008</strong>, a Cantarelli Advocacia transforma histórias através do Direito Previdenciário. Fundado pelo Dr. Thiago Cantarelli com a missão de garantir dignidade e amparo jurídico aos trabalhadores brasileiros, o escritório nasceu da convicção de que cada pessoa merece ter seus direitos respeitados e sua contribuição reconhecida.
             </p>
@@ -98,7 +89,7 @@ const About = () => {
           </div>
 
           {/* Biografias dos Fundadores */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div ref={biosRef} className={`grid md:grid-cols-2 gap-8 mb-16 transition-all duration-700 ${biosVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
             {/* Dr. Thiago Cantarelli */}
             <div className="bg-background p-8 rounded-lg shadow-md animate-fade-in">
               <div className="mb-4">

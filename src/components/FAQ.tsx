@@ -4,8 +4,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const FAQ = () => {
+  const { isVisible: faqVisible, elementRef: faqRef } = useScrollAnimation(0.1);
   const faqs = [
     {
       question: "Como funciona o planejamento previdenciário?",
@@ -54,7 +56,7 @@ const FAQ = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div ref={faqRef} className={`max-w-4xl mx-auto transition-all duration-700 ${faqVisible ? 'opacity-100 animate-slide-up-scroll' : 'opacity-0'}`}>
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="bg-background border border-border rounded-lg px-6">
