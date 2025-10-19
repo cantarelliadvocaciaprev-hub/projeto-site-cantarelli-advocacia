@@ -75,7 +75,7 @@ const Planning = () => {
 
         <div className="text-center animate-fade-in">
           <Button
-            onClick={scrollToContact}
+            onClick={() => window.open("https://wa.me/5581988884914?text=Olá,%20desejo%20realizar%20o%20orçamento%20do%20Planejamento%20Previdenciário.", "_blank")}
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
           >
