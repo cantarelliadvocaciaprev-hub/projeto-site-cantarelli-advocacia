@@ -52,8 +52,7 @@ const About = () => {
               Quem Somos
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto">Há mais de 17 anos, a Cantarelli Advocacia transforma vidas por meio da justiça e do reconhecimento de direitos.
-Nascemos com o propósito de acolher pessoas, compreender suas histórias e lutar com técnica e sensibilidade para garantir segurança, dignidade e futuro a quem confiou uma vida inteira ao trabalho.</p>
+            <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto">Há 17 anos, unindo experiência e sensibilidade em cada atendimento. Hoje, somos 21 colaboradores distribuídos em 11 setores especializados, trabalhando com dedicação e empatia para garantir resultados que refletem nosso maior valor: cuidar de pessoas e proteger histórias.</p>
           </div>
 
           {/* Galeria de Imagens */}
