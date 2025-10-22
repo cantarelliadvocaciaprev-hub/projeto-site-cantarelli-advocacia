@@ -47,11 +47,11 @@ const FAQ = () => {
     <section id="faq" className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-alexandria font-bold text-foreground mb-4">
             Perguntas Frequentes
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-xl text-muted-foreground font-body max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 font-alexandria max-w-2xl mx-auto">
             Tire suas principais dúvidas sobre Direito Previdenciário
           </p>
         </div>
@@ -60,10 +60,10 @@ const FAQ = () => {
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="bg-background border border-border rounded-lg px-6">
-                <AccordionTrigger className="text-left font-display font-semibold text-foreground hover:text-primary">
+                <AccordionTrigger className="text-left text-lg font-alexandria font-semibold text-foreground hover:text-primary">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground font-body leading-relaxed">
+                <AccordionContent className="text-base text-foreground/90 font-alexandria leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
