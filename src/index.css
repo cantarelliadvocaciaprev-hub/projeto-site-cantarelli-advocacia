@@ -203,4 +203,19 @@ All colors MUST be HSL.
     opacity: 0.6;
     filter: grayscale(50%);
   }
+
+  /* Animação de gradiente deslizante */
+  .animate-gradient-shift {
+    background-size: 200% auto;
+    animation: gradientShift 4s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
 }

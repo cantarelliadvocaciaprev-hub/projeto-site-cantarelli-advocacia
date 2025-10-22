@@ -35,7 +35,7 @@ const Hero = () => {
               <span className="text-sm font-body text-foreground">4.9 estrelas no Google</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl font-alexandria font-light mb-6 leading-tight lg:text-6xl bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-alexandria font-bold mb-6 leading-tight lg:text-6xl bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-gradient-shift">
               Segurança financeira e o futuro que você merece.
             </h1>
             
