@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Search, Calculator, FileText, CheckCircle2 } from "lucide-react";
+import planningBg from "@/assets/planning-bg.jpg";
 
 const Planning = () => {
   const steps = [
@@ -30,8 +31,15 @@ const Planning = () => {
   };
 
   return (
-    <section id="planning" className="py-20 bg-card">
-      <div className="container mx-auto px-4">
+    <section id="planning" className="py-20 relative overflow-hidden bg-card">
+      {/* Background image with low opacity */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-fixed opacity-10"
+        style={{ backgroundImage: `url(${planningBg})` }}
+      />
+      
+      {/* Content */}
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
             Planejamento Previdenciário

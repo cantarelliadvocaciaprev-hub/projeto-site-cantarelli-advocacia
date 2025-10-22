@@ -21,6 +21,10 @@ import gallery12 from "@/assets/gallery/IMG_7349.jpg";
 import gallery13 from "@/assets/gallery/IMG_8009.jpg";
 import gallery14 from "@/assets/gallery/IMG_8585.jpg";
 import gallery15 from "@/assets/gallery/IMG_8799.jpg";
+import gallery16 from "@/assets/gallery/IMG_8704.jpg";
+import gallery17 from "@/assets/gallery/IMG_8781.jpg";
+import gallery18 from "@/assets/gallery/IMG_8614.jpg";
+import gallery19 from "@/assets/gallery/IMG_8494.jpg";
 import thiagoCantarelli from "@/assets/team/thiago-cantarelli.jpg";
 import izabelaFarias from "@/assets/team/izabela-farias.jpg";
 const About = () => {
@@ -42,7 +46,7 @@ const About = () => {
   } = useScrollAnimation(0.1);
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const centerIndex = useCarouselCenter(carouselApi);
-  const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15];
+  const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15, gallery16, gallery17, gallery18, gallery19];
   const sectors = ["Marketing", "Comercial", "Recepção", "Atendimento", "Inicial", "Gestão", "Administração", "Controladoria", "Prazos", "Suporte Digital", "Financeiro"];
   return <section id="about" className="py-20 bg-card">
       <div className="container mx-auto px-4">
