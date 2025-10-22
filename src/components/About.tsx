@@ -109,7 +109,7 @@ const About = () => {
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dr. Thiago Cantarelli
                 </h3>
-                <p className="text-primary font-body mb-2">OAB/PE 28498</p>
+                
                 <p className="text-muted-foreground font-body italic mb-4">
                   Advogado | Fundador da Cantarelli Advocacia
                 </p>
@@ -139,7 +139,7 @@ const About = () => {
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dra. Izabela Farias
                 </h3>
-                <p className="text-primary font-body mb-2">OAB/PE 52844</p>
+                
                 <p className="text-muted-foreground font-body italic mb-4">
                   Advogada | Diretora de Operações da Cantarelli Advocacia
                 </p>
