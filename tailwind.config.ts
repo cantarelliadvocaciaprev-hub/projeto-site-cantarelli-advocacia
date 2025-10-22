@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        body: ['Lato', 'sans-serif'],
+        display: ['Alexandria', 'sans-serif'],
+        body: ['Alexandria', 'sans-serif'],
         alexandria: ['Alexandria', 'sans-serif'],
       },
       colors: {
