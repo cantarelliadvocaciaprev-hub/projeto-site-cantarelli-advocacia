@@ -97,7 +97,9 @@ const Contact = () => {
                   <h4 className="font-display font-bold text-foreground mb-1">Telefones</h4>
                   <p className="text-muted-foreground font-body">
                     Tel: (81) 3049-3799<br />
-                    WhatsApp: (81) 98342-1727
+                    WhatsApp: (81) 98342-1727<br />
+                    Comercial: (81) 98888-4914<br />
+                    Financeiro: (81) 98771-8606
                   </p>
                   <button
                     onClick={() => window.open("https://wa.me/5581988884914?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.", "_blank")}
