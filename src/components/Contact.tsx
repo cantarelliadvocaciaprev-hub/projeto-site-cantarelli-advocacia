@@ -40,7 +40,7 @@ const Contact = () => {
     );
 
     // Abrir WhatsApp
-    window.open(`https://wa.me/5581988884914?text=${whatsappMessage}`, "_blank");
+    window.open(`https://wa.me/5581995441368?text=${whatsappMessage}`, "_blank");
 
     toast.success("Mensagem enviada! Entraremos em contato em breve.");
     
@@ -102,7 +102,7 @@ const Contact = () => {
                     Financeiro: (81) 98771-8606
                   </p>
                   <button
-                    onClick={() => window.open("https://wa.me/5581988884914?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.", "_blank")}
+                    onClick={() => window.open("https://wa.me/5581995441368?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.", "_blank")}
                     className="inline-block mt-2"
                   >
                     <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
