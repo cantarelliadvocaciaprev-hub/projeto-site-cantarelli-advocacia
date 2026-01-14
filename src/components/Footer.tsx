@@ -70,6 +70,7 @@ const Footer = () => {
               <li className="pt-2">(81) 3049-3799</li>
               <li>(81) 98888-4914 – Comercial</li>
               <li>(81) 98771-8606 – Financeiro</li>
+              <li>(81) 99544-1368</li>
               <li>
                 <a href="mailto:contato@cantarelliadvocacia.com.br" className="hover:text-primary">
                   contato@cantarelliadvocacia.com.br
