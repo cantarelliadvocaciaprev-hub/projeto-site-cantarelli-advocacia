@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Users, Briefcase, ClipboardList, MessageSquare, HelpCircle, Phone, UserPlus, Home } from "lucide-react";
+import { Menu, X, Users, Briefcase, ClipboardList, MessageSquare, HelpCircle, Phone, UserPlus, Home, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
@@ -104,6 +104,13 @@ const Header = () => {
       type: "page",
       icon: UserPlus,
       preview: "Faça parte da nossa equipe de especialistas"
+    },
+    { 
+      label: "Segurança", 
+      id: "/seguranca", 
+      type: "page",
+      icon: ShieldCheck,
+      preview: "Verifique contatos e proteja-se contra golpes"
     },
   ];
 
