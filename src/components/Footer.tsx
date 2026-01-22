@@ -34,6 +34,9 @@ const Footer = () => {
               Especialistas em Direito Previdenciário com mais de 17 anos de experiência.
             </p>
             <p className="text-sm text-muted-foreground font-body">
+              Thiago Cantarelli Sociedade Individual de Advocacia
+            </p>
+            <p className="text-sm text-muted-foreground font-body">
               CNPJ: 26.191.013/0001-89
             </p>
           </div>
