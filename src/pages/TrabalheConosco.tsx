@@ -15,6 +15,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 
 const TrabalheConosco = () => {
   const { toast } = useToast();
@@ -142,8 +143,13 @@ const TrabalheConosco = () => {
     <div className="min-h-screen bg-[#0a0a0a]">
       <Header />
 
+      {/* Breadcrumb */}
+      <div className="container mx-auto px-4 pt-24 pb-4">
+        <Breadcrumb items={[{ label: "Trabalhe Conosco" }]} variant="dark" />
+      </div>
+
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-8 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#0a0a0a]" />
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#a38b58]/20 via-transparent to-transparent" />

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import SecurityModal from "@/components/security/SecurityModal";
 import OfficialChannelsBar from "@/components/security/OfficialChannelsBar";
 import ContactValidator from "@/components/security/ContactValidator";
@@ -19,8 +20,13 @@ const Seguranca = () => {
         <Header />
       </div>
 
+      {/* Breadcrumb */}
+      <div className="container mx-auto px-4 pt-24 pb-4">
+        <Breadcrumb items={[{ label: "Segurança" }]} />
+      </div>
+
       {/* Hero Section with Contact Validator */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-24 pb-16">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-8 pb-16">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
