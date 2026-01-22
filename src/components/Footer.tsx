@@ -82,6 +82,14 @@ const Footer = () => {
                   Segurança
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => navigate("/trabalhe-conosco")}
+                  className="text-muted-foreground hover:text-primary font-body text-sm transition-colors"
+                >
+                  Trabalhe Conosco
+                </button>
+              </li>
             </ul>
           </div>
 
