@@ -29,6 +29,8 @@ const Hero = () => {
           className="w-full h-full animate-bg-slide-in"
           style={{ objectFit: 'cover', objectPosition: 'center' }}
           enableLazyLoad={false}
+          // @ts-ignore - fetchpriority is valid but not in React types yet
+          fetchpriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
       </div>
