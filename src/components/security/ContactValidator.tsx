@@ -172,7 +172,7 @@ const ContactValidator = () => {
                       {result.message}
                     </p>
                     <a
-                      href="https://wa.me/5581995441368?text=Olá,%20gostaria%20de%20denunciar%20uma%20tentativa%20de%20golpe."
+                      href="https://wa.me/5581983421727?text=Olá,%20gostaria%20de%20denunciar%20uma%20tentativa%20de%20golpe."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-xs font-body text-[#b22222] hover:underline mt-2"
