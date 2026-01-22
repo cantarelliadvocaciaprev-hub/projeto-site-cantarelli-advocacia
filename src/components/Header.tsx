@@ -131,7 +131,7 @@ const Header = () => {
                           ? navigateToPage(item.id)
                           : scrollToSection(item.id)
                       }
-                      className="text-foreground hover:text-primary transition-colors font-body text-xs xl:text-sm px-2 xl:px-3 py-1 whitespace-nowrap"
+                      className="text-foreground hover:text-primary transition-all duration-300 font-body text-xs xl:text-sm px-2 xl:px-3 py-1 whitespace-nowrap hover:-translate-y-0.5 hover:drop-shadow-[0_4px_6px_hsl(var(--primary)/0.3)]"
                     >
                       {item.label}
                     </button>
