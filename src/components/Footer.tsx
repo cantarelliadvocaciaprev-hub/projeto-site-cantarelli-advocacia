@@ -12,9 +12,9 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo e descrição */}
-          <div className="pb-6 md:pb-0 md:pr-6 md:border-r border-primary/30">
+          <div className="pb-6 lg:pb-0 lg:pr-6 lg:border-r border-primary/30">
             <img src={logo} alt="Cantarelli Advocacia" className="h-16 w-auto mb-4" />
             <p className="text-muted-foreground font-body text-sm mb-4">
               Especialistas em Direito Previdenciário com mais de 17 anos de experiência.
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
 
           {/* Links Rápidos */}
-          <div className="pb-6 md:pb-0 md:pr-6 md:border-r border-primary/30 pt-6 md:pt-0 border-t md:border-t-0 border-primary/30">
+          <div className="pb-6 lg:pb-0 lg:pr-6 lg:border-r border-primary/30 pt-6 lg:pt-0 border-t lg:border-t-0 border-primary/30">
             <h4 className="font-display font-bold text-primary mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
               <li>
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
 
           {/* Contato */}
-          <div className="pb-6 md:pb-0 md:pr-6 md:border-r border-primary/30 pt-6 md:pt-0 border-t md:border-t-0 border-primary/30">
+          <div className="pb-6 lg:pb-0 lg:pr-6 lg:border-r border-primary/30 pt-6 lg:pt-0 border-t lg:border-t-0 border-primary/30">
             <h4 className="font-display font-bold text-primary mb-4">Contato</h4>
             <ul className="space-y-2 text-sm text-muted-foreground font-body">
               <li>Estrada dos Remédios, 2115</li>
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
 
           {/* Redes Sociais */}
-          <div className="pt-6 md:pt-0 border-t md:border-t-0 border-primary/30">
+          <div className="pt-6 lg:pt-0 border-t lg:border-t-0 border-primary/30">
             <h4 className="font-display font-bold text-primary mb-4">Redes Sociais</h4>
             <div className="flex gap-4">
               <a

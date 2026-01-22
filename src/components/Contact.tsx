@@ -202,11 +202,10 @@ const Contact = () => {
             <h3 className="text-2xl font-display font-bold text-foreground mb-6">
               Localização
             </h3>
-            <div className="rounded-lg overflow-hidden border border-border h-[300px]">
+            <div className="rounded-lg overflow-hidden border border-border h-[250px] md:h-[300px] w-full">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.319282937658!2d-34.9164!3d-8.0442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18cc8fa0dd9f%3A0x5c408e0b4e2f1898!2sCantarelli%20Advocacia!5e0!3m2!1spt-BR!2sbr!4v1234567890"
-                width="100%"
-                height="100%"
+                className="w-full h-full"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
