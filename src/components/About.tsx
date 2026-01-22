@@ -4,6 +4,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useCarouselCenter } from "@/hooks/useCarouselCenter";
 import { useState } from "react";
+import ImageWithSkeleton from "@/components/ImageWithSkeleton";
 
 // Importar imagens da galeria
 import gallery1 from "@/assets/gallery/IMG_7269.jpg";
@@ -72,7 +73,12 @@ const About = () => {
                 const isCenterSlide = index === centerIndex;
                 return <CarouselItem key={index} className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                       <div className="p-1 overflow-hidden">
-                        <img src={image} alt={`Cantarelli Advocacia - Escritório ${index + 1}`} className={`w-full h-72 md:h-80 lg:h-96 object-contain bg-neutral-50 shadow-md transition-all duration-500 ease-in-out ${isCenterSlide ? 'carousel-center-item' : 'carousel-side-item'}`} />
+                        <ImageWithSkeleton 
+                          src={image} 
+                          alt={`Cantarelli Advocacia - Escritório ${index + 1}`} 
+                          className={`h-72 md:h-80 lg:h-96 bg-neutral-50 shadow-md transition-all duration-500 ease-in-out ${isCenterSlide ? 'carousel-center-item' : 'carousel-side-item'}`}
+                          style={{ objectFit: 'contain' }}
+                        />
                       </div>
                     </CarouselItem>;
               })}
@@ -103,7 +109,12 @@ const About = () => {
             {/* Dr. Thiago Cantarelli */}
             <div className="bg-background p-8 rounded-lg shadow-md animate-fade-in">
               <div className="mb-4">
-                <img src={thiagoCantarelli} alt="Dr. Thiago Cantarelli" className="w-full aspect-[3/4] object-cover rounded-lg mb-4" />
+                <ImageWithSkeleton 
+                  src={thiagoCantarelli} 
+                  alt="Dr. Thiago Cantarelli" 
+                  className="w-full aspect-[3/4] rounded-lg mb-4"
+                  style={{ objectFit: 'cover' }}
+                />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dr. Thiago Cantarelli
                 </h3>
@@ -133,7 +144,12 @@ const About = () => {
             animationDelay: "0.1s"
           }}>
               <div className="mb-0">
-                <img src={izabelaFarias} alt="Dra. Izabela Farias" className="w-full aspect-[3/4] object-cover rounded-lg mb-4" />
+                <ImageWithSkeleton 
+                  src={izabelaFarias} 
+                  alt="Dra. Izabela Farias" 
+                  className="w-full aspect-[3/4] rounded-lg mb-4"
+                  style={{ objectFit: 'cover' }}
+                />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dra. Izabela Farias
                 </h3>
