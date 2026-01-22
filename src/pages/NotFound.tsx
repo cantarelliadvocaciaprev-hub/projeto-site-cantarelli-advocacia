@@ -5,6 +5,7 @@ import { Home, ArrowLeft, Search } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const NotFound = () => {
@@ -17,6 +18,10 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden flex flex-col">
+      <SEO
+        title="Página não encontrada | Cantarelli Advocacia"
+        description="A página que você está procurando não foi encontrada. Volte para a página inicial da Cantarelli Advocacia."
+      />
       <Header />
 
       {/* Hero Section */}

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SkipLinks from "@/components/SkipLinks";
+import SEO from "@/components/SEO";
 import SecurityModal from "@/components/security/SecurityModal";
 import OfficialChannelsBar from "@/components/security/OfficialChannelsBar";
 import ContactValidator from "@/components/security/ContactValidator";
@@ -14,6 +15,14 @@ import heroBackground from "@/assets/hero-background.jpg";
 const Seguranca = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <SEO
+        title="Segurança | Cantarelli Advocacia - Verifique Contatos Oficiais"
+        description="Proteja-se contra golpes. Verifique se o contato que você recebeu é realmente da Cantarelli Advocacia. Confira nossos canais oficiais e aprenda a identificar tentativas de fraude."
+        keywords="segurança, golpe do falso advogado, fraude advocacia, verificar contato, Cantarelli Advocacia, proteção contra golpes"
+        ogTitle="Segurança | Cantarelli Advocacia"
+        ogDescription="Verifique contatos oficiais e proteja-se contra golpes. Sua segurança é nossa prioridade."
+        canonical="https://cantarelliadvocacia.com.br/seguranca"
+      />
       <SkipLinks links={[
         { id: "main-content", label: "Ir para o conteúdo principal" },
         { id: "validator", label: "Ir para verificador de contatos" },
