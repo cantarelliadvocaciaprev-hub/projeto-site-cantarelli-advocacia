@@ -4,6 +4,8 @@ const OfficialChannelsBar = () => {
   const officialNumbers = [
     { number: "(81) 3049-3799", tel: "+558130493799" },
     { number: "(81) 99544-1368", tel: "+5581995441368" },
+    { number: "(81) 98771-8606", tel: "+5581987718606" },
+    { number: "(81) 98342-1727", tel: "+5581983421727" },
   ];
 
   return (
