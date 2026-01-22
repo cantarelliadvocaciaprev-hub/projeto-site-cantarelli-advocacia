@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 interface ImageWithSkeletonProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   skeletonClassName?: string;
   enableLazyLoad?: boolean;
+  fetchpriority?: "high" | "low" | "auto";
 }
 
 const ImageWithSkeleton = ({ 
@@ -13,6 +14,7 @@ const ImageWithSkeleton = ({
   className, 
   skeletonClassName,
   enableLazyLoad = true,
+  fetchpriority,
   ...props 
 }: ImageWithSkeletonProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -57,8 +59,10 @@ const ImageWithSkeleton = ({
         <img
           src={src}
           alt={alt}
-          loading="lazy"
-          decoding="async"
+          loading={enableLazyLoad ? "lazy" : "eager"}
+          decoding={fetchpriority === "high" ? "sync" : "async"}
+          // @ts-ignore - fetchpriority is valid HTML attribute
+          fetchpriority={fetchpriority}
           className={cn(
             "w-full h-full transition-opacity duration-500",
             isLoaded ? "opacity-100" : "opacity-0"
