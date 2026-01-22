@@ -73,19 +73,22 @@ const Header = () => {
           </button>
 
           {/* Desktop Menu */}
-          <ul className="hidden lg:flex items-center gap-8">
-            {menuItems.map((item) => (
-              <li key={item.id}>
+          <ul className="hidden lg:flex items-center gap-1">
+            {menuItems.map((item, index) => (
+              <li key={item.id} className="flex items-center">
                 <button
                   onClick={() =>
                     item.type === "page"
                       ? navigateToPage(item.id)
                       : scrollToSection(item.id)
                   }
-                  className="text-foreground hover:text-primary transition-colors font-body text-sm"
+                  className="text-foreground hover:text-primary transition-colors font-body text-sm px-3 py-1"
                 >
                   {item.label}
                 </button>
+                {index < menuItems.length - 1 && (
+                  <span className="w-px h-4 bg-primary/40" aria-hidden="true" />
+                )}
               </li>
             ))}
           </ul>
