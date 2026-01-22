@@ -29,6 +29,7 @@ const ContactValidator = () => {
     "81987718606": { name: "Setor Financeiro", role: "Atendimento Financeiro", photo: logoSquare },
     "81983421727": { name: "WhatsApp Oficial", role: "Atendimento WhatsApp", photo: logoSquare },
     "81986348775": { name: "Setor Administrativo", role: "Atendimento Administrativo", photo: logoSquare },
+    "81997264914": { name: "Dr. Thiago Cantarelli", role: "Advogado - Contato Privado", photo: thiagoCantarelli },
   };
 
   const formatPhoneNumber = (value: string) => {
