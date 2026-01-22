@@ -16,6 +16,7 @@ import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const TrabalheConosco = () => {
   const { toast } = useToast();
@@ -487,6 +488,7 @@ const TrabalheConosco = () => {
       </section>
 
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };

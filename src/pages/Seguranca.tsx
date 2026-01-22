@@ -3,6 +3,7 @@ import { ShieldCheck } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SecurityModal from "@/components/security/SecurityModal";
 import OfficialChannelsBar from "@/components/security/OfficialChannelsBar";
 import ContactValidator from "@/components/security/ContactValidator";
@@ -114,6 +115,7 @@ const Seguranca = () => {
       </section>
 
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };

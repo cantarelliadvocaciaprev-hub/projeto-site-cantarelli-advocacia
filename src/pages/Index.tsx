@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SecurityShieldButton from "@/components/SecurityShieldButton";
 import SkipLinks from "@/components/SkipLinks";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const Index = () => {
   return (
@@ -28,6 +29,7 @@ const Index = () => {
       <Footer />
       <WhatsAppButton />
       <SecurityShieldButton />
+      <ScrollToTopButton />
     </div>
   );
 };
