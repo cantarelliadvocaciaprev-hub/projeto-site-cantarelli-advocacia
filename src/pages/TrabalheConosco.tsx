@@ -17,6 +17,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import SkipLinks from "@/components/SkipLinks";
 
 const TrabalheConosco = () => {
   const { toast } = useToast();
@@ -142,6 +143,10 @@ const TrabalheConosco = () => {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
+      <SkipLinks links={[
+        { id: "main-content", label: "Ir para o conteúdo principal" },
+        { id: "form", label: "Ir para formulário de candidatura" },
+      ]} />
       <Header />
 
       {/* Breadcrumb */}
@@ -150,7 +155,7 @@ const TrabalheConosco = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-8 pb-20 overflow-hidden">
+      <section id="main-content" tabIndex={-1} className="relative pt-8 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#111] to-[#0a0a0a]" />
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#a38b58]/20 via-transparent to-transparent" />
@@ -222,7 +227,7 @@ const TrabalheConosco = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="border border-[#ede7e4]/30 rounded-xl p-8 md:p-12 bg-[#111]/30 backdrop-blur-sm">
+            <div id="form" className="border border-[#ede7e4]/30 rounded-xl p-8 md:p-12 bg-[#111]/30 backdrop-blur-sm">
               <h2 className="text-2xl md:text-3xl font-alexandria font-bold text-[#ede7e4] mb-2 text-center">
                 Envie sua Candidatura
               </h2>
