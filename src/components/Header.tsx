@@ -7,6 +7,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import ThemeToggle from "@/components/ThemeToggle";
 import logo from "@/assets/logo-transparent.png";
 
 const Header = () => {
@@ -162,7 +163,8 @@ const Header = () => {
             ))}
           </ul>
 
-          <div className="hidden xl:block">
+          <div className="hidden xl:flex items-center gap-2">
+            <ThemeToggle />
             <Button
               onClick={() =>
                 window.open(
@@ -177,13 +179,15 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="xl:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex xl:hidden items-center gap-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
