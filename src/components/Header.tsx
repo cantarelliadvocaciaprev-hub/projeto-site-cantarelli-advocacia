@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Users, Briefcase, ClipboardList, MessageSquare, HelpCircle, Phone, UserPlus, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation, useNavigate } from "react-router-dom";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 import logo from "@/assets/logo-transparent.png";
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -43,14 +49,62 @@ const Header = () => {
   };
 
   const menuItems = [
-    { label: "Início", id: "home", type: "section" },
-    { label: "Quem Somos", id: "about", type: "section" },
-    { label: "Áreas de Atuação", id: "services", type: "section" },
-    { label: "Planejamento", id: "planning", type: "section" },
-    { label: "Depoimentos", id: "testimonials", type: "section" },
-    { label: "FAQ", id: "faq", type: "section" },
-    { label: "Contato", id: "contact", type: "section" },
-    { label: "Trabalhe Conosco", id: "/trabalhe-conosco", type: "page" },
+    { 
+      label: "Início", 
+      id: "home", 
+      type: "section",
+      icon: Home,
+      preview: "Volte ao topo e conheça a Cantarelli Advocacia"
+    },
+    { 
+      label: "Quem Somos", 
+      id: "about", 
+      type: "section",
+      icon: Users,
+      preview: "17+ anos de experiência em Direito Previdenciário com atendimento humanizado"
+    },
+    { 
+      label: "Áreas de Atuação", 
+      id: "services", 
+      type: "section",
+      icon: Briefcase,
+      preview: "Aposentadorias, BPC/LOAS, Pensões, Revisões e mais"
+    },
+    { 
+      label: "Planejamento", 
+      id: "planning", 
+      type: "section",
+      icon: ClipboardList,
+      preview: "Planejamento previdenciário personalizado para seu futuro"
+    },
+    { 
+      label: "Depoimentos", 
+      id: "testimonials", 
+      type: "section",
+      icon: MessageSquare,
+      preview: "Veja o que nossos clientes dizem sobre nosso trabalho"
+    },
+    { 
+      label: "FAQ", 
+      id: "faq", 
+      type: "section",
+      icon: HelpCircle,
+      preview: "Respostas para as dúvidas mais frequentes"
+    },
+    { 
+      label: "Contato", 
+      id: "contact", 
+      type: "section",
+      icon: Phone,
+      preview: "Entre em contato conosco pelo WhatsApp ou formulário"
+    },
+    { 
+      label: "Trabalhe Conosco", 
+      id: "/trabalhe-conosco", 
+      type: "page",
+      icon: UserPlus,
+      preview: "Faça parte da nossa equipe de especialistas"
+    },
   ];
 
   return (
@@ -76,16 +130,38 @@ const Header = () => {
           <ul className="hidden lg:flex items-center gap-1">
             {menuItems.map((item, index) => (
               <li key={item.id} className="flex items-center">
-                <button
-                  onClick={() =>
-                    item.type === "page"
-                      ? navigateToPage(item.id)
-                      : scrollToSection(item.id)
-                  }
-                  className="text-foreground hover:text-primary transition-colors font-body text-sm px-3 py-1"
-                >
-                  {item.label}
-                </button>
+                <HoverCard openDelay={200} closeDelay={100}>
+                  <HoverCardTrigger asChild>
+                    <button
+                      onClick={() =>
+                        item.type === "page"
+                          ? navigateToPage(item.id)
+                          : scrollToSection(item.id)
+                      }
+                      className="text-foreground hover:text-primary transition-colors font-body text-sm px-3 py-1"
+                    >
+                      {item.label}
+                    </button>
+                  </HoverCardTrigger>
+                  <HoverCardContent 
+                    className="w-64 bg-card border-primary/30 shadow-lg z-50"
+                    sideOffset={8}
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-full bg-primary/10">
+                        <item.icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-display font-semibold text-foreground text-sm mb-1">
+                          {item.label}
+                        </h4>
+                        <p className="text-muted-foreground text-xs font-body leading-relaxed">
+                          {item.preview}
+                        </p>
+                      </div>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
                 {index < menuItems.length - 1 && (
                   <span className="w-px h-4 bg-primary/40" aria-hidden="true" />
                 )}
