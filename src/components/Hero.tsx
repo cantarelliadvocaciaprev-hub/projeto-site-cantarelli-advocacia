@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Shield, Award } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import { useCountUp } from "@/hooks/useCountUp";
+import ImageWithSkeleton from "@/components/ImageWithSkeleton";
 const Hero = () => {
   const {
     count: clientsCount,
@@ -22,7 +23,13 @@ const Hero = () => {
   };
   return <section id="home" className="relative min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 z-0">
-        <img src={heroBackground} alt="Cantarelli Advocacia - Escritório" className="w-full h-full object-cover object-center animate-bg-slide-in" />
+        <ImageWithSkeleton 
+          src={heroBackground} 
+          alt="Cantarelli Advocacia - Escritório" 
+          className="w-full h-full animate-bg-slide-in"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          enableLazyLoad={false}
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
       </div>
 
