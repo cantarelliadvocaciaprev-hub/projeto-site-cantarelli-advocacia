@@ -70,15 +70,15 @@ const About = () => {
               <CarouselContent className="-ml-2 md:-ml-4">
                 {galleryImages.map((image, index) => {
                 const isCenterSlide = index === centerIndex;
-                return <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                return <CarouselItem key={index} className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
                       <div className="p-1 overflow-hidden">
                         <img src={image} alt={`Cantarelli Advocacia - Escritório ${index + 1}`} className={`w-full h-72 md:h-80 lg:h-96 object-contain bg-neutral-50 shadow-md transition-all duration-500 ease-in-out ${isCenterSlide ? 'carousel-center-item' : 'carousel-side-item'}`} />
                       </div>
                     </CarouselItem>;
               })}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
             </Carousel>
           </div>
 

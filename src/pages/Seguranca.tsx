@@ -10,7 +10,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 
 const Seguranca = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <SecurityModal />
       <OfficialChannelsBar />
       
