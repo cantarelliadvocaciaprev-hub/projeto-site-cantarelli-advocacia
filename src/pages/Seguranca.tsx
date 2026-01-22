@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import SkipLinks from "@/components/SkipLinks";
 import SecurityModal from "@/components/security/SecurityModal";
 import OfficialChannelsBar from "@/components/security/OfficialChannelsBar";
 import ContactValidator from "@/components/security/ContactValidator";
@@ -13,6 +14,10 @@ import heroBackground from "@/assets/hero-background.jpg";
 const Seguranca = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
+      <SkipLinks links={[
+        { id: "main-content", label: "Ir para o conteúdo principal" },
+        { id: "validator", label: "Ir para verificador de contatos" },
+      ]} />
       <SecurityModal />
       <OfficialChannelsBar />
       
@@ -27,7 +32,7 @@ const Seguranca = () => {
       </div>
 
       {/* Hero Section with Contact Validator */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-8 pb-16">
+      <section id="main-content" tabIndex={-1} className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-8 pb-16">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
@@ -59,6 +64,7 @@ const Seguranca = () => {
           </motion.div>
 
           <motion.div
+            id="validator"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
