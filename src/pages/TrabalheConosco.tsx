@@ -27,6 +27,7 @@ const TrabalheConosco = () => {
     telefone: "",
     linkedin: "",
     area: "",
+    pretensaoSalarial: "",
     mensagem: "",
   });
 
@@ -103,6 +104,7 @@ const TrabalheConosco = () => {
       telefone: "",
       linkedin: "",
       area: "",
+      pretensaoSalarial: "",
       mensagem: "",
     });
     setSelectedFile(null);
@@ -304,7 +306,13 @@ const TrabalheConosco = () => {
                     <SelectTrigger className="bg-[#0a0a0a] border-[#ede7e4]/30 text-[#ede7e4] focus:ring-[#a38b58]/20">
                       <SelectValue placeholder="Selecione uma área" />
                     </SelectTrigger>
-                    <SelectContent className="bg-[#111] border-[#ede7e4]/30">
+                    <SelectContent className="bg-[#111] border-[#ede7e4]/30 z-50">
+                      <SelectItem
+                        value="juridico"
+                        className="text-[#ede7e4] focus:bg-[#a38b58]/20 focus:text-[#ede7e4]"
+                      >
+                        Jurídico
+                      </SelectItem>
                       <SelectItem
                         value="advogado"
                         className="text-[#ede7e4] focus:bg-[#a38b58]/20 focus:text-[#ede7e4]"
@@ -315,7 +323,7 @@ const TrabalheConosco = () => {
                         value="estagiario"
                         className="text-[#ede7e4] focus:bg-[#a38b58]/20 focus:text-[#ede7e4]"
                       >
-                        Estagiário(a)
+                        Estagiário(a) de Direito
                       </SelectItem>
                       <SelectItem
                         value="administrativo"
@@ -323,8 +331,60 @@ const TrabalheConosco = () => {
                       >
                         Administrativo
                       </SelectItem>
+                      <SelectItem
+                        value="marketing"
+                        className="text-[#ede7e4] focus:bg-[#a38b58]/20 focus:text-[#ede7e4]"
+                      >
+                        Marketing
+                      </SelectItem>
+                      <SelectItem
+                        value="ti"
+                        className="text-[#ede7e4] focus:bg-[#a38b58]/20 focus:text-[#ede7e4]"
+                      >
+                        Tecnologia da Informação (TI)
+                      </SelectItem>
+                      <SelectItem
+                        value="rh"
+                        className="text-[#ede7e4] focus:bg-[#a38b58]/20 focus:text-[#ede7e4]"
+                      >
+                        Recursos Humanos (RH)
+                      </SelectItem>
+                      <SelectItem
+                        value="financeiro"
+                        className="text-[#ede7e4] focus:bg-[#a38b58]/20 focus:text-[#ede7e4]"
+                      >
+                        Financeiro
+                      </SelectItem>
+                      <SelectItem
+                        value="atendimento"
+                        className="text-[#ede7e4] focus:bg-[#a38b58]/20 focus:text-[#ede7e4]"
+                      >
+                        Atendimento ao Cliente
+                      </SelectItem>
+                      <SelectItem
+                        value="outro"
+                        className="text-[#ede7e4] focus:bg-[#a38b58]/20 focus:text-[#ede7e4]"
+                      >
+                        Outro
+                      </SelectItem>
                     </SelectContent>
                   </Select>
+                </div>
+
+                {/* Pretensão Salarial */}
+                <div className="space-y-2">
+                  <Label htmlFor="pretensaoSalarial" className="text-[#ede7e4] font-alexandria">
+                    Pretensão Salarial
+                  </Label>
+                  <Input
+                    id="pretensaoSalarial"
+                    name="pretensaoSalarial"
+                    type="text"
+                    value={formData.pretensaoSalarial}
+                    onChange={handleInputChange}
+                    className="bg-[#0a0a0a] border-[#ede7e4]/30 text-[#ede7e4] placeholder:text-[#c5c9ce]/50 focus:border-[#a38b58] focus:ring-[#a38b58]/20"
+                    placeholder="Ex: R$ 3.000,00 ou A combinar"
+                  />
                 </div>
 
                 {/* File Upload */}
