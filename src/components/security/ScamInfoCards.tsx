@@ -36,8 +36,8 @@ const ScamInfoCards = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-display font-bold text-foreground text-2xl md:text-3xl mb-4">
-            Como Identificar o Golpe do Alvará
+        <h2 className="font-display font-bold text-foreground text-2xl md:text-3xl mb-4">
+            Como Identificar o Golpe do Falso Advogado
           </h2>
           <p className="text-muted-foreground font-body max-w-2xl mx-auto">
             Conheça as táticas utilizadas por criminosos para se proteger de fraudes
