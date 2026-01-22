@@ -134,7 +134,7 @@ const Header = () => {
           </button>
 
           {/* Desktop Menu */}
-          <ul className="hidden lg:flex items-center gap-1">
+          <ul className="hidden xl:flex items-center justify-center gap-0.5 flex-wrap">
             {menuItems.map((item, index) => (
               <li key={item.id} className="flex items-center">
                 <HoverCard openDelay={200} closeDelay={100}>
@@ -145,7 +145,7 @@ const Header = () => {
                           ? navigateToPage(item.id)
                           : scrollToSection(item.id)
                       }
-                      className="text-foreground hover:text-primary transition-colors font-body text-sm px-3 py-1"
+                      className="text-foreground hover:text-primary transition-colors font-body text-xs xl:text-sm px-2 xl:px-3 py-1 whitespace-nowrap"
                     >
                       {item.label}
                     </button>
@@ -176,7 +176,7 @@ const Header = () => {
             ))}
           </ul>
 
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <Button
               onClick={() =>
                 window.open(
@@ -184,7 +184,7 @@ const Header = () => {
                   "_blank"
                 )
               }
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground text-sm"
             >
               Fale com nossa equipe
             </Button>
@@ -192,7 +192,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden"
+            className="xl:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -202,7 +202,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 animate-fade-in">
+          <div className="xl:hidden mt-4 pb-4 animate-fade-in">
             <ul className="flex flex-col gap-4">
               {menuItems.map((item) => (
                 <li key={item.id}>
