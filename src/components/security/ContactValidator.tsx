@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "framer-motion";
 import thiagoCantarelli from "@/assets/team/thiago-cantarelli.jpg";
 import izabelaFarias from "@/assets/team/izabela-farias.jpg";
+import logoSquare from "@/assets/logo-square.jpg";
 
 interface ValidationResult {
   status: "safe" | "danger" | null;
@@ -26,7 +27,7 @@ const ContactValidator = () => {
     "8130493799": { name: "Cantarelli Advocacia", role: "Escritório Principal", photo: thiagoCantarelli },
     "81995441368": { name: "Equipe Comercial", role: "Atendimento Comercial", photo: izabelaFarias },
     "81987718606": { name: "Setor Financeiro", role: "Atendimento Financeiro", photo: izabelaFarias },
-    "81983421727": { name: "WhatsApp Oficial", role: "Atendimento WhatsApp", photo: izabelaFarias },
+    "81983421727": { name: "WhatsApp Oficial", role: "Atendimento WhatsApp", photo: logoSquare },
   };
 
   const formatPhoneNumber = (value: string) => {
