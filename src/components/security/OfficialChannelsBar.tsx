@@ -9,9 +9,9 @@ const OfficialChannelsBar = () => {
   ];
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[60] bg-[#c5c9ce] py-2 pointer-events-none">
+    <div className="fixed top-0 left-0 right-0 z-[60] bg-[#c5c9ce] py-2 transition-transform duration-300 hover:-translate-y-full group">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center gap-2 flex-wrap pointer-events-auto">
+        <div className="flex items-center justify-center gap-2 flex-wrap">
           <Shield className="w-4 h-4 text-[#1a1a1a]" />
           <span className="text-[#1a1a1a] text-xs font-display font-semibold uppercase tracking-wider">
             Canais Oficiais Exclusivos:
