@@ -26,7 +26,7 @@ const ContactValidator = () => {
   const officialContacts: Record<string, { name: string; role: string; photo: string }> = {
     "8130493799": { name: "Cantarelli Advocacia", role: "Escritório Principal", photo: thiagoCantarelli },
     "81995441368": { name: "Equipe Comercial", role: "Atendimento Comercial", photo: logoSquare },
-    "81987718606": { name: "Setor Financeiro", role: "Atendimento Financeiro", photo: izabelaFarias },
+    "81987718606": { name: "Setor Financeiro", role: "Atendimento Financeiro", photo: logoSquare },
     "81983421727": { name: "WhatsApp Oficial", role: "Atendimento WhatsApp", photo: logoSquare },
   };
 
