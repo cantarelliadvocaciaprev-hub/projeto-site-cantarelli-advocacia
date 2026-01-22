@@ -7,6 +7,7 @@ import OfficialChannelsBar from "@/components/security/OfficialChannelsBar";
 import ContactValidator from "@/components/security/ContactValidator";
 import ScamInfoCards from "@/components/security/ScamInfoCards";
 import heroBackground from "@/assets/hero-background.jpg";
+import securityBackground from "@/assets/gallery/IMG_8704.jpg";
 
 const Seguranca = () => {
   return (
@@ -65,8 +66,18 @@ const Seguranca = () => {
       <ScamInfoCards />
 
       {/* Additional Security Tips */}
-      <section className="py-16 bg-card">
-        <div className="container mx-auto px-4">
+      <section className="py-16 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={securityBackground}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-card/90" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             className="max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
