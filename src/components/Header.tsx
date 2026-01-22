@@ -198,8 +198,9 @@ const Header = () => {
                         ? navigateToPage(item.id)
                         : scrollToSection(item.id)
                     }
-                    className="block w-full text-left text-foreground hover:text-primary transition-colors font-body"
+                    className="flex items-center gap-3 w-full text-left text-foreground hover:text-primary transition-all duration-300 font-body py-2 px-3 rounded-lg hover:-translate-y-0.5 hover:drop-shadow-[0_4px_6px_hsl(var(--primary)/0.3)] hover:bg-primary/5"
                   >
+                    <item.icon className="w-5 h-5 text-primary" />
                     {item.label}
                   </button>
                 </li>
