@@ -11,10 +11,12 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import SecurityShieldButton from "@/components/SecurityShieldButton";
 import SkipLinks from "@/components/SkipLinks";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import SchemaMarkup from "@/components/SchemaMarkup";
 
 const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <SchemaMarkup type="legalService" />
       <SkipLinks />
       <Header />
       <main id="main-content" tabIndex={-1}>

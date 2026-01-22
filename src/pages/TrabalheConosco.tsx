@@ -19,6 +19,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SkipLinks from "@/components/SkipLinks";
 import SEO from "@/components/SEO";
+import SchemaMarkup from "@/components/SchemaMarkup";
 
 const TrabalheConosco = () => {
   const { toast } = useToast();
@@ -145,6 +146,16 @@ const TrabalheConosco = () => {
         ogTitle="Trabalhe Conosco | Cantarelli Advocacia"
         ogDescription="Faça parte da nossa equipe de especialistas em Direito Previdenciário. Envie sua candidatura."
         canonical="https://cantarelliadvocacia.com.br/trabalhe-conosco"
+      />
+      <SchemaMarkup
+        type="jobPosting"
+        pageTitle="Trabalhe Conosco | Cantarelli Advocacia"
+        pageDescription="Faça parte da nossa equipe de especialistas em Direito Previdenciário."
+        pageUrl="https://cantarelliadvocacia.com.br/trabalhe-conosco"
+        breadcrumbs={[
+          { name: "Início", url: "https://cantarelliadvocacia.com.br" },
+          { name: "Trabalhe Conosco", url: "https://cantarelliadvocacia.com.br/trabalhe-conosco" },
+        ]}
       />
       <SkipLinks links={[
         { id: "main-content", label: "Ir para o conteúdo principal" },
