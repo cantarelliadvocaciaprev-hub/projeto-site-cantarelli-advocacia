@@ -28,7 +28,7 @@ const SecurityModal = () => {
 
   const handleReport = () => {
     window.open(
-      "https://wa.me/5581995441368?text=Olá,%20gostaria%20de%20denunciar%20uma%20tentativa%20de%20golpe.",
+      "https://wa.me/5581983421727?text=Olá,%20gostaria%20de%20denunciar%20uma%20tentativa%20de%20golpe.",
       "_blank"
     );
     handleClose();
