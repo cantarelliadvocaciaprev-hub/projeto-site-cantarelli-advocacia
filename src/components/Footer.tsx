@@ -13,7 +13,8 @@ const Footer = () => {
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
-          <div>
+          {/* Logo e descrição */}
+          <div className="pb-6 md:pb-0 md:pr-6 md:border-r border-primary/30">
             <img src={logo} alt="Cantarelli Advocacia" className="h-16 w-auto mb-4" />
             <p className="text-muted-foreground font-body text-sm mb-4">
               Especialistas em Direito Previdenciário com mais de 17 anos de experiência.
@@ -23,8 +24,9 @@ const Footer = () => {
             </p>
           </div>
 
-          <div>
-            <h4 className="font-display font-bold text-foreground mb-4">Links Rápidos</h4>
+          {/* Links Rápidos */}
+          <div className="pb-6 md:pb-0 md:pr-6 md:border-r border-primary/30 pt-6 md:pt-0 border-t md:border-t-0 border-primary/30">
+            <h4 className="font-display font-bold text-primary mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
               <li>
                 <button
@@ -61,8 +63,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-display font-bold text-foreground mb-4">Contato</h4>
+          {/* Contato */}
+          <div className="pb-6 md:pb-0 md:pr-6 md:border-r border-primary/30 pt-6 md:pt-0 border-t md:border-t-0 border-primary/30">
+            <h4 className="font-display font-bold text-primary mb-4">Contato</h4>
             <ul className="space-y-2 text-sm text-muted-foreground font-body">
               <li>Estrada dos Remédios, 2115</li>
               <li>Madalena, Recife – PE</li>
@@ -78,8 +81,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-display font-bold text-foreground mb-4">Redes Sociais</h4>
+          {/* Redes Sociais */}
+          <div className="pt-6 md:pt-0 border-t md:border-t-0 border-primary/30">
+            <h4 className="font-display font-bold text-primary mb-4">Redes Sociais</h4>
             <div className="flex gap-4">
               <a
                 href="https://www.instagram.com/cantarelliadvprev"
