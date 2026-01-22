@@ -156,7 +156,7 @@ const Header = () => {
                   </HoverCardContent>
                 </HoverCard>
                 {index < menuItems.length - 1 && (
-                  <span className="w-0.5 h-5 bg-primary rounded-full" aria-hidden="true" />
+                  <span className="w-0.5 h-5 bg-primary rounded-full transition-all duration-300 hover:h-6 hover:bg-primary/80" aria-hidden="true" />
                 )}
               </li>
             ))}
