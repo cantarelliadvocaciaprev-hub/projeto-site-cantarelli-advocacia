@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Users, Briefcase, ClipboardList, MessageSquare, HelpCircle, Phone, UserPlus, Home } from "lucide-react";
+import { Menu, X, Users, Briefcase, ClipboardList, MessageSquare, HelpCircle, Phone, UserPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
@@ -49,13 +49,6 @@ const Header = () => {
   };
 
   const menuItems = [
-    { 
-      label: "Início", 
-      id: "home", 
-      type: "section",
-      icon: Home,
-      preview: "Volte ao topo e conheça a Cantarelli Advocacia"
-    },
     { 
       label: "Quem Somos", 
       id: "about", 
