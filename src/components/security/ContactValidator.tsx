@@ -28,6 +28,7 @@ const ContactValidator = () => {
     "81995441368": { name: "Equipe Comercial", role: "Atendimento Comercial", photo: logoSquare },
     "81987718606": { name: "Setor Financeiro", role: "Atendimento Financeiro", photo: logoSquare },
     "81983421727": { name: "WhatsApp Oficial", role: "Atendimento WhatsApp", photo: logoSquare },
+    "81986348775": { name: "Setor Administrativo", role: "Atendimento Administrativo", photo: logoSquare },
   };
 
   const formatPhoneNumber = (value: string) => {
