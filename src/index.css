@@ -8,42 +8,42 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Cantarelli Brand Colors */
+    /* Cantarelli Brand Colors - Enhanced Contrast */
     --background: 39 30% 92%; /* Bege #ede7e4 */
-    --foreground: 200 3% 36%; /* Cinza escuro #585a5c */
+    --foreground: 200 5% 25%; /* Cinza mais escuro para melhor contraste */
 
     --card: 0 0% 100%;
-    --card-foreground: 200 3% 36%;
+    --card-foreground: 200 5% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 3% 36%;
+    --popover-foreground: 200 5% 25%;
 
-    --primary: 42 24% 52%; /* Dourado #a29165 */
+    --primary: 42 30% 42%; /* Dourado mais escuro para melhor contraste */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 39 30% 92%; /* Bege */
-    --secondary-foreground: 200 3% 36%;
+    --secondary-foreground: 200 5% 25%;
 
     --muted: 206 11% 79%; /* Cinza suave #c5c9ce */
-    --muted-foreground: 200 3% 36%;
+    --muted-foreground: 200 5% 35%; /* Mais escuro para melhor contraste */
 
-    --accent: 42 24% 52%; /* Dourado accent */
+    --accent: 42 30% 42%; /* Dourado accent mais escuro */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84.2% 45%; /* Vermelho mais escuro */
     --destructive-foreground: 0 0% 100%;
 
-    --border: 206 11% 79%;
-    --input: 206 11% 79%;
-    --ring: 42 24% 52%;
+    --border: 206 11% 70%;
+    --input: 206 11% 70%;
+    --ring: 42 30% 42%;
 
     --radius: 0.5rem;
     
     /* Custom tokens */
-    --gold: 42 24% 52%;
+    --gold: 42 30% 42%;
     --beige: 39 30% 92%;
     --gray-soft: 206 11% 79%;
-    --gray-dark: 200 3% 36%;
+    --gray-dark: 200 5% 25%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -113,6 +113,38 @@ All colors MUST be HSL.
   
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
+  }
+
+  /* Skip Links - Accessibility */
+  .skip-links-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+
+  .skip-link {
+    @apply absolute left-0 bg-primary text-primary-foreground px-4 py-3 font-body font-medium text-sm rounded-br-lg;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Focus visible styles for better accessibility */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Ensure links have underlines for accessibility */
+  a:not([class]) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 
   /* VLibras customization */

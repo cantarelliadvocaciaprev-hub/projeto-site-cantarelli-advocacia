@@ -9,12 +9,14 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SecurityShieldButton from "@/components/SecurityShieldButton";
+import SkipLinks from "@/components/SkipLinks";
 
 const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <SkipLinks />
       <Header />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <Hero />
         <About />
         <Services />
