@@ -18,6 +18,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SkipLinks from "@/components/SkipLinks";
+import SEO from "@/components/SEO";
 
 const TrabalheConosco = () => {
   const { toast } = useToast();
@@ -143,6 +144,14 @@ const TrabalheConosco = () => {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
+      <SEO
+        title="Trabalhe Conosco | Cantarelli Advocacia - Carreiras em Direito Previdenciário"
+        description="Faça parte da equipe Cantarelli Advocacia. Buscamos talentos comprometidos com a excelência em Direito Previdenciário. Envie seu currículo e construa sua carreira conosco."
+        keywords="trabalhe conosco, vagas advocacia, emprego direito previdenciário, carreira jurídica, Cantarelli Advocacia Recife"
+        ogTitle="Trabalhe Conosco | Cantarelli Advocacia"
+        ogDescription="Faça parte da nossa equipe de especialistas em Direito Previdenciário. Envie sua candidatura."
+        canonical="https://cantarelliadvocacia.com.br/trabalhe-conosco"
+      />
       <SkipLinks links={[
         { id: "main-content", label: "Ir para o conteúdo principal" },
         { id: "form", label: "Ir para formulário de candidatura" },
