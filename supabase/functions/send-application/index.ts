@@ -128,7 +128,7 @@ serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Cantarelli Advocacia <onboarding@resend.dev>",
+        from: "Cantarelli Advocacia <noreply@cantarelliadvocacia.com.br>",
         to: ["trabalheconosco@cantarelliadvocacia.com.br"],
         subject: `Nova Candidatura: ${data.nome} - ${areaLabel}`,
         html: emailHtml,
