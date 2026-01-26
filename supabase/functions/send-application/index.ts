@@ -150,10 +150,11 @@ serve(async (req) => {
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
 
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Error sending application:", error);
+    const errorMessage = error instanceof Error ? error.message : "Erro ao enviar candidatura";
     return new Response(
-      JSON.stringify({ error: error.message || "Erro ao enviar candidatura" }),
+      JSON.stringify({ error: errorMessage }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
