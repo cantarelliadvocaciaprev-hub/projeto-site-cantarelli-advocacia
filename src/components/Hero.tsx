@@ -70,7 +70,7 @@ const Hero = () => {
               <div className="flex items-center gap-2 mt-4 pt-3 border-t border-primary/10">
                 <Shield className="w-4 h-4 text-primary" />
                 <span className="text-xs text-muted-foreground font-body">
-                  Revisado por <strong className="text-foreground">Dr. Thiago Cantarelli</strong> (OAB/PE 28.165) • Janeiro 2025
+                  Revisado por <strong className="text-foreground">Dr. Thiago Cantarelli</strong> • Janeiro 2026
                 </span>
               </div>
             </div>
