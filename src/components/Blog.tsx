@@ -25,52 +25,52 @@ const Blog = () => {
 
   const posts: BlogPost[] = [
     {
-      title: "Como funciona a Aposentadoria por Tempo de Contribuição em 2025",
+      title: "Novas Regras de Aposentadoria em 2026: O Que Mudou no INSS",
       excerpt:
-        "Entenda as regras de transição e como garantir o melhor benefício possível após a Reforma da Previdência.",
-      date: "15 de Janeiro, 2026",
+        "A partir de janeiro de 2026, novas exigências entraram em vigor para quem quer se aposentar. Idade mínima aumentou e pontuação subiu. Veja como se preparar.",
+      date: "20 de Janeiro, 2026",
       category: "Aposentadoria",
-      readTime: "8 min",
+      readTime: "7 min",
       keyTakeaways: [
-        "A regra de transição por pontos exige 100 pontos para homens e 90 para mulheres em 2025",
-        "O cálculo considera 100% da média de todos os salários desde julho de 1994",
-        "Planejamento previdenciário pode aumentar o valor do benefício em até 40%",
+        "Idade mínima subiu para 59 anos (mulheres) e 64 anos (homens) na regra de transição",
+        "Pontuação exigida agora é 92 pontos para mulheres e 102 para homens",
+        "Quem não cumpriu requisitos até 31/12/2025 precisa se adequar às novas regras",
       ],
       lastUpdated: "Janeiro 2026",
       image: aposentadoriaImg,
       imageAlt: "Casal de idosos analisando documentos de aposentadoria com advogado especialista em direito previdenciário",
     },
     {
-      title: "BPC/LOAS: Quem tem direito ao benefício assistencial?",
+      title: "Reajuste do INSS 2026: Novo Teto de R$ 8.475,55",
       excerpt:
-        "Conheça os requisitos e documentos necessários para solicitar o BPC para idosos e pessoas com deficiência.",
-      date: "10 de Janeiro, 2026",
+        "O teto do INSS foi reajustado em 3,9% e agora é de R$ 8.475,55. Saiba como o reajuste afeta sua aposentadoria e benefícios.",
+      date: "15 de Janeiro, 2026",
       category: "Benefícios",
+      readTime: "5 min",
+      keyTakeaways: [
+        "Novo salário mínimo de R$ 1.518,00 serve de base para benefícios",
+        "Teto do INSS passou para R$ 8.475,55 com reajuste de 3,9%",
+        "Aposentados que ganham acima do mínimo tiveram reajuste pelo INPC",
+      ],
+      lastUpdated: "Janeiro 2026",
+      image: revisaoImg,
+      imageAlt: "Advogado analisando documentos financeiros e calculando reajuste de aposentadoria INSS 2026",
+    },
+    {
+      title: "BPC/LOAS 2026: Quem Tem Direito e Como Solicitar",
+      excerpt:
+        "O Benefício de Prestação Continuada (BPC) garante um salário mínimo para idosos e pessoas com deficiência. Veja os requisitos atualizados.",
+      date: "10 de Janeiro, 2026",
+      category: "Assistencial",
       readTime: "6 min",
       keyTakeaways: [
-        "Renda per capita familiar deve ser inferior a 1/4 do salário mínimo",
-        "Idosos a partir de 65 anos e pessoas com deficiência de qualquer idade podem solicitar",
+        "Renda per capita familiar deve ser inferior a 1/4 do salário mínimo (R$ 379,50)",
+        "Idosos a partir de 65 anos e PCDs de qualquer idade podem solicitar",
         "Não é necessário ter contribuído ao INSS para ter direito ao BPC",
       ],
       lastUpdated: "Janeiro 2026",
       image: bpcLoasImg,
-      imageAlt: "Idosa recebendo apoio e cuidados assistenciais relacionados ao benefício BPC LOAS",
-    },
-    {
-      title: "Revisão de Aposentadoria: vale a pena solicitar?",
-      excerpt:
-        "Descubra quando é possível revisar seu benefício e aumentar o valor recebido mensalmente.",
-      date: "5 de Janeiro, 2026",
-      category: "Revisão",
-      readTime: "7 min",
-      keyTakeaways: [
-        "Prazo para revisão é de 10 anos a partir do primeiro pagamento",
-        "Revisão da Vida Toda pode incluir contribuições anteriores a julho de 1994",
-        "Erros no cálculo do INSS são comuns e podem resultar em valores retroativos",
-      ],
-      lastUpdated: "Janeiro 2026",
-      image: revisaoImg,
-      imageAlt: "Advogado analisando documentos financeiros e calculando revisão de aposentadoria",
+      imageAlt: "Idosa recebendo apoio e cuidados assistenciais relacionados ao benefício BPC LOAS 2026",
     },
   ];
 
