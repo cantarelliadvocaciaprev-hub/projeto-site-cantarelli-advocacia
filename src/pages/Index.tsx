@@ -6,6 +6,7 @@ import SecurityShieldButton from "@/components/SecurityShieldButton";
 import SkipLinks from "@/components/SkipLinks";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SchemaMarkup from "@/components/SchemaMarkup";
+import LegalServiceSchema from "@/components/schemas/LegalServiceSchema";
 import {
   HeroSkeleton,
   ServicesSkeleton,
@@ -166,6 +167,7 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <SchemaMarkup type="legalService" />
+      <LegalServiceSchema />
       <SkipLinks />
       <Header />
       <main id="main-content" tabIndex={-1}>

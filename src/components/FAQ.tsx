@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import FAQPageSchema from "@/components/schemas/FAQPageSchema";
 
 const FAQ = () => {
   const { isVisible: faqVisible, elementRef: faqRef } = useScrollAnimation(0.1);
@@ -45,14 +46,15 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="py-20 bg-card">
+      <FAQPageSchema faqs={faqs} />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-alexandria font-bold text-foreground mb-4">
-            Perguntas Frequentes
+            Perguntas Frequentes sobre Direito Previdenciário
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-xl text-foreground/80 font-alexandria max-w-2xl mx-auto">
-            Tire suas principais dúvidas sobre Direito Previdenciário
+            Tire suas principais dúvidas sobre aposentadorias, BPC LOAS, revisões e outros benefícios do INSS
           </p>
         </div>
 

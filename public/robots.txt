@@ -1,14 +1,55 @@
+# Cantarelli Advocacia - robots.txt
+# Optimized for AI agents and search engine crawlers
+
+# Google
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
 User-agent: Bingbot
 Allow: /
 
+# Social Media
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+# AI Agents and LLM Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Default
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://cantarelliadvocacia.com.br/sitemap.xml
