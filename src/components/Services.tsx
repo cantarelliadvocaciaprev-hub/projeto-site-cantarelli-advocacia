@@ -78,11 +78,14 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
-            Áreas de Atuação
+            Áreas de Atuação em Direito Previdenciário
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground font-body max-w-2xl mx-auto">
-            Oferecemos soluções completas em Direito Previdenciário, com expertise em todas as modalidades de benefícios.
+            Oferecemos soluções completas em Direito Previdenciário, com expertise em todas as modalidades de benefícios do INSS.
+          </p>
+          <p className="text-sm text-muted-foreground/70 font-body mt-2">
+            Última atualização: Janeiro de 2025
           </p>
         </div>
 

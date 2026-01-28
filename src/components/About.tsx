@@ -75,7 +75,7 @@ const About = () => {
                       <div className="p-1 overflow-hidden">
                         <ImageWithSkeleton 
                           src={image} 
-                          alt={`Cantarelli Advocacia - Escritório ${index + 1}`} 
+                          alt={`Cantarelli Advocacia - Escritório de Direito Previdenciário em Recife - Imagem ${index + 1}`} 
                           className={`h-72 md:h-80 lg:h-96 bg-neutral-50 shadow-md transition-all duration-500 ease-in-out ${isCenterSlide ? 'carousel-center-item' : 'carousel-side-item'}`}
                           style={{ objectFit: 'contain' }}
                         />
@@ -111,14 +111,16 @@ const About = () => {
               <div className="mb-4">
                 <ImageWithSkeleton 
                   src={thiagoCantarelli} 
-                  alt="Dr. Thiago Cantarelli" 
+                  alt="Dr. Thiago Cantarelli - Advogado Previdenciário Fundador da Cantarelli Advocacia - OAB/PE 28.165" 
                   className="w-full aspect-[3/4] rounded-lg mb-4"
                   style={{ objectFit: 'cover' }}
                 />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dr. Thiago Cantarelli
                 </h3>
-                
+                <p className="text-sm text-primary font-body font-semibold mb-1">
+                  OAB/PE 28.165
+                </p>
                 <p className="text-muted-foreground font-body italic mb-4">
                   Advogado | Fundador da Cantarelli Advocacia
                 </p>
@@ -146,14 +148,16 @@ const About = () => {
               <div className="mb-0">
                 <ImageWithSkeleton 
                   src={izabelaFarias} 
-                  alt="Dra. Izabela Farias" 
+                  alt="Dra. Izabela Farias - Advogada Previdenciária Diretora de Operações da Cantarelli Advocacia - OAB/PE 42.389" 
                   className="w-full aspect-[3/4] rounded-lg mb-4"
                   style={{ objectFit: 'cover' }}
                 />
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dra. Izabela Farias
                 </h3>
-                
+                <p className="text-sm text-primary font-body font-semibold mb-1">
+                  OAB/PE 42.389
+                </p>
                 <p className="text-muted-foreground font-body italic mb-4">
                   Advogada | Diretora de Operações da Cantarelli Advocacia
                 </p>

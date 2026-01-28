@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <ImageWithSkeleton 
           src={heroBackground} 
-          alt="Cantarelli Advocacia - Escritório" 
+          alt="Cantarelli Advocacia - Escritório de Advocacia Previdenciária em Recife especializado em aposentadorias e benefícios do INSS" 
           className="w-full h-full animate-bg-slide-in"
           style={{ objectFit: 'cover', objectPosition: 'center' }}
           enableLazyLoad={false}
@@ -45,10 +45,13 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-alexandria font-bold mb-6 leading-tight lg:text-6xl bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-gradient-shift">
-              Segurança financeira e o futuro que você merece.
+              Cantarelli Advocacia: Advogados Especialistas em Direito Previdenciário em Recife
             </h1>
+            <p className="text-lg md:text-xl text-foreground/90 font-body mb-4 leading-relaxed">
+              Segurança financeira e o futuro que você merece.
+            </p>
             
-            <p className="text-lg md:text-xl text-foreground/80 font-body mb-8 leading-relaxed text-left font-normal">
+            <p className="text-base md:text-lg text-foreground/80 font-body mb-8 leading-relaxed text-left font-normal">
               Com planejamento e sensibilidade, transformamos anos de trabalho em um futuro de tranquilidade e reconhecimento.
             </p>
 
