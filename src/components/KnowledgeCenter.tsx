@@ -38,7 +38,7 @@ const KnowledgeCenter = () => {
       ],
       technicalTerms: ["CID-11 QD85", "Nexo Concausal", "B91", "Metas Abusivas"],
       lastReviewedBy: "Dr. Thiago Cantarelli",
-      lastUpdated: "Janeiro 2025"
+      lastUpdated: "Janeiro 2026"
     },
     {
       title: "LER/DORT para Trabalhadores: Como Obter o Auxílio-Acidente",
@@ -57,7 +57,7 @@ const KnowledgeCenter = () => {
       ],
       technicalTerms: ["CID M70-M79", "CAT", "B91", "Nexo Técnico Epidemiológico"],
       lastReviewedBy: "Dra. Izabela Farias",
-      lastUpdated: "Janeiro 2025"
+      lastUpdated: "Janeiro 2026"
     },
     {
       title: "Auxílio-Acidente para Motociclistas: Guia Completo 2025",
@@ -76,7 +76,7 @@ const KnowledgeCenter = () => {
       ],
       technicalTerms: ["B91", "Acidente de Trajeto", "Consolidação das Lesões"],
       lastReviewedBy: "Dr. Thiago Cantarelli",
-      lastUpdated: "Janeiro 2025"
+      lastUpdated: "Janeiro 2026"
     }
   ];
 

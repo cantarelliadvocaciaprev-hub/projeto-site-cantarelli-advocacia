@@ -97,7 +97,7 @@ const CantarelliMethod = () => {
           <div className="flex items-center gap-2 mt-4 pt-3 border-t border-primary/20">
             <Shield className="w-4 h-4 text-primary" />
             <span className="text-xs text-muted-foreground font-body">
-              Desenvolvido por <strong className="text-foreground">Dr. Thiago Cantarelli</strong> (OAB/PE 28.165) • +17 anos de experiência
+              Desenvolvido por <strong className="text-foreground">Dr. Thiago Cantarelli</strong> • +17 anos de experiência
             </span>
           </div>
         </div>

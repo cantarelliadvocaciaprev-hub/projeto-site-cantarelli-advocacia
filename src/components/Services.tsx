@@ -93,7 +93,7 @@ const Services = () => {
             Oferecemos soluções completas em Direito Previdenciário, com expertise em todas as modalidades de benefícios do INSS.
           </p>
           <p className="text-sm text-muted-foreground/70 font-body mt-2">
-            Última atualização: Janeiro de 2025
+            Última atualização: Janeiro de 2026
           </p>
         </div>
 
