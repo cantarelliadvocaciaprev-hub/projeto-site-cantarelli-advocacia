@@ -20,7 +20,8 @@ const About = lazy(() => import("@/components/About"));
 const Services = lazy(() => import("@/components/Services"));
 const Planning = lazy(() => import("@/components/Planning"));
 const Testimonials = lazy(() => import("@/components/Testimonials"));
-const FAQ = lazy(() => import("@/components/FAQ"));
+const FAQ = lazy(() => import("@/components/FAQNative"));
+const Blog = lazy(() => import("@/components/Blog"));
 const Contact = lazy(() => import("@/components/Contact"));
 
 // Generic section skeleton for smaller sections
@@ -136,6 +137,32 @@ const FAQSkeleton = () => (
   </section>
 );
 
+// Blog section skeleton
+const BlogSkeleton = () => (
+  <section className="py-20 bg-card">
+    <div className="container mx-auto px-4">
+      <div className="text-center mb-16 space-y-4">
+        <Skeleton className="h-12 w-64 mx-auto" />
+        <Skeleton className="h-1 w-20 mx-auto" />
+        <Skeleton className="h-6 w-80 mx-auto" />
+      </div>
+      <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {[...Array(3)].map((_, i) => (
+          <div key={i} className="border border-border rounded-lg overflow-hidden">
+            <Skeleton className="h-12 w-full" />
+            <div className="p-6 space-y-4">
+              <Skeleton className="h-6 w-3/4" />
+              <Skeleton className="h-20 w-full" />
+              <Skeleton className="h-32 w-full" />
+              <Skeleton className="h-10 w-full" />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 // Contact section skeleton
 const ContactSkeleton = () => (
   <section className="py-20 bg-background">
@@ -188,6 +215,9 @@ const Index = () => {
         </Suspense>
         <Suspense fallback={<FAQSkeleton />}>
           <FAQ />
+        </Suspense>
+        <Suspense fallback={<BlogSkeleton />}>
+          <Blog />
         </Suspense>
         <Suspense fallback={<ContactSkeleton />}>
           <Contact />

@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Calendar, ArrowRight, Clock, Lightbulb } from "lucide-react";
+import { Calendar, ArrowRight, Clock, Lightbulb, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -100,20 +100,35 @@ const Blog = () => {
                   {post.title}
                 </h3>
 
-                {/* Excerpt */}
-                <p className="text-muted-foreground font-body mb-4 text-sm leading-relaxed line-clamp-2">
-                  {post.excerpt}
-                </p>
+                {/* AI Snippet Box - Snippet-First Architecture */}
+                <div 
+                  id={`ai-snippet-blog-${index}`}
+                  className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-4"
+                  itemScope
+                  itemType="https://schema.org/Article"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xs font-semibold text-primary uppercase tracking-wide">
+                      Direto ao Ponto
+                    </span>
+                  </div>
+                  <p 
+                    className="text-base text-foreground font-body leading-relaxed"
+                    itemProp="abstract"
+                  >
+                    {post.excerpt}
+                  </p>
+                </div>
 
                 {/* Key Takeaways - Optimized for AI extraction */}
-                <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-4">
+                <div className="bg-muted/50 rounded-lg p-4 mb-4">
                   <div className="flex items-center gap-2 mb-3">
                     <Lightbulb className="w-4 h-4 text-primary" />
                     <span className="text-sm font-semibold text-foreground">
                       Pontos Principais
                     </span>
                   </div>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2" itemProp="about">
                     {post.keyTakeaways.map((takeaway, idx) => (
                       <li
                         key={idx}
@@ -126,8 +141,16 @@ const Blog = () => {
                   </ul>
                 </div>
 
+                {/* E-E-A-T Badge */}
+                <div className="flex items-center gap-2 mb-4 py-2 border-t border-b border-border">
+                  <Shield className="w-3 h-3 text-primary" />
+                  <span className="text-[10px] text-muted-foreground font-body">
+                    Revisado por <strong className="text-foreground">Dr. Thiago Cantarelli</strong> (OAB/PE 28.165)
+                  </span>
+                </div>
+
                 {/* Meta info */}
-                <div className="flex items-center justify-between text-xs text-muted-foreground border-t border-border pt-4">
+                <div className="flex items-center justify-between text-xs text-muted-foreground">
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
