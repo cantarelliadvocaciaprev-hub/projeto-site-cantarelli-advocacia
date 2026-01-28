@@ -13,14 +13,6 @@ const Services = () => {
     title: "Aposentadorias Programáveis",
     description: "Análise completa do seu tempo de contribuição para garantir o melhor benefício."
   }, {
-    icon: Target,
-    title: "Auxílio-Acidente para Bancários",
-    description: "Benefício para bancários com LER/DORT e Burnout (CID-11 QD85) por metas abusivas."
-  }, {
-    icon: Building2,
-    title: "Auxílio-Acidente para Motociclistas",
-    description: "Indenização vitalícia para motociclistas e entregadores com sequelas de acidentes."
-  }, {
     icon: Users,
     title: "BPC Autista",
     description: "Benefício assistencial para pessoas com Transtorno do Espectro Autista."
@@ -55,8 +47,8 @@ const Services = () => {
     description: "Benefício para quem está permanentemente incapacitado para o trabalho."
   }, {
     icon: Target,
-    title: "Auxílio-Acidente Geral",
-    description: "Indenização de 50% para trabalhadores com sequelas de acidentes."
+    title: "Auxílio-Acidente",
+    description: "Indenização de 50% para trabalhadores com sequelas permanentes de acidentes."
   }, {
     icon: Gavel,
     title: "Judicialização contra o INSS",
