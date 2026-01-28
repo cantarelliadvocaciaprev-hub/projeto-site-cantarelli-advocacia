@@ -1,4 +1,4 @@
-import { Shield, FileSearch, Calculator, TrendingUp, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Shield, FileSearch, Calculator, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -31,19 +31,6 @@ const CantarelliMethod = () => {
         "Idade Mínima Progressiva",
         "Direito Adquirido antes da Reforma"
       ]
-    },
-    {
-      number: "03",
-      icon: TrendingUp,
-      title: "Cálculo do ROI Previdenciário",
-      subtitle: "Retorno sobre Investimento da Aposentadoria",
-      description: "Projeção financeira que compara diferentes cenários de aposentadoria, mostrando quanto você receberá a mais ao longo da vida com a estratégia correta.",
-      highlights: [
-        "Comparativo de valores por regra",
-        "Projeção de ganhos em 10, 20 e 30 anos",
-        "Análise de custo-benefício de contribuições",
-        "Simulação de aposentadoria especial"
-      ]
     }
   ];
 
@@ -67,8 +54,8 @@ const CantarelliMethod = () => {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-xl text-muted-foreground font-body max-w-3xl mx-auto">
-            Nossa metodologia em 3 pilares garante que você aposente com o maior benefício possível, 
-            no momento certo, maximizando seu retorno sobre anos de contribuição.
+            Nossa metodologia em 2 pilares garante que você aposente com o maior benefício possível, 
+            no momento certo.
           </p>
         </div>
 
@@ -89,10 +76,9 @@ const CantarelliMethod = () => {
             itemProp="description"
             style={{ fontSize: '18px' }}
           >
-            <strong>O Método Cantarelli é uma abordagem em 3 etapas para maximizar sua aposentadoria:</strong> 
-            (1) Auditoria do CNIS para recuperar tempo perdido, (2) Simulação das 5 regras de transição 
-            da Reforma para encontrar a melhor opção, e (3) Cálculo do ROI para projetar ganhos 
-            de até 40% no valor do benefício ao longo da vida.
+            <strong>O Método Cantarelli é uma abordagem em 2 etapas para maximizar sua aposentadoria:</strong> 
+            (1) Auditoria do CNIS para recuperar tempo perdido e (2) Simulação das 5 regras de transição 
+            da Reforma para encontrar a melhor opção de aposentadoria.
           </p>
           <div className="flex items-center gap-2 mt-4 pt-3 border-t border-primary/20">
             <Shield className="w-4 h-4 text-primary" />
@@ -102,10 +88,10 @@ const CantarelliMethod = () => {
           </div>
         </div>
 
-        {/* 3 Pillars */}
+        {/* 2 Pillars */}
         <div 
           ref={elementRef}
-          className={`grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16 transition-all duration-700 ${
+          className={`grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16 transition-all duration-700 ${
             isVisible ? 'opacity-100 animate-slide-up-scroll' : 'opacity-0'
           }`}
         >
@@ -156,7 +142,7 @@ const CantarelliMethod = () => {
           <h3 className="text-2xl font-display font-bold text-foreground text-center mb-6">
             Resultados do Método Cantarelli
           </h3>
-          <div className="grid md:grid-cols-3 gap-6 text-center">
+          <div className="grid md:grid-cols-2 gap-6 text-center">
             <div>
               <p className="text-4xl font-display font-bold text-primary mb-2">+40%</p>
               <p className="text-sm text-muted-foreground font-body">aumento médio no valor do benefício</p>
@@ -165,25 +151,21 @@ const CantarelliMethod = () => {
               <p className="text-4xl font-display font-bold text-primary mb-2">3-5 anos</p>
               <p className="text-sm text-muted-foreground font-body">de tempo recuperado em média</p>
             </div>
-            <div>
-              <p className="text-4xl font-display font-bold text-primary mb-2">R$ 250mil</p>
-              <p className="text-sm text-muted-foreground font-body">ganho médio projetado em 20 anos</p>
-            </div>
           </div>
         </div>
 
         {/* CTA */}
         <div className="text-center">
           <Button
-            onClick={() => window.open("https://wa.me/5581995441368?text=Olá,%20gostaria%20de%20uma%20simulação%20de%20ROI%20da%20minha%20aposentadoria%20pelo%20Método%20Cantarelli.", "_blank")}
+            onClick={() => window.open("https://wa.me/5581995441368?text=Olá,%20gostaria%20de%20conhecer%20o%20Método%20Cantarelli%20de%20Planejamento%20Previdenciário.", "_blank")}
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-10 py-6 shadow-lg"
           >
-            Solicitar minha Simulação de ROI
+            Solicitar Planejamento Previdenciário
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
           <p className="text-sm text-muted-foreground font-body mt-4">
-            Análise personalizada com projeção de ganhos para sua aposentadoria
+            Análise personalizada para sua aposentadoria
           </p>
         </div>
       </div>

@@ -171,8 +171,8 @@ const MethodSkeleton = () => (
         <Skeleton className="h-6 w-80 mx-auto" />
       </div>
       <Skeleton className="h-40 w-full max-w-4xl mx-auto mb-16 rounded-lg" />
-      <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {[...Array(3)].map((_, i) => (
+      <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {[...Array(2)].map((_, i) => (
           <Skeleton key={i} className="h-96 rounded-2xl" />
         ))}
       </div>
