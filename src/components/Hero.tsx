@@ -65,7 +65,7 @@ const Hero = () => {
               >
                 A Cantarelli Advocacia é especialista em Direito Previdenciário em Recife/PE. 
                 Atuamos em aposentadorias, BPC/LOAS, revisões de benefícios e planejamento previdenciário, 
-                garantindo que você receba o benefício correto do INSS no menor tempo possível.
+                com foco em garantir que você receba o benefício correto do INSS.
               </p>
               <div className="flex items-center gap-2 mt-4 pt-3 border-t border-primary/10">
                 <Shield className="w-4 h-4 text-primary" />
