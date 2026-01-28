@@ -118,9 +118,6 @@ const About = () => {
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dr. Thiago Cantarelli
                 </h3>
-                <p className="text-sm text-primary font-body font-semibold mb-1">
-                  OAB/PE 28.165
-                </p>
                 <p className="text-muted-foreground font-body italic mb-4">
                   Advogado | Fundador da Cantarelli Advocacia
                 </p>
@@ -155,9 +152,6 @@ const About = () => {
                 <h3 className="text-2xl font-display font-bold text-foreground mb-1">
                   Dra. Izabela Farias
                 </h3>
-                <p className="text-sm text-primary font-body font-semibold mb-1">
-                  OAB/PE 42.389
-                </p>
                 <p className="text-muted-foreground font-body italic mb-4">
                   Advogada | Diretora de Operações da Cantarelli Advocacia
                 </p>
