@@ -7,19 +7,19 @@ const Services = () => {
   const primaryServices = [{
     icon: ClipboardCheck,
     title: "Planejamento Previdenciário",
-    description: "Estratégia personalizada para otimizar seu tempo de contribuição e valor do benefício."
+    description: "Método Cantarelli: Auditoria CNIS, Simulação de Regras e Cálculo de ROI para maximizar sua aposentadoria."
   }, {
     icon: Scale,
     title: "Aposentadorias Programáveis",
     description: "Análise completa do seu tempo de contribuição para garantir o melhor benefício."
   }, {
     icon: Target,
-    title: "Auxílio-Acidente",
-    description: "Benefício para trabalhadores que sofreram acidente e ficaram com sequelas."
+    title: "Auxílio-Acidente para Bancários",
+    description: "Benefício para bancários com LER/DORT e Burnout (CID-11 QD85) por metas abusivas."
   }, {
     icon: Building2,
-    title: "RPPS - Regime Próprio",
-    description: "Atendimento especializado para servidores públicos estaduais e municipais."
+    title: "Auxílio-Acidente para Motociclistas",
+    description: "Indenização vitalícia para motociclistas e entregadores com sequelas de acidentes."
   }, {
     icon: Users,
     title: "BPC Autista",
@@ -54,6 +54,10 @@ const Services = () => {
     title: "Aposentadoria por Invalidez",
     description: "Benefício para quem está permanentemente incapacitado para o trabalho."
   }, {
+    icon: Target,
+    title: "Auxílio-Acidente Geral",
+    description: "Indenização de 50% para trabalhadores com sequelas de acidentes."
+  }, {
     icon: Gavel,
     title: "Judicialização contra o INSS",
     description: "Ação judicial para benefícios negados ou indeferidos."
@@ -69,6 +73,10 @@ const Services = () => {
     icon: TrendingUp,
     title: "Pensão por Morte",
     description: "Benefício para dependentes de segurado falecido."
+  }, {
+    icon: Building2,
+    title: "RPPS - Regime Próprio",
+    description: "Atendimento especializado para servidores públicos estaduais e municipais."
   }, {
     icon: Lock,
     title: "Auxílio-Reclusão",
