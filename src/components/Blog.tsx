@@ -3,6 +3,11 @@ import { Calendar, ArrowRight, Clock, Lightbulb, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
+// Blog post images
+import aposentadoriaImg from "@/assets/blog/aposentadoria-tempo-contribuicao.jpg";
+import bpcLoasImg from "@/assets/blog/bpc-loas-beneficio.jpg";
+import revisaoImg from "@/assets/blog/revisao-aposentadoria.jpg";
+
 interface BlogPost {
   title: string;
   excerpt: string;
@@ -11,6 +16,8 @@ interface BlogPost {
   readTime: string;
   keyTakeaways: string[];
   lastUpdated?: string;
+  image: string;
+  imageAlt: string;
 }
 
 const Blog = () => {
@@ -30,6 +37,8 @@ const Blog = () => {
         "Planejamento previdenciário pode aumentar o valor do benefício em até 40%",
       ],
       lastUpdated: "Janeiro 2026",
+      image: aposentadoriaImg,
+      imageAlt: "Casal de idosos analisando documentos de aposentadoria com advogado especialista em direito previdenciário",
     },
     {
       title: "BPC/LOAS: Quem tem direito ao benefício assistencial?",
@@ -44,6 +53,8 @@ const Blog = () => {
         "Não é necessário ter contribuído ao INSS para ter direito ao BPC",
       ],
       lastUpdated: "Janeiro 2026",
+      image: bpcLoasImg,
+      imageAlt: "Idosa recebendo apoio e cuidados assistenciais relacionados ao benefício BPC LOAS",
     },
     {
       title: "Revisão de Aposentadoria: vale a pena solicitar?",
@@ -58,6 +69,8 @@ const Blog = () => {
         "Erros no cálculo do INSS são comuns e podem resultar em valores retroativos",
       ],
       lastUpdated: "Janeiro 2026",
+      image: revisaoImg,
+      imageAlt: "Advogado analisando documentos financeiros e calculando revisão de aposentadoria",
     },
   ];
 
@@ -84,14 +97,22 @@ const Blog = () => {
           {posts.map((post, index) => (
             <Card
               key={index}
-              className="overflow-hidden bg-background border-border hover:border-primary transition-all duration-300 hover:shadow-xl"
+              className="overflow-hidden bg-background border-border hover:border-primary transition-all duration-300 hover:shadow-xl group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Header with category */}
-              <div className="h-12 bg-primary/10 flex items-center px-6">
-                <span className="inline-block px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full">
-                  {post.category}
-                </span>
+              {/* Blog Post Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={post.image} 
+                  alt={post.imageAlt}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute top-3 left-3">
+                  <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full shadow-lg">
+                    {post.category}
+                  </span>
+                </div>
               </div>
 
               <div className="p-6">
