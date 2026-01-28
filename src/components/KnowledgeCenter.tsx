@@ -3,6 +3,11 @@ import { Calendar, ArrowRight, Clock, Lightbulb, Shield, AlertTriangle, Brain, B
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
+// Knowledge Center images
+import burnoutImg from "@/assets/blog/burnout-bancarios.jpg";
+import lerDortImg from "@/assets/blog/ler-dort-ocupacional.jpg";
+import motociclistasImg from "@/assets/blog/auxilio-acidente-motociclistas.jpg";
+
 interface Article {
   title: string;
   slug: string;
@@ -15,6 +20,8 @@ interface Article {
   technicalTerms: string[];
   lastReviewedBy: string;
   lastUpdated: string;
+  image: string;
+  imageAlt: string;
 }
 
 const KnowledgeCenter = () => {
@@ -38,7 +45,9 @@ const KnowledgeCenter = () => {
       ],
       technicalTerms: ["CID-11 QD85", "Nexo Concausal", "B91", "Metas Abusivas"],
       lastReviewedBy: "Dr. Thiago Cantarelli",
-      lastUpdated: "Janeiro 2026"
+      lastUpdated: "Janeiro 2026",
+      image: burnoutImg,
+      imageAlt: "Bancário com síndrome de burnout demonstrando exaustão no ambiente de trabalho com telas de computador ao fundo"
     },
     {
       title: "LER/DORT para Trabalhadores: Como Obter o Auxílio-Acidente",
@@ -57,7 +66,9 @@ const KnowledgeCenter = () => {
       ],
       technicalTerms: ["CID M70-M79", "CAT", "B91", "Nexo Técnico Epidemiológico"],
       lastReviewedBy: "Dra. Izabela Farias",
-      lastUpdated: "Janeiro 2026"
+      lastUpdated: "Janeiro 2026",
+      image: lerDortImg,
+      imageAlt: "Trabalhador sentindo dor no pulso devido a lesão por esforço repetitivo LER DORT no ambiente de trabalho"
     },
     {
       title: "Auxílio-Acidente para Motociclistas: Guia Completo 2025",
@@ -76,7 +87,9 @@ const KnowledgeCenter = () => {
       ],
       technicalTerms: ["B91", "Acidente de Trajeto", "Consolidação das Lesões"],
       lastReviewedBy: "Dr. Thiago Cantarelli",
-      lastUpdated: "Janeiro 2026"
+      lastUpdated: "Janeiro 2026",
+      image: motociclistasImg,
+      imageAlt: "Motoboy entregador de aplicativo em motocicleta em ambiente urbano representando direitos previdenciários para motociclistas"
     }
   ];
 
@@ -111,19 +124,29 @@ const KnowledgeCenter = () => {
             return (
               <Card
                 key={index}
-                className="overflow-hidden bg-background border-border hover:border-primary transition-all duration-300 hover:shadow-xl flex flex-col"
+                className="overflow-hidden bg-background border-border hover:border-primary transition-all duration-300 hover:shadow-xl flex flex-col group"
                 itemScope
                 itemType="https://schema.org/Article"
               >
-                {/* Category Header */}
-                <div className="h-14 bg-primary/10 flex items-center justify-between px-6">
-                  <div className="flex items-center gap-2">
-                    <CategoryIcon className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-semibold text-primary">
+                {/* Article Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={article.image} 
+                    alt={article.imageAlt}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 left-3 flex items-center gap-2">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full shadow-lg">
+                      <CategoryIcon className="w-3 h-3" />
                       {article.category}
                     </span>
                   </div>
-                  <span className="text-xs text-muted-foreground">{article.readTime}</span>
+                  <div className="absolute top-3 right-3">
+                    <span className="px-2 py-1 bg-background/90 text-foreground text-xs font-medium rounded-full">
+                      {article.readTime}
+                    </span>
+                  </div>
                 </div>
 
                 <div className="p-6 flex-1 flex flex-col">
