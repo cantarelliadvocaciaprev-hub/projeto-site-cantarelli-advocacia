@@ -47,9 +47,33 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl font-alexandria font-bold mb-6 leading-tight lg:text-6xl bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-gradient-shift">
               Cantarelli Advocacia: Advogados Especialistas em Direito Previdenciário em Recife
             </h1>
-            <p className="text-lg md:text-xl text-foreground/90 font-body mb-4 leading-relaxed">
-              Segurança financeira e o futuro que você merece.
-            </p>
+            {/* AI Snippet Box - Snippet-First Architecture for GEO */}
+            <div 
+              id="ai-snippet" 
+              className="bg-primary/5 border border-primary/20 rounded-xl p-5 mb-6"
+              itemScope 
+              itemType="https://schema.org/LegalService"
+            >
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-sm font-semibold text-primary uppercase tracking-wide">
+                  Direto ao Ponto
+                </span>
+              </div>
+              <p 
+                className="text-lg md:text-xl text-foreground font-body leading-relaxed"
+                itemProp="description"
+              >
+                A Cantarelli Advocacia é especialista em Direito Previdenciário em Recife/PE. 
+                Atuamos em aposentadorias, BPC/LOAS, revisões de benefícios e planejamento previdenciário, 
+                garantindo que você receba o benefício correto do INSS no menor tempo possível.
+              </p>
+              <div className="flex items-center gap-2 mt-4 pt-3 border-t border-primary/10">
+                <Shield className="w-4 h-4 text-primary" />
+                <span className="text-xs text-muted-foreground font-body">
+                  Revisado por <strong className="text-foreground">Dr. Thiago Cantarelli</strong> (OAB/PE 28.165) • Janeiro 2025
+                </span>
+              </div>
+            </div>
             
             <p className="text-base md:text-lg text-foreground/80 font-body mb-8 leading-relaxed text-left font-normal">
               Com planejamento e sensibilidade, transformamos anos de trabalho em um futuro de tranquilidade e reconhecimento.
