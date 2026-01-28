@@ -21,7 +21,7 @@ const Blog = () => {
       title: "Como funciona a Aposentadoria por Tempo de Contribuição em 2025",
       excerpt:
         "Entenda as regras de transição e como garantir o melhor benefício possível após a Reforma da Previdência.",
-      date: "15 de Janeiro, 2025",
+      date: "15 de Janeiro, 2026",
       category: "Aposentadoria",
       readTime: "8 min",
       keyTakeaways: [
@@ -35,7 +35,7 @@ const Blog = () => {
       title: "BPC/LOAS: Quem tem direito ao benefício assistencial?",
       excerpt:
         "Conheça os requisitos e documentos necessários para solicitar o BPC para idosos e pessoas com deficiência.",
-      date: "10 de Janeiro, 2025",
+      date: "10 de Janeiro, 2026",
       category: "Benefícios",
       readTime: "6 min",
       keyTakeaways: [
@@ -49,7 +49,7 @@ const Blog = () => {
       title: "Revisão de Aposentadoria: vale a pena solicitar?",
       excerpt:
         "Descubra quando é possível revisar seu benefício e aumentar o valor recebido mensalmente.",
-      date: "5 de Janeiro, 2025",
+      date: "5 de Janeiro, 2026",
       category: "Revisão",
       readTime: "7 min",
       keyTakeaways: [
