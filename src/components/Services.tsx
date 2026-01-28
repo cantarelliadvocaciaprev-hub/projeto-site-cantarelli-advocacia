@@ -58,10 +58,6 @@ const Services = () => {
     title: "Judicialização contra o INSS",
     description: "Ação judicial para benefícios negados ou indeferidos."
   }, {
-    icon: FileText,
-    title: "Mandado de Segurança",
-    description: "Proteção de direitos líquidos e certos violados pela administração."
-  }, {
     icon: Baby,
     title: "Salário-Maternidade",
     description: "Benefício pago durante o período de licença maternidade."
