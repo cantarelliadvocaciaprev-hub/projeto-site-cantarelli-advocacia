@@ -13,6 +13,10 @@ const Services = () => {
     title: "Aposentadorias Programáveis",
     description: "Análise completa do seu tempo de contribuição para garantir o melhor benefício."
   }, {
+    icon: Target,
+    title: "Auxílio-Acidente",
+    description: "Indenização de 50% para trabalhadores com sequelas permanentes de acidentes de trabalho."
+  }, {
     icon: Users,
     title: "BPC Autista",
     description: "Benefício assistencial para pessoas com Transtorno do Espectro Autista."
@@ -20,6 +24,10 @@ const Services = () => {
     icon: FileCheck,
     title: "Revisões Previdenciárias",
     description: "Reavaliação de benefícios concedidos com valores incorretos ou desatualizados."
+  }, {
+    icon: TrendingUp,
+    title: "Pedidos em Análise",
+    description: "Acompanhamento e agilização de benefícios pendentes de decisão no INSS."
   }, {
     icon: Calculator,
     title: "Isenção de Imposto de Renda",
@@ -46,10 +54,6 @@ const Services = () => {
     title: "Aposentadoria por Invalidez",
     description: "Benefício para quem está permanentemente incapacitado para o trabalho."
   }, {
-    icon: Target,
-    title: "Auxílio-Acidente",
-    description: "Indenização de 50% para trabalhadores com sequelas permanentes de acidentes."
-  }, {
     icon: Gavel,
     title: "Judicialização contra o INSS",
     description: "Ação judicial para benefícios negados ou indeferidos."
@@ -62,7 +66,7 @@ const Services = () => {
     title: "Salário-Maternidade",
     description: "Benefício pago durante o período de licença maternidade."
   }, {
-    icon: TrendingUp,
+    icon: Heart,
     title: "Pensão por Morte",
     description: "Benefício para dependentes de segurado falecido."
   }, {
