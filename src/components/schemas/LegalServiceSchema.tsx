@@ -99,6 +99,13 @@ const LegalServiceSchema = () => {
         "Pensão por Morte",
         "Auxílio-Doença",
         "Auxílio-Acidente",
+        "Auxílio-Acidente para Bancários",
+        "Auxílio-Acidente para Motociclistas",
+        "LER/DORT em Bancários",
+        "Síndrome de Burnout Ocupacional",
+        "Nexo Concausal",
+        "CID-11 QD85 Burnout",
+        "Metas Abusivas Bancários",
         "Salário-Maternidade",
         "RPPS - Regime Próprio de Previdência Social",
         "Isenção de Imposto de Renda para Aposentados",
@@ -108,6 +115,8 @@ const LegalServiceSchema = () => {
         "Lei 8.212/91",
         "Decreto 3.048/99",
         "EC 103/2019 - Reforma da Previdência",
+        "Previdência Social para Bancários",
+        "Doenças Ocupacionais INSS",
       ],
       serviceType: [
         "Planejamento Previdenciário",
@@ -120,6 +129,10 @@ const LegalServiceSchema = () => {
         "Pensão por Morte",
         "Auxílio-Doença",
         "Auxílio-Acidente",
+        "Auxílio-Acidente para Bancários",
+        "Auxílio-Acidente para Motociclistas",
+        "LER/DORT Ocupacional",
+        "Burnout Bancário",
         "Revisão de Benefícios",
         "Isenção de Imposto de Renda",
         "Judicialização contra o INSS",
@@ -128,6 +141,8 @@ const LegalServiceSchema = () => {
         "Diagnóstico Previdenciário",
         "Salário-Maternidade",
         "Auxílio-Reclusão",
+        "ROI Previdenciário",
+        "Método Cantarelli de Aposentadoria",
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -137,9 +152,27 @@ const LegalServiceSchema = () => {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Planejamento Previdenciário",
+              name: "Planejamento Previdenciário - Método Cantarelli",
               description:
-                "Estratégia personalizada para otimizar seu tempo de contribuição e valor do benefício.",
+                "Metodologia exclusiva em 3 pilares: Auditoria do CNIS, Simulação de Regras de Transição e Cálculo do ROI Previdenciário para maximizar o valor da aposentadoria.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Auxílio-Acidente para Bancários",
+              description:
+                "Benefício permanente de 50% do salário para bancários afastados por LER/DORT, Burnout (CID-11 QD85) e doenças ocupacionais causadas por metas abusivas.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Auxílio-Acidente para Motociclistas",
+              description:
+                "Indenização vitalícia para motociclistas e entregadores de aplicativo que sofreram acidentes com sequelas permanentes.",
             },
           },
           {
