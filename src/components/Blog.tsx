@@ -2,77 +2,11 @@ import { Card } from "@/components/ui/card";
 import { Calendar, ArrowRight, Clock, Lightbulb, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
-// Blog post images
-import aposentadoriaImg from "@/assets/blog/aposentadoria-tempo-contribuicao.jpg";
-import bpcLoasImg from "@/assets/blog/bpc-loas-beneficio.jpg";
-import revisaoImg from "@/assets/blog/revisao-aposentadoria.jpg";
-
-interface BlogPost {
-  title: string;
-  excerpt: string;
-  date: string;
-  category: string;
-  readTime: string;
-  keyTakeaways: string[];
-  lastUpdated?: string;
-  image: string;
-  imageAlt: string;
-}
+import { Link } from "react-router-dom";
+import { blogArticles } from "@/data/blogArticles";
 
 const Blog = () => {
   const { isVisible, elementRef } = useScrollAnimation(0.1);
-
-  const posts: BlogPost[] = [
-    {
-      title: "Novas Regras de Aposentadoria em 2026: O Que Mudou no INSS",
-      excerpt:
-        "A partir de janeiro de 2026, novas exigências entraram em vigor para quem quer se aposentar. Idade mínima aumentou e pontuação subiu. Veja como se preparar.",
-      date: "20 de Janeiro, 2026",
-      category: "Aposentadoria",
-      readTime: "7 min",
-      keyTakeaways: [
-        "Idade mínima subiu para 59 anos (mulheres) e 64 anos (homens) na regra de transição",
-        "Pontuação exigida agora é 92 pontos para mulheres e 102 para homens",
-        "Quem não cumpriu requisitos até 31/12/2025 precisa se adequar às novas regras",
-      ],
-      lastUpdated: "Janeiro 2026",
-      image: aposentadoriaImg,
-      imageAlt: "Casal de idosos analisando documentos de aposentadoria com advogado especialista em direito previdenciário",
-    },
-    {
-      title: "Reajuste do INSS 2026: Novo Teto de R$ 8.475,55",
-      excerpt:
-        "O teto do INSS foi reajustado em 3,9% e agora é de R$ 8.475,55. Saiba como o reajuste afeta sua aposentadoria e benefícios.",
-      date: "15 de Janeiro, 2026",
-      category: "Benefícios",
-      readTime: "5 min",
-      keyTakeaways: [
-        "Novo salário mínimo de R$ 1.518,00 serve de base para benefícios",
-        "Teto do INSS passou para R$ 8.475,55 com reajuste de 3,9%",
-        "Aposentados que ganham acima do mínimo tiveram reajuste pelo INPC",
-      ],
-      lastUpdated: "Janeiro 2026",
-      image: revisaoImg,
-      imageAlt: "Advogado analisando documentos financeiros e calculando reajuste de aposentadoria INSS 2026",
-    },
-    {
-      title: "BPC/LOAS 2026: Quem Tem Direito e Como Solicitar",
-      excerpt:
-        "O Benefício de Prestação Continuada (BPC) garante um salário mínimo para idosos e pessoas com deficiência. Veja os requisitos atualizados.",
-      date: "10 de Janeiro, 2026",
-      category: "Assistencial",
-      readTime: "6 min",
-      keyTakeaways: [
-        "Renda per capita familiar deve ser inferior a 1/4 do salário mínimo (R$ 379,50)",
-        "Idosos a partir de 65 anos e PCDs de qualquer idade podem solicitar",
-        "Não é necessário ter contribuído ao INSS para ter direito ao BPC",
-      ],
-      lastUpdated: "Janeiro 2026",
-      image: bpcLoasImg,
-      imageAlt: "Idosa recebendo apoio e cuidados assistenciais relacionados ao benefício BPC LOAS 2026",
-    },
-  ];
 
   return (
     <section id="blog" className="py-20 bg-card">
@@ -94,7 +28,7 @@ const Blog = () => {
             isVisible ? "opacity-100 animate-slide-up-scroll" : "opacity-0"
           }`}
         >
-          {posts.map((post, index) => (
+          {blogArticles.map((post, index) => (
             <Card
               key={index}
               className="overflow-hidden bg-background border-border hover:border-primary transition-all duration-300 hover:shadow-xl group"
@@ -166,7 +100,7 @@ const Blog = () => {
                 <div className="flex items-center gap-2 mb-4 py-2 border-t border-b border-border">
                   <Shield className="w-3 h-3 text-primary" />
                   <span className="text-[10px] text-muted-foreground font-body">
-                    Revisado por <strong className="text-foreground">Dr. Thiago Cantarelli</strong>
+                    Revisado por <strong className="text-foreground">Dr. {post.author}</strong>
                   </span>
                 </div>
 
@@ -190,13 +124,15 @@ const Blog = () => {
                 </div>
 
                 {/* CTA */}
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-primary hover:text-primary/80 mt-4 w-full justify-center"
-                >
-                  Ler artigo completo <ArrowRight className="w-4 h-4 ml-1" />
-                </Button>
+                <Link to={`/blog/${post.slug}`}>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-primary hover:text-primary/80 mt-4 w-full justify-center"
+                  >
+                    Ler artigo completo <ArrowRight className="w-4 h-4 ml-1" />
+                  </Button>
+                </Link>
               </div>
             </Card>
           ))}
