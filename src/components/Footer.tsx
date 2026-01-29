@@ -195,77 +195,8 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Founders Section - E-E-A-T */}
-        <div className="border-t border-border pt-8 mb-8">
-          <h4 className="font-display font-bold text-primary mb-6 text-center">Fundadores</h4>
-          <div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
-            itemScope 
-            itemType="https://schema.org/Organization"
-          >
-            {/* Dr. Thiago Cantarelli */}
-            <div 
-              className="flex items-start gap-4 p-4 bg-background rounded-lg border border-border"
-              itemScope 
-              itemType="https://schema.org/Person"
-              itemProp="founder"
-            >
-              <div className="flex-shrink-0">
-                <img 
-                  src={thiagoImg} 
-                  alt="Dr. Thiago Cantarelli - Advogado Previdenciarista" 
-                  className="w-16 h-16 rounded-full object-cover border-2 border-primary"
-                  itemProp="image"
-                />
-              </div>
-              <div>
-                <h5 className="font-display font-bold text-foreground" itemProp="name">
-                  Dr. Thiago Cantarelli
-                </h5>
-                <p className="text-sm text-muted-foreground font-body mt-1" itemProp="description">
-                  Advogado Previdenciarista, referência em Planejamento e Estratégia de Aposentadorias. Fundador da Cantarelli Advocacia.
-                </p>
-                <p className="text-xs text-primary mt-2" itemProp="jobTitle">
-                  Fundador & Diretor Jurídico
-                </p>
-              </div>
-            </div>
-
-            {/* Dra. Izabela Farias */}
-            <div 
-              className="flex items-start gap-4 p-4 bg-background rounded-lg border border-border"
-              itemScope 
-              itemType="https://schema.org/Person"
-              itemProp="employee"
-            >
-              <div className="flex-shrink-0">
-                <img 
-                  src={izabelaImg} 
-                  alt="Dra. Izabela Farias - Advogada especialista em Benefícios por Incapacidade" 
-                  className="w-16 h-16 rounded-full object-cover border-2 border-primary"
-                  itemProp="image"
-                />
-              </div>
-              <div>
-                <h5 className="font-display font-bold text-foreground" itemProp="name">
-                  Dra. Izabela Farias
-                </h5>
-                <p className="text-sm text-muted-foreground font-body mt-1" itemProp="description">
-                  Advogada especialista em Benefícios por Incapacidade, Auxílio-Acidente e Direito Bancário (Burnout/LER).
-                </p>
-                <p className="text-xs text-primary mt-2" itemProp="jobTitle">
-                  Diretora de Operações
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Section */}
         <div className="border-t border-border pt-8 text-center">
-          <p className="text-foreground font-display text-lg italic mb-4">
-            "Cuidamos do seu hoje, planejamos o seu amanhã."
-          </p>
           <p className="text-muted-foreground font-body text-sm mb-2">
             © {new Date().getFullYear()} Cantarelli Advocacia. Todos os direitos reservados.
           </p>
