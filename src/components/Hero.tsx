@@ -44,7 +44,7 @@ const Hero = () => {
               <span className="text-sm font-body text-foreground">4.9 estrelas no Google</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl font-alexandria font-bold mb-6 leading-tight lg:text-6xl bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-gradient-shift">
+            <h1 className="text-4xl md:text-5xl font-alexandria font-bold mb-6 leading-normal lg:text-6xl bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-gradient-shift pb-1">
               Seu futuro planejado. Sua previdência segura.
             </h1>
             {/* AI Snippet Box - Snippet-First Architecture for GEO */}
