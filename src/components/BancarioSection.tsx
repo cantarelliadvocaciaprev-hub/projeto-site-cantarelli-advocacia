@@ -223,7 +223,7 @@ const BancarioSection = () => {
         {/* CTA */}
         <div className="text-center">
           <Button
-            onClick={() => window.open("https://wa.me/5581995441368?text=Olá,%20sou%20bancário%20e%20gostaria%20de%20saber%20sobre%20meus%20direitos%20previdenciários.", "_blank")}
+            onClick={() => window.open("https://wa.me/5581983421727?text=Olá,%20sou%20bancário%20e%20gostaria%20de%20saber%20sobre%20meus%20direitos%20previdenciários.", "_blank")}
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
           >

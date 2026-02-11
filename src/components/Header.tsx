@@ -168,7 +168,7 @@ const Header = () => {
             <Button
               onClick={() =>
                 window.open(
-                  "https://wa.me/5581995441368?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.",
+                  "https://wa.me/5581983421727?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.",
                   "_blank"
                 )
               }
@@ -213,7 +213,7 @@ const Header = () => {
                 <Button
                   onClick={() =>
                     window.open(
-                      "https://wa.me/5581995441368?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.",
+                      "https://wa.me/5581983421727?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.",
                       "_blank"
                     )
                   }
