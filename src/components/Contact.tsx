@@ -99,6 +99,7 @@ const Contact = () => {
                     Tel: (81) 3049-3799<br />
                     WhatsApp: (81) 98342-1727<br />
                     Comercial: (81) 99544-1368<br />
+                    Comercial: (81) 8611-3970<br />
                     Financeiro: (81) 98771-8606
                   </p>
                   <button
