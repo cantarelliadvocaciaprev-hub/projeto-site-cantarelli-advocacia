@@ -147,6 +147,7 @@ const Footer = () => {
               <li>CEP: 50720-715</li>
               <li className="pt-2">(81) 3049-3799</li>
               <li>(81) 99544-1368 – Comercial</li>
+              <li>(81) 8611-3970 – Comercial</li>
               <li>(81) 98342-1727 – WhatsApp</li>
               <li>
                 <a href="mailto:contato@cantarelliadvocacia.com.br" className="hover:text-primary">
