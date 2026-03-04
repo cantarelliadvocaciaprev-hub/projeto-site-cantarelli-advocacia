@@ -3,17 +3,14 @@ import { Search, CheckCircle, AlertTriangle, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "framer-motion";
-import thiagoCantarelli from "@/assets/team/thiago-cantarelli.jpg";
-import izabelaFarias from "@/assets/team/izabela-farias.jpg";
-import logoSquare from "@/assets/logo-square.jpg";
+import { supabase } from "@/integrations/supabase/client";
 
 interface ValidationResult {
   status: "safe" | "danger" | null;
   message: string;
-  lawyer?: {
+  contact?: {
     name: string;
     role: string;
-    photo: string;
   };
 }
 
@@ -21,18 +18,6 @@ const ContactValidator = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isValidating, setIsValidating] = useState(false);
   const [result, setResult] = useState<ValidationResult>({ status: null, message: "" });
-
-  // Official numbers database (mock)
-  const officialContacts: Record<string, { name: string; role: string; photo: string }> = {
-    "8130493799": { name: "Cantarelli Advocacia", role: "Escritório Principal", photo: thiagoCantarelli },
-    "81995441368": { name: "Equipe Comercial", role: "Atendimento Comercial", photo: logoSquare },
-    "8186113970": { name: "Equipe Comercial", role: "Atendimento Comercial", photo: logoSquare },
-    "81986113970": { name: "Equipe Comercial", role: "Atendimento Comercial", photo: logoSquare },
-    "81987718606": { name: "Setor Financeiro", role: "Atendimento Financeiro", photo: logoSquare },
-    "81983421727": { name: "WhatsApp Oficial", role: "Atendimento WhatsApp", photo: logoSquare },
-    "81986348775": { name: "Setor Administrativo", role: "Atendimento Administrativo", photo: logoSquare },
-    "81997264914": { name: "Dr. Thiago Cantarelli", role: "Advogado - Contato Privado", photo: thiagoCantarelli },
-  };
 
   const formatPhoneNumber = (value: string) => {
     const numbers = value.replace(/\D/g, "");
@@ -52,22 +37,30 @@ const ContactValidator = () => {
     setIsValidating(true);
     setResult({ status: null, message: "" });
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    const cleanNumber = phoneNumber.replace(/\D/g, "");
-    const contact = officialContacts[cleanNumber];
-
-    if (contact) {
-      setResult({
-        status: "safe",
-        message: "CONFIRMADO: Este é um contato oficial da Cantarelli Advocacia.",
-        lawyer: contact,
+    try {
+      const { data, error } = await supabase.functions.invoke("validate-contact", {
+        body: { phone: phoneNumber },
       });
-    } else {
+
+      if (error) throw error;
+
+      if (data.status === "safe") {
+        setResult({
+          status: "safe",
+          message: "CONFIRMADO: Este é um contato oficial da Cantarelli Advocacia.",
+          contact: { name: data.name, role: data.role },
+        });
+      } else {
+        setResult({
+          status: "danger",
+          message: "CUIDADO: Este número NÃO consta em nossa base. Pode ser uma tentativa de fraude. Não faça transferências.",
+        });
+      }
+    } catch (err) {
+      console.error("Validation error:", err);
       setResult({
         status: "danger",
-        message: "CUIDADO: Este número NÃO consta em nossa base. Pode ser uma tentativa de fraude. Não faça transferências.",
+        message: "Erro ao validar contato. Tente novamente mais tarde.",
       });
     }
 
@@ -144,19 +137,17 @@ const ContactValidator = () => {
                     <p className="font-display font-bold text-primary text-sm mb-2">
                       {result.message}
                     </p>
-                    {result.lawyer && (
+                    {result.contact && (
                       <div className="flex items-center gap-3 mt-3 pt-3 border-t border-primary/20">
-                        <img
-                          src={result.lawyer.photo}
-                          alt={result.lawyer.name}
-                          className="w-12 h-12 rounded-full object-cover border-2 border-primary"
-                        />
+                        <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center border-2 border-primary">
+                          <User className="w-6 h-6 text-primary" />
+                        </div>
                         <div>
                           <p className="font-display font-semibold text-foreground text-sm">
-                            {result.lawyer.name}
+                            {result.contact.name}
                           </p>
                           <p className="font-body text-muted-foreground text-xs">
-                            {result.lawyer.role}
+                            {result.contact.role}
                           </p>
                         </div>
                       </div>
@@ -190,6 +181,10 @@ const ContactValidator = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <p className="mt-4 text-xs text-muted-foreground text-center font-body">
+        Em caso de dúvida, ligue diretamente para (81) 3049-3799.
+      </p>
     </div>
   );
 };
