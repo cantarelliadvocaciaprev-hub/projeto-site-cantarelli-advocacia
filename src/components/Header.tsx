@@ -86,6 +86,13 @@ const Header = () => {
       preview: "Respostas para as dúvidas mais frequentes"
     },
     { 
+      label: "Blog", 
+      id: "blog", 
+      type: "section",
+      icon: FileText,
+      preview: "Artigos e notícias sobre Direito Previdenciário atualizados"
+    },
+    { 
       label: "Contato", 
       id: "contact", 
       type: "section",
