@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import TrabalheConosco from "./pages/TrabalheConosco";
 import Seguranca from "./pages/Seguranca";
 import BlogArticle from "./pages/BlogArticle";
+import BlogPage from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
