@@ -1705,7 +1705,7 @@ export const blogArticles: BlogArticle[] = [
     ],
     lastUpdated: "Março 2026",
     image: aposentadoriaProfessorImg,
-    imageAlt: "Trabalhador autônomo revisando documentos de contribuição previdenciária do INSS",
+    imageAlt: "Professor em sala de aula representando aposentadoria especial do magistério",
     author: "Thiago Cantarelli",
     content: [
       {
