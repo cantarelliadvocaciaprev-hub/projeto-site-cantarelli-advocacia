@@ -1,6 +1,10 @@
 import reformaImg from "@/assets/blog/reforma-previdenciaria-2026.jpg";
 import auxilioImg from "@/assets/blog/auxilio-incapacidade-2026.jpg";
 import pensaoImg from "@/assets/blog/pensao-morte-2026.jpg";
+import ruralImg from "@/assets/blog/aposentadoria-rural-2026.jpg";
+import especialImg from "@/assets/blog/aposentadoria-especial-2026.jpg";
+import meuInssImg from "@/assets/blog/meu-inss-aposentadoria-2026.jpg";
+import meiImg from "@/assets/blog/mei-contribuicao-inss-2026.jpg";
 
 export interface BlogArticleContent {
   type: "paragraph" | "heading" | "subheading" | "list" | "highlight";
