@@ -7,6 +7,9 @@ import SEO from "@/components/SEO";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { blogArticles } from "@/data/blogArticles";
+import ArticleFAQ from "@/components/blog/ArticleFAQ";
+import ArticleQuestionForm from "@/components/blog/ArticleQuestionForm";
+import RelatedArticles from "@/components/blog/RelatedArticles";
 
 const WHATSAPP_URL = "https://wa.me/5581983421727?text=Olá,%20li%20um%20artigo%20no%20blog%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.";
 
