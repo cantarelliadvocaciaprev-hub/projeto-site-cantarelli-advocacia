@@ -158,7 +158,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Benefícios",
     readTime: "6 min",
     keyTakeaways: [
-      "O pedido pode ser feito 100% online pelo Meu INSS com atestado médico digitalizado",
+      "O pedido pode ser feito com auxílio de um advogado especialista para maior chance de aprovação",
       "A perícia médica por telemedicina foi ampliada em 2026 para mais municípios",
       "Recurso administrativo contra indeferimento tem prazo de 30 dias",
     ],
