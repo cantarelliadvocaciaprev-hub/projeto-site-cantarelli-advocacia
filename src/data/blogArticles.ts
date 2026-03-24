@@ -27,15 +27,15 @@ export interface BlogArticle {
   slug: string;
   title: string;
   excerpt: string;
-  date: string;
+  date?: string;
   category: string;
   tags: string[];
   readTime: string;
   keyTakeaways: string[];
-  lastUpdated: string;
+  lastUpdated?: string;
   image: string;
   imageAlt: string;
-  author: string;
+  author?: string;
   content: BlogArticleContent[];
 }
 

@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { Card } from "@/components/ui/card";
-import { Calendar, ArrowRight, Clock, Search, X, Tag } from "lucide-react";
+import { ArrowRight, Search, X, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { blogArticles } from "@/data/blogArticles";
 import Header from "@/components/Header";
@@ -67,7 +67,7 @@ const Blog = () => {
           {/* Header */}
           <div className="text-center mb-8 md:mb-10">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
-              Blog e Notícias
+              Blog
             </h1>
             <div className="w-16 md:w-20 h-1 bg-primary mx-auto mb-4 md:mb-6"></div>
             <p className="text-base md:text-lg text-muted-foreground font-body max-w-2xl mx-auto">
@@ -81,7 +81,7 @@ const Blog = () => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Buscar artigos..."
+                placeholder="Pesquisar..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="w-full pl-10 pr-10 py-3 rounded-xl border border-border bg-card text-foreground font-body text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all"
@@ -169,7 +169,7 @@ const Blog = () => {
 
           {/* Articles Grid */}
           {filtered.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
               {filtered.map((post) => (
                 <Link
                   to={`/blog/${post.slug}`}
@@ -177,7 +177,7 @@ const Blog = () => {
                   className="group"
                 >
                   <Card className="overflow-hidden bg-card border-border hover:border-primary transition-all duration-300 hover:shadow-xl h-full flex flex-col">
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative aspect-[16/10] overflow-hidden">
                       <img
                         src={post.image}
                         alt={post.imageAlt}
@@ -191,44 +191,17 @@ const Blog = () => {
                       </div>
                     </div>
 
-                    <div className="p-3 md:p-4 flex flex-col flex-1">
+                    <div className="p-4 md:p-5 flex flex-col flex-1">
                       <h2 className="text-sm md:text-base font-display font-bold text-foreground mb-2 leading-tight line-clamp-2 group-hover:text-primary transition-colors">
                         {post.title}
                       </h2>
 
-                      <p className="text-xs text-muted-foreground font-body line-clamp-2 mb-2 flex-1">
+                      <p className="text-xs md:text-sm text-muted-foreground font-body line-clamp-3 mb-3 flex-1">
                         {post.excerpt}
                       </p>
 
-                      {/* Tags */}
-                      {post.tags && post.tags.length > 0 && (
-                        <div className="flex flex-wrap gap-1 mb-2">
-                          {post.tags.slice(0, 3).map((tag) => (
-                            <span
-                              key={tag}
-                              className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-muted/40 text-[9px] md:text-[10px] text-muted-foreground font-medium"
-                            >
-                              <Tag className="w-2 h-2" />
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-
-                      <div className="flex items-center gap-2 text-[10px] md:text-xs text-muted-foreground mt-auto pt-2 border-t border-border">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-3 h-3 flex-shrink-0" />
-                          <span className="truncate">{post.date}</span>
-                        </div>
-                        <span className="text-border">•</span>
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-3 h-3 flex-shrink-0" />
-                          <span>{post.readTime}</span>
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-1 text-primary text-xs font-semibold mt-2 group-hover:gap-2 transition-all">
-                        <span>Ler artigo</span>
+                      <div className="flex items-center gap-1 text-primary text-xs md:text-sm font-semibold mt-auto group-hover:gap-2 transition-all">
+                        <span>Leia Mais</span>
                         <ArrowRight className="w-3 h-3 md:w-4 md:h-4 transition-transform group-hover:translate-x-1" />
                       </div>
                     </div>
