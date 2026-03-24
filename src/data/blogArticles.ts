@@ -16,6 +16,17 @@ import salarioMaternidadeImg from "@/assets/blog/salario-maternidade-2026.jpg";
 import contribuinteIndividualImg from "@/assets/blog/contribuinte-individual-2026.jpg";
 import aposentadoriaProfessorImg from "@/assets/blog/aposentadoria-professor-2026.jpg";
 import cnisAnaliseImg from "@/assets/blog/cnis-analise-2026.jpg";
+import tendiniteLerImg from "@/assets/blog/tendinite-ler-aposentadoria-2026.jpg";
+import autismoPcdImg from "@/assets/blog/autismo-aposentadoria-pcd-2026.jpg";
+import processoAuxAcidenteImg from "@/assets/blog/processo-auxilio-acidente-justica-2026.jpg";
+import salMatDesempregadaImg from "@/assets/blog/salario-maternidade-desempregada-2026.jpg";
+import tempoProcessoAuxImg from "@/assets/blog/tempo-processo-auxilio-acidente-2026.jpg";
+import bpcNegadoImg from "@/assets/blog/bpc-negado-o-que-fazer-2026.jpg";
+import aposentAntecipadaImg from "@/assets/blog/aposentadoria-antecipada-2026.jpg";
+import aposentMulherImg from "@/assets/blog/aposentadoria-mulher-regras-2026.jpg";
+import bpcParaAposentImg from "@/assets/blog/bpc-para-aposentadoria-2026.jpg";
+import loasPensaoMorteImg from "@/assets/blog/loas-pensao-morte-marido-2026.jpg";
+import auxAcidenteTrabalharImg from "@/assets/blog/auxilio-acidente-pode-trabalhar-2026.jpg";
 
 export interface BlogArticleContent {
   type: "paragraph" | "heading" | "subheading" | "list" | "highlight";
