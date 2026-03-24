@@ -1,8 +1,3 @@
-  faq: [
-    { question: "Quem recebe auxílio-acidente pode trabalhar normalmente?", answer: "Sim. O auxílio-acidente é um benefício indenizatório que pode ser recebido junto com o salário, pois não exige afastamento do trabalho." },
-    { question: "Auxílio-acidente pode ser acumulado com outros benefícios?", answer: "Pode ser acumulado com salário, mas não com aposentadoria (exceto direito adquirido antes da reforma) nem com outro auxílio-acidente." },
-    { question: "A empresa pode me demitir recebendo auxílio-acidente?", answer: "Se o auxílio-acidente decorreu de acidente de trabalho, você tem estabilidade de 12 meses após a cessação do auxílio-doença acidentário." },
-  ],
 import reformaImg from "@/assets/blog/reforma-previdenciaria-2026.jpg";
 import auxilioImg from "@/assets/blog/auxilio-incapacidade-2026.jpg";
 import pensaoImg from "@/assets/blog/pensao-morte-2026.jpg";
@@ -2025,13 +2020,13 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Caso o INSS negue o benefício, é possível recorrer administrativamente ou entrar com ação judicial. Na Justiça, um perito independente avalia o caso, o que frequentemente resulta em decisões favoráveis ao segurado. A Cantarelli Advocacia tem experiência comprovada em casos de LER/DORT e pode analisar seu caso sem compromisso." },
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "Se você sofre de tendinite crônica que compromete sua capacidade de trabalhar, pode ter direito à aposentadoria por invalidez. Não tente resolver sozinho — procure orientação jurídica especializada para garantir seus direitos." }
-    ]
-  },
-  faq: [
+    ],
+    faq: [
     { question: "Tendinite dá direito a aposentadoria por invalidez?", answer: "Somente se a tendinite ou LER causar incapacidade total e permanente para qualquer atividade profissional, comprovada por perícia médica." },
     { question: "Qual o CID da tendinite para fins previdenciários?", answer: "Os CIDs mais comuns são M65 (sinovite e tenossinovite), M75 (lesões do ombro) e M77 (outras entesopatias), dependendo da localização." },
     { question: "Tendinite é considerada doença ocupacional?", answer: "Sim, quando há nexo causal com o trabalho. A LER/DORT é uma das principais causas de afastamento ocupacional no Brasil." },
   ],
+  },
   {
     slug: "autismo-aposentadoria-pessoa-com-deficiencia",
     title: "Qual Grau de Autismo Aposenta? Entenda a Aposentadoria da Pessoa com Deficiência",
@@ -2071,13 +2066,13 @@ export const blogArticles: BlogArticle[] = [
       ]},
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "Se você ou um familiar tem autismo e contribui para o INSS, é possível se aposentar com tempo reduzido. A Cantarelli Advocacia pode avaliar seu caso, preparar a documentação adequada e acompanhar todo o processo junto ao INSS." }
-    ]
-  },
-  faq: [
+    ],
+    faq: [
     { question: "Autismo dá direito a aposentadoria por deficiência?", answer: "Sim. O Transtorno do Espectro Autista (TEA) é reconhecido como deficiência pela Lei 12.764/2012, garantindo acesso à aposentadoria da pessoa com deficiência." },
     { question: "Qual grau de autismo dá direito à aposentadoria?", answer: "Todos os graus podem dar direito, pois a avaliação é biopsicossocial. O nível de suporte necessário (1, 2 ou 3) influencia a classificação da deficiência." },
     { question: "Criança autista tem direito a BPC?", answer: "Sim. Crianças com TEA podem receber BPC/LOAS desde que a família comprove renda per capita inferior a 1/4 do salário mínimo." },
   ],
+  },
   {
     slug: "processo-auxilio-acidente-justica-prazos",
     title: "Como Funciona um Processo de Auxílio-Acidente na Justiça? Entenda os Prazos",
@@ -2111,13 +2106,13 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se o juiz reconhecer o direito ao auxílio-acidente, o segurado pode receber todos os valores retroativos desde a data em que o benefício deveria ter sido concedido. Isso pode representar uma quantia significativa." },
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "Não aceite a negativa do INSS como decisão final. A Cantarelli Advocacia tem experiência em processos de auxílio-acidente e pode avaliar seu caso para garantir que você receba o benefício que merece." }
-    ]
-  },
-  faq: [
+    ],
+    faq: [
     { question: "Quanto custa um processo de auxílio-acidente?", answer: "Na Justiça Federal, processos previdenciários são isentos de custas. Os honorários advocatícios variam conforme o profissional." },
     { question: "Preciso de advogado para processo de auxílio-acidente?", answer: "Para ações no JEF (até 60 salários mínimos) não é obrigatório, mas é altamente recomendável ter acompanhamento jurídico especializado." },
     { question: "Qual o prazo para entrar com ação de auxílio-acidente?", answer: "Não há prazo prescricional para o direito em si, mas as parcelas atrasadas prescrevem em 5 anos." },
   ],
+  },
   {
     slug: "salario-maternidade-desempregada-quem-tem-direito",
     title: "Salário-Maternidade para Desempregada: Quem Tem Direito?",
@@ -2151,13 +2146,13 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se o INSS indeferiu seu pedido de salário-maternidade, não desista. Um advogado previdenciário pode analisar se houve erro na contagem do período de graça ou na verificação da carência e, se necessário, ingressar com ação judicial para garantir seus direitos." },
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "Se você está desempregada e grávida, pode ter direito ao salário-maternidade. A Cantarelli Advocacia pode avaliar seu caso gratuitamente e orientá-la sobre os próximos passos para garantir esse benefício." }
-    ]
-  },
-  faq: [
+    ],
+    faq: [
     { question: "Desempregada tem direito a salário-maternidade?", answer: "Sim, desde que esteja dentro do período de graça do INSS (geralmente 12 meses após a última contribuição, podendo ser estendido)." },
     { question: "Qual o valor do salário-maternidade para desempregada?", answer: "É calculado com base na média dos últimos 12 salários de contribuição antes da perda da qualidade de segurada." },
     { question: "Como solicitar salário-maternidade estando desempregada?", answer: "O pedido deve ser feito diretamente ao INSS pelo Meu INSS ou presencialmente, com documentos que comprovem o parto e a qualidade de segurada." },
   ],
+  },
   {
     slug: "quanto-tempo-demora-processo-auxilio-acidente",
     title: "Quanto Tempo Demora um Processo de Auxílio-Acidente?",
@@ -2189,13 +2184,13 @@ export const blogArticles: BlogArticle[] = [
       { type: "highlight", text: "Um advogado previdenciário experiente sabe exatamente quais documentos são necessários e como apresentá-los de forma estratégica para reduzir o tempo do processo." },
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "O tempo de um processo de auxílio-acidente depende de vários fatores, mas com a documentação certa e orientação jurídica especializada, é possível reduzir significativamente essa espera. A Cantarelli Advocacia pode ajudar você a conseguir seu benefício no menor prazo possível." }
-    ]
-  },
-  faq: [
+    ],
+    faq: [
     { question: "Quanto tempo demora um processo de auxílio-acidente na Justiça?", answer: "Em média, de 1 a 3 anos, dependendo da complexidade, necessidade de perícias e da vara judicial responsável." },
     { question: "Posso receber valores atrasados do auxílio-acidente?", answer: "Sim. Se o juiz conceder o benefício, você recebe todas as parcelas retroativas desde a data do requerimento ou do acidente." },
     { question: "O que acelera um processo de auxílio-acidente?", answer: "Ter documentação médica completa, laudos detalhados e um advogado especializado que apresente provas robustas desde o início." },
   ],
+  },
   {
     slug: "bpc-negado-o-que-fazer",
     title: "Teve o BPC Negado? Saiba Agora o Que Fazer",
@@ -2236,13 +2231,13 @@ export const blogArticles: BlogArticle[] = [
       ]},
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "Se o seu BPC foi negado, não desista. A Cantarelli Advocacia tem ampla experiência em reverter negativas de BPC/LOAS e pode analisar seu caso para identificar a melhor estratégia." }
-    ]
-  },
-  faq: [
+    ],
+    faq: [
     { question: "O que fazer quando o BPC é negado pelo INSS?", answer: "Você pode entrar com recurso administrativo no CRPS em até 30 dias ou ajuizar ação na Justiça Federal com apoio de advogado." },
     { question: "Quais os motivos mais comuns de negativa do BPC?", answer: "Renda familiar acima do limite, laudo pericial desfavorável, falta de documentação e irregularidades no CadÚnico." },
     { question: "É possível ganhar o BPC na Justiça após negativa?", answer: "Sim. A Justiça frequentemente concede o BPC com critérios mais flexíveis que o INSS, especialmente quanto à renda familiar." },
   ],
+  },
   {
     slug: "aposentadoria-antecipada-como-conseguir",
     title: "Aposentadoria Antecipada: Como Conseguir e Evitar Perder Dinheiro",
@@ -2274,13 +2269,13 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "A aposentadoria antecipada pode valer a pena quando o segurado tem problemas de saúde, está desempregado há muito tempo, ou quando a regra de transição do pedágio oferece condições vantajosas. Cada caso é único e precisa ser analisado individualmente." },
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "Antes de pedir a aposentadoria, faça um planejamento previdenciário completo. A Cantarelli Advocacia realiza análise detalhada do seu caso para identificar a regra mais vantajosa e a melhor data para se aposentar sem perder dinheiro." }
-    ]
-  },
-  faq: [
+    ],
+    faq: [
     { question: "Como se aposentar mais cedo?", answer: "Através das regras de transição (pedágio, pontos), aposentadoria especial, ou aposentadoria da pessoa com deficiência, dependendo do seu caso." },
     { question: "Aposentadoria antecipada reduz o valor do benefício?", answer: "Depende da regra utilizada. Algumas regras de transição podem resultar em valor menor, enquanto outras garantem o benefício integral." },
     { question: "Vale a pena esperar para se aposentar?", answer: "Em muitos casos, sim. Contribuir mais tempo pode aumentar significativamente o valor da aposentadoria. Um planejamento previdenciário mostra a melhor estratégia." },
   ],
+  },
   {
     slug: "regras-aposentadoria-mulher-2026",
     title: "Conheça as Regras de Aposentadoria para Mulher: Saiba Quando é a Hora Certa",
@@ -2316,13 +2311,13 @@ export const blogArticles: BlogArticle[] = [
       { type: "highlight", text: "Muitas mulheres se aposentam recebendo menos do que poderiam por falta de planejamento. Cada ano de contribuição pode representar até 2% a mais no valor do benefício." },
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "Não se aposente sem antes fazer um planejamento previdenciário completo. A Cantarelli Advocacia pode analisar seu histórico contributivo e identificar a regra mais vantajosa para o seu caso, garantindo o maior benefício possível." }
-    ]
-  },
-  faq: [
+    ],
+    faq: [
     { question: "Qual a idade mínima para mulher se aposentar em 2026?", answer: "62 anos na regra geral, com pelo menos 15 anos de contribuição. Regras de transição podem permitir aposentadoria antes dessa idade." },
     { question: "Mulher tem vantagem na aposentadoria?", answer: "Sim. As mulheres têm redução de 5 anos na idade mínima e no tempo de contribuição em relação aos homens na maioria das regras." },
     { question: "Dona de casa pode se aposentar pelo INSS?", answer: "Sim, contribuindo como segurada facultativa. Com a alíquota de 11% sobre o salário mínimo, garante aposentadoria por idade." },
   ],
+  },
   {
     slug: "transformar-bpc-em-aposentadoria",
     title: "É Possível Transformar o BPC em Aposentadoria? Entenda!",
@@ -2354,13 +2349,13 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Quem recebe BPC pode contribuir como segurado facultativo para acumular tempo de contribuição e, futuramente, requerer uma aposentadoria. No entanto, é importante planejar essas contribuições com orientação profissional para não pagar valores desnecessários." },
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "A transição do BPC para a aposentadoria exige planejamento cuidadoso. A Cantarelli Advocacia pode fazer uma análise comparativa completa e orientar sobre a melhor decisão para o seu caso." }
-    ]
-  },
-  faq: [
+    ],
+    faq: [
     { question: "É possível converter BPC em aposentadoria?", answer: "Não diretamente. Mas se o beneficiário do BPC passar a contribuir para o INSS e cumprir os requisitos, pode solicitar aposentadoria e cancelar o BPC." },
     { question: "O tempo recebendo BPC conta para aposentadoria?", answer: "Não. O BPC é benefício assistencial e o período de recebimento não conta como tempo de contribuição para aposentadoria." },
     { question: "Qual a vantagem de trocar BPC por aposentadoria?", answer: "A aposentadoria garante 13º salário, possibilidade de pensão por morte para dependentes, e geralmente valor maior que o BPC." },
   ],
+  },
   {
     slug: "quem-recebe-loas-pode-receber-pensao-por-morte",
     title: "Quem Recebe LOAS Pode Receber Pensão por Morte do Marido?",
@@ -2391,13 +2386,13 @@ export const blogArticles: BlogArticle[] = [
       { type: "highlight", text: "Cada caso é único. A análise de um advogado previdenciário é essencial para determinar qual benefício é mais vantajoso e se há possibilidade de acumulação no seu caso específico." },
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "Se você recebe BPC/LOAS e perdeu o cônjuge, procure orientação jurídica antes de tomar qualquer decisão. A Cantarelli Advocacia pode analisar qual benefício é mais vantajoso e se existe possibilidade legal de acumulação no seu caso." }
-    ]
-  },
-  faq: [
+    ],
+    faq: [
     { question: "Posso receber LOAS e pensão por morte ao mesmo tempo?", answer: "Não. O BPC/LOAS não pode ser acumulado com pensão por morte. Você deve optar pelo benefício mais vantajoso." },
     { question: "Se meu marido morrer, perco o LOAS?", answer: "Não automaticamente. Mas se você solicitar pensão por morte, deverá escolher entre os dois benefícios, pois não é permitida a acumulação." },
     { question: "Pensão por morte entra no cálculo de renda do BPC?", answer: "Depende. A pensão de até 1 salário mínimo recebida por idoso pode ser excluída do cálculo de renda familiar para fins de BPC." },
   ],
+  },
   {
     slug: "auxilio-acidente-pode-trabalhar",
     title: "Quem Recebe Auxílio-Acidente Pode Trabalhar Normal? Entenda Como Funciona",
