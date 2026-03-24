@@ -5,6 +5,11 @@ import ruralImg from "@/assets/blog/aposentadoria-rural-2026.jpg";
 import especialImg from "@/assets/blog/aposentadoria-especial-2026.jpg";
 import pcdImg from "@/assets/blog/aposentadoria-pcd-2026.jpg";
 import ruidoImg from "@/assets/blog/aposentadoria-ruido-especial-2026.jpg";
+import bpcLoasImg from "@/assets/blog/bpc-loas-2026.jpg";
+import revisaoImg from "@/assets/blog/revisao-beneficio-2026.jpg";
+import auxAcidenteImg from "@/assets/blog/auxilio-acidente-2026.jpg";
+import diagnosticoImg from "@/assets/blog/diagnostico-previdenciario-2026.jpg";
+import invalidezImg from "@/assets/blog/aposentadoria-invalidez-2026.jpg";
 
 export interface BlogArticleContent {
   type: "paragraph" | "heading" | "subheading" | "list" | "highlight";
@@ -530,7 +535,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Aposentadoria Especial por Insalubridade em 2026: Quem Tem Direito",
     excerpt:
       "Profissionais expostos a agentes nocivos podem se aposentar mais cedo. Conheça as regras da aposentadoria especial em 2026, os agentes reconhecidos e como comprovar a exposição.",
-    date: "25 de Fevereiro, 2026",
+    date: "22 de Março, 2026",
     category: "Aposentadoria",
     readTime: "7 min",
     keyTakeaways: [
@@ -639,7 +644,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Aposentadoria da Pessoa com Deficiência (PCD): Por Idade e Por Tempo de Contribuição em 2026",
     excerpt:
       "A aposentadoria da pessoa com deficiência tem regras próprias e mais favoráveis que a regra geral. Conheça os requisitos por idade e por tempo de contribuição, o diagnóstico previdenciário e como garantir esse direito.",
-    date: "20 de Fevereiro, 2026",
+    date: "20 de Março, 2026",
     category: "Aposentadoria PCD",
     readTime: "9 min",
     keyTakeaways: [
@@ -780,7 +785,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Aposentadoria Especial por Exposição ao Ruído e Tempo Especial para Contribuintes Individuais em 2026",
     excerpt:
       "Trabalhadores expostos ao ruído acima de 85 dB podem ter direito à aposentadoria especial. Saiba também como contribuintes individuais podem conseguir o reconhecimento de tempo especial no INSS.",
-    date: "15 de Fevereiro, 2026",
+    date: "18 de Março, 2026",
     category: "Aposentadoria Especial",
     readTime: "8 min",
     keyTakeaways: [
@@ -924,6 +929,452 @@ export const blogArticles: BlogArticle[] = [
       {
         type: "paragraph",
         text: "Se você trabalha ou trabalhou exposto ao ruído — seja como empregado CLT ou como contribuinte individual — pode ter direito à aposentadoria especial ou à conversão de tempo especial em comum. Não deixe de buscar seus direitos. A Cantarelli Advocacia possui experiência comprovada em ações de aposentadoria especial por ruído e reconhecimento de tempo especial para autônomos em Recife e todo o Brasil.",
+      },
+    ],
+  },
+  {
+    slug: "bpc-loas-2026-quem-tem-direito-como-solicitar",
+    title: "BPC LOAS em 2026: Quem Tem Direito e Como Solicitar o Benefício",
+    excerpt:
+      "O Benefício de Prestação Continuada (BPC/LOAS) garante um salário mínimo mensal para idosos e pessoas com deficiência de baixa renda. Saiba quem tem direito e como dar entrada em 2026.",
+    date: "24 de Março, 2026",
+    category: "BPC/LOAS",
+    readTime: "7 min",
+    keyTakeaways: [
+      "Idosos acima de 65 anos e pessoas com deficiência de longo prazo podem requerer o BPC",
+      "A renda per capita familiar deve ser inferior a 1/4 do salário mínimo (R$ 382,50 em 2026)",
+      "Não é necessário ter contribuído ao INSS para receber o BPC/LOAS",
+      "O benefício precisa ser revisado a cada 2 anos pelo INSS",
+    ],
+    lastUpdated: "Março 2026",
+    image: bpcLoasImg,
+    imageAlt:
+      "Idoso brasileiro recebendo orientação sobre BPC LOAS em escritório de advocacia previdenciária",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "O Benefício de Prestação Continuada (BPC), previsto na Lei Orgânica da Assistência Social (LOAS), é um dos benefícios assistenciais mais importantes do Brasil. Ele garante o pagamento de um salário mínimo mensal para idosos com 65 anos ou mais e pessoas com deficiência de qualquer idade que comprovem não ter meios de prover a própria manutenção.",
+      },
+      {
+        type: "heading",
+        text: "Quem Tem Direito ao BPC/LOAS em 2026?",
+      },
+      {
+        type: "paragraph",
+        text: "Existem duas categorias de beneficiários do BPC: idosos e pessoas com deficiência. Em ambos os casos, o requisito fundamental é a comprovação de baixa renda familiar.",
+      },
+      {
+        type: "subheading",
+        text: "BPC para Idosos",
+      },
+      {
+        type: "list",
+        items: [
+          "Ter 65 anos ou mais",
+          "Renda familiar per capita inferior a 1/4 do salário mínimo",
+          "Não receber outro benefício da seguridade social (exceto assistência médica)",
+          "Estar inscrito no CadÚnico (Cadastro Único)",
+        ],
+      },
+      {
+        type: "subheading",
+        text: "BPC para Pessoa com Deficiência",
+      },
+      {
+        type: "list",
+        items: [
+          "Ter impedimento de longo prazo (físico, mental, intelectual ou sensorial)",
+          "O impedimento deve durar pelo menos 2 anos ou ser permanente",
+          "Renda familiar per capita inferior a 1/4 do salário mínimo",
+          "Passar por avaliação social e médica do INSS",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "Importante: O BPC/LOAS não exige contribuição prévia ao INSS. Mesmo quem nunca trabalhou com carteira assinada pode ter direito ao benefício.",
+      },
+      {
+        type: "heading",
+        text: "Como Calcular a Renda Familiar em 2026",
+      },
+      {
+        type: "paragraph",
+        text: "Com o salário mínimo de R$ 1.530,00 em 2026, a renda per capita máxima para ter direito ao BPC é de R$ 382,50 por pessoa. Entram no cálculo: cônjuge, filhos, enteados e irmãos que residam no mesmo domicílio.",
+      },
+      {
+        type: "paragraph",
+        text: "Alguns rendimentos podem ser excluídos do cálculo, como o BPC já recebido por outro membro da família e estágios supervisionados. A jurisprudência também tem admitido critérios mais flexíveis de aferição da miserabilidade.",
+      },
+      {
+        type: "heading",
+        text: "Como Solicitar o BPC/LOAS",
+      },
+      {
+        type: "list",
+        items: [
+          "1. Inscreva-se ou atualize o CadÚnico no CRAS do seu município",
+          "2. Agende o requerimento pelo Meu INSS ou ligando para o 135",
+          "3. Reúna documentos: RG, CPF, comprovante de residência e NIS",
+          "4. Para PCD: leve laudos médicos e exames que comprovem a deficiência",
+          "5. Aguarde a análise — prazo médio é de 45 a 90 dias",
+        ],
+      },
+      {
+        type: "heading",
+        text: "BPC Negado: O Que Fazer?",
+      },
+      {
+        type: "paragraph",
+        text: "Se o BPC for negado, existem duas opções: recurso administrativo ao CRPS (Conselho de Recursos da Previdência Social) ou ação judicial. Na via judicial, o juiz pode considerar outros critérios de miserabilidade além da renda per capita de 1/4 do salário mínimo, o que aumenta as chances de concessão.",
+      },
+      {
+        type: "highlight",
+        text: "Em Recife/PE, a Cantarelli Advocacia tem experiência comprovada na concessão judicial de BPC/LOAS, incluindo casos em que o benefício foi inicialmente negado pelo INSS.",
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "O BPC/LOAS é um direito fundamental para idosos e pessoas com deficiência em situação de vulnerabilidade. Se você ou um familiar se enquadra nos requisitos, não deixe de buscar orientação jurídica especializada para garantir o acesso ao benefício.",
+      },
+    ],
+  },
+  {
+    slug: "revisao-beneficio-inss-2026-aumento-aposentadoria",
+    title: "Revisão de Benefício do INSS em 2026: Como Aumentar Sua Aposentadoria",
+    excerpt:
+      "Milhares de aposentados têm direito a revisões que podem aumentar significativamente o valor da aposentadoria. Conheça as principais teses revisionais vigentes em 2026.",
+    date: "23 de Março, 2026",
+    category: "Revisão",
+    readTime: "9 min",
+    keyTakeaways: [
+      "A revisão da vida toda permite incluir salários anteriores a julho de 1994 no cálculo",
+      "O prazo para pedir revisão é de 10 anos a partir do primeiro pagamento",
+      "Revisões podem aumentar aposentadorias em até 40% dependendo do caso",
+      "Erros no CNIS (extrato previdenciário) podem reduzir o valor do benefício",
+    ],
+    lastUpdated: "Março 2026",
+    image: revisaoImg,
+    imageAlt:
+      "Profissional calculando revisão de benefício do INSS com documentos e calculadora",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "A revisão de benefício é um direito de todo segurado que acredita que o valor da sua aposentadoria foi calculado incorretamente ou que existem teses jurídicas que podem melhorar o valor recebido. Em 2026, diversas revisões continuam sendo aplicadas pelos tribunais brasileiros.",
+      },
+      {
+        type: "heading",
+        text: "Principais Revisões Disponíveis em 2026",
+      },
+      {
+        type: "subheading",
+        text: "Revisão da Vida Toda (Tema 999 do STF)",
+      },
+      {
+        type: "paragraph",
+        text: "A revisão da vida toda permite que o segurado inclua no cálculo do benefício os salários de contribuição anteriores a julho de 1994. Isso é vantajoso para quem tinha salários altos antes do Plano Real e viu seu benefício ser calculado apenas com as contribuições posteriores.",
+      },
+      {
+        type: "subheading",
+        text: "Revisão do Teto (EC 20/98 e EC 41/03)",
+      },
+      {
+        type: "paragraph",
+        text: "Quem se aposentou entre 1988 e 2003 e teve o benefício limitado pelo teto da época pode ter direito à readequação dos valores com base nos novos tetos estabelecidos pelas Emendas Constitucionais 20/1998 e 41/2003.",
+      },
+      {
+        type: "subheading",
+        text: "Revisão do Buraco Negro",
+      },
+      {
+        type: "paragraph",
+        text: "Benefícios concedidos entre 5 de outubro de 1988 e 5 de abril de 1991 podem ter sido calculados sem a aplicação do artigo 144 da Lei 8.213/91, gerando valores menores do que o devido.",
+      },
+      {
+        type: "heading",
+        text: "Prazo para Pedir Revisão",
+      },
+      {
+        type: "highlight",
+        text: "O prazo decadencial para revisão de benefício é de 10 anos, contados a partir do primeiro dia do mês seguinte ao do recebimento da primeira prestação. Após esse prazo, o direito à revisão se extingue.",
+      },
+      {
+        type: "heading",
+        text: "Como Saber se Tenho Direito a Uma Revisão",
+      },
+      {
+        type: "list",
+        items: [
+          "Solicite o extrato do CNIS e verifique se todos os vínculos e salários estão corretos",
+          "Compare o valor do benefício com o cálculo baseado em todos os salários de contribuição",
+          "Consulte um advogado previdenciário para análise do processo de concessão",
+          "Verifique a data de concessão para confirmar que está dentro do prazo de 10 anos",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "Se você recebe aposentadoria, pensão ou auxílio do INSS, vale a pena verificar se existe alguma revisão aplicável ao seu caso. A Cantarelli Advocacia oferece análise gratuita do seu benefício para identificar possíveis revisões.",
+      },
+    ],
+  },
+  {
+    slug: "auxilio-acidente-2026-quem-tem-direito-valor",
+    title: "Auxílio-Acidente em 2026: Quem Tem Direito, Valor e Como Solicitar",
+    excerpt:
+      "O auxílio-acidente é um benefício pago ao trabalhador que sofre acidente e fica com sequelas permanentes. Entenda quem tem direito, quanto recebe e como pedir em 2026.",
+    date: "21 de Março, 2026",
+    category: "Benefícios",
+    readTime: "6 min",
+    keyTakeaways: [
+      "O auxílio-acidente corresponde a 50% do salário de benefício após a Reforma",
+      "É pago como indenização e pode ser acumulado com o salário do trabalho",
+      "Somente segurados empregados, avulsos e segurados especiais têm direito",
+      "A sequela deve reduzir permanentemente a capacidade para o trabalho",
+    ],
+    lastUpdated: "Março 2026",
+    image: auxAcidenteImg,
+    imageAlt:
+      "Trabalhador brasileiro em consulta com advogado previdenciário sobre auxílio-acidente e documentos",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "O auxílio-acidente é um benefício de natureza indenizatória, concedido ao segurado do INSS que, após consolidação das lesões decorrentes de acidente de qualquer natureza, apresenta sequelas que impliquem redução da capacidade para o trabalho que exercia habitualmente.",
+      },
+      {
+        type: "heading",
+        text: "Requisitos para o Auxílio-Acidente em 2026",
+      },
+      {
+        type: "list",
+        items: [
+          "Ter qualidade de segurado (estar contribuindo ou no período de graça)",
+          "Ter sofrido acidente de qualquer natureza (trabalho, trânsito, doméstico, etc.)",
+          "Apresentar sequela permanente que reduza a capacidade laboral",
+          "Não é exigido tempo mínimo de contribuição (carência)",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Valor do Auxílio-Acidente Após a Reforma",
+      },
+      {
+        type: "paragraph",
+        text: "Após a Reforma da Previdência de 2019, o auxílio-acidente passou a corresponder a 50% do salário de benefício. O salário de benefício é calculado com base na média de todos os salários de contribuição desde julho de 1994.",
+      },
+      {
+        type: "highlight",
+        text: "O auxílio-acidente é um dos poucos benefícios que pode ser acumulado com o salário do trabalho. O segurado pode continuar trabalhando e recebendo o benefício simultaneamente.",
+      },
+      {
+        type: "heading",
+        text: "Diferença entre Auxílio-Acidente e Auxílio por Incapacidade",
+      },
+      {
+        type: "paragraph",
+        text: "O auxílio-acidente é pago quando o segurado volta a trabalhar mas ficou com sequelas. Já o auxílio por incapacidade temporária (antigo auxílio-doença) é pago enquanto o segurado está impossibilitado de trabalhar. São benefícios diferentes e não podem ser recebidos simultaneamente.",
+      },
+      {
+        type: "heading",
+        text: "Como Solicitar o Auxílio-Acidente",
+      },
+      {
+        type: "list",
+        items: [
+          "Agende perícia médica no INSS pelo Meu INSS ou pelo telefone 135",
+          "Leve laudos médicos, exames e relatórios que comprovem a sequela permanente",
+          "A CAT (Comunicação de Acidente de Trabalho) fortalece o pedido, mas não é obrigatória",
+          "Se negado, é possível recorrer administrativamente ou judicialmente",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "Se você sofreu um acidente e ficou com sequelas que afetam sua capacidade de trabalho, procure orientação jurídica para garantir o auxílio-acidente. A Cantarelli Advocacia atua na concessão e revisão desse benefício em Recife e em todo o Brasil.",
+      },
+    ],
+  },
+  {
+    slug: "diagnostico-previdenciario-2026-planejamento-aposentadoria",
+    title: "Diagnóstico Previdenciário em 2026: Planeje Sua Aposentadoria com Segurança",
+    excerpt:
+      "O diagnóstico previdenciário é a ferramenta essencial para quem quer se aposentar com o melhor benefício possível. Saiba como funciona e por que é indispensável em 2026.",
+    date: "19 de Março, 2026",
+    category: "Planejamento",
+    readTime: "7 min",
+    keyTakeaways: [
+      "O diagnóstico identifica a melhor regra de aposentadoria para cada segurado",
+      "Pode revelar períodos de contribuição não registrados no CNIS",
+      "Calcula o valor estimado do benefício em diferentes cenários",
+      "Evita aposentadorias precipitadas que resultam em valores menores",
+    ],
+    lastUpdated: "Março 2026",
+    image: diagnosticoImg,
+    imageAlt:
+      "Advogado previdenciário realizando diagnóstico previdenciário com gráficos e documentos de aposentadoria",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "O diagnóstico previdenciário é uma análise completa e personalizada da vida contributiva do segurado. Ele mapeia todos os vínculos empregatícios, contribuições, tempo de serviço e condições especiais para determinar a melhor estratégia de aposentadoria.",
+      },
+      {
+        type: "heading",
+        text: "O Que é o Diagnóstico Previdenciário?",
+      },
+      {
+        type: "paragraph",
+        text: "Trata-se de um estudo detalhado que analisa o CNIS (Cadastro Nacional de Informações Sociais), identifica possíveis erros ou omissões, simula cenários de aposentadoria e indica qual regra é mais vantajosa para cada caso específico.",
+      },
+      {
+        type: "heading",
+        text: "Por Que Fazer um Diagnóstico em 2026?",
+      },
+      {
+        type: "list",
+        items: [
+          "As regras de transição mudam a cada ano — o que é vantajoso hoje pode não ser amanhã",
+          "Erros no CNIS podem reduzir o valor da aposentadoria em até 30%",
+          "Período de atividade especial não reconhecido reduz o tempo de contribuição",
+          "Contribuições em atraso podem ser mais vantajosas se feitas no momento certo",
+          "Evitar dar entrada na aposentadoria pela regra errada, perdendo dinheiro para sempre",
+        ],
+      },
+      {
+        type: "heading",
+        text: "O Que o Diagnóstico Analisa?",
+      },
+      {
+        type: "list",
+        items: [
+          "Tempo total de contribuição (incluindo atividades rurais, militares e autônomas)",
+          "Possibilidade de reconhecimento de tempo especial",
+          "Simulação do valor do benefício em cada regra de transição",
+          "Identificação da data ideal para dar entrada na aposentadoria",
+          "Viabilidade de contribuições em atraso para atingir requisitos",
+          "Análise de períodos no exterior com países que têm acordo previdenciário",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "Um diagnóstico previdenciário bem feito pode representar uma diferença de R$ 500 a R$ 2.000 por mês no valor da aposentadoria. Ao longo de 20 anos, isso pode significar mais de R$ 400.000 a mais no bolso do aposentado.",
+      },
+      {
+        type: "heading",
+        text: "Como Funciona na Prática",
+      },
+      {
+        type: "list",
+        items: [
+          "1. Coleta de documentos: CTPS, CNIS, carnês de contribuição, PPP e laudos",
+          "2. Análise do histórico contributivo completo",
+          "3. Simulação de cenários com diferentes regras de aposentadoria",
+          "4. Elaboração de relatório com recomendações personalizadas",
+          "5. Orientação sobre passos a seguir para maximizar o benefício",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "O diagnóstico previdenciário é o primeiro passo para garantir uma aposentadoria justa e vantajosa. A Cantarelli Advocacia realiza diagnósticos completos para segurados em Recife/PE e em todo o Brasil, com análise gratuita inicial.",
+      },
+    ],
+  },
+  {
+    slug: "aposentadoria-por-invalidez-2026-requisitos-valor",
+    title: "Aposentadoria por Invalidez em 2026: Requisitos, Valor e Direitos do Segurado",
+    excerpt:
+      "A aposentadoria por incapacidade permanente (antiga invalidez) garante renda a quem não pode mais trabalhar. Conheça os requisitos, valores e como evitar o indeferimento em 2026.",
+    date: "17 de Março, 2026",
+    category: "Incapacidade",
+    readTime: "8 min",
+    keyTakeaways: [
+      "O benefício corresponde a 60% da média + 2% por ano acima de 20 anos de contribuição",
+      "Se a incapacidade decorrer de acidente de trabalho, o valor é de 100% da média",
+      "A carência é de 12 contribuições, exceto para acidentes e doenças graves",
+      "O INSS pode convocar o segurado para perícia de reavaliação a qualquer momento",
+    ],
+    lastUpdated: "Março 2026",
+    image: invalidezImg,
+    imageAlt:
+      "Pessoa com incapacidade permanente recebendo orientação sobre aposentadoria por invalidez no INSS",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "A aposentadoria por incapacidade permanente, popularmente conhecida como aposentadoria por invalidez, é concedida ao segurado que, por doença ou acidente, está total e definitivamente incapaz de exercer qualquer atividade laboral. Em 2026, as regras seguem as alterações trazidas pela Reforma da Previdência.",
+      },
+      {
+        type: "heading",
+        text: "Requisitos para Aposentadoria por Invalidez em 2026",
+      },
+      {
+        type: "list",
+        items: [
+          "Estar incapaz de forma total e permanente para qualquer trabalho",
+          "Ter qualidade de segurado (estar contribuindo ou no período de graça)",
+          "Cumprir carência mínima de 12 contribuições mensais",
+          "A incapacidade deve ser comprovada por perícia médica do INSS",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "A carência de 12 meses é dispensada nos casos de acidente de qualquer natureza e doenças graves listadas em lei, como câncer, AIDS, cardiopatia grave, Parkinson, entre outras.",
+      },
+      {
+        type: "heading",
+        text: "Valor do Benefício Após a Reforma",
+      },
+      {
+        type: "paragraph",
+        text: "O cálculo da aposentadoria por invalidez mudou significativamente com a Reforma. Agora, o valor é de 60% da média dos salários de contribuição, acrescido de 2% para cada ano que exceder 20 anos de contribuição (homens) ou 15 anos (mulheres).",
+      },
+      {
+        type: "paragraph",
+        text: "Exceção importante: quando a incapacidade decorre de acidente de trabalho ou doença profissional, o benefício corresponde a 100% da média dos salários, sem aplicação do redutor.",
+      },
+      {
+        type: "heading",
+        text: "Adicional de 25% para Grande Invalidez",
+      },
+      {
+        type: "paragraph",
+        text: "O segurado que necessitar de assistência permanente de outra pessoa (para atividades básicas como alimentação, higiene e locomoção) tem direito ao acréscimo de 25% sobre o valor do benefício, mesmo que o total ultrapasse o teto do INSS.",
+      },
+      {
+        type: "heading",
+        text: "Benefício Negado: Como Recorrer",
+      },
+      {
+        type: "list",
+        items: [
+          "Recurso administrativo ao CRPS em até 30 dias após a ciência da decisão",
+          "Ação judicial com pedido de tutela antecipada para casos urgentes",
+          "Nova perícia com médico assistente para comprovar a incapacidade",
+          "Juntada de laudos, exames e relatórios médicos atualizados",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "A aposentadoria por invalidez é essencial para quem perdeu a capacidade de trabalhar. Se você teve o benefício negado ou quer saber se tem direito, a Cantarelli Advocacia é especialista em incapacidade e pode analisar seu caso gratuitamente.",
       },
     ],
   },
