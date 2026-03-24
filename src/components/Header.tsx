@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Users, Briefcase, ClipboardList, MessageSquare, HelpCircle, Phone, UserPlus } from "lucide-react";
+import { Menu, X, Users, Briefcase, ClipboardList, MessageSquare, HelpCircle, Phone, UserPlus, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
