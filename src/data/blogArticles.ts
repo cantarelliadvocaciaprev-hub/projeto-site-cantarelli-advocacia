@@ -34,6 +34,11 @@ export interface BlogArticleContent {
   items?: string[];
 }
 
+export interface BlogFAQ {
+  question: string;
+  answer: string;
+}
+
 export interface BlogArticle {
   slug: string;
   title: string;
@@ -48,6 +53,7 @@ export interface BlogArticle {
   imageAlt: string;
   author?: string;
   content: BlogArticleContent[];
+  faq?: BlogFAQ[];
 }
 
 export const blogArticles: BlogArticle[] = [

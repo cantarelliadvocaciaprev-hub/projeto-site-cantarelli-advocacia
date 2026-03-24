@@ -37,7 +37,7 @@ const Blog = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
-            Blog e Notícias
+            Blog
           </h2>
           <div className="w-16 md:w-20 h-1 bg-primary mx-auto mb-4 md:mb-6"></div>
           <p className="text-base md:text-lg text-muted-foreground font-body max-w-2xl mx-auto">
