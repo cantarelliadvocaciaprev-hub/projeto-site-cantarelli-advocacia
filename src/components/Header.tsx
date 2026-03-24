@@ -87,8 +87,8 @@ const Header = () => {
     },
     { 
       label: "Blog", 
-      id: "blog", 
-      type: "section",
+      id: "/blog", 
+      type: "page",
       icon: FileText,
       preview: "Artigos e notícias sobre Direito Previdenciário atualizados"
     },
