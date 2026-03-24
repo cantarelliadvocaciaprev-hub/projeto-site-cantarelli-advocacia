@@ -1,3 +1,13 @@
+import defAuditivaImg from "@/assets/blog/aposentadoria-deficiencia-auditiva-2026.jpg";
+import depressaoImg from "@/assets/blog/depressao-aposentadoria-invalidez-2026.jpg";
+import casalPlanejImg from "@/assets/blog/aposentadoria-casal-planejamento-2026.jpg";
+import herniaDiscoImg from "@/assets/blog/hernia-disco-aposentadoria-2026.jpg";
+import motoristaAppImg from "@/assets/blog/motorista-aplicativo-inss-2026.jpg";
+import doencaCardiacaImg from "@/assets/blog/doenca-cardiaca-aposentadoria-2026.jpg";
+import acidenteTrabalhoImg from "@/assets/blog/acidente-trabalho-direitos-2026.jpg";
+import meiAposentImg from "@/assets/blog/mei-aposentadoria-direitos-2026.jpg";
+import diabetesImg from "@/assets/blog/diabetes-aposentadoria-invalidez-2026.jpg";
+import adicional25Img from "@/assets/blog/adicional-25-grande-invalidez-2026.jpg";
 import reformaImg from "@/assets/blog/reforma-previdenciaria-2026.jpg";
 import auxilioImg from "@/assets/blog/auxilio-incapacidade-2026.jpg";
 import pensaoImg from "@/assets/blog/pensao-morte-2026.jpg";
@@ -2427,4 +2437,338 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "O auxílio-acidente é um direito de quem ficou com sequelas permanentes de um acidente e pode ser recebido junto com o salário do trabalho. Se você tem sequelas que reduzem sua capacidade laboral, a Cantarelli Advocacia pode avaliar seu direito a esse benefício." }
     ]
   }
+,
+  {
+    slug: "deficiencia-auditiva-aposentadoria-pcd",
+    title: "Deficiência Auditiva Aposenta? Conheça Seus Direitos no INSS",
+    excerpt: "Entenda quando a perda auditiva garante aposentadoria da pessoa com deficiência ou por invalidez e quais documentos são necessários.",
+    category: "Aposentadoria PCD",
+    tags: ["PCD", "Deficiência Auditiva", "INSS", "Aposentadoria"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Perda auditiva bilateral pode garantir aposentadoria PCD com tempo reduzido",
+      "A avaliação é biopsicossocial, não apenas audiométrica",
+      "Surdez unilateral também pode ser reconhecida dependendo do grau",
+      "Laudo audiológico e histórico médico são fundamentais"
+    ],
+    image: defAuditivaImg,
+    imageAlt: "Documentos de aposentadoria por deficiência auditiva",
+    content: [
+      { type: "paragraph", text: "A deficiência auditiva é uma das condições que pode garantir acesso à aposentadoria da pessoa com deficiência, com redução no tempo de contribuição e na idade mínima. Porém, muitos segurados não sabem que têm esse direito ou desconhecem os critérios utilizados pelo INSS na avaliação." },
+      { type: "heading", text: "Quando a Perda Auditiva Garante Aposentadoria?" },
+      { type: "paragraph", text: "A Lei Complementar 142/2013 garante aposentadoria com requisitos reduzidos para pessoas com deficiência. A perda auditiva pode ser classificada como deficiência leve, moderada ou grave, dependendo do grau de comprometimento e das barreiras enfrentadas no dia a dia." },
+      { type: "list", items: ["Perda auditiva bilateral acima de 41 dB pode ser considerada deficiência", "Surdez profunda bilateral (acima de 91 dB) geralmente é classificada como grave", "Uso de aparelho auditivo não elimina o reconhecimento da deficiência", "A avaliação considera impactos sociais, laborais e de comunicação"] },
+      { type: "heading", text: "Como é Feita a Avaliação pelo INSS?" },
+      { type: "paragraph", text: "O INSS realiza avaliação biopsicossocial com perito médico e assistente social. Não basta apresentar o audiograma — são avaliados os impedimentos de longo prazo e as barreiras que a pessoa enfrenta na participação social e no trabalho." },
+      { type: "highlight", text: "Importante: mesmo que você use aparelho auditivo e consiga trabalhar, ainda pode ter direito à aposentadoria PCD se a deficiência auditiva impõe barreiras significativas." },
+      { type: "heading", text: "Documentos Necessários" },
+      { type: "list", items: ["Audiometria tonal e vocal recente", "Laudos de otorrinolaringologista", "Relatórios de fonoaudiólogo", "Histórico médico completo", "CNIS atualizado"] },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você tem deficiência auditiva e contribui para o INSS, pode ter direito a se aposentar com requisitos reduzidos. A Cantarelli Advocacia pode analisar seu caso e identificar a melhor estratégia para garantir seus direitos." }
+    ],
+    faq: [
+      { question: "Qual grau de surdez dá direito à aposentadoria?", answer: "Não existe um grau único. A avaliação é biopsicossocial e considera o impacto da perda auditiva na vida social e profissional, não apenas os decibéis." },
+      { question: "Quem usa aparelho auditivo perde o direito?", answer: "Não. O uso de aparelho auditivo não elimina o reconhecimento da deficiência para fins previdenciários." },
+      { question: "Surdez em apenas um ouvido dá direito?", answer: "Pode dar, dependendo do grau e das barreiras enfrentadas. A surdez unilateral profunda pode ser classificada como deficiência leve ou moderada." }
+    ]
+  },
+  {
+    slug: "depressao-aposentadoria-por-invalidez",
+    title: "Depressão Aposenta por Invalidez? Entenda os Requisitos do INSS",
+    excerpt: "Saiba quando a depressão grave e outros transtornos mentais podem gerar aposentadoria por invalidez e como provar a incapacidade.",
+    category: "Incapacidade",
+    tags: ["Depressão", "Invalidez", "Saúde Mental", "INSS", "Auxílio-Doença"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "Depressão grave pode gerar aposentadoria por invalidez se causar incapacidade total",
+      "É necessário comprovar tratamento contínuo e refratariedade ao tratamento",
+      "Laudos psiquiátricos detalhados são essenciais para a perícia",
+      "Muitos casos são negados administrativamente mas deferidos na Justiça"
+    ],
+    image: depressaoImg,
+    imageAlt: "Consulta sobre depressão e aposentadoria por invalidez",
+    content: [
+      { type: "paragraph", text: "A depressão é uma das doenças que mais afasta trabalhadores no Brasil, e em casos graves pode gerar direito à aposentadoria por invalidez. Porém, o INSS frequentemente nega esses pedidos, exigindo comprovação robusta da incapacidade permanente para o trabalho." },
+      { type: "heading", text: "Quando a Depressão Gera Aposentadoria por Invalidez?" },
+      { type: "paragraph", text: "Para obter aposentadoria por invalidez por depressão, é necessário comprovar que: a doença é grave e persistente, o tratamento adequado já foi tentado sem sucesso (refratariedade), e a pessoa está total e permanentemente incapaz para qualquer atividade profissional." },
+      { type: "heading", text: "Diferença entre Auxílio-Doença e Aposentadoria por Invalidez" },
+      { type: "list", items: ["Auxílio-doença: incapacidade temporária, expectativa de recuperação", "Aposentadoria por invalidez: incapacidade total e permanente", "O INSS pode converter auxílio-doença em aposentadoria por invalidez", "A conversão depende de perícia médica que ateste a permanência da incapacidade"] },
+      { type: "heading", text: "Como Provar Incapacidade por Depressão" },
+      { type: "paragraph", text: "A comprovação exige laudos psiquiátricos detalhados, relatórios de internações, receituários de medicamentos, relatórios de psicólogos e, preferencialmente, documentação que demonstre a evolução da doença ao longo do tempo e a falha dos tratamentos tentados." },
+      { type: "highlight", text: "Atenção: depressão leve ou moderada com resposta ao tratamento dificilmente gerará aposentadoria por invalidez. O INSS avalia se a pessoa consegue exercer qualquer atividade, não apenas a habitual." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você sofre de depressão grave que impede totalmente seu trabalho e os tratamentos não surtiram efeito, pode ter direito à aposentadoria por invalidez. A Cantarelli Advocacia pode avaliar seu caso e orientar sobre a melhor estratégia jurídica." }
+    ],
+    faq: [
+      { question: "Depressão dá direito a auxílio-doença?", answer: "Sim. Se a depressão causar incapacidade temporária para o trabalho, o segurado tem direito ao auxílio por incapacidade temporária (auxílio-doença)." },
+      { question: "Ansiedade também pode gerar aposentadoria?", answer: "Sim. Transtornos de ansiedade graves, como TAG e síndrome do pânico, podem gerar aposentadoria por invalidez se causarem incapacidade total e permanente." },
+      { question: "O INSS aceita laudo de psicólogo?", answer: "O laudo de psicólogo é complementar. O documento principal para o INSS é o laudo do psiquiatra, que é o médico habilitado a atestar a incapacidade." }
+    ]
+  },
+  {
+    slug: "aposentadoria-por-idade-planejamento-2026",
+    title: "Aposentadoria por Idade em 2026: Como Planejar e Não Perder Dinheiro",
+    excerpt: "Descubra os requisitos atualizados da aposentadoria por idade, como planejar suas contribuições e evitar erros que reduzem o benefício.",
+    category: "Planejamento",
+    tags: ["Aposentadoria por Idade", "Planejamento", "INSS", "Contribuição"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Idade mínima: 65 anos (homem) e 62 anos (mulher) com 15 anos de contribuição",
+      "O valor depende da média de todos os salários desde julho/1994",
+      "Contribuições em atraso podem completar o tempo necessário",
+      "Planejamento evita valores abaixo do esperado"
+    ],
+    image: casalPlanejImg,
+    imageAlt: "Casal planejando aposentadoria por idade",
+    content: [
+      { type: "paragraph", text: "A aposentadoria por idade é a modalidade mais comum no Brasil, mas muitos segurados se surpreendem negativamente com o valor do benefício por falta de planejamento. Entender as regras e planejar suas contribuições pode significar centenas de reais a mais por mês." },
+      { type: "heading", text: "Requisitos em 2026" },
+      { type: "list", items: ["Homens: 65 anos de idade + 15 anos de contribuição", "Mulheres: 62 anos de idade + 15 anos de contribuição", "Para quem começou a contribuir após a reforma: 20 anos de contribuição (homens)", "Carência de 180 meses de contribuição efetiva"] },
+      { type: "heading", text: "Como é Calculado o Valor" },
+      { type: "paragraph", text: "O cálculo considera a média de todos os salários de contribuição desde julho de 1994. O benefício corresponde a 60% dessa média + 2% por ano que exceder 20 anos de contribuição (homem) ou 15 anos (mulher). Isso significa que contribuir mais tempo aumenta significativamente o valor." },
+      { type: "highlight", text: "Exemplo prático: uma mulher com 20 anos de contribuição recebe 70% da média salarial. Com 30 anos, recebe 90%. Com 35 anos, recebe 100%." },
+      { type: "heading", text: "Erros Comuns que Reduzem o Benefício" },
+      { type: "list", items: ["Contribuir sobre o salário mínimo quando poderia recolher mais", "Não corrigir erros no CNIS antes de se aposentar", "Ignorar períodos de trabalho rural ou informal", "Não considerar atividade especial para conversão de tempo"] },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "A aposentadoria por idade exige planejamento para garantir o melhor valor possível. A Cantarelli Advocacia oferece diagnóstico previdenciário completo para identificar a estratégia mais vantajosa para o seu caso." }
+    ],
+    faq: [
+      { question: "Qual o valor mínimo da aposentadoria por idade?", answer: "O valor mínimo é de um salário mínimo (R$ 1.621,00 em 2026). Nenhum benefício previdenciário pode ser inferior a esse valor." },
+      { question: "Posso me aposentar por idade com menos de 15 anos de contribuição?", answer: "Não na regra geral. Mas existem exceções para trabalhadores rurais e pessoas com deficiência que possuem regras diferenciadas." },
+      { question: "Contribuição em atraso conta para aposentadoria por idade?", answer: "Sim, desde que comprovada a atividade como contribuinte individual no período. É necessário comprovar o exercício da atividade remunerada." }
+    ]
+  },
+  {
+    slug: "hernia-de-disco-aposentadoria-invalidez",
+    title: "Hérnia de Disco Aposenta? Entenda Quando Gera Invalidez no INSS",
+    excerpt: "Descubra quando a hérnia de disco pode gerar aposentadoria por invalidez, quais documentos são necessários e como provar a incapacidade.",
+    category: "Incapacidade",
+    tags: ["Hérnia de Disco", "Invalidez", "Doença Ocupacional", "INSS"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Hérnia de disco pode gerar aposentadoria por invalidez se causar incapacidade total",
+      "Nem toda hérnia gera direito — depende do grau de comprometimento funcional",
+      "Ressonância magnética e laudos médicos detalhados são essenciais",
+      "Se a hérnia for ocupacional, os direitos são ainda maiores"
+    ],
+    image: herniaDiscoImg,
+    imageAlt: "Trabalhador com dor na coluna e hérnia de disco",
+    content: [
+      { type: "paragraph", text: "A hérnia de disco é uma das patologias mais comuns entre trabalhadores brasileiros, especialmente aqueles que exercem atividades com esforço físico repetitivo. Quando a condição é grave o suficiente para impedir o trabalho, pode gerar direito a benefícios previdenciários." },
+      { type: "heading", text: "Quando a Hérnia de Disco Gera Aposentadoria?" },
+      { type: "paragraph", text: "A hérnia de disco, por si só, não garante aposentadoria. O que determina o direito é a incapacidade funcional — se a pessoa consegue ou não exercer suas atividades profissionais. Uma hérnia que causa dor intensa, limitação de movimentos e que não responde a tratamentos pode gerar aposentadoria por invalidez." },
+      { type: "heading", text: "Hérnia de Disco como Doença Ocupacional" },
+      { type: "paragraph", text: "Quando a hérnia de disco é causada ou agravada pelo trabalho, ela é considerada doença ocupacional. Isso garante direitos adicionais como estabilidade no emprego, depósito do FGTS durante o afastamento e possibilidade de aposentadoria por invalidez acidentária com valor integral." },
+      { type: "highlight", text: "Se sua hérnia de disco foi causada pelo trabalho, você pode ter direito ao benefício integral (100% da média salarial), sem o redutor de 60% aplicado na regra geral." },
+      { type: "heading", text: "Documentos Importantes" },
+      { type: "list", items: ["Ressonância magnética da coluna", "Laudos de ortopedista ou neurocirurgião", "CAT (Comunicação de Acidente de Trabalho) se ocupacional", "Relatórios de fisioterapia", "Receituários e exames complementares"] },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você tem hérnia de disco que compromete sua capacidade de trabalho, procure orientação jurídica especializada. A Cantarelli Advocacia pode analisar seu caso e identificar o melhor caminho para garantir seus direitos previdenciários." }
+    ],
+    faq: [
+      { question: "Hérnia de disco dá direito a auxílio-doença?", answer: "Sim, se a hérnia causar incapacidade temporária para o trabalho, comprovada por perícia médica do INSS." },
+      { question: "Cirurgia de hérnia de disco garante aposentadoria?", answer: "Não automaticamente. Mas se após a cirurgia persistirem sequelas que impeçam o trabalho, pode haver direito à aposentadoria por invalidez." },
+      { question: "Hérnia de disco é considerada deficiência?", answer: "Depende do grau de comprometimento funcional. Se causar limitações permanentes significativas, pode ser enquadrada como deficiência para fins de aposentadoria PCD." }
+    ]
+  },
+  {
+    slug: "motorista-aplicativo-uber-inss-direitos",
+    title: "Motorista de Aplicativo Tem Direito a Aposentadoria? Entenda o INSS para Uber e 99",
+    excerpt: "Saiba como motoristas de Uber, 99 e iFood podem garantir aposentadoria e benefícios do INSS com contribuições corretas.",
+    category: "Contribuição",
+    tags: ["Motorista de Aplicativo", "Uber", "Contribuinte Individual", "INSS"],
+    readTime: "6 min",
+    keyTakeaways: [
+      "Motorista de aplicativo é contribuinte individual obrigatório do INSS",
+      "Deve recolher 20% sobre o rendimento mensal via GPS ou carnê",
+      "Tem direito a aposentadoria, auxílio-doença e salário-maternidade",
+      "Não recolher pode gerar multas e perda de benefícios"
+    ],
+    image: motoristaAppImg,
+    imageAlt: "Motorista de aplicativo e direitos no INSS",
+    content: [
+      { type: "paragraph", text: "Com o crescimento das plataformas digitais, milhões de brasileiros trabalham como motoristas de aplicativo. Apesar de não terem carteira assinada, esses profissionais são considerados contribuintes individuais obrigatórios do INSS e devem recolher suas contribuições para garantir proteção previdenciária." },
+      { type: "heading", text: "Como o Motorista de Aplicativo Contribui para o INSS?" },
+      { type: "list", items: ["Alíquota de 20% sobre o rendimento mensal (entre o mínimo e o teto)", "Opção do plano simplificado: 11% sobre o salário mínimo (sem aposentadoria por tempo)", "Recolhimento via GPS (Guia da Previdência Social) até o dia 15 do mês seguinte", "É obrigatório, não opcional — a falta de recolhimento gera débito com a Receita"] },
+      { type: "heading", text: "Quais Benefícios o Motorista Tem Direito?" },
+      { type: "paragraph", text: "Ao contribuir regularmente, o motorista de aplicativo garante acesso a todos os benefícios do INSS: aposentadoria por idade ou tempo de contribuição, auxílio por incapacidade temporária, aposentadoria por invalidez, salário-maternidade e pensão por morte para dependentes." },
+      { type: "highlight", text: "Atenção: quem contribui com 11% (plano simplificado) só tem direito à aposentadoria por idade, não por tempo de contribuição." },
+      { type: "heading", text: "Riscos de Não Contribuir" },
+      { type: "paragraph", text: "O motorista que não contribui perde a qualidade de segurado e fica sem proteção em caso de acidente, doença ou invalidez. Além disso, pode ser cobrado retroativamente pela Receita Federal com juros e multas." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você é motorista de aplicativo, contribuir para o INSS é obrigatório e garante sua proteção previdenciária. A Cantarelli Advocacia pode orientar sobre a melhor forma de contribuição para garantir o maior benefício futuro." }
+    ],
+    faq: [
+      { question: "Motorista de Uber é obrigado a pagar INSS?", answer: "Sim. Motoristas de aplicativo são contribuintes individuais obrigatórios e devem recolher mensalmente ao INSS." },
+      { question: "Qual o valor da contribuição do motorista de aplicativo?", answer: "20% sobre o rendimento mensal (mínimo de R$ 324,20) ou 11% sobre o salário mínimo no plano simplificado (R$ 178,31 em 2026)." },
+      { question: "Motorista de aplicativo pode se aposentar por tempo de contribuição?", answer: "Somente se contribuir com a alíquota de 20%. O plano simplificado (11%) só dá direito à aposentadoria por idade." }
+    ]
+  },
+  {
+    slug: "doenca-cardiaca-aposentadoria-invalidez",
+    title: "Doença Cardíaca Aposenta por Invalidez? Saiba Seus Direitos no INSS",
+    excerpt: "Entenda quando cardiopatias graves como infarto, insuficiência cardíaca e arritmias geram direito à aposentadoria por invalidez.",
+    category: "Incapacidade",
+    tags: ["Doença Cardíaca", "Invalidez", "Cardiopatia Grave", "INSS"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Cardiopatia grave está na lista de doenças que dispensam carência",
+      "Infarto, insuficiência cardíaca e arritmias graves podem gerar invalidez",
+      "O benefício pode ser integral se a doença dispensar carência",
+      "Laudo cardiológico detalhado é fundamental"
+    ],
+    image: doencaCardiacaImg,
+    imageAlt: "Doença cardíaca e aposentadoria por invalidez",
+    content: [
+      { type: "paragraph", text: "As doenças cardíacas são uma das principais causas de incapacidade no Brasil. Quando uma cardiopatia é grave o suficiente para impedir o trabalho, o segurado pode ter direito à aposentadoria por invalidez — e, em muitos casos, sem necessidade de cumprir carência." },
+      { type: "heading", text: "Quais Doenças Cardíacas Dão Direito?" },
+      { type: "list", items: ["Insuficiência cardíaca congestiva (classes III e IV da NYHA)", "Infarto agudo do miocárdio com sequelas", "Arritmias graves com risco de morte súbita", "Cardiopatia isquêmica grave", "Valvulopatias com comprometimento funcional importante"] },
+      { type: "heading", text: "Isenção de Carência" },
+      { type: "paragraph", text: "A cardiopatia grave está na lista de doenças que dispensam o período de carência (12 meses de contribuição). Isso significa que, mesmo com poucas contribuições, se a doença for grave e incapacitante, o segurado pode obter o benefício." },
+      { type: "highlight", text: "Importante: a isenção de carência aplica-se à aposentadoria por invalidez e ao auxílio-doença. Porém, é necessário ter qualidade de segurado (estar contribuindo ou no período de graça)." },
+      { type: "heading", text: "Como Provar a Incapacidade" },
+      { type: "paragraph", text: "A perícia do INSS avaliará laudos cardiológicos, exames como ecocardiograma, cateterismo, teste ergométrico, holter e eletrocardiograma. Quanto mais detalhada a documentação médica, maiores as chances de aprovação." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você tem doença cardíaca grave que impede seu trabalho, pode ter direito a benefícios do INSS sem carência. A Cantarelli Advocacia está preparada para analisar seu caso e garantir seus direitos." }
+    ],
+    faq: [
+      { question: "Quem teve infarto pode se aposentar por invalidez?", answer: "Sim, se o infarto deixou sequelas que impedem permanentemente o exercício de qualquer atividade profissional." },
+      { question: "Cardiopatia grave precisa de carência no INSS?", answer: "Não. A cardiopatia grave está na lista de doenças que dispensam o período de carência de 12 contribuições." },
+      { question: "Quem tem stent ou ponte de safena pode se aposentar?", answer: "Depende. Se após o procedimento a pessoa recuperou a capacidade de trabalho, não terá direito. Se permanecer incapaz, pode ter direito à aposentadoria." }
+    ]
+  },
+  {
+    slug: "acidente-de-trabalho-direitos-inss",
+    title: "Acidente de Trabalho: Quais São Seus Direitos no INSS?",
+    excerpt: "Conheça todos os direitos de quem sofreu acidente de trabalho: estabilidade, FGTS, auxílio-acidente e aposentadoria por invalidez acidentária.",
+    category: "Acidente de Trabalho",
+    tags: ["Acidente de Trabalho", "CAT", "Auxílio-Acidente", "Estabilidade", "INSS"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "Acidente de trabalho garante benefício integral sem redutor",
+      "O trabalhador tem 12 meses de estabilidade após alta do INSS",
+      "A empresa deve emitir a CAT — senão o trabalhador pode solicitar",
+      "Sequelas permanentes geram direito ao auxílio-acidente"
+    ],
+    image: acidenteTrabalhoImg,
+    imageAlt: "Trabalhador de construção e direitos por acidente de trabalho",
+    content: [
+      { type: "paragraph", text: "O acidente de trabalho é uma das situações que mais geram dúvidas entre os trabalhadores. Além dos direitos trabalhistas, existem diversos benefícios previdenciários específicos que protegem quem sofre um acidente durante a atividade profissional." },
+      { type: "heading", text: "O Que é Considerado Acidente de Trabalho?" },
+      { type: "list", items: ["Acidente típico: ocorre durante o exercício do trabalho", "Acidente de trajeto: ocorre no percurso casa-trabalho-casa", "Doença ocupacional: causada ou agravada pelo trabalho", "Acidente fora do local de trabalho a serviço da empresa"] },
+      { type: "heading", text: "Direitos do Trabalhador Acidentado" },
+      { type: "paragraph", text: "O trabalhador que sofre acidente de trabalho tem direitos específicos que vão além dos benefícios previdenciários comuns. O benefício acidentário é calculado sobre a média integral (sem o redutor de 60%) e não exige carência." },
+      { type: "list", items: ["Auxílio-doença acidentário (B91): sem carência, valor integral", "Aposentadoria por invalidez acidentária: 100% da média salarial", "Auxílio-acidente: indenização por sequelas permanentes", "Estabilidade de 12 meses no emprego após alta", "FGTS depositado durante todo o afastamento"] },
+      { type: "heading", text: "A Importância da CAT" },
+      { type: "paragraph", text: "A Comunicação de Acidente de Trabalho (CAT) é o documento que formaliza o acidente. A empresa é obrigada a emitir a CAT, mas caso se recuse, o próprio trabalhador, o sindicato, o médico ou o SUS podem emitir." },
+      { type: "highlight", text: "Se a empresa não emitiu a CAT, não desista. A Justiça pode reconhecer o acidente de trabalho mesmo sem a CAT, desde que comprovado o nexo causal." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você sofreu acidente de trabalho, seus direitos são amplos e específicos. A Cantarelli Advocacia pode orientar sobre todos os benefícios a que você tem direito e garantir que nenhum direito seja perdido." }
+    ],
+    faq: [
+      { question: "Acidente de trabalho precisa de carência no INSS?", answer: "Não. Benefícios decorrentes de acidente de trabalho (B91 e B92) não exigem carência — basta ter qualidade de segurado." },
+      { question: "A empresa pode me demitir após acidente de trabalho?", answer: "Não durante os 12 meses de estabilidade após a alta do auxílio-doença acidentário. Demissão nesse período gera reintegração ou indenização." },
+      { question: "O que acontece se a empresa não emitir a CAT?", answer: "O trabalhador, sindicato, médico ou SUS podem emitir. A falta de CAT não impede o reconhecimento judicial do acidente." }
+    ]
+  },
+  {
+    slug: "mei-aposentadoria-direitos-beneficios",
+    title: "MEI Tem Direito a Aposentadoria? Entenda os Benefícios e Limitações",
+    excerpt: "Descubra quais benefícios do INSS o MEI tem direito, como funciona a contribuição e como garantir aposentadoria por tempo de contribuição.",
+    category: "Contribuição",
+    tags: ["MEI", "Contribuinte Individual", "INSS", "Aposentadoria por Idade"],
+    readTime: "6 min",
+    keyTakeaways: [
+      "MEI contribui com 5% do salário mínimo via DAS",
+      "Com 5% só tem direito à aposentadoria por idade",
+      "Para aposentadoria por tempo, deve complementar com 15% adicional",
+      "MEI tem direito a auxílio-doença, salário-maternidade e pensão por morte"
+    ],
+    image: meiAposentImg,
+    imageAlt: "Microempreendedor individual e direitos previdenciários",
+    content: [
+      { type: "paragraph", text: "O Microempreendedor Individual (MEI) tem direitos previdenciários garantidos, mas com limitações importantes que muitos desconhecem. A contribuição reduzida de 5% sobre o salário mínimo garante acesso a alguns benefícios, mas não a todos." },
+      { type: "heading", text: "Como o MEI Contribui para o INSS?" },
+      { type: "paragraph", text: "O MEI paga uma contribuição mensal fixa via DAS (Documento de Arrecadação do Simples Nacional), que inclui 5% do salário mínimo para o INSS (R$ 81,05 em 2026), mais valores de ICMS e ISS conforme a atividade." },
+      { type: "heading", text: "Quais Benefícios o MEI Tem Direito?" },
+      { type: "list", items: ["Aposentadoria por idade (65 anos homem / 62 anos mulher)", "Auxílio por incapacidade temporária (auxílio-doença)", "Aposentadoria por invalidez", "Salário-maternidade", "Pensão por morte e auxílio-reclusão para dependentes"] },
+      { type: "heading", text: "Limitação: Aposentadoria por Tempo de Contribuição" },
+      { type: "paragraph", text: "Com a contribuição de 5%, o MEI NÃO tem direito à aposentadoria por tempo de contribuição. Para obter esse direito, é necessário complementar a contribuição com mais 15% sobre o salário mínimo (R$ 243,15 em 2026) via GPS." },
+      { type: "highlight", text: "Dica importante: se você pretende se aposentar por tempo de contribuição, complemente suas contribuições mensalmente. Pagar retroativamente com juros e multas sai muito mais caro." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "O MEI tem direitos previdenciários importantes, mas é fundamental entender as limitações. A Cantarelli Advocacia pode ajudar a planejar sua aposentadoria e identificar se a complementação de contribuição vale a pena no seu caso." }
+    ],
+    faq: [
+      { question: "MEI pode se aposentar por tempo de contribuição?", answer: "Somente se complementar a contribuição com 15% adicional sobre o salário mínimo. Sem complementação, só tem direito à aposentadoria por idade." },
+      { question: "Quanto o MEI paga de INSS em 2026?", answer: "5% do salário mínimo, ou seja, R$ 81,05 por mês, incluído no DAS mensal." },
+      { question: "MEI tem direito a auxílio-doença?", answer: "Sim, desde que tenha cumprido a carência de 12 meses de contribuição e esteja com os pagamentos em dia." }
+    ]
+  },
+  {
+    slug: "diabetes-aposentadoria-por-invalidez",
+    title: "Diabetes Aposenta por Invalidez? Conheça Seus Direitos no INSS",
+    excerpt: "Saiba quando o diabetes pode gerar aposentadoria por invalidez, quais complicações dão direito e como provar a incapacidade.",
+    category: "Incapacidade",
+    tags: ["Diabetes", "Invalidez", "INSS", "Doença Grave"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Diabetes por si só geralmente não gera invalidez — as complicações sim",
+      "Neuropatia diabética, retinopatia e nefropatia podem incapacitar",
+      "Diabetes tipo 1 insulinodependente tem maior chance de reconhecimento",
+      "Laudos detalhando complicações são essenciais"
+    ],
+    image: diabetesImg,
+    imageAlt: "Diabetes e aposentadoria por invalidez no INSS",
+    content: [
+      { type: "paragraph", text: "O diabetes mellitus é uma das doenças crônicas mais prevalentes no Brasil. Embora o diabetes por si só nem sempre gere incapacidade, suas complicações podem ser graves o suficiente para impedir o trabalho e gerar direito à aposentadoria por invalidez." },
+      { type: "heading", text: "Quando o Diabetes Gera Aposentadoria?" },
+      { type: "paragraph", text: "O INSS avalia a incapacidade funcional, não apenas o diagnóstico. O diabetes geralmente gera aposentadoria quando provoca complicações graves como perda de visão, amputações, insuficiência renal ou neuropatia severa que impedem o exercício de qualquer atividade profissional." },
+      { type: "heading", text: "Complicações que Podem Gerar Invalidez" },
+      { type: "list", items: ["Retinopatia diabética com perda significativa de visão", "Nefropatia diabética com necessidade de hemodiálise", "Neuropatia periférica grave com perda de sensibilidade", "Pé diabético com amputações", "Complicações cardiovasculares graves"] },
+      { type: "heading", text: "Diabetes e Isenção de Carência" },
+      { type: "paragraph", text: "O diabetes não consta na lista de doenças que dispensam carência. Porém, se o diabetes causar complicações como cegueira ou insuficiência renal crônica, essas condições podem dispensar a carência por serem consideradas doenças graves." },
+      { type: "highlight", text: "Atenção: mesmo sem isenção de carência, se você contribuiu por pelo menos 12 meses e tem diabetes com complicações incapacitantes, pode ter direito ao benefício." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se o diabetes está afetando sua capacidade de trabalhar, especialmente por complicações graves, você pode ter direito a benefícios do INSS. A Cantarelli Advocacia pode analisar seu caso e orientar sobre a melhor estratégia." }
+    ],
+    faq: [
+      { question: "Diabetes tipo 2 dá direito a aposentadoria?", answer: "Depende das complicações. O diabetes tipo 2 controlado geralmente não gera invalidez, mas complicações graves como nefropatia ou retinopatia podem dar direito." },
+      { question: "Diabetes está na lista de isenção de carência?", answer: "Não diretamente, mas complicações como cegueira e insuficiência renal crônica estão na lista e dispensam carência." },
+      { question: "Quem tem diabetes pode receber BPC?", answer: "Sim, se o diabetes causar deficiência de longo prazo e a pessoa não tiver condições de contribuir ao INSS, pode solicitar o BPC/LOAS." }
+    ]
+  },
+  {
+    slug: "adicional-25-grande-invalidez-aposentadoria",
+    title: "Adicional de 25% na Aposentadoria por Invalidez: Quem Tem Direito?",
+    excerpt: "Entenda o adicional de grande invalidez que aumenta em 25% a aposentadoria de quem precisa de cuidador permanente.",
+    category: "Incapacidade",
+    tags: ["Grande Invalidez", "Adicional 25%", "Aposentadoria por Invalidez", "INSS"],
+    readTime: "6 min",
+    keyTakeaways: [
+      "O adicional de 25% é para quem precisa de assistência permanente de outra pessoa",
+      "Pode ultrapassar o teto do INSS",
+      "Cegueira, paralisia e Alzheimer são exemplos que geram o adicional",
+      "O STJ já reconheceu o direito para aposentados por idade e tempo"
+    ],
+    image: adicional25Img,
+    imageAlt: "Aposentado com necessidade de cuidador e adicional de 25%",
+    content: [
+      { type: "paragraph", text: "O adicional de 25% na aposentadoria por invalidez é um benefício pouco conhecido mas extremamente importante. Ele se destina a segurados que, além de serem inválidos para o trabalho, necessitam de assistência permanente de outra pessoa para os atos da vida diária." },
+      { type: "heading", text: "O Que é o Adicional de Grande Invalidez?" },
+      { type: "paragraph", text: "Previsto no art. 45 da Lei 8.213/91, o adicional de 25% é um acréscimo ao valor da aposentadoria por invalidez para segurados que comprovem necessidade de acompanhamento permanente. O valor pode inclusive ultrapassar o teto do INSS." },
+      { type: "heading", text: "Quem Tem Direito?" },
+      { type: "list", items: ["Cegueira total ou visão severamente comprometida", "Paralisia de membros superiores ou inferiores", "Perda de membros que impeça autonomia", "Doença de Alzheimer ou demência avançada", "Transtornos mentais graves que impeçam autocuidado", "Qualquer condição que exija cuidador permanente"] },
+      { type: "heading", text: "Extensão para Outras Aposentadorias" },
+      { type: "paragraph", text: "Embora a lei preveja o adicional apenas para aposentadoria por invalidez, o STJ tem reconhecido o direito para aposentados por idade e por tempo de contribuição que passem a necessitar de cuidador permanente. Essa é uma tese importante que pode beneficiar muitos segurados." },
+      { type: "highlight", text: "O adicional de 25% pode ser o único benefício previdenciário que ultrapassa o teto do INSS. Se sua aposentadoria é de R$ 8.157,41 (teto), o adicional eleva para R$ 10.196,76." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você ou um familiar aposentado precisa de cuidador permanente, pode ter direito ao adicional de 25%. A Cantarelli Advocacia pode avaliar o caso e ingressar com o pedido administrativo ou judicial." }
+    ],
+    faq: [
+      { question: "O adicional de 25% pode ultrapassar o teto do INSS?", answer: "Sim. O adicional de grande invalidez é o único benefício previdenciário que pode ultrapassar o teto do INSS, pois é calculado sobre o valor integral da aposentadoria." },
+      { question: "Quem recebe aposentadoria por idade pode pedir o adicional?", answer: "A lei prevê apenas para invalidez, mas o STJ tem reconhecido o direito para aposentados por idade e tempo de contribuição que necessitem de cuidador." },
+      { question: "O adicional de 25% é transferido como pensão por morte?", answer: "Não. O STF decidiu que o adicional de 25% não é transferido aos dependentes como pensão por morte, pois é benefício personalíssimo." }
+    ]
+  }
+
 ];
