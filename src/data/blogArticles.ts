@@ -639,7 +639,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Aposentadoria da Pessoa com Deficiência (PCD): Por Idade e Por Tempo de Contribuição em 2026",
     excerpt:
       "A aposentadoria da pessoa com deficiência tem regras próprias e mais favoráveis que a regra geral. Conheça os requisitos por idade e por tempo de contribuição, o diagnóstico previdenciário e como garantir esse direito.",
-    date: "20 de Fevereiro, 2026",
+    date: "20 de Março, 2026",
     category: "Aposentadoria PCD",
     readTime: "9 min",
     keyTakeaways: [
