@@ -1,7 +1,6 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Calendar, ArrowRight, Clock, ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import { blogArticles } from "@/data/blogArticles";
@@ -19,23 +18,29 @@ const Blog = () => {
     setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
   };
 
+  useEffect(() => {
+    checkScroll();
+    window.addEventListener("resize", checkScroll);
+    return () => window.removeEventListener("resize", checkScroll);
+  }, []);
+
   const scroll = (direction: "left" | "right") => {
     const el = scrollRef.current;
     if (!el) return;
-    const cardWidth = el.querySelector("a")?.offsetWidth ?? 300;
-    const amount = direction === "left" ? -cardWidth - 16 : cardWidth + 16;
+    const cardWidth = el.querySelector("a")?.offsetWidth ?? 280;
+    const amount = direction === "left" ? -(cardWidth + 16) : cardWidth + 16;
     el.scrollBy({ left: amount, behavior: "smooth" });
   };
 
   return (
-    <section id="blog" className="py-20 bg-card">
+    <section id="blog" className="py-16 md:py-20 bg-card overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
             Blog e Notícias
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground font-body max-w-2xl mx-auto">
+          <div className="w-16 md:w-20 h-1 bg-primary mx-auto mb-4 md:mb-6"></div>
+          <p className="text-base md:text-lg text-muted-foreground font-body max-w-2xl mx-auto">
             Novidades do INSS, regras de aposentadoria e dicas para garantir seus direitos.
           </p>
         </div>
@@ -46,23 +51,23 @@ const Blog = () => {
             isVisible ? "opacity-100 animate-slide-up-scroll" : "opacity-0"
           }`}
         >
-          {/* Navigation arrows */}
+          {/* Navigation arrows - hidden on mobile, visible on md+ */}
           {canScrollLeft && (
             <button
               onClick={() => scroll("left")}
-              className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:bg-primary/90 transition-all"
+              className="hidden md:flex absolute -left-5 lg:-left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-primary text-primary-foreground shadow-lg items-center justify-center hover:bg-primary/90 transition-all"
               aria-label="Artigos anteriores"
             >
-              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
           )}
           {canScrollRight && (
             <button
               onClick={() => scroll("right")}
-              className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:bg-primary/90 transition-all"
+              className="hidden md:flex absolute -right-5 lg:-right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-primary text-primary-foreground shadow-lg items-center justify-center hover:bg-primary/90 transition-all"
               aria-label="Próximos artigos"
             >
-              <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+              <ChevronRight className="w-5 h-5" />
             </button>
           )}
 
@@ -70,15 +75,15 @@ const Blog = () => {
           <div
             ref={scrollRef}
             onScroll={checkScroll}
-            className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            className="flex gap-3 md:gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 md:mx-0 md:px-0"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}
           >
             {blogArticles.map((post, index) => (
               <Link
                 to={`/blog/${post.slug}`}
                 key={post.slug}
-                className="group snap-start flex-shrink-0 w-[70vw] sm:w-[45vw] md:w-[30%] lg:w-[23%]"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group snap-start flex-shrink-0 w-[65vw] sm:w-[45vw] md:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)]"
+                style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                   <div className="relative aspect-[4/3] overflow-hidden">
@@ -100,25 +105,25 @@ const Blog = () => {
                       {post.title}
                     </h3>
 
-                    <p className="text-xs text-muted-foreground font-body line-clamp-2 mb-3 flex-1 hidden md:block">
+                    <p className="text-xs text-muted-foreground font-body line-clamp-2 mb-2 flex-1">
                       {post.excerpt}
                     </p>
 
-                    <div className="flex items-center gap-2 text-[10px] md:text-xs text-muted-foreground mt-auto">
+                    <div className="flex items-center gap-2 text-[10px] md:text-xs text-muted-foreground mt-auto pt-2 border-t border-border">
                       <div className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3" />
-                        <span className="hidden sm:inline">{post.date}</span>
-                        <span className="sm:hidden">{post.date.split(",")[0]}</span>
+                        <Calendar className="w-3 h-3 flex-shrink-0" />
+                        <span className="truncate">{post.date}</span>
                       </div>
+                      <span className="text-border">•</span>
                       <div className="flex items-center gap-1">
-                        <Clock className="w-3 h-3" />
+                        <Clock className="w-3 h-3 flex-shrink-0" />
                         <span>{post.readTime}</span>
                       </div>
                     </div>
 
-                    <div className="flex items-center text-primary text-xs font-semibold mt-3 group-hover:gap-2 transition-all">
-                      <span className="hidden md:inline">Ler artigo</span>
-                      <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
+                    <div className="flex items-center gap-1 text-primary text-xs font-semibold mt-2 group-hover:gap-2 transition-all">
+                      <span>Ler artigo</span>
+                      <ArrowRight className="w-3 h-3 md:w-4 md:h-4 transition-transform group-hover:translate-x-1" />
                     </div>
                   </div>
                 </Card>
@@ -126,15 +131,10 @@ const Blog = () => {
             ))}
           </div>
 
-          {/* Scroll indicators */}
-          <div className="flex justify-center gap-1.5 mt-4">
-            {blogArticles.map((_, i) => (
-              <div
-                key={i}
-                className="w-2 h-2 rounded-full bg-primary/20 transition-colors"
-              />
-            ))}
-          </div>
+          {/* Swipe hint on mobile */}
+          <p className="text-center text-xs text-muted-foreground mt-3 md:hidden">
+            Deslize para ver mais artigos →
+          </p>
         </div>
       </div>
     </section>
