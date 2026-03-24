@@ -16,6 +16,17 @@ import salarioMaternidadeImg from "@/assets/blog/salario-maternidade-2026.jpg";
 import contribuinteIndividualImg from "@/assets/blog/contribuinte-individual-2026.jpg";
 import aposentadoriaProfessorImg from "@/assets/blog/aposentadoria-professor-2026.jpg";
 import cnisAnaliseImg from "@/assets/blog/cnis-analise-2026.jpg";
+import tendiniteLerImg from "@/assets/blog/tendinite-ler-aposentadoria-2026.jpg";
+import autismoPcdImg from "@/assets/blog/autismo-aposentadoria-pcd-2026.jpg";
+import processoAuxAcidenteImg from "@/assets/blog/processo-auxilio-acidente-justica-2026.jpg";
+import salMatDesempregadaImg from "@/assets/blog/salario-maternidade-desempregada-2026.jpg";
+import tempoProcessoAuxImg from "@/assets/blog/tempo-processo-auxilio-acidente-2026.jpg";
+import bpcNegadoImg from "@/assets/blog/bpc-negado-o-que-fazer-2026.jpg";
+import aposentAntecipadaImg from "@/assets/blog/aposentadoria-antecipada-2026.jpg";
+import aposentMulherImg from "@/assets/blog/aposentadoria-mulher-regras-2026.jpg";
+import bpcParaAposentImg from "@/assets/blog/bpc-para-aposentadoria-2026.jpg";
+import loasPensaoMorteImg from "@/assets/blog/loas-pensao-morte-marido-2026.jpg";
+import auxAcidenteTrabalharImg from "@/assets/blog/auxilio-acidente-pode-trabalhar-2026.jpg";
 
 export interface BlogArticleContent {
   type: "paragraph" | "heading" | "subheading" | "list" | "highlight";
@@ -27,15 +38,15 @@ export interface BlogArticle {
   slug: string;
   title: string;
   excerpt: string;
-  date: string;
+  date?: string;
   category: string;
   tags: string[];
   readTime: string;
   keyTakeaways: string[];
-  lastUpdated: string;
+  lastUpdated?: string;
   image: string;
   imageAlt: string;
-  author: string;
+  author?: string;
   content: BlogArticleContent[];
 }
 
@@ -1879,4 +1890,395 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   },
+  {
+    slug: "tendinite-ler-aposentadoria-invalidez",
+    title: "Qual Tipo de Tendinite Aposenta? Entenda Quando a LER Gera Invalidez",
+    excerpt: "Nem toda tendinite dá direito à aposentadoria, mas quando a LER/DORT se torna incapacitante, o INSS pode conceder benefício por invalidez. Saiba quando isso acontece.",
+    category: "Aposentadoria",
+    tags: ["Tendinite", "LER", "DORT", "Invalidez", "INSS"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Tendinite crônica e LER/DORT podem gerar aposentadoria por invalidez quando há incapacidade total e permanente para o trabalho.",
+      "O nexo causal entre a doença e o trabalho precisa ser comprovado por perícia médica e documentos como o PPP e laudos médicos.",
+      "Um advogado previdenciário pode identificar se o seu caso se enquadra como doença ocupacional e garantir o benefício correto.",
+      "Mesmo que o INSS negue, é possível reverter a decisão na Justiça com provas adequadas."
+    ],
+    image: tendiniteLerImg,
+    imageAlt: "Pessoa com dor no punho por tendinite em ambiente de trabalho, representando LER e aposentadoria por invalidez",
+    content: [
+      { type: "paragraph", text: "A tendinite é uma das doenças ocupacionais mais comuns no Brasil, afetando milhões de trabalhadores que realizam movimentos repetitivos. Quando essa condição evolui para uma Lesão por Esforço Repetitivo (LER) ou Distúrbio Osteomuscular Relacionado ao Trabalho (DORT), pode se tornar incapacitante e gerar direito a benefícios do INSS." },
+      { type: "heading", text: "Quando a Tendinite Dá Direito à Aposentadoria?" },
+      { type: "paragraph", text: "Nem toda tendinite gera direito à aposentadoria. Para isso, é necessário que a doença cause incapacidade total e permanente para o trabalho, sem possibilidade de reabilitação profissional. Isso geralmente ocorre nos graus III e IV da classificação médica, quando há dor constante, perda de força e limitação funcional grave." },
+      { type: "heading", text: "Tipos de Tendinite que Podem Aposentar" },
+      { type: "list", items: [
+        "Tendinite crônica de De Quervain (punho e polegar)",
+        "Epicondilite lateral e medial (cotovelo)",
+        "Tendinite do manguito rotador (ombro)",
+        "Síndrome do túnel do carpo associada à LER",
+        "Tenossinovite crônica dos flexores"
+      ]},
+      { type: "heading", text: "Como Comprovar a Incapacidade?" },
+      { type: "paragraph", text: "A comprovação da incapacidade exige laudos médicos detalhados, exames de imagem (ressonância magnética, ultrassom), Perfil Profissiográfico Previdenciário (PPP) e Comunicação de Acidente de Trabalho (CAT). Um advogado previdenciário pode organizar toda essa documentação e identificar a melhor estratégia." },
+      { type: "highlight", text: "Importante: se a tendinite foi causada ou agravada pelo trabalho, ela pode ser reconhecida como doença ocupacional, o que garante benefícios diferenciados como o auxílio-acidente e estabilidade no emprego." },
+      { type: "heading", text: "INSS Negou? O Que Fazer?" },
+      { type: "paragraph", text: "Caso o INSS negue o benefício, é possível recorrer administrativamente ou entrar com ação judicial. Na Justiça, um perito independente avalia o caso, o que frequentemente resulta em decisões favoráveis ao segurado. A Cantarelli Advocacia tem experiência comprovada em casos de LER/DORT e pode analisar seu caso sem compromisso." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você sofre de tendinite crônica que compromete sua capacidade de trabalhar, pode ter direito à aposentadoria por invalidez. Não tente resolver sozinho — procure orientação jurídica especializada para garantir seus direitos." }
+    ]
+  },
+  {
+    slug: "autismo-aposentadoria-pessoa-com-deficiencia",
+    title: "Qual Grau de Autismo Aposenta? Entenda a Aposentadoria da Pessoa com Deficiência",
+    excerpt: "Pessoas com Transtorno do Espectro Autista (TEA) podem ter direito à aposentadoria por deficiência com tempo reduzido. Entenda os critérios e como garantir o benefício.",
+    category: "PCD",
+    tags: ["Autismo", "TEA", "PCD", "Deficiência", "INSS"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "Pessoas com autismo podem se aposentar com tempo de contribuição reduzido pela Lei Complementar 142/2013.",
+      "O grau de deficiência (leve, moderado ou grave) é avaliado por perícia médica e social do INSS.",
+      "Não é necessário estar incapaz para o trabalho — basta comprovar a deficiência e o tempo mínimo de contribuição.",
+      "Um advogado especialista pode preparar a documentação adequada e acompanhar todo o processo."
+    ],
+    image: autismoPcdImg,
+    imageAlt: "Mãe abraçando criança com autismo, representando direitos previdenciários da pessoa com deficiência",
+    content: [
+      { type: "paragraph", text: "O Transtorno do Espectro Autista (TEA) é reconhecido como deficiência para fins previdenciários, o que garante à pessoa com autismo o direito de se aposentar com requisitos diferenciados. A Lei Complementar 142/2013 assegura tempo de contribuição reduzido para pessoas com deficiência." },
+      { type: "heading", text: "Como Funciona a Aposentadoria por Deficiência?" },
+      { type: "paragraph", text: "A aposentadoria da pessoa com deficiência é diferente da aposentadoria por invalidez. Nela, o segurado não precisa estar incapaz para trabalhar — basta comprovar a deficiência e cumprir o tempo mínimo de contribuição, que varia conforme o grau avaliado." },
+      { type: "heading", text: "Tempo de Contribuição por Grau de Deficiência" },
+      { type: "list", items: [
+        "Deficiência grave: 25 anos (homem) e 20 anos (mulher)",
+        "Deficiência moderada: 29 anos (homem) e 24 anos (mulher)",
+        "Deficiência leve: 33 anos (homem) e 28 anos (mulher)",
+        "Aposentadoria por idade: 60 anos (homem) e 55 anos (mulher) com 15 anos de contribuição"
+      ]},
+      { type: "heading", text: "Qual Grau de Autismo se Enquadra?" },
+      { type: "paragraph", text: "O grau de deficiência não é determinado apenas pelo diagnóstico de autismo, mas pela avaliação funcional realizada por perícia médica e social do INSS. São analisadas as barreiras enfrentadas no dia a dia, a necessidade de suporte e o impacto nas atividades laborais e sociais." },
+      { type: "highlight", text: "Atenção: muitas pessoas com autismo nível 1 (antigo Asperger) são classificadas como deficiência leve ou moderada, o que já garante redução significativa no tempo de contribuição." },
+      { type: "heading", text: "Documentação Necessária" },
+      { type: "list", items: [
+        "Laudos médicos e neuropsicológicos detalhados",
+        "Relatórios de acompanhamento terapêutico",
+        "Declarações de escolas ou empregadores sobre adaptações necessárias",
+        "Histórico de tratamentos e medicamentos",
+        "CNIS atualizado com todos os vínculos"
+      ]},
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você ou um familiar tem autismo e contribui para o INSS, é possível se aposentar com tempo reduzido. A Cantarelli Advocacia pode avaliar seu caso, preparar a documentação adequada e acompanhar todo o processo junto ao INSS." }
+    ]
+  },
+  {
+    slug: "processo-auxilio-acidente-justica-prazos",
+    title: "Como Funciona um Processo de Auxílio-Acidente na Justiça? Entenda os Prazos",
+    excerpt: "Teve o auxílio-acidente negado pelo INSS? Entenda como funciona o processo judicial, quais os prazos envolvidos e como um advogado pode ajudar.",
+    category: "Benefícios",
+    tags: ["Auxílio-Acidente", "Processo Judicial", "INSS", "Prazos"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "O processo judicial de auxílio-acidente pode durar de 6 meses a 2 anos, dependendo da complexidade e da comarca.",
+      "É necessário comprovar que o acidente ou doença causou redução permanente da capacidade laboral.",
+      "A perícia judicial é o momento mais importante do processo — um advogado experiente faz toda a diferença.",
+      "É possível receber valores retroativos desde a data do indeferimento administrativo."
+    ],
+    image: processoAuxAcidenteImg,
+    imageAlt: "Tribunal com balança da justiça e martelo, representando processo judicial de auxílio-acidente",
+    content: [
+      { type: "paragraph", text: "Quando o INSS nega o auxílio-acidente, muitos segurados ficam sem saber o que fazer. A boa notícia é que é possível recorrer à Justiça Federal para garantir esse benefício. Entenda como funciona o processo e quais são os prazos envolvidos." },
+      { type: "heading", text: "O Que é o Auxílio-Acidente?" },
+      { type: "paragraph", text: "O auxílio-acidente é um benefício indenizatório pago pelo INSS ao segurado que sofreu um acidente (de qualquer natureza) ou desenvolveu doença que resultou em redução permanente da capacidade para o trabalho. Ele é pago junto com o salário, como uma espécie de compensação." },
+      { type: "heading", text: "Quando Entrar na Justiça?" },
+      { type: "list", items: [
+        "Quando o INSS nega o pedido administrativo",
+        "Quando a perícia do INSS não reconhece as sequelas",
+        "Quando o benefício é cessado indevidamente",
+        "Quando há divergência sobre o grau de redução da capacidade"
+      ]},
+      { type: "heading", text: "Prazos do Processo Judicial" },
+      { type: "paragraph", text: "O tempo médio de um processo de auxílio-acidente varia conforme a região e a complexidade do caso. Em geral, processos nos Juizados Especiais Federais (JEF) costumam durar entre 6 meses e 1 ano. Em varas federais comuns, o prazo pode chegar a 2 anos ou mais." },
+      { type: "highlight", text: "Dica importante: ao entrar com o processo, é possível solicitar tutela antecipada (liminar) para receber o benefício enquanto o processo tramita. Um advogado experiente sabe quando e como fazer esse pedido." },
+      { type: "heading", text: "Valores Retroativos" },
+      { type: "paragraph", text: "Se o juiz reconhecer o direito ao auxílio-acidente, o segurado pode receber todos os valores retroativos desde a data em que o benefício deveria ter sido concedido. Isso pode representar uma quantia significativa." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Não aceite a negativa do INSS como decisão final. A Cantarelli Advocacia tem experiência em processos de auxílio-acidente e pode avaliar seu caso para garantir que você receba o benefício que merece." }
+    ]
+  },
+  {
+    slug: "salario-maternidade-desempregada-quem-tem-direito",
+    title: "Salário-Maternidade para Desempregada: Quem Tem Direito?",
+    excerpt: "Ficou desempregada e descobriu a gravidez? Saiba que você pode ter direito ao salário-maternidade mesmo sem estar trabalhando. Entenda os requisitos.",
+    category: "Benefícios",
+    tags: ["Salário-Maternidade", "Desempregada", "INSS", "Gestante"],
+    readTime: "6 min",
+    keyTakeaways: [
+      "A segurada desempregada pode ter direito ao salário-maternidade durante o período de graça do INSS.",
+      "O período de graça é de 12 meses após a demissão, podendo ser estendido para 24 ou 36 meses em alguns casos.",
+      "É necessário ter cumprido a carência mínima de 10 contribuições mensais.",
+      "O valor do benefício é calculado com base nas últimas contribuições, com piso de um salário mínimo (R$ 1.621,00 em 2026)."
+    ],
+    image: salMatDesempregadaImg,
+    imageAlt: "Mulher analisando documentos sobre direito ao salário-maternidade para desempregadas",
+    content: [
+      { type: "paragraph", text: "Perder o emprego durante a gravidez ou descobrir a gestação após a demissão é uma situação angustiante. No entanto, a legislação previdenciária brasileira prevê a manutenção da qualidade de segurada mesmo após o desligamento, garantindo o direito ao salário-maternidade em determinadas condições." },
+      { type: "heading", text: "O Que é o Período de Graça?" },
+      { type: "paragraph", text: "O período de graça é o tempo em que o segurado mantém seus direitos junto ao INSS mesmo sem contribuir. Para quem foi demitido sem justa causa, esse período é de pelo menos 12 meses. Pode ser estendido para 24 meses se a segurada tiver mais de 120 contribuições, e para 36 meses se comprovar situação de desemprego." },
+      { type: "heading", text: "Requisitos para Receber o Benefício" },
+      { type: "list", items: [
+        "Estar dentro do período de graça na data do parto ou adoção",
+        "Ter cumprido a carência de 10 contribuições mensais",
+        "Comprovar a qualidade de segurada perante o INSS",
+        "Apresentar certidão de nascimento ou termo de adoção"
+      ]},
+      { type: "heading", text: "Qual o Valor do Salário-Maternidade?" },
+      { type: "paragraph", text: "Para a segurada desempregada, o valor do salário-maternidade é calculado com base na média dos últimos 12 salários de contribuição. O valor mínimo é de um salário mínimo (R$ 1.621,00 em 2026) e o máximo é o teto do INSS (R$ 8.157,41 em 2026)." },
+      { type: "highlight", text: "Atenção: mesmo que o INSS negue o benefício alegando perda da qualidade de segurada, é possível reverter essa decisão com a documentação correta. Muitas seguradas perdem o benefício por falta de orientação jurídica adequada." },
+      { type: "heading", text: "INSS Negou? Saiba o Que Fazer" },
+      { type: "paragraph", text: "Se o INSS indeferiu seu pedido de salário-maternidade, não desista. Um advogado previdenciário pode analisar se houve erro na contagem do período de graça ou na verificação da carência e, se necessário, ingressar com ação judicial para garantir seus direitos." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você está desempregada e grávida, pode ter direito ao salário-maternidade. A Cantarelli Advocacia pode avaliar seu caso gratuitamente e orientá-la sobre os próximos passos para garantir esse benefício." }
+    ]
+  },
+  {
+    slug: "quanto-tempo-demora-processo-auxilio-acidente",
+    title: "Quanto Tempo Demora um Processo de Auxílio-Acidente?",
+    excerpt: "Entenda os prazos médios de um processo de auxílio-acidente no INSS e na Justiça, e como acelerar a obtenção do seu benefício.",
+    category: "Benefícios",
+    tags: ["Auxílio-Acidente", "Prazos", "INSS", "Processo"],
+    readTime: "6 min",
+    keyTakeaways: [
+      "O pedido administrativo no INSS leva em média 45 a 90 dias para ser analisado.",
+      "Na Justiça, o processo pode durar de 6 meses a 2 anos dependendo da comarca.",
+      "A tutela antecipada pode garantir o recebimento do benefício enquanto o processo tramita.",
+      "Ter documentação completa e um advogado especialista acelera significativamente o processo."
+    ],
+    image: tempoProcessoAuxImg,
+    imageAlt: "Calendário e ampulheta representando o tempo de duração de um processo de auxílio-acidente",
+    content: [
+      { type: "paragraph", text: "Uma das maiores preocupações de quem precisa do auxílio-acidente é saber quanto tempo vai demorar para conseguir o benefício. Os prazos variam conforme a via escolhida (administrativa ou judicial) e a complexidade do caso." },
+      { type: "heading", text: "Prazos na Via Administrativa (INSS)" },
+      { type: "paragraph", text: "Quando o pedido é feito diretamente ao INSS, o prazo médio de análise é de 45 a 90 dias. No entanto, em períodos de grande demanda, esse prazo pode se estender. A perícia médica é agendada dentro desse período e o resultado costuma sair na mesma data." },
+      { type: "heading", text: "Prazos na Via Judicial" },
+      { type: "list", items: [
+        "Juizado Especial Federal (até 60 salários mínimos): 6 a 12 meses em média",
+        "Vara Federal comum: 1 a 2 anos em média",
+        "Recurso em segunda instância: mais 6 a 12 meses",
+        "Com tutela antecipada deferida: benefício pode começar em 30 a 60 dias"
+      ]},
+      { type: "heading", text: "Como Acelerar o Processo?" },
+      { type: "paragraph", text: "A documentação é o fator mais importante para agilizar o processo. Laudos médicos detalhados, exames de imagem, CAT (Comunicação de Acidente de Trabalho) e o PPP devem estar organizados antes de dar entrada no pedido." },
+      { type: "highlight", text: "Um advogado previdenciário experiente sabe exatamente quais documentos são necessários e como apresentá-los de forma estratégica para reduzir o tempo do processo." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "O tempo de um processo de auxílio-acidente depende de vários fatores, mas com a documentação certa e orientação jurídica especializada, é possível reduzir significativamente essa espera. A Cantarelli Advocacia pode ajudar você a conseguir seu benefício no menor prazo possível." }
+    ]
+  },
+  {
+    slug: "bpc-negado-o-que-fazer",
+    title: "Teve o BPC Negado? Saiba Agora o Que Fazer",
+    excerpt: "O INSS negou seu pedido de BPC/LOAS? Entenda os motivos mais comuns de negativa e descubra como reverter essa decisão com ajuda jurídica especializada.",
+    category: "BPC/LOAS",
+    tags: ["BPC", "LOAS", "Negativa", "INSS", "Recurso"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Os motivos mais comuns de negativa do BPC são: renda familiar acima do limite, deficiência não reconhecida na perícia e irregularidade no CadÚnico.",
+      "É possível recorrer administrativamente em até 30 dias após a negativa.",
+      "Na via judicial, o critério de renda pode ser flexibilizado, considerando gastos com saúde e medicamentos.",
+      "Um advogado especialista aumenta significativamente as chances de reverter a negativa."
+    ],
+    image: bpcNegadoImg,
+    imageAlt: "Idoso preocupado segurando carta de negativa do BPC LOAS do INSS",
+    content: [
+      { type: "paragraph", text: "Ter o BPC/LOAS negado é uma situação frustrante, especialmente quando a pessoa realmente precisa do benefício para sobreviver. No entanto, a negativa do INSS não é uma decisão final — existem caminhos legais para reverter essa situação." },
+      { type: "heading", text: "Motivos Mais Comuns de Negativa" },
+      { type: "list", items: [
+        "Renda per capita familiar acima de 1/4 do salário mínimo (R$ 405,25 em 2026)",
+        "Perícia médica que não reconhece a deficiência ou incapacidade",
+        "CadÚnico desatualizado ou com informações incorretas",
+        "Falta de documentação comprobatória adequada",
+        "Composição familiar incorretamente calculada pelo INSS"
+      ]},
+      { type: "heading", text: "Recurso Administrativo" },
+      { type: "paragraph", text: "Após a negativa, o segurado tem 30 dias para interpor recurso administrativo junto à Junta de Recursos do INSS. Nesse recurso, é possível apresentar novos documentos e laudos que comprovem o direito ao benefício." },
+      { type: "heading", text: "Ação Judicial" },
+      { type: "paragraph", text: "Na via judicial, o juiz pode aplicar critérios mais flexíveis para avaliar a renda familiar. Gastos com medicamentos, tratamentos médicos, fraldas geriátricas e outras despesas essenciais podem ser descontados da renda para fins de verificação do critério econômico." },
+      { type: "highlight", text: "A Justiça Federal frequentemente reconhece o direito ao BPC mesmo quando a renda per capita supera ligeiramente o limite legal, desde que fique comprovada a situação de vulnerabilidade social." },
+      { type: "heading", text: "Documentos Importantes para o Recurso" },
+      { type: "list", items: [
+        "Laudos médicos atualizados e detalhados",
+        "Comprovantes de gastos com saúde e medicamentos",
+        "Comprovantes de renda de todos os membros da família",
+        "CadÚnico atualizado",
+        "Declaração de composição familiar"
+      ]},
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se o seu BPC foi negado, não desista. A Cantarelli Advocacia tem ampla experiência em reverter negativas de BPC/LOAS e pode analisar seu caso para identificar a melhor estratégia." }
+    ]
+  },
+  {
+    slug: "aposentadoria-antecipada-como-conseguir",
+    title: "Aposentadoria Antecipada: Como Conseguir e Evitar Perder Dinheiro",
+    excerpt: "Descubra se você pode se aposentar antes do tempo e quais cuidados tomar para não reduzir o valor do seu benefício. Entenda as regras de transição em 2026.",
+    category: "Aposentadoria",
+    tags: ["Aposentadoria Antecipada", "Regras de Transição", "INSS", "2026"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "As regras de transição da Reforma de 2019 permitem aposentadoria antecipada em alguns casos específicos.",
+      "O pedágio de 50% e 100% são opções para quem estava próximo de se aposentar em 2019.",
+      "Aposentar-se antes do tempo pode significar redução significativa no valor do benefício.",
+      "Um planejamento previdenciário detalhado evita perdas financeiras e identifica a melhor data para o pedido."
+    ],
+    image: aposentAntecipadaImg,
+    imageAlt: "Profissional analisando documentos de planejamento de aposentadoria antecipada",
+    content: [
+      { type: "paragraph", text: "Muitas pessoas desejam se aposentar o mais cedo possível, mas nem sempre isso é a melhor decisão financeira. Aposentar-se antes do tempo pode significar uma redução significativa no valor do benefício mensal. Entenda como funciona e quando vale a pena." },
+      { type: "heading", text: "Regras de Transição Disponíveis em 2026" },
+      { type: "list", items: [
+        "Pedágio de 50%: para quem faltavam até 2 anos para se aposentar em novembro de 2019",
+        "Pedágio de 100%: exige idade mínima (57 mulheres, 60 homens) + tempo faltante x2",
+        "Pontos progressivos: soma de idade + tempo de contribuição (92 pontos para mulheres, 102 para homens em 2026)",
+        "Idade mínima progressiva: 59 anos para mulheres e 64 para homens em 2026"
+      ]},
+      { type: "heading", text: "O Que Pode Reduzir Seu Benefício?" },
+      { type: "paragraph", text: "O principal fator que reduz o valor da aposentadoria é o coeficiente de cálculo. Após a Reforma, o cálculo é de 60% da média + 2% por ano que exceder 15 anos (mulheres) ou 20 anos (homens). Aposentar-se com poucos anos além do mínimo resulta em benefício significativamente menor." },
+      { type: "highlight", text: "Exemplo: uma mulher com 30 anos de contribuição recebe 90% da média salarial. Se esperar mais 5 anos, chega a 100%. Cada ano pode representar milhares de reais ao longo da aposentadoria." },
+      { type: "heading", text: "Quando Vale a Pena Antecipar?" },
+      { type: "paragraph", text: "A aposentadoria antecipada pode valer a pena quando o segurado tem problemas de saúde, está desempregado há muito tempo, ou quando a regra de transição do pedágio oferece condições vantajosas. Cada caso é único e precisa ser analisado individualmente." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Antes de pedir a aposentadoria, faça um planejamento previdenciário completo. A Cantarelli Advocacia realiza análise detalhada do seu caso para identificar a regra mais vantajosa e a melhor data para se aposentar sem perder dinheiro." }
+    ]
+  },
+  {
+    slug: "regras-aposentadoria-mulher-2026",
+    title: "Conheça as Regras de Aposentadoria para Mulher: Saiba Quando é a Hora Certa",
+    excerpt: "As mulheres têm regras diferenciadas para aposentadoria no INSS. Conheça todas as opções disponíveis em 2026 e descubra quando é o melhor momento para se aposentar.",
+    category: "Aposentadoria",
+    tags: ["Mulher", "Aposentadoria", "INSS", "2026", "Regras"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "A idade mínima para aposentadoria da mulher é 62 anos na regra permanente, com pelo menos 15 anos de contribuição.",
+      "As regras de transição podem permitir aposentadoria antes dos 62 anos dependendo do tempo de contribuição.",
+      "Tempo como dona de casa, período de maternidade e trabalho rural podem contar para a aposentadoria.",
+      "Um planejamento previdenciário identifica qual regra é mais vantajosa para cada mulher."
+    ],
+    image: aposentMulherImg,
+    imageAlt: "Mulheres profissionais em diferentes fases da carreira representando planejamento de aposentadoria",
+    content: [
+      { type: "paragraph", text: "As mulheres possuem regras diferenciadas para aposentadoria no INSS, com requisitos de idade e tempo de contribuição menores do que os homens. No entanto, com tantas regras de transição em vigor, é fundamental entender qual delas oferece o melhor benefício." },
+      { type: "heading", text: "Regra Permanente (Pós-Reforma)" },
+      { type: "list", items: [
+        "Idade mínima: 62 anos",
+        "Tempo mínimo de contribuição: 15 anos",
+        "Cálculo: 60% da média + 2% por ano acima de 15 anos de contribuição"
+      ]},
+      { type: "heading", text: "Regras de Transição para Mulheres em 2026" },
+      { type: "list", items: [
+        "Pontos: 92 pontos (idade + tempo de contribuição) com mínimo de 30 anos de contribuição",
+        "Idade mínima progressiva: 59 anos com 30 anos de contribuição",
+        "Pedágio de 50%: para quem faltava até 2 anos em novembro/2019",
+        "Pedágio de 100%: 57 anos de idade + tempo que faltava x2"
+      ]},
+      { type: "heading", text: "Períodos Especiais que Contam" },
+      { type: "paragraph", text: "Muitas mulheres não sabem que determinados períodos podem ser computados para a aposentadoria, como período de salário-maternidade, tempo como segurada facultativa (dona de casa) e atividade rural exercida antes de 1991." },
+      { type: "highlight", text: "Muitas mulheres se aposentam recebendo menos do que poderiam por falta de planejamento. Cada ano de contribuição pode representar até 2% a mais no valor do benefício." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Não se aposente sem antes fazer um planejamento previdenciário completo. A Cantarelli Advocacia pode analisar seu histórico contributivo e identificar a regra mais vantajosa para o seu caso, garantindo o maior benefício possível." }
+    ]
+  },
+  {
+    slug: "transformar-bpc-em-aposentadoria",
+    title: "É Possível Transformar o BPC em Aposentadoria? Entenda!",
+    excerpt: "Recebe BPC/LOAS e quer saber se pode converter em aposentadoria? Entenda as diferenças, vantagens e como fazer a transição corretamente.",
+    category: "BPC/LOAS",
+    tags: ["BPC", "LOAS", "Aposentadoria", "Conversão", "INSS"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "O BPC não se transforma automaticamente em aposentadoria — são benefícios com naturezas diferentes.",
+      "É possível cancelar o BPC e requerer aposentadoria se o segurado cumprir os requisitos.",
+      "A aposentadoria gera direito a 13º salário e pensão por morte, que o BPC não oferece.",
+      "Antes de trocar, é essencial fazer uma análise comparativa dos valores e direitos de cada benefício."
+    ],
+    image: bpcParaAposentImg,
+    imageAlt: "Documentos legais sobre conversão de BPC LOAS em aposentadoria do INSS",
+    content: [
+      { type: "paragraph", text: "Muitas pessoas que recebem o BPC/LOAS se perguntam se é possível converter esse benefício em aposentadoria. A resposta curta é: não existe uma conversão automática, mas é possível cancelar o BPC e requerer uma aposentadoria, desde que os requisitos sejam cumpridos." },
+      { type: "heading", text: "Diferenças Entre BPC e Aposentadoria" },
+      { type: "list", items: [
+        "BPC: não exige contribuição ao INSS, mas não gera 13º salário nem pensão por morte",
+        "Aposentadoria: exige tempo de contribuição, mas oferece 13º salário e gera pensão por morte",
+        "BPC: valor fixo de 1 salário mínimo (R$ 1.621,00 em 2026)",
+        "Aposentadoria: pode ser superior ao salário mínimo dependendo das contribuições"
+      ]},
+      { type: "heading", text: "Quando Vale a Pena Trocar?" },
+      { type: "paragraph", text: "A troca pode ser vantajosa quando o beneficiário do BPC tem tempo de contribuição suficiente para uma aposentadoria com valor igual ou superior. Além disso, a aposentadoria garante 13º salário e pensão por morte para os dependentes — benefícios que o BPC não oferece." },
+      { type: "highlight", text: "Importante: antes de cancelar o BPC, é fundamental ter a certeza de que a aposentadoria será concedida. Cancelar o BPC sem garantia pode deixar a pessoa sem nenhum benefício." },
+      { type: "heading", text: "Contribuições Enquanto Recebe BPC" },
+      { type: "paragraph", text: "Quem recebe BPC pode contribuir como segurado facultativo para acumular tempo de contribuição e, futuramente, requerer uma aposentadoria. No entanto, é importante planejar essas contribuições com orientação profissional para não pagar valores desnecessários." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "A transição do BPC para a aposentadoria exige planejamento cuidadoso. A Cantarelli Advocacia pode fazer uma análise comparativa completa e orientar sobre a melhor decisão para o seu caso." }
+    ]
+  },
+  {
+    slug: "quem-recebe-loas-pode-receber-pensao-por-morte",
+    title: "Quem Recebe LOAS Pode Receber Pensão por Morte do Marido?",
+    excerpt: "Descubra se é possível acumular o BPC/LOAS com a pensão por morte do cônjuge e quais são as regras de acumulação de benefícios do INSS.",
+    category: "BPC/LOAS",
+    tags: ["LOAS", "Pensão por Morte", "Acumulação", "INSS", "BPC"],
+    readTime: "6 min",
+    keyTakeaways: [
+      "Em regra, não é possível acumular o BPC/LOAS com a pensão por morte — a pessoa deve optar pelo mais vantajoso.",
+      "A pensão por morte geralmente é mais vantajosa por oferecer valor superior e 13º salário.",
+      "Em alguns casos judiciais, tem sido reconhecido o direito de acumulação quando os valores são baixos.",
+      "É fundamental analisar cada caso individualmente antes de tomar a decisão."
+    ],
+    image: loasPensaoMorteImg,
+    imageAlt: "Idosa recebendo orientação jurídica sobre acumulação de LOAS e pensão por morte",
+    content: [
+      { type: "paragraph", text: "Essa é uma dúvida muito comum entre beneficiários do BPC/LOAS: após o falecimento do cônjuge, é possível receber também a pensão por morte? A legislação traz uma regra geral de não acumulação, mas existem nuances importantes que precisam ser analisadas." },
+      { type: "heading", text: "Regra Geral: Não Acumulação" },
+      { type: "paragraph", text: "A Lei 8.742/93 (Lei Orgânica da Assistência Social) estabelece que o BPC não pode ser acumulado com nenhum outro benefício da Seguridade Social, exceto assistência médica e pensão especial de natureza indenizatória. Isso inclui a pensão por morte." },
+      { type: "heading", text: "Quando Optar pela Pensão por Morte?" },
+      { type: "list", items: [
+        "Quando o valor da pensão é superior ao BPC (R$ 1.621,00 em 2026)",
+        "Quando a pensão garante 13º salário (que o BPC não oferece)",
+        "Quando a pensão gera menos restrições de renda familiar"
+      ]},
+      { type: "heading", text: "Exceções e Decisões Judiciais" },
+      { type: "paragraph", text: "Alguns tribunais têm reconhecido o direito de acumular BPC e pensão por morte em situações excepcionais, especialmente quando ambos os valores são muito baixos e a vedação da acumulação coloca a pessoa em situação de extrema vulnerabilidade social." },
+      { type: "highlight", text: "Cada caso é único. A análise de um advogado previdenciário é essencial para determinar qual benefício é mais vantajoso e se há possibilidade de acumulação no seu caso específico." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você recebe BPC/LOAS e perdeu o cônjuge, procure orientação jurídica antes de tomar qualquer decisão. A Cantarelli Advocacia pode analisar qual benefício é mais vantajoso e se existe possibilidade legal de acumulação no seu caso." }
+    ]
+  },
+  {
+    slug: "auxilio-acidente-pode-trabalhar",
+    title: "Quem Recebe Auxílio-Acidente Pode Trabalhar Normal? Entenda Como Funciona",
+    excerpt: "Muitos segurados não sabem que o auxílio-acidente pode ser recebido junto com o salário. Entenda as regras e saiba como esse benefício funciona na prática.",
+    category: "Benefícios",
+    tags: ["Auxílio-Acidente", "Trabalho", "INSS", "Benefício"],
+    readTime: "6 min",
+    keyTakeaways: [
+      "Sim, quem recebe auxílio-acidente pode trabalhar normalmente — o benefício é indenizatório e acumula com o salário.",
+      "O auxílio-acidente é pago quando há redução permanente da capacidade laboral, mas não impede o trabalho.",
+      "O benefício corresponde a 50% do salário de benefício e é pago até a aposentadoria.",
+      "O auxílio-acidente é incorporado no cálculo da aposentadoria, aumentando o valor final."
+    ],
+    image: auxAcidenteTrabalharImg,
+    imageAlt: "Trabalhador de construção civil com equipamento de segurança que recebe auxílio-acidente e continua trabalhando",
+    content: [
+      { type: "paragraph", text: "Uma das dúvidas mais frequentes sobre o auxílio-acidente é se o segurado pode continuar trabalhando enquanto recebe o benefício. A resposta é sim — e essa é justamente a característica que diferencia o auxílio-acidente de outros benefícios por incapacidade." },
+      { type: "heading", text: "O Que é o Auxílio-Acidente?" },
+      { type: "paragraph", text: "O auxílio-acidente é um benefício indenizatório pago pelo INSS ao segurado que sofreu um acidente ou doença que resultou em sequelas permanentes que reduzem sua capacidade de trabalho. Diferente do auxílio-doença, ele não exige afastamento do trabalho." },
+      { type: "heading", text: "Características do Auxílio-Acidente" },
+      { type: "list", items: [
+        "Valor: 50% do salário de benefício",
+        "Pode ser acumulado com o salário do trabalho",
+        "É pago mensalmente até a data da aposentadoria",
+        "Não pode ser acumulado com outro auxílio-acidente",
+        "É incorporado no cálculo da aposentadoria"
+      ]},
+      { type: "heading", text: "Quando o Auxílio-Acidente é Cessado?" },
+      { type: "paragraph", text: "O auxílio-acidente só é cessado em duas situações: quando o segurado se aposenta ou em caso de óbito. A aposentadoria substitui o auxílio-acidente, mas o valor deste é incluído no cálculo do benefício de aposentadoria, o que pode aumentar significativamente o valor final." },
+      { type: "highlight", text: "Dica valiosa: muitos segurados que tiveram acidentes de trabalho não sabem que têm direito ao auxílio-acidente. Se você tem sequelas permanentes de um acidente, mesmo que consiga trabalhar, pode ter direito a esse benefício." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "O auxílio-acidente é um direito de quem ficou com sequelas permanentes de um acidente e pode ser recebido junto com o salário do trabalho. Se você tem sequelas que reduzem sua capacidade laboral, a Cantarelli Advocacia pode avaliar seu direito a esse benefício." }
+    ]
+  }
 ];

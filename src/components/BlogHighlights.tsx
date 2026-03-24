@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Calendar, ArrowRight, Clock } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { blogArticles } from "@/data/blogArticles";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -34,7 +34,7 @@ const BlogHighlights = () => {
               className="group"
             >
               <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all duration-300 hover:shadow-xl h-full flex flex-col">
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[16/10] overflow-hidden">
                   <img
                     src={post.image}
                     alt={post.imageAlt}
@@ -57,20 +57,8 @@ const BlogHighlights = () => {
                     {post.excerpt}
                   </p>
 
-                  <div className="flex items-center gap-2 text-[10px] md:text-xs text-muted-foreground mt-auto pt-2 border-t border-border">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3 flex-shrink-0" />
-                      <span className="truncate">{post.date}</span>
-                    </div>
-                    <span className="text-border">•</span>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3 flex-shrink-0" />
-                      <span>{post.readTime}</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-1 text-primary text-xs font-semibold mt-2 group-hover:gap-2 transition-all">
-                    <span>Ler artigo</span>
+                  <div className="flex items-center gap-1 text-primary text-xs font-semibold mt-auto pt-2 border-t border-border group-hover:gap-2 transition-all">
+                    <span>Leia Mais</span>
                     <ArrowRight className="w-3 h-3 md:w-4 md:h-4 transition-transform group-hover:translate-x-1" />
                   </div>
                 </div>
