@@ -7,15 +7,15 @@ const Hero = () => {
   const {
     count: clientsCount,
     elementRef: clientsRef
-  } = useCountUp(3100, 2000);
+  } = useCountUp(7126, 2000);
   const {
     count: rightsCount,
     elementRef: rightsRef
-  } = useCountUp(2900, 2000);
+  } = useCountUp(5109, 2000);
   const {
     count: processesCount,
     elementRef: processesRef
-  } = useCountUp(5800, 2000);
+  } = useCountUp(5869, 2000);
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({
       behavior: "smooth"
