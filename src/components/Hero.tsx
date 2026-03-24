@@ -7,15 +7,15 @@ const Hero = () => {
   const {
     count: clientsCount,
     elementRef: clientsRef
-  } = useCountUp(3100, 2000);
+  } = useCountUp(7126, 2000);
   const {
     count: rightsCount,
     elementRef: rightsRef
-  } = useCountUp(2900, 2000);
+  } = useCountUp(5109, 2000);
   const {
     count: processesCount,
     elementRef: processesRef
-  } = useCountUp(5800, 2000);
+  } = useCountUp(5869, 2000);
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({
       behavior: "smooth"
@@ -95,7 +95,7 @@ const Hero = () => {
                 <Shield className="w-10 h-10 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-2xl font-display font-bold text-primary">+{clientsCount.toLocaleString('pt-BR')}</p>
-                  <p className="text-sm text-muted-foreground font-body">clientes ativos</p>
+                  <p className="text-sm text-muted-foreground font-body">clientes cadastrados</p>
                 </div>
               </div>
               <div ref={rightsRef} className="flex items-center gap-3 bg-card p-4 rounded-lg shadow-sm border border-border hover:shadow-xl hover:scale-105 transition-all duration-300">
