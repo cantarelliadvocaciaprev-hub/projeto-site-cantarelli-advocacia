@@ -23,7 +23,7 @@ const Planning = lazy(() => import("@/components/Planning"));
 const Testimonials = lazy(() => import("@/components/Testimonials"));
 const FAQ = lazy(() => import("@/components/FAQNative"));
 
-const Blog = lazy(() => import("@/components/Blog"));
+
 const Contact = lazy(() => import("@/components/Contact"));
 
 // Generic section skeleton for smaller sections
@@ -243,9 +243,7 @@ const Index = () => {
         <Suspense fallback={<FAQSkeleton />}>
           <FAQ />
         </Suspense>
-        <Suspense fallback={<BlogSkeleton />}>
-          <Blog />
-        </Suspense>
+        
         <Suspense fallback={<ContactSkeleton />}>
           <Contact />
         </Suspense>
