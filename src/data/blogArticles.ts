@@ -1,6 +1,6 @@
-import aposentadoriaImg from "@/assets/blog/aposentadoria-tempo-contribuicao.jpg";
-import bpcLoasImg from "@/assets/blog/bpc-loas-beneficio.jpg";
-import revisaoImg from "@/assets/blog/revisao-aposentadoria.jpg";
+import reformaImg from "@/assets/blog/reforma-previdenciaria-2026.jpg";
+import auxilioImg from "@/assets/blog/auxilio-incapacidade-2026.jpg";
+import pensaoImg from "@/assets/blog/pensao-morte-2026.jpg";
 
 export interface BlogArticleContent {
   type: "paragraph" | "heading" | "subheading" | "list" | "highlight";
@@ -25,104 +25,110 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
-    slug: "novas-regras-aposentadoria-2026",
-    title: "Novas Regras de Aposentadoria em 2026: O Que Mudou no INSS",
+    slug: "regras-transicao-aposentadoria-marco-2026",
+    title: "Regras de Transição da Aposentadoria: O Que Muda em Março de 2026",
     excerpt:
-      "A partir de janeiro de 2026, novas exigências entraram em vigor para quem quer se aposentar. Idade mínima aumentou e pontuação subiu. Veja como se preparar.",
-    date: "20 de Janeiro, 2026",
+      "Com o avanço progressivo das regras de transição, muitos segurados estão perdendo prazos importantes. Veja como calcular sua melhor data para se aposentar em 2026.",
+    date: "15 de Março, 2026",
     category: "Aposentadoria",
-    readTime: "7 min",
+    readTime: "8 min",
     keyTakeaways: [
-      "Idade mínima subiu para 59 anos (mulheres) e 64 anos (homens) na regra de transição",
-      "Pontuação exigida agora é 92 pontos para mulheres e 102 para homens",
-      "Quem não cumpriu requisitos até 31/12/2025 precisa se adequar às novas regras",
+      "Pedágio de 100% pode ser mais vantajoso que a regra por pontos em alguns casos",
+      "Mulheres com 59 anos e homens com 64 precisam agir antes que a idade suba novamente em 2027",
+      "O planejamento previdenciário pode identificar a regra de transição ideal para cada caso",
     ],
-    lastUpdated: "Janeiro 2026",
-    image: aposentadoriaImg,
-    imageAlt: "Casal de idosos analisando documentos de aposentadoria com advogado especialista em direito previdenciário",
+    lastUpdated: "Março 2026",
+    image: reformaImg,
+    imageAlt:
+      "Advogado especialista em direito previdenciário analisando documentos de aposentadoria e regras de transição",
     author: "Thiago Cantarelli",
     content: [
       {
         type: "paragraph",
-        text: "O ano de 2026 trouxe mudanças significativas para quem planeja se aposentar pelo INSS. As regras de transição da Reforma da Previdência continuam avançando, exigindo mais tempo de contribuição e idade mínima maior. Entender essas alterações é fundamental para planejar sua aposentadoria da melhor forma possível.",
+        text: "Com o avanço progressivo das regras de transição da Reforma da Previdência, o primeiro trimestre de 2026 marca um ponto crucial para milhares de segurados do INSS. As exigências estão mais rigorosas e a escolha da regra certa pode significar uma diferença de anos no tempo de espera — e milhares de reais no valor do benefício.",
       },
       {
         type: "heading",
-        text: "O Que Mudou nas Regras de Transição em 2026?",
+        text: "As 5 Regras de Transição Vigentes em 2026",
       },
       {
         type: "paragraph",
-        text: "A Reforma da Previdência de 2019 estabeleceu regras de transição que são progressivas, ou seja, ficam mais rigorosas a cada ano. Em 2026, as principais mudanças afetam três aspectos: idade mínima, tempo de contribuição e sistema de pontos.",
+        text: "A Reforma da Previdência de 2019 criou cinco regras de transição para quem já estava contribuindo antes da reforma. Cada uma possui critérios diferentes e pode beneficiar perfis distintos de segurados.",
       },
       {
         type: "subheading",
-        text: "Idade Mínima Progressiva",
+        text: "1. Regra por Pontos",
       },
       {
         type: "paragraph",
-        text: "Na regra de transição por idade mínima progressiva, as mulheres agora precisam ter 59 anos de idade (aumento de 6 meses em relação a 2025), enquanto os homens precisam de 64 anos. Essa idade continuará subindo até atingir 62 anos para mulheres e 65 anos para homens.",
+        text: "Em 2026, a pontuação exigida é de 92 pontos para mulheres e 102 para homens. A soma de idade + tempo de contribuição deve atingir esse mínimo. É a regra mais utilizada por quem começou a trabalhar cedo.",
       },
       {
         type: "subheading",
-        text: "Sistema de Pontos",
+        text: "2. Idade Mínima Progressiva",
       },
       {
         type: "paragraph",
-        text: "O sistema de pontos soma a idade do trabalhador com o tempo de contribuição. Em 2026, as mulheres precisam atingir 92 pontos, e os homens, 102 pontos. Por exemplo, uma mulher com 57 anos de idade e 35 anos de contribuição soma exatamente 92 pontos e pode se aposentar.",
+        text: "A idade mínima em 2026 é de 59 anos para mulheres e 64 para homens, com tempo mínimo de 30 e 35 anos de contribuição, respectivamente. A cada ano, 6 meses são adicionados à idade mínima.",
+      },
+      {
+        type: "subheading",
+        text: "3. Pedágio de 50%",
+      },
+      {
+        type: "paragraph",
+        text: "Disponível apenas para quem estava a no máximo 2 anos de se aposentar quando a reforma entrou em vigor (novembro de 2019). O segurado paga 50% do tempo que faltava como pedágio adicional. Aplica o fator previdenciário.",
+      },
+      {
+        type: "subheading",
+        text: "4. Pedágio de 100%",
+      },
+      {
+        type: "paragraph",
+        text: "O segurado precisa cumprir o dobro do tempo que faltava na data da reforma, além de atingir a idade mínima de 57 anos (mulheres) ou 60 anos (homens). Não aplica fator previdenciário, o que pode ser muito vantajoso.",
+      },
+      {
+        type: "subheading",
+        text: "5. Idade Mínima (Regra Antiga Adaptada)",
+      },
+      {
+        type: "paragraph",
+        text: "Para quem se aposentava por idade: mulheres precisam de 62 anos e homens de 65, com pelo menos 15 anos de contribuição.",
       },
       {
         type: "highlight",
-        text: "Importante: O tempo mínimo de contribuição permanece em 30 anos para mulheres e 35 anos para homens em todas as regras de transição.",
+        text: "Atenção: Cada regra de transição gera um valor de benefício diferente. A escolha errada pode reduzir seu benefício mensal em até 30%. Um planejamento previdenciário profissional é essencial.",
       },
       {
         type: "heading",
-        text: "Quem Foi Afetado pelas Novas Regras?",
+        text: "Por Que Março de 2026 é um Momento Crítico?",
       },
       {
         type: "paragraph",
-        text: "Todos os trabalhadores que não completaram os requisitos para aposentadoria até 31 de dezembro de 2025 precisam se adequar às novas exigências de 2026. Isso significa que muitos segurados que estavam próximos de se aposentar tiveram que esperar mais alguns meses.",
+        text: "Muitos segurados que completaram requisitos em 2025 não deram entrada no pedido a tempo. Agora, em 2026, precisam atender exigências maiores. Além disso, quem está próximo de completar os requisitos deve ficar atento: a cada 1º de janeiro, as regras ficam mais rigorosas.",
       },
       {
         type: "list",
         items: [
-          "Trabalhadores que completariam 91 pontos (mulheres) ou 101 pontos (homens) em 2025 e não se aposentaram",
-          "Segurados que atingiriam a idade mínima de 58,5 anos (mulheres) ou 63,5 anos (homens) em 2025",
-          "Profissionais que ainda estão contribuindo e planejam se aposentar nos próximos anos",
+          "A pontuação sobe 1 ponto por ano (será 93/103 em 2027)",
+          "A idade mínima progressiva sobe 6 meses por ano",
+          "Períodos de contribuição informal ou rural podem ser reconhecidos judicialmente",
+          "O INSS frequentemente erra nos cálculos — sempre peça uma segunda análise",
         ],
       },
       {
         type: "heading",
-        text: "Como Calcular Sua Aposentadoria em 2026",
-      },
-      {
-        type: "paragraph",
-        text: "O cálculo do benefício continua seguindo a regra estabelecida pela Reforma: considera-se 100% da média de todos os salários desde julho de 1994 (ou desde o início das contribuições, se posterior). O valor do benefício será de 60% dessa média, mais 2% para cada ano de contribuição acima de 20 anos (homens) ou 15 anos (mulheres).",
-      },
-      {
-        type: "subheading",
-        text: "Exemplo Prático",
-      },
-      {
-        type: "paragraph",
-        text: "Uma mulher com 35 anos de contribuição terá direito a 60% + (20 x 2%) = 100% da média salarial. Já uma mulher com 30 anos de contribuição receberá 60% + (15 x 2%) = 90% da média.",
-      },
-      {
-        type: "heading",
-        text: "Dicas para Maximizar Seu Benefício",
+        text: "Dicas para Escolher a Melhor Regra",
       },
       {
         type: "list",
         items: [
-          "Faça um planejamento previdenciário completo para identificar a melhor data de aposentadoria",
-          "Verifique se há períodos de contribuição não reconhecidos pelo INSS (trabalho rural, militar, etc.)",
-          "Analise se vale a pena contribuir por mais tempo para aumentar o coeficiente",
-          "Consulte um advogado especialista para avaliar direito a regras mais vantajosas",
-          "Mantenha toda a documentação trabalhista organizada",
+          "Solicite o CNIS (Cadastro Nacional de Informações Sociais) atualizado",
+          "Compare o valor do benefício em cada regra de transição aplicável",
+          "Verifique se existem períodos não computados (trabalho sem carteira, serviço militar, etc.)",
+          "Considere se vale contribuir mais alguns meses para mudar de regra",
+          "Procure um advogado previdenciário para simulação completa",
         ],
-      },
-      {
-        type: "highlight",
-        text: "O planejamento previdenciário adequado pode aumentar o valor do seu benefício em até 40%. Não deixe de consultar um especialista antes de dar entrada no pedido.",
       },
       {
         type: "heading",
@@ -130,285 +136,119 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "As mudanças nas regras de aposentadoria em 2026 reforçam a importância de estar bem informado e contar com orientação especializada. Se você está próximo de se aposentar ou quer começar a planejar seu futuro, o momento de agir é agora. Um planejamento previdenciário bem feito pode fazer toda a diferença no valor do seu benefício.",
+        text: "A escolha da regra de transição correta é uma das decisões financeiras mais importantes da sua vida. Não aceite apenas o que o INSS calcula automaticamente — busque orientação especializada para garantir o melhor benefício possível. A Cantarelli Advocacia tem mais de 17 anos de experiência ajudando segurados em Recife e em todo o Brasil.",
       },
     ],
   },
   {
-    slug: "reajuste-inss-2026-novo-teto",
-    title: "Reajuste do INSS 2026: Novo Teto de R$ 8.475,55",
+    slug: "auxilio-incapacidade-temporaria-2026-como-solicitar",
+    title: "Auxílio por Incapacidade Temporária em 2026: Como Solicitar e Evitar Indeferimento",
     excerpt:
-      "O teto do INSS foi reajustado em 3,9% e agora é de R$ 8.475,55. Saiba como o reajuste afeta sua aposentadoria e benefícios.",
-    date: "15 de Janeiro, 2026",
+      "O antigo auxílio-doença agora é chamado de auxílio por incapacidade temporária. Saiba como funciona o pedido, a perícia e o que fazer se seu benefício for negado.",
+    date: "10 de Março, 2026",
     category: "Benefícios",
-    readTime: "5 min",
-    keyTakeaways: [
-      "Novo salário mínimo de R$ 1.518,00 serve de base para benefícios",
-      "Teto do INSS passou para R$ 8.475,55 com reajuste de 3,9%",
-      "Aposentados que ganham acima do mínimo tiveram reajuste pelo INPC",
-    ],
-    lastUpdated: "Janeiro 2026",
-    image: revisaoImg,
-    imageAlt: "Advogado analisando documentos financeiros e calculando reajuste de aposentadoria INSS 2026",
-    author: "Thiago Cantarelli",
-    content: [
-      {
-        type: "paragraph",
-        text: "Janeiro de 2026 trouxe o reajuste anual dos benefícios do INSS, impactando milhões de aposentados e pensionistas em todo o Brasil. O novo teto previdenciário passou para R$ 8.475,55, enquanto o piso acompanhou o salário mínimo, fixado em R$ 1.518,00.",
-      },
-      {
-        type: "heading",
-        text: "Como Funciona o Reajuste do INSS",
-      },
-      {
-        type: "paragraph",
-        text: "O reajuste dos benefícios previdenciários segue regras diferentes dependendo do valor recebido. Benefícios de um salário mínimo são corrigidos pela variação do próprio mínimo, enquanto os demais seguem o Índice Nacional de Preços ao Consumidor (INPC).",
-      },
-      {
-        type: "subheading",
-        text: "Benefícios de Um Salário Mínimo",
-      },
-      {
-        type: "paragraph",
-        text: "Quem recebe exatamente um salário mínimo teve reajuste de 7,5%, passando de R$ 1.412,00 para R$ 1.518,00. Isso inclui aposentadorias, pensões, BPC/LOAS e auxílios vinculados ao piso.",
-      },
-      {
-        type: "subheading",
-        text: "Benefícios Acima do Mínimo",
-      },
-      {
-        type: "paragraph",
-        text: "Já os benefícios com valor superior a um salário mínimo foram reajustados em 3,9%, conforme o INPC acumulado de 2025. Isso significa que um aposentado que recebia R$ 3.000,00 passou a receber R$ 3.117,00.",
-      },
-      {
-        type: "highlight",
-        text: "Atenção: O reajuste é aplicado automaticamente pelo INSS. Você não precisa fazer nenhum requerimento para receber o valor atualizado.",
-      },
-      {
-        type: "heading",
-        text: "Novo Teto do INSS: R$ 8.475,55",
-      },
-      {
-        type: "paragraph",
-        text: "O teto do INSS é o valor máximo que um segurado pode receber como benefício previdenciário. Em 2026, esse limite passou para R$ 8.475,55, um aumento de R$ 318,62 em relação ao ano anterior.",
-      },
-      {
-        type: "list",
-        items: [
-          "Teto 2025: R$ 8.157,41",
-          "Teto 2026: R$ 8.475,55",
-          "Reajuste: 3,9% (INPC)",
-        ],
-      },
-      {
-        type: "paragraph",
-        text: "Esse valor também serve de referência para o cálculo de contribuições de segurados facultativos e contribuintes individuais que optam por recolher sobre o teto.",
-      },
-      {
-        type: "heading",
-        text: "Tabela de Contribuição 2026",
-      },
-      {
-        type: "paragraph",
-        text: "As alíquotas de contribuição para empregados, empregados domésticos e trabalhadores avulsos também foram atualizadas com as novas faixas salariais:",
-      },
-      {
-        type: "list",
-        items: [
-          "Até R$ 1.518,00: alíquota de 7,5%",
-          "De R$ 1.518,01 até R$ 2.793,88: alíquota de 9%",
-          "De R$ 2.793,89 até R$ 4.190,83: alíquota de 12%",
-          "De R$ 4.190,84 até R$ 8.475,55: alíquota de 14%",
-        ],
-      },
-      {
-        type: "heading",
-        text: "Impacto nos Diferentes Benefícios",
-      },
-      {
-        type: "subheading",
-        text: "Aposentadorias e Pensões",
-      },
-      {
-        type: "paragraph",
-        text: "Todos os aposentados e pensionistas já receberam o valor reajustado a partir do pagamento de janeiro de 2026. O calendário de pagamentos segue o número final do benefício, sem o dígito verificador.",
-      },
-      {
-        type: "subheading",
-        text: "BPC/LOAS",
-      },
-      {
-        type: "paragraph",
-        text: "O Benefício de Prestação Continuada também foi reajustado para R$ 1.518,00. Importante lembrar que o limite de renda per capita para ter direito ao BPC agora é de R$ 379,50 (1/4 do salário mínimo).",
-      },
-      {
-        type: "subheading",
-        text: "Auxílio-Doença e Auxílio-Acidente",
-      },
-      {
-        type: "paragraph",
-        text: "Esses benefícios também seguem as mesmas regras de reajuste, com o piso em um salário mínimo e o teto em R$ 8.475,55.",
-      },
-      {
-        type: "heading",
-        text: "Conclusão",
-      },
-      {
-        type: "paragraph",
-        text: "O reajuste do INSS em 2026 garante a manutenção do poder de compra dos beneficiários, ainda que de forma limitada. Para quem está planejando se aposentar, é importante considerar esses valores atualizados nos cálculos de projeção do benefício.",
-      },
-    ],
-  },
-  {
-    slug: "bpc-loas-2026-quem-tem-direito",
-    title: "BPC/LOAS 2026: Quem Tem Direito e Como Solicitar",
-    excerpt:
-      "O Benefício de Prestação Continuada (BPC) garante um salário mínimo para idosos e pessoas com deficiência. Veja os requisitos atualizados.",
-    date: "10 de Janeiro, 2026",
-    category: "Assistencial",
     readTime: "6 min",
     keyTakeaways: [
-      "Renda per capita familiar deve ser inferior a 1/4 do salário mínimo (R$ 379,50)",
-      "Idosos a partir de 65 anos e PCDs de qualquer idade podem solicitar",
-      "Não é necessário ter contribuído ao INSS para ter direito ao BPC",
+      "O pedido pode ser feito 100% online pelo Meu INSS com atestado médico digitalizado",
+      "A perícia médica por telemedicina foi ampliada em 2026 para mais municípios",
+      "Recurso administrativo contra indeferimento tem prazo de 30 dias",
     ],
-    lastUpdated: "Janeiro 2026",
-    image: bpcLoasImg,
-    imageAlt: "Idosa recebendo apoio e cuidados assistenciais relacionados ao benefício BPC LOAS 2026",
+    lastUpdated: "Março 2026",
+    image: auxilioImg,
+    imageAlt:
+      "Pessoa recebendo orientação médica sobre auxílio por incapacidade temporária do INSS",
     author: "Thiago Cantarelli",
     content: [
       {
         type: "paragraph",
-        text: "O Benefício de Prestação Continuada (BPC), também conhecido como LOAS, é um direito assistencial garantido pela Constituição Federal. Diferente da aposentadoria, não exige contribuição prévia ao INSS, sendo destinado a idosos e pessoas com deficiência em situação de vulnerabilidade.",
+        text: "O auxílio por incapacidade temporária (antigo auxílio-doença) é um dos benefícios mais solicitados do INSS e também um dos mais indeferidos. Em 2026, mudanças no processo de perícia e no sistema digital trouxeram novidades que todo segurado precisa conhecer.",
       },
       {
         type: "heading",
-        text: "O Que é o BPC/LOAS?",
+        text: "O Que é o Auxílio por Incapacidade Temporária?",
       },
       {
         type: "paragraph",
-        text: "O BPC é um benefício assistencial no valor de um salário mínimo (R$ 1.518,00 em 2026) pago mensalmente a idosos com 65 anos ou mais e a pessoas com deficiência de qualquer idade que comprovem não possuir meios de prover a própria subsistência.",
+        text: "É um benefício pago ao segurado do INSS que fica temporariamente incapaz de exercer seu trabalho por motivo de doença ou acidente. O benefício é pago enquanto durar a incapacidade, avaliada periodicamente por perícia médica.",
       },
       {
         type: "highlight",
-        text: "Diferentemente da aposentadoria, o BPC não paga 13º salário e não gera pensão por morte para os dependentes.",
+        text: "Diferente da aposentadoria por invalidez (agora chamada de benefício por incapacidade permanente), o auxílio temporário é concedido quando há expectativa de recuperação.",
       },
       {
         type: "heading",
-        text: "Quem Tem Direito ao BPC em 2026?",
-      },
-      {
-        type: "subheading",
-        text: "Requisitos para Idosos",
+        text: "Requisitos para Concessão em 2026",
       },
       {
         type: "list",
         items: [
-          "Ter 65 anos de idade ou mais",
-          "Renda familiar per capita inferior a 1/4 do salário mínimo (R$ 379,50)",
-          "Não receber outro benefício da Seguridade Social (exceto assistência médica)",
-          "Estar inscrito no Cadastro Único (CadÚnico)",
+          "Ter qualidade de segurado (estar contribuindo ou em período de graça)",
+          "Cumprir carência mínima de 12 contribuições mensais (exceto para acidentes e doenças graves)",
+          "Estar incapacitado para o trabalho por mais de 15 dias consecutivos",
+          "Comprovar a incapacidade por atestado médico com CID e período de afastamento",
         ],
       },
       {
+        type: "heading",
+        text: "Como Solicitar pelo Meu INSS",
+      },
+      {
         type: "subheading",
-        text: "Requisitos para Pessoas com Deficiência",
+        text: "Passo 1: Acesse o Meu INSS",
+      },
+      {
+        type: "paragraph",
+        text: "Acesse o aplicativo ou site meu.inss.gov.br e faça login com sua conta gov.br. Vá em 'Novo Pedido' e selecione 'Auxílio por Incapacidade Temporária'.",
+      },
+      {
+        type: "subheading",
+        text: "Passo 2: Envie o Atestado Médico",
+      },
+      {
+        type: "paragraph",
+        text: "Em 2026, o INSS ampliou o sistema de análise documental. Envie o atestado médico digitalizado com boa resolução, contendo: CID da doença, período de afastamento recomendado, data, assinatura e CRM do médico.",
+      },
+      {
+        type: "subheading",
+        text: "Passo 3: Perícia Médica",
+      },
+      {
+        type: "paragraph",
+        text: "A perícia pode ser presencial em uma agência do INSS ou por telemedicina (consulta por vídeo). Em 2026, a perícia por telemedicina foi ampliada para mais de 2.000 municípios brasileiros.",
+      },
+      {
+        type: "heading",
+        text: "Motivos Comuns de Indeferimento",
       },
       {
         type: "list",
         items: [
-          "Possuir deficiência física, mental, intelectual ou sensorial de longo prazo (mínimo 2 anos)",
-          "A deficiência deve impedir a participação plena na sociedade em igualdade com as demais pessoas",
-          "Renda familiar per capita inferior a 1/4 do salário mínimo (R$ 379,50)",
-          "Estar inscrito no Cadastro Único (CadÚnico)",
+          "Atestado médico incompleto ou sem CID",
+          "Perícia concluindo que não há incapacidade para o trabalho",
+          "Falta de carência (menos de 12 contribuições)",
+          "Perda da qualidade de segurado",
+          "Doença ou lesão preexistente à filiação ao INSS",
         ],
       },
       {
         type: "heading",
-        text: "Como Calcular a Renda Per Capita",
+        text: "O Que Fazer se o Benefício For Negado?",
       },
       {
         type: "paragraph",
-        text: "O cálculo da renda per capita considera todos os rendimentos do grupo familiar dividido pelo número de pessoas. Em 2026, o limite é de R$ 379,50 por pessoa (1/4 do salário mínimo de R$ 1.518,00).",
-      },
-      {
-        type: "subheading",
-        text: "Exemplo de Cálculo",
-      },
-      {
-        type: "paragraph",
-        text: "Uma família composta por 4 pessoas (idoso requerente, cônjuge e 2 filhos) com renda total de R$ 1.400,00: Renda per capita = R$ 1.400,00 ÷ 4 = R$ 350,00. Como R$ 350,00 é menor que R$ 379,50, a família atende ao requisito de renda.",
+        text: "Se seu auxílio for indeferido, você tem três opções: recurso administrativo ao Conselho de Recursos da Previdência Social (prazo de 30 dias), novo pedido com documentação complementar, ou ação judicial. Em muitos casos, a via judicial é a mais eficaz.",
       },
       {
         type: "highlight",
-        text: "Importante: O BPC já recebido por outro membro da família NÃO entra no cálculo da renda para fins de novo BPC. A Lei 14.176/2021 estabeleceu essa exclusão.",
+        text: "Importante: Em ações judiciais, é possível obter tutela antecipada (decisão urgente) que garante o pagamento do benefício enquanto o processo tramita. Consulte um advogado especialista.",
       },
       {
         type: "heading",
-        text: "Como Solicitar o BPC",
+        text: "Valor do Benefício",
       },
       {
         type: "paragraph",
-        text: "O processo de solicitação do BPC envolve algumas etapas importantes que devem ser seguidas corretamente para evitar indeferimentos:",
-      },
-      {
-        type: "subheading",
-        text: "Passo 1: Inscrição no CadÚnico",
-      },
-      {
-        type: "paragraph",
-        text: "Antes de solicitar o BPC, a família precisa estar inscrita no Cadastro Único para Programas Sociais. A inscrição é feita no CRAS (Centro de Referência de Assistência Social) do município.",
-      },
-      {
-        type: "subheading",
-        text: "Passo 2: Agendamento no INSS",
-      },
-      {
-        type: "paragraph",
-        text: "Após a inscrição no CadÚnico (aguardar pelo menos 45 dias para processamento), agende o requerimento do BPC pelo telefone 135 ou pelo site/aplicativo Meu INSS.",
-      },
-      {
-        type: "subheading",
-        text: "Passo 3: Perícia Médica (PCD)",
-      },
-      {
-        type: "paragraph",
-        text: "Para pessoas com deficiência, será agendada uma avaliação médica e social no INSS. É importante levar todos os laudos, exames e relatórios médicos que comprovem a deficiência.",
-      },
-      {
-        type: "subheading",
-        text: "Passo 4: Avaliação Social",
-      },
-      {
-        type: "paragraph",
-        text: "Tanto idosos quanto PCDs passam por avaliação social, que pode incluir visita domiciliar. É verificada a situação socioeconômica da família.",
-      },
-      {
-        type: "heading",
-        text: "Documentos Necessários",
-      },
-      {
-        type: "list",
-        items: [
-          "Documento de identificação com foto (RG, CNH ou CTPS)",
-          "CPF do requerente e de todos os membros da família",
-          "Comprovante de residência atualizado",
-          "Comprovante de inscrição no CadÚnico",
-          "Laudos e relatórios médicos (para PCD)",
-          "Comprovantes de renda de todos os membros da família",
-        ],
-      },
-      {
-        type: "heading",
-        text: "O Que Fazer em Caso de Indeferimento",
-      },
-      {
-        type: "paragraph",
-        text: "Se o pedido for negado, o segurado pode apresentar recurso administrativo no prazo de 30 dias ou ingressar com ação judicial. Muitos casos são revertidos na Justiça, especialmente quando há erro na avaliação da deficiência ou no cálculo da renda.",
-      },
-      {
-        type: "highlight",
-        text: "Dica: Consulte um advogado especializado antes de desistir. Muitos benefícios são concedidos judicialmente após análise mais detalhada do caso.",
+        text: "O valor do auxílio por incapacidade temporária corresponde a 91% do salário de benefício, calculado com base na média de todas as contribuições desde julho de 1994. O piso é de R$ 1.518,00 (salário mínimo 2026) e o teto é de R$ 8.475,55.",
       },
       {
         type: "heading",
@@ -416,7 +256,140 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "O BPC/LOAS é um direito fundamental que garante dignidade a milhões de brasileiros em situação de vulnerabilidade. Se você ou alguém da sua família pode ter direito ao benefício, não deixe de buscar orientação especializada para garantir o acesso a esse importante amparo social.",
+        text: "Se você está impossibilitado de trabalhar por doença ou acidente, não hesite em buscar seus direitos. O auxílio por incapacidade temporária existe para proteger o segurado nesse momento difícil. Conte com a Cantarelli Advocacia para orientação especializada em todo o processo.",
+      },
+    ],
+  },
+  {
+    slug: "pensao-por-morte-2026-novas-regras-duracao",
+    title: "Pensão por Morte em 2026: Regras de Duração, Valor e Quem Tem Direito",
+    excerpt:
+      "A pensão por morte sofreu mudanças importantes após a Reforma. Entenda as regras de duração, quem são os dependentes e como calcular o valor do benefício em 2026.",
+    date: "5 de Março, 2026",
+    category: "Pensões",
+    readTime: "7 min",
+    keyTakeaways: [
+      "O valor base da pensão é 50% + 10% por dependente, podendo chegar a 100%",
+      "A duração para cônjuges varia de 3 anos a vitalícia conforme a idade e tempo de casamento",
+      "Filhos recebem até 21 anos (ou 24 se universitários, em alguns casos judiciais)",
+    ],
+    lastUpdated: "Março 2026",
+    image: pensaoImg,
+    imageAlt:
+      "Família analisando documentos financeiros sobre pensão por morte e planejamento previdenciário",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "A pensão por morte é um dos benefícios previdenciários mais importantes para a proteção da família. Após o falecimento de um segurado do INSS, seus dependentes podem ter direito a receber um valor mensal. Em 2026, as regras continuam seguindo o formato da Reforma da Previdência, com alguns detalhes que merecem atenção.",
+      },
+      {
+        type: "heading",
+        text: "Quem São os Dependentes?",
+      },
+      {
+        type: "paragraph",
+        text: "O INSS classifica os dependentes em três classes. A existência de dependentes em uma classe exclui o direito dos dependentes das classes seguintes:",
+      },
+      {
+        type: "list",
+        items: [
+          "Classe 1: Cônjuge, companheiro(a) e filhos menores de 21 anos ou inválidos/com deficiência",
+          "Classe 2: Pais do segurado falecido",
+          "Classe 3: Irmãos menores de 21 anos ou inválidos/com deficiência",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "Cônjuges e companheiros em união estável têm dependência presumida — não precisam comprovar dependência econômica. Pais e irmãos precisam comprovar.",
+      },
+      {
+        type: "heading",
+        text: "Como é Calculado o Valor da Pensão em 2026",
+      },
+      {
+        type: "paragraph",
+        text: "Após a Reforma da Previdência, o cálculo da pensão por morte mudou significativamente. O valor base é de 50% do que o segurado recebia (ou teria direito) mais 10% por cada dependente, até o limite de 100%.",
+      },
+      {
+        type: "subheading",
+        text: "Exemplos de Cálculo",
+      },
+      {
+        type: "list",
+        items: [
+          "1 dependente: 50% + 10% = 60% do valor da aposentadoria",
+          "2 dependentes: 50% + 20% = 70% do valor da aposentadoria",
+          "3 dependentes: 50% + 30% = 80% do valor da aposentadoria",
+          "5 ou mais dependentes: 50% + 50% = 100% do valor da aposentadoria",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Se o valor calculado for inferior a um salário mínimo (R$ 1.518,00 em 2026), o beneficiário receberá o mínimo. Quando o dependente que gerou a cota perde a condição (ex: filho completa 21 anos), a cota não é redistribuída.",
+      },
+      {
+        type: "heading",
+        text: "Duração da Pensão por Morte",
+      },
+      {
+        type: "paragraph",
+        text: "A duração da pensão para cônjuges e companheiros depende da idade do beneficiário na data do óbito e do tempo de casamento/união estável:",
+      },
+      {
+        type: "list",
+        items: [
+          "Menos de 2 anos de casamento e menos de 18 contribuições: 4 meses",
+          "Cônjuge com menos de 22 anos: 3 anos",
+          "Cônjuge entre 22 e 27 anos: 6 anos",
+          "Cônjuge entre 28 e 30 anos: 10 anos",
+          "Cônjuge entre 31 e 41 anos: 15 anos",
+          "Cônjuge entre 42 e 44 anos: 20 anos",
+          "Cônjuge com 45 anos ou mais: vitalícia",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Documentos Necessários para Solicitar",
+      },
+      {
+        type: "list",
+        items: [
+          "Certidão de óbito do segurado",
+          "Documentos de identificação do dependente (RG, CPF)",
+          "Certidão de casamento ou prova de união estável",
+          "Certidão de nascimento (para filhos)",
+          "Documentos do segurado falecido (CPF, carteira de trabalho)",
+          "Comprovante de dependência econômica (para pais e irmãos)",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Casos Especiais",
+      },
+      {
+        type: "subheading",
+        text: "Morte por Acidente de Trabalho",
+      },
+      {
+        type: "paragraph",
+        text: "Quando o óbito decorre de acidente de trabalho ou doença ocupacional, não há exigência de carência e podem existir indenizações adicionais contra o empregador.",
+      },
+      {
+        type: "subheading",
+        text: "Ex-cônjuge com Pensão Alimentícia",
+      },
+      {
+        type: "paragraph",
+        text: "O ex-cônjuge que recebia pensão alimentícia do falecido também tem direito à pensão por morte, desde que comprove a dependência econômica. O valor será rateado com os demais dependentes.",
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "A pensão por morte é um direito fundamental para a proteção da família após a perda de um ente querido. Conhecer as regras e ter toda a documentação em ordem agiliza o processo e evita indeferimentos. A Cantarelli Advocacia está à disposição para orientar você e sua família em todo o processo.",
       },
     ],
   },
