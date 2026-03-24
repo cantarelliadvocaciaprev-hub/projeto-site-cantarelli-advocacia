@@ -10,6 +10,12 @@ import revisaoImg from "@/assets/blog/revisao-beneficio-2026.jpg";
 import auxAcidenteImg from "@/assets/blog/auxilio-acidente-2026.jpg";
 import diagnosticoImg from "@/assets/blog/diagnostico-previdenciario-2026.jpg";
 import invalidezImg from "@/assets/blog/aposentadoria-invalidez-2026.jpg";
+import tempoContribuicaoImg from "@/assets/blog/tempo-contribuicao-2026.jpg";
+import doencaOcupacionalImg from "@/assets/blog/doenca-ocupacional-2026.jpg";
+import salarioMaternidadeImg from "@/assets/blog/salario-maternidade-2026.jpg";
+import contribuinteIndividualImg from "@/assets/blog/contribuinte-individual-2026.jpg";
+import aposentadoriaProfessorImg from "@/assets/blog/aposentadoria-professor-2026.jpg";
+import cnisAnaliseImg from "@/assets/blog/cnis-analise-2026.jpg";
 
 export interface BlogArticleContent {
   type: "paragraph" | "heading" | "subheading" | "list" | "highlight";
