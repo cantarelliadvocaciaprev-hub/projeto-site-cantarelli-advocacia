@@ -13,6 +13,7 @@ const Blog = () => {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [showAllTags, setShowAllTags] = useState(false);
 
   const categories = useMemo(
     () => Array.from(new Set(blogArticles.map((a) => a.category))),
