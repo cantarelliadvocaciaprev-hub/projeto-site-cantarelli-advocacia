@@ -1833,7 +1833,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "highlight",
-        text: "Dica importante: solicite seu CNIS detalhado (com indicadores) pelo Meu INSS ou por requerimento ao INSS. A versão resumida não mostra todas as pendências que podem impactar seu benefício.",
+        text: "Dica importante: o CNIS detalhado (com indicadores) pode revelar pendências ocultas que impactam seu benefício. Um advogado previdenciário pode solicitar e analisar esse documento para identificar todas as correções necessárias.",
       },
       {
         type: "heading",
