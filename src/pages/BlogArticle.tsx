@@ -103,7 +103,7 @@ const BlogArticle = () => {
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                   <Button size="sm" className="bg-[#25D366] hover:bg-[#20BA5A] text-white">
                     <MessageCircle className="w-4 h-4 mr-2" />
-                    Falar com Advogado
+                    Fale com Especialista
                   </Button>
                 </a>
               </div>
