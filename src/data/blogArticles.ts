@@ -530,7 +530,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Aposentadoria Especial por Insalubridade em 2026: Quem Tem Direito",
     excerpt:
       "Profissionais expostos a agentes nocivos podem se aposentar mais cedo. Conheça as regras da aposentadoria especial em 2026, os agentes reconhecidos e como comprovar a exposição.",
-    date: "25 de Fevereiro, 2026",
+    date: "22 de Março, 2026",
     category: "Aposentadoria",
     readTime: "7 min",
     keyTakeaways: [
