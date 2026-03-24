@@ -1582,7 +1582,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "highlight",
-        text: "O salário-maternidade não pode ser inferior ao salário mínimo de R$ 1.518,00 e pode chegar ao teto do INSS de R$ 8.157,41.",
+        text: "O salário-maternidade não pode ser inferior ao salário mínimo de R$ 1.621,00 e pode chegar ao teto do INSS de R$ 8.157,41.",
       },
       {
         type: "heading",
