@@ -10,6 +10,12 @@ import revisaoImg from "@/assets/blog/revisao-beneficio-2026.jpg";
 import auxAcidenteImg from "@/assets/blog/auxilio-acidente-2026.jpg";
 import diagnosticoImg from "@/assets/blog/diagnostico-previdenciario-2026.jpg";
 import invalidezImg from "@/assets/blog/aposentadoria-invalidez-2026.jpg";
+import tempoContribuicaoImg from "@/assets/blog/tempo-contribuicao-2026.jpg";
+import doencaOcupacionalImg from "@/assets/blog/doenca-ocupacional-2026.jpg";
+import salarioMaternidadeImg from "@/assets/blog/salario-maternidade-2026.jpg";
+import contribuinteIndividualImg from "@/assets/blog/contribuinte-individual-2026.jpg";
+import aposentadoriaProfessorImg from "@/assets/blog/aposentadoria-professor-2026.jpg";
+import cnisAnaliseImg from "@/assets/blog/cnis-analise-2026.jpg";
 
 export interface BlogArticleContent {
   type: "paragraph" | "heading" | "subheading" | "list" | "highlight";
@@ -1347,6 +1353,521 @@ export const blogArticles: BlogArticle[] = [
       {
         type: "paragraph",
         text: "A aposentadoria por invalidez é essencial para quem perdeu a capacidade de trabalhar. Se você teve o benefício negado ou quer saber se tem direito, a Cantarelli Advocacia é especialista em incapacidade e pode analisar seu caso gratuitamente.",
+      },
+    ],
+  },
+  {
+    slug: "tempo-contribuicao-inss-2026-como-calcular",
+    title: "Tempo de Contribuição ao INSS em 2026: Como Calcular e Contar Períodos",
+    excerpt: "Saiba como calcular seu tempo de contribuição, incluir períodos especiais e evitar perdas que podem atrasar sua aposentadoria.",
+    date: "22 de Março, 2026",
+    category: "Aposentadoria",
+    readTime: "7 min",
+    keyTakeaways: [
+      "É possível converter tempo especial em comum para antecipar a aposentadoria",
+      "Períodos como militar, aluno-aprendiz e rural podem ser computados",
+      "Erros no CNIS podem omitir anos inteiros de contribuição",
+      "O planejamento previdenciário identifica períodos perdidos e a melhor estratégia",
+    ],
+    lastUpdated: "Março 2026",
+    image: tempoContribuicaoImg,
+    imageAlt: "Advogado previdenciário analisando tempo de contribuição e documentos do INSS",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "O tempo de contribuição é o principal requisito para a maioria das aposentadorias do INSS. No entanto, muitos segurados não sabem que existem períodos que podem ser incluídos no cálculo e que, se ignorados, podem atrasar a concessão do benefício em anos.",
+      },
+      {
+        type: "heading",
+        text: "Como Funciona o Tempo de Contribuição em 2026",
+      },
+      {
+        type: "paragraph",
+        text: "Após a Reforma da Previdência, o tempo de contribuição continua sendo essencial nas regras de transição. Para homens, são exigidos no mínimo 35 anos de contribuição, e para mulheres, 30 anos. Nas regras de transição por pontos, o tempo se soma à idade para atingir a pontuação mínima.",
+      },
+      {
+        type: "heading",
+        text: "Períodos que Podem Ser Computados",
+      },
+      {
+        type: "list",
+        items: [
+          "Trabalho rural antes de 1991, mesmo sem contribuição formal",
+          "Serviço militar obrigatório",
+          "Período como aluno-aprendiz em escolas técnicas federais",
+          "Tempo de recebimento de auxílio-doença (intercalado com atividade)",
+          "Contribuições em atraso para contribuinte individual",
+          "Período no exterior com acordo previdenciário bilateral",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Conversão de Tempo Especial em Comum",
+      },
+      {
+        type: "paragraph",
+        text: "Quem trabalhou em condições insalubres ou perigosas antes de 13/11/2019 tem direito à conversão do tempo especial em comum. O fator de conversão é de 1,4 para homens e 1,2 para mulheres, o que pode representar anos a mais no cálculo.",
+      },
+      {
+        type: "highlight",
+        text: "Exemplo: um homem com 10 anos de atividade especial pode converter para 14 anos de tempo comum, ganhando 4 anos no cálculo da aposentadoria.",
+      },
+      {
+        type: "heading",
+        text: "Erros Comuns no CNIS que Prejudicam o Segurado",
+      },
+      {
+        type: "list",
+        items: [
+          "Vínculos empregatícios não registrados ou com datas incorretas",
+          "Contribuições pagas que não aparecem no extrato",
+          "Indicadores de pendência que bloqueiam a contagem",
+          "Salários de contribuição zerados ou com valores errados",
+        ],
+      },
+      {
+        type: "heading",
+        text: "A Importância do Planejamento Previdenciário",
+      },
+      {
+        type: "paragraph",
+        text: "Um advogado previdenciário pode analisar seu CNIS em detalhes, identificar períodos não computados, solicitar a correção de dados e simular diferentes cenários de aposentadoria para encontrar a melhor estratégia.",
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "Não deixe que erros ou omissões no seu tempo de contribuição prejudiquem sua aposentadoria. A Cantarelli Advocacia realiza a análise completa do seu histórico previdenciário para garantir que todos os períodos sejam contabilizados corretamente.",
+      },
+    ],
+  },
+  {
+    slug: "doenca-ocupacional-burnout-inss-2026",
+    title: "Doença Ocupacional e Burnout: Direitos no INSS em 2026",
+    excerpt: "Burnout, LER/DORT e doenças ocupacionais garantem benefícios específicos no INSS. Veja como comprovar e quais são seus direitos.",
+    date: "20 de Março, 2026",
+    category: "Benefícios",
+    readTime: "6 min",
+    keyTakeaways: [
+      "A Síndrome de Burnout é reconhecida como doença ocupacional desde 2022",
+      "Doenças ocupacionais dão direito a auxílio por incapacidade acidentário (B91)",
+      "O segurado com doença ocupacional tem estabilidade de 12 meses após alta",
+      "É fundamental ter laudos médicos detalhados que estabeleçam o nexo causal",
+    ],
+    lastUpdated: "Março 2026",
+    image: doencaOcupacionalImg,
+    imageAlt: "Trabalhadora com dor nas costas no ambiente de trabalho representando doença ocupacional",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "As doenças ocupacionais são aquelas causadas ou agravadas pelo ambiente de trabalho. Em 2026, com o aumento de diagnósticos de Burnout, LER/DORT e transtornos psiquiátricos relacionados ao trabalho, cresce a demanda por benefícios previdenciários específicos.",
+      },
+      {
+        type: "heading",
+        text: "O Que é Doença Ocupacional?",
+      },
+      {
+        type: "paragraph",
+        text: "A legislação divide em duas categorias: doença profissional (causada pela atividade específica) e doença do trabalho (causada pelas condições do ambiente). Ambas se equiparam a acidente de trabalho para fins previdenciários.",
+      },
+      {
+        type: "heading",
+        text: "Burnout: Reconhecimento e Direitos",
+      },
+      {
+        type: "paragraph",
+        text: "Desde janeiro de 2022, a Síndrome de Burnout (CID-11 QD85) foi classificada pela OMS como doença ocupacional. Isso significa que trabalhadores diagnosticados com esgotamento profissional têm direito ao auxílio por incapacidade temporária na modalidade acidentária (B91).",
+      },
+      {
+        type: "heading",
+        text: "Benefícios Garantidos por Doença Ocupacional",
+      },
+      {
+        type: "list",
+        items: [
+          "Auxílio por incapacidade temporária acidentário (B91) — sem exigência de carência",
+          "Aposentadoria por incapacidade permanente acidentária (B92) — 100% da média salarial",
+          "Auxílio-acidente (B94) — indenização por sequelas permanentes",
+          "Estabilidade provisória de 12 meses após cessação do benefício",
+          "Depósitos de FGTS durante todo o período de afastamento",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Como Comprovar a Doença Ocupacional",
+      },
+      {
+        type: "list",
+        items: [
+          "Emissão de CAT (Comunicação de Acidente de Trabalho) pela empresa",
+          "Laudos médicos com descrição detalhada da doença e nexo com o trabalho",
+          "Relatórios de condições do ambiente de trabalho",
+          "Prontuário médico com histórico de tratamentos",
+          "Testemunhos de colegas sobre as condições laborais",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "Mesmo que a empresa se recuse a emitir a CAT, o próprio trabalhador, o sindicato ou o médico assistente podem fazê-lo. A falta de CAT não impede o reconhecimento judicial da doença ocupacional.",
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "Se você desenvolveu uma doença em razão do trabalho, incluindo Burnout, é fundamental buscar orientação jurídica especializada. A Cantarelli Advocacia pode ajudar a comprovar o nexo causal e garantir todos os seus direitos previdenciários e trabalhistas.",
+      },
+    ],
+  },
+  {
+    slug: "salario-maternidade-inss-2026-quem-tem-direito",
+    title: "Salário-Maternidade em 2026: Quem Tem Direito e Como Funciona",
+    excerpt: "Entenda quem pode receber o salário-maternidade em 2026, qual o valor, duração e como solicitar esse benefício do INSS.",
+    date: "18 de Março, 2026",
+    category: "Benefícios",
+    readTime: "6 min",
+    keyTakeaways: [
+      "O salário-maternidade é pago por 120 dias em caso de parto ou adoção",
+      "Seguradas especiais (rurais) não precisam de contribuição mínima",
+      "O benefício também cobre casos de aborto espontâneo (14 dias) e natimorto (120 dias)",
+      "O valor para empregadas CLT corresponde à remuneração integral",
+    ],
+    lastUpdated: "Março 2026",
+    image: salarioMaternidadeImg,
+    imageAlt: "Idoso recebendo pagamento de benefício previdenciário em agência bancária",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "O salário-maternidade é um benefício previdenciário pago à segurada do INSS durante o período de afastamento por motivo de parto, adoção, guarda judicial ou aborto não criminoso. Em 2026, as regras permanecem com ajustes importantes que todo segurado precisa conhecer.",
+      },
+      {
+        type: "heading",
+        text: "Quem Tem Direito ao Salário-Maternidade?",
+      },
+      {
+        type: "list",
+        items: [
+          "Empregadas com carteira assinada (CLT)",
+          "Trabalhadoras avulsas",
+          "Empregadas domésticas",
+          "Contribuintes individuais (autônomas)",
+          "Seguradas facultativas",
+          "Seguradas especiais (trabalhadoras rurais)",
+          "Desempregadas no período de graça",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Carência Exigida",
+      },
+      {
+        type: "paragraph",
+        text: "Para empregadas CLT, domésticas e avulsas, não há carência — o direito é imediato. Já para contribuintes individuais e facultativas, é necessário cumprir 10 meses de contribuição. Seguradas especiais precisam comprovar 10 meses de atividade rural.",
+      },
+      {
+        type: "heading",
+        text: "Duração do Benefício",
+      },
+      {
+        type: "list",
+        items: [
+          "Parto (inclusive prematuro): 120 dias",
+          "Adoção ou guarda judicial: 120 dias, independente da idade da criança",
+          "Natimorto: 120 dias",
+          "Aborto espontâneo ou previsto em lei: 14 dias",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Valor do Benefício em 2026",
+      },
+      {
+        type: "paragraph",
+        text: "O valor varia conforme a categoria: empregadas CLT recebem a remuneração integral; domésticas recebem o último salário de contribuição; contribuintes individuais e facultativas recebem a média dos 12 últimos salários; seguradas especiais recebem 1 salário mínimo (R$ 1.518,00 em 2026).",
+      },
+      {
+        type: "highlight",
+        text: "O salário-maternidade não pode ser inferior ao salário mínimo de R$ 1.518,00 e pode chegar ao teto do INSS de R$ 8.157,41.",
+      },
+      {
+        type: "heading",
+        text: "Salário-Maternidade para Homens",
+      },
+      {
+        type: "paragraph",
+        text: "Em casos de adoção por homem solteiro, falecimento da mãe ou em uniões homoafetivas, o segurado homem também tem direito ao salário-maternidade nas mesmas condições.",
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "O salário-maternidade é um direito fundamental da segurada. Se você teve o pedido negado ou tem dúvidas sobre o seu caso, a Cantarelli Advocacia pode analisar sua situação e garantir o recebimento do benefício.",
+      },
+    ],
+  },
+  {
+    slug: "contribuinte-individual-inss-2026-direitos-aposentadoria",
+    title: "Contribuinte Individual (Autônomo) no INSS em 2026: Direitos e Aposentadoria",
+    excerpt: "Trabalhador autônomo, MEI ou profissional liberal? Saiba como contribuir corretamente ao INSS e garantir sua aposentadoria.",
+    date: "16 de Março, 2026",
+    category: "Aposentadoria",
+    readTime: "7 min",
+    keyTakeaways: [
+      "O contribuinte individual pode pagar 20% sobre a renda ou 11% sobre o mínimo",
+      "Quem paga 11% (código 1163) não tem direito à aposentadoria por tempo de contribuição",
+      "MEI contribui com 5% do salário mínimo e tem cobertura previdenciária básica",
+      "É possível complementar contribuições passadas para melhorar o valor do benefício",
+    ],
+    lastUpdated: "Março 2026",
+    image: contribuinteIndividualImg,
+    imageAlt: "Mãe segurando bebê recém-nascido representando salário-maternidade e direitos previdenciários",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "Milhões de brasileiros trabalham como autônomos, profissionais liberais ou microempreendedores individuais (MEI). Em 2026, é fundamental entender as regras de contribuição ao INSS para garantir acesso a benefícios como aposentadoria, auxílio-doença e salário-maternidade.",
+      },
+      {
+        type: "heading",
+        text: "Formas de Contribuição em 2026",
+      },
+      {
+        type: "list",
+        items: [
+          "Plano Normal (20%): alíquota sobre a renda, entre o mínimo de R$ 1.518,00 e o teto de R$ 8.157,41. Dá acesso a todas as aposentadorias.",
+          "Plano Simplificado (11%): R$ 166,98/mês (11% do mínimo). Dá direito apenas à aposentadoria por idade.",
+          "MEI (5%): R$ 75,90/mês (5% do mínimo). Direito à aposentadoria por idade com valor de 1 salário mínimo.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Quais Benefícios Cada Plano Garante?",
+      },
+      {
+        type: "paragraph",
+        text: "Quem contribui com 20% tem acesso a todas as aposentadorias (idade, tempo de contribuição pelas regras de transição, especial e por invalidez). Quem paga 11% ou 5% (MEI) só tem direito à aposentadoria por idade e aos demais benefícios (auxílio-doença, pensão por morte, salário-maternidade).",
+      },
+      {
+        type: "highlight",
+        text: "Atenção: quem contribuiu com 11% ou 5% pode complementar a diferença até 20% a qualquer tempo para ter o período contado como tempo de contribuição. Isso pode ser estratégico no planejamento previdenciário.",
+      },
+      {
+        type: "heading",
+        text: "Contribuições em Atraso",
+      },
+      {
+        type: "paragraph",
+        text: "O contribuinte individual pode recolher contribuições em atraso para cobrir períodos sem pagamento. Para atrasos superiores a 5 anos ou para primeiro recolhimento, é necessário comprovar o exercício da atividade no período.",
+      },
+      {
+        type: "heading",
+        text: "Erros Comuns do Contribuinte Individual",
+      },
+      {
+        type: "list",
+        items: [
+          "Pagar sobre o valor errado e receber aposentadoria menor",
+          "Usar código de pagamento incorreto na GPS",
+          "Não guardar comprovantes de atividade profissional",
+          "Desconhecer o direito à complementação de contribuições",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "Se você é autônomo ou MEI e quer garantir uma aposentadoria justa, a Cantarelli Advocacia pode orientar sobre a melhor forma de contribuição e realizar o planejamento previdenciário completo.",
+      },
+    ],
+  },
+  {
+    slug: "aposentadoria-professor-2026-regras-requisitos",
+    title: "Aposentadoria do Professor em 2026: Regras Especiais e Requisitos",
+    excerpt: "Professores têm regras diferenciadas de aposentadoria. Conheça os requisitos atualizados para 2026 e como garantir seu direito.",
+    date: "14 de Março, 2026",
+    category: "Aposentadoria",
+    readTime: "7 min",
+    keyTakeaways: [
+      "Professores da educação básica têm redução de 5 anos nos requisitos",
+      "A regra de transição por pontos exige 87 pontos (mulheres) e 97 (homens) em 2026",
+      "Apenas magistério em educação infantil, fundamental e médio conta como tempo especial",
+      "Atividades de direção, coordenação e assessoramento pedagógico também contam",
+    ],
+    lastUpdated: "Março 2026",
+    image: aposentadoriaProfessorImg,
+    imageAlt: "Trabalhador autônomo revisando documentos de contribuição previdenciária do INSS",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "Os professores que exercem funções de magistério na educação infantil, ensino fundamental e ensino médio possuem regras diferenciadas para aposentadoria, com redução de 5 anos nos requisitos de idade e tempo de contribuição em relação às regras gerais.",
+      },
+      {
+        type: "heading",
+        text: "Regras de Transição para Professores em 2026",
+      },
+      {
+        type: "subheading",
+        text: "Regra por Pontos",
+      },
+      {
+        type: "paragraph",
+        text: "Em 2026, a pontuação exigida para professores é de 87 pontos para mulheres e 97 pontos para homens (soma de idade + tempo de contribuição em magistério). O tempo mínimo em magistério é de 25 anos para mulheres e 30 para homens.",
+      },
+      {
+        type: "subheading",
+        text: "Idade Mínima Progressiva",
+      },
+      {
+        type: "paragraph",
+        text: "A idade mínima para professores em 2026 é de 54 anos para mulheres e 59 anos para homens, mantendo o tempo mínimo de 25 e 30 anos de contribuição em magistério, respectivamente.",
+      },
+      {
+        type: "subheading",
+        text: "Pedágio de 100%",
+      },
+      {
+        type: "paragraph",
+        text: "Professor que estava a poucos anos de se aposentar em 2019 pode optar pelo pedágio de 100%: cumprir o dobro do tempo que faltava na data da reforma, com idade mínima de 52 anos (mulheres) e 55 anos (homens).",
+      },
+      {
+        type: "heading",
+        text: "O Que Conta Como Tempo de Magistério?",
+      },
+      {
+        type: "list",
+        items: [
+          "Docência em educação infantil, ensino fundamental e ensino médio",
+          "Direção de unidade escolar",
+          "Coordenação e assessoramento pedagógico",
+          "Atividades de supervisão educacional",
+          "Magistério em instituições públicas e privadas",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "Atenção: professores universitários NÃO têm direito à regra especial desde a EC 20/1998. Apenas magistério na educação básica (infantil, fundamental e médio) é considerado.",
+      },
+      {
+        type: "heading",
+        text: "Valor da Aposentadoria do Professor",
+      },
+      {
+        type: "paragraph",
+        text: "O cálculo segue a regra geral pós-Reforma: 60% da média salarial + 2% por ano que exceder 20 anos de contribuição (homens) ou 15 anos (mulheres). Na regra do pedágio de 100%, o valor corresponde a 100% da média.",
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "A aposentadoria do professor envolve particularidades que exigem análise especializada. A Cantarelli Advocacia pode avaliar seu histórico de magistério e identificar a regra de transição mais vantajosa para o seu caso.",
+      },
+    ],
+  },
+  {
+    slug: "cnis-erros-correcao-2026-como-resolver",
+    title: "CNIS com Erros em 2026: Como Identificar e Corrigir para Não Perder Benefícios",
+    excerpt: "Seu CNIS pode conter erros que prejudicam sua aposentadoria. Saiba como identificar e corrigir vínculos, contribuições e pendências.",
+    date: "12 de Março, 2026",
+    category: "Planejamento",
+    readTime: "6 min",
+    keyTakeaways: [
+      "O CNIS é o principal documento usado pelo INSS para conceder benefícios",
+      "Erros como vínculos não registrados e contribuições ausentes são comuns",
+      "A retificação pode ser feita administrativamente ou judicialmente",
+      "Manter documentos como carteira de trabalho e holerites é fundamental para comprovar",
+    ],
+    lastUpdated: "Março 2026",
+    image: cnisAnaliseImg,
+    imageAlt: "Professor em sala de aula representando aposentadoria especial do magistério",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "O Cadastro Nacional de Informações Sociais (CNIS) é o extrato que reúne todo o histórico de contribuições e vínculos do trabalhador junto ao INSS. Em 2026, é o documento mais importante na análise de qualquer pedido de benefício previdenciário — e erros nele podem custar anos de atraso.",
+      },
+      {
+        type: "heading",
+        text: "O Que é o CNIS e Para Que Serve?",
+      },
+      {
+        type: "paragraph",
+        text: "O CNIS registra todas as relações de trabalho, contribuições como autônomo, períodos de benefício e informações cadastrais. O INSS utiliza esse extrato como base para calcular tempo de contribuição, carência e valor do benefício.",
+      },
+      {
+        type: "heading",
+        text: "Erros Mais Comuns no CNIS",
+      },
+      {
+        type: "list",
+        items: [
+          "Vínculos empregatícios que não aparecem (empresa não informou ao governo)",
+          "Datas de admissão ou demissão incorretas",
+          "Salários de contribuição zerados ou com valores errados",
+          "Indicadores de pendência (PEXT, PREC, PVIN) que bloqueiam a contagem",
+          "Contribuições como autônomo que não foram processadas",
+          "Períodos de benefício por incapacidade não registrados",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Os Indicadores de Pendência",
+      },
+      {
+        type: "paragraph",
+        text: "O CNIS utiliza códigos chamados 'indicadores' que sinalizam inconsistências. Os mais comuns são: PEXT (extemporâneo), PREC (recolhimento com data questionável), PVIN (vínculo com pendência) e IREC (recolhimento indébito). Cada um requer tratamento específico.",
+      },
+      {
+        type: "heading",
+        text: "Como Corrigir Erros no CNIS",
+      },
+      {
+        type: "list",
+        items: [
+          "Requerimento administrativo com documentos comprobatórios (CTPS, holerites, contratos)",
+          "Justificação administrativa quando não há documentos formais",
+          "Ação judicial para inclusão de vínculos e retificação de dados",
+          "Pedido de acerto de dados cadastrais (nome, CPF, data de nascimento)",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "Dica importante: solicite seu CNIS detalhado (com indicadores) pelo Meu INSS ou por requerimento ao INSS. A versão resumida não mostra todas as pendências que podem impactar seu benefício.",
+      },
+      {
+        type: "heading",
+        text: "Documentos que Ajudam na Retificação",
+      },
+      {
+        type: "list",
+        items: [
+          "Carteira de Trabalho (CTPS) com registros legíveis",
+          "Holerites e contracheques",
+          "Carnês de contribuição (GPS)",
+          "Contrato de trabalho e termos de rescisão",
+          "Declarações de sindicatos e ex-empregadores",
+          "PPP (Perfil Profissiográfico Previdenciário) para atividades especiais",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "Antes de pedir qualquer benefício ao INSS, analise seu CNIS com cuidado. A Cantarelli Advocacia oferece análise completa do CNIS com identificação de erros, períodos omitidos e estratégias de correção para maximizar seu benefício.",
       },
     ],
   },
