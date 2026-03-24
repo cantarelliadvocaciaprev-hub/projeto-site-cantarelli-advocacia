@@ -972,7 +972,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "Com o salário mínimo de R$ 1.530,00 em 2026, a renda per capita máxima para ter direito ao BPC é de R$ 382,50 por pessoa. Entram no cálculo: cônjuge, filhos, enteados e irmãos que residam no mesmo domicílio.",
+        text: "Com o salário mínimo de R$ 1.621,00 em 2026, a renda per capita máxima para ter direito ao BPC é de R$ 405,25 por pessoa. Entram no cálculo: cônjuge, filhos, enteados e irmãos que residam no mesmo domicílio.",
       },
       {
         type: "paragraph",
