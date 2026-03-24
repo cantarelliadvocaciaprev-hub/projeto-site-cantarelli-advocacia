@@ -29,6 +29,7 @@ export interface BlogArticle {
   excerpt: string;
   date: string;
   category: string;
+  tags: string[];
   readTime: string;
   keyTakeaways: string[];
   lastUpdated: string;
