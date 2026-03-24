@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Users, Briefcase, ClipboardList, MessageSquare, HelpCircle, Phone, UserPlus } from "lucide-react";
+import { Menu, X, Users, Briefcase, ClipboardList, MessageSquare, HelpCircle, Phone, UserPlus, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
@@ -84,6 +84,13 @@ const Header = () => {
       type: "section",
       icon: HelpCircle,
       preview: "Respostas para as dúvidas mais frequentes"
+    },
+    { 
+      label: "Blog", 
+      id: "blog", 
+      type: "section",
+      icon: FileText,
+      preview: "Artigos e notícias sobre Direito Previdenciário atualizados"
     },
     { 
       label: "Contato", 
