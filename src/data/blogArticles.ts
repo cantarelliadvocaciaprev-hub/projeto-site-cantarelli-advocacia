@@ -229,7 +229,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "O valor do auxílio por incapacidade temporária corresponde a 91% do salário de benefício, calculado com base na média de todas as contribuições desde julho de 1994. O piso é de R$ 1.518,00 (salário mínimo 2026) e o teto é de R$ 8.157,41.",
+        text: "O valor do auxílio por incapacidade temporária corresponde a 91% do salário de benefício, calculado com base na média de todas as contribuições desde julho de 1994. O piso é de R$ 1.621,00 (salário mínimo 2026) e o teto é de R$ 8.157,41.",
       },
       {
         type: "heading",
@@ -307,7 +307,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "Se o valor calculado for inferior a um salário mínimo (R$ 1.518,00 em 2026), o beneficiário receberá o mínimo. Quando o dependente que gerou a cota perde a condição (ex: filho completa 21 anos), a cota não é redistribuída.",
+        text: "Se o valor calculado for inferior a um salário mínimo (R$ 1.621,00 em 2026), o beneficiário receberá o mínimo. Quando o dependente que gerou a cota perde a condição (ex: filho completa 21 anos), a cota não é redistribuída.",
       },
       {
         type: "heading",
