@@ -22,6 +22,7 @@ const BancarioSection = lazy(() => import("@/components/BancarioSection"));
 const Planning = lazy(() => import("@/components/Planning"));
 const Testimonials = lazy(() => import("@/components/Testimonials"));
 const FAQ = lazy(() => import("@/components/FAQNative"));
+const BlogHighlights = lazy(() => import("@/components/BlogHighlights"));
 
 
 const Contact = lazy(() => import("@/components/Contact"));
@@ -243,7 +244,9 @@ const Index = () => {
         <Suspense fallback={<FAQSkeleton />}>
           <FAQ />
         </Suspense>
-        
+        <Suspense fallback={<SectionSkeleton />}>
+          <BlogHighlights />
+        </Suspense>
         <Suspense fallback={<ContactSkeleton />}>
           <Contact />
         </Suspense>
