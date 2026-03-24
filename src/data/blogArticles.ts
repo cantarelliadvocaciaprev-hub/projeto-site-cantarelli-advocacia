@@ -986,17 +986,11 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "heading",
-        text: "Como Solicitar o BPC/LOAS",
+        text: "Por Que Contar com um Advogado Especialista?",
       },
       {
-        type: "list",
-        items: [
-          "1. Inscreva-se ou atualize o CadÚnico no CRAS do seu município",
-          "2. Agende o requerimento pelo Meu INSS ou ligando para o 135",
-          "3. Reúna documentos: RG, CPF, comprovante de residência e NIS",
-          "4. Para PCD: leve laudos médicos e exames que comprovem a deficiência",
-          "5. Aguarde a análise — prazo médio é de 45 a 90 dias",
-        ],
+        type: "paragraph",
+        text: "O processo de solicitação do BPC/LOAS envolve critérios técnicos complexos, como a análise de renda per capita, inscrição no CadÚnico e avaliação médica e social. Erros na documentação ou no enquadramento podem resultar em indeferimento. Um advogado previdenciário garante que todo o processo seja conduzido corretamente, aumentando significativamente as chances de aprovação.",
       },
       {
         type: "heading",
@@ -1162,16 +1156,11 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "heading",
-        text: "Como Solicitar o Auxílio-Acidente",
+        text: "A Importância da Orientação Jurídica Especializada",
       },
       {
-        type: "list",
-        items: [
-          "Agende perícia médica no INSS pelo Meu INSS ou pelo telefone 135",
-          "Leve laudos médicos, exames e relatórios que comprovem a sequela permanente",
-          "A CAT (Comunicação de Acidente de Trabalho) fortalece o pedido, mas não é obrigatória",
-          "Se negado, é possível recorrer administrativamente ou judicialmente",
-        ],
+        type: "paragraph",
+        text: "O auxílio-acidente exige comprovação de sequela permanente por perícia médica, o que torna o processo técnico e sujeito a indeferimentos. Um advogado previdenciário pode reunir a documentação médica adequada, orientar sobre a CAT (Comunicação de Acidente de Trabalho) e, se necessário, recorrer administrativa ou judicialmente para garantir a concessão do benefício.",
       },
       {
         type: "heading",
@@ -1589,11 +1578,11 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "O valor varia conforme a categoria: empregadas CLT recebem a remuneração integral; domésticas recebem o último salário de contribuição; contribuintes individuais e facultativas recebem a média dos 12 últimos salários; seguradas especiais recebem 1 salário mínimo (R$ 1.518,00 em 2026).",
+        text: "O valor varia conforme a categoria: empregadas CLT recebem a remuneração integral; domésticas recebem o último salário de contribuição; contribuintes individuais e facultativas recebem a média dos 12 últimos salários; seguradas especiais recebem 1 salário mínimo (R$ 1.621,00 em 2026).",
       },
       {
         type: "highlight",
-        text: "O salário-maternidade não pode ser inferior ao salário mínimo de R$ 1.518,00 e pode chegar ao teto do INSS de R$ 8.157,41.",
+        text: "O salário-maternidade não pode ser inferior ao salário mínimo de R$ 1.621,00 e pode chegar ao teto do INSS de R$ 8.157,41.",
       },
       {
         type: "heading",
@@ -1844,7 +1833,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "highlight",
-        text: "Dica importante: solicite seu CNIS detalhado (com indicadores) pelo Meu INSS ou por requerimento ao INSS. A versão resumida não mostra todas as pendências que podem impactar seu benefício.",
+        text: "Dica importante: o CNIS detalhado (com indicadores) pode revelar pendências ocultas que impactam seu benefício. Um advogado previdenciário pode solicitar e analisar esse documento para identificar todas as correções necessárias.",
       },
       {
         type: "heading",
