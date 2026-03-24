@@ -1627,8 +1627,8 @@ export const blogArticles: BlogArticle[] = [
       "É possível complementar contribuições passadas para melhorar o valor do benefício",
     ],
     lastUpdated: "Março 2026",
-    image: contribuinteIndividualImg,
-    imageAlt: "Mãe segurando bebê recém-nascido representando salário-maternidade e direitos previdenciários",
+    image: salarioMaternidadeImg,
+    imageAlt: "Idoso recebendo pagamento de benefício previdenciário em agência bancária",
     author: "Thiago Cantarelli",
     content: [
       {
