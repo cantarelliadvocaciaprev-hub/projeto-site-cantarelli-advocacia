@@ -158,7 +158,7 @@ export const blogArticles: BlogArticle[] = [
     category: "Benefícios",
     readTime: "6 min",
     keyTakeaways: [
-      "O pedido pode ser feito 100% online pelo Meu INSS com atestado médico digitalizado",
+      "O pedido pode ser feito com auxílio de um advogado especialista para maior chance de aprovação",
       "A perícia médica por telemedicina foi ampliada em 2026 para mais municípios",
       "Recurso administrativo contra indeferimento tem prazo de 30 dias",
     ],
@@ -199,34 +199,6 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "heading",
-        text: "Como Solicitar pelo Meu INSS",
-      },
-      {
-        type: "subheading",
-        text: "Passo 1: Acesse o Meu INSS",
-      },
-      {
-        type: "paragraph",
-        text: "Acesse o aplicativo ou site meu.inss.gov.br e faça login com sua conta gov.br. Vá em 'Novo Pedido' e selecione 'Auxílio por Incapacidade Temporária'.",
-      },
-      {
-        type: "subheading",
-        text: "Passo 2: Envie o Atestado Médico",
-      },
-      {
-        type: "paragraph",
-        text: "Em 2026, o INSS ampliou o sistema de análise documental. Envie o atestado médico digitalizado com boa resolução, contendo: CID da doença, período de afastamento recomendado, data, assinatura e CRM do médico.",
-      },
-      {
-        type: "subheading",
-        text: "Passo 3: Perícia Médica",
-      },
-      {
-        type: "paragraph",
-        text: "A perícia pode ser presencial em uma agência do INSS ou por telemedicina (consulta por vídeo). Em 2026, a perícia por telemedicina foi ampliada para mais de 2.000 municípios brasileiros.",
-      },
-      {
-        type: "heading",
         text: "Motivos Comuns de Indeferimento",
       },
       {
@@ -257,7 +229,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "O valor do auxílio por incapacidade temporária corresponde a 91% do salário de benefício, calculado com base na média de todas as contribuições desde julho de 1994. O piso é de R$ 1.518,00 (salário mínimo 2026) e o teto é de R$ 8.475,55.",
+        text: "O valor do auxílio por incapacidade temporária corresponde a 91% do salário de benefício, calculado com base na média de todas as contribuições desde julho de 1994. O piso é de R$ 1.518,00 (salário mínimo 2026) e o teto é de R$ 8.157,41.",
       },
       {
         type: "heading",
