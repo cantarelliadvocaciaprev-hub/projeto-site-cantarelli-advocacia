@@ -5,6 +5,11 @@ import ruralImg from "@/assets/blog/aposentadoria-rural-2026.jpg";
 import especialImg from "@/assets/blog/aposentadoria-especial-2026.jpg";
 import pcdImg from "@/assets/blog/aposentadoria-pcd-2026.jpg";
 import ruidoImg from "@/assets/blog/aposentadoria-ruido-especial-2026.jpg";
+import bpcLoasImg from "@/assets/blog/bpc-loas-2026.jpg";
+import revisaoImg from "@/assets/blog/revisao-beneficio-2026.jpg";
+import auxAcidenteImg from "@/assets/blog/auxilio-acidente-2026.jpg";
+import diagnosticoImg from "@/assets/blog/diagnostico-previdenciario-2026.jpg";
+import invalidezImg from "@/assets/blog/aposentadoria-invalidez-2026.jpg";
 
 export interface BlogArticleContent {
   type: "paragraph" | "heading" | "subheading" | "list" | "highlight";
