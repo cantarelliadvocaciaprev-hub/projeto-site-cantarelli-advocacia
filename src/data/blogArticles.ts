@@ -780,7 +780,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Aposentadoria Especial por Exposição ao Ruído e Tempo Especial para Contribuintes Individuais em 2026",
     excerpt:
       "Trabalhadores expostos ao ruído acima de 85 dB podem ter direito à aposentadoria especial. Saiba também como contribuintes individuais podem conseguir o reconhecimento de tempo especial no INSS.",
-    date: "15 de Fevereiro, 2026",
+    date: "18 de Março, 2026",
     category: "Aposentadoria Especial",
     readTime: "8 min",
     keyTakeaways: [
