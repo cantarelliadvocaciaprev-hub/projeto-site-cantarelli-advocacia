@@ -1704,8 +1704,8 @@ export const blogArticles: BlogArticle[] = [
       "Atividades de direção, coordenação e assessoramento pedagógico também contam",
     ],
     lastUpdated: "Março 2026",
-    image: aposentadoriaProfessorImg,
-    imageAlt: "Trabalhador autônomo revisando documentos de contribuição previdenciária do INSS",
+    image: cnisAnaliseImg,
+    imageAlt: "Professor em sala de aula representando aposentadoria especial do magistério",
     author: "Thiago Cantarelli",
     content: [
       {
@@ -1790,8 +1790,8 @@ export const blogArticles: BlogArticle[] = [
       "Manter documentos como carteira de trabalho e holerites é fundamental para comprovar",
     ],
     lastUpdated: "Março 2026",
-    image: cnisAnaliseImg,
-    imageAlt: "Professor em sala de aula representando aposentadoria especial do magistério",
+    image: aposentadoriaProfessorImg,
+    imageAlt: "Especialista analisando cadastro previdenciário e documentos para correção de erros no CNIS",
     author: "Thiago Cantarelli",
     content: [
       {
