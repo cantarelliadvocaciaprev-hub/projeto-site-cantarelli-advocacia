@@ -184,10 +184,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Quais são as regras de transição da aposentadoria em 2026?", answer: "Em 2026, existem quatro regras de transição: pedágio de 50%, pedágio de 100%, idade progressiva e pontos. Cada uma tem requisitos específicos de idade e tempo de contribuição." },
-    { question: "Qual a melhor regra de transição para mim?", answer: "Depende do seu tempo de contribuição e idade. Um planejamento previdenciário com advogado especialista pode identificar qual regra garante o maior benefício." },
-    { question: "A reforma da previdência prejudicou quem já contribuía?", answer: "As regras de transição foram criadas justamente para proteger quem já contribuía antes da reforma de 2019, garantindo um caminho intermediário até a aposentadoria." },
-  ],
+    { question: "É possível combinar tempo de contribuição de dois regimes diferentes?", answer: "Sim. A contagem recíproca permite somar tempo do RGPS (INSS) com regimes próprios (servidores públicos), desde que não seja simultâneo." },
+    { question: "Quem estava perto de se aposentar antes da reforma perdeu o direito?", answer: "Não. As regras de transição foram criadas exatamente para proteger quem já contribuía. Dependendo do tempo faltante, pode haver opções vantajosas." },
+    { question: "Posso desistir de uma regra de transição e escolher outra?", answer: "Sim. Antes da concessão definitiva, é possível solicitar a aplicação da regra mais vantajosa. Um advogado pode simular cada cenário." }
+  ]
   },
   {
     slug: "auxilio-incapacidade-temporaria-2026-como-solicitar",
@@ -282,10 +282,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Quanto tempo dura o auxílio por incapacidade temporária?", answer: "Não há prazo fixo. O benefício é mantido enquanto a perícia médica do INSS constatar a incapacidade para o trabalho." },
-    { question: "Posso trabalhar recebendo auxílio-doença?", answer: "Não. O auxílio por incapacidade temporária pressupõe que você está incapaz de exercer sua atividade profissional. Trabalhar pode gerar cancelamento do benefício." },
-    { question: "O que fazer se o INSS negar meu auxílio-doença?", answer: "Você pode entrar com recurso administrativo no CRPS ou buscar a Justiça com apoio de um advogado previdenciário para reverter a negativa." },
-  ],
+    { question: "A empresa pode demitir durante o recebimento de auxílio-doença?", answer: "Não. O contrato de trabalho fica suspenso durante o benefício. A demissão só pode ocorrer após o retorno ao trabalho." },
+    { question: "Existe limite de vezes para pedir auxílio por incapacidade?", answer: "Não. O segurado pode solicitar quantas vezes forem necessárias, desde que comprove nova incapacidade e mantenha a qualidade de segurado." },
+    { question: "O auxílio-doença pode ser transformado em aposentadoria por invalidez?", answer: "Sim. Se durante o período de benefício a perícia constatar incapacidade permanente, o auxílio pode ser convertido em aposentadoria por invalidez." }
+  ]
   },
   {
     slug: "pensao-por-morte-2026-novas-regras-duracao",
@@ -421,10 +421,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Quem tem direito à pensão por morte em 2026?", answer: "Cônjuges, companheiros, filhos menores de 21 anos (ou inválidos/deficientes), e pais que comprovem dependência econômica do segurado falecido." },
-    { question: "A pensão por morte é vitalícia?", answer: "Depende da idade do cônjuge na data do óbito e do tempo de casamento ou união estável. Para cônjuges com menos de 44 anos, a duração é proporcional." },
-    { question: "É possível acumular pensão por morte com aposentadoria?", answer: "Sim, mas com restrições. O benefício de menor valor sofre redução escalonada conforme regras da reforma de 2019." },
-  ],
+    { question: "Companheiro(a) em união estável tem direito à pensão?", answer: "Sim. A união estável é equiparada ao casamento para fins de pensão por morte, desde que comprovada por documentos ou testemunhos." },
+    { question: "Ex-cônjuge que recebia pensão alimentícia tem direito à pensão por morte?", answer: "Sim. O ex-cônjuge ou companheiro que recebia pensão alimentícia mantém o direito à pensão por morte, comprovada a dependência econômica." },
+    { question: "A pensão por morte pode ser solicitada anos depois do óbito?", answer: "Sim, mas os atrasados só retroagem à data do óbito se requerida em até 90 dias (180 dias para menores). Após esse prazo, vale a partir do requerimento." }
+  ]
   },
   {
     slug: "aposentadoria-rural-2026-como-comprovar",
@@ -555,10 +555,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Como comprovar atividade rural para aposentadoria?", answer: "São aceitos documentos como contrato de arrendamento, notas de produtor rural, declaração do sindicato, bloco de notas e testemunhos." },
-    { question: "Qual a idade mínima para aposentadoria rural?", answer: "55 anos para mulheres e 60 anos para homens, com pelo menos 15 anos de atividade rural comprovada." },
-    { question: "Trabalhador rural precisa pagar INSS?", answer: "O segurado especial (agricultura familiar) não precisa contribuir individualmente, mas deve comprovar o exercício da atividade rural." },
-  ],
+    { question: "Quem mudou do campo para a cidade perde o tempo rural?", answer: "Não. O tempo de atividade rural pode ser somado ao tempo urbano para qualquer aposentadoria, mediante comprovação documental." },
+    { question: "Filhos de agricultores podem usar o tempo rural dos pais?", answer: "Não diretamente, mas o filho que trabalhou na propriedade familiar desde jovem pode comprovar seu próprio tempo rural a partir dos 12 anos." },
+    { question: "Pescador artesanal tem os mesmos direitos do trabalhador rural?", answer: "Sim. Pescadores artesanais são considerados segurados especiais com os mesmos benefícios e requisitos dos trabalhadores rurais." }
+  ]
   },
   {
     slug: "aposentadoria-especial-insalubridade-2026",
@@ -670,10 +670,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Quem tem direito à aposentadoria especial?", answer: "Trabalhadores expostos a agentes nocivos (químicos, físicos ou biológicos) de forma habitual e permanente, como ruído excessivo, calor, produtos químicos, entre outros." },
-    { question: "A aposentadoria especial exige idade mínima após a reforma?", answer: "Sim. Desde 2019, é necessário atingir idade mínima de 55, 58 ou 60 anos, dependendo do grau de nocividade da atividade." },
-    { question: "Como comprovar insalubridade para aposentadoria especial?", answer: "Com o PPP (Perfil Profissiográfico Previdenciário) e o LTCAT (Laudo Técnico das Condições Ambientais do Trabalho) fornecidos pela empresa." },
-  ],
+    { question: "Profissional de saúde tem direito à aposentadoria especial?", answer: "Sim, se comprovar exposição habitual e permanente a agentes biológicos nocivos, como vírus e bactérias, em ambiente hospitalar." },
+    { question: "É possível converter tempo especial em comum?", answer: "Sim, para períodos anteriores à Reforma de 2019. O fator de conversão é 1,4 para homens e 1,2 para mulheres com atividade de 25 anos." },
+    { question: "Trabalhador terceirizado tem direito à aposentadoria especial?", answer: "Sim, se comprovar a exposição a agentes nocivos, independentemente do vínculo ser direto ou terceirizado. O PPP deve ser fornecido pela empresa tomadora." }
+  ]
   },
   {
     slug: "aposentadoria-pcd-por-idade-tempo-contribuicao-2026",
@@ -817,10 +817,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Pessoa com deficiência pode se aposentar mais cedo?", answer: "Sim. A Lei Complementar 142/2013 garante redução no tempo de contribuição e na idade mínima conforme o grau da deficiência (leve, moderada ou grave)." },
-    { question: "Qual o tempo de contribuição para PCD se aposentar?", answer: "Varia: 25 anos (grave), 29 anos (moderada) ou 33 anos (leve) para homens. Para mulheres: 20, 24 ou 28 anos, respectivamente." },
-    { question: "Como é feita a avaliação da deficiência pelo INSS?", answer: "A avaliação é biopsicossocial, realizada por perito médico e assistente social do INSS, considerando impedimentos e barreiras sociais." },
-  ],
+    { question: "Deficiência adquirida depois de anos de contribuição dá direito?", answer: "Sim. O tempo contribuído antes e depois da deficiência é contabilizado proporcionalmente, aplicando-se a regra mais vantajosa ao segurado." },
+    { question: "É necessário ter laudo médico atualizado para a perícia do INSS?", answer: "Sim. Laudos recentes (até 12 meses) fortalecem a avaliação, especialmente para condições que podem variar ao longo do tempo." },
+    { question: "PCD pode acumular aposentadoria com benefício assistencial?", answer: "Não. Ao se aposentar, o beneficiário deve abrir mão do BPC/LOAS. Porém, a aposentadoria costuma ser mais vantajosa financeiramente." }
+  ]
   },
   {
     slug: "aposentadoria-especial-ruido-contribuinte-individual-2026",
@@ -975,10 +975,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Contribuinte individual tem direito a aposentadoria especial?", answer: "É muito difícil, pois o contribuinte individual precisa comprovar exposição a agentes nocivos sem vínculo empregatício, o que exige documentação robusta." },
-    { question: "Qual o nível de ruído que dá direito à aposentadoria especial?", answer: "A partir de 85 decibéis de exposição habitual e permanente, conforme normas técnicas vigentes." },
-    { question: "EPI elimina o direito à aposentadoria especial por ruído?", answer: "O STF decidiu que o uso de EPI eficaz pode afastar o direito, exceto para ruído, onde se reconhece que o EPI não elimina totalmente os danos." },
-  ],
+    { question: "O trabalhador pode medir o ruído por conta própria?", answer: "Não. A medição deve constar em laudos técnicos oficiais (LTCAT) elaborados por engenheiro de segurança do trabalho ou médico do trabalho." },
+    { question: "Trabalho com fone de ouvido em call center configura exposição a ruído?", answer: "Pode configurar, se houver medição técnica que comprove exposição acima de 85 dB. É necessário laudo específico do ambiente." },
+    { question: "Período sem PPP impede a aposentadoria especial?", answer: "Não necessariamente. É possível obter o PPP retroativamente ou usar outros meios de prova como laudos técnicos e perícia judicial." }
+  ]
   },
   {
     slug: "bpc-loas-2026-quem-tem-direito-como-solicitar",
@@ -1085,10 +1085,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Qual a renda máxima para receber BPC/LOAS?", answer: "A renda familiar per capita deve ser inferior a 1/4 do salário mínimo, embora decisões judiciais possam flexibilizar esse critério." },
-    { question: "BPC/LOAS é o mesmo que aposentadoria?", answer: "Não. O BPC é um benefício assistencial que não exige contribuição ao INSS, mas também não gera 13º salário nem pensão por morte." },
-    { question: "Precisa de advogado para pedir BPC?", answer: "Não é obrigatório, mas um advogado previdenciário aumenta significativamente as chances de aprovação, especialmente em casos de negativa." },
-  ],
+    { question: "Estrangeiro residente no Brasil pode receber BPC?", answer: "Sim. O STF decidiu que estrangeiros com residência fixa no Brasil têm direito ao BPC, desde que cumpram os demais requisitos legais." },
+    { question: "O que acontece com o BPC se eu começar a trabalhar?", answer: "O benefício pode ser suspenso. Porém, pessoas com deficiência têm direito ao retorno automático do BPC se pararem de trabalhar em até 2 anos." },
+    { question: "Morador de rua pode receber BPC?", answer: "Sim. Pessoas em situação de rua podem solicitar o BPC. A ausência de endereço fixo não impede o acesso ao benefício." }
+  ]
   },
   {
     slug: "revisao-beneficio-inss-2026-aumento-aposentadoria",
@@ -1174,10 +1174,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Quando vale a pena pedir revisão de aposentadoria?", answer: "Quando há indícios de erro no cálculo, contribuições não computadas, atividade especial não reconhecida ou aplicação de regra mais vantajosa." },
-    { question: "Qual o prazo para pedir revisão do INSS?", answer: "O prazo decadencial é de 10 anos a partir do primeiro pagamento do benefício. Após esse prazo, a revisão não é mais possível." },
-    { question: "A revisão pode diminuir minha aposentadoria?", answer: "Na via administrativa, existe esse risco. Na via judicial, o princípio da vedação à reformatio in pejus impede a redução do benefício." },
-  ],
+    { question: "Aposentadoria concedida por acordo judicial pode ser revisada?", answer: "Depende. Se o acordo incluiu cláusula de renúncia à revisão, não será possível. Caso contrário, o prazo de 10 anos se aplica normalmente." },
+    { question: "Revisão da vida toda ainda é possível em 2026?", answer: "Sim, desde que dentro do prazo decadencial de 10 anos e que as contribuições anteriores a julho/1994 sejam mais vantajosas ao cálculo." },
+    { question: "Erro de digitação no nome pode afetar o valor da aposentadoria?", answer: "Indiretamente, sim. Erros cadastrais podem fazer com que contribuições não sejam computadas. A correção é feita pela retificação do CNIS." }
+  ]
   },
   {
     slug: "auxilio-acidente-2026-quem-tem-direito-valor",
@@ -1255,10 +1255,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Qual o valor do auxílio-acidente em 2026?", answer: "O auxílio-acidente corresponde a 50% do salário de benefício, sendo pago como indenização pela redução da capacidade laboral." },
-    { question: "Auxílio-acidente é vitalício?", answer: "Era vitalício até a reforma de 2019. Agora, ele cessa quando o segurado se aposenta, sendo incorporado ao cálculo da aposentadoria." },
-    { question: "Preciso de advogado para conseguir auxílio-acidente?", answer: "Embora não seja obrigatório, a maioria dos casos de auxílio-acidente é concedida pela via judicial, onde o advogado é essencial." },
-  ],
+    { question: "Acidente de trânsito a caminho do trabalho gera auxílio-acidente?", answer: "Sim. O acidente de trajeto (in itinere) era equiparado ao acidente de trabalho. Após a Reforma, ainda pode gerar direitos dependendo do caso." },
+    { question: "Perda parcial da audição por trabalho dá direito ao auxílio-acidente?", answer: "Sim. A perda auditiva parcial e permanente causada pelo ambiente de trabalho é uma das causas mais comuns de concessão de auxílio-acidente." },
+    { question: "É possível receber auxílio-acidente e auxílio-doença ao mesmo tempo?", answer: "Não. O auxílio-acidente só é concedido após a alta do auxílio-doença, quando resta sequela que reduz a capacidade laboral." }
+  ]
   },
   {
     slug: "diagnostico-previdenciario-2026-planejamento-aposentadoria",
@@ -1350,10 +1350,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "O que é diagnóstico previdenciário?", answer: "É uma análise completa do histórico contributivo para identificar a melhor estratégia de aposentadoria, considerando todas as regras disponíveis." },
-    { question: "Quanto custa um planejamento previdenciário?", answer: "O valor varia conforme a complexidade do caso. Entre em contato conosco para uma avaliação personalizada sem compromisso." },
-    { question: "Vale a pena fazer planejamento previdenciário?", answer: "Sim. Um bom planejamento pode significar milhares de reais a mais na aposentadoria e evitar contribuições desnecessárias." },
-  ],
+    { question: "Com que antecedência devo fazer o planejamento previdenciário?", answer: "Idealmente 5 a 10 anos antes da previsão de aposentadoria, pois ainda é possível corrigir falhas e otimizar contribuições." },
+    { question: "Planejamento previdenciário serve para quem já está aposentado?", answer: "Sim. Pode identificar se há direito à revisão do benefício ou à inclusão de períodos não computados pelo INSS." },
+    { question: "O que é simulação previdenciária e como funciona?", answer: "É uma projeção que compara cenários de aposentadoria em diferentes regras, mostrando a melhor data e o valor estimado de cada opção." }
+  ]
   },
   {
     slug: "aposentadoria-por-invalidez-2026-requisitos-valor",
@@ -1440,10 +1440,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Qual o valor da aposentadoria por invalidez?", answer: "Corresponde a 60% da média salarial + 2% por ano acima de 20 anos de contribuição (homem) ou 15 anos (mulher). Pode chegar a 100% em casos de acidente de trabalho." },
-    { question: "Aposentadoria por invalidez pode ser cancelada?", answer: "Sim. O INSS pode convocar o segurado para perícia de reavaliação. Se constatada recuperação da capacidade, o benefício pode ser cessado." },
-    { question: "Quem recebe aposentadoria por invalidez pode trabalhar?", answer: "Em regra, não. Exercer atividade remunerada pode gerar cancelamento do benefício, salvo em casos de atividade terapêutica." },
-  ],
+    { question: "Aposentado por invalidez pode viajar para o exterior?", answer: "Sim, mas deve comparecer às convocações de perícia. Ausência pode gerar suspensão do benefício." },
+    { question: "O que é pente-fino do INSS na aposentadoria por invalidez?", answer: "É a revisão periódica em que o INSS convoca aposentados por invalidez para nova perícia médica, verificando se a incapacidade persiste." },
+    { question: "Aposentado por invalidez pode fazer faculdade?", answer: "Sim. Estudar não é considerado atividade remunerada e não afeta o benefício. Inclusive, a reabilitação profissional é incentivada." }
+  ]
   },
   {
     slug: "tempo-contribuicao-inss-2026-como-calcular",
@@ -1534,10 +1534,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Como consultar meu tempo de contribuição no INSS?", answer: "Pelo aplicativo ou site Meu INSS, acessando o extrato CNIS (Cadastro Nacional de Informações Sociais)." },
-    { question: "Tempo de serviço militar conta para aposentadoria?", answer: "Sim. O tempo de serviço militar obrigatório é contado como tempo de contribuição para fins previdenciários." },
-    { question: "Posso comprar tempo de contribuição do INSS?", answer: "É possível recolher contribuições em atraso para períodos em que exerceu atividade como contribuinte individual ou facultativo, mediante comprovação." },
-  ],
+    { question: "Trabalho informal conta como tempo de contribuição?", answer: "Somente se houver recolhimento ao INSS. Trabalho sem registro e sem contribuição não é computado automaticamente." },
+    { question: "Tempo de estágio conta para aposentadoria?", answer: "Somente se houve contribuição ao INSS durante o estágio. Estágios sem vínculo previdenciário não contam." },
+    { question: "O período em que recebi seguro-desemprego conta como contribuição?", answer: "Não. O seguro-desemprego mantém a qualidade de segurado, mas não conta como tempo de contribuição para aposentadoria." }
+  ]
   },
   {
     slug: "doenca-ocupacional-burnout-inss-2026",
@@ -1620,10 +1620,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Burnout é considerado doença ocupacional?", answer: "Sim. Desde 2022, a Síndrome de Burnout (esgotamento profissional) é classificada como doença ocupacional pela OMS, podendo gerar benefício pelo INSS." },
-    { question: "Como provar que tenho Burnout para o INSS?", answer: "Com laudos médicos, relatórios psicológicos, e comprovação do nexo causal com o ambiente de trabalho (documentos da empresa, e-mails, testemunhos)." },
-    { question: "Quem tem Burnout pode se aposentar?", answer: "Se o Burnout causar incapacidade total e permanente para o trabalho, é possível obter aposentadoria por invalidez. Caso contrário, auxílio-doença." },
-  ],
+    { question: "LER/DORT adquirida em home office é considerada doença ocupacional?", answer: "Sim, se comprovado o nexo causal com as condições de trabalho remoto. Laudos ergonômicos e médicos são fundamentais para a comprovação." },
+    { question: "A empresa pode ser responsabilizada por doença ocupacional?", answer: "Sim. Além do benefício previdenciário, o trabalhador pode mover ação indenizatória contra a empresa por danos morais e materiais." },
+    { question: "Existe estabilidade no emprego após doença ocupacional?", answer: "Sim. O trabalhador tem 12 meses de estabilidade após a alta do benefício acidentário, conforme o artigo 118 da Lei 8.213/91." }
+  ]
   },
   {
     slug: "salario-maternidade-inss-2026-quem-tem-direito",
@@ -1715,10 +1715,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Quem tem direito ao salário-maternidade?", answer: "Seguradas empregadas, contribuintes individuais, facultativas, seguradas especiais e desempregadas em período de graça." },
-    { question: "Quanto tempo dura o salário-maternidade?", answer: "120 dias (4 meses) na maioria dos casos. Para adoção, o prazo também é de 120 dias independentemente da idade da criança." },
-    { question: "Qual o valor do salário-maternidade?", answer: "Para empregadas, corresponde ao salário integral. Para contribuintes individuais e facultativas, é a média dos últimos 12 salários de contribuição." },
-  ],
+    { question: "Mãe adotiva tem direito ao salário-maternidade?", answer: "Sim. A adoção garante 120 dias de salário-maternidade, independentemente da idade da criança adotada." },
+    { question: "Pai solo tem direito ao salário-maternidade?", answer: "Sim. Em caso de falecimento da mãe ou adoção por pai solo, o segurado do sexo masculino tem direito ao benefício integral." },
+    { question: "O salário-maternidade pode ser prorrogado?", answer: "Pode, em caso de internação da mãe ou do recém-nascido. O período de internação é acrescido ao benefício, conforme decisão judicial." }
+  ]
   },
   {
     slug: "contribuinte-individual-inss-2026-direitos-aposentadoria",
@@ -1798,10 +1798,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Qual a diferença entre contribuinte individual e facultativo?", answer: "O contribuinte individual exerce atividade remunerada por conta própria. O facultativo não tem renda, mas deseja contribuir voluntariamente (ex: estudantes, donas de casa)." },
-    { question: "Contribuinte individual tem direito a todos os benefícios do INSS?", answer: "Depende do plano. Quem contribui com 20% tem direito a aposentadoria por tempo de contribuição. Com 11% (plano simplificado), apenas por idade." },
-    { question: "Qual o valor mínimo de contribuição individual em 2026?", answer: "11% sobre o salário mínimo (R$ 178,31) no plano simplificado ou 20% sobre o salário mínimo até o teto (R$ 324,20 a R$ 1.631,48)." },
-  ],
+    { question: "Contribuinte individual pode receber auxílio-doença?", answer: "Sim, desde que tenha cumprido a carência de 12 contribuições e esteja com os pagamentos em dia no momento da incapacidade." },
+    { question: "É possível mudar de contribuinte individual para facultativo?", answer: "Sim, se deixar de exercer atividade remunerada. A mudança é feita alterando o código de pagamento na guia GPS." },
+    { question: "Profissional liberal precisa contribuir como contribuinte individual?", answer: "Sim. Profissionais liberais como advogados, médicos e dentistas são contribuintes individuais obrigatórios do INSS." }
+  ]
   },
   {
     slug: "aposentadoria-professor-2026-regras-requisitos",
@@ -1890,10 +1890,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "Professor tem direito a aposentadoria especial?", answer: "Professores da educação infantil, ensino fundamental e médio têm regras diferenciadas com redução de 5 anos na idade e tempo de contribuição." },
-    { question: "Professor universitário tem aposentadoria especial?", answer: "Não. Após a EC 18/1981, professores do ensino superior seguem as regras gerais de aposentadoria." },
-    { question: "Qual a idade mínima para professor se aposentar em 2026?", answer: "57 anos para mulheres e 60 anos para homens, com 25 anos de contribuição exclusivamente em funções de magistério." },
-  ],
+    { question: "Professor de curso livre ou cursinho tem direito à aposentadoria especial?", answer: "Não. A aposentadoria de professor com requisitos reduzidos é exclusiva para educação infantil, ensino fundamental e médio." },
+    { question: "Professor que também é coordenador perde o direito?", answer: "Não, desde que a coordenação seja exercida em estabelecimento de ensino e esteja vinculada à atividade pedagógica." },
+    { question: "Tempo de magistério em escola particular conta igual ao de pública?", answer: "Sim. Para fins de aposentadoria pelo INSS, o tempo de magistério é contado igualmente, independente de a escola ser pública ou particular." }
+  ]
   },
   {
     slug: "cnis-erros-correcao-2026-como-resolver",
@@ -1991,10 +1991,10 @@ export const blogArticles: BlogArticle[] = [
       },
     ],
   faq: [
-    { question: "O que é o CNIS e para que serve?", answer: "O CNIS (Cadastro Nacional de Informações Sociais) é o documento que registra todos os seus vínculos e contribuições ao INSS. É fundamental para a aposentadoria." },
-    { question: "Quais erros mais comuns aparecem no CNIS?", answer: "Vínculos empregatícios não registrados, valores de contribuição incorretos, períodos em branco e dados pessoais desatualizados." },
-    { question: "Como corrigir erros no CNIS?", answer: "Pelo Meu INSS com documentos comprobatórios, ou judicialmente com apoio de advogado quando o INSS não reconhece as correções administrativamente." },
-  ],
+    { question: "O que fazer se a empresa que deveria emitir documentos fechou?", answer: "É possível utilizar outros meios de prova como carteira de trabalho, contracheques, RAIS e até depoimentos de testemunhas." },
+    { question: "O INSS pode corrigir o CNIS automaticamente?", answer: "Sim, para alguns tipos de pendências. Mas na maioria dos casos, o segurado precisa apresentar documentação para requerer a correção." },
+    { question: "Contribuição paga em duplicidade aparece no CNIS?", answer: "Nem sempre. É importante conferir e solicitar a restituição ou compensação de valores pagos em duplicidade junto à Receita Federal." }
+  ]
   },
   {
     slug: "tendinite-ler-aposentadoria-invalidez",
@@ -2032,10 +2032,10 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se você sofre de tendinite crônica que compromete sua capacidade de trabalhar, pode ter direito à aposentadoria por invalidez. Não tente resolver sozinho — procure orientação jurídica especializada para garantir seus direitos." }
     ],
     faq: [
-    { question: "Tendinite dá direito a aposentadoria por invalidez?", answer: "Somente se a tendinite ou LER causar incapacidade total e permanente para qualquer atividade profissional, comprovada por perícia médica." },
-    { question: "Qual o CID da tendinite para fins previdenciários?", answer: "Os CIDs mais comuns são M65 (sinovite e tenossinovite), M75 (lesões do ombro) e M77 (outras entesopatias), dependendo da localização." },
-    { question: "Tendinite é considerada doença ocupacional?", answer: "Sim, quando há nexo causal com o trabalho. A LER/DORT é uma das principais causas de afastamento ocupacional no Brasil." },
-  ],
+      { question: "A tendinite pode voltar após tratamento e gerar novo benefício?", answer: "Sim. Se houver recidiva com nova incapacidade, é possível solicitar novo auxílio-doença ou até aposentadoria por invalidez." },
+      { question: "Quais profissões têm maior incidência de tendinite/LER?", answer: "Digitadores, operadores de caixa, metalúrgicos, costureiras e profissionais de limpeza estão entre os mais afetados." },
+      { question: "Fisioterapia é obrigatória antes de pedir aposentadoria por tendinite?", answer: "Não é obrigatória, mas o INSS considera se o segurado esgotou as possibilidades de tratamento antes de conceder a invalidez." }
+    ]
   },
   {
     slug: "autismo-aposentadoria-pessoa-com-deficiencia",
@@ -2078,10 +2078,10 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se você ou um familiar tem autismo e contribui para o INSS, é possível se aposentar com tempo reduzido. A Cantarelli Advocacia pode avaliar seu caso, preparar a documentação adequada e acompanhar todo o processo junto ao INSS." }
     ],
     faq: [
-    { question: "Autismo dá direito a aposentadoria por deficiência?", answer: "Sim. O Transtorno do Espectro Autista (TEA) é reconhecido como deficiência pela Lei 12.764/2012, garantindo acesso à aposentadoria da pessoa com deficiência." },
-    { question: "Qual grau de autismo dá direito à aposentadoria?", answer: "Todos os graus podem dar direito, pois a avaliação é biopsicossocial. O nível de suporte necessário (1, 2 ou 3) influencia a classificação da deficiência." },
-    { question: "Criança autista tem direito a BPC?", answer: "Sim. Crianças com TEA podem receber BPC/LOAS desde que a família comprove renda per capita inferior a 1/4 do salário mínimo." },
-  ],
+      { question: "Adulto diagnosticado tardiamente com TEA tem direito?", answer: "Sim. O diagnóstico tardio não impede o acesso à aposentadoria PCD, desde que se comprove que a condição existia antes do diagnóstico." },
+      { question: "A família precisa ser curatelada para solicitar o benefício?", answer: "Não necessariamente. Pessoas com TEA podem solicitar seus próprios benefícios. A curatela é necessária apenas em casos de interdição judicial." },
+      { question: "Autista que trabalha com carteira assinada pode se aposentar como PCD?", answer: "Sim. Trabalhar com carteira assinada não impede a aposentadoria PCD. Na verdade, o tempo de contribuição com deficiência tem redução." }
+    ]
   },
   {
     slug: "processo-auxilio-acidente-justica-prazos",
@@ -2118,10 +2118,10 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Não aceite a negativa do INSS como decisão final. A Cantarelli Advocacia tem experiência em processos de auxílio-acidente e pode avaliar seu caso para garantir que você receba o benefício que merece." }
     ],
     faq: [
-    { question: "Quanto custa um processo de auxílio-acidente?", answer: "Na Justiça Federal, processos previdenciários são isentos de custas. Os honorários advocatícios variam conforme o profissional." },
-    { question: "Preciso de advogado para processo de auxílio-acidente?", answer: "Para ações no JEF (até 60 salários mínimos) não é obrigatório, mas é altamente recomendável ter acompanhamento jurídico especializado." },
-    { question: "Qual o prazo para entrar com ação de auxílio-acidente?", answer: "Não há prazo prescricional para o direito em si, mas as parcelas atrasadas prescrevem em 5 anos." },
-  ],
+      { question: "Posso entrar com ação judicial sem ter passado pelo INSS antes?", answer: "Em regra, é necessário o prévio requerimento administrativo. Sem ele, a ação pode ser extinta por falta de interesse processual." },
+      { question: "A perícia judicial é diferente da perícia do INSS?", answer: "Sim. A perícia judicial é realizada por perito nomeado pelo juiz, geralmente mais detalhada e imparcial que a perícia administrativa." },
+      { question: "É possível obter tutela antecipada no processo de auxílio-acidente?", answer: "Sim. Se houver urgência e provas robustas da sequela, o juiz pode conceder o benefício provisoriamente antes da sentença final." }
+    ]
   },
   {
     slug: "salario-maternidade-desempregada-quem-tem-direito",
@@ -2158,10 +2158,10 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se você está desempregada e grávida, pode ter direito ao salário-maternidade. A Cantarelli Advocacia pode avaliar seu caso gratuitamente e orientá-la sobre os próximos passos para garantir esse benefício." }
     ],
     faq: [
-    { question: "Desempregada tem direito a salário-maternidade?", answer: "Sim, desde que esteja dentro do período de graça do INSS (geralmente 12 meses após a última contribuição, podendo ser estendido)." },
-    { question: "Qual o valor do salário-maternidade para desempregada?", answer: "É calculado com base na média dos últimos 12 salários de contribuição antes da perda da qualidade de segurada." },
-    { question: "Como solicitar salário-maternidade estando desempregada?", answer: "O pedido deve ser feito diretamente ao INSS pelo Meu INSS ou presencialmente, com documentos que comprovem o parto e a qualidade de segurada." },
-  ],
+      { question: "Demissão durante a gravidez dá direito à estabilidade?", answer: "Sim. A gestante tem estabilidade desde a confirmação da gravidez até 5 meses após o parto, mesmo em contrato de experiência." },
+      { question: "Aborto espontâneo dá direito ao salário-maternidade?", answer: "Sim, por 14 dias em caso de aborto não criminoso, conforme previsto na legislação previdenciária." },
+      { question: "Contribuinte facultativa desempregada tem direito?", answer: "Sim, desde que mantenha os pagamentos em dia. A contribuinte facultativa que para de pagar perde a qualidade de segurada." }
+    ]
   },
   {
     slug: "quanto-tempo-demora-processo-auxilio-acidente",
@@ -2196,10 +2196,10 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "O tempo de um processo de auxílio-acidente depende de vários fatores, mas com a documentação certa e orientação jurídica especializada, é possível reduzir significativamente essa espera. A Cantarelli Advocacia pode ajudar você a conseguir seu benefício no menor prazo possível." }
     ],
     faq: [
-    { question: "Quanto tempo demora um processo de auxílio-acidente na Justiça?", answer: "Em média, de 1 a 3 anos, dependendo da complexidade, necessidade de perícias e da vara judicial responsável." },
-    { question: "Posso receber valores atrasados do auxílio-acidente?", answer: "Sim. Se o juiz conceder o benefício, você recebe todas as parcelas retroativas desde a data do requerimento ou do acidente." },
-    { question: "O que acelera um processo de auxílio-acidente?", answer: "Ter documentação médica completa, laudos detalhados e um advogado especializado que apresente provas robustas desde o início." },
-  ],
+      { question: "Existe como acelerar o processo na Justiça?", answer: "Sim. Juntar documentação completa desde o início, solicitar perícia antecipada e optar pelo JEF quando possível aceleram o trâmite." },
+      { question: "O processo pode ser arquivado se eu não comparecer?", answer: "Sim. A ausência injustificada em audiências ou perícias pode levar ao arquivamento da ação. É fundamental comparecer a todos os atos." },
+      { question: "Recurso do INSS após sentença favorável atrasa muito?", answer: "O recurso na Turma Recursal do JEF costuma levar de 6 a 12 meses adicionais. Na Justiça Federal comum, pode levar mais." }
+    ]
   },
   {
     slug: "bpc-negado-o-que-fazer",
@@ -2243,10 +2243,10 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se o seu BPC foi negado, não desista. A Cantarelli Advocacia tem ampla experiência em reverter negativas de BPC/LOAS e pode analisar seu caso para identificar a melhor estratégia." }
     ],
     faq: [
-    { question: "O que fazer quando o BPC é negado pelo INSS?", answer: "Você pode entrar com recurso administrativo no CRPS em até 30 dias ou ajuizar ação na Justiça Federal com apoio de advogado." },
-    { question: "Quais os motivos mais comuns de negativa do BPC?", answer: "Renda familiar acima do limite, laudo pericial desfavorável, falta de documentação e irregularidades no CadÚnico." },
-    { question: "É possível ganhar o BPC na Justiça após negativa?", answer: "Sim. A Justiça frequentemente concede o BPC com critérios mais flexíveis que o INSS, especialmente quanto à renda familiar." },
-  ],
+      { question: "Posso pedir o BPC novamente após uma negativa?", answer: "Sim. Não há limite de pedidos. Se houve mudança na situação econômica ou de saúde, um novo requerimento pode ser feito a qualquer momento." },
+      { question: "O CadÚnico precisa estar atualizado para o BPC?", answer: "Sim. O cadastro no CadÚnico é obrigatório e deve estar atualizado nos últimos 2 anos. Dados desatualizados podem causar negativa." },
+      { question: "Defensor público pode ajudar no caso de BPC negado?", answer: "Sim. A Defensoria Pública oferece assistência jurídica gratuita para quem não pode pagar advogado, inclusive em ações previdenciárias." }
+    ]
   },
   {
     slug: "aposentadoria-antecipada-como-conseguir",
@@ -2281,10 +2281,10 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Antes de pedir a aposentadoria, faça um planejamento previdenciário completo. A Cantarelli Advocacia realiza análise detalhada do seu caso para identificar a regra mais vantajosa e a melhor data para se aposentar sem perder dinheiro." }
     ],
     faq: [
-    { question: "Como se aposentar mais cedo?", answer: "Através das regras de transição (pedágio, pontos), aposentadoria especial, ou aposentadoria da pessoa com deficiência, dependendo do seu caso." },
-    { question: "Aposentadoria antecipada reduz o valor do benefício?", answer: "Depende da regra utilizada. Algumas regras de transição podem resultar em valor menor, enquanto outras garantem o benefício integral." },
-    { question: "Vale a pena esperar para se aposentar?", answer: "Em muitos casos, sim. Contribuir mais tempo pode aumentar significativamente o valor da aposentadoria. Um planejamento previdenciário mostra a melhor estratégia." },
-  ],
+      { question: "Contribuir com valor maior adianta a aposentadoria?", answer: "Não. O valor da contribuição afeta o valor do benefício, não o tempo. O que adianta a aposentadoria é ter mais tempo de contribuição." },
+      { question: "Servidor público pode se aposentar antecipadamente pelo INSS?", answer: "Somente se tiver tempo de contribuição no regime geral (INSS) anterior ao ingresso no serviço público, que pode ser contado via contagem recíproca." },
+      { question: "Quem trabalhou com insalubridade pode antecipar a aposentadoria?", answer: "Sim. O tempo especial pode ser convertido em tempo comum com fator multiplicador, adiantando a data da aposentadoria." }
+    ]
   },
   {
     slug: "regras-aposentadoria-mulher-2026",
@@ -2323,10 +2323,10 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Não se aposente sem antes fazer um planejamento previdenciário completo. A Cantarelli Advocacia pode analisar seu histórico contributivo e identificar a regra mais vantajosa para o seu caso, garantindo o maior benefício possível." }
     ],
     faq: [
-    { question: "Qual a idade mínima para mulher se aposentar em 2026?", answer: "62 anos na regra geral, com pelo menos 15 anos de contribuição. Regras de transição podem permitir aposentadoria antes dessa idade." },
-    { question: "Mulher tem vantagem na aposentadoria?", answer: "Sim. As mulheres têm redução de 5 anos na idade mínima e no tempo de contribuição em relação aos homens na maioria das regras." },
-    { question: "Dona de casa pode se aposentar pelo INSS?", answer: "Sim, contribuindo como segurada facultativa. Com a alíquota de 11% sobre o salário mínimo, garante aposentadoria por idade." },
-  ],
+      { question: "Período como dona de casa conta para aposentadoria?", answer: "Somente se houver contribuição como segurada facultativa. O tempo sem contribuição não é computado pelo INSS." },
+      { question: "Licença-maternidade conta como tempo de contribuição?", answer: "Sim. O período de licença-maternidade é considerado tempo de contribuição normalmente para todos os fins previdenciários." },
+      { question: "Mulher que nunca trabalhou pode se aposentar?", answer: "Sim, contribuindo como facultativa de baixa renda (5% do mínimo) por pelo menos 15 anos e atingindo a idade mínima de 62 anos." }
+    ]
   },
   {
     slug: "transformar-bpc-em-aposentadoria",
@@ -2361,10 +2361,10 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "A transição do BPC para a aposentadoria exige planejamento cuidadoso. A Cantarelli Advocacia pode fazer uma análise comparativa completa e orientar sobre a melhor decisão para o seu caso." }
     ],
     faq: [
-    { question: "É possível converter BPC em aposentadoria?", answer: "Não diretamente. Mas se o beneficiário do BPC passar a contribuir para o INSS e cumprir os requisitos, pode solicitar aposentadoria e cancelar o BPC." },
-    { question: "O tempo recebendo BPC conta para aposentadoria?", answer: "Não. O BPC é benefício assistencial e o período de recebimento não conta como tempo de contribuição para aposentadoria." },
-    { question: "Qual a vantagem de trocar BPC por aposentadoria?", answer: "A aposentadoria garante 13º salário, possibilidade de pensão por morte para dependentes, e geralmente valor maior que o BPC." },
-  ],
+      { question: "Posso contribuir ao INSS enquanto recebo BPC?", answer: "Sim. Não há impedimento legal. As contribuições contarão para uma futura aposentadoria, e o BPC será cessado quando a aposentadoria for concedida." },
+      { question: "O valor da aposentadoria será maior que o BPC?", answer: "Geralmente sim, especialmente se contribuir por tempo suficiente. Além disso, a aposentadoria garante 13º salário, que o BPC não oferece." },
+      { question: "Quanto tempo preciso contribuir para trocar o BPC por aposentadoria?", answer: "No mínimo 15 anos de contribuição e atingir a idade mínima (62 anos mulheres, 65 anos homens) para a aposentadoria por idade." }
+    ]
   },
   {
     slug: "quem-recebe-loas-pode-receber-pensao-por-morte",
@@ -2398,10 +2398,10 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se você recebe BPC/LOAS e perdeu o cônjuge, procure orientação jurídica antes de tomar qualquer decisão. A Cantarelli Advocacia pode analisar qual benefício é mais vantajoso e se existe possibilidade legal de acumulação no seu caso." }
     ],
     faq: [
-    { question: "Posso receber LOAS e pensão por morte ao mesmo tempo?", answer: "Não. O BPC/LOAS não pode ser acumulado com pensão por morte. Você deve optar pelo benefício mais vantajoso." },
-    { question: "Se meu marido morrer, perco o LOAS?", answer: "Não automaticamente. Mas se você solicitar pensão por morte, deverá escolher entre os dois benefícios, pois não é permitida a acumulação." },
-    { question: "Pensão por morte entra no cálculo de renda do BPC?", answer: "Depende. A pensão de até 1 salário mínimo recebida por idoso pode ser excluída do cálculo de renda familiar para fins de BPC." },
-  ],
+      { question: "Se eu optar pela pensão por morte, posso voltar ao LOAS depois?", answer: "Sim. Se a pensão por morte for cessada e você ainda cumprir os requisitos do BPC, pode solicitar o retorno ao benefício assistencial." },
+      { question: "A renda da pensão por morte afeta o BPC de outro familiar?", answer: "Sim. A pensão entra no cálculo de renda familiar per capita, podendo afetar o BPC de outro membro da família." },
+      { question: "Filho que recebe BPC pode receber pensão por morte do pai?", answer: "Precisa escolher um dos dois. Se o filho for menor e a pensão for maior, geralmente vale optar pela pensão por morte." }
+    ]
   },
   {
     slug: "auxilio-acidente-pode-trabalhar",
@@ -2467,9 +2467,9 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se você tem deficiência auditiva e contribui para o INSS, pode ter direito a se aposentar com requisitos reduzidos. A Cantarelli Advocacia pode analisar seu caso e identificar a melhor estratégia para garantir seus direitos." }
     ],
     faq: [
-      { question: "Qual grau de surdez dá direito à aposentadoria?", answer: "Não existe um grau único. A avaliação é biopsicossocial e considera o impacto da perda auditiva na vida social e profissional, não apenas os decibéis." },
-      { question: "Quem usa aparelho auditivo perde o direito?", answer: "Não. O uso de aparelho auditivo não elimina o reconhecimento da deficiência para fins previdenciários." },
-      { question: "Surdez em apenas um ouvido dá direito?", answer: "Pode dar, dependendo do grau e das barreiras enfrentadas. A surdez unilateral profunda pode ser classificada como deficiência leve ou moderada." }
+      { question: "Implante coclear elimina o direito à aposentadoria PCD?", answer: "Não. Mesmo com implante coclear, a pessoa continua sendo considerada deficiente auditiva para fins previdenciários." },
+      { question: "Surdez congênita tem tratamento diferente da adquirida?", answer: "Não para fins previdenciários. O que importa é o grau de limitação atual, independente de a surdez ser congênita ou adquirida." },
+      { question: "Laudo audiológico é suficiente para comprovar deficiência auditiva?", answer: "É um documento importante, mas a avaliação do INSS é biopsicossocial. Outros laudos e relatórios complementam o processo." }
     ]
   },
   {
@@ -2500,9 +2500,9 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se você sofre de depressão grave que impede totalmente seu trabalho e os tratamentos não surtiram efeito, pode ter direito à aposentadoria por invalidez. A Cantarelli Advocacia pode avaliar seu caso e orientar sobre a melhor estratégia jurídica." }
     ],
     faq: [
-      { question: "Depressão dá direito a auxílio-doença?", answer: "Sim. Se a depressão causar incapacidade temporária para o trabalho, o segurado tem direito ao auxílio por incapacidade temporária (auxílio-doença)." },
-      { question: "Ansiedade também pode gerar aposentadoria?", answer: "Sim. Transtornos de ansiedade graves, como TAG e síndrome do pânico, podem gerar aposentadoria por invalidez se causarem incapacidade total e permanente." },
-      { question: "O INSS aceita laudo de psicólogo?", answer: "O laudo de psicólogo é complementar. O documento principal para o INSS é o laudo do psiquiatra, que é o médico habilitado a atestar a incapacidade." }
+      { question: "Depressão com tentativa de suicídio tem peso maior na perícia?", answer: "Sim. Registros de internação psiquiátrica e tentativas de suicídio são fortes indicadores de incapacidade total para fins previdenciários." },
+      { question: "Remédio controlado é prova suficiente de depressão para o INSS?", answer: "É um indício, mas não suficiente isoladamente. Laudos médicos detalhados com CID e descrição funcional são fundamentais." },
+      { question: "Fibromialgia junto com depressão aumenta as chances?", answer: "Sim. A combinação de patologias (multicomorbidade) é considerada na avaliação e pode reforçar a incapacidade total." }
     ]
   },
   {
@@ -2533,9 +2533,9 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "A aposentadoria por idade exige planejamento para garantir o melhor valor possível. A Cantarelli Advocacia oferece diagnóstico previdenciário completo para identificar a estratégia mais vantajosa para o seu caso." }
     ],
     faq: [
-      { question: "Qual o valor mínimo da aposentadoria por idade?", answer: "O valor mínimo é de um salário mínimo (R$ 1.621,00 em 2026). Nenhum benefício previdenciário pode ser inferior a esse valor." },
-      { question: "Posso me aposentar por idade com menos de 15 anos de contribuição?", answer: "Não na regra geral. Mas existem exceções para trabalhadores rurais e pessoas com deficiência que possuem regras diferenciadas." },
-      { question: "Contribuição em atraso conta para aposentadoria por idade?", answer: "Sim, desde que comprovada a atividade como contribuinte individual no período. É necessário comprovar o exercício da atividade remunerada." }
+      { question: "Quem contribuiu como MEI precisa complementar para aposentadoria por idade?", answer: "Não para a aposentadoria por idade. A contribuição de 5% do MEI já garante esse tipo de aposentadoria com valor de um salário mínimo." },
+      { question: "Posso me aposentar por idade e continuar trabalhando?", answer: "Sim. A aposentadoria por idade não impede o exercício de atividade remunerada. O aposentado pode continuar trabalhando normalmente." },
+      { question: "Aposentadoria por idade tem valor menor que por tempo de contribuição?", answer: "Geralmente sim, pois o cálculo considera menos tempo de contribuição. Porém, para quem tem poucos anos contribuídos, é a opção mais viável." }
     ]
   },
   {
@@ -2566,9 +2566,9 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se você tem hérnia de disco que compromete sua capacidade de trabalho, procure orientação jurídica especializada. A Cantarelli Advocacia pode analisar seu caso e identificar o melhor caminho para garantir seus direitos previdenciários." }
     ],
     faq: [
-      { question: "Hérnia de disco dá direito a auxílio-doença?", answer: "Sim, se a hérnia causar incapacidade temporária para o trabalho, comprovada por perícia médica do INSS." },
-      { question: "Cirurgia de hérnia de disco garante aposentadoria?", answer: "Não automaticamente. Mas se após a cirurgia persistirem sequelas que impeçam o trabalho, pode haver direito à aposentadoria por invalidez." },
-      { question: "Hérnia de disco é considerada deficiência?", answer: "Depende do grau de comprometimento funcional. Se causar limitações permanentes significativas, pode ser enquadrada como deficiência para fins de aposentadoria PCD." }
+      { question: "Ressonância magnética que mostra hérnia garante o benefício?", answer: "Não automaticamente. O INSS avalia a incapacidade funcional, não apenas o diagnóstico por imagem. A correlação clínica é fundamental." },
+      { question: "Trabalho braçal com hérnia de disco tem mais chances?", answer: "Sim. A perícia considera a atividade habitual. Trabalhadores braçais com hérnia têm mais chance de comprovar incapacidade." },
+      { question: "Hérnia de disco pode gerar auxílio-acidente além do auxílio-doença?", answer: "Sim. Se após a alta do auxílio-doença restarem sequelas que reduzam a capacidade de trabalho, o auxílio-acidente pode ser concedido." }
     ]
   },
   {
@@ -2599,9 +2599,9 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se você é motorista de aplicativo, contribuir para o INSS é obrigatório e garante sua proteção previdenciária. A Cantarelli Advocacia pode orientar sobre a melhor forma de contribuição para garantir o maior benefício futuro." }
     ],
     faq: [
-      { question: "Motorista de Uber é obrigado a pagar INSS?", answer: "Sim. Motoristas de aplicativo são contribuintes individuais obrigatórios e devem recolher mensalmente ao INSS." },
-      { question: "Qual o valor da contribuição do motorista de aplicativo?", answer: "20% sobre o rendimento mensal (mínimo de R$ 324,20) ou 11% sobre o salário mínimo no plano simplificado (R$ 178,31 em 2026)." },
-      { question: "Motorista de aplicativo pode se aposentar por tempo de contribuição?", answer: "Somente se contribuir com a alíquota de 20%. O plano simplificado (11%) só dá direito à aposentadoria por idade." }
+      { question: "Motorista de aplicativo tem direito a seguro-desemprego?", answer: "Não. O seguro-desemprego é exclusivo para empregados com carteira assinada. Motoristas de app são contribuintes individuais." },
+      { question: "Entregador de iFood e Rappi tem as mesmas regras do motorista?", answer: "Sim. Entregadores de aplicativo são contribuintes individuais e seguem as mesmas regras de contribuição e benefícios do INSS." },
+      { question: "Motorista que também é CLT precisa contribuir em dobro?", answer: "Não. As contribuições de ambas as atividades são somadas, respeitando o teto do INSS. Não há pagamento duplicado." }
     ]
   },
   {
@@ -2632,9 +2632,9 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se você tem doença cardíaca grave que impede seu trabalho, pode ter direito a benefícios do INSS sem carência. A Cantarelli Advocacia está preparada para analisar seu caso e garantir seus direitos." }
     ],
     faq: [
-      { question: "Quem teve infarto pode se aposentar por invalidez?", answer: "Sim, se o infarto deixou sequelas que impedem permanentemente o exercício de qualquer atividade profissional." },
-      { question: "Cardiopatia grave precisa de carência no INSS?", answer: "Não. A cardiopatia grave está na lista de doenças que dispensam o período de carência de 12 contribuições." },
-      { question: "Quem tem stent ou ponte de safena pode se aposentar?", answer: "Depende. Se após o procedimento a pessoa recuperou a capacidade de trabalho, não terá direito. Se permanecer incapaz, pode ter direito à aposentadoria." }
+      { question: "Arritmia cardíaca controlada com medicamento dá direito?", answer: "Geralmente não, se estiver controlada. Mas se houver restrições severas de atividade e risco de morte súbita, pode haver direito." },
+      { question: "É necessário passar por junta médica para cardiopatia grave?", answer: "No INSS, a perícia é individual. Na Justiça, o juiz pode determinar junta médica com especialistas em cardiologia." },
+      { question: "Marca-passo implantado garante aposentadoria por invalidez?", answer: "Não automaticamente. O que determina é a capacidade funcional residual. Muitos pacientes com marca-passo retornam às atividades normais." }
     ]
   },
   {
@@ -2666,9 +2666,9 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se você sofreu acidente de trabalho, seus direitos são amplos e específicos. A Cantarelli Advocacia pode orientar sobre todos os benefícios a que você tem direito e garantir que nenhum direito seja perdido." }
     ],
     faq: [
-      { question: "Acidente de trabalho precisa de carência no INSS?", answer: "Não. Benefícios decorrentes de acidente de trabalho (B91 e B92) não exigem carência — basta ter qualidade de segurado." },
-      { question: "A empresa pode me demitir após acidente de trabalho?", answer: "Não durante os 12 meses de estabilidade após a alta do auxílio-doença acidentário. Demissão nesse período gera reintegração ou indenização." },
-      { question: "O que acontece se a empresa não emitir a CAT?", answer: "O trabalhador, sindicato, médico ou SUS podem emitir. A falta de CAT não impede o reconhecimento judicial do acidente." }
+      { question: "Acidente durante intervalo de almoço dentro da empresa é acidente de trabalho?", answer: "Sim. Acidentes ocorridos nas dependências da empresa durante o horário de trabalho, inclusive intervalos, são considerados acidentes de trabalho." },
+      { question: "Home office: acidente em casa pode ser acidente de trabalho?", answer: "Sim, se ocorrer durante o exercício da atividade profissional e houver nexo causal com o trabalho, mesmo em regime de teletrabalho." },
+      { question: "A empresa pode contestar a CAT emitida pelo trabalhador?", answer: "A empresa não pode cancelar a CAT, mas pode apresentar defesa em eventual processo. A CAT emitida por qualquer legitimado tem validade legal." }
     ]
   },
   {
@@ -2699,9 +2699,9 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "O MEI tem direitos previdenciários importantes, mas é fundamental entender as limitações. A Cantarelli Advocacia pode ajudar a planejar sua aposentadoria e identificar se a complementação de contribuição vale a pena no seu caso." }
     ],
     faq: [
-      { question: "MEI pode se aposentar por tempo de contribuição?", answer: "Somente se complementar a contribuição com 15% adicional sobre o salário mínimo. Sem complementação, só tem direito à aposentadoria por idade." },
-      { question: "Quanto o MEI paga de INSS em 2026?", answer: "5% do salário mínimo, ou seja, R$ 81,05 por mês, incluído no DAS mensal." },
-      { question: "MEI tem direito a auxílio-doença?", answer: "Sim, desde que tenha cumprido a carência de 12 meses de contribuição e esteja com os pagamentos em dia." }
+      { question: "MEI que fecha a empresa perde o tempo de contribuição?", answer: "Não. O tempo contribuído como MEI é mantido no CNIS e conta para aposentadoria, mesmo que o CNPJ seja encerrado." },
+      { question: "MEI pode contratar previdência privada como complemento?", answer: "Sim. É uma estratégia recomendada, já que a aposentadoria do MEI sem complementação é limitada a um salário mínimo." },
+      { question: "DAS atrasado do MEI pode ser parcelado?", answer: "Sim. Débitos do MEI podem ser parcelados em até 60 vezes pelo portal do Simples Nacional ou Receita Federal." }
     ]
   },
   {
@@ -2732,9 +2732,9 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se o diabetes está afetando sua capacidade de trabalhar, especialmente por complicações graves, você pode ter direito a benefícios do INSS. A Cantarelli Advocacia pode analisar seu caso e orientar sobre a melhor estratégia." }
     ],
     faq: [
-      { question: "Diabetes tipo 2 dá direito a aposentadoria?", answer: "Depende das complicações. O diabetes tipo 2 controlado geralmente não gera invalidez, mas complicações graves como nefropatia ou retinopatia podem dar direito." },
-      { question: "Diabetes está na lista de isenção de carência?", answer: "Não diretamente, mas complicações como cegueira e insuficiência renal crônica estão na lista e dispensam carência." },
-      { question: "Quem tem diabetes pode receber BPC?", answer: "Sim, se o diabetes causar deficiência de longo prazo e a pessoa não tiver condições de contribuir ao INSS, pode solicitar o BPC/LOAS." }
+      { question: "Diabetes gestacional dá direito a algum benefício?", answer: "Não para aposentadoria, mas a gestante tem direito ao salário-maternidade. Se a diabetes persistir e gerar incapacidade, pode buscar auxílio-doença." },
+      { question: "Amputação por diabetes garante aposentadoria por invalidez?", answer: "Geralmente sim. A amputação de membro é forte indicador de incapacidade, especialmente se limitar significativamente a capacidade de trabalho." },
+      { question: "Uso de insulina é prova de gravidade para o INSS?", answer: "É um indício de diabetes avançado, mas não garante benefício por si só. A perícia avalia a incapacidade funcional, não apenas o tratamento." }
     ]
   },
   {
@@ -2765,9 +2765,9 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Se você ou um familiar aposentado precisa de cuidador permanente, pode ter direito ao adicional de 25%. A Cantarelli Advocacia pode avaliar o caso e ingressar com o pedido administrativo ou judicial." }
     ],
     faq: [
-      { question: "O adicional de 25% pode ultrapassar o teto do INSS?", answer: "Sim. O adicional de grande invalidez é o único benefício previdenciário que pode ultrapassar o teto do INSS, pois é calculado sobre o valor integral da aposentadoria." },
-      { question: "Quem recebe aposentadoria por idade pode pedir o adicional?", answer: "A lei prevê apenas para invalidez, mas o STJ tem reconhecido o direito para aposentados por idade e tempo de contribuição que necessitem de cuidador." },
-      { question: "O adicional de 25% é transferido como pensão por morte?", answer: "Não. O STF decidiu que o adicional de 25% não é transferido aos dependentes como pensão por morte, pois é benefício personalíssimo." }
+      { question: "Como comprovar a necessidade de cuidador permanente?", answer: "Com laudos médicos que atestem a impossibilidade de realizar atividades da vida diária (higiene, alimentação, locomoção) sem auxílio de terceiros." },
+      { question: "O valor do adicional pode ser usado para contratar cuidador?", answer: "Sim. Embora não haja obrigação de prestação de contas, o adicional tem natureza indenizatória para custear assistência permanente." },
+      { question: "Idoso acamado que não é aposentado por invalidez tem direito?", answer: "Pela lei, não. Mas há decisões judiciais do STJ estendendo o adicional a aposentados por idade e tempo de contribuição que necessitem de cuidador." }
     ]
   }
 
