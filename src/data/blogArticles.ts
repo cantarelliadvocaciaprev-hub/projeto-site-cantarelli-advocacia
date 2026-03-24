@@ -37,6 +37,17 @@ import aposentMulherImg from "@/assets/blog/aposentadoria-mulher-regras-2026.jpg
 import bpcParaAposentImg from "@/assets/blog/bpc-para-aposentadoria-2026.jpg";
 import loasPensaoMorteImg from "@/assets/blog/loas-pensao-morte-marido-2026.jpg";
 import auxAcidenteTrabalharImg from "@/assets/blog/auxilio-acidente-pode-trabalhar-2026.jpg";
+import tetoInssImg from "@/assets/blog/teto-inss-2026-valor.jpg";
+import penteFinoImg from "@/assets/blog/pente-fino-inss-2026.jpg";
+import auxReclusaoImg from "@/assets/blog/auxilio-reclusao-2026.jpg";
+import fibromialgiaImg from "@/assets/blog/fibromialgia-aposentadoria-2026.jpg";
+import provaVidaImg from "@/assets/blog/prova-vida-inss-2026.jpg";
+import esquizofreniaImg from "@/assets/blog/esquizofrenia-aposentadoria-2026.jpg";
+import aposentPontosImg from "@/assets/blog/aposentadoria-pontos-2026.jpg";
+import periodoGracaImg from "@/assets/blog/periodo-graca-inss-2026.jpg";
+import margemConsigImg from "@/assets/blog/margem-consignavel-2026.jpg";
+import reajusteImg from "@/assets/blog/reajuste-aposentadoria-2026.jpg";
+
 
 export interface BlogArticleContent {
   type: "paragraph" | "heading" | "subheading" | "list" | "highlight";
@@ -2768,6 +2779,353 @@ export const blogArticles: BlogArticle[] = [
       { question: "Como comprovar a necessidade de cuidador permanente?", answer: "Com laudos médicos que atestem a impossibilidade de realizar atividades da vida diária (higiene, alimentação, locomoção) sem auxílio de terceiros." },
       { question: "O valor do adicional pode ser usado para contratar cuidador?", answer: "Sim. Embora não haja obrigação de prestação de contas, o adicional tem natureza indenizatória para custear assistência permanente." },
       { question: "Idoso acamado que não é aposentado por invalidez tem direito?", answer: "Pela lei, não. Mas há decisões judiciais do STJ estendendo o adicional a aposentados por idade e tempo de contribuição que necessitem de cuidador." }
+    ]
+  }
+,
+  {
+    slug: "teto-inss-2026-valor-como-chegar",
+    title: "Teto do INSS 2026: Qual o Valor e Como Chegar ao Benefício Máximo",
+    excerpt: "O teto do INSS em 2026 é de R$ 8.475,55. Descubra como planejar suas contribuições para alcançar o benefício máximo na aposentadoria.",
+    category: "Aposentadoria",
+    tags: ["Teto INSS", "Contribuição", "Planejamento", "2026"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "O teto do INSS em 2026 é de R$ 8.475,55 após reajuste de 3,9%",
+      "Nem todo segurado que contribui pelo teto receberá o valor máximo",
+      "O planejamento previdenciário é essencial para maximizar o benefício",
+      "Contribuições abaixo do teto ao longo da vida reduzem a média salarial"
+    ],
+    image: tetoInssImg,
+    imageAlt: "Advogado previdenciário analisando documentos sobre o teto do INSS e valores de aposentadoria em 2026",
+    content: [
+      { type: "paragraph", text: "O teto do INSS é o valor máximo que um segurado pode receber de benefício previdenciário. Em 2026, esse valor foi reajustado para R$ 8.475,55, representando um aumento de 3,9% em relação ao ano anterior. Porém, alcançar esse valor na prática exige planejamento e estratégia contributiva ao longo de toda a vida laboral." },
+      { type: "heading", text: "Qual o Teto do INSS em 2026?" },
+      { type: "paragraph", text: "O valor de R$ 8.475,55 representa o limite máximo para qualquer benefício pago pelo INSS, incluindo aposentadorias, pensões e auxílios. Nenhum segurado pode receber mais do que esse valor, independentemente de quanto tenha contribuído — com exceção do adicional de 25% para grande invalidez, que pode ultrapassar o teto." },
+      { type: "heading", text: "Por Que Poucos Segurados Atingem o Teto?" },
+      { type: "paragraph", text: "Para receber o valor máximo, é necessário ter contribuído sempre sobre o teto ao longo de toda a carreira. Na prática, a maioria dos trabalhadores tem salários que variam ao longo da vida, e contribuições menores puxam a média para baixo." },
+      { type: "list", items: ["Oscilações salariais ao longo da carreira reduzem a média", "Períodos sem contribuição (desemprego, informalidade) afetam o cálculo", "A fórmula pós-reforma considera 100% dos salários, incluindo os mais baixos", "Contribuir como autônomo pelo mínimo reduz significativamente a média"] },
+      { type: "heading", text: "Como Maximizar o Valor da Aposentadoria" },
+      { type: "paragraph", text: "A estratégia para se aproximar do teto envolve manter contribuições consistentes sobre valores altos e evitar lacunas no histórico contributivo. Um planejamento previdenciário identifica os períodos que mais impactam o cálculo e orienta sobre a melhor estratégia de contribuição." },
+      { type: "highlight", text: "Contribuir pelo teto nos últimos anos antes da aposentadoria não garante o benefício máximo. O que importa é a média de toda a vida contributiva." },
+      { type: "heading", text: "Tabela de Contribuição INSS 2026" },
+      { type: "paragraph", text: "As alíquotas de contribuição em 2026 variam de 7,5% a 14% de forma progressiva. Empregados com salário acima de R$ 7.786,02 contribuem com a alíquota máxima efetiva. Já contribuintes individuais recolhem 20% sobre o salário de contribuição escolhido, até o teto." },
+      { type: "heading", text: "A Importância do Planejamento" },
+      { type: "paragraph", text: "Um advogado previdenciário pode simular diferentes cenários de contribuição e identificar a estratégia mais eficiente para maximizar o valor do seu benefício. Muitas vezes, ajustes simples no padrão de contribuição podem significar milhares de reais a mais na aposentadoria." }
+    ],
+    faq: [
+      { question: "Autônomo pode contribuir pelo teto do INSS?", answer: "Sim. O contribuinte individual pode escolher contribuir com 20% sobre qualquer valor entre o salário mínimo e o teto (R$ 8.475,55)." },
+      { question: "Se eu ganho acima do teto, o excedente é perdido?", answer: "Para fins previdenciários, sim. O INSS não considera valores acima do teto. Quem ganha mais pode complementar com previdência privada." },
+      { question: "O teto do INSS é reajustado todo ano?", answer: "Sim. O reajuste é anual, geralmente baseado no INPC, e entra em vigor em janeiro de cada ano." }
+    ]
+  },
+  {
+    slug: "pente-fino-inss-2026-como-se-proteger",
+    title: "Pente-Fino do INSS 2026: Como se Proteger e Não Perder Seu Benefício",
+    excerpt: "O INSS intensificou a revisão de benefícios em 2026. Saiba como funciona o pente-fino e o que fazer para proteger sua aposentadoria ou auxílio.",
+    category: "Benefícios",
+    tags: ["Pente-Fino", "INSS", "Revisão", "Benefícios", "2026"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "O pente-fino convoca beneficiários para reavaliação periódica",
+      "Aposentados por invalidez são os mais convocados para perícia",
+      "Não comparecer à convocação pode gerar suspensão do benefício",
+      "Um advogado especialista pode preparar a documentação de defesa"
+    ],
+    image: penteFinoImg,
+    imageAlt: "Revisão de benefícios do INSS com lupa sobre documentos previdenciários em escritório jurídico",
+    content: [
+      { type: "paragraph", text: "O pente-fino do INSS é um programa de revisão de benefícios que visa identificar irregularidades e pagamentos indevidos. Em 2026, o INSS intensificou essas ações, convocando milhares de beneficiários para reavaliação. Se você recebe aposentadoria por invalidez, auxílio-doença ou BPC, precisa estar preparado." },
+      { type: "heading", text: "O Que É o Pente-Fino do INSS?" },
+      { type: "paragraph", text: "O pente-fino consiste na revisão periódica dos benefícios concedidos pelo INSS para verificar se os requisitos que geraram a concessão ainda são atendidos. O programa foi intensificado nos últimos anos como medida de economia fiscal." },
+      { type: "heading", text: "Quem Pode Ser Convocado?" },
+      { type: "list", items: ["Aposentados por invalidez com menos de 60 anos", "Beneficiários de auxílio-doença de longa duração", "Titulares de BPC/LOAS que não atualizaram o CadÚnico", "Pensionistas com pendências cadastrais", "Beneficiários com indícios de irregularidade identificados por cruzamento de dados"] },
+      { type: "heading", text: "O Que Acontece na Convocação?" },
+      { type: "paragraph", text: "O segurado recebe uma carta ou notificação pelo aplicativo Meu INSS com data e local para comparecimento. Na perícia, o médico do INSS avalia se a incapacidade que gerou o benefício persiste. Se considerar que houve recuperação, o benefício pode ser cessado." },
+      { type: "highlight", text: "Atenção: não comparecer à convocação do pente-fino resulta na suspensão automática do benefício. Mesmo que esteja doente, é fundamental justificar a ausência." },
+      { type: "heading", text: "Como se Preparar para o Pente-Fino" },
+      { type: "list", items: ["Mantenha seus laudos médicos sempre atualizados (últimos 6 meses)", "Leve todos os exames, receitas e relatórios médicos na perícia", "Documente qualquer limitação que impeça o trabalho", "Consulte um advogado previdenciário antes da perícia para orientação"] },
+      { type: "heading", text: "E Se o Benefício For Cortado?" },
+      { type: "paragraph", text: "Se o INSS cessar seu benefício após o pente-fino, você pode recorrer administrativamente ao CRPS em até 30 dias ou ingressar com ação judicial. Um advogado especializado pode reverter a decisão apresentando provas de que a incapacidade persiste." }
+    ],
+    faq: [
+      { question: "Aposentado por invalidez com mais de 60 anos é convocado?", answer: "Geralmente não. A Lei 13.063/2014 isenta de perícia periódica os aposentados por invalidez com mais de 60 anos, salvo suspeita de fraude." },
+      { question: "O pente-fino pode aumentar meu benefício?", answer: "Não. O pente-fino é apenas revisional. Para aumento, é necessário pedir revisão específica do valor do benefício." },
+      { question: "Recebo BPC e não atualizei o CadÚnico. Posso perder?", answer: "Sim. O CadÚnico deve ser atualizado a cada 2 anos. A falta de atualização pode levar à suspensão do BPC." }
+    ]
+  },
+  {
+    slug: "auxilio-reclusao-2026-quem-tem-direito",
+    title: "Auxílio-Reclusão 2026: Quem Tem Direito e Como Solicitar",
+    excerpt: "O auxílio-reclusão é um benefício pago aos dependentes do segurado preso. Entenda as regras atualizadas para 2026 e quem pode receber.",
+    category: "Benefícios",
+    tags: ["Auxílio-Reclusão", "Dependentes", "INSS", "2026"],
+    readTime: "6 min",
+    keyTakeaways: [
+      "O auxílio-reclusão é pago aos dependentes, não ao preso",
+      "O segurado deve ter renda igual ou inferior a R$ 1.819,26 em 2026",
+      "É necessário comprovar a qualidade de segurado na data da prisão",
+      "O benefício é de um salário mínimo (R$ 1.621,00) por família"
+    ],
+    image: auxReclusaoImg,
+    imageAlt: "Família buscando orientação jurídica sobre auxílio-reclusão com advogado especialista em direito previdenciário",
+    content: [
+      { type: "paragraph", text: "O auxílio-reclusão é um dos benefícios previdenciários mais controversos e menos compreendidos. Diferente do que muitos pensam, ele não é pago ao preso, mas sim aos seus dependentes que ficam desamparados com a prisão do provedor da família." },
+      { type: "heading", text: "Como Funciona o Auxílio-Reclusão" },
+      { type: "paragraph", text: "O benefício é destinado aos dependentes de segurados do INSS que foram presos em regime fechado ou semiaberto. O objetivo é garantir a subsistência da família durante o período de reclusão." },
+      { type: "heading", text: "Requisitos para 2026" },
+      { type: "list", items: ["O segurado preso deve ter renda bruta mensal igual ou inferior a R$ 1.819,26", "O segurado deve estar em dia com as contribuições ao INSS na data da prisão", "O requerente deve ser dependente habilitado (cônjuge, filhos menores de 21 anos ou inválidos)", "A prisão deve ser em regime fechado ou semiaberto"] },
+      { type: "heading", text: "Valor do Benefício" },
+      { type: "paragraph", text: "Após a Reforma da Previdência de 2019, o valor do auxílio-reclusão passou a ser de um salário mínimo (R$ 1.621,00 em 2026), independentemente da remuneração anterior do segurado. O benefício é dividido entre todos os dependentes habilitados." },
+      { type: "highlight", text: "O auxílio-reclusão cessa quando o preso é solto, foge, morre, ou quando o dependente perde essa condição (filho completa 21 anos, por exemplo)." },
+      { type: "heading", text: "Documentação Necessária" },
+      { type: "list", items: ["Certidão de nascimento ou casamento (comprovação de dependência)", "Certidão de recolhimento à prisão emitida pela autoridade carcerária", "Documentos pessoais do segurado e do dependente", "Carteira de trabalho e comprovantes de contribuição do preso"] },
+      { type: "paragraph", text: "O pedido é feito pelo Meu INSS ou presencialmente na agência. A comprovação de que o segurado permanece preso deve ser renovada trimestralmente." }
+    ],
+    faq: [
+      { question: "Preso em regime aberto recebe auxílio-reclusão?", answer: "Não. Após a reforma de 2019, o auxílio-reclusão é concedido apenas para regime fechado. O semiaberto depende de regulamentação específica." },
+      { question: "Se o preso trabalhava sem carteira, a família tem direito?", answer: "Somente se ele era contribuinte individual ou mantinha qualidade de segurado. Trabalho informal sem contribuição ao INSS não gera direito." },
+      { question: "O auxílio-reclusão pode ser acumulado com outros benefícios?", answer: "Depende. Não pode acumular com pensão por morte do mesmo instituidor, mas pode coexistir com benefícios próprios do dependente." }
+    ]
+  },
+  {
+    slug: "fibromialgia-aposentadoria-invalidez-inss",
+    title: "Fibromialgia Aposenta? Entenda Seus Direitos no INSS",
+    excerpt: "A fibromialgia pode gerar direito a auxílio-doença ou aposentadoria por invalidez. Saiba como comprovar a incapacidade e garantir seu benefício.",
+    category: "Aposentadoria",
+    tags: ["Fibromialgia", "Invalidez", "Incapacidade", "INSS", "Doença"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "A fibromialgia é reconhecida pelo INSS como doença incapacitante",
+      "O maior desafio é comprovar a incapacidade, pois exames não detectam a doença",
+      "Laudos médicos detalhados são fundamentais para o sucesso do pedido",
+      "A Justiça tem sido mais favorável que o INSS em conceder benefícios por fibromialgia"
+    ],
+    image: fibromialgiaImg,
+    imageAlt: "Mulher com fibromialgia consultando médico sobre incapacidade para fins de aposentadoria no INSS",
+    content: [
+      { type: "paragraph", text: "A fibromialgia é uma síndrome crônica caracterizada por dor generalizada, fadiga extrema, distúrbios do sono e alterações cognitivas. Estima-se que acometa entre 2% e 8% da população brasileira, com maior prevalência em mulheres. Apesar de não ter cura, a condição pode gerar direito a benefícios do INSS quando causa incapacidade para o trabalho." },
+      { type: "heading", text: "O INSS Reconhece a Fibromialgia?" },
+      { type: "paragraph", text: "Sim. A fibromialgia é classificada pelo CID-10 como M79.7 e é reconhecida como condição que pode gerar incapacidade. O problema é que a doença não aparece em exames de imagem ou laboratoriais, tornando a comprovação mais difícil na perícia do INSS." },
+      { type: "heading", text: "Quais Benefícios o Fibromialgo Pode Receber?" },
+      { type: "list", items: ["Auxílio por incapacidade temporária (auxílio-doença): quando a fibromialgia impede temporariamente o trabalho", "Aposentadoria por invalidez: quando a incapacidade é total e permanente, sem perspectiva de reabilitação", "BPC/LOAS: para quem não é segurado do INSS, mas comprova deficiência de longo prazo e baixa renda"] },
+      { type: "heading", text: "Como Comprovar a Fibromialgia na Perícia" },
+      { type: "paragraph", text: "A perícia médica do INSS avalia a funcionalidade, não apenas o diagnóstico. Por isso, é fundamental apresentar documentação que demonstre o impacto real da fibromialgia na capacidade de trabalho." },
+      { type: "list", items: ["Laudos do reumatologista com descrição detalhada dos sintomas e limitações", "Relatórios de outros especialistas (neurologista, psiquiatra, ortopedista)", "Lista de medicamentos em uso contínuo e seus efeitos colaterais", "Histórico de atestados médicos e afastamentos do trabalho", "Exames complementares que descartem outras patologias"] },
+      { type: "highlight", text: "Dica importante: peça ao seu médico que descreva suas limitações funcionais (não apenas o diagnóstico). Por exemplo: 'paciente incapaz de permanecer sentada por mais de 30 minutos' é mais eficaz que apenas 'diagnóstico de fibromialgia'." },
+      { type: "heading", text: "Fibromialgia na Justiça" },
+      { type: "paragraph", text: "Quando o INSS nega o benefício, a Justiça Federal tem sido mais sensível aos casos de fibromialgia. A perícia judicial costuma ser mais detalhada, e o juiz pode considerar fatores como idade, escolaridade e tipo de atividade exercida para avaliar a incapacidade." }
+    ],
+    faq: [
+      { question: "Fibromialgia está na lista de doenças que dispensam carência?", answer: "Não diretamente. Mas se associada a outras condições graves (como depressão severa), pode haver dispensa de carência por via judicial." },
+      { question: "Homem com fibromialgia tem os mesmos direitos?", answer: "Sim. Embora menos diagnosticados, homens com fibromialgia têm os mesmos direitos previdenciários que mulheres." },
+      { question: "Fibromialgia pode ser considerada deficiência para aposentadoria PCD?", answer: "Sim, em casos graves. Se a fibromialgia causar impedimento de longo prazo e barreiras para participação social, pode ser enquadrada como deficiência." }
+    ]
+  },
+  {
+    slug: "prova-de-vida-inss-2026-como-funciona",
+    title: "Prova de Vida INSS 2026: Como Funciona e Como Fazer pela Internet",
+    excerpt: "A prova de vida do INSS em 2026 é majoritariamente digital. Entenda o novo processo, os prazos e como evitar a suspensão do seu benefício.",
+    category: "Benefícios",
+    tags: ["Prova de Vida", "INSS", "Digital", "Aposentadoria", "2026"],
+    readTime: "6 min",
+    keyTakeaways: [
+      "A prova de vida agora é feita de forma digital e automática na maioria dos casos",
+      "O INSS cruza dados de bancos, SUS e outros órgãos para confirmar a vida do beneficiário",
+      "Quem não for detectado automaticamente será convocado para procedimento presencial",
+      "O prazo para regularização é de 60 dias após a convocação"
+    ],
+    image: provaVidaImg,
+    imageAlt: "Aposentado realizando prova de vida digital pelo celular no aplicativo Meu INSS",
+    content: [
+      { type: "paragraph", text: "A prova de vida é um procedimento obrigatório para todos os beneficiários do INSS, com o objetivo de confirmar que o titular do benefício está vivo. Em 2026, o processo foi amplamente digitalizado, reduzindo a necessidade de comparecimento presencial às agências bancárias." },
+      { type: "heading", text: "Como Funciona a Prova de Vida Digital" },
+      { type: "paragraph", text: "O INSS realiza a prova de vida de forma automática cruzando dados de diferentes bases governamentais. Se o beneficiário realizou qualquer atividade que comprove estar vivo — como consulta no SUS, vacinação, votação, movimentação bancária com biometria — a prova é considerada realizada." },
+      { type: "heading", text: "Situações que Comprovam Automaticamente" },
+      { type: "list", items: ["Movimentação bancária com biometria (digital ou facial)", "Consulta médica pelo SUS ou rede conveniada", "Atualização cadastral em órgão público", "Emissão ou renovação de documentos oficiais", "Recadastramento eleitoral ou votação"] },
+      { type: "heading", text: "Quando a Prova Presencial É Necessária" },
+      { type: "paragraph", text: "Se o INSS não conseguir confirmar a vida do beneficiário pelos meios digitais, ele será convocado para procedimento presencial. Nesse caso, o beneficiário deve comparecer à agência bancária onde recebe o benefício com documento de identidade com foto." },
+      { type: "highlight", text: "Importante: o beneficiário que não realizar a prova de vida dentro do prazo terá o benefício suspenso. Após 6 meses de suspensão, o benefício pode ser cessado definitivamente." },
+      { type: "heading", text: "Procuração para Prova de Vida" },
+      { type: "paragraph", text: "Beneficiários acamados, internados ou com dificuldade de locomoção podem realizar a prova de vida por meio de procurador devidamente habilitado. Também é possível solicitar visita domiciliar ao INSS em casos de impossibilidade de comparecimento." }
+    ],
+    faq: [
+      { question: "Quem mora no exterior precisa fazer prova de vida?", answer: "Sim. Brasileiros que recebem benefício do INSS no exterior devem apresentar atestado de vida emitido pelo consulado ou embaixada." },
+      { question: "A prova de vida tem data fixa ou prazo?", answer: "O prazo é o mês de aniversário do beneficiário. Se o cruzamento automático não detectar atividade, a convocação ocorre nesse período." },
+      { question: "Posso perder a aposentadoria por não fazer prova de vida?", answer: "O benefício é suspenso primeiro. Após regularização, os valores retroativos são pagos. Somente após 6 meses sem regularização há cessação." }
+    ]
+  },
+  {
+    slug: "esquizofrenia-transtornos-mentais-aposentadoria",
+    title: "Esquizofrenia e Transtornos Mentais Graves: Direitos no INSS",
+    excerpt: "Portadores de esquizofrenia e transtornos mentais graves têm direitos previdenciários específicos. Entenda como funciona a aposentadoria e o BPC.",
+    category: "Aposentadoria",
+    tags: ["Esquizofrenia", "Saúde Mental", "Invalidez", "INSS", "Transtorno Mental"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "Esquizofrenia é doença grave que dispensa carência para benefícios do INSS",
+      "O beneficiário pode ter direito a auxílio-doença, aposentadoria por invalidez ou BPC",
+      "A curatela pode ser necessária para que familiares solicitem o benefício",
+      "A Justiça tem reconhecido direitos mesmo quando o INSS nega"
+    ],
+    image: esquizofreniaImg,
+    imageAlt: "Consulta médica sobre transtornos mentais e direitos previdenciários com especialista em saúde mental",
+    content: [
+      { type: "paragraph", text: "Transtornos mentais graves como esquizofrenia, transtorno bipolar, transtorno esquizoafetivo e psicoses em geral podem gerar incapacidade total e permanente para o trabalho. O INSS reconhece essas condições e prevê benefícios específicos, incluindo a dispensa de carência quando a doença é considerada grave." },
+      { type: "heading", text: "A Esquizofrenia Dispensa Carência?" },
+      { type: "paragraph", text: "Sim. A alienação mental (que inclui esquizofrenia e psicoses graves) está na lista de doenças que dispensam o período de carência de 12 contribuições. Isso significa que basta ter qualidade de segurado para ter direito ao benefício." },
+      { type: "heading", text: "Quais Benefícios Estão Disponíveis" },
+      { type: "list", items: ["Auxílio por incapacidade temporária: durante crises agudas que impeçam o trabalho", "Aposentadoria por invalidez: quando a incapacidade é total e permanente", "Adicional de 25%: quando o paciente necessita de cuidador permanente", "BPC/LOAS: para quem não é segurado do INSS e comprova baixa renda"] },
+      { type: "heading", text: "Como Comprovar a Incapacidade" },
+      { type: "paragraph", text: "A documentação médica é crucial para o sucesso do pedido. Laudos psiquiátricos detalhados, relatórios de internações, prescrições de medicamentos psicotrópicos e declarações sobre o impacto funcional da doença são fundamentais." },
+      { type: "highlight", text: "Importante: muitos pacientes com esquizofrenia não têm consciência da própria doença (anosognosia). Nesses casos, um familiar ou curador pode requerer o benefício em nome do paciente." },
+      { type: "heading", text: "Curatela e Interdição" },
+      { type: "paragraph", text: "Em casos graves em que o paciente não consegue gerir sua própria vida, pode ser necessário o processo de curatela. O curador nomeado pela Justiça pode administrar o benefício e tomar decisões legais em nome do curatelado." },
+      { type: "heading", text: "Transtornos Mentais na Justiça" },
+      { type: "paragraph", text: "A Justiça Federal tem sido sensível aos casos de transtornos mentais graves, reconhecendo que a perícia do INSS muitas vezes subestima a gravidade dessas condições. A perícia judicial com psiquiatra forense tende a ser mais detalhada e favorável ao segurado." }
+    ],
+    faq: [
+      { question: "Transtorno bipolar dá direito a aposentadoria?", answer: "Sim, quando o transtorno bipolar causa incapacidade total e permanente para o trabalho, comprovada por laudo psiquiátrico detalhado." },
+      { question: "Esquizofrênico pode trabalhar e manter o benefício?", answer: "Se estiver aposentado por invalidez, exercer atividade remunerada pode levar à cessação do benefício. Atividade terapêutica é exceção." },
+      { question: "TDAH adulto dá direito a benefício do INSS?", answer: "O TDAH isolado raramente gera incapacidade total. Mas quando associado a comorbidades (depressão, ansiedade), pode haver direito ao benefício." }
+    ]
+  },
+  {
+    slug: "aposentadoria-por-pontos-2026-regras",
+    title: "Aposentadoria por Pontos 2026: Quantos Pontos Você Precisa?",
+    excerpt: "A regra de pontos exige 92 pontos para mulheres e 102 para homens em 2026. Entenda como calcular e se essa é a melhor regra para você.",
+    category: "Aposentadoria",
+    tags: ["Pontos", "Regra de Transição", "INSS", "2026", "Reforma"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Em 2026: mulheres precisam de 92 pontos e homens de 102 pontos",
+      "Pontos = idade + tempo de contribuição",
+      "É necessário ter no mínimo 30 anos (mulher) ou 35 anos (homem) de contribuição",
+      "Essa pode não ser a regra mais vantajosa — compare com as demais"
+    ],
+    image: aposentPontosImg,
+    imageAlt: "Trabalhador calculando pontos necessários para aposentadoria por regra de transição do INSS em 2026",
+    content: [
+      { type: "paragraph", text: "A regra de transição por pontos é uma das mais utilizadas por segurados que buscam a aposentadoria em 2026. Ela combina idade e tempo de contribuição em uma pontuação mínima que aumenta a cada ano. Entender como funciona é essencial para planejar o melhor momento de se aposentar." },
+      { type: "heading", text: "Quantos Pontos São Necessários em 2026?" },
+      { type: "paragraph", text: "A pontuação mínima em 2026 é de 92 pontos para mulheres e 102 pontos para homens. Esses pontos são calculados somando a idade com o tempo de contribuição. Por exemplo: uma mulher com 57 anos e 35 anos de contribuição tem 92 pontos e pode se aposentar por essa regra." },
+      { type: "heading", text: "Requisitos Completos" },
+      { type: "list", items: ["Mulheres: 92 pontos + mínimo de 30 anos de contribuição", "Homens: 102 pontos + mínimo de 35 anos de contribuição", "Já estar contribuindo antes da Reforma de 2019 (13/11/2019)", "A pontuação aumenta 1 ponto por ano até atingir o limite (100 para mulheres, 105 para homens)"] },
+      { type: "heading", text: "Como Calcular Seus Pontos" },
+      { type: "paragraph", text: "O cálculo é simples: some sua idade atual com seu tempo total de contribuição ao INSS. Lembre-se de que tempo especial pode ser convertido com fator multiplicador, aumentando sua pontuação." },
+      { type: "highlight", text: "Exemplo prático: João tem 60 anos e 42 anos de contribuição. Seus pontos: 60 + 42 = 102 pontos. Ele pode se aposentar pela regra de pontos em 2026." },
+      { type: "heading", text: "Valor do Benefício pela Regra de Pontos" },
+      { type: "paragraph", text: "O cálculo segue a regra geral pós-reforma: 60% da média salarial + 2% para cada ano acima de 20 anos de contribuição (homem) ou 15 anos (mulher). Quem tem muitos anos de contribuição pode alcançar 100% ou até mais da média." },
+      { type: "heading", text: "Essa É a Melhor Regra Para Você?" },
+      { type: "paragraph", text: "Não necessariamente. Existem outras regras de transição (pedágio de 50%, pedágio de 100%, idade progressiva) que podem ser mais vantajosas dependendo do seu perfil. Um planejamento previdenciário compara todas as opções e identifica a melhor estratégia." }
+    ],
+    faq: [
+      { question: "A pontuação vai parar de aumentar?", answer: "Sim. O limite é 100 pontos para mulheres (previsto para 2033) e 105 pontos para homens (previsto para 2028)." },
+      { question: "Tempo como MEI conta para a regra de pontos?", answer: "Sim, mas apenas se o MEI complementar a contribuição com 15% adicional. Sem complementação, o tempo conta apenas para aposentadoria por idade." },
+      { question: "Posso usar tempo especial para aumentar meus pontos?", answer: "Sim. Tempo especial anterior à Reforma pode ser convertido em tempo comum com fator multiplicador (1,4 para homens, 1,2 para mulheres)." }
+    ]
+  },
+  {
+    slug: "periodo-de-graca-inss-quando-perde-qualidade",
+    title: "Período de Graça do INSS: Quando Você Perde a Qualidade de Segurado?",
+    excerpt: "O período de graça mantém seus direitos no INSS mesmo sem contribuir. Entenda os prazos e como não perder a proteção previdenciária.",
+    category: "Benefícios",
+    tags: ["Período de Graça", "Qualidade de Segurado", "INSS", "Contribuição"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "O período de graça pode variar de 3 a 36 meses dependendo da situação",
+      "Durante o período de graça, você mantém todos os direitos no INSS",
+      "Perder a qualidade de segurado pode impedir o acesso a benefícios",
+      "É possível recuperar a qualidade de segurado com novas contribuições"
+    ],
+    image: periodoGracaImg,
+    imageAlt: "Relógio e calendário representando o período de graça do INSS e prazos de qualidade de segurado",
+    content: [
+      { type: "paragraph", text: "O período de graça é o intervalo de tempo em que o segurado mantém seus direitos no INSS mesmo sem estar contribuindo. Esse conceito é crucial porque, sem a qualidade de segurado, você perde o direito a benefícios como auxílio-doença, salário-maternidade e pensão por morte." },
+      { type: "heading", text: "O Que É Qualidade de Segurado?" },
+      { type: "paragraph", text: "Qualidade de segurado significa estar coberto pela proteção previdenciária do INSS. Enquanto você contribui, tem essa qualidade. Quando para de contribuir, ela é mantida por um período — o chamado período de graça." },
+      { type: "heading", text: "Prazos do Período de Graça" },
+      { type: "list", items: ["3 meses: segurado facultativo (dona de casa, estudante)", "6 meses: segurado que recebia auxílio-doença ou auxílio-acidente", "12 meses: regra geral para quem deixou de contribuir (empregado, autônomo)", "24 meses: quem comprova mais de 120 contribuições sem interrupção que acarrete perda da qualidade", "36 meses: 24 meses + 12 meses adicionais para quem comprova desemprego involuntário"] },
+      { type: "heading", text: "Como Funciona na Prática" },
+      { type: "paragraph", text: "Se você foi demitido em janeiro de 2026 e tinha mais de 120 contribuições, seu período de graça vai até janeiro de 2028 (24 meses). Se comprovar que está desempregado (cadastro no SINE ou recebimento de seguro-desemprego), pode estender até janeiro de 2029 (36 meses)." },
+      { type: "highlight", text: "Atenção: o período de graça vale a partir do primeiro dia do mês seguinte ao da última contribuição. A contagem inclui o 'mês seguinte ao final do período de graça' para efeitos de perda definitiva." },
+      { type: "heading", text: "Consequências de Perder a Qualidade" },
+      { type: "list", items: ["Perde o direito a auxílio-doença, mesmo que fique doente", "Perde o direito a salário-maternidade", "Dependentes perdem o direito à pensão por morte", "Pode ser necessário cumprir nova carência para alguns benefícios"] },
+      { type: "heading", text: "Como Recuperar a Qualidade" },
+      { type: "paragraph", text: "Para recuperar a qualidade de segurado, basta voltar a contribuir ao INSS. Porém, para benefícios que exigem carência, pode ser necessário cumprir 1/3 da carência exigida após a nova filiação." }
+    ],
+    faq: [
+      { question: "Se eu perdi a qualidade de segurado, perco todo o tempo anterior?", answer: "Não. O tempo de contribuição anterior é mantido para aposentadoria. O que se perde é a proteção imediata para benefícios como auxílio-doença." },
+      { question: "Preso mantém a qualidade de segurado?", answer: "Sim. Enquanto preso, o segurado mantém a qualidade de segurado por até 12 meses após a soltura, mesmo sem contribuição." },
+      { question: "Doença grave durante o período de graça gera direito ao benefício?", answer: "Sim. Se a doença surgir durante o período de graça, o segurado tem direito ao auxílio-doença normalmente, sem necessidade de nova carência." }
+    ]
+  },
+  {
+    slug: "margem-consignavel-inss-2026-novas-regras",
+    title: "Margem Consignável INSS 2026: Novas Regras e Como Calcular",
+    excerpt: "As regras da margem consignável para aposentados mudaram em 2026. Entenda os novos limites, como calcular e como se proteger de fraudes.",
+    category: "Benefícios",
+    tags: ["Consignado", "Margem", "Aposentadoria", "INSS", "2026"],
+    readTime: "6 min",
+    keyTakeaways: [
+      "A margem consignável é o valor máximo que pode ser descontado do benefício",
+      "O limite para empréstimo consignado é de 35% do benefício líquido",
+      "Para cartão de crédito consignado, o limite é de 5% adicional",
+      "Fraudes em consignado são frequentes e exigem atenção redobrada"
+    ],
+    image: margemConsigImg,
+    imageAlt: "Aposentado analisando margem consignável do INSS com advogado especialista em empréstimo consignado",
+    content: [
+      { type: "paragraph", text: "A margem consignável é o percentual do benefício do INSS que pode ser comprometido com empréstimos e cartões consignados. Em 2026, com o reajuste dos benefícios, as margens foram recalculadas, e é fundamental entender os limites para evitar comprometer demais sua renda." },
+      { type: "heading", text: "Como Funciona a Margem Consignável" },
+      { type: "paragraph", text: "A margem é calculada sobre o valor líquido do benefício (após descontos obrigatórios como IR e contribuição de saúde). O beneficiário pode comprometer até 45% do seu benefício líquido com consignações." },
+      { type: "heading", text: "Distribuição da Margem em 2026" },
+      { type: "list", items: ["35% para empréstimo consignado", "5% para cartão de crédito consignado (RMC)", "5% para cartão de benefício consignado (RCC)", "Total: até 45% do benefício líquido pode ser comprometido"] },
+      { type: "heading", text: "Como Consultar Sua Margem" },
+      { type: "paragraph", text: "A margem disponível pode ser consultada pelo aplicativo ou site Meu INSS, na opção 'Empréstimo Consignado'. A atualização é feita mensalmente pela Dataprev após o processamento da folha de pagamento." },
+      { type: "highlight", text: "Cuidado com fraudes: nunca forneça seus dados bancários ou número de benefício por telefone. O INSS não liga para oferecer empréstimos. Desconfie de propostas não solicitadas." },
+      { type: "heading", text: "Como se Proteger de Fraudes" },
+      { type: "list", items: ["Bloqueie a margem consignável pelo Meu INSS se não pretende contratar empréstimo", "Nunca assine documentos sem ler atentamente", "Verifique se o banco é autorizado pelo INSS a operar consignados", "Em caso de empréstimo não autorizado, registre reclamação no Banco Central e procure um advogado"] },
+      { type: "paragraph", text: "Se você foi vítima de empréstimo consignado não autorizado, é possível cancelar o contrato e receber os valores descontados de volta, com juros e correção. Um advogado especialista pode orientar sobre a melhor estratégia." }
+    ],
+    faq: [
+      { question: "Posso bloquear minha margem para não receberem propostas?", answer: "Sim. Pelo Meu INSS ou presencialmente na agência, você pode bloquear e desbloquear a margem consignável a qualquer momento." },
+      { question: "Isenção de IR aumenta a margem consignável?", answer: "Sim. Com a isenção ou redução do IR, o valor líquido do benefício aumenta e, consequentemente, a margem disponível também." },
+      { question: "É possível transferir consignado de um banco para outro?", answer: "Sim, através da portabilidade de crédito consignado. O novo banco pode oferecer taxas menores e liberar parte da margem." }
+    ]
+  },
+  {
+    slug: "reajuste-aposentadoria-inss-2026-como-funciona",
+    title: "Reajuste da Aposentadoria 2026: Como Funciona e Quanto Você Vai Receber",
+    excerpt: "Entenda como funciona o reajuste das aposentadorias do INSS em 2026, quais os novos valores e como verificar se seu benefício foi corrigido corretamente.",
+    category: "Aposentadoria",
+    tags: ["Reajuste", "Aposentadoria", "INSS", "Salário Mínimo", "2026"],
+    readTime: "6 min",
+    keyTakeaways: [
+      "O salário mínimo em 2026 é de R$ 1.621,00 e o teto é de R$ 8.475,55",
+      "Quem recebe acima do mínimo teve reajuste de 3,9% (INPC)",
+      "Os novos valores passaram a valer em fevereiro de 2026",
+      "É importante verificar se o reajuste foi aplicado corretamente no seu benefício"
+    ],
+    image: reajusteImg,
+    imageAlt: "Aposentado conferindo extrato de pagamento do INSS com novos valores de reajuste para 2026",
+    content: [
+      { type: "paragraph", text: "Todo início de ano, os benefícios do INSS passam por reajuste. Em 2026, os valores foram atualizados com base no INPC (Índice Nacional de Preços ao Consumidor), garantindo a manutenção do poder de compra dos aposentados e pensionistas. Entender como esse reajuste funciona é essencial para conferir se seu benefício está correto." },
+      { type: "heading", text: "Novos Valores em 2026" },
+      { type: "list", items: ["Salário mínimo: R$ 1.621,00 (ganho real acima da inflação)", "Teto do INSS: R$ 8.475,55 (reajuste de 3,9%)", "Benefícios acima do mínimo: reajuste de 3,9% baseado no INPC", "Benefícios de um salário mínimo: acompanham o reajuste do mínimo"] },
+      { type: "heading", text: "Quem Recebe Um Salário Mínimo" },
+      { type: "paragraph", text: "Quem recebe o piso previdenciário teve o benefício reajustado para R$ 1.621,00. Esse grupo geralmente tem reajuste maior em termos percentuais, pois o salário mínimo é corrigido com ganho real (inflação + crescimento do PIB)." },
+      { type: "heading", text: "Quem Recebe Acima do Mínimo" },
+      { type: "paragraph", text: "Para quem recebe acima do mínimo, o reajuste segue o INPC acumulado no ano anterior. Em 2026, o índice aplicado foi de 3,9%. Isso significa que um benefício de R$ 3.000 passou para R$ 3.117,00." },
+      { type: "highlight", text: "Importante: o reajuste é aplicado sobre o valor total do benefício, e não sobre o último reajuste. Sempre confira seu extrato de pagamento no Meu INSS para verificar a correção." },
+      { type: "heading", text: "Como Verificar Seu Reajuste" },
+      { type: "list", items: ["Acesse o aplicativo ou site Meu INSS", "Consulte o extrato de pagamento atualizado", "Compare o valor anterior com o novo valor", "Se houver divergência, procure um advogado para análise"] },
+      { type: "heading", text: "O Reajuste Pode Estar Errado?" },
+      { type: "paragraph", text: "Sim. Erros no reajuste são mais comuns do que se imagina. Benefícios que tiveram revisão judicial, complementação ou desdobramento podem ter o índice aplicado incorretamente. Se você suspeita de erro, é fundamental buscar orientação especializada." }
+    ],
+    faq: [
+      { question: "O 13º salário do INSS também é reajustado?", answer: "Sim. O 13º salário é calculado sobre o valor atualizado do benefício, refletindo o reajuste aplicado no ano." },
+      { question: "Aposentados de regimes próprios (servidores) seguem o mesmo reajuste?", answer: "Não necessariamente. Servidores públicos seguem as regras do regime próprio de previdência, que pode ter índice de reajuste diferente do INSS." },
+      { question: "Quando o reajuste do INSS começa a ser pago?", answer: "Os novos valores começam a ser pagos a partir de fevereiro de cada ano, seguindo o calendário de pagamentos do INSS." }
     ]
   }
 
