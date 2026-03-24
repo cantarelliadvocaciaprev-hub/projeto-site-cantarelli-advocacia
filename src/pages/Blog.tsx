@@ -50,6 +50,7 @@ const Blog = () => {
     setSearch("");
     setSelectedCategory(null);
     setSelectedTag(null);
+    setShowAllTags(false);
   };
 
   const hasFilters = search || selectedCategory || selectedTag;
