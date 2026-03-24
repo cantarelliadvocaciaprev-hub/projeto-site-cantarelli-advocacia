@@ -986,17 +986,11 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "heading",
-        text: "Como Solicitar o BPC/LOAS",
+        text: "Por Que Contar com um Advogado Especialista?",
       },
       {
-        type: "list",
-        items: [
-          "1. Inscreva-se ou atualize o CadÚnico no CRAS do seu município",
-          "2. Agende o requerimento pelo Meu INSS ou ligando para o 135",
-          "3. Reúna documentos: RG, CPF, comprovante de residência e NIS",
-          "4. Para PCD: leve laudos médicos e exames que comprovem a deficiência",
-          "5. Aguarde a análise — prazo médio é de 45 a 90 dias",
-        ],
+        type: "paragraph",
+        text: "O processo de solicitação do BPC/LOAS envolve critérios técnicos complexos, como a análise de renda per capita, inscrição no CadÚnico e avaliação médica e social. Erros na documentação ou no enquadramento podem resultar em indeferimento. Um advogado previdenciário garante que todo o processo seja conduzido corretamente, aumentando significativamente as chances de aprovação.",
       },
       {
         type: "heading",
