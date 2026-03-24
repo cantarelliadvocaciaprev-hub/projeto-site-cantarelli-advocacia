@@ -199,34 +199,6 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "heading",
-        text: "Como Solicitar pelo Meu INSS",
-      },
-      {
-        type: "subheading",
-        text: "Passo 1: Acesse o Meu INSS",
-      },
-      {
-        type: "paragraph",
-        text: "Acesse o aplicativo ou site meu.inss.gov.br e faça login com sua conta gov.br. Vá em 'Novo Pedido' e selecione 'Auxílio por Incapacidade Temporária'.",
-      },
-      {
-        type: "subheading",
-        text: "Passo 2: Envie o Atestado Médico",
-      },
-      {
-        type: "paragraph",
-        text: "Em 2026, o INSS ampliou o sistema de análise documental. Envie o atestado médico digitalizado com boa resolução, contendo: CID da doença, período de afastamento recomendado, data, assinatura e CRM do médico.",
-      },
-      {
-        type: "subheading",
-        text: "Passo 3: Perícia Médica",
-      },
-      {
-        type: "paragraph",
-        text: "A perícia pode ser presencial em uma agência do INSS ou por telemedicina (consulta por vídeo). Em 2026, a perícia por telemedicina foi ampliada para mais de 2.000 municípios brasileiros.",
-      },
-      {
-        type: "heading",
         text: "Motivos Comuns de Indeferimento",
       },
       {
