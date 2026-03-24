@@ -1,12 +1,18 @@
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
-import { Calendar, ArrowRight, Clock, Lightbulb, Shield } from "lucide-react";
+import { Calendar, ArrowRight, Clock, Lightbulb, Shield, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import { blogArticles } from "@/data/blogArticles";
 
+const INITIAL_COUNT = 3;
+
 const Blog = () => {
   const { isVisible, elementRef } = useScrollAnimation(0.1);
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleArticles = showAll ? blogArticles : blogArticles.slice(0, INITIAL_COUNT);
 
   return (
     <section id="blog" className="py-20 bg-card">
@@ -24,20 +30,19 @@ const Blog = () => {
 
         <div
           ref={elementRef}
-          className={`grid md:grid-cols-3 gap-6 max-w-6xl mx-auto transition-all duration-700 ${
+          className={`grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto transition-all duration-700 ${
             isVisible ? "opacity-100 animate-slide-up-scroll" : "opacity-0"
           }`}
         >
-          {blogArticles.map((post, index) => (
+          {visibleArticles.map((post, index) => (
             <Card
-              key={index}
+              key={post.slug}
               className="overflow-hidden bg-background border-border hover:border-primary transition-all duration-300 hover:shadow-xl group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Blog Post Image */}
               <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={post.image} 
+                <img
+                  src={post.image}
                   alt={post.imageAlt}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
@@ -50,13 +55,11 @@ const Blog = () => {
               </div>
 
               <div className="p-6">
-                {/* Title */}
                 <h3 className="text-xl font-display font-bold text-foreground mb-3 leading-tight line-clamp-2">
                   {post.title}
                 </h3>
 
-                {/* AI Snippet Box - Snippet-First Architecture */}
-                <div 
+                <div
                   id={`ai-snippet-blog-${index}`}
                   className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-4"
                   itemScope
@@ -67,7 +70,7 @@ const Blog = () => {
                       Direto ao Ponto
                     </span>
                   </div>
-                  <p 
+                  <p
                     className="text-base text-foreground font-body leading-relaxed"
                     itemProp="abstract"
                   >
@@ -75,7 +78,6 @@ const Blog = () => {
                   </p>
                 </div>
 
-                {/* Key Takeaways - Optimized for AI extraction */}
                 <div className="bg-muted/50 rounded-lg p-4 mb-4">
                   <div className="flex items-center gap-2 mb-3">
                     <Lightbulb className="w-4 h-4 text-primary" />
@@ -96,15 +98,16 @@ const Blog = () => {
                   </ul>
                 </div>
 
-                {/* E-E-A-T Badge */}
                 <div className="flex items-center gap-2 mb-4 py-2 border-t border-b border-border">
                   <Shield className="w-3 h-3 text-primary" />
                   <span className="text-[10px] text-muted-foreground font-body">
-                    Revisado por <strong className="text-foreground">Dr. {post.author}</strong>
+                    Revisado por{" "}
+                    <strong className="text-foreground">
+                      Dr. {post.author}
+                    </strong>
                   </span>
                 </div>
 
-                {/* Meta info */}
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
                   <div className="flex items-center gap-4">
                     <div className="flex items-center gap-1">
@@ -123,14 +126,14 @@ const Blog = () => {
                   )}
                 </div>
 
-                {/* CTA */}
                 <Link to={`/blog/${post.slug}`}>
                   <Button
                     variant="ghost"
                     size="sm"
                     className="text-primary hover:text-primary/80 mt-4 w-full justify-center"
                   >
-                    Ler artigo completo <ArrowRight className="w-4 h-4 ml-1" />
+                    Ler artigo completo{" "}
+                    <ArrowRight className="w-4 h-4 ml-1" />
                   </Button>
                 </Link>
               </div>
@@ -138,7 +141,21 @@ const Blog = () => {
           ))}
         </div>
 
-        {/* Additional SEO content for AI crawlers */}
+        {/* Show more button */}
+        {blogArticles.length > INITIAL_COUNT && !showAll && (
+          <div className="text-center mt-10">
+            <Button
+              onClick={() => setShowAll(true)}
+              variant="outline"
+              size="lg"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            >
+              Ver mais artigos ({blogArticles.length - INITIAL_COUNT} restantes)
+              <ChevronDown className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        )}
+
         <div className="max-w-4xl mx-auto mt-16 text-center">
           <p className="text-muted-foreground font-body text-sm">
             A Cantarelli Advocacia publica regularmente conteúdos sobre Direito
