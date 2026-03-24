@@ -635,117 +635,135 @@ export const blogArticles: BlogArticle[] = [
     ],
   },
   {
-    slug: "como-dar-entrada-aposentadoria-meu-inss-2026",
-    title: "Como Dar Entrada na Aposentadoria pelo Meu INSS em 2026: Passo a Passo",
+    slug: "aposentadoria-pcd-por-idade-tempo-contribuicao-2026",
+    title: "Aposentadoria da Pessoa com Deficiência (PCD): Por Idade e Por Tempo de Contribuição em 2026",
     excerpt:
-      "Guia completo e atualizado para solicitar sua aposentadoria online pelo Meu INSS. Desde o cadastro no gov.br até o acompanhamento do pedido, tudo explicado de forma simples.",
+      "A aposentadoria da pessoa com deficiência tem regras próprias e mais favoráveis que a regra geral. Conheça os requisitos por idade e por tempo de contribuição, o diagnóstico previdenciário e como garantir esse direito.",
     date: "20 de Fevereiro, 2026",
-    category: "Tutorial",
-    readTime: "6 min",
+    category: "Aposentadoria PCD",
+    readTime: "9 min",
     keyTakeaways: [
-      "Todo o processo pode ser feito online, sem ir a uma agência do INSS",
-      "É necessário ter conta nível Prata ou Ouro no gov.br",
-      "O prazo médio de análise em 2026 é de 45 a 90 dias",
+      "PCD pode se aposentar com idade reduzida (55 anos mulheres / 60 anos homens) e apenas 15 anos de contribuição",
+      "A aposentadoria por tempo de contribuição da PCD não exige idade mínima e varia conforme o grau de deficiência",
+      "O diagnóstico previdenciário é essencial para comprovar o grau e a duração da deficiência perante o INSS",
+      "Contribuintes individuais com deficiência também têm direito à aposentadoria PCD",
     ],
     lastUpdated: "Março 2026",
-    image: meuInssImg,
+    image: pcdImg,
     imageAlt:
-      "Pessoa acessando o sistema Meu INSS pelo celular e computador para dar entrada na aposentadoria",
+      "Pessoa com deficiência em consulta com advogado previdenciário sobre aposentadoria PCD",
     author: "Thiago Cantarelli",
     content: [
       {
         type: "paragraph",
-        text: "Dar entrada na aposentadoria nunca foi tão acessível. Com o sistema Meu INSS, todo o processo pode ser feito online, sem sair de casa. Neste guia atualizado para 2026, explicamos cada etapa para você solicitar seu benefício com segurança.",
+        text: "A Lei Complementar nº 142/2013 garantiu à pessoa com deficiência regras diferenciadas para aposentadoria, reconhecendo que esses segurados enfrentam barreiras adicionais no mercado de trabalho. Em 2026, essas regras seguem vigentes e representam um dos benefícios mais importantes do sistema previdenciário brasileiro.",
       },
       {
         type: "heading",
-        text: "Antes de Começar: Verifique Seus Requisitos",
+        text: "Aposentadoria PCD por Idade",
       },
       {
         type: "paragraph",
-        text: "Antes de dar entrada, é fundamental verificar se você cumpre os requisitos da aposentadoria. Acesse o extrato CNIS (Cadastro Nacional de Informações Sociais) pelo Meu INSS e confira todos os seus vínculos e contribuições.",
-      },
-      {
-        type: "highlight",
-        text: "Dica importante: Muitos pedidos são indeferidos porque o CNIS contém erros ou períodos não reconhecidos. Corrija seu extrato ANTES de dar entrada no pedido.",
-      },
-      {
-        type: "heading",
-        text: "Passo 1: Criar ou Acessar Conta no Gov.br",
-      },
-      {
-        type: "paragraph",
-        text: "Para acessar o Meu INSS, você precisa de uma conta no portal gov.br com nível Prata ou Ouro. O nível Bronze não permite acesso a todos os serviços. Para subir de nível, você pode validar seus dados bancários, fazer reconhecimento facial pelo app gov.br, ou usar certificado digital.",
-      },
-      {
-        type: "heading",
-        text: "Passo 2: Acessar o Meu INSS",
+        text: "A aposentadoria por idade da pessoa com deficiência possui requisitos mais brandos que a regra geral. Os requisitos são:",
       },
       {
         type: "list",
         items: [
-          "Acesse meu.inss.gov.br ou baixe o aplicativo Meu INSS",
-          "Faça login com sua conta gov.br",
-          "No menu principal, clique em 'Novo Pedido'",
-          "Selecione 'Aposentadoria' e escolha o tipo desejado",
-        ],
-      },
-      {
-        type: "heading",
-        text: "Passo 3: Preencher o Requerimento",
-      },
-      {
-        type: "paragraph",
-        text: "O sistema apresentará seus dados cadastrais e vínculos. Confira cada informação com atenção. Se houver períodos faltantes, você pode informá-los no campo 'Períodos não registrados' e anexar documentos comprobatórios.",
-      },
-      {
-        type: "heading",
-        text: "Passo 4: Anexar Documentos",
-      },
-      {
-        type: "paragraph",
-        text: "Digitalize e anexe todos os documentos relevantes. O sistema aceita arquivos em PDF, JPG e PNG com até 5MB cada. Documentos essenciais incluem:",
-      },
-      {
-        type: "list",
-        items: [
-          "RG e CPF (ou CNH)",
-          "Carteira de Trabalho (todas as páginas com anotações)",
-          "Carnês de contribuição (se contribuinte individual)",
-          "Certidão de Tempo de Contribuição (se servidor público)",
-          "PPP — Perfil Profissiográfico Previdenciário (se atividade especial)",
-          "Certidão de casamento ou nascimento dos filhos",
-        ],
-      },
-      {
-        type: "heading",
-        text: "Passo 5: Acompanhar o Pedido",
-      },
-      {
-        type: "paragraph",
-        text: "Após protocolar, acompanhe o andamento pelo Meu INSS em 'Consultar Pedidos'. O INSS pode solicitar documentos adicionais através de 'exigências'. Fique atento às notificações e cumpra os prazos para não ter o pedido arquivado.",
-      },
-      {
-        type: "paragraph",
-        text: "O prazo médio de análise em 2026 está entre 45 e 90 dias, dependendo da complexidade do caso e da região. Casos com pendências documentais podem demorar mais.",
-      },
-      {
-        type: "heading",
-        text: "Dicas Para Evitar Problemas",
-      },
-      {
-        type: "list",
-        items: [
-          "Faça um planejamento previdenciário antes de dar entrada para garantir o melhor benefício",
-          "Corrija o CNIS antes do requerimento — é muito mais difícil corrigir depois",
-          "Não dê entrada antes de verificar qual regra de transição é mais vantajosa",
-          "Guarde o número do protocolo e acompanhe semanalmente",
-          "Em caso de exigência, responda dentro do prazo de 30 dias",
+          "Idade: 60 anos (homens) ou 55 anos (mulheres)",
+          "Tempo de contribuição mínimo: 15 anos",
+          "Comprovar a existência de deficiência durante todo o período de contribuição exigido",
+          "A deficiência pode ser de qualquer grau (leve, moderada ou grave)",
         ],
       },
       {
         type: "highlight",
-        text: "Se o INSS negar seu pedido, você tem 30 dias para interpor recurso administrativo e pode também buscar a via judicial. Um advogado previdenciário pode reverter o indeferimento em muitos casos.",
+        text: "Atenção: A Reforma da Previdência de 2019 NÃO alterou as regras da aposentadoria PCD. Essa é uma das únicas modalidades que manteve suas condições originais.",
+      },
+      {
+        type: "heading",
+        text: "Aposentadoria PCD por Tempo de Contribuição",
+      },
+      {
+        type: "paragraph",
+        text: "Esta modalidade não exige idade mínima. O tempo de contribuição necessário varia conforme o grau de deficiência avaliado pela perícia biopsicossocial do INSS:",
+      },
+      {
+        type: "list",
+        items: [
+          "Deficiência grave: 25 anos (homens) ou 20 anos (mulheres)",
+          "Deficiência moderada: 29 anos (homens) ou 24 anos (mulheres)",
+          "Deficiência leve: 33 anos (homens) ou 28 anos (mulheres)",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "A grande vantagem é a ausência de idade mínima e o cálculo mais favorável do benefício: 100% do salário de benefício para quem cumpre os requisitos, sem a aplicação do fator previdenciário de forma obrigatória.",
+      },
+      {
+        type: "heading",
+        text: "O Que é o Diagnóstico Previdenciário?",
+      },
+      {
+        type: "paragraph",
+        text: "O diagnóstico previdenciário é uma análise técnica completa da situação do segurado frente ao INSS. No caso da pessoa com deficiência, ele é especialmente importante porque permite:",
+      },
+      {
+        type: "list",
+        items: [
+          "Identificar se a deficiência se enquadra nos critérios do INSS (leve, moderada ou grave)",
+          "Mapear todo o histórico contributivo e verificar períodos que podem ser reconhecidos",
+          "Simular o melhor momento para dar entrada no benefício",
+          "Reunir antecipadamente a documentação médica necessária para a perícia",
+          "Avaliar se há direito a auxílio-acidente cumulado com aposentadoria",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "O diagnóstico previdenciário evita indeferimentos e garante que o segurado PCD entre com o pedido no momento mais vantajoso, com toda a documentação correta.",
+      },
+      {
+        type: "heading",
+        text: "Perícia Biopsicossocial: Como Funciona",
+      },
+      {
+        type: "paragraph",
+        text: "A perícia para aposentadoria PCD é diferente da perícia médica comum. Ela é realizada por uma equipe multiprofissional que avalia não apenas a condição médica, mas também os aspectos sociais, ambientais e pessoais que afetam a participação do segurado na sociedade.",
+      },
+      {
+        type: "list",
+        items: [
+          "Avaliação médica: natureza e grau da deficiência física, mental, intelectual ou sensorial",
+          "Avaliação funcional: impacto da deficiência nas atividades diárias e no trabalho",
+          "Avaliação social: barreiras enfrentadas no ambiente social e profissional",
+          "Classificação baseada na CIF (Classificação Internacional de Funcionalidade)",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Auxílio-Acidente e a Relação com a Aposentadoria PCD",
+      },
+      {
+        type: "paragraph",
+        text: "O auxílio-acidente é um benefício indenizatório pago ao segurado que sofre um acidente e fica com sequela permanente que reduz sua capacidade de trabalho. Ele equivale a 50% do salário de benefício e pode ser acumulado com o salário do trabalho.",
+      },
+      {
+        type: "paragraph",
+        text: "Importante: o auxílio-acidente pode ser recebido até a data da aposentadoria, e o período de recebimento é computado como tempo de contribuição. Além disso, se a sequela do acidente configura deficiência nos termos da LC 142/2013, o segurado pode ter direito à aposentadoria PCD.",
+      },
+      {
+        type: "heading",
+        text: "Documentos Essenciais para o Pedido",
+      },
+      {
+        type: "list",
+        items: [
+          "Laudos médicos detalhados com CID e descrição funcional da deficiência",
+          "Exames complementares (ressonância, audiometria, exames laboratoriais, etc.)",
+          "Relatórios de acompanhamento médico ao longo dos anos",
+          "Declaração de empregador sobre condições de trabalho",
+          "Carteira de trabalho e CNIS atualizado",
+          "Cartão de benefício do BPC/LOAS (se aplicável)",
+        ],
       },
       {
         type: "heading",
@@ -753,118 +771,151 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "O processo de dar entrada na aposentadoria pelo Meu INSS é simples, mas requer atenção aos detalhes. Um erro no extrato ou um documento faltante pode atrasar seu benefício em meses. Conte com a Cantarelli Advocacia para orientação profissional em todo o processo.",
+        text: "A aposentadoria da pessoa com deficiência é um direito garantido por lei com regras mais favoráveis que a aposentadoria comum. Se você é PCD ou conhece alguém nessa situação, procure um advogado previdenciário para realizar o diagnóstico previdenciário e garantir o melhor benefício possível. A Cantarelli Advocacia é especialista em aposentadoria PCD em Recife e atende todo o Brasil.",
       },
     ],
   },
   {
-    slug: "mei-contribuicao-inss-aposentadoria-2026",
-    title: "MEI e INSS em 2026: Qual Aposentadoria o Microempreendedor Tem Direito?",
+    slug: "aposentadoria-especial-ruido-contribuinte-individual-2026",
+    title: "Aposentadoria Especial por Exposição ao Ruído e Tempo Especial para Contribuintes Individuais em 2026",
     excerpt:
-      "O MEI contribui com valor reduzido ao INSS, mas isso limita o tipo de aposentadoria. Entenda as regras, como complementar a contribuição e garantir uma aposentadoria melhor.",
+      "Trabalhadores expostos ao ruído acima de 85 dB podem ter direito à aposentadoria especial. Saiba também como contribuintes individuais podem conseguir o reconhecimento de tempo especial no INSS.",
     date: "15 de Fevereiro, 2026",
-    category: "Contribuição",
-    readTime: "6 min",
+    category: "Aposentadoria Especial",
+    readTime: "8 min",
     keyTakeaways: [
-      "A contribuição do MEI (5% do salário mínimo) dá direito apenas à aposentadoria por idade",
-      "Para aposentadoria por tempo de contribuição, é necessário complementar com 15% adicional",
-      "O valor da aposentadoria do MEI será de um salário mínimo se não houver complementação",
+      "Exposição a ruído acima de 85 dB garante direito à aposentadoria especial com 25 anos de contribuição",
+      "O uso de EPI não descaracteriza a exposição ao ruído para fins de aposentadoria especial (decisão do STF)",
+      "Contribuintes individuais podem ter tempo especial reconhecido judicialmente, mesmo sem vínculo CLT",
+      "O PPP e o LTCAT são documentos indispensáveis para comprovar a exposição",
     ],
     lastUpdated: "Março 2026",
-    image: meiImg,
+    image: ruidoImg,
     imageAlt:
-      "Microempreendedor individual trabalhando em seu negócio, contribuição INSS e aposentadoria MEI",
+      "Trabalhador usando proteção auricular em ambiente industrial com exposição a ruído ocupacional",
     author: "Thiago Cantarelli",
     content: [
       {
         type: "paragraph",
-        text: "O Brasil tem mais de 15 milhões de Microempreendedores Individuais (MEIs) registrados. Apesar de contribuírem mensalmente ao INSS, muitos desconhecem as limitações do benefício que terão direito. Em 2026, é fundamental entender como funciona a relação entre MEI e previdência.",
+        text: "A exposição ocupacional ao ruído é uma das causas mais comuns de aposentadoria especial no Brasil. Milhões de trabalhadores em indústrias, construção civil, mineração e transporte convivem diariamente com níveis sonoros prejudiciais à saúde. Além disso, uma questão pouco conhecida é que contribuintes individuais (autônomos) também podem ter direito ao reconhecimento de tempo especial.",
       },
       {
         type: "heading",
-        text: "Como o MEI Contribui ao INSS?",
+        text: "Aposentadoria Especial por Exposição ao Ruído",
       },
       {
         type: "paragraph",
-        text: "O MEI paga uma contribuição mensal fixa através do DAS (Documento de Arrecadação do Simples Nacional), que inclui 5% do salário mínimo destinado ao INSS. Em 2026, com o salário mínimo de R$ 1.518,00, a contribuição previdenciária do MEI é de R$ 75,90 por mês.",
-      },
-      {
-        type: "heading",
-        text: "Quais Benefícios o MEI Tem Direito?",
-      },
-      {
-        type: "paragraph",
-        text: "Com a contribuição de 5%, o MEI tem acesso aos seguintes benefícios do INSS:",
+        text: "O ruído é classificado como agente físico nocivo pela legislação previdenciária. Os limites de tolerância mudaram ao longo dos anos:",
       },
       {
         type: "list",
         items: [
-          "Aposentadoria por idade (62 anos mulheres / 65 anos homens, com 15 anos de contribuição)",
-          "Auxílio por incapacidade temporária (antigo auxílio-doença)",
-          "Auxílio por incapacidade permanente (aposentadoria por invalidez)",
-          "Salário-maternidade",
-          "Pensão por morte (para dependentes)",
-          "Auxílio-reclusão (para dependentes)",
+          "Até 05/03/1997: acima de 80 dB era considerado especial",
+          "De 06/03/1997 a 18/11/2003: acima de 90 dB",
+          "A partir de 19/11/2003: acima de 85 dB (regra atual vigente em 2026)",
         ],
       },
       {
         type: "highlight",
-        text: "Atenção: A contribuição de 5% do MEI NÃO dá direito à aposentadoria por tempo de contribuição. O tempo como MEI também NÃO conta para a regra de pontos.",
+        text: "Importante: O STF decidiu no Tema 555 que o uso de Equipamento de Proteção Individual (EPI) NÃO descaracteriza o tempo especial por exposição ao ruído, pois não é possível eliminar completamente os efeitos nocivos do ruído sobre a audição.",
       },
       {
         type: "heading",
-        text: "Como Complementar a Contribuição do MEI",
+        text: "Quem Tem Direito à Aposentadoria Especial por Ruído?",
       },
       {
         type: "paragraph",
-        text: "Se você quer ter direito à aposentadoria por tempo de contribuição ou aumentar o valor do seu benefício, pode complementar a contribuição mensal pagando 15% adicionais sobre o salário mínimo (ou sobre um valor maior, até o teto do INSS).",
+        text: "Qualquer trabalhador que comprove exposição habitual e permanente a níveis de ruído acima de 85 dB durante sua jornada de trabalho. As profissões mais comuns incluem:",
+      },
+      {
+        type: "list",
+        items: [
+          "Operadores de máquinas industriais (tornos, prensas, injetoras)",
+          "Trabalhadores da construção civil (betoneiras, marteletes, compactadores)",
+          "Motoristas de ônibus, caminhão e maquinário pesado",
+          "Metalúrgicos e soldadores",
+          "Trabalhadores de mineração",
+          "Operadores de motosserra e roçadeira",
+          "Músicos profissionais em ambientes com alta intensidade sonora",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Requisitos em 2026",
+      },
+      {
+        type: "paragraph",
+        text: "Para quem já contribuía antes da Reforma de 2019, aplica-se a regra de transição por pontos. Para a aposentadoria especial com 25 anos de exposição (risco baixo, categoria do ruído):",
+      },
+      {
+        type: "list",
+        items: [
+          "25 anos de efetiva exposição ao agente nocivo",
+          "86 pontos (soma de idade + tempo de contribuição) em 2026",
+          "Ou, para quem completou os requisitos antes da Reforma: idade mínima de 60 anos + 25 anos de exposição",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Contribuintes Individuais e o Reconhecimento de Tempo Especial",
+      },
+      {
+        type: "paragraph",
+        text: "Uma questão muito relevante e pouco divulgada: contribuintes individuais (autônomos, profissionais liberais, empresários) também podem ter o reconhecimento de tempo especial, desde que comprovem a exposição a agentes nocivos durante sua atividade.",
       },
       {
         type: "subheading",
-        text: "Exemplo Prático em 2026",
+        text: "Base Legal",
+      },
+      {
+        type: "paragraph",
+        text: "O artigo 57 da Lei 8.213/91 não restringe a aposentadoria especial a empregados CLT. A jurisprudência do TRF e do STJ reconhece que contribuintes individuais têm direito ao tempo especial quando comprovada a exposição a agentes nocivos, independentemente da categoria profissional.",
+      },
+      {
+        type: "subheading",
+        text: "Como o Contribuinte Individual Comprova a Exposição",
       },
       {
         type: "list",
         items: [
-          "Contribuição MEI (DAS): R$ 75,90 (5% de R$ 1.518,00)",
-          "Complementação sobre o mínimo: R$ 227,70 (15% de R$ 1.518,00)",
-          "Total mensal: R$ 303,60 (20% sobre o salário mínimo)",
-          "Complementação sobre R$ 3.000: R$ 450,00 (15% de R$ 3.000) + R$ 75,90 DAS",
+          "Laudo técnico elaborado por engenheiro de segurança do trabalho ou médico do trabalho",
+          "Laudos de medição ambiental do local de trabalho (ruído, agentes químicos, etc.)",
+          "Notas fiscais e contratos que comprovem a atividade exercida",
+          "Fotografias e registros do ambiente de trabalho",
+          "Testemunhas que atestem as condições insalubres ou perigosas",
+          "Perícia judicial no local de trabalho",
         ],
       },
       {
-        type: "paragraph",
-        text: "A complementação é feita através de GPS (Guia da Previdência Social) com o código 1910. Pode ser paga em qualquer banco ou lotérica.",
+        type: "highlight",
+        text: "O INSS costuma negar o tempo especial para contribuintes individuais na via administrativa. Porém, na via judicial, há ampla jurisprudência favorável. Um advogado especialista pode fazer toda a diferença.",
       },
       {
         type: "heading",
-        text: "Valor da Aposentadoria do MEI",
-      },
-      {
-        type: "paragraph",
-        text: "Sem complementação, a aposentadoria do MEI será de um salário mínimo (R$ 1.518,00 em 2026). Com complementação, o valor será calculado com base na média de todas as contribuições, seguindo a regra de 60% + 2% por ano acima de 15 anos (mulheres) ou 20 anos (homens).",
-      },
-      {
-        type: "heading",
-        text: "MEI que Também é CLT",
-      },
-      {
-        type: "paragraph",
-        text: "Se você é MEI e também trabalha com carteira assinada, a contribuição como empregado CLT já garante todos os benefícios, inclusive aposentadoria por tempo de contribuição. Nesse caso, as contribuições são somadas, mas o tempo de contribuição não é duplicado.",
-      },
-      {
-        type: "heading",
-        text: "Erros Comuns do MEI em Relação ao INSS",
+        text: "Exemplos de Contribuintes Individuais com Direito a Tempo Especial",
       },
       {
         type: "list",
         items: [
-          "Achar que a contribuição do DAS garante aposentadoria por tempo de contribuição",
-          "Não pagar o DAS em dia e perder a qualidade de segurado",
-          "Não complementar a contribuição quando o objetivo é se aposentar por tempo",
-          "Desconhecer que o MEI cancelado retroativamente perde contribuições",
-          "Não verificar se as contribuições estão sendo registradas no CNIS",
+          "Dentistas autônomos — exposição a agentes biológicos e ruído de equipamentos",
+          "Mecânicos autônomos — exposição a ruído, óleos minerais e solventes",
+          "Eletricistas autônomos — exposição a tensão elétrica superior a 250V",
+          "Soldadores autônomos — exposição a fumos metálicos, calor e radiação",
+          "Motoristas autônomos de caminhão — exposição a ruído e vibração",
+          "Marceneiros e carpinteiros — exposição a ruído e poeira de madeira",
         ],
+      },
+      {
+        type: "heading",
+        text: "PPP e LTCAT: Documentos Indispensáveis",
+      },
+      {
+        type: "paragraph",
+        text: "O Perfil Profissiográfico Previdenciário (PPP) é o documento oficial para comprovar a exposição a agentes nocivos. Para empregados CLT, ele é emitido pela empresa. Para contribuintes individuais, a comprovação geralmente é feita por laudos técnicos e perícia judicial.",
+      },
+      {
+        type: "paragraph",
+        text: "O LTCAT (Laudo Técnico de Condições Ambientais do Trabalho) fundamenta o PPP e deve ser elaborado por profissional habilitado. Ele mede quantitativamente os agentes nocivos presentes no ambiente de trabalho.",
       },
       {
         type: "heading",
@@ -872,7 +923,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "Ser MEI é uma excelente forma de formalização, mas é preciso planejar a aposentadoria com atenção. Se você é MEI e quer garantir um benefício maior no futuro, a complementação da contribuição pode ser a melhor estratégia. Consulte a Cantarelli Advocacia para um planejamento previdenciário personalizado.",
+        text: "Se você trabalha ou trabalhou exposto ao ruído — seja como empregado CLT ou como contribuinte individual — pode ter direito à aposentadoria especial ou à conversão de tempo especial em comum. Não deixe de buscar seus direitos. A Cantarelli Advocacia possui experiência comprovada em ações de aposentadoria especial por ruído e reconhecimento de tempo especial para autônomos em Recife e todo o Brasil.",
       },
     ],
   },
