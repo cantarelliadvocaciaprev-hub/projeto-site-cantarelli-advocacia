@@ -1,6 +1,10 @@
 import reformaImg from "@/assets/blog/reforma-previdenciaria-2026.jpg";
 import auxilioImg from "@/assets/blog/auxilio-incapacidade-2026.jpg";
 import pensaoImg from "@/assets/blog/pensao-morte-2026.jpg";
+import ruralImg from "@/assets/blog/aposentadoria-rural-2026.jpg";
+import especialImg from "@/assets/blog/aposentadoria-especial-2026.jpg";
+import meuInssImg from "@/assets/blog/meu-inss-aposentadoria-2026.jpg";
+import meiImg from "@/assets/blog/mei-contribuicao-inss-2026.jpg";
 
 export interface BlogArticleContent {
   type: "paragraph" | "heading" | "subheading" | "list" | "highlight";
@@ -390,6 +394,485 @@ export const blogArticles: BlogArticle[] = [
       {
         type: "paragraph",
         text: "A pensão por morte é um direito fundamental para a proteção da família após a perda de um ente querido. Conhecer as regras e ter toda a documentação em ordem agiliza o processo e evita indeferimentos. A Cantarelli Advocacia está à disposição para orientar você e sua família em todo o processo.",
+      },
+    ],
+  },
+  {
+    slug: "aposentadoria-rural-2026-como-comprovar",
+    title: "Aposentadoria Rural 2026: Como Comprovar Tempo de Trabalho no Campo",
+    excerpt:
+      "Trabalhadores rurais têm regras diferenciadas para aposentadoria. Saiba como comprovar atividade rural, quais documentos são aceitos e os requisitos atualizados para 2026.",
+    date: "1 de Março, 2026",
+    category: "Aposentadoria",
+    readTime: "8 min",
+    keyTakeaways: [
+      "Idade mínima: 55 anos para mulheres e 60 para homens, sem alteração pela Reforma",
+      "Tempo de atividade rural de 15 anos pode ser comprovado por documentos e testemunhas",
+      "Notas fiscais de produtor, contratos de arrendamento e declaração do sindicato são provas aceitas",
+    ],
+    lastUpdated: "Março 2026",
+    image: ruralImg,
+    imageAlt:
+      "Casal de trabalhadores rurais em propriedade agrícola, representando aposentadoria rural no INSS",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "A aposentadoria rural é uma das modalidades mais importantes do sistema previdenciário brasileiro, beneficiando milhões de trabalhadores do campo. Em 2026, as regras continuam diferenciadas em relação à aposentadoria urbana, mas a comprovação do tempo de trabalho rural continua sendo o maior desafio.",
+      },
+      {
+        type: "heading",
+        text: "Quem É Considerado Trabalhador Rural?",
+      },
+      {
+        type: "paragraph",
+        text: "O INSS classifica como segurado especial rural o trabalhador que exerce atividade agropecuária individualmente ou em regime de economia familiar, sem empregados permanentes. Isso inclui agricultores, pescadores artesanais, seringueiros e indígenas.",
+      },
+      {
+        type: "list",
+        items: [
+          "Agricultor familiar que trabalha em pequena propriedade",
+          "Pescador artesanal que exerce a pesca como profissão habitual",
+          "Garimpeiro que trabalha em regime de economia familiar",
+          "Cônjuge ou companheiro que participa da atividade rural",
+          "Filho maior de 16 anos que trabalha com a família na propriedade",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Requisitos para Aposentadoria Rural em 2026",
+      },
+      {
+        type: "paragraph",
+        text: "A Reforma da Previdência de 2019 NÃO alterou as regras da aposentadoria rural. Os requisitos permanecem os mesmos:",
+      },
+      {
+        type: "list",
+        items: [
+          "Mulheres: 55 anos de idade",
+          "Homens: 60 anos de idade",
+          "15 anos de atividade rural comprovada",
+          "Estar exercendo atividade rural no momento do requerimento ou ter sido a última atividade exercida",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "Diferente da aposentadoria urbana, não é necessário ter contribuído financeiramente ao INSS. A comprovação do exercício da atividade rural substitui as contribuições.",
+      },
+      {
+        type: "heading",
+        text: "Documentos Aceitos para Comprovar Atividade Rural",
+      },
+      {
+        type: "paragraph",
+        text: "A comprovação do tempo de trabalho rural é feita através do chamado 'início de prova material', que são documentos que evidenciam a atividade no campo. A partir de 2023, o INSS passou a ser mais rigoroso na análise documental.",
+      },
+      {
+        type: "list",
+        items: [
+          "Contrato de arrendamento, parceria ou comodato rural",
+          "Notas fiscais de venda de produção rural",
+          "Declaração do sindicato dos trabalhadores rurais",
+          "Bloco de notas de produtor rural",
+          "Comprovante de recebimento de benefício social (Pronaf, etc.)",
+          "Certidão de casamento ou nascimento com profissão 'agricultor'",
+          "Declaração de Aptidão ao Pronaf (DAP)",
+          "Cadastro no INCRA",
+          "Comprovantes de pagamento do ITR (Imposto Territorial Rural)",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Prova Testemunhal: Quando e Como Usar",
+      },
+      {
+        type: "paragraph",
+        text: "A prova testemunhal sozinha não basta para comprovar atividade rural perante o INSS. É necessário pelo menos um início de prova material (documento). Porém, na Justiça, testemunhas podem complementar a prova documental e são frequentemente decisivas.",
+      },
+      {
+        type: "highlight",
+        text: "Importante: Na via judicial, a Súmula 149 do STJ estabelece que a prova testemunhal é válida para comprovar atividade rural, desde que apoiada por início de prova material. Na prática, vizinhos, comerciantes locais e colegas de trabalho são testemunhas válidas.",
+      },
+      {
+        type: "heading",
+        text: "Período de Carência e Tempo Misto",
+      },
+      {
+        type: "paragraph",
+        text: "Se você trabalhou parte da vida no campo e parte na cidade, pode somar os períodos para obter uma aposentadoria por tempo misto. Nesse caso, as regras de idade e tempo de contribuição seguem as da aposentadoria urbana, mas o tempo rural é contado normalmente.",
+      },
+      {
+        type: "heading",
+        text: "Erros Comuns que Causam Indeferimento",
+      },
+      {
+        type: "list",
+        items: [
+          "Não reunir documentos suficientes antes de dar entrada no pedido",
+          "Ter registro em carteira em atividade urbana no período que se quer comprovar como rural",
+          "Propriedade rural acima do limite legal (4 módulos fiscais)",
+          "Não comprovar atividade rural recente (nos últimos meses antes do pedido)",
+          "Documentos em nome de terceiros sem vínculo familiar comprovado",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "A aposentadoria rural é um direito garantido pela Constituição, mas a burocracia na comprovação faz com que muitos pedidos sejam negados injustamente. Se você é trabalhador rural e está próximo da idade, comece a reunir seus documentos agora. A Cantarelli Advocacia tem experiência em ações rurais e pode ajudar a garantir seu benefício.",
+      },
+    ],
+  },
+  {
+    slug: "aposentadoria-especial-insalubridade-2026",
+    title: "Aposentadoria Especial por Insalubridade em 2026: Quem Tem Direito",
+    excerpt:
+      "Profissionais expostos a agentes nocivos podem se aposentar mais cedo. Conheça as regras da aposentadoria especial em 2026, os agentes reconhecidos e como comprovar a exposição.",
+    date: "25 de Fevereiro, 2026",
+    category: "Aposentadoria",
+    readTime: "7 min",
+    keyTakeaways: [
+      "Tempo mínimo de exposição: 15, 20 ou 25 anos conforme o grau de risco",
+      "O PPP (Perfil Profissiográfico Previdenciário) é o documento principal de comprovação",
+      "Após a Reforma, exige-se também idade mínima de 55, 58 ou 60 anos conforme o risco",
+    ],
+    lastUpdated: "Março 2026",
+    image: especialImg,
+    imageAlt:
+      "Trabalhador com equipamento de proteção individual em ambiente industrial, aposentadoria especial",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "A aposentadoria especial é destinada a trabalhadores que exercem atividades em condições prejudiciais à saúde ou à integridade física. Em 2026, as regras seguem as determinações da Reforma da Previdência, com exigências adicionais de idade mínima que não existiam antes.",
+      },
+      {
+        type: "heading",
+        text: "O Que É a Aposentadoria Especial?",
+      },
+      {
+        type: "paragraph",
+        text: "É um benefício concedido ao segurado que trabalhou exposto a agentes nocivos (químicos, físicos ou biológicos) de forma habitual e permanente. Permite aposentadoria com menos tempo de contribuição do que a regra geral.",
+      },
+      {
+        type: "heading",
+        text: "Quem Tem Direito em 2026?",
+      },
+      {
+        type: "paragraph",
+        text: "Profissionais de diversas áreas podem ter direito à aposentadoria especial. Os mais comuns incluem:",
+      },
+      {
+        type: "list",
+        items: [
+          "Profissionais de saúde (médicos, enfermeiros, dentistas) — exposição a agentes biológicos",
+          "Eletricistas — exposição a tensão elétrica acima de 250 volts",
+          "Mineradores — exposição a agentes químicos e físicos",
+          "Metalúrgicos e soldadores — exposição a calor, ruído e agentes químicos",
+          "Trabalhadores da construção civil — exposição a poeira, cal, cimento",
+          "Vigilantes armados — exposição a periculosidade",
+          "Frentistas e trabalhadores de postos de combustível — agentes químicos",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Regras Após a Reforma da Previdência",
+      },
+      {
+        type: "paragraph",
+        text: "Antes da Reforma de 2019, bastava comprovar o tempo de exposição. Agora, além do tempo, é necessário cumprir uma idade mínima:",
+      },
+      {
+        type: "list",
+        items: [
+          "Risco alto (15 anos de exposição): idade mínima de 55 anos — Ex: mineração subterrânea",
+          "Risco médio (20 anos de exposição): idade mínima de 58 anos — Ex: mineração em superfície, amianto",
+          "Risco baixo (25 anos de exposição): idade mínima de 60 anos — Ex: ruído, calor, agentes químicos",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "Regra de transição por pontos: quem já trabalhava antes da Reforma pode usar o sistema de pontos — 66 pontos (15 anos), 76 pontos (20 anos) ou 86 pontos (25 anos) em 2026.",
+      },
+      {
+        type: "heading",
+        text: "Como Comprovar a Exposição a Agentes Nocivos",
+      },
+      {
+        type: "subheading",
+        text: "PPP — Perfil Profissiográfico Previdenciário",
+      },
+      {
+        type: "paragraph",
+        text: "O PPP é o documento principal. Deve ser emitido pela empresa e conter informações sobre as atividades exercidas, os agentes nocivos presentes no ambiente de trabalho, e a intensidade da exposição. A partir de 2023, o PPP passou a ser eletrônico, integrado ao eSocial.",
+      },
+      {
+        type: "subheading",
+        text: "LTCAT — Laudo Técnico de Condições Ambientais do Trabalho",
+      },
+      {
+        type: "paragraph",
+        text: "O LTCAT é elaborado por engenheiro de segurança ou médico do trabalho e fundamenta as informações do PPP. Embora não seja entregue ao INSS diretamente, é essencial para sustentar o pedido administrativo ou judicial.",
+      },
+      {
+        type: "heading",
+        text: "Conversão de Tempo Especial em Comum",
+      },
+      {
+        type: "paragraph",
+        text: "Após a Reforma, o STF decidiu que não é mais possível converter tempo especial em comum para períodos trabalhados após novembro de 2019. Porém, períodos anteriores à Reforma podem ser convertidos com os fatores 1,4 (homem) e 1,2 (mulher), o que pode adiantar a aposentadoria comum.",
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "A aposentadoria especial é um direito importante para quem arrisca a saúde no trabalho. Se você trabalha ou já trabalhou em condições insalubres ou perigosas, procure um advogado previdenciário para analisar seu caso. A Cantarelli Advocacia tem ampla experiência em ações de aposentadoria especial em Recife e em todo o Brasil.",
+      },
+    ],
+  },
+  {
+    slug: "como-dar-entrada-aposentadoria-meu-inss-2026",
+    title: "Como Dar Entrada na Aposentadoria pelo Meu INSS em 2026: Passo a Passo",
+    excerpt:
+      "Guia completo e atualizado para solicitar sua aposentadoria online pelo Meu INSS. Desde o cadastro no gov.br até o acompanhamento do pedido, tudo explicado de forma simples.",
+    date: "20 de Fevereiro, 2026",
+    category: "Tutorial",
+    readTime: "6 min",
+    keyTakeaways: [
+      "Todo o processo pode ser feito online, sem ir a uma agência do INSS",
+      "É necessário ter conta nível Prata ou Ouro no gov.br",
+      "O prazo médio de análise em 2026 é de 45 a 90 dias",
+    ],
+    lastUpdated: "Março 2026",
+    image: meuInssImg,
+    imageAlt:
+      "Pessoa acessando o sistema Meu INSS pelo celular e computador para dar entrada na aposentadoria",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "Dar entrada na aposentadoria nunca foi tão acessível. Com o sistema Meu INSS, todo o processo pode ser feito online, sem sair de casa. Neste guia atualizado para 2026, explicamos cada etapa para você solicitar seu benefício com segurança.",
+      },
+      {
+        type: "heading",
+        text: "Antes de Começar: Verifique Seus Requisitos",
+      },
+      {
+        type: "paragraph",
+        text: "Antes de dar entrada, é fundamental verificar se você cumpre os requisitos da aposentadoria. Acesse o extrato CNIS (Cadastro Nacional de Informações Sociais) pelo Meu INSS e confira todos os seus vínculos e contribuições.",
+      },
+      {
+        type: "highlight",
+        text: "Dica importante: Muitos pedidos são indeferidos porque o CNIS contém erros ou períodos não reconhecidos. Corrija seu extrato ANTES de dar entrada no pedido.",
+      },
+      {
+        type: "heading",
+        text: "Passo 1: Criar ou Acessar Conta no Gov.br",
+      },
+      {
+        type: "paragraph",
+        text: "Para acessar o Meu INSS, você precisa de uma conta no portal gov.br com nível Prata ou Ouro. O nível Bronze não permite acesso a todos os serviços. Para subir de nível, você pode validar seus dados bancários, fazer reconhecimento facial pelo app gov.br, ou usar certificado digital.",
+      },
+      {
+        type: "heading",
+        text: "Passo 2: Acessar o Meu INSS",
+      },
+      {
+        type: "list",
+        items: [
+          "Acesse meu.inss.gov.br ou baixe o aplicativo Meu INSS",
+          "Faça login com sua conta gov.br",
+          "No menu principal, clique em 'Novo Pedido'",
+          "Selecione 'Aposentadoria' e escolha o tipo desejado",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Passo 3: Preencher o Requerimento",
+      },
+      {
+        type: "paragraph",
+        text: "O sistema apresentará seus dados cadastrais e vínculos. Confira cada informação com atenção. Se houver períodos faltantes, você pode informá-los no campo 'Períodos não registrados' e anexar documentos comprobatórios.",
+      },
+      {
+        type: "heading",
+        text: "Passo 4: Anexar Documentos",
+      },
+      {
+        type: "paragraph",
+        text: "Digitalize e anexe todos os documentos relevantes. O sistema aceita arquivos em PDF, JPG e PNG com até 5MB cada. Documentos essenciais incluem:",
+      },
+      {
+        type: "list",
+        items: [
+          "RG e CPF (ou CNH)",
+          "Carteira de Trabalho (todas as páginas com anotações)",
+          "Carnês de contribuição (se contribuinte individual)",
+          "Certidão de Tempo de Contribuição (se servidor público)",
+          "PPP — Perfil Profissiográfico Previdenciário (se atividade especial)",
+          "Certidão de casamento ou nascimento dos filhos",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Passo 5: Acompanhar o Pedido",
+      },
+      {
+        type: "paragraph",
+        text: "Após protocolar, acompanhe o andamento pelo Meu INSS em 'Consultar Pedidos'. O INSS pode solicitar documentos adicionais através de 'exigências'. Fique atento às notificações e cumpra os prazos para não ter o pedido arquivado.",
+      },
+      {
+        type: "paragraph",
+        text: "O prazo médio de análise em 2026 está entre 45 e 90 dias, dependendo da complexidade do caso e da região. Casos com pendências documentais podem demorar mais.",
+      },
+      {
+        type: "heading",
+        text: "Dicas Para Evitar Problemas",
+      },
+      {
+        type: "list",
+        items: [
+          "Faça um planejamento previdenciário antes de dar entrada para garantir o melhor benefício",
+          "Corrija o CNIS antes do requerimento — é muito mais difícil corrigir depois",
+          "Não dê entrada antes de verificar qual regra de transição é mais vantajosa",
+          "Guarde o número do protocolo e acompanhe semanalmente",
+          "Em caso de exigência, responda dentro do prazo de 30 dias",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "Se o INSS negar seu pedido, você tem 30 dias para interpor recurso administrativo e pode também buscar a via judicial. Um advogado previdenciário pode reverter o indeferimento em muitos casos.",
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "O processo de dar entrada na aposentadoria pelo Meu INSS é simples, mas requer atenção aos detalhes. Um erro no extrato ou um documento faltante pode atrasar seu benefício em meses. Conte com a Cantarelli Advocacia para orientação profissional em todo o processo.",
+      },
+    ],
+  },
+  {
+    slug: "mei-contribuicao-inss-aposentadoria-2026",
+    title: "MEI e INSS em 2026: Qual Aposentadoria o Microempreendedor Tem Direito?",
+    excerpt:
+      "O MEI contribui com valor reduzido ao INSS, mas isso limita o tipo de aposentadoria. Entenda as regras, como complementar a contribuição e garantir uma aposentadoria melhor.",
+    date: "15 de Fevereiro, 2026",
+    category: "Contribuição",
+    readTime: "6 min",
+    keyTakeaways: [
+      "A contribuição do MEI (5% do salário mínimo) dá direito apenas à aposentadoria por idade",
+      "Para aposentadoria por tempo de contribuição, é necessário complementar com 15% adicional",
+      "O valor da aposentadoria do MEI será de um salário mínimo se não houver complementação",
+    ],
+    lastUpdated: "Março 2026",
+    image: meiImg,
+    imageAlt:
+      "Microempreendedor individual trabalhando em seu negócio, contribuição INSS e aposentadoria MEI",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "O Brasil tem mais de 15 milhões de Microempreendedores Individuais (MEIs) registrados. Apesar de contribuírem mensalmente ao INSS, muitos desconhecem as limitações do benefício que terão direito. Em 2026, é fundamental entender como funciona a relação entre MEI e previdência.",
+      },
+      {
+        type: "heading",
+        text: "Como o MEI Contribui ao INSS?",
+      },
+      {
+        type: "paragraph",
+        text: "O MEI paga uma contribuição mensal fixa através do DAS (Documento de Arrecadação do Simples Nacional), que inclui 5% do salário mínimo destinado ao INSS. Em 2026, com o salário mínimo de R$ 1.518,00, a contribuição previdenciária do MEI é de R$ 75,90 por mês.",
+      },
+      {
+        type: "heading",
+        text: "Quais Benefícios o MEI Tem Direito?",
+      },
+      {
+        type: "paragraph",
+        text: "Com a contribuição de 5%, o MEI tem acesso aos seguintes benefícios do INSS:",
+      },
+      {
+        type: "list",
+        items: [
+          "Aposentadoria por idade (62 anos mulheres / 65 anos homens, com 15 anos de contribuição)",
+          "Auxílio por incapacidade temporária (antigo auxílio-doença)",
+          "Auxílio por incapacidade permanente (aposentadoria por invalidez)",
+          "Salário-maternidade",
+          "Pensão por morte (para dependentes)",
+          "Auxílio-reclusão (para dependentes)",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "Atenção: A contribuição de 5% do MEI NÃO dá direito à aposentadoria por tempo de contribuição. O tempo como MEI também NÃO conta para a regra de pontos.",
+      },
+      {
+        type: "heading",
+        text: "Como Complementar a Contribuição do MEI",
+      },
+      {
+        type: "paragraph",
+        text: "Se você quer ter direito à aposentadoria por tempo de contribuição ou aumentar o valor do seu benefício, pode complementar a contribuição mensal pagando 15% adicionais sobre o salário mínimo (ou sobre um valor maior, até o teto do INSS).",
+      },
+      {
+        type: "subheading",
+        text: "Exemplo Prático em 2026",
+      },
+      {
+        type: "list",
+        items: [
+          "Contribuição MEI (DAS): R$ 75,90 (5% de R$ 1.518,00)",
+          "Complementação sobre o mínimo: R$ 227,70 (15% de R$ 1.518,00)",
+          "Total mensal: R$ 303,60 (20% sobre o salário mínimo)",
+          "Complementação sobre R$ 3.000: R$ 450,00 (15% de R$ 3.000) + R$ 75,90 DAS",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "A complementação é feita através de GPS (Guia da Previdência Social) com o código 1910. Pode ser paga em qualquer banco ou lotérica.",
+      },
+      {
+        type: "heading",
+        text: "Valor da Aposentadoria do MEI",
+      },
+      {
+        type: "paragraph",
+        text: "Sem complementação, a aposentadoria do MEI será de um salário mínimo (R$ 1.518,00 em 2026). Com complementação, o valor será calculado com base na média de todas as contribuições, seguindo a regra de 60% + 2% por ano acima de 15 anos (mulheres) ou 20 anos (homens).",
+      },
+      {
+        type: "heading",
+        text: "MEI que Também é CLT",
+      },
+      {
+        type: "paragraph",
+        text: "Se você é MEI e também trabalha com carteira assinada, a contribuição como empregado CLT já garante todos os benefícios, inclusive aposentadoria por tempo de contribuição. Nesse caso, as contribuições são somadas, mas o tempo de contribuição não é duplicado.",
+      },
+      {
+        type: "heading",
+        text: "Erros Comuns do MEI em Relação ao INSS",
+      },
+      {
+        type: "list",
+        items: [
+          "Achar que a contribuição do DAS garante aposentadoria por tempo de contribuição",
+          "Não pagar o DAS em dia e perder a qualidade de segurado",
+          "Não complementar a contribuição quando o objetivo é se aposentar por tempo",
+          "Desconhecer que o MEI cancelado retroativamente perde contribuições",
+          "Não verificar se as contribuições estão sendo registradas no CNIS",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Conclusão",
+      },
+      {
+        type: "paragraph",
+        text: "Ser MEI é uma excelente forma de formalização, mas é preciso planejar a aposentadoria com atenção. Se você é MEI e quer garantir um benefício maior no futuro, a complementação da contribuição pode ser a melhor estratégia. Consulte a Cantarelli Advocacia para um planejamento previdenciário personalizado.",
       },
     ],
   },
