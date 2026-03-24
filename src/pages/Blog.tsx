@@ -13,6 +13,7 @@ const Blog = () => {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [showAllTags, setShowAllTags] = useState(false);
 
   const categories = useMemo(
     () => Array.from(new Set(blogArticles.map((a) => a.category))),
@@ -49,6 +50,7 @@ const Blog = () => {
     setSearch("");
     setSelectedCategory(null);
     setSelectedTag(null);
+    setShowAllTags(false);
   };
 
   const hasFilters = search || selectedCategory || selectedTag;
@@ -132,7 +134,7 @@ const Blog = () => {
           {/* Tags */}
           <div className="max-w-5xl mx-auto mb-8">
             <div className="flex flex-wrap gap-1.5 justify-center">
-              {allTags.map((tag) => (
+              {(showAllTags ? allTags : allTags.slice(0, 12)).map((tag) => (
                 <button
                   key={tag}
                   onClick={() =>
@@ -149,6 +151,16 @@ const Blog = () => {
                 </button>
               ))}
             </div>
+            {allTags.length > 12 && (
+              <div className="text-center mt-2">
+                <button
+                  onClick={() => setShowAllTags(!showAllTags)}
+                  className="text-xs text-primary hover:text-primary/80 font-semibold transition-colors"
+                >
+                  {showAllTags ? "Ver menos tags ▲" : `Ver todas as tags (${allTags.length}) ▼`}
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Active filters indicator */}
