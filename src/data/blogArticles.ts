@@ -914,7 +914,7 @@ export const blogArticles: BlogArticle[] = [
     readTime: "7 min",
     keyTakeaways: [
       "Idosos acima de 65 anos e pessoas com deficiência de longo prazo podem requerer o BPC",
-      "A renda per capita familiar deve ser inferior a 1/4 do salário mínimo (R$ 382,50 em 2026)",
+      "A renda per capita familiar deve ser inferior a 1/4 do salário mínimo (R$ 405,25 em 2026)",
       "Não é necessário ter contribuído ao INSS para receber o BPC/LOAS",
       "O benefício precisa ser revisado a cada 2 anos pelo INSS",
     ],
