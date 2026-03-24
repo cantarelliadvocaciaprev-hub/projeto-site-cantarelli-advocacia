@@ -1156,16 +1156,11 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "heading",
-        text: "Como Solicitar o Auxílio-Acidente",
+        text: "A Importância da Orientação Jurídica Especializada",
       },
       {
-        type: "list",
-        items: [
-          "Agende perícia médica no INSS pelo Meu INSS ou pelo telefone 135",
-          "Leve laudos médicos, exames e relatórios que comprovem a sequela permanente",
-          "A CAT (Comunicação de Acidente de Trabalho) fortalece o pedido, mas não é obrigatória",
-          "Se negado, é possível recorrer administrativamente ou judicialmente",
-        ],
+        type: "paragraph",
+        text: "O auxílio-acidente exige comprovação de sequela permanente por perícia médica, o que torna o processo técnico e sujeito a indeferimentos. Um advogado previdenciário pode reunir a documentação médica adequada, orientar sobre a CAT (Comunicação de Acidente de Trabalho) e, se necessário, recorrer administrativa ou judicialmente para garantir a concessão do benefício.",
       },
       {
         type: "heading",
