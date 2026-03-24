@@ -7,6 +7,9 @@ import SEO from "@/components/SEO";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { blogArticles } from "@/data/blogArticles";
+import ArticleFAQ from "@/components/blog/ArticleFAQ";
+import ArticleQuestionForm from "@/components/blog/ArticleQuestionForm";
+import RelatedArticles from "@/components/blog/RelatedArticles";
 
 const WHATSAPP_URL = "https://wa.me/5581983421727?text=Olá,%20li%20um%20artigo%20no%20blog%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.";
 
@@ -212,6 +215,14 @@ const BlogArticle = () => {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        {article.faq && article.faq.length > 0 && (
+          <ArticleFAQ faq={article.faq} articleTitle={article.title} />
+        )}
+
+        {/* Question Form */}
+        <ArticleQuestionForm articleTitle={article.title} />
+
         {/* E-E-A-T Section */}
         <section className="py-6 md:py-8 border-t border-border">
           <div className="container mx-auto px-4">
@@ -233,6 +244,13 @@ const BlogArticle = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Articles */}
+        <RelatedArticles
+          currentSlug={article.slug}
+          tags={article.tags ?? []}
+          category={article.category}
+        />
 
         {/* CTA Section */}
         <section className="py-10 md:py-12 bg-primary/5">
