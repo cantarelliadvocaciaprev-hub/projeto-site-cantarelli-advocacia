@@ -29,6 +29,7 @@ export interface BlogArticle {
   excerpt: string;
   date: string;
   category: string;
+  tags: string[];
   readTime: string;
   keyTakeaways: string[];
   lastUpdated: string;
@@ -46,6 +47,7 @@ export const blogArticles: BlogArticle[] = [
       "Com o avanço progressivo das regras de transição, muitos segurados estão perdendo prazos importantes. Veja como calcular sua melhor data para se aposentar em 2026.",
     date: "15 de Março, 2026",
     category: "Aposentadoria",
+    tags: ["Reforma", "Transição", "INSS", "2026"],
     readTime: "8 min",
     keyTakeaways: [
       "Pedágio de 100% pode ser mais vantajoso que a regra por pontos em alguns casos",
@@ -162,6 +164,7 @@ export const blogArticles: BlogArticle[] = [
       "O antigo auxílio-doença agora é chamado de auxílio por incapacidade temporária. Saiba como funciona o pedido, a perícia e o que fazer se seu benefício for negado.",
     date: "10 de Março, 2026",
     category: "Benefícios",
+    tags: ["Auxílio-Doença", "Perícia Médica", "INSS", "Incapacidade"],
     readTime: "6 min",
     keyTakeaways: [
       "O pedido pode ser feito com auxílio de um advogado especialista para maior chance de aprovação",
@@ -254,6 +257,7 @@ export const blogArticles: BlogArticle[] = [
       "A pensão por morte sofreu mudanças importantes após a Reforma. Entenda as regras de duração, quem são os dependentes e como calcular o valor do benefício em 2026.",
     date: "5 de Março, 2026",
     category: "Pensões",
+    tags: ["Pensão", "Dependentes", "Óbito", "INSS"],
     readTime: "7 min",
     keyTakeaways: [
       "O valor base da pensão é 50% + 10% por dependente, podendo chegar a 100%",
@@ -387,6 +391,7 @@ export const blogArticles: BlogArticle[] = [
       "Trabalhadores rurais têm regras diferenciadas para aposentadoria. Saiba como comprovar atividade rural, quais documentos são aceitos e os requisitos atualizados para 2026.",
     date: "1 de Março, 2026",
     category: "Aposentadoria",
+    tags: ["Rural", "Trabalhador do Campo", "INSS", "Comprovação"],
     readTime: "8 min",
     keyTakeaways: [
       "Idade mínima: 55 anos para mulheres e 60 para homens, sem alteração pela Reforma",
@@ -515,6 +520,7 @@ export const blogArticles: BlogArticle[] = [
       "Profissionais expostos a agentes nocivos podem se aposentar mais cedo. Conheça as regras da aposentadoria especial em 2026, os agentes reconhecidos e como comprovar a exposição.",
     date: "22 de Março, 2026",
     category: "Aposentadoria",
+    tags: ["Insalubridade", "Agentes Nocivos", "PPP", "LTCAT"],
     readTime: "7 min",
     keyTakeaways: [
       "Tempo mínimo de exposição: 15, 20 ou 25 anos conforme o grau de risco",
@@ -624,6 +630,7 @@ export const blogArticles: BlogArticle[] = [
       "A aposentadoria da pessoa com deficiência tem regras próprias e mais favoráveis que a regra geral. Conheça os requisitos por idade e por tempo de contribuição, o diagnóstico previdenciário e como garantir esse direito.",
     date: "20 de Março, 2026",
     category: "Aposentadoria PCD",
+    tags: ["PCD", "Deficiência", "LC 142", "INSS"],
     readTime: "9 min",
     keyTakeaways: [
       "PCD pode se aposentar com idade reduzida (55 anos mulheres / 60 anos homens) e apenas 15 anos de contribuição",
@@ -765,6 +772,7 @@ export const blogArticles: BlogArticle[] = [
       "Trabalhadores expostos ao ruído acima de 85 dB podem ter direito à aposentadoria especial. Saiba também como contribuintes individuais podem conseguir o reconhecimento de tempo especial no INSS.",
     date: "18 de Março, 2026",
     category: "Aposentadoria Especial",
+    tags: ["Ruído", "85 dB", "Tempo Especial", "Autônomo"],
     readTime: "8 min",
     keyTakeaways: [
       "Exposição a ruído acima de 85 dB garante direito à aposentadoria especial com 25 anos de contribuição",
@@ -917,6 +925,7 @@ export const blogArticles: BlogArticle[] = [
       "O Benefício de Prestação Continuada (BPC/LOAS) garante um salário mínimo mensal para idosos e pessoas com deficiência de baixa renda. Saiba quem tem direito e como dar entrada em 2026.",
     date: "24 de Março, 2026",
     category: "BPC/LOAS",
+    tags: ["BPC", "LOAS", "Baixa Renda", "CadÚnico"],
     readTime: "7 min",
     keyTakeaways: [
       "Idosos acima de 65 anos e pessoas com deficiência de longo prazo podem requerer o BPC",
@@ -1021,6 +1030,7 @@ export const blogArticles: BlogArticle[] = [
       "Milhares de aposentados têm direito a revisões que podem aumentar significativamente o valor da aposentadoria. Conheça as principais teses revisionais vigentes em 2026.",
     date: "23 de Março, 2026",
     category: "Revisão",
+    tags: ["Revisão", "Teses Revisionais", "Aumento", "INSS"],
     readTime: "9 min",
     keyTakeaways: [
       "A revisão da vida toda permite incluir salários anteriores a julho de 1994 no cálculo",
@@ -1104,6 +1114,7 @@ export const blogArticles: BlogArticle[] = [
       "O auxílio-acidente é um benefício pago ao trabalhador que sofre acidente e fica com sequelas permanentes. Entenda quem tem direito, quanto recebe e como pedir em 2026.",
     date: "21 de Março, 2026",
     category: "Benefícios",
+    tags: ["Acidente", "Sequela", "Indenização", "INSS"],
     readTime: "6 min",
     keyTakeaways: [
       "O auxílio-acidente corresponde a 50% do salário de benefício após a Reforma",
@@ -1179,6 +1190,7 @@ export const blogArticles: BlogArticle[] = [
       "O diagnóstico previdenciário é a ferramenta essencial para quem quer se aposentar com o melhor benefício possível. Saiba como funciona e por que é indispensável em 2026.",
     date: "19 de Março, 2026",
     category: "Planejamento",
+    tags: ["Planejamento", "Diagnóstico", "Simulação", "Aposentadoria"],
     readTime: "7 min",
     keyTakeaways: [
       "O diagnóstico identifica a melhor regra de aposentadoria para cada segurado",
@@ -1268,6 +1280,7 @@ export const blogArticles: BlogArticle[] = [
       "A aposentadoria por incapacidade permanente (antiga invalidez) garante renda a quem não pode mais trabalhar. Conheça os requisitos, valores e como evitar o indeferimento em 2026.",
     date: "17 de Março, 2026",
     category: "Incapacidade",
+    tags: ["Invalidez", "Incapacidade Permanente", "Perícia", "INSS"],
     readTime: "8 min",
     keyTakeaways: [
       "O benefício corresponde a 60% da média + 2% por ano acima de 20 anos de contribuição",
@@ -1351,6 +1364,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Saiba como calcular seu tempo de contribuição, incluir períodos especiais e evitar perdas que podem atrasar sua aposentadoria.",
     date: "22 de Março, 2026",
     category: "Aposentadoria",
+    tags: ["Tempo de Contribuição", "Cálculo", "CNIS", "INSS"],
     readTime: "7 min",
     keyTakeaways: [
       "É possível converter tempo especial em comum para antecipar a aposentadoria",
@@ -1439,6 +1453,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Burnout, LER/DORT e doenças ocupacionais garantem benefícios específicos no INSS. Veja como comprovar e quais são seus direitos.",
     date: "20 de Março, 2026",
     category: "Benefícios",
+    tags: ["Burnout", "LER/DORT", "Doença Ocupacional", "CAT"],
     readTime: "6 min",
     keyTakeaways: [
       "A Síndrome de Burnout é reconhecida como doença ocupacional desde 2022",
@@ -1519,6 +1534,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Entenda quem pode receber o salário-maternidade em 2026, qual o valor, duração e como solicitar esse benefício do INSS.",
     date: "18 de Março, 2026",
     category: "Benefícios",
+    tags: ["Maternidade", "Gestante", "Adoção", "INSS"],
     readTime: "6 min",
     keyTakeaways: [
       "O salário-maternidade é pago por 120 dias em caso de parto ou adoção",
@@ -1608,6 +1624,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Trabalhador autônomo, MEI ou profissional liberal? Saiba como contribuir corretamente ao INSS e garantir sua aposentadoria.",
     date: "16 de Março, 2026",
     category: "Aposentadoria",
+    tags: ["Autônomo", "MEI", "Contribuição", "INSS"],
     readTime: "7 min",
     keyTakeaways: [
       "O contribuinte individual pode pagar 20% sobre a renda ou 11% sobre o mínimo",
@@ -1685,6 +1702,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Professores têm regras diferenciadas de aposentadoria. Conheça os requisitos atualizados para 2026 e como garantir seu direito.",
     date: "14 de Março, 2026",
     category: "Aposentadoria",
+    tags: ["Professor", "Magistério", "Educação", "Regras Especiais"],
     readTime: "7 min",
     keyTakeaways: [
       "Professores da educação básica têm redução de 5 anos nos requisitos",
@@ -1771,6 +1789,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Seu CNIS pode conter erros que prejudicam sua aposentadoria. Saiba como identificar e corrigir vínculos, contribuições e pendências.",
     date: "12 de Março, 2026",
     category: "Planejamento",
+    tags: ["CNIS", "Retificação", "Vínculos", "Contribuições"],
     readTime: "6 min",
     keyTakeaways: [
       "O CNIS é o principal documento usado pelo INSS para conceder benefícios",
