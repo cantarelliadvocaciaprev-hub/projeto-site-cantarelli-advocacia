@@ -243,9 +243,7 @@ const Index = () => {
         <Suspense fallback={<FAQSkeleton />}>
           <FAQ />
         </Suspense>
-        <Suspense fallback={<BlogSkeleton />}>
-          <Blog />
-        </Suspense>
+        
         <Suspense fallback={<ContactSkeleton />}>
           <Contact />
         </Suspense>
