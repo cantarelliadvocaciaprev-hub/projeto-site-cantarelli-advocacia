@@ -1704,7 +1704,7 @@ export const blogArticles: BlogArticle[] = [
       "Atividades de direção, coordenação e assessoramento pedagógico também contam",
     ],
     lastUpdated: "Março 2026",
-    image: aposentadoriaProfessorImg,
+    image: cnisAnaliseImg,
     imageAlt: "Professor em sala de aula representando aposentadoria especial do magistério",
     author: "Thiago Cantarelli",
     content: [
