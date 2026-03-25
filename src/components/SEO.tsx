@@ -7,6 +7,7 @@ interface SEOProps {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+  ogType?: string;
   canonical?: string;
 }
 
@@ -17,13 +18,12 @@ const SEO = ({
   ogTitle,
   ogDescription,
   ogImage = "https://storage.googleapis.com/gpt-engineer-file-uploads/oAVZtOygXbW2PkAr0aG4IhJcC5c2/social-images/social-1760713613475-IMG_8009.jpg",
+  ogType = "website",
   canonical,
 }: SEOProps) => {
   useEffect(() => {
-    // Update document title
     document.title = title;
 
-    // Helper function to update or create meta tag
     const updateMetaTag = (name: string, content: string, isProperty = false) => {
       const attribute = isProperty ? "property" : "name";
       let element = document.querySelector(`meta[${attribute}="${name}"]`);
@@ -38,21 +38,25 @@ const SEO = ({
       }
     };
 
-    // Update meta description
     updateMetaTag("description", description);
 
-    // Update keywords if provided
     if (keywords) {
       updateMetaTag("keywords", keywords);
     }
 
-    // Update Open Graph tags
+    // Open Graph
     updateMetaTag("og:title", ogTitle || title, true);
     updateMetaTag("og:description", ogDescription || description, true);
     updateMetaTag("og:image", ogImage, true);
-    updateMetaTag("og:type", "website", true);
+    updateMetaTag("og:type", ogType, true);
+    updateMetaTag("og:site_name", "Cantarelli Advocacia", true);
+    updateMetaTag("og:locale", "pt_BR", true);
+    if (canonical) {
+      updateMetaTag("og:url", canonical, true);
+    }
 
-    // Update Twitter tags
+    // Twitter Card
+    updateMetaTag("twitter:card", "summary_large_image");
     updateMetaTag("twitter:title", ogTitle || title);
     updateMetaTag("twitter:description", ogDescription || description);
     updateMetaTag("twitter:image", ogImage);
