@@ -59,6 +59,11 @@ const BlogArticle = () => {
       <SEO
         title={`${article.title} | Cantarelli Advocacia`}
         description={article.excerpt}
+        keywords={article.tags?.join(", ")}
+        ogTitle={article.title}
+        ogDescription={article.excerpt}
+        ogImage={article.image}
+        ogType="article"
         canonical={`https://cantarelliadvocacia.com.br/blog/${article.slug}`}
       />
       <Header />
