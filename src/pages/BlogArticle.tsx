@@ -10,6 +10,7 @@ import { blogArticles } from "@/data/blogArticles";
 import ArticleFAQ from "@/components/blog/ArticleFAQ";
 import ArticleQuestionForm from "@/components/blog/ArticleQuestionForm";
 import RelatedArticles from "@/components/blog/RelatedArticles";
+import ArticleSchema from "@/components/blog/ArticleSchema";
 
 const WHATSAPP_URL = "https://wa.me/5581983421727?text=Olá,%20li%20um%20artigo%20no%20blog%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.";
 
@@ -66,6 +67,7 @@ const BlogArticle = () => {
         ogType="article"
         canonical={`https://cantarelliadvocacia.com.br/blog/${article.slug}`}
       />
+      <ArticleSchema article={article} />
       <Header />
       
       <main className="flex-1">
