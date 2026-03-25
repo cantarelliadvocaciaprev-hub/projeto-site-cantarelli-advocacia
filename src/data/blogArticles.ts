@@ -47,6 +47,18 @@ import aposentPontosImg from "@/assets/blog/aposentadoria-pontos-2026.jpg";
 import periodoGracaImg from "@/assets/blog/periodo-graca-inss-2026.jpg";
 import margemConsigImg from "@/assets/blog/margem-consignavel-2026.jpg";
 import reajusteImg from "@/assets/blog/reajuste-aposentadoria-2026.jpg";
+import pensaoMorteFilhoImg from "@/assets/blog/pensao-morte-filho-maior-21.jpg";
+import bpcCriancaAutismoImg from "@/assets/blog/bpc-loas-crianca-autismo.jpg";
+import autismoAdultoDireitosImg from "@/assets/blog/autismo-adulto-direitos-2026.jpg";
+import engenheiroMecanicoImg from "@/assets/blog/engenheiro-mecanico-aposentadoria-especial.jpg";
+import bpcIdosoSolicitarImg from "@/assets/blog/bpc-loas-idoso-solicitar-2026.jpg";
+import revisaoVidaTodaImg from "@/assets/blog/revisao-vida-toda-2026.jpg";
+import planejamentoContinuarImg from "@/assets/blog/planejamento-continuar-contribuindo-2026.jpg";
+import contribuicoesAtrasoImg from "@/assets/blog/contribuicoes-atraso-regularizar-2026.jpg";
+import doencaOcupacionalAcidenteImg from "@/assets/blog/doenca-ocupacional-acidente-2026.jpg";
+import pensaoUniaoEstavelImg from "@/assets/blog/pensao-morte-uniao-estavel-2026.jpg";
+import autismoCuratelaImg from "@/assets/blog/autismo-curatela-previdencia-2026.jpg";
+import autismoBpcAdultoImg from "@/assets/blog/autismo-bpc-adulto-2026.jpg";
 
 
 export interface BlogArticleContent {
@@ -692,7 +704,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt:
       "A aposentadoria da pessoa com deficiência tem regras próprias e mais favoráveis que a regra geral. Conheça os requisitos por idade e por tempo de contribuição, o diagnóstico previdenciário e como garantir esse direito.",
     date: "20 de Março, 2026",
-    category: "Aposentadoria PCD",
+    category: "Autismo",
     tags: ["PCD", "Deficiência", "LC 142", "INSS"],
     readTime: "9 min",
     keyTakeaways: [
@@ -2052,7 +2064,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "autismo-aposentadoria-pessoa-com-deficiencia",
     title: "Qual Grau de Autismo Aposenta? Entenda a Aposentadoria da Pessoa com Deficiência",
     excerpt: "Pessoas com Transtorno do Espectro Autista (TEA) podem ter direito à aposentadoria por deficiência com tempo reduzido. Entenda os critérios e como garantir o benefício.",
-    category: "PCD",
+    category: "Autismo",
     tags: ["Autismo", "TEA", "PCD", "Deficiência", "INSS"],
     readTime: "8 min",
     keyTakeaways: [
@@ -2453,7 +2465,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "deficiencia-auditiva-aposentadoria-pcd",
     title: "Deficiência Auditiva Aposenta? Conheça Seus Direitos no INSS",
     excerpt: "Entenda quando a perda auditiva garante aposentadoria da pessoa com deficiência ou por invalidez e quais documentos são necessários.",
-    category: "Aposentadoria PCD",
+    category: "Autismo",
     tags: ["PCD", "Deficiência Auditiva", "INSS", "Aposentadoria"],
     readTime: "7 min",
     keyTakeaways: [
@@ -3127,6 +3139,515 @@ export const blogArticles: BlogArticle[] = [
       { question: "Aposentados de regimes próprios (servidores) seguem o mesmo reajuste?", answer: "Não necessariamente. Servidores públicos seguem as regras do regime próprio de previdência, que pode ter índice de reajuste diferente do INSS." },
       { question: "Quando o reajuste do INSS começa a ser pago?", answer: "Os novos valores começam a ser pagos a partir de fevereiro de cada ano, seguindo o calendário de pagamentos do INSS." }
     ]
+  },
+  {
+    slug: "pensao-por-morte-filho-maior-21-anos",
+    title: "Pensão por Morte para Filho Maior de 21 Anos: Quando é Possível?",
+    excerpt: "Filhos maiores de 21 anos podem receber pensão por morte em situações específicas. Entenda os requisitos legais e quando o benefício é garantido.",
+    category: "Pensões",
+    tags: ["Pensão por Morte", "Filhos", "Dependentes", "INSS"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Filhos inválidos ou com deficiência grave podem receber pensão por morte sem limite de idade",
+      "Filhos universitários até 24 anos podem ter direito reconhecido judicialmente em alguns casos",
+      "A dependência econômica deve ser comprovada quando não é presumida",
+      "A invalidez ou deficiência deve ser anterior ao óbito do segurado"
+    ],
+    image: pensaoMorteFilhoImg,
+    imageAlt: "Documentos legais sobre pensão por morte e benefícios para dependentes no INSS",
+    content: [
+      { type: "paragraph", text: "A regra geral do INSS estabelece que filhos recebem pensão por morte até os 21 anos de idade. Porém, existem exceções importantes que podem estender esse direito. Conhecer essas possibilidades é fundamental para famílias que perderam um ente querido." },
+      { type: "heading", text: "Regra Geral: Até 21 Anos" },
+      { type: "paragraph", text: "O INSS concede pensão por morte automaticamente para filhos menores de 21 anos, desde que o falecido fosse segurado. Ao completar 21 anos, o benefício é cessado. No entanto, existem exceções previstas em lei e na jurisprudência." },
+      { type: "heading", text: "Exceções que Estendem o Benefício" },
+      { type: "list", items: [
+        "Filhos inválidos: recebem pensão por morte sem limite de idade, desde que a invalidez seja anterior ao óbito",
+        "Filhos com deficiência intelectual, mental ou grave: mantêm o direito independentemente da idade",
+        "Filhos universitários até 24 anos: há decisões judiciais reconhecendo o direito por analogia à legislação do imposto de renda",
+        "Filhos com dependência econômica comprovada: em situações excepcionais, a Justiça pode reconhecer o direito"
+      ]},
+      { type: "highlight", text: "Importante: a invalidez ou deficiência deve existir ANTES do falecimento do segurado. Deficiência superveniente ao óbito não gera direito à pensão." },
+      { type: "heading", text: "Como Comprovar o Direito" },
+      { type: "list", items: [
+        "Laudos médicos que comprovem a invalidez ou deficiência anterior ao óbito",
+        "Documentos que demonstrem dependência econômica",
+        "Comprovante de matrícula universitária (para filhos estudantes)",
+        "Certidão de óbito do segurado e documentos de vínculo familiar"
+      ]},
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você é filho maior de 21 anos e perdeu um genitor segurado do INSS, pode ter direito à pensão por morte em situações específicas. A Cantarelli Advocacia pode analisar seu caso e identificar a melhor estratégia jurídica." }
+    ],
+    faq: [
+      { question: "Filho adotivo tem os mesmos direitos na pensão por morte?", answer: "Sim. Filhos adotivos têm os mesmos direitos que filhos biológicos, incluindo a pensão por morte." },
+      { question: "A emancipação do filho encerra a pensão por morte?", answer: "Sim. A emancipação antes dos 21 anos encerra o direito à pensão, exceto nos casos de invalidez ou deficiência." },
+      { question: "Enteado pode receber pensão por morte?", answer: "Sim, desde que comprovada a dependência econômica e que não recebia alimentos do pai ou mãe biológicos." }
+    ]
+  },
+  {
+    slug: "pensao-por-morte-uniao-estavel-como-comprovar",
+    title: "Pensão por Morte em União Estável: Como Comprovar e Garantir o Benefício",
+    excerpt: "Companheiros em união estável têm direito à pensão por morte, mas a comprovação pode ser um desafio. Saiba quais documentos são aceitos e como garantir seu direito.",
+    category: "Pensões",
+    tags: ["Pensão por Morte", "União Estável", "Companheiro", "INSS"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "A união estável gera os mesmos direitos que o casamento para fins de pensão por morte",
+      "A comprovação pode ser feita com diversos documentos, mesmo sem escritura pública",
+      "União estável homoafetiva tem os mesmos direitos reconhecidos pelo STF",
+      "Não é necessário tempo mínimo de convivência para união estável"
+    ],
+    image: pensaoUniaoEstavelImg,
+    imageAlt: "Documentos de comprovação de união estável para pensão por morte no INSS",
+    content: [
+      { type: "paragraph", text: "A união estável é reconhecida pela Constituição Federal como entidade familiar, gerando os mesmos direitos que o casamento para fins previdenciários. No entanto, a comprovação da união estável perante o INSS pode ser um desafio, especialmente quando não há documentos formais." },
+      { type: "heading", text: "O Que Caracteriza a União Estável" },
+      { type: "paragraph", text: "A união estável é a convivência pública, contínua e duradoura entre duas pessoas com o objetivo de constituir família. Não é necessário morar junto, ter filhos ou ter tempo mínimo de convivência." },
+      { type: "heading", text: "Documentos Aceitos pelo INSS" },
+      { type: "list", items: [
+        "Escritura pública de declaração de união estável",
+        "Contrato de aluguel ou financiamento em nome dos dois",
+        "Conta bancária conjunta",
+        "Plano de saúde como dependente",
+        "Declaração de imposto de renda como dependente",
+        "Fotos do casal em eventos familiares",
+        "Certidão de nascimento de filhos em comum"
+      ]},
+      { type: "highlight", text: "Dica: quanto mais documentos você reunir, maior a chance de aprovação. O INSS exige início de prova material, que pode ser complementada por prova testemunhal." },
+      { type: "heading", text: "União Estável Homoafetiva" },
+      { type: "paragraph", text: "Desde a decisão do STF em 2011, a união estável homoafetiva tem os mesmos direitos que a heteroafetiva. O INSS deve conceder pensão por morte ao companheiro do mesmo sexo nos mesmos termos." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você vivia em união estável e perdeu seu companheiro, tem direito à pensão por morte. A Cantarelli Advocacia pode ajudar na comprovação e garantir que seus direitos sejam respeitados." }
+    ],
+    faq: [
+      { question: "Posso receber pensão por morte mesmo sem ter morado junto?", answer: "Sim. A coabitação não é requisito obrigatório para a união estável, conforme entendimento consolidado dos tribunais." },
+      { question: "Ex-companheiro que recebia pensão alimentícia tem direito à pensão por morte?", answer: "Sim. O ex-companheiro que recebia alimentos pode requerer a pensão, comprovando a dependência econômica." },
+      { question: "É possível dividir a pensão entre cônjuge e companheiro(a)?", answer: "Sim. Se o falecido era casado e mantinha união estável simultaneamente, a pensão pode ser dividida entre os dependentes." }
+    ]
+  },
+  {
+    slug: "bpc-loas-crianca-autismo-como-solicitar",
+    title: "BPC/LOAS para Criança com Autismo: Como Solicitar e Garantir o Benefício",
+    excerpt: "Crianças com Transtorno do Espectro Autista (TEA) podem ter direito ao BPC/LOAS. Entenda os requisitos de renda, a avaliação e como dar entrada no pedido.",
+    category: "Autismo",
+    tags: ["BPC", "LOAS", "Autismo", "TEA", "Criança"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "Crianças com autismo podem receber um salário mínimo mensal (R$ 1.621,00 em 2026) pelo BPC/LOAS",
+      "A renda familiar per capita deve ser inferior a 1/4 do salário mínimo (R$ 405,25)",
+      "A avaliação é biopsicossocial, considerando as barreiras enfrentadas pela criança",
+      "O cadastro no CadÚnico é obrigatório antes de solicitar o benefício"
+    ],
+    image: bpcCriancaAutismoImg,
+    imageAlt: "Peças de quebra-cabeça coloridas representando autismo ao lado de documentos legais do BPC LOAS",
+    content: [
+      { type: "paragraph", text: "O Benefício de Prestação Continuada (BPC/LOAS) é um direito constitucional que garante um salário mínimo mensal para pessoas com deficiência de baixa renda, incluindo crianças com Transtorno do Espectro Autista (TEA). Em 2026, o valor é de R$ 1.621,00." },
+      { type: "heading", text: "Requisitos para o BPC/LOAS" },
+      { type: "list", items: [
+        "A criança deve ter diagnóstico de TEA (CID F84)",
+        "A renda familiar per capita deve ser inferior a 1/4 do salário mínimo (R$ 405,25 em 2026)",
+        "Inscrição no CadÚnico atualizada",
+        "A deficiência deve impor barreiras de longo prazo (mínimo 2 anos)"
+      ]},
+      { type: "heading", text: "Avaliação Biopsicossocial" },
+      { type: "paragraph", text: "O INSS realiza uma avaliação com perito médico e assistente social. Não basta o diagnóstico — é avaliado como o autismo impacta a participação social, escolar e familiar da criança. Laudos detalhados fazem toda a diferença." },
+      { type: "highlight", text: "Atenção: mesmo que a renda familiar ultrapasse levemente o limite, a Justiça frequentemente flexibiliza o critério quando há gastos elevados com tratamentos, medicamentos e terapias." },
+      { type: "heading", text: "Documentação Necessária" },
+      { type: "list", items: [
+        "Laudo médico com CID F84 e descrição funcional",
+        "Relatórios de terapeutas (fonoaudiólogo, terapeuta ocupacional, psicólogo)",
+        "Comprovantes de renda de todos os membros da família",
+        "Comprovante de inscrição no CadÚnico",
+        "Comprovantes de gastos com tratamentos e medicamentos"
+      ]},
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "O BPC/LOAS é um direito fundamental para famílias de crianças com autismo. A Cantarelli Advocacia pode orientar sobre a documentação adequada e acompanhar todo o processo para garantir a concessão do benefício." }
+    ],
+    faq: [
+      { question: "A criança precisa estar na escola para receber o BPC?", answer: "Não é obrigatório estar matriculada, mas a frequência escolar é um fator positivo na avaliação social." },
+      { question: "O BPC para criança autista é permanente?", answer: "Não. O benefício é revisado periodicamente (a cada 2 anos). Se as condições mudarem, pode ser cessado." },
+      { question: "A família pode receber mais de um BPC?", answer: "Sim. Se houver mais de uma pessoa com deficiência na família, cada uma pode receber seu próprio BPC, e o valor de um BPC não entra no cálculo de renda do outro." }
+    ]
+  },
+  {
+    slug: "autismo-adulto-direitos-previdenciarios-2026",
+    title: "Autismo no Adulto: Direitos Previdenciários e Benefícios Disponíveis em 2026",
+    excerpt: "Adultos com Transtorno do Espectro Autista têm direitos previdenciários específicos, desde aposentadoria com tempo reduzido até BPC/LOAS. Conheça todas as possibilidades.",
+    category: "Autismo",
+    tags: ["Autismo", "TEA", "Adulto", "Aposentadoria", "BPC"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "Adultos com TEA podem se aposentar com tempo de contribuição reduzido pela LC 142/2013",
+      "O BPC/LOAS é uma alternativa para autistas que não contribuíram ao INSS",
+      "O diagnóstico tardio não impede o acesso aos benefícios previdenciários",
+      "A Tomada de Decisão Apoiada preserva a autonomia do autista adulto"
+    ],
+    image: autismoAdultoDireitosImg,
+    imageAlt: "Fita de conscientização do autismo ao lado de pasta profissional e documentos legais",
+    content: [
+      { type: "paragraph", text: "O número de diagnósticos de autismo em adultos tem crescido significativamente nos últimos anos, especialmente entre pessoas com TEA nível 1 (antigo Asperger). Muitos desses adultos desconhecem seus direitos previdenciários, que incluem aposentadoria com requisitos reduzidos e benefícios assistenciais." },
+      { type: "heading", text: "Aposentadoria da Pessoa com Deficiência" },
+      { type: "paragraph", text: "A Lei Complementar 142/2013 garante que pessoas com deficiência, incluindo autistas, possam se aposentar com tempo de contribuição reduzido. O tempo varia conforme o grau de deficiência avaliado pela perícia biopsicossocial." },
+      { type: "list", items: [
+        "Deficiência grave: 25 anos (homem) / 20 anos (mulher)",
+        "Deficiência moderada: 29 anos (homem) / 24 anos (mulher)",
+        "Deficiência leve: 33 anos (homem) / 28 anos (mulher)",
+        "Por idade: 60 anos (homem) / 55 anos (mulher) com 15 anos de contribuição"
+      ]},
+      { type: "heading", text: "BPC/LOAS para Autista Adulto" },
+      { type: "paragraph", text: "Autistas adultos que não contribuíram ao INSS ou que estão em situação de vulnerabilidade econômica podem ter direito ao BPC/LOAS, no valor de R$ 1.621,00 em 2026. É necessário comprovar renda familiar per capita inferior a 1/4 do salário mínimo." },
+      { type: "highlight", text: "Diagnóstico tardio: mesmo que o diagnóstico de TEA tenha sido feito na vida adulta, é possível comprovar que a condição existia desde a infância para fins de aposentadoria PCD." },
+      { type: "heading", text: "Tomada de Decisão Apoiada" },
+      { type: "paragraph", text: "Diferente da curatela, a Tomada de Decisão Apoiada permite que o autista adulto mantenha sua autonomia enquanto recebe suporte para decisões complexas. É uma alternativa menos restritiva e mais respeitosa à capacidade do indivíduo." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Adultos com autismo têm direitos previdenciários importantes que frequentemente são desconhecidos. A Cantarelli Advocacia possui experiência em casos de TEA e pode orientar sobre a melhor estratégia para cada situação." }
+    ],
+    faq: [
+      { question: "Autista com Asperger tem direito à aposentadoria PCD?", answer: "Sim. O TEA nível 1 (antigo Asperger) é reconhecido como deficiência e pode garantir aposentadoria com tempo reduzido." },
+      { question: "É possível acumular BPC com salário de trabalho?", answer: "Não. O BPC não pode ser acumulado com atividade remunerada, exceto na condição de aprendiz por até 2 anos." },
+      { question: "O autista adulto precisa de curatela para solicitar benefícios?", answer: "Não necessariamente. Muitos autistas adultos podem exercer seus direitos de forma autônoma ou com Tomada de Decisão Apoiada." }
+    ]
+  },
+  {
+    slug: "autismo-curatela-tutela-direitos-previdenciarios",
+    title: "Autismo, Curatela e Tutela: Como Proteger os Direitos Previdenciários",
+    excerpt: "Entenda as diferenças entre curatela, tutela e tomada de decisão apoiada para pessoas com autismo e como cada uma impacta os benefícios previdenciários.",
+    category: "Autismo",
+    tags: ["Autismo", "Curatela", "Tutela", "TEA", "Direitos"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "A curatela para autistas deve ser parcial, preservando direitos existenciais",
+      "A Tomada de Decisão Apoiada é a alternativa preferível e menos restritiva",
+      "O curador pode representar o curatelado perante o INSS",
+      "A Lei Brasileira de Inclusão (Lei 13.146/2015) priorizou a autonomia da pessoa com deficiência"
+    ],
+    image: autismoCuratelaImg,
+    imageAlt: "Peças de quebra-cabeça do autismo ao lado de documentos de curatela e martelo de juiz",
+    content: [
+      { type: "paragraph", text: "A questão da capacidade civil de pessoas com autismo é delicada e envolve um equilíbrio entre proteção e autonomia. A legislação brasileira evoluiu significativamente com a Lei Brasileira de Inclusão (2015), priorizando a capacidade plena e oferecendo instrumentos de apoio quando necessário." },
+      { type: "heading", text: "Curatela para Pessoas com Autismo" },
+      { type: "paragraph", text: "A curatela é uma medida judicial que nomeia um responsável para administrar os interesses de pessoa que não pode fazê-lo sozinha. Para autistas, deve ser sempre parcial, limitada a atos patrimoniais e negociais, preservando direitos existenciais como casamento, voto e trabalho." },
+      { type: "heading", text: "Tomada de Decisão Apoiada" },
+      { type: "paragraph", text: "Instituída pelo Estatuto da Pessoa com Deficiência, a Tomada de Decisão Apoiada permite que a pessoa escolha dois apoiadores de confiança para auxiliá-la em decisões sobre atos da vida civil, sem perder sua capacidade." },
+      { type: "highlight", text: "A Tomada de Decisão Apoiada é sempre preferível à curatela, pois preserva a autonomia e a dignidade da pessoa com autismo." },
+      { type: "heading", text: "Impacto nos Benefícios Previdenciários" },
+      { type: "list", items: [
+        "O curador pode requerer e administrar benefícios previdenciários em nome do curatelado",
+        "A pensão por morte de segurado autista curatelado é requerida pelo curador",
+        "O BPC/LOAS pode ser solicitado pelo representante legal",
+        "A aposentadoria PCD pode ser requerida pelo próprio autista ou seu representante"
+      ]},
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "A proteção dos direitos previdenciários de pessoas com autismo exige conhecimento tanto da legislação previdenciária quanto do direito das pessoas com deficiência. A Cantarelli Advocacia pode orientar famílias sobre a melhor forma de proteger esses direitos." }
+    ],
+    faq: [
+      { question: "Autista com curatela pode trabalhar?", answer: "Sim. A curatela não impede o exercício de atividade laborativa. A pessoa curatelada mantém o direito ao trabalho." },
+      { question: "A curatela é definitiva?", answer: "Não. A curatela pode ser revista a qualquer momento, podendo ser extinta se a pessoa demonstrar capacidade para administrar seus interesses." },
+      { question: "Quem pode ser curador de pessoa com autismo?", answer: "Preferencialmente cônjuge, pais ou parentes próximos. O juiz avalia quem melhor atende aos interesses do curatelado." }
+    ]
+  },
+  {
+    slug: "bpc-loas-autismo-adulto-como-garantir",
+    title: "BPC/LOAS para Adulto com Autismo: Requisitos e Como Garantir o Benefício",
+    excerpt: "Adultos com TEA que não contribuíram ao INSS podem ter direito ao BPC/LOAS. Entenda os critérios de renda, a avaliação e como superar o indeferimento.",
+    category: "Autismo",
+    tags: ["BPC", "LOAS", "Autismo", "TEA", "Adulto"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "O BPC garante R$ 1.621,00 mensais para autistas adultos de baixa renda",
+      "A renda familiar per capita deve ser inferior a R$ 405,25 em 2026",
+      "A Justiça frequentemente flexibiliza o critério de renda quando há gastos com tratamentos",
+      "O benefício não é aposentadoria e não gera 13º salário"
+    ],
+    image: autismoBpcAdultoImg,
+    imageAlt: "Símbolo do infinito colorido representando neurodiversidade ao lado de documentos do BPC LOAS",
+    content: [
+      { type: "paragraph", text: "O BPC/LOAS é uma importante rede de proteção social para adultos com autismo que não possuem meios de prover sua subsistência. Diferente da aposentadoria, não exige contribuições ao INSS, bastando comprovar a deficiência e a vulnerabilidade socioeconômica." },
+      { type: "heading", text: "Requisitos do BPC para Autista Adulto" },
+      { type: "list", items: [
+        "Diagnóstico de TEA com impedimento de longo prazo (mínimo 2 anos)",
+        "Renda familiar per capita inferior a 1/4 do salário mínimo",
+        "Inscrição atualizada no CadÚnico",
+        "Residir no Brasil"
+      ]},
+      { type: "heading", text: "Quando a Renda Ultrapassa o Limite" },
+      { type: "paragraph", text: "A jurisprudência consolidada permite a flexibilização do critério de renda quando a família demonstra gastos elevados com medicamentos, terapias e acompanhamentos médicos que comprometem a renda disponível." },
+      { type: "highlight", text: "Importante: o valor de outro BPC recebido por membro da família (como BPC de idoso) não entra no cálculo da renda per capita familiar." },
+      { type: "heading", text: "O Que Fazer se o BPC For Negado" },
+      { type: "list", items: [
+        "Recurso administrativo ao Conselho de Recursos (prazo de 30 dias)",
+        "Novo requerimento com documentação complementar",
+        "Ação judicial com pedido de tutela antecipada",
+        "Atualização do CadÚnico com informações corretas sobre despesas"
+      ]},
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "O BPC/LOAS é um direito fundamental de adultos com autismo em situação de vulnerabilidade. A Cantarelli Advocacia pode avaliar seu caso e orientar sobre a melhor estratégia para obter o benefício." }
+    ],
+    faq: [
+      { question: "Autista que recebe BPC pode trabalhar?", answer: "O BPC é suspenso durante o exercício de atividade remunerada, mas pode ser retomado sem nova perícia em caso de demissão, dentro de prazo legal." },
+      { question: "O BPC gera direito a pensão por morte?", answer: "Não. O BPC é pessoal e intransferível, não gerando pensão por morte para dependentes." },
+      { question: "Autista que mora sozinho pode receber BPC?", answer: "Sim. A composição familiar para o BPC considera quem mora na mesma residência. Se o autista mora sozinho, apenas sua renda é considerada." }
+    ]
+  },
+  {
+    slug: "engenheiro-mecanico-aposentadoria-especial-tempo-especial",
+    title: "Engenheiro Mecânico: Direito à Aposentadoria Especial e Conversão de Tempo Especial",
+    excerpt: "Engenheiros mecânicos que trabalharam até 28/04/1995 têm direito à aposentadoria especial ou à conversão de tempo especial em comum. Entenda o enquadramento por categoria profissional.",
+    category: "Aposentadoria Especial",
+    tags: ["Engenheiro Mecânico", "Aposentadoria Especial", "Tempo Especial", "Conversão"],
+    readTime: "9 min",
+    keyTakeaways: [
+      "Até 28/04/1995, o enquadramento como atividade especial era automático por categoria profissional",
+      "Engenheiros mecânicos são enquadrados por analogia a engenheiros/metalúrgicos nos Decretos 53.831/64 e 83.080/79",
+      "Após 28/04/1995, é necessário comprovar exposição a agentes nocivos por PPP e LTCAT",
+      "A conversão de tempo especial em comum permite antecipar a aposentadoria em anos"
+    ],
+    image: engenheiroMecanicoImg,
+    imageAlt: "Ferramentas de engenharia mecânica, engrenagens e capacete de segurança ao lado de documentos de aposentadoria",
+    content: [
+      { type: "paragraph", text: "A aposentadoria especial é um benefício concedido a trabalhadores expostos a agentes nocivos à saúde ou à integridade física. Para engenheiros mecânicos, o enquadramento por categoria profissional até 28/04/1995 representa uma oportunidade significativa de antecipar a aposentadoria ou aumentar o tempo de contribuição." },
+      { type: "heading", text: "Enquadramento por Categoria Profissional até 28/04/1995" },
+      { type: "paragraph", text: "Até a publicação da Lei 9.032/1995 (em 28/04/1995), o reconhecimento de atividade especial era feito pelo enquadramento por categoria profissional, sem necessidade de comprovar exposição individual a agentes nocivos. Bastava exercer a profissão listada nos Decretos 53.831/64 e 83.080/79." },
+      { type: "highlight", text: "Os engenheiros mecânicos são enquadrados por analogia aos engenheiros e metalúrgicos previstos nos anexos dos Decretos 53.831/64 (código 2.1.1) e 83.080/79 (Anexo II). O enquadramento é automático, bastando comprovar o exercício da profissão." },
+      { type: "heading", text: "Após 28/04/1995: Mudança nas Regras" },
+      { type: "paragraph", text: "Após 28 de abril de 1995, o enquadramento por categoria profissional foi extinto. A partir dessa data, o engenheiro mecânico precisa comprovar a efetiva exposição a agentes nocivos por meio de documentos técnicos:" },
+      { type: "list", items: [
+        "PPP (Perfil Profissiográfico Previdenciário): documento emitido pela empresa com o histórico de exposição",
+        "LTCAT (Laudo Técnico de Condições Ambientais do Trabalho): laudo elaborado por engenheiro de segurança ou médico do trabalho",
+        "Agentes nocivos comuns para engenheiros mecânicos: ruído acima de 85 dB, calor, vibração, óleos minerais, solventes químicos",
+        "A partir de 2003 (Decreto 4.882), apenas PPP com referência ao LTCAT é suficiente"
+      ]},
+      { type: "heading", text: "Conversão de Tempo Especial em Comum" },
+      { type: "paragraph", text: "Mesmo que o engenheiro mecânico não tenha os 25 anos de atividade especial necessários para a aposentadoria especial, é possível converter o tempo especial em tempo comum com o fator de multiplicação 1,4 (homens) ou 1,2 (mulheres)." },
+      { type: "list", items: [
+        "Exemplo: 10 anos de tempo especial equivalem a 14 anos de tempo comum (homem)",
+        "A conversão pode antecipar a aposentadoria em vários anos",
+        "É válida apenas para períodos anteriores à Reforma da Previdência (13/11/2019)",
+        "A conversão vale para atividades exercidas tanto antes quanto depois de 28/04/1995"
+      ]},
+      { type: "heading", text: "Documentos Necessários" },
+      { type: "list", items: [
+        "Carteira de trabalho com registro como engenheiro mecânico",
+        "Diploma ou registro no CREA",
+        "PPP das empresas onde trabalhou (para períodos após 28/04/1995)",
+        "LTCAT (se disponível)",
+        "Formulários antigos: SB-40, DSS-8030, DIRBEN-8030 (para períodos anteriores)"
+      ]},
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Engenheiros mecânicos que trabalharam antes de 28/04/1995 têm um direito valioso ao reconhecimento automático de tempo especial. Mesmo para períodos posteriores, a comprovação de exposição a agentes nocivos pode garantir a aposentadoria especial ou a conversão de tempo. A Cantarelli Advocacia pode analisar seu histórico profissional e identificar a melhor estratégia." }
+    ],
+    faq: [
+      { question: "Engenheiro mecânico que trabalhou em escritório tem direito à aposentadoria especial?", answer: "Até 28/04/1995, sim, pelo enquadramento por categoria. Após essa data, apenas se comprovar exposição efetiva a agentes nocivos no ambiente de trabalho." },
+      { question: "A empresa fechou e não consigo o PPP. O que fazer?", answer: "É possível recorrer à Justiça do Trabalho, utilizar laudos técnicos de empresas similares (perícia por similaridade) ou outros documentos que comprovem a exposição." },
+      { question: "O enquadramento por categoria profissional ainda pode ser usado em 2026?", answer: "Sim. O direito adquirido garante que períodos trabalhados até 28/04/1995 podem ser enquadrados pela categoria profissional, independentemente de quando o pedido de aposentadoria é feito." }
+    ]
+  },
+  {
+    slug: "bpc-loas-idoso-2026-como-solicitar",
+    title: "BPC/LOAS para Idoso em 2026: Requisitos Atualizados e Como Solicitar",
+    excerpt: "Idosos com 65 anos ou mais e baixa renda têm direito ao BPC/LOAS. Entenda os requisitos atualizados, como dar entrada e o que fazer se o pedido for negado.",
+    category: "BPC/LOAS",
+    tags: ["BPC", "LOAS", "Idoso", "Baixa Renda", "2026"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Idosos com 65 anos ou mais e renda per capita inferior a R$ 405,25 têm direito ao BPC",
+      "O BPC para idoso não exige contribuição prévia ao INSS",
+      "Inscrição no CadÚnico é obrigatória antes de solicitar",
+      "O valor do BPC em 2026 é de R$ 1.621,00 (um salário mínimo)"
+    ],
+    image: bpcIdosoSolicitarImg,
+    imageAlt: "Documentos de aposentadoria e óculos de leitura sobre mesa de escritório para solicitação de BPC idoso",
+    content: [
+      { type: "paragraph", text: "O BPC/LOAS para idoso é um benefício assistencial que garante um salário mínimo mensal para pessoas com 65 anos ou mais que não possuem meios de prover sua subsistência. Em 2026, com o salário mínimo de R$ 1.621,00, o critério de renda também foi atualizado." },
+      { type: "heading", text: "Requisitos em 2026" },
+      { type: "list", items: [
+        "Idade mínima: 65 anos",
+        "Renda familiar per capita inferior a 1/4 do salário mínimo (R$ 405,25)",
+        "Inscrição atualizada no CadÚnico",
+        "Residir no Brasil",
+        "Não receber outro benefício previdenciário ou assistencial (exceto assistência médica e pensão especial)"
+      ]},
+      { type: "heading", text: "Como Calcular a Renda Per Capita" },
+      { type: "paragraph", text: "A renda per capita é calculada somando todos os rendimentos dos membros da família que moram na mesma casa e dividindo pelo número de pessoas. Importante: o BPC recebido por outro idoso da família NÃO entra nesse cálculo." },
+      { type: "highlight", text: "Dica: gastos com medicamentos, tratamentos médicos e despesas essenciais podem ser usados judicialmente para flexibilizar o critério de renda, quando a família demonstra miserabilidade mesmo com renda acima do limite." },
+      { type: "heading", text: "Passo a Passo para Solicitar" },
+      { type: "list", items: [
+        "1. Faça a inscrição no CadÚnico no CRAS mais próximo",
+        "2. Reúna documentos pessoais e comprovantes de renda de todos da família",
+        "3. Agende o atendimento pelo telefone 135 ou pelo Meu INSS",
+        "4. Compareça à perícia social se convocado",
+        "5. Acompanhe o andamento pelo Meu INSS"
+      ]},
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "O BPC/LOAS para idoso é um direito constitucional que garante dignidade na terceira idade. Se você ou um familiar se enquadra nos requisitos, não deixe de solicitar. A Cantarelli Advocacia pode ajudar em todo o processo." }
+    ],
+    faq: [
+      { question: "O BPC para idoso é vitalício?", answer: "O BPC é mantido enquanto as condições de elegibilidade forem atendidas. Revisões periódicas verificam se o beneficiário ainda se enquadra." },
+      { question: "Idoso que mora com filho que trabalha perde o direito ao BPC?", answer: "Depende. Se a renda per capita familiar ultrapassar R$ 405,25, o BPC pode ser negado. Porém, a Justiça pode flexibilizar o critério." },
+      { question: "O BPC gera 13º salário?", answer: "Não. O BPC não é aposentadoria e não gera 13º salário, embora haja projetos de lei para incluir esse direito." }
+    ]
+  },
+  {
+    slug: "revisao-da-vida-toda-2026-entenda",
+    title: "Revisão da Vida Toda em 2026: O Que Mudou e Quem Ainda Tem Direito",
+    excerpt: "A revisão da vida toda permite incluir contribuições anteriores a julho de 1994 no cálculo do benefício. Entenda o cenário atual e se você pode se beneficiar.",
+    category: "Revisão",
+    tags: ["Revisão", "Vida Toda", "STF", "INSS", "Cálculo"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "A revisão da vida toda inclui todas as contribuições no cálculo, inclusive as anteriores a julho/1994",
+      "O STF julgou constitucional a tese, mas existem critérios de elegibilidade",
+      "O prazo decadencial de 10 anos deve ser observado para cada beneficiário",
+      "Nem todos os aposentados se beneficiam — é necessário fazer a simulação"
+    ],
+    image: revisaoVidaTodaImg,
+    imageAlt: "Lupa sobre documentos financeiros e cálculos de revisão de aposentadoria do INSS",
+    content: [
+      { type: "paragraph", text: "A revisão da vida toda é uma das teses revisionais mais importantes do direito previdenciário brasileiro. Ela permite que o segurado inclua no cálculo do benefício todas as contribuições realizadas ao longo da vida, inclusive aquelas anteriores a julho de 1994 — que normalmente são descartadas pela regra de transição." },
+      { type: "heading", text: "O Que é a Revisão da Vida Toda" },
+      { type: "paragraph", text: "A Lei 9.876/1999 criou uma regra de transição que considera apenas as contribuições a partir de julho de 1994 para o cálculo dos benefícios. A revisão da vida toda questiona essa regra, permitindo o uso de TODAS as contribuições quando isso for mais vantajoso para o segurado." },
+      { type: "heading", text: "Quem Pode se Beneficiar" },
+      { type: "list", items: [
+        "Aposentados que tinham salários altos antes de julho de 1994",
+        "Segurados que tiveram redução salarial após 1994",
+        "Benefícios concedidos após a Lei 9.876/1999 (novembro de 1999)",
+        "Aposentados dentro do prazo decadencial de 10 anos da concessão"
+      ]},
+      { type: "highlight", text: "Atenção: nem sempre a revisão da vida toda é vantajosa. Se as contribuições anteriores a 1994 eram baixas, o recálculo pode reduzir o benefício. Sempre faça a simulação antes de entrar com o pedido." },
+      { type: "heading", text: "Prazo para Solicitar" },
+      { type: "paragraph", text: "O prazo decadencial para revisões é de 10 anos a contar da data de concessão do benefício (primeiro pagamento). Quem se aposentou há mais de 10 anos pode ter perdido o direito. Porém, há discussões jurídicas sobre o início da contagem desse prazo." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "A revisão da vida toda pode significar um aumento significativo no valor da aposentadoria. Mas é essencial fazer a simulação antes de ingressar com a ação. A Cantarelli Advocacia realiza o cálculo completo e orienta sobre a viabilidade da revisão para cada caso." }
+    ],
+    faq: [
+      { question: "Pensionistas também podem pedir a revisão da vida toda?", answer: "Sim. Se o benefício originário (aposentadoria do falecido) pode ser revisado, a pensão derivada também será recalculada." },
+      { question: "Quem recebe um salário mínimo pode se beneficiar?", answer: "Se as contribuições anteriores a 1994 eram maiores, sim. Se sempre contribuiu sobre o mínimo, provavelmente não haverá diferença." },
+      { question: "A revisão é feita administrativamente ou na Justiça?", answer: "O INSS não faz essa revisão administrativamente. É necessário ingressar com ação judicial para obter o recálculo." }
+    ]
+  },
+  {
+    slug: "planejamento-previdenciario-quando-continuar-contribuindo",
+    title: "Quando Vale a Pena Continuar Contribuindo ao INSS? Planejamento Estratégico",
+    excerpt: "Descubra se vale a pena continuar pagando o INSS para aumentar o valor da aposentadoria ou se é melhor dar entrada agora. Análise estratégica para 2026.",
+    category: "Planejamento",
+    tags: ["Planejamento", "Contribuição", "INSS", "Estratégia", "2026"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Cada ano adicional de contribuição pode aumentar o benefício em 2%",
+      "O custo de oportunidade de contribuir mais deve ser comparado ao ganho no benefício",
+      "Em alguns casos, contribuir por mais 2-3 anos pode mudar a regra de transição aplicável",
+      "O planejamento previdenciário profissional evita decisões que custam milhares de reais"
+    ],
+    image: planejamentoContinuarImg,
+    imageAlt: "Caderno de planejamento financeiro com gráficos de aposentadoria e calculadora",
+    content: [
+      { type: "paragraph", text: "Uma das decisões mais importantes na vida previdenciária é determinar o momento ideal para requerer a aposentadoria. Parar de contribuir cedo demais pode significar um benefício menor para o resto da vida, enquanto contribuir por tempo desnecessário representa dinheiro desperdiçado." },
+      { type: "heading", text: "Como Funciona o Cálculo do Benefício" },
+      { type: "paragraph", text: "Após a Reforma da Previdência, o cálculo da aposentadoria considera 60% da média salarial + 2% por ano que exceder 20 anos de contribuição (homens) ou 15 anos (mulheres). Isso significa que cada ano adicional pode aumentar significativamente o valor." },
+      { type: "heading", text: "Cenários em Que Vale Continuar" },
+      { type: "list", items: [
+        "Quando faltam poucos meses para mudar de faixa percentual",
+        "Quando contribuir mais permite usar uma regra de transição mais vantajosa",
+        "Quando o valor do benefício atual está muito abaixo do desejado",
+        "Quando há atividade especial que pode ser convertida"
+      ]},
+      { type: "heading", text: "Cenários em Que é Melhor Parar" },
+      { type: "list", items: [
+        "Quando já atingiu 100% da média salarial",
+        "Quando o custo da contribuição é maior que o ganho proporcional no benefício",
+        "Quando problemas de saúde comprometem a capacidade de trabalho",
+        "Quando o benefício por outra regra já é mais vantajoso"
+      ]},
+      { type: "highlight", text: "Atenção: essa análise é individualizada e depende de múltiplos fatores como idade, tempo de contribuição, valores das contribuições e regras de transição aplicáveis. Jamais tome essa decisão sem uma simulação profissional." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "O momento certo de se aposentar é uma decisão estratégica que impacta toda a sua vida financeira. A Cantarelli Advocacia realiza simulações completas para identificar o cenário mais vantajoso para cada segurado." }
+    ],
+    faq: [
+      { question: "Posso parar de contribuir e voltar depois?", answer: "Sim. Você pode interromper e retomar as contribuições a qualquer momento, mas pode perder a qualidade de segurado para outros benefícios durante o período sem contribuição." },
+      { question: "Contribuir sobre valor maior no final aumenta o benefício?", answer: "Parcialmente. A média considera todas as contribuições desde 1994, então contribuições maiores nos últimos anos ajudam, mas o impacto depende do histórico completo." },
+      { question: "O INSS avisa quando já posso me aposentar?", answer: "Não. É responsabilidade do segurado acompanhar seus requisitos. O Meu INSS oferece simulações, mas análise profissional é mais confiável." }
+    ]
+  },
+  {
+    slug: "contribuicoes-inss-em-atraso-como-regularizar",
+    title: "Contribuições do INSS em Atraso: Como Regularizar e Garantir Sua Aposentadoria",
+    excerpt: "Tem períodos sem contribuição ao INSS? Saiba como regularizar pagamentos em atraso, quais períodos podem ser recuperados e quanto isso pode impactar sua aposentadoria.",
+    category: "Contribuição",
+    tags: ["Contribuição", "Atraso", "Regularização", "INSS", "GPS"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Contribuições em atraso podem ser pagas para completar o tempo de contribuição",
+      "Atrasos superiores a 5 anos exigem comprovação de atividade no período",
+      "O valor do recolhimento em atraso inclui juros e multa calculados pelo INSS",
+      "MEI e autônomo são as categorias que mais precisam de regularização"
+    ],
+    image: contribuicoesAtrasoImg,
+    imageAlt: "Guias de pagamento do INSS, calendário e caneta sobre mesa de escritório para regularização de contribuições",
+    content: [
+      { type: "paragraph", text: "Lacunas no histórico de contribuições ao INSS são extremamente comuns, especialmente entre trabalhadores autônomos, MEIs e profissionais liberais. Essas lacunas podem atrasar a aposentadoria em anos ou reduzir significativamente o valor do benefício." },
+      { type: "heading", text: "Quem Pode Pagar em Atraso" },
+      { type: "list", items: [
+        "Contribuinte individual (autônomo) que exercia atividade mas não recolhia",
+        "MEI com guias DAS em atraso",
+        "Segurado facultativo com interrupção nas contribuições",
+        "Empregado cujo empregador não recolheu as contribuições"
+      ]},
+      { type: "heading", text: "Regras para Regularização" },
+      { type: "paragraph", text: "Para atrasos de até 5 anos, o pagamento pode ser feito diretamente, sem necessidade de comprovação. Acima de 5 anos, o INSS exige início de prova material de que a atividade era exercida no período." },
+      { type: "highlight", text: "Importante: contribuições em atraso acima de 5 anos geram juros e multa elevados. Em alguns casos, pode ser mais vantajoso não recolher e buscar alternativas como reconhecimento de tempo rural ou especial." },
+      { type: "heading", text: "Como Calcular o Valor" },
+      { type: "paragraph", text: "O valor é calculado pelo sistema SAL (Sistema de Acréscimos Legais) do site da Receita Federal. Inclui a contribuição devida, juros SELIC acumulados e multa de 10% a 20%. Quanto mais antigo o período, maior o custo." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Regularizar contribuições em atraso pode ser a chave para antecipar sua aposentadoria ou aumentar o valor do benefício. A Cantarelli Advocacia pode analisar se o pagamento em atraso é financeiramente vantajoso para o seu caso." }
+    ],
+    faq: [
+      { question: "Posso pagar contribuições em atraso de quando era empregado?", answer: "Se o empregador não recolheu, a responsabilidade é do empregador. O segurado pode pedir ao INSS a inclusão desses períodos com base na carteira de trabalho." },
+      { question: "Contribuições em atraso contam para carência?", answer: "Depende. Contribuições em atraso pagas antes do requerimento do benefício contam para carência apenas se o segurado era filiado ao INSS à época." },
+      { question: "MEI pode pagar guias DAS em atraso?", answer: "Sim. O MEI pode gerar guias em atraso pelo Portal do Simples Nacional. As contribuições atrasadas contam para aposentadoria por idade." }
+    ]
+  },
+  {
+    slug: "doenca-ocupacional-equiparada-acidente-trabalho",
+    title: "Doença Ocupacional Equiparada a Acidente de Trabalho: Direitos e Benefícios",
+    excerpt: "Doenças desenvolvidas em razão do trabalho são equiparadas a acidente de trabalho e geram direitos específicos. Entenda quais doenças se enquadram e como garantir seus benefícios.",
+    category: "Acidente de Trabalho",
+    tags: ["Doença Ocupacional", "Acidente de Trabalho", "CAT", "Estabilidade", "INSS"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "LER/DORT, perda auditiva e doenças respiratórias são as doenças ocupacionais mais comuns",
+      "A emissão da CAT é obrigatória e garante direitos como estabilidade de 12 meses",
+      "O nexo técnico epidemiológico (NTEP) pode reconhecer a doença ocupacional automaticamente",
+      "O benefício acidentário (B91) tem vantagens sobre o benefício comum (B31)"
+    ],
+    image: doencaOcupacionalAcidenteImg,
+    imageAlt: "Capacete de segurança do trabalho e estetoscópio sobre documentos de doença ocupacional",
+    content: [
+      { type: "paragraph", text: "Doenças ocupacionais são aquelas produzidas ou desencadeadas pelo exercício do trabalho. A legislação brasileira equipara essas doenças ao acidente de trabalho, garantindo ao trabalhador uma série de direitos e benefícios previdenciários diferenciados." },
+      { type: "heading", text: "O Que São Doenças Ocupacionais" },
+      { type: "list", items: [
+        "Doenças profissionais: causadas diretamente pela atividade (ex: silicose em mineradores)",
+        "Doenças do trabalho: desencadeadas pelas condições de trabalho (ex: LER/DORT em digitadores)",
+        "Doenças por concausa: o trabalho não é a causa única, mas contribuiu significativamente"
+      ]},
+      { type: "heading", text: "Direitos do Trabalhador" },
+      { type: "list", items: [
+        "Estabilidade provisória de 12 meses após retorno ao trabalho",
+        "Benefício acidentário (código B91) com depósito de FGTS durante o afastamento",
+        "Direito a auxílio-acidente (indenização por sequelas permanentes)",
+        "Possibilidade de indenização por danos morais e materiais na Justiça do Trabalho",
+        "Aposentadoria especial quando comprovada a exposição contínua a agentes nocivos"
+      ]},
+      { type: "highlight", text: "A empresa é obrigada a emitir a CAT (Comunicação de Acidente de Trabalho). Se ela se recusar, o próprio trabalhador, o sindicato, o médico ou o INSS podem emitir." },
+      { type: "heading", text: "Nexo Técnico Epidemiológico (NTEP)" },
+      { type: "paragraph", text: "O NTEP é um mecanismo que estabelece automaticamente a relação entre a doença e a atividade econômica da empresa. Quando o CNAE da empresa é correlacionado à doença do trabalhador, presume-se que a doença é ocupacional, invertendo o ônus da prova." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você desenvolveu uma doença em razão do trabalho, seus direitos vão muito além do afastamento temporário. A Cantarelli Advocacia pode avaliar seu caso e garantir todos os benefícios a que você tem direito." }
+    ],
+    faq: [
+      { question: "Burnout é considerado doença ocupacional?", answer: "Sim. Desde a inclusão na CID-11 pela OMS, a síndrome de burnout é reconhecida como doença ocupacional quando vinculada ao trabalho." },
+      { question: "A empresa pode demitir após doença ocupacional?", answer: "Não durante os 12 meses de estabilidade após o retorno. A demissão nesse período gera direito à reintegração ou indenização." },
+      { question: "Doença degenerativa pode ser considerada ocupacional?", answer: "Sim, quando o trabalho acelerou ou agravou a doença. Hérnias de disco e artrose, por exemplo, podem ser reconhecidas como ocupacionais em trabalhadores com esforço físico." }
+    ]
   }
 
 ];
+
