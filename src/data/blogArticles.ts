@@ -47,6 +47,18 @@ import aposentPontosImg from "@/assets/blog/aposentadoria-pontos-2026.jpg";
 import periodoGracaImg from "@/assets/blog/periodo-graca-inss-2026.jpg";
 import margemConsigImg from "@/assets/blog/margem-consignavel-2026.jpg";
 import reajusteImg from "@/assets/blog/reajuste-aposentadoria-2026.jpg";
+import pensaoMorteFilhoImg from "@/assets/blog/pensao-morte-filho-maior-21.jpg";
+import bpcCriancaAutismoImg from "@/assets/blog/bpc-loas-crianca-autismo.jpg";
+import autismoAdultoDireitosImg from "@/assets/blog/autismo-adulto-direitos-2026.jpg";
+import engenheiroMecanicoImg from "@/assets/blog/engenheiro-mecanico-aposentadoria-especial.jpg";
+import bpcIdosoSolicitarImg from "@/assets/blog/bpc-loas-idoso-solicitar-2026.jpg";
+import revisaoVidaTodaImg from "@/assets/blog/revisao-vida-toda-2026.jpg";
+import planejamentoContinuarImg from "@/assets/blog/planejamento-continuar-contribuindo-2026.jpg";
+import contribuicoesAtrasoImg from "@/assets/blog/contribuicoes-atraso-regularizar-2026.jpg";
+import doencaOcupacionalAcidenteImg from "@/assets/blog/doenca-ocupacional-acidente-2026.jpg";
+import pensaoUniaoEstavelImg from "@/assets/blog/pensao-morte-uniao-estavel-2026.jpg";
+import autismoCuratelaImg from "@/assets/blog/autismo-curatela-previdencia-2026.jpg";
+import autismoBpcAdultoImg from "@/assets/blog/autismo-bpc-adulto-2026.jpg";
 
 
 export interface BlogArticleContent {
