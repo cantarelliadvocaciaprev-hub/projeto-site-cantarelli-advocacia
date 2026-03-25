@@ -207,7 +207,7 @@ const Blog = () => {
                         </div>
                       </div>
                       <div className="p-4 md:p-5 flex flex-col flex-1">
-                        <h2 className="text-sm md:text-base font-display font-bold text-foreground mb-2 leading-tight line-clamp-2 group-hover:text-primary transition-colors">
+                        <h2 className="text-sm md:text-base font-display font-bold text-foreground mb-2 leading-tight line-clamp-3 group-hover:text-primary transition-colors">
                           {post.title}
                         </h2>
                         <p className="text-xs md:text-sm text-muted-foreground font-body line-clamp-3 mb-3 flex-1">

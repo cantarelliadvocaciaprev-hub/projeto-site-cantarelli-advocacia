@@ -57,7 +57,7 @@ const RelatedArticles = ({ currentSlug, tags, category }: RelatedArticlesProps) 
                     </div>
                   </div>
                   <div className="p-3 md:p-4 flex flex-col flex-1">
-                    <h3 className="text-sm md:text-base font-display font-bold text-foreground mb-2 leading-tight line-clamp-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-sm md:text-base font-display font-bold text-foreground mb-2 leading-tight line-clamp-3 group-hover:text-primary transition-colors">
                       {article.title}
                     </h3>
                     <p className="text-xs text-muted-foreground font-body line-clamp-2 mb-2 flex-1">
