@@ -67,6 +67,7 @@ const BlogArticle = () => {
         ogType="article"
         canonical={`https://cantarelliadvocacia.com.br/blog/${article.slug}`}
       />
+      <ArticleSchema article={article} />
       <Header />
       
       <main className="flex-1">
