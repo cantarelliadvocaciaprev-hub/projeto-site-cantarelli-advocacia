@@ -692,7 +692,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt:
       "A aposentadoria da pessoa com deficiência tem regras próprias e mais favoráveis que a regra geral. Conheça os requisitos por idade e por tempo de contribuição, o diagnóstico previdenciário e como garantir esse direito.",
     date: "20 de Março, 2026",
-    category: "Aposentadoria PCD",
+    category: "Autismo",
     tags: ["PCD", "Deficiência", "LC 142", "INSS"],
     readTime: "9 min",
     keyTakeaways: [
@@ -2052,7 +2052,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "autismo-aposentadoria-pessoa-com-deficiencia",
     title: "Qual Grau de Autismo Aposenta? Entenda a Aposentadoria da Pessoa com Deficiência",
     excerpt: "Pessoas com Transtorno do Espectro Autista (TEA) podem ter direito à aposentadoria por deficiência com tempo reduzido. Entenda os critérios e como garantir o benefício.",
-    category: "PCD",
+    category: "Autismo",
     tags: ["Autismo", "TEA", "PCD", "Deficiência", "INSS"],
     readTime: "8 min",
     keyTakeaways: [
@@ -2453,7 +2453,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "deficiencia-auditiva-aposentadoria-pcd",
     title: "Deficiência Auditiva Aposenta? Conheça Seus Direitos no INSS",
     excerpt: "Entenda quando a perda auditiva garante aposentadoria da pessoa com deficiência ou por invalidez e quais documentos são necessários.",
-    category: "Aposentadoria PCD",
+    category: "Autismo",
     tags: ["PCD", "Deficiência Auditiva", "INSS", "Aposentadoria"],
     readTime: "7 min",
     keyTakeaways: [
