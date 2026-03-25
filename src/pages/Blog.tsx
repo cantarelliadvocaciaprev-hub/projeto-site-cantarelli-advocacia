@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Search, X, Tag } from "lucide-react";
+import { ArrowRight, Search, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { blogArticles } from "@/data/blogArticles";
 import Header from "@/components/Header";
@@ -12,16 +12,9 @@ import SEO from "@/components/SEO";
 const Blog = () => {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedTag, setSelectedTag] = useState<string | null>(null);
-  const [showAllTags, setShowAllTags] = useState(false);
 
   const categories = useMemo(
     () => Array.from(new Set(blogArticles.map((a) => a.category))),
-    []
-  );
-
-  const allTags = useMemo(
-    () => Array.from(new Set(blogArticles.flatMap((a) => a.tags ?? []))).sort(),
     []
   );
 
@@ -29,9 +22,6 @@ const Blog = () => {
     let list = blogArticles;
     if (selectedCategory) {
       list = list.filter((a) => a.category === selectedCategory);
-    }
-    if (selectedTag) {
-      list = list.filter((a) => a.tags?.includes(selectedTag));
     }
     if (search.trim()) {
       const q = search.toLowerCase();
@@ -44,16 +34,14 @@ const Blog = () => {
       );
     }
     return list;
-  }, [search, selectedCategory, selectedTag]);
+  }, [search, selectedCategory]);
 
   const clearFilters = () => {
     setSearch("");
     setSelectedCategory(null);
-    setSelectedTag(null);
-    setShowAllTags(false);
   };
 
-  const hasFilters = search || selectedCategory || selectedTag;
+  const hasFilters = search || selectedCategory;
 
   return (
     <div className="min-h-screen overflow-x-hidden">
@@ -131,37 +119,6 @@ const Blog = () => {
             </div>
           </div>
 
-          {/* Tags */}
-          <div className="max-w-5xl mx-auto mb-8">
-            <div className="flex flex-wrap gap-1.5 justify-center">
-              {(showAllTags ? allTags : allTags.slice(0, 12)).map((tag) => (
-                <button
-                  key={tag}
-                  onClick={() =>
-                    setSelectedTag(selectedTag === tag ? null : tag)
-                  }
-                  className={`inline-flex items-center gap-1 px-2 py-1 rounded-md text-[10px] md:text-xs font-medium transition-all ${
-                    selectedTag === tag
-                      ? "bg-primary/15 text-primary border border-primary/30"
-                      : "bg-muted/30 text-muted-foreground hover:bg-muted/50 hover:text-foreground border border-transparent"
-                  }`}
-                >
-                  <Tag className="w-2.5 h-2.5" />
-                  {tag}
-                </button>
-              ))}
-            </div>
-            {allTags.length > 12 && (
-              <div className="text-center mt-2">
-                <button
-                  onClick={() => setShowAllTags(!showAllTags)}
-                  className="text-xs text-primary hover:text-primary/80 font-semibold transition-colors"
-                >
-                  {showAllTags ? "Ver menos tags ▲" : `Ver todas as tags (${allTags.length}) ▼`}
-                </button>
-              </div>
-            )}
-          </div>
 
           {/* Active filters indicator */}
           {hasFilters && (
