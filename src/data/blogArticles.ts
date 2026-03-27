@@ -26,7 +26,7 @@ import salarioMaternidadeImg from "@/assets/blog/salario-maternidade-2026.jpg";
 import contribuinteIndividualImg from "@/assets/blog/contribuinte-individual-2026.jpg";
 import aposentadoriaProfessorImg from "@/assets/blog/aposentadoria-professor-2026.jpg";
 import cnisAnaliseImg from "@/assets/blog/cnis-analise-2026.jpg";
-import tendiniteLerImg from "@/assets/blog/tendinite-aposentadoria.jpg";
+import tendiniteLerImg from "@/assets/blog/tendinite-ler-aposentadoria-invalidez.jpg";
 import autismoPcdImg from "@/assets/blog/autismo-aposentadoria.jpg";
 import processoAuxAcidenteImg from "@/assets/blog/processo-auxilio-acidente-justica-2026.jpg";
 import salMatDesempregadaImg from "@/assets/blog/salario-maternidade-desempregada-2026.jpg";
