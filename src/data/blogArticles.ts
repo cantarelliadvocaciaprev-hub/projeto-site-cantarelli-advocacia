@@ -26,7 +26,7 @@ import salarioMaternidadeImg from "@/assets/blog/salario-maternidade-2026.jpg";
 import contribuinteIndividualImg from "@/assets/blog/contribuinte-individual-2026.jpg";
 import aposentadoriaProfessorImg from "@/assets/blog/aposentadoria-professor-2026.jpg";
 import cnisAnaliseImg from "@/assets/blog/cnis-analise-2026.jpg";
-import tendiniteLerImg from "@/assets/blog/tendinite-aposentadoria.jpg";
+import tendiniteLerImg from "@/assets/blog/tendinite-ler-aposentadoria-invalidez.jpg";
 import autismoPcdImg from "@/assets/blog/autismo-aposentadoria.jpg";
 import processoAuxAcidenteImg from "@/assets/blog/processo-auxilio-acidente-justica-2026.jpg";
 import salMatDesempregadaImg from "@/assets/blog/salario-maternidade-desempregada-2026.jpg";
@@ -1663,7 +1663,7 @@ export const blogArticles: BlogArticle[] = [
       "O valor para empregadas CLT corresponde à remuneração integral",
     ],
     lastUpdated: "Março 2026",
-    image: contribuinteIndividualImg,
+    image: salarioMaternidadeImg,
     imageAlt: "Mãe segurando bebê recém-nascido representando salário-maternidade e direitos previdenciários",
     author: "Thiago Cantarelli",
     content: [
@@ -1758,7 +1758,7 @@ export const blogArticles: BlogArticle[] = [
       "É possível complementar contribuições passadas para melhorar o valor do benefício",
     ],
     lastUpdated: "Março 2026",
-    image: salarioMaternidadeImg,
+    image: contribuinteIndividualImg,
     imageAlt: "Idoso recebendo pagamento de benefício previdenciário em agência bancária",
     author: "Thiago Cantarelli",
     content: [
