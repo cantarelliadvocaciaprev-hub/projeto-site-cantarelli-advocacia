@@ -1663,7 +1663,7 @@ export const blogArticles: BlogArticle[] = [
       "O valor para empregadas CLT corresponde à remuneração integral",
     ],
     lastUpdated: "Março 2026",
-    image: contribuinteIndividualImg,
+    image: salarioMaternidadeImg,
     imageAlt: "Mãe segurando bebê recém-nascido representando salário-maternidade e direitos previdenciários",
     author: "Thiago Cantarelli",
     content: [
@@ -1758,7 +1758,7 @@ export const blogArticles: BlogArticle[] = [
       "É possível complementar contribuições passadas para melhorar o valor do benefício",
     ],
     lastUpdated: "Março 2026",
-    image: salarioMaternidadeImg,
+    image: contribuinteIndividualImg,
     imageAlt: "Idoso recebendo pagamento de benefício previdenciário em agência bancária",
     author: "Thiago Cantarelli",
     content: [
