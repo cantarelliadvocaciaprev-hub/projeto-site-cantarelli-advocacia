@@ -92,6 +92,181 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "licenca-paternidade-lei-15371-2026",
+    title: "Licença-Paternidade Ampliada: O Que Muda com a Lei 15.371/2026",
+    excerpt:
+      "A nova lei amplia gradualmente a licença-paternidade para até 20 dias, cria o salário-paternidade e garante estabilidade no emprego. Entenda todos os seus direitos.",
+    category: "Direitos Trabalhistas",
+    tags: ["Licença-Paternidade", "Salário-Paternidade", "Lei 15.371", "INSS", "CLT", "2026"],
+    readTime: "9 min",
+    keyTakeaways: [
+      "A licença-paternidade será ampliada gradualmente: 10 dias em 2027, 15 em 2028 e 20 dias a partir de 2029",
+      "Foi criado o salário-paternidade, custeado pela Previdência Social, nos mesmos moldes do salário-maternidade",
+      "O pai terá estabilidade no emprego durante a licença e até 1 mês após o retorno",
+      "Em adoção monoparental ou ausência materna, o pai terá direito a 120 dias de licença",
+      "Crianças com deficiência geram acréscimo de 1/3 no período da licença"
+    ],
+    image: licencaPaternidadeImg,
+    imageAlt:
+      "Pai segurando recém-nascido em momento de vínculo afetivo representando a nova licença-paternidade ampliada",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "No dia 31 de março de 2026, o presidente Lula sancionou a Lei nº 15.371, que promove uma reforma histórica na licença-paternidade no Brasil. Após quase 38 anos de espera — desde a Constituição de 1988 —, o direito do pai ao afastamento remunerado após o nascimento ou adoção de um filho foi finalmente regulamentado e ampliado de forma significativa."
+      },
+      {
+        type: "heading",
+        text: "O Que Era a Licença-Paternidade Antes da Nova Lei?"
+      },
+      {
+        type: "paragraph",
+        text: "Desde 1988, a Constituição Federal previu a licença-paternidade como direito social, mas não fixou sua duração definitiva. O Ato das Disposições Constitucionais Transitórias (ADCT) estabeleceu um prazo provisório de 5 dias, que permaneceu inalterado por quase quatro décadas. Empresas participantes do Programa Empresa Cidadã podiam estender para 20 dias, mas essa era uma adesão voluntária e limitada."
+      },
+      {
+        type: "heading",
+        text: "Cronograma de Ampliação da Licença-Paternidade"
+      },
+      {
+        type: "paragraph",
+        text: "A Lei 15.371/2026 estabelece um aumento gradual do período de afastamento, que será implementado da seguinte forma:"
+      },
+      {
+        type: "list",
+        items: [
+          "Até 31 de dezembro de 2026: mantém-se o prazo atual de 5 dias",
+          "A partir de 1º de janeiro de 2027: 10 dias de licença",
+          "A partir de 1º de janeiro de 2028: 15 dias de licença",
+          "A partir de 1º de janeiro de 2029: 20 dias de licença (condicionado a metas fiscais)"
+        ]
+      },
+      {
+        type: "highlight",
+        text: "Para crianças com deficiência, a lei prevê um acréscimo de 1/3 ao período total da licença, ampliando ainda mais o tempo de cuidado paterno."
+      },
+      {
+        type: "heading",
+        text: "Salário-Paternidade: Nova Prestação Previdenciária"
+      },
+      {
+        type: "paragraph",
+        text: "Uma das maiores inovações da lei é a criação do salário-paternidade, que passa a funcionar nos mesmos moldes do salário-maternidade. A partir de 2027, o pagamento dos dias de afastamento deixa de ser um custo exclusivo do empregador e passa a ser responsabilidade da Previdência Social."
+      },
+      {
+        type: "paragraph",
+        text: "Na prática, o empregador continuará pagando o salário do trabalhador durante a licença, mas será reembolsado pelo governo federal por meio de compensações tributárias. Microempresas e empresas de pequeno porte terão prioridade no reembolso."
+      },
+      {
+        type: "heading",
+        text: "Estabilidade no Emprego e Proteção Contra Demissão"
+      },
+      {
+        type: "paragraph",
+        text: "A nova lei garante proteção robusta ao trabalhador que se torna pai:"
+      },
+      {
+        type: "list",
+        items: [
+          "Estabilidade no emprego: o pai não pode ser demitido sem justa causa desde o início da licença até 1 mês após o término",
+          "Indenização em dobro: empresas que demitirem o funcionário após a comunicação da data provável do parto ou adoção, para evitar que ele usufrua do direito, ficam sujeitas a pagar indenização dobrada",
+          "Suspensão do benefício: a licença pode ser suspensa ou cessada em casos de violência doméstica ou abandono material contra a criança"
+        ]
+      },
+      {
+        type: "heading",
+        text: "Direitos Especiais na Adoção"
+      },
+      {
+        type: "paragraph",
+        text: "A lei trouxe avanços significativos para pais adotantes. Em casos de adoção monoparental (quando há apenas o pai, sem mãe registrada no documento de identificação) ou guarda judicial para fins de adoção, o trabalhador terá direito à licença e ao salário-paternidade com as mesmas regras e duração da licença-maternidade: 120 dias."
+      },
+      {
+        type: "highlight",
+        text: "Essa é uma conquista fundamental para famílias monoparentais masculinas e casais homoafetivos, garantindo igualdade no tratamento dos vínculos parentais."
+      },
+      {
+        type: "heading",
+        text: "Obrigações do Trabalhador"
+      },
+      {
+        type: "paragraph",
+        text: "Para usufruir da licença-paternidade ampliada, o trabalhador também precisa cumprir alguns requisitos:"
+      },
+      {
+        type: "list",
+        items: [
+          "Comunicar o empregador com antecedência mínima de 30 dias sobre a data provável do parto ou da adoção",
+          "Não exercer qualquer atividade remunerada durante o período de licença, dedicando-se ao cuidado e convivência com a criança",
+          "O trabalhador pode optar por emendar a licença com as férias, desde que comunique previamente ao empregador"
+        ]
+      },
+      {
+        type: "heading",
+        text: "Quem Tem Direito ao Salário-Paternidade?"
+      },
+      {
+        type: "paragraph",
+        text: "O benefício abrange diversas categorias de segurados da Previdência Social:"
+      },
+      {
+        type: "list",
+        items: [
+          "Empregados com carteira assinada (CLT)",
+          "Trabalhadores avulsos",
+          "Contribuintes individuais (autônomos)",
+          "Segurados especiais (trabalhadores rurais)",
+          "Segurados facultativos"
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "Para empregados e trabalhadores avulsos, o valor do salário-paternidade será igual à remuneração integral, proporcional à duração do benefício. Para os demais segurados, o cálculo segue as regras gerais de benefícios do RGPS."
+      },
+      {
+        type: "heading",
+        text: "Impacto Previdenciário e Financeiro"
+      },
+      {
+        type: "paragraph",
+        text: "A implementação gradual da lei considerou o impacto fiscal e econômico. O avanço para 20 dias em 2029 está condicionado ao cumprimento de metas fiscais. A criação do salário-paternidade como prestação previdenciária altera a Lei 8.213/91 (Planos de Benefícios) e a Lei 8.212/91 (Lei Orgânica da Seguridade Social), consolidando o benefício dentro do arcabouço da Previdência Social."
+      },
+      {
+        type: "heading",
+        text: "Como a Cantarelli Advocacia Pode Ajudar?"
+      },
+      {
+        type: "paragraph",
+        text: "A nova lei traz direitos importantes, mas também pode gerar dúvidas sobre a aplicação prática — especialmente em situações de negativa do empregador, demissão durante o período de estabilidade ou dificuldades na concessão do salário-paternidade pelo INSS. Se você está enfrentando qualquer uma dessas situações, a Cantarelli Advocacia pode avaliar seu caso e garantir que seus direitos sejam plenamente respeitados."
+      }
+    ],
+    faq: [
+      {
+        question: "Quando a licença-paternidade de 20 dias começa a valer?",
+        answer: "A ampliação é gradual: 10 dias a partir de janeiro de 2027, 15 dias em 2028 e 20 dias a partir de 2029, condicionado ao cumprimento de metas fiscais."
+      },
+      {
+        question: "O que é o salário-paternidade?",
+        answer: "É um novo benefício previdenciário criado pela Lei 15.371/2026. Funciona como o salário-maternidade: a empresa paga o trabalhador e é reembolsada pela Previdência Social."
+      },
+      {
+        question: "Posso ser demitido durante a licença-paternidade?",
+        answer: "Não. A nova lei garante estabilidade no emprego desde o início da licença até 1 mês após o término. A demissão nesse período gera direito a indenização em dobro."
+      },
+      {
+        question: "Pai adotante tem direito à licença?",
+        answer: "Sim. Em caso de adoção monoparental ou quando não há mãe no documento de identificação, o pai tem direito a 120 dias de licença, nos mesmos moldes da licença-maternidade."
+      },
+      {
+        question: "Autônomos e MEIs têm direito ao salário-paternidade?",
+        answer: "Sim. Contribuintes individuais, segurados especiais e facultativos também têm direito ao salário-paternidade, desde que cumpram os requisitos de carência da Previdência Social."
+      },
+      {
+        question: "A licença-paternidade vale para crianças com deficiência?",
+        answer: "Sim, e com um benefício adicional: a lei prevê acréscimo de 1/3 no período total da licença quando a criança tem deficiência."
+      }
+    ]
+  },
+  {
     slug: "regras-transicao-aposentadoria-marco-2026",
     title: "Regras de Transição da Aposentadoria: O Que Muda em Março de 2026",
     excerpt:
