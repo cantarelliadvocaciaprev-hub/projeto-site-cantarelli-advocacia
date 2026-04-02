@@ -59,6 +59,7 @@ import doencaOcupacionalAcidenteImg from "@/assets/blog/doenca-ocupacional-acide
 import pensaoUniaoEstavelImg from "@/assets/blog/pensao-morte-uniao-estavel-2026.jpg";
 import autismoCuratelaImg from "@/assets/blog/autismo-curatela-previdencia-2026.jpg";
 import autismoBpcAdultoImg from "@/assets/blog/autismo-bpc-adulto-2026.jpg";
+import licencaPaternidadeImg from "@/assets/blog/licenca-paternidade-lei-15371-2026.jpg";
 
 
 export interface BlogArticleContent {
