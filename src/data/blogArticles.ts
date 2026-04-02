@@ -96,7 +96,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Licença-Paternidade Ampliada: O Que Muda com a Lei 15.371/2026",
     excerpt:
       "A nova lei amplia gradualmente a licença-paternidade para até 20 dias, cria o salário-paternidade e garante estabilidade no emprego. Entenda todos os seus direitos.",
-    category: "Direitos Trabalhistas",
+    category: "Benefícios",
     tags: ["Licença-Paternidade", "Salário-Paternidade", "Lei 15.371", "INSS", "CLT", "2026"],
     readTime: "9 min",
     keyTakeaways: [
