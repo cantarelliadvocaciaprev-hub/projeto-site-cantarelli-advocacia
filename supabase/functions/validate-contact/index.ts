@@ -13,6 +13,7 @@ const officialContacts: Record<string, { name: string; role: string }> = {
   "81986113970": { name: "Equipe Comercial", role: "Atendimento Comercial" },
   "81987718606": { name: "Setor Financeiro", role: "Atendimento Financeiro" },
   "81983421727": { name: "WhatsApp Oficial", role: "Atendimento WhatsApp" },
+  "81983925828": { name: "Equipe Cantarelli", role: "Atendimento" },
   "81986348775": { name: "Setor Administrativo", role: "Atendimento Administrativo" },
   "81997264914": { name: "Dr. Thiago Cantarelli", role: "Advogado" },
 };
