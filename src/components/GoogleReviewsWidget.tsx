@@ -3,7 +3,7 @@ import { useEffect } from "react";
 // 🔧 Cole aqui o ID do seu widget Elfsight (parte após "elfsight-app-")
 // Exemplo: se o código do Elfsight for class="elfsight-app-abc123-def456",
 // use: const ELFSIGHT_WIDGET_ID = "abc123-def456";
-const ELFSIGHT_WIDGET_ID = "PASTE_YOUR_ELFSIGHT_ID_HERE";
+const ELFSIGHT_WIDGET_ID = "199ea5a9a1b74b98b1d0e033f25a7d98";
 
 const GoogleReviewsWidget = () => {
   useEffect(() => {
