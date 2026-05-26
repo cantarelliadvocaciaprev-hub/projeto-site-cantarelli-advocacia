@@ -14,8 +14,7 @@ const GoogleReviewsWidget = () => {
     document.body.appendChild(script);
   }, []);
 
-  const isConfigured =
-    ELFSIGHT_WIDGET_ID && ELFSIGHT_WIDGET_ID !== "PASTE_YOUR_ELFSIGHT_ID_HERE";
+  const isConfigured = Boolean(ELFSIGHT_WIDGET_ID);
 
   return (
     <div className="max-w-5xl mx-auto mt-12">
