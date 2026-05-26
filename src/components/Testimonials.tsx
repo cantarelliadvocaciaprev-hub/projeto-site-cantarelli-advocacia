@@ -1,5 +1,6 @@
 import { Star, Quote, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import { Button } from "@/components/ui/button";
 
 const Testimonials = () => {
@@ -80,6 +81,10 @@ const Testimonials = () => {
             </Card>
           ))}
         </div>
+
+        <GoogleReviewsWidget />
+
+
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
           <a
