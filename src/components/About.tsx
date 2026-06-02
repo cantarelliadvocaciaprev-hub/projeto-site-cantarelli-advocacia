@@ -58,6 +58,15 @@ const About = () => {
   const centerIndex = useCarouselCenter(carouselApi);
   const stickySentinelRef = useRef<HTMLDivElement>(null);
   const [isStuck, setIsStuck] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setReducedMotion(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   useEffect(() => {
     const sentinel = stickySentinelRef.current;
@@ -92,7 +101,7 @@ const About = () => {
             <div className="lg:sticky lg:top-24">
               {/* Sentinela para detectar o estado sticky */}
               <div ref={stickySentinelRef} className="absolute h-px w-px" aria-hidden="true" />
-              <div className={`relative transition-all duration-500 ease-out ${isStuck ? 'lg:scale-[0.97] lg:-translate-y-1' : 'lg:scale-100 lg:translate-y-0'}`}>
+              <div className={`relative ${reducedMotion ? '' : 'transition-all duration-500 ease-out'} ${isStuck && !reducedMotion ? 'lg:scale-[0.97] lg:-translate-y-1' : 'lg:scale-100 lg:translate-y-0'}`}>
                 {/* Moldura moderna e minimalista */}
                 <div className="absolute -top-4 -left-4 w-2/3 h-2/3 border-t-2 border-l-2 border-primary/60 rounded-tl-lg" aria-hidden="true" />
                 <div className="absolute -bottom-4 -right-4 w-2/3 h-2/3 border-b-2 border-r-2 border-primary/60 rounded-br-lg" aria-hidden="true" />
@@ -101,7 +110,7 @@ const About = () => {
                   srcSet={featuredImage}
                   sizes="(min-width: 1024px) 45vw, 100vw"
                   alt="Sócios da Cantarelli Advocacia - referência em Direito Previdenciário" 
-                  className={`relative w-full aspect-[3/4] rounded-lg transition-shadow duration-500 ease-out ${isStuck ? 'lg:shadow-2xl' : 'shadow-lg'}`}
+                  className={`relative w-full aspect-[3/4] rounded-lg ${reducedMotion ? '' : 'transition-shadow duration-500 ease-out'} ${isStuck ? 'lg:shadow-2xl' : 'shadow-lg'}`}
                   style={{ objectFit: 'cover' }}
                 />
               </div>
