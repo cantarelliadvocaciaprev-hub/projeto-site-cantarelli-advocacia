@@ -24,6 +24,16 @@ import gallery14 from "@/assets/gallery/IMG_3461.jpg";
 import gallery15 from "@/assets/gallery/IMG_3632.jpg";
 import gallery16 from "@/assets/gallery/IMG_3635.jpg";
 import gallery17 from "@/assets/gallery/IMG_3782.jpg";
+import gallery18 from "@/assets/gallery/IMG_3426.jpg";
+import gallery19 from "@/assets/gallery/IMG_3332.jpg";
+import gallery20 from "@/assets/gallery/IMG_3273.jpg";
+import gallery21 from "@/assets/gallery/IMG_3212.jpg";
+import gallery22 from "@/assets/gallery/IMG_3074.jpg";
+import gallery23 from "@/assets/gallery/IMG_3035.jpg";
+import gallery24 from "@/assets/gallery/IMG_3007.jpg";
+import gallery25 from "@/assets/gallery/IMG_2938.jpg";
+import gallery26 from "@/assets/gallery/IMG_2888.jpg";
+import gallery27 from "@/assets/gallery/IMG_2786.jpg";
 
 // Imagem em destaque da seção "Quem Somos"
 import featuredImage from "@/assets/gallery/IMG_3739.jpg";
@@ -43,7 +53,7 @@ const About = () => {
   } = useScrollAnimation(0.1);
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const centerIndex = useCarouselCenter(carouselApi);
-  const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15, gallery16, gallery17];
+  const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15, gallery16, gallery17, gallery18, gallery19, gallery20, gallery21, gallery22, gallery23, gallery24, gallery25, gallery26, gallery27];
   const sectors = ["Marketing", "Comercial", "Recepção", "Atendimento", "Inicial", "Gestão", "Administração", "Controladoria", "Prazos", "Suporte Digital", "Financeiro"];
   return <section id="about" className="py-20 bg-card">
       <div className="container mx-auto px-4">
