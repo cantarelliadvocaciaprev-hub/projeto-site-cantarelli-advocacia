@@ -102,14 +102,13 @@ const Contact = () => {
                     WhatsApp: (81) 98392-5828<br />
                     Financeiro: (81) 98771-8606
                   </p>
-                  <button
+                  <Button
+                    size="sm"
                     onClick={() => window.open("https://wa.me/5581983421727?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.", "_blank")}
-                    className="inline-block mt-2"
+                    className="mt-2 bg-primary hover:bg-primary/90 text-primary-foreground"
                   >
-                    <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                      Chamar no WhatsApp
-                    </Button>
-                  </button>
+                    Chamar no WhatsApp
+                  </Button>
                 </div>
               </div>
 
