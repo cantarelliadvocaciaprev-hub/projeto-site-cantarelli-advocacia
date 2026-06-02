@@ -17,6 +17,13 @@ import gallery7 from "@/assets/gallery/IMG_1562.jpg";
 import gallery8 from "@/assets/gallery/IMG_1789.jpg";
 import gallery9 from "@/assets/gallery/IMG_1889.jpg";
 import gallery10 from "@/assets/gallery/IMG_2328.jpg";
+import gallery11 from "@/assets/gallery/IMG_2412.jpg";
+import gallery12 from "@/assets/gallery/IMG_2449.jpg";
+import gallery13 from "@/assets/gallery/IMG_3446.jpg";
+import gallery14 from "@/assets/gallery/IMG_3461.jpg";
+import gallery15 from "@/assets/gallery/IMG_3632.jpg";
+import gallery16 from "@/assets/gallery/IMG_3635.jpg";
+import gallery17 from "@/assets/gallery/IMG_3782.jpg";
 
 // Imagem em destaque da seção "Quem Somos"
 // TODO: substituir por IMG_3739.jpg quando o arquivo for enviado
@@ -37,7 +44,7 @@ const About = () => {
   } = useScrollAnimation(0.1);
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const centerIndex = useCarouselCenter(carouselApi);
-  const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10];
+  const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15, gallery16, gallery17];
   const sectors = ["Marketing", "Comercial", "Recepção", "Atendimento", "Inicial", "Gestão", "Administração", "Controladoria", "Prazos", "Suporte Digital", "Financeiro"];
   return <section id="about" className="py-20 bg-card">
       <div className="container mx-auto px-4">
