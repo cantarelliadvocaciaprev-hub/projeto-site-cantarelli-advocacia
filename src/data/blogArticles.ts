@@ -93,6 +93,122 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "lei-prazo-30-dias-inss-pagar-salario-maternidade-2026",
+    title: "Lei Estabelece Limite de 30 Dias para o INSS Pagar o Salário-Maternidade",
+    excerpt:
+      "Nova regra fixa prazo máximo de 30 dias para o INSS analisar e pagar o salário-maternidade. Entenda o que mudou, quem tem direito e o que fazer se o prazo não for cumprido.",
+    category: "Benefícios",
+    tags: ["Salário-Maternidade", "INSS", "Prazo", "Benefícios", "2026"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "O INSS passa a ter prazo máximo de 30 dias para analisar e efetuar o pagamento do salário-maternidade",
+      "O prazo conta a partir da entrega de toda a documentação exigida no requerimento",
+      "O descumprimento do prazo pode autorizar medidas administrativas e judiciais para garantir o pagamento",
+      "O salário-maternidade é devido a empregadas, autônomas, seguradas especiais e desempregadas em período de graça",
+      "Em caso de atraso ou negativa indevida, a orientação jurídica ajuda a assegurar o recebimento correto",
+    ],
+    lastUpdated: "Junho 2026",
+    image: salMatPrazo30Img,
+    imageAlt:
+      "Mãe segurando recém-nascido ao lado de documentos do INSS e calendário, representando o prazo para pagamento do salário-maternidade",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "O salário-maternidade é um dos benefícios mais importantes da Previdência Social, garantindo renda à segurada durante o afastamento pelo nascimento, adoção ou guarda judicial de uma criança. No entanto, durante muito tempo, as demoras na análise dos pedidos deixaram muitas mães sem renda justamente no período em que mais precisavam. Para corrigir esse problema, uma nova regra estabelece um limite de 30 dias para o INSS analisar e pagar o benefício.",
+      },
+      {
+        type: "heading",
+        text: "O Que Diz a Nova Regra",
+      },
+      {
+        type: "paragraph",
+        text: "A medida fixa um prazo máximo de 30 dias para que o INSS conclua a análise do requerimento e realize o pagamento do salário-maternidade. O objetivo é dar previsibilidade e segurança às seguradas, evitando esperas prolongadas que comprometem o orçamento familiar em um momento delicado.",
+      },
+      {
+        type: "highlight",
+        text: "O prazo de 30 dias começa a contar a partir do momento em que a segurada apresenta toda a documentação necessária ao requerimento. Pedidos com pendências podem ter o prazo reiniciado após a regularização.",
+      },
+      {
+        type: "heading",
+        text: "Quem Tem Direito ao Salário-Maternidade",
+      },
+      {
+        type: "paragraph",
+        text: "O benefício alcança diferentes categorias de seguradas da Previdência Social, e não apenas as trabalhadoras com carteira assinada:",
+      },
+      {
+        type: "list",
+        items: [
+          "Empregadas com carteira assinada (CLT)",
+          "Trabalhadoras autônomas e contribuintes individuais",
+          "Seguradas especiais (trabalhadoras rurais)",
+          "Empregadas domésticas",
+          "Desempregadas que ainda estejam no período de graça",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Cada categoria possui requisitos específicos de carência e forma de cálculo. Por isso, antes de fazer o pedido, é importante verificar se todas as condições estão cumpridas para evitar atrasos ou negativas.",
+      },
+      {
+        type: "heading",
+        text: "Por Que o Prazo é Importante",
+      },
+      {
+        type: "paragraph",
+        text: "O afastamento por maternidade é um período de despesas maiores e, muitas vezes, de redução temporária da renda. A definição de um prazo claro busca garantir que o pagamento ocorra de forma tempestiva, protegendo a mãe e o recém-nascido durante o início da vida em família.",
+      },
+      {
+        type: "heading",
+        text: "O Que Fazer se o INSS Não Cumprir o Prazo",
+      },
+      {
+        type: "paragraph",
+        text: "Caso o prazo de 30 dias não seja cumprido, ou se houver negativa que pareça indevida, a segurada pode buscar orientação para adotar medidas administrativas e, quando necessário, judiciais. Esses caminhos podem incluir o registro de reclamação nos canais do próprio INSS e a busca por amparo jurídico para assegurar o pagamento.",
+      },
+      {
+        type: "highlight",
+        text: "Reunir e organizar a documentação correta desde o início é a melhor forma de evitar atrasos. Em situações de demora ou recusa, o acompanhamento de um advogado pode ser decisivo para garantir o benefício.",
+      },
+      {
+        type: "heading",
+        text: "Como a Cantarelli Advocacia Pode Ajudar",
+      },
+      {
+        type: "paragraph",
+        text: "Se você teve o salário-maternidade negado, está enfrentando atrasos no pagamento ou tem dúvidas sobre o direito ao benefício, a Cantarelli Advocacia pode analisar o seu caso, identificar a melhor estratégia e atuar para que seus direitos sejam respeitados dentro dos prazos previstos.",
+      },
+    ],
+    faq: [
+      {
+        question: "Qual é o prazo para o INSS pagar o salário-maternidade?",
+        answer:
+          "A nova regra estabelece um prazo máximo de 30 dias para que o INSS analise o requerimento e efetue o pagamento, contados a partir da entrega de toda a documentação exigida.",
+      },
+      {
+        question: "A partir de quando começa a contar o prazo de 30 dias?",
+        answer:
+          "O prazo começa a contar quando a segurada apresenta o requerimento com toda a documentação necessária. Se houver pendências, o prazo pode ser reiniciado após a regularização.",
+      },
+      {
+        question: "Quem tem direito ao salário-maternidade?",
+        answer:
+          "Têm direito empregadas CLT, trabalhadoras autônomas, contribuintes individuais, seguradas especiais (rurais), empregadas domésticas e desempregadas que ainda estejam no período de graça, desde que cumpridos os requisitos de carência.",
+      },
+      {
+        question: "O que fazer se o INSS não pagar dentro do prazo?",
+        answer:
+          "Em caso de atraso ou negativa indevida, é possível registrar reclamação nos canais do INSS e buscar orientação jurídica para adotar medidas administrativas e, se necessário, judiciais para garantir o pagamento.",
+      },
+      {
+        question: "Desempregada tem direito ao salário-maternidade?",
+        answer:
+          "Sim. A mulher que perdeu o emprego pode ter direito ao salário-maternidade se ainda estiver dentro do período de graça, em que mantém a qualidade de segurada perante a Previdência Social.",
+      },
+    ],
+  },
+  {
     slug: "licenca-paternidade-lei-15371-2026",
     title: "Licença-Paternidade Ampliada: O Que Muda com a Lei 15.371/2026",
     excerpt:
