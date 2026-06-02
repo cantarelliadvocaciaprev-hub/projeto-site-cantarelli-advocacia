@@ -32,6 +32,13 @@ export const useCountUp = (end: number, duration: number = 2000, start: number =
   useEffect(() => {
     if (!isVisible) return;
 
+    // Respeita prefers-reduced-motion: mostra o valor final sem animar a contagem
+    if (prefersReducedMotion()) {
+      setCount(end);
+      return;
+    }
+
+
     const startTime = Date.now();
     const timer = setInterval(() => {
       const now = Date.now();
