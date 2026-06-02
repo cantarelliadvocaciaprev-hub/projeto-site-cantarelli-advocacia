@@ -3,7 +3,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useCarouselCenter } from "@/hooks/useCarouselCenter";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import ImageWithSkeleton from "@/components/ImageWithSkeleton";
 
 // Importar imagens da galeria (WebP responsivo: múltiplas larguras geradas no build)
@@ -56,6 +56,20 @@ const About = () => {
   } = useScrollAnimation(0.1);
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const centerIndex = useCarouselCenter(carouselApi);
+  const stickySentinelRef = useRef<HTMLDivElement>(null);
+  const [isStuck, setIsStuck] = useState(false);
+
+  useEffect(() => {
+    const sentinel = stickySentinelRef.current;
+    if (!sentinel) return;
+    // Detecta quando a imagem passa a ficar "sticky" (sentinela sai do topo abaixo do offset top-24 = 96px)
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsStuck(!entry.isIntersecting),
+      { rootMargin: "-96px 0px 0px 0px", threshold: 0 }
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, []);
   const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15, gallery16, gallery17, gallery18, gallery19, gallery20, gallery21, gallery22, gallery23, gallery24, gallery25, gallery26, gallery27];
   const sectors = ["Marketing", "Comercial", "Recepção", "Atendimento", "Inicial", "Gestão", "Administração", "Controladoria", "Prazos", "Suporte Digital", "Financeiro"];
   return <section id="about" className="py-20 bg-card">
@@ -76,7 +90,9 @@ const About = () => {
           {/* Imagem em destaque + Texto Institucional */}
           <div ref={textRef} className={`grid lg:grid-cols-2 gap-10 items-start mb-16 transition-all duration-700 ${textVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
             <div className="lg:sticky lg:top-24">
-              <div className="relative">
+              {/* Sentinela para detectar o estado sticky */}
+              <div ref={stickySentinelRef} className="absolute h-px w-px" aria-hidden="true" />
+              <div className={`relative transition-all duration-500 ease-out ${isStuck ? 'lg:scale-[0.97] lg:-translate-y-1' : 'lg:scale-100 lg:translate-y-0'}`}>
                 {/* Moldura moderna e minimalista */}
                 <div className="absolute -top-4 -left-4 w-2/3 h-2/3 border-t-2 border-l-2 border-primary/60 rounded-tl-lg" aria-hidden="true" />
                 <div className="absolute -bottom-4 -right-4 w-2/3 h-2/3 border-b-2 border-r-2 border-primary/60 rounded-br-lg" aria-hidden="true" />
@@ -85,7 +101,7 @@ const About = () => {
                   srcSet={featuredImage}
                   sizes="(min-width: 1024px) 45vw, 100vw"
                   alt="Sócios da Cantarelli Advocacia - referência em Direito Previdenciário" 
-                  className="relative w-full aspect-[3/4] rounded-lg shadow-lg"
+                  className={`relative w-full aspect-[3/4] rounded-lg transition-shadow duration-500 ease-out ${isStuck ? 'lg:shadow-2xl' : 'shadow-lg'}`}
                   style={{ objectFit: 'cover' }}
                 />
               </div>
