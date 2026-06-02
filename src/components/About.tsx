@@ -3,7 +3,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useCarouselCenter } from "@/hooks/useCarouselCenter";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import ImageWithSkeleton from "@/components/ImageWithSkeleton";
 
 // Importar imagens da galeria (WebP responsivo: múltiplas larguras geradas no build)
