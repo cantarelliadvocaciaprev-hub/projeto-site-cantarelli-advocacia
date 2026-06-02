@@ -90,7 +90,9 @@ const About = () => {
           {/* Imagem em destaque + Texto Institucional */}
           <div ref={textRef} className={`grid lg:grid-cols-2 gap-10 items-start mb-16 transition-all duration-700 ${textVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
             <div className="lg:sticky lg:top-24">
-              <div className="relative">
+              {/* Sentinela para detectar o estado sticky */}
+              <div ref={stickySentinelRef} className="absolute h-px w-px" aria-hidden="true" />
+              <div className={`relative transition-all duration-500 ease-out ${isStuck ? 'lg:scale-[0.97] lg:-translate-y-1' : 'lg:scale-100 lg:translate-y-0'}`}>
                 {/* Moldura moderna e minimalista */}
                 <div className="absolute -top-4 -left-4 w-2/3 h-2/3 border-t-2 border-l-2 border-primary/60 rounded-tl-lg" aria-hidden="true" />
                 <div className="absolute -bottom-4 -right-4 w-2/3 h-2/3 border-b-2 border-r-2 border-primary/60 rounded-br-lg" aria-hidden="true" />
@@ -99,7 +101,7 @@ const About = () => {
                   srcSet={featuredImage}
                   sizes="(min-width: 1024px) 45vw, 100vw"
                   alt="Sócios da Cantarelli Advocacia - referência em Direito Previdenciário" 
-                  className="relative w-full aspect-[3/4] rounded-lg shadow-lg"
+                  className={`relative w-full aspect-[3/4] rounded-lg transition-shadow duration-500 ease-out ${isStuck ? 'lg:shadow-2xl' : 'shadow-lg'}`}
                   style={{ objectFit: 'cover' }}
                 />
               </div>
