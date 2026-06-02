@@ -110,7 +110,7 @@ const About = () => {
                   srcSet={featuredImage}
                   sizes="(min-width: 1024px) 45vw, 100vw"
                   alt="Sócios da Cantarelli Advocacia - referência em Direito Previdenciário" 
-                  className={`relative w-full aspect-[3/4] rounded-lg transition-shadow duration-500 ease-out ${isStuck ? 'lg:shadow-2xl' : 'shadow-lg'}`}
+                  className={`relative w-full aspect-[3/4] rounded-lg ${reducedMotion ? '' : 'transition-shadow duration-500 ease-out'} ${isStuck ? 'lg:shadow-2xl' : 'shadow-lg'}`}
                   style={{ objectFit: 'cover' }}
                 />
               </div>
