@@ -58,35 +58,7 @@ const About = () => {
             </p>
           </div>
 
-          {/* Galeria de Imagens */}
-          <div ref={galleryRef} className={`mb-16 transition-all duration-700 ${galleryVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
-            <Carousel setApi={setCarouselApi} className="w-full max-w-5xl mx-auto" opts={{
-            align: "center",
-            loop: true
-          }} plugins={[Autoplay({
-            delay: 3000,
-            stopOnInteraction: false,
-            stopOnMouseEnter: true
-          })]}>
-              <CarouselContent className="-ml-2 md:-ml-4">
-                {galleryImages.map((image, index) => {
-                const isCenterSlide = index === centerIndex;
-                return <CarouselItem key={index} className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                      <div className="p-1 overflow-hidden">
-                        <ImageWithSkeleton 
-                          src={image} 
-                          alt={`Cantarelli Advocacia - Escritório de Direito Previdenciário em Recife - Imagem ${index + 1}`} 
-                          className={`h-72 md:h-80 lg:h-96 bg-neutral-50 shadow-md transition-all duration-500 ease-in-out ${isCenterSlide ? 'carousel-center-item' : 'carousel-side-item'}`}
-                          style={{ objectFit: 'contain' }}
-                        />
-                      </div>
-                    </CarouselItem>;
-              })}
-              </CarouselContent>
-              <CarouselPrevious className="hidden md:flex" />
-              <CarouselNext className="hidden md:flex" />
-            </Carousel>
-          </div>
+
 
           {/* Imagem em destaque + Texto Institucional */}
           <div ref={textRef} className={`grid lg:grid-cols-2 gap-10 items-start mb-16 transition-all duration-700 ${textVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
