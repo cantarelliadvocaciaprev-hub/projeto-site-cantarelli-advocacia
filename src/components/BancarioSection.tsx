@@ -107,12 +107,6 @@ const BancarioSection = () => {
             O Nexo Concausal comprova a relação entre a doença e as metas abusivas do banco, 
             garantindo também estabilidade de 12 meses e continuidade dos depósitos de FGTS.
           </p>
-          <div className="flex items-center gap-2 mt-4 pt-3 border-t border-primary/20">
-            <Shield className="w-4 h-4 text-primary" />
-            <span className="text-xs text-muted-foreground font-body">
-              Revisado por <strong className="text-foreground">Dr. Thiago Cantarelli</strong> • Janeiro 2026
-            </span>
-          </div>
         </div>
 
         {/* Technical Keywords for SEO - Hidden but crawlable */}
