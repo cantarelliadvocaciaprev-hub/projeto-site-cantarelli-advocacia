@@ -180,7 +180,7 @@ const About = () => {
 
           {/* Galeria de Imagens */}
           <div ref={galleryRef} className={`mt-16 transition-all duration-700 ${galleryVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
-            <Carousel setApi={setCarouselApi} className="w-full max-w-5xl mx-auto" opts={{
+            <Carousel setApi={setCarouselApi} className="w-full max-w-5xl mx-auto px-10 md:px-12" opts={{
             align: "center",
             loop: true
           }} plugins={[Autoplay({
@@ -188,25 +188,26 @@ const About = () => {
             stopOnInteraction: false,
             stopOnMouseEnter: true
           })]}>
-              <CarouselContent className="-ml-2 md:-ml-4">
+              <CarouselContent className="-ml-3 md:-ml-4">
                 {galleryImages.map((image, index) => {
                 const isCenterSlide = index === centerIndex;
-                return <CarouselItem key={index} className="pl-2 md:pl-4 basis-4/5 md:basis-1/2 lg:basis-1/3">
-                      <div className="p-1 overflow-hidden">
+                return <CarouselItem key={index} className="pl-3 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                      <div className="overflow-hidden rounded-lg">
                         <ImageWithSkeleton 
                           src={image} 
                           alt={`Cantarelli Advocacia - Escritório de Direito Previdenciário em Recife - Imagem ${index + 1}`} 
-                          className={`h-72 md:h-80 lg:h-96 bg-neutral-50 shadow-md transition-all duration-500 ease-in-out ${isCenterSlide ? 'carousel-center-item' : 'carousel-side-item'}`}
-                          style={{ objectFit: 'contain' }}
+                          className={`w-full aspect-[4/5] rounded-lg bg-neutral-100 shadow-md transition-all duration-500 ease-in-out ${isCenterSlide ? 'carousel-center-item' : 'carousel-side-item'}`}
+                          style={{ objectFit: 'cover' }}
                         />
                       </div>
                     </CarouselItem>;
               })}
               </CarouselContent>
-              <CarouselPrevious className="hidden md:flex" />
-              <CarouselNext className="hidden md:flex" />
+              <CarouselPrevious className="left-0 md:left-2" />
+              <CarouselNext className="right-0 md:right-2" />
             </Carousel>
           </div>
+
         </div>
       </div>
     </section>;
