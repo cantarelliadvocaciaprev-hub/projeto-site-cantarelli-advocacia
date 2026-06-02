@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import FAQPageSchema from "@/components/schemas/FAQPageSchema";
-import { Shield } from "lucide-react";
+
 
 interface FAQItem {
   question: string;
