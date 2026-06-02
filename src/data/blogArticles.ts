@@ -94,6 +94,138 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "motoristas-cobradores-onibus-aposentadoria-especial-stj-2026",
+    title: "Motoristas e Cobradores de Ônibus Têm Direito à Aposentadoria Especial, Decide STJ",
+    excerpt:
+      "O STJ reconheceu que motoristas e cobradores de ônibus podem ter direito à aposentadoria especial pela exposição habitual a ruído e agentes nocivos. Entenda a decisão e como comprovar esse direito.",
+    category: "Aposentadoria Especial",
+    tags: ["Aposentadoria Especial", "Motorista", "Cobrador", "STJ", "INSS", "2026"],
+    readTime: "9 min",
+    keyTakeaways: [
+      "O STJ reconheceu a possibilidade de aposentadoria especial para motoristas e cobradores de ônibus",
+      "A base do direito é a exposição habitual e permanente a agentes nocivos, como o ruído acima dos limites legais",
+      "A comprovação depende de documentos técnicos, como PPP e laudos (LTCAT), e da análise do caso concreto",
+      "A aposentadoria especial pode permitir aposentar-se com menos tempo de contribuição diante da atividade insalubre",
+      "Cada caso exige análise individual da documentação para verificar se os requisitos foram cumpridos",
+    ],
+    lastUpdated: "Junho 2026",
+    image: motoristaCobradorOnibusImg,
+    imageAlt:
+      "Motorista de ônibus urbano uniformizado ao volante em ambiente de trabalho, representando o direito à aposentadoria especial reconhecido pelo STJ",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "O transporte público urbano é movido pelo trabalho diário de motoristas e cobradores de ônibus, profissionais que enfrentam jornadas intensas, trânsito, vibração e, principalmente, exposição constante a ruído elevado. Recentemente, o Superior Tribunal de Justiça (STJ) reforçou o entendimento de que essas condições de trabalho podem assegurar o direito à aposentadoria especial, um benefício voltado a quem atua em atividades prejudiciais à saúde.",
+      },
+      {
+        type: "heading",
+        text: "O Que Decidiu o STJ",
+      },
+      {
+        type: "paragraph",
+        text: "A decisão do STJ caminha no sentido de reconhecer que motoristas e cobradores de ônibus, quando expostos de forma habitual e permanente a agentes nocivos, podem ter direito à aposentadoria especial. O ponto central não é apenas a profissão em si, mas a comprovação de que a atividade exigiu o contato contínuo com fatores prejudiciais à saúde, como o ruído acima dos limites tolerados pela legislação.",
+      },
+      {
+        type: "highlight",
+        text: "O reconhecimento do direito depende da análise do caso concreto e das provas técnicas que demonstrem a exposição a agentes nocivos durante o tempo trabalhado.",
+      },
+      {
+        type: "heading",
+        text: "O Que é a Aposentadoria Especial",
+      },
+      {
+        type: "paragraph",
+        text: "A aposentadoria especial é um benefício destinado a trabalhadores que exercem atividades em condições prejudiciais à saúde ou à integridade física. Por reconhecer o desgaste maior dessas funções, ela pode permitir a aposentadoria com um tempo de contribuição menor do que o exigido nas modalidades comuns, desde que cumpridos os requisitos legais.",
+      },
+      {
+        type: "heading",
+        text: "Por Que a Atividade de Motorista e Cobrador é Considerada",
+      },
+      {
+        type: "paragraph",
+        text: "No dia a dia, motoristas e cobradores convivem com diversos fatores que podem caracterizar a insalubridade da atividade:",
+      },
+      {
+        type: "list",
+        items: [
+          "Exposição contínua a ruído elevado do motor e do trânsito",
+          "Vibração de corpo inteiro durante longas jornadas ao volante",
+          "Estresse e desgaste físico decorrentes da rotina de trabalho",
+          "Contato com poluição e variações ambientais no ambiente urbano",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Dentre esses fatores, o ruído costuma ser o elemento mais relevante para o reconhecimento da aposentadoria especial, quando comprovado que ultrapassa os limites legais de tolerância.",
+      },
+      {
+        type: "heading",
+        text: "Como Comprovar o Direito",
+      },
+      {
+        type: "paragraph",
+        text: "A comprovação da atividade especial depende de documentação técnica que demonstre a exposição aos agentes nocivos. Os principais documentos costumam ser:",
+      },
+      {
+        type: "list",
+        items: [
+          "PPP (Perfil Profissiográfico Previdenciário), emitido pela empresa",
+          "LTCAT (Laudo Técnico das Condições Ambientais do Trabalho)",
+          "Registros e laudos que indiquem os níveis de ruído da função",
+          "CTPS e demais provas do vínculo e do tempo de trabalho",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "A análise correta da documentação é decisiva. Pequenas falhas ou omissões no PPP e nos laudos podem dificultar o reconhecimento do direito perante o INSS.",
+      },
+      {
+        type: "heading",
+        text: "O Que Fazer em Caso de Negativa do INSS",
+      },
+      {
+        type: "paragraph",
+        text: "Muitos pedidos de aposentadoria especial são negados na via administrativa por questões de documentação ou interpretação. Diante de uma negativa que pareça indevida, é possível buscar a revisão do pedido e, quando necessário, discutir o direito na esfera judicial, sempre com base na análise individual do caso e nas provas disponíveis.",
+      },
+      {
+        type: "heading",
+        text: "Como a Cantarelli Advocacia Pode Ajudar",
+      },
+      {
+        type: "paragraph",
+        text: "Se você é motorista ou cobrador de ônibus e tem dúvidas sobre o direito à aposentadoria especial, a Cantarelli Advocacia pode analisar a sua documentação, verificar a exposição a agentes nocivos e identificar a melhor estratégia para buscar o reconhecimento do seu direito de forma segura e fundamentada.",
+      },
+    ],
+    faq: [
+      {
+        question: "Motorista de ônibus tem direito à aposentadoria especial?",
+        answer:
+          "Pode ter, desde que comprove exposição habitual e permanente a agentes nocivos, como ruído acima dos limites legais. O STJ reforçou esse entendimento, mas o direito depende da análise do caso concreto e da documentação técnica.",
+      },
+      {
+        question: "E o cobrador de ônibus, também tem esse direito?",
+        answer:
+          "O cobrador também pode ter direito à aposentadoria especial quando demonstrar exposição a agentes nocivos durante o trabalho. Assim como no caso do motorista, é necessário comprovar essa exposição por meio de documentos técnicos.",
+      },
+      {
+        question: "Quais documentos comprovam a atividade especial?",
+        answer:
+          "Os principais documentos são o PPP (Perfil Profissiográfico Previdenciário) e o LTCAT (Laudo Técnico das Condições Ambientais do Trabalho), além de registros que indiquem os níveis de ruído e provas do vínculo e do tempo trabalhado.",
+      },
+      {
+        question: "O que é a aposentadoria especial?",
+        answer:
+          "É um benefício destinado a quem trabalha em condições prejudiciais à saúde. Por reconhecer o desgaste maior dessas atividades, pode permitir a aposentadoria com um tempo de contribuição menor, desde que cumpridos os requisitos legais.",
+      },
+      {
+        question: "O que fazer se o INSS negar a aposentadoria especial?",
+        answer:
+          "Em caso de negativa que pareça indevida, é possível revisar o pedido e, se necessário, discutir o direito na via judicial. A orientação jurídica ajuda a reunir as provas corretas e avaliar a melhor estratégia para o caso.",
+      },
+    ],
+  },
+  {
     slug: "lei-prazo-30-dias-inss-pagar-salario-maternidade-2026",
     title: "Lei Estabelece Limite de 30 Dias para o INSS Pagar o Salário-Maternidade",
     excerpt:
