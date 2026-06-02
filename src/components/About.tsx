@@ -81,7 +81,9 @@ const About = () => {
                 <div className="absolute -top-4 -left-4 w-2/3 h-2/3 border-t-2 border-l-2 border-primary/60 rounded-tl-lg" aria-hidden="true" />
                 <div className="absolute -bottom-4 -right-4 w-2/3 h-2/3 border-b-2 border-r-2 border-primary/60 rounded-br-lg" aria-hidden="true" />
                 <ImageWithSkeleton 
-                  src={featuredImage} 
+                  src={srcFromSrcset(featuredImage)} 
+                  srcSet={featuredImage}
+                  sizes="(min-width: 1024px) 45vw, 100vw"
                   alt="Sócios da Cantarelli Advocacia - referência em Direito Previdenciário" 
                   className="relative w-full aspect-[3/4] rounded-lg shadow-lg"
                   style={{ objectFit: 'cover' }}
@@ -207,7 +209,9 @@ const About = () => {
                 return <CarouselItem key={index} className="pl-3 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                       <div className="overflow-hidden rounded-lg">
                         <ImageWithSkeleton 
-                          src={image} 
+                          src={srcFromSrcset(image)} 
+                          srcSet={image}
+                          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                           alt={`Cantarelli Advocacia - Escritório de Direito Previdenciário em Recife - Imagem ${index + 1}`} 
                           className={`w-full aspect-[4/5] rounded-lg bg-neutral-100 shadow-md transition-all duration-500 ease-in-out ${isCenterSlide ? 'carousel-center-item' : 'carousel-side-item'}`}
                           style={{ objectFit: 'cover' }}
