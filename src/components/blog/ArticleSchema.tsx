@@ -48,12 +48,18 @@ const ArticleSchema = ({ article }: ArticleSchemaProps) => {
 
   const wordCount = articleBody.split(/\s+/).filter(Boolean).length;
 
+  // Google Rich Results requires absolute image URLs in JSON-LD.
+  const SITE_URL = "https://cantarelliadvocacia.com.br";
+  const absoluteImage = /^https?:\/\//.test(article.image)
+    ? article.image
+    : `${SITE_URL}${article.image.startsWith("/") ? "" : "/"}${article.image}`;
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.title,
     description: article.excerpt,
-    image: article.image,
+    image: absoluteImage,
     datePublished,
     dateModified,
     author: {
