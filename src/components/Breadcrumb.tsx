@@ -20,7 +20,7 @@ const Breadcrumb = ({ items, variant = "light" }: BreadcrumbProps) => {
         navigate("/");
         setTimeout(() => {
           const element = document.getElementById(href.replace("/#", ""));
-          element?.scrollIntoView({ behavior: "smooth" });
+          element?.scrollIntoView({ behavior: scrollBehavior() });
         }, 100);
       } else {
         navigate(href);

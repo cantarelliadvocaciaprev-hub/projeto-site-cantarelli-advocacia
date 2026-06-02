@@ -138,7 +138,7 @@ const NotFound = () => {
                         navigate("/");
                         setTimeout(() => {
                           const element = document.getElementById(link.path.replace("/#", ""));
-                          element?.scrollIntoView({ behavior: "smooth" });
+                          element?.scrollIntoView({ behavior: scrollBehavior() });
                         }, 100);
                       } else {
                         navigate(link.path);

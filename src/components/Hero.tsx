@@ -18,7 +18,7 @@ const Hero = () => {
   } = useCountUp(5869, 2000);
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth"
+      behavior: scrollBehavior()
     });
   };
   return <section id="home" className="relative min-h-screen flex items-center pt-20">
@@ -84,7 +84,7 @@ const Hero = () => {
                 Agende seu atendimento
               </Button>
               <Button onClick={() => document.getElementById("about")?.scrollIntoView({
-              behavior: "smooth"
+              behavior: scrollBehavior()
             })} variant="outline" size="lg" className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6">
                 Conheça nosso trabalho
               </Button>

@@ -27,7 +27,7 @@ const Planning = () => {
   ];
 
   const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("contact")?.scrollIntoView({ behavior: scrollBehavior() });
   };
 
   return (
