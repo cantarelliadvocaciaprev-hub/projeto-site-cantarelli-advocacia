@@ -7,25 +7,21 @@ import { useState } from "react";
 import ImageWithSkeleton from "@/components/ImageWithSkeleton";
 
 // Importar imagens da galeria
-import gallery1 from "@/assets/gallery/IMG_7269.jpg";
-import gallery2 from "@/assets/gallery/IMG_7271.jpg";
-import gallery3 from "@/assets/gallery/IMG_7426.jpg";
-import gallery4 from "@/assets/gallery/IMG_7821.jpg";
-import gallery5 from "@/assets/gallery/IMG_8660.jpg";
-import gallery6 from "@/assets/gallery/IMG_8771.jpg";
-import gallery7 from "@/assets/gallery/IMG_8698.jpg";
-import gallery8 from "@/assets/gallery/office-1.jpg";
-import gallery9 from "@/assets/gallery/office-2.jpg";
-import gallery10 from "@/assets/gallery/office-3.jpg";
-import gallery11 from "@/assets/gallery/IMG_7349.jpg";
-import gallery12 from "@/assets/gallery/IMG_8009.jpg";
-import gallery13 from "@/assets/gallery/IMG_8585.jpg";
-import gallery14 from "@/assets/gallery/IMG_8799.jpg";
-import gallery15 from "@/assets/gallery/IMG_8704.jpg";
-import gallery16 from "@/assets/gallery/IMG_8781.jpg";
-import gallery17 from "@/assets/gallery/IMG_8494.jpg";
-import thiagoCantarelli from "@/assets/team/thiago-cantarelli.jpg";
-import izabelaFarias from "@/assets/team/izabela-farias.jpg";
+import gallery1 from "@/assets/gallery/IMG_0711.jpg";
+import gallery2 from "@/assets/gallery/IMG_0882.jpg";
+import gallery3 from "@/assets/gallery/IMG_1115.jpg";
+import gallery4 from "@/assets/gallery/IMG_1216.jpg";
+import gallery5 from "@/assets/gallery/IMG_1279.jpg";
+import gallery6 from "@/assets/gallery/IMG_1298.jpg";
+import gallery7 from "@/assets/gallery/IMG_1562.jpg";
+import gallery8 from "@/assets/gallery/IMG_1789.jpg";
+import gallery9 from "@/assets/gallery/IMG_1889.jpg";
+import gallery10 from "@/assets/gallery/IMG_2328.jpg";
+
+// Imagem em destaque da seção "Quem Somos"
+// TODO: substituir por IMG_3739.jpg quando o arquivo for enviado
+import featuredImage from "@/assets/gallery/IMG_1216.jpg";
+
 const About = () => {
   const {
     isVisible: titleVisible,
@@ -39,13 +35,9 @@ const About = () => {
     isVisible: textVisible,
     elementRef: textRef
   } = useScrollAnimation(0.1);
-  const {
-    isVisible: biosVisible,
-    elementRef: biosRef
-  } = useScrollAnimation(0.1);
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
   const centerIndex = useCarouselCenter(carouselApi);
-  const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15, gallery16, gallery17];
+  const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10];
   const sectors = ["Marketing", "Comercial", "Recepção", "Atendimento", "Inicial", "Gestão", "Administração", "Controladoria", "Prazos", "Suporte Digital", "Financeiro"];
   return <section id="about" className="py-20 bg-card">
       <div className="container mx-auto px-4">
@@ -55,11 +47,13 @@ const About = () => {
               Quem Somos
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-            <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto">Há 17 anos, unindo experiência e sensibilidade em cada atendimento. Hoje, somos 21 colaboradores distribuídos em 11 setores especializados, trabalhando com dedicação e empatia para garantir resultados que refletem nosso maior valor: cuidar de pessoas e proteger histórias.</p>
+            <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto">
+              Há mais de 20 anos, transformando origens simples em liderança na advocacia previdenciária.
+            </p>
           </div>
 
           {/* Galeria de Imagens */}
-          <div ref={galleryRef} className={`mb-12 transition-all duration-700 ${galleryVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
+          <div ref={galleryRef} className={`mb-16 transition-all duration-700 ${galleryVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
             <Carousel setApi={setCarouselApi} className="w-full max-w-5xl mx-auto" opts={{
             align: "center",
             loop: true
@@ -88,85 +82,61 @@ const About = () => {
             </Carousel>
           </div>
 
-          {/* Texto Institucional */}
-          <div ref={textRef} className={`prose prose-lg max-w-none mb-16 text-foreground font-body transition-all duration-700 ${textVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
-            <p className="text-lg leading-relaxed mb-6">
-              Em abril de 2008, nascia a Cantarelli Advocacia, um pequeno escritório movido por um grande propósito: defender pessoas e transformar vidas por meio do Direito. O que começou de forma simples, guiado pela coragem e pela vontade de fazer a diferença, tornou-se uma história construída com empatia, ética e resultados que mudam destinos.
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              Fundado pelo Dr. Thiago Cantarelli, o escritório nasceu do desejo de garantir dignidade e amparo a quem dedicou uma vida inteira ao trabalho. Com o tempo, essa missão ganhou força e forma, reunindo profissionais que acreditam que cada cliente carrega uma história única e merece ser ouvido com atenção e respeito.
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              Hoje, sob a direção do Dr. Thiago Cantarelli e da Dra. Izabela Farias, somos uma equipe que cresceu mantendo o mesmo propósito do início: cuidar de pessoas, assegurar direitos e oferecer esperança. Cada conquista representa mais do que um processo concluído — representa uma história de superação, um futuro protegido e o sentimento de dever cumprido.
-            </p>
-            <p className="text-lg leading-relaxed mb-6">
-              Mais do que um escritório de advocacia, a Cantarelli é feita de gente que acredita na justiça como instrumento de transformação.
-            </p>
-          </div>
-
-          {/* Biografias dos Fundadores */}
-          <div ref={biosRef} className={`grid md:grid-cols-2 gap-8 mb-16 transition-all duration-700 ${biosVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
-            {/* Dr. Thiago Cantarelli */}
-            <div className="bg-background p-8 rounded-lg shadow-md animate-fade-in">
-              <div className="mb-4">
-                <ImageWithSkeleton 
-                  src={thiagoCantarelli} 
-                  alt="Dr. Thiago Cantarelli - Advogado Previdenciário Fundador da Cantarelli Advocacia - OAB/PE 28.165" 
-                  className="w-full aspect-[3/4] rounded-lg mb-4"
-                  style={{ objectFit: 'cover' }}
-                />
-                <h3 className="text-2xl font-display font-bold text-foreground mb-1">
-                  Dr. Thiago Cantarelli
-                </h3>
-                <p className="text-muted-foreground font-body italic mb-4">
-                  Advogado | Fundador da Cantarelli Advocacia
-                </p>
-              </div>
-              <div className="space-y-4 text-foreground/90 font-body">
-                <p>
-                  É referência em Direito Previdenciário e Planejamento de Aposentadorias Programáveis. Lidera uma equipe multidisciplinar comprometida com a excelência técnica e o atendimento humanizado, princípios que transformaram o escritório em uma das maiores referências previdenciárias do Nordeste.
-                </p>
-                <p>
-                  Graduado em Direito e com sólida formação em legislação previdenciária e gestão jurídica, o Dr. Thiago alia técnica, estratégia e sensibilidade humana em cada caso, sempre com foco na defesa de direitos e construção de soluções seguras e personalizadas.
-                </p>
-                <p>
-                  À frente da Cantarelli, é responsável por implementar metodologias de gestão, inovação e qualidade que resultaram em mais de 4.500 processos protocolados desde 2018, reafirmando o compromisso com a eficiência, ética e respeito à história de cada cliente.
-                </p>
-                <p className="text-primary italic font-medium border-l-4 border-primary pl-4 mt-6">
-                  "O Direito Previdenciário é, acima de tudo, uma forma de garantir dignidade a quem dedicou sua vida ao trabalho."
-                </p>
-              </div>
+          {/* Imagem em destaque + Texto Institucional */}
+          <div ref={textRef} className={`grid lg:grid-cols-2 gap-10 items-start mb-16 transition-all duration-700 ${textVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
+            <div className="lg:sticky lg:top-24">
+              <ImageWithSkeleton 
+                src={featuredImage} 
+                alt="Equipe da Cantarelli Advocacia - referência em Direito Previdenciário" 
+                className="w-full aspect-[3/4] rounded-lg shadow-lg"
+                style={{ objectFit: 'cover' }}
+              />
             </div>
 
-            {/* Dra. Izabela Farias */}
-            <div className="bg-background p-8 rounded-lg shadow-md animate-fade-in" style={{
-            animationDelay: "0.1s"
-          }}>
-              <div className="mb-0">
-                <ImageWithSkeleton 
-                  src={izabelaFarias} 
-                  alt="Dra. Izabela Farias - Advogada Previdenciária Diretora de Operações da Cantarelli Advocacia - OAB/PE 42.389" 
-                  className="w-full aspect-[3/4] rounded-lg mb-4"
-                  style={{ objectFit: 'cover' }}
-                />
-                <h3 className="text-2xl font-display font-bold text-foreground mb-1">
-                  Dra. Izabela Farias
-                </h3>
-                <p className="text-muted-foreground font-body italic mb-4">
-                  Advogada | Diretora de Operações da Cantarelli Advocacia
-                </p>
-              </div>
-              <div className="space-y-4 text-foreground/90 font-body">
-                <p>
-                  Reconhecida por sua atuação técnica e empática, é especialista em Direito Previdenciário, com ampla experiência em análise de benefícios, revisões e perícias médicas. Na Cantarelli, exerce papel essencial na coordenação jurídica e estratégica dos processos, garantindo que cada cliente receba um atendimento detalhado, humanizado e eficaz.
-                </p>
-                <p>
-                  Com sólida formação e atualização constante nas Leis 8.213/91, 8.212/91, Decreto 3.048/99, IN 128/2022 e EC 103/2019, destaca-se pela clareza nas orientações e pela condução sensível e assertiva dos casos.
-                </p>
-                <p className="text-primary italic font-medium border-l-4 border-primary pl-4 mt-6">
-                  "Cada processo representa uma vida, uma história e um direito que precisa ser respeitado. É por isso que tratamos cada caso com o cuidado que ele merece."
-                </p>
-              </div>
+            <div className="text-foreground font-body space-y-5">
+              <p className="text-lg leading-relaxed">
+                A nossa história não começou em grandes salas comerciais ou com estruturas imponentes. Em abril de 2008, nascia a Cantarelli Advocacia: um projeto que ganhou vida de forma simples, movido pela coragem, por pouquíssimos recursos e por um propósito inabalável: garantir dignidade a quem dedicou uma vida inteira ao trabalho.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Sabemos exatamente o valor do esforço de quem vem de baixo, porque essa também é a nossa raiz. Foi essa vivência que moldou nossa sensibilidade para entender que, por trás de cada documento ou pedido de aposentadoria, existe uma vida real que não pode esperar.
+              </p>
+
+              <h3 className="text-2xl font-display font-bold text-foreground pt-2">
+                De um início humilde a uma das maiores referências do mercado
+              </h3>
+              <p className="text-lg leading-relaxed">
+                O mercado jurídico é competitivo, mas a verdade e o compromisso com o cliente sempre abrem caminhos. O que começou como o sonho solitário do fundador, Dr. Thiago Cantarelli, consolidou-se através de uma gestão técnica, humana e inovadora.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Hoje, sob a liderança do Dr. Thiago Cantarelli, da Dra. Izabela Farias e da Dra. Milena Moura, a Cantarelli Advocacia orgulha-se de ser um dos escritórios mais procurados e respeitados do país no segmento previdenciário.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Nossa estrutura cresceu para acompanhar a enorme demanda, mas sem perder a essência:
+              </p>
+              <ul className="space-y-3">
+                <li className="flex gap-3 text-lg leading-relaxed">
+                  <span className="text-primary font-bold">•</span>
+                  <span>Colaboradores altamente qualificados prontos para acolher cada caso.</span>
+                </li>
+                <li className="flex gap-3 text-lg leading-relaxed">
+                  <span className="text-primary font-bold">•</span>
+                  <span>Setores especializados que garantem que nenhuma brecha legal seja esquecida na defesa dos seus direitos.</span>
+                </li>
+                <li className="flex gap-3 text-lg leading-relaxed">
+                  <span className="text-primary font-bold">•</span>
+                  <span>Atendimento focado em alta performance, unindo tecnologia de ponta à máxima empatia.</span>
+                </li>
+              </ul>
+
+              <h3 className="text-2xl font-display font-bold text-foreground pt-2">
+                Nosso maior valor: cuidar de pessoas e proteger histórias
+              </h3>
+              <p className="text-lg leading-relaxed">
+                Para nós, o sucesso e a alta procura não são medidos apenas pelo volume de processos ganhos, mas pelo tamanho do impacto que geramos na vida das famílias que confiam em nosso trabalho. Cada conquista em nosso escritório representa muito mais do que um caso encerrado; representa um futuro protegido, uma injustiça corrigida e o resgate da dignidade de um trabalhador.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Mais do que uma banca de advogados renomados, a Cantarelli Advocacia é feita de pessoas que vieram de baixo, venceram pelo trabalho e hoje usam o Direito como o maior instrumento de transformação social e amparo para a sua vida.
+              </p>
             </div>
           </div>
 

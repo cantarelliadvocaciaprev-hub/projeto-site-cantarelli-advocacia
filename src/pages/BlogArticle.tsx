@@ -238,7 +238,7 @@ const BlogArticle = () => {
                 <Shield className="w-10 h-10 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">
-                    Conteúdo revisado por especialista
+                    Conteúdo produzido por
                   </p>
                   <p className="font-display font-semibold text-foreground">
                     Cantarelli Advocacia

@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import FAQPageSchema from "@/components/schemas/FAQPageSchema";
-import { Shield } from "lucide-react";
+
 
 interface FAQItem {
   question: string;
@@ -120,14 +120,6 @@ const FAQNative = () => {
                 </div>
               </details>
             ))}
-          </div>
-
-          {/* E-E-A-T Badge */}
-          <div className="flex items-center justify-center gap-2 mt-8 pt-6 border-t border-border">
-            <Shield className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground font-body">
-              Conteúdo revisado por <strong className="text-foreground">Dr. Thiago Cantarelli</strong> • Atualizado em Janeiro 2026
-            </span>
           </div>
         </div>
       </div>
