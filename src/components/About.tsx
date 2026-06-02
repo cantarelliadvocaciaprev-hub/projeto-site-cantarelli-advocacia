@@ -6,37 +6,40 @@ import { useCarouselCenter } from "@/hooks/useCarouselCenter";
 import { useState } from "react";
 import ImageWithSkeleton from "@/components/ImageWithSkeleton";
 
-// Importar imagens da galeria (otimizadas para WebP e redimensionadas no build)
-import gallery1 from "@/assets/gallery/IMG_0711.jpg?w=720&format=webp&quality=72";
-import gallery2 from "@/assets/gallery/IMG_0882.jpg?w=720&format=webp&quality=72";
-import gallery3 from "@/assets/gallery/IMG_1115.jpg?w=720&format=webp&quality=72";
-import gallery4 from "@/assets/gallery/IMG_1216.jpg?w=720&format=webp&quality=72";
-import gallery5 from "@/assets/gallery/IMG_1279.jpg?w=720&format=webp&quality=72";
-import gallery6 from "@/assets/gallery/IMG_1298.jpg?w=720&format=webp&quality=72";
-import gallery7 from "@/assets/gallery/IMG_1562.jpg?w=720&format=webp&quality=72";
-import gallery8 from "@/assets/gallery/IMG_1789.jpg?w=720&format=webp&quality=72";
-import gallery9 from "@/assets/gallery/IMG_1889.jpg?w=720&format=webp&quality=72";
-import gallery10 from "@/assets/gallery/IMG_2328.jpg?w=720&format=webp&quality=72";
-import gallery11 from "@/assets/gallery/IMG_2412.jpg?w=720&format=webp&quality=72";
-import gallery12 from "@/assets/gallery/IMG_2449.jpg?w=720&format=webp&quality=72";
-import gallery13 from "@/assets/gallery/IMG_3446.jpg?w=720&format=webp&quality=72";
-import gallery14 from "@/assets/gallery/IMG_3461.jpg?w=720&format=webp&quality=72";
-import gallery15 from "@/assets/gallery/IMG_3632.jpg?w=720&format=webp&quality=72";
-import gallery16 from "@/assets/gallery/IMG_3635.jpg?w=720&format=webp&quality=72";
-import gallery17 from "@/assets/gallery/IMG_3782.jpg?w=720&format=webp&quality=72";
-import gallery18 from "@/assets/gallery/IMG_3426.jpg?w=720&format=webp&quality=72";
-import gallery19 from "@/assets/gallery/IMG_3332.jpg?w=720&format=webp&quality=72";
-import gallery20 from "@/assets/gallery/IMG_3273.jpg?w=720&format=webp&quality=72";
-import gallery21 from "@/assets/gallery/IMG_3212.jpg?w=720&format=webp&quality=72";
-import gallery22 from "@/assets/gallery/IMG_3074.jpg?w=720&format=webp&quality=72";
-import gallery23 from "@/assets/gallery/IMG_3035.jpg?w=720&format=webp&quality=72";
-import gallery24 from "@/assets/gallery/IMG_3007.jpg?w=720&format=webp&quality=72";
-import gallery25 from "@/assets/gallery/IMG_2938.jpg?w=720&format=webp&quality=72";
-import gallery26 from "@/assets/gallery/IMG_2888.jpg?w=720&format=webp&quality=72";
-import gallery27 from "@/assets/gallery/IMG_2786.jpg?w=720&format=webp&quality=72";
+// Importar imagens da galeria (WebP responsivo: múltiplas larguras geradas no build)
+import gallery1 from "@/assets/gallery/IMG_0711.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery2 from "@/assets/gallery/IMG_0882.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery3 from "@/assets/gallery/IMG_1115.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery4 from "@/assets/gallery/IMG_1216.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery5 from "@/assets/gallery/IMG_1279.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery6 from "@/assets/gallery/IMG_1298.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery7 from "@/assets/gallery/IMG_1562.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery8 from "@/assets/gallery/IMG_1789.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery9 from "@/assets/gallery/IMG_1889.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery10 from "@/assets/gallery/IMG_2328.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery11 from "@/assets/gallery/IMG_2412.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery12 from "@/assets/gallery/IMG_2449.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery13 from "@/assets/gallery/IMG_3446.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery14 from "@/assets/gallery/IMG_3461.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery15 from "@/assets/gallery/IMG_3632.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery16 from "@/assets/gallery/IMG_3635.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery17 from "@/assets/gallery/IMG_3782.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery18 from "@/assets/gallery/IMG_3426.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery19 from "@/assets/gallery/IMG_3332.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery20 from "@/assets/gallery/IMG_3273.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery21 from "@/assets/gallery/IMG_3212.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery22 from "@/assets/gallery/IMG_3074.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery23 from "@/assets/gallery/IMG_3035.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery24 from "@/assets/gallery/IMG_3007.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery25 from "@/assets/gallery/IMG_2938.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery26 from "@/assets/gallery/IMG_2888.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
+import gallery27 from "@/assets/gallery/IMG_2786.jpg?w=360;540;720;1080&format=webp&quality=72&as=srcset";
 
-// Imagem em destaque da seção "Quem Somos"
-import featuredImage from "@/assets/gallery/IMG_3739.jpg?w=900&format=webp&quality=78";
+// Imagem em destaque da seção "Quem Somos" (WebP responsivo)
+import featuredImage from "@/assets/gallery/IMG_3739.jpg?w=480;720;900;1200&format=webp&quality=78&as=srcset";
+
+// Extrai a primeira URL de um srcset para usar como fallback do atributo src
+const srcFromSrcset = (srcset: string) => srcset.split(",")[0].trim().split(" ")[0];
 
 const About = () => {
   const {
