@@ -1,3 +1,4 @@
+import { scrollBehavior } from "@/lib/motion";
 import { useRef, useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
@@ -29,7 +30,7 @@ const Blog = () => {
     if (!el) return;
     const cardWidth = el.querySelector("a")?.offsetWidth ?? 280;
     const amount = direction === "left" ? -(cardWidth + 16) : cardWidth + 16;
-    el.scrollBy({ left: amount, behavior: "smooth" });
+    el.scrollBy({ left: amount, behavior: scrollBehavior() });
   };
 
   return (

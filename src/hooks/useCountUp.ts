@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { prefersReducedMotion } from "@/lib/motion";
 
 export const useCountUp = (end: number, duration: number = 2000, start: number = 0) => {
   const [count, setCount] = useState(start);
@@ -30,6 +31,13 @@ export const useCountUp = (end: number, duration: number = 2000, start: number =
 
   useEffect(() => {
     if (!isVisible) return;
+
+    // Respeita prefers-reduced-motion: mostra o valor final sem animar a contagem
+    if (prefersReducedMotion()) {
+      setCount(end);
+      return;
+    }
+
 
     const startTime = Date.now();
     const timer = setInterval(() => {

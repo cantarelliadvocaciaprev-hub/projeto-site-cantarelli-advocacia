@@ -1,3 +1,4 @@
+import { scrollBehavior } from "@/lib/motion";
 import { useState, useMemo } from "react";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Search, X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -56,7 +57,7 @@ const Blog = () => {
       searchParams.set("page", String(page));
     }
     setSearchParams(searchParams, { replace: true });
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: scrollBehavior() });
   };
 
   const clearFilters = () => {

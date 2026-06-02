@@ -1,3 +1,4 @@
+import { scrollBehavior } from "@/lib/motion";
 import { useState, useEffect } from "react";
 import { Menu, X, Users, Briefcase, ClipboardList, MessageSquare, HelpCircle, Phone, UserPlus, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -31,13 +32,13 @@ const Header = () => {
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          element.scrollIntoView({ behavior: scrollBehavior() });
         }
       }, 100);
     } else {
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: scrollBehavior() });
       }
     }
     setIsMobileMenuOpen(false);

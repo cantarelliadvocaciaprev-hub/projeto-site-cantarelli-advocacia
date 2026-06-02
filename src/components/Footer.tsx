@@ -1,3 +1,4 @@
+import { scrollBehavior } from "@/lib/motion";
 import { Instagram, Youtube, User, Facebook, Linkedin } from "lucide-react";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -20,13 +21,13 @@ const Footer = () => {
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          element.scrollIntoView({ behavior: scrollBehavior() });
         }
       }, 100);
     } else {
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: scrollBehavior() });
       }
     }
   };

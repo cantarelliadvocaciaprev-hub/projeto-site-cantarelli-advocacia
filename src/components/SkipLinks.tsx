@@ -1,3 +1,4 @@
+import { scrollBehavior } from "@/lib/motion";
 import { useNavigate } from "react-router-dom";
 
 interface SkipLink {
@@ -21,7 +22,7 @@ const SkipLinks = ({ links = defaultLinks }: SkipLinksProps) => {
     const element = document.getElementById(id);
     if (element) {
       element.focus();
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: scrollBehavior() });
     }
   };
 
