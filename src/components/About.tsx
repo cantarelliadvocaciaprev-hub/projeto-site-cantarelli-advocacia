@@ -26,8 +26,7 @@ import gallery16 from "@/assets/gallery/IMG_3635.jpg";
 import gallery17 from "@/assets/gallery/IMG_3782.jpg";
 
 // Imagem em destaque da seção "Quem Somos"
-// TODO: substituir por IMG_3739.jpg quando o arquivo for enviado
-import featuredImage from "@/assets/gallery/IMG_1216.jpg";
+import featuredImage from "@/assets/gallery/IMG_3739.jpg";
 
 const About = () => {
   const {
@@ -92,13 +91,19 @@ const About = () => {
           {/* Imagem em destaque + Texto Institucional */}
           <div ref={textRef} className={`grid lg:grid-cols-2 gap-10 items-start mb-16 transition-all duration-700 ${textVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
             <div className="lg:sticky lg:top-24">
-              <ImageWithSkeleton 
-                src={featuredImage} 
-                alt="Equipe da Cantarelli Advocacia - referência em Direito Previdenciário" 
-                className="w-full aspect-[3/4] rounded-lg shadow-lg"
-                style={{ objectFit: 'cover' }}
-              />
+              <div className="relative">
+                {/* Moldura moderna e minimalista */}
+                <div className="absolute -top-4 -left-4 w-2/3 h-2/3 border-t-2 border-l-2 border-primary/60 rounded-tl-lg" aria-hidden="true" />
+                <div className="absolute -bottom-4 -right-4 w-2/3 h-2/3 border-b-2 border-r-2 border-primary/60 rounded-br-lg" aria-hidden="true" />
+                <ImageWithSkeleton 
+                  src={featuredImage} 
+                  alt="Sócios da Cantarelli Advocacia - referência em Direito Previdenciário" 
+                  className="relative w-full aspect-[3/4] rounded-lg shadow-lg"
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
             </div>
+
 
             <div className="text-foreground font-body space-y-5">
               <p className="text-lg leading-relaxed">
