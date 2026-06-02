@@ -97,9 +97,18 @@ export const blogArticles: BlogArticle[] = [
     slug: "motoristas-cobradores-onibus-aposentadoria-especial-stj-2026",
     title: "Motoristas e Cobradores de Ônibus Têm Direito à Aposentadoria Especial, Decide STJ",
     excerpt:
-      "O STJ reconheceu que motoristas e cobradores de ônibus podem ter direito à aposentadoria especial pela exposição habitual a ruído e agentes nocivos. Entenda a decisão e como comprovar esse direito.",
+      "STJ reconhece direito de motoristas e cobradores de ônibus à aposentadoria especial pela exposição habitual a ruído e agentes nocivos. Veja a decisão e como comprovar.",
     category: "Aposentadoria Especial",
-    tags: ["Aposentadoria Especial", "Motorista", "Cobrador", "STJ", "INSS", "2026"],
+    tags: [
+      "aposentadoria especial motorista de ônibus",
+      "aposentadoria especial cobrador",
+      "decisão STJ aposentadoria especial",
+      "aposentadoria especial por ruído",
+      "PPP e LTCAT aposentadoria especial",
+      "agentes nocivos motorista",
+      "aposentadoria especial INSS 2026",
+      "direito previdenciário motorista de ônibus",
+    ],
     readTime: "9 min",
     keyTakeaways: [
       "O STJ reconheceu a possibilidade de aposentadoria especial para motoristas e cobradores de ônibus",
