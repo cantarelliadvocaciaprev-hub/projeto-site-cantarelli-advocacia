@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { prefersReducedMotion } from "@/lib/motion";
 
 export const useCountUp = (end: number, duration: number = 2000, start: number = 0) => {
   const [count, setCount] = useState(start);
