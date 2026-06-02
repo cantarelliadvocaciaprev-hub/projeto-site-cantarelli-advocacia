@@ -1,3 +1,4 @@
+import { scrollBehavior } from "@/lib/motion";
 import { Instagram, Youtube, User, Facebook, Linkedin } from "lucide-react";
 
 const TikTokIcon = ({ className }: { className?: string }) => (

@@ -1,3 +1,4 @@
+import { scrollBehavior } from "@/lib/motion";
 import { ChevronRight, Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 

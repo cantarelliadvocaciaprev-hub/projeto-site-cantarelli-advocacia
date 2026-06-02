@@ -1,3 +1,4 @@
+import { scrollBehavior } from "@/lib/motion";
 import { useNavigate } from "react-router-dom";
 
 interface SkipLink {

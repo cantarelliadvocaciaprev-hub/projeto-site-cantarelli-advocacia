@@ -1,3 +1,4 @@
+import { scrollBehavior } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
 import { Shield, Award } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";

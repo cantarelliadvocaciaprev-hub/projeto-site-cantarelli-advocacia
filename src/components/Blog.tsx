@@ -1,3 +1,4 @@
+import { scrollBehavior } from "@/lib/motion";
 import { useRef, useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
