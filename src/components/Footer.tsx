@@ -186,15 +186,34 @@ const Footer = () => {
                 <Youtube className="w-5 h-5" />
               </a>
               <a
+                href="https://www.facebook.com/profile.php?id=61566747596777"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/cantarelli-advocacia-previdenci%C3%A1ria/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
                 href="https://www.tiktok.com/@cantarelliadvprev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors text-sm font-bold"
+                className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                 aria-label="TikTok"
               >
-                TT
+                <TikTokIcon className="w-5 h-5" />
               </a>
             </div>
+
             <p className="text-sm text-muted-foreground font-body mt-4">
               Seg–Qui: 08:30–17h<br />
               Sex: 08:30–12h
