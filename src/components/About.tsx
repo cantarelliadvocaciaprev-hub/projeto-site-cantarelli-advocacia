@@ -26,8 +26,7 @@ import gallery16 from "@/assets/gallery/IMG_3635.jpg";
 import gallery17 from "@/assets/gallery/IMG_3782.jpg";
 
 // Imagem em destaque da seção "Quem Somos"
-// TODO: substituir por IMG_3739.jpg quando o arquivo for enviado
-import featuredImage from "@/assets/gallery/IMG_1216.jpg";
+import featuredImage from "@/assets/gallery/IMG_3739.jpg";
 
 const About = () => {
   const {
