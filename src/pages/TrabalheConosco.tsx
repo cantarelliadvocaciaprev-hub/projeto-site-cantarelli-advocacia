@@ -20,6 +20,7 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SkipLinks from "@/components/SkipLinks";
 import SEO from "@/components/SEO";
 import SchemaMarkup from "@/components/SchemaMarkup";
+import { supabase } from "@/integrations/supabase/client";
 
 const TrabalheConosco = () => {
   const { toast } = useToast();
