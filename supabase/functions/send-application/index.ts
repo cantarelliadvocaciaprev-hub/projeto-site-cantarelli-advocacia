@@ -144,7 +144,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "Cantarelli Advocacia <onboarding@resend.dev>",
-        to: ["trabalheconosco@cantarelliadvocacia.com.br"],
+        to: ["cantarelliadvocaciaprev@gmail.com"],
         subject: `Nova Candidatura: ${safeNome} - ${areaLabel}`,
         html: emailHtml,
         attachments,
