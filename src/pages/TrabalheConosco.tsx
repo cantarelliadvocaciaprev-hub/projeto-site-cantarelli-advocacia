@@ -87,33 +87,87 @@ const TrabalheConosco = () => {
     }
   };
 
+  const fileToBase64 = (file: File): Promise<string> =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const result = reader.result as string;
+        // Remove o prefixo "data:...;base64,"
+        resolve(result.split(",")[1] ?? "");
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!selectedFile) {
+      toast({
+        title: "Currículo obrigatório",
+        description: "Por favor, anexe seu currículo em PDF.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // Limite de 5MB
+    if (selectedFile.size > 5 * 1024 * 1024) {
+      toast({
+        title: "Arquivo muito grande",
+        description: "O currículo deve ter no máximo 5MB.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
-    // Simulate form submission
-    console.log("Form Data:", formData);
-    console.log("File:", selectedFile);
+    try {
+      const fileBase64 = await fileToBase64(selectedFile);
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+      const { error } = await supabase.functions.invoke("send-application", {
+        body: {
+          nome: formData.nome,
+          email: formData.email,
+          telefone: formData.telefone,
+          linkedin: formData.linkedin || undefined,
+          area: formData.area,
+          pretensaoSalarial: formData.pretensaoSalarial || undefined,
+          mensagem: formData.mensagem || undefined,
+          fileName: selectedFile.name,
+          fileBase64,
+        },
+      });
 
-    toast({
-      title: "Candidatura enviada com sucesso!",
-      description: "Entraremos em contato em breve. Obrigado pelo interesse!",
-    });
+      if (error) throw error;
 
-    // Reset form
-    setFormData({
-      nome: "",
-      email: "",
-      telefone: "",
-      linkedin: "",
-      area: "",
-      pretensaoSalarial: "",
-      mensagem: "",
-    });
-    setSelectedFile(null);
-    setIsSubmitting(false);
+      toast({
+        title: "Candidatura enviada com sucesso!",
+        description: "Entraremos em contato em breve. Obrigado pelo interesse!",
+      });
+
+      // Reset form
+      setFormData({
+        nome: "",
+        email: "",
+        telefone: "",
+        linkedin: "",
+        area: "",
+        pretensaoSalarial: "",
+        mensagem: "",
+      });
+      setSelectedFile(null);
+    } catch (err) {
+      console.error("Erro ao enviar candidatura:", err);
+      toast({
+        title: "Erro ao enviar candidatura",
+        description: "Não foi possível enviar sua candidatura. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const values = [
