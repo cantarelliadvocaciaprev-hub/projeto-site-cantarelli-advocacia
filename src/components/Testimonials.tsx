@@ -34,6 +34,7 @@ const Testimonials = () => {
             href="https://g.page/r/CRjPlDrLjgBcEAE/review"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackReviewClick()}
           >
             <Button className="gap-2 bg-primary hover:bg-primary/90">
               <Star className="w-4 h-4" />
