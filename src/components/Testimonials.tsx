@@ -1,7 +1,7 @@
 import { Star, ExternalLink } from "lucide-react";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import { Button } from "@/components/ui/button";
-import { trackReviewClick, openGoogleReview } from "@/lib/reviewTracking";
+import { openGoogleReview } from "@/lib/reviewTracking";
 
 const Testimonials = () => {
   return (
