@@ -18,3 +18,18 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      # Fails the build if a NEW security issue appears (permissive RLS,
+      # hardcoded secrets, raw SQL in edge functions, or high/critical
+      # dependency vulnerabilities) that is not in security-baseline.json.
+      - name: Security scan
+        run: npm run security:scan
