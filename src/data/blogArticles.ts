@@ -79,6 +79,10 @@ export interface BlogArticle {
   slug: string;
   title: string;
   excerpt: string;
+  /** Optional SEO-optimized <title> (≤60 chars recommended). Falls back to `title`. */
+  seoTitle?: string;
+  /** Optional meta description (≤160 chars recommended). Falls back to `excerpt`. */
+  metaDescription?: string;
   date?: string;
   category: string;
   tags: string[];
