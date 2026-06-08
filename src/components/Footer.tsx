@@ -1,6 +1,7 @@
 import { scrollBehavior } from "@/lib/motion";
-import { Instagram, Youtube, User, Facebook, Linkedin } from "lucide-react";
+import { Instagram, Youtube, User, Facebook, Linkedin, Calendar } from "lucide-react";
 import ReviewButton from "@/components/ReviewButton";
+import { Button } from "@/components/ui/button";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
@@ -223,12 +224,27 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Avaliação no Google */}
+        {/* Avaliação no Google + Agendamento */}
         <div className="border-t border-border pt-8 pb-8 flex flex-col items-center text-center gap-3">
           <p className="text-foreground font-body text-sm">
             Foi atendido pela nossa equipe? Conte sua experiência no Google.
           </p>
-          <ReviewButton />
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <ReviewButton />
+            <Button
+              variant="outline"
+              onClick={() =>
+                window.open(
+                  "https://wa.me/5581983421727?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20agendar%20um%20atendimento.",
+                  "_blank"
+                )
+              }
+              className="gap-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              <Calendar className="w-4 h-4" />
+              Agende seu atendimento
+            </Button>
+          </div>
         </div>
 
         {/* Bottom Section */}
