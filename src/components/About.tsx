@@ -223,7 +223,7 @@ const About = () => {
             <Carousel setApi={setCarouselApi} className="w-full max-w-5xl mx-auto px-10 md:px-12" opts={{
             align: "center",
             loop: true
-          }} plugins={reducedMotion ? [] : [Autoplay({
+          }} plugins={[Autoplay({
             delay: 3000,
             stopOnInteraction: false,
             stopOnMouseEnter: true
