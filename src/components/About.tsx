@@ -222,7 +222,8 @@ const About = () => {
           <div ref={galleryRef} className={`mt-16 transition-all duration-700 ${galleryVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
             <Carousel setApi={setCarouselApi} className="w-full max-w-5xl mx-auto px-10 md:px-12" opts={{
             align: "center",
-            loop: true
+            loop: true,
+            duration: 35
           }} plugins={[Autoplay({
             delay: 3000,
             stopOnInteraction: false,
