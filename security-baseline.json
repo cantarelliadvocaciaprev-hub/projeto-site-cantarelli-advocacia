@@ -1,0 +1,5 @@
+{
+  "acceptedFindings": [
+    "permissive_rls|supabase/migrations/20260608195752_250a200b-99fb-43dc-9cf3-7699439ae967.sql|Permissive INSERT policy \"Anyone can log a review button event\" uses an always-true expression."
+  ]
+}
