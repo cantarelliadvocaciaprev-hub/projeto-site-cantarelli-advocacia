@@ -458,6 +458,7 @@ const TrabalheConosco = () => {
                         </div>
                         <button
                           type="button"
+                          aria-label="Remover arquivo"
                           onClick={(e) => {
                             e.stopPropagation();
                             setSelectedFile(null);
