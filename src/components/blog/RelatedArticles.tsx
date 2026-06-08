@@ -12,8 +12,8 @@ interface RelatedArticlesProps {
 
 const RelatedArticles = ({ currentSlug, tags, category }: RelatedArticlesProps) => {
   // Score articles by tag overlap, then category match
-  const scored = blogArticles
-    .filter((a) => a.slug !== currentSlug)
+  const others = blogArticles.filter((a) => a.slug !== currentSlug);
+  const scored = others
     .map((a) => {
       let score = 0;
       if (a.category === category) score += 2;
@@ -23,9 +23,21 @@ const RelatedArticles = ({ currentSlug, tags, category }: RelatedArticlesProps) 
     })
     .filter((s) => s.score > 0)
     .sort((a, b) => b.score - a.score)
-    .slice(0, 3);
+    .map((s) => s.article);
 
-  if (scored.length === 0) return null;
+  // Always surface internal links: fall back to other recent articles
+  // so every post links out, strengthening internal linking & crawl depth.
+  const related = [...scored];
+  if (related.length < 3) {
+    for (const a of others) {
+      if (related.length >= 3) break;
+      if (!related.some((r) => r.slug === a.slug)) related.push(a);
+    }
+  }
+  const finalRelated = related.slice(0, 3);
+
+  if (finalRelated.length === 0) return null;
+
 
   return (
     <section className="py-8 md:py-10 border-t border-border">
