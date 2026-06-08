@@ -25,7 +25,7 @@ const LegalServiceSchema = () => {
           name: "Dr. Thiago Cantarelli",
           jobTitle: "Advogado Previdenciário",
           description:
-            "Fundador da Cantarelli Advocacia, referência em Direito Previdenciário e Planejamento de Aposentadorias Programáveis. OAB/PE 28.165.",
+            "Fundador da Cantarelli Advocacia, referência em Direito Previdenciário e Planejamento de Aposentadorias Programáveis.",
           sameAs: ["https://www.instagram.com/cantarelliadvprev"],
         },
         {
@@ -33,7 +33,7 @@ const LegalServiceSchema = () => {
           name: "Dra. Izabela Farias",
           jobTitle: "Advogada Previdenciária",
           description:
-            "Diretora de Operações da Cantarelli Advocacia, especialista em Direito Previdenciário com ampla experiência em análise de benefícios e revisões. OAB/PE 42.389.",
+            "Diretora de Operações da Cantarelli Advocacia, especialista em Direito Previdenciário com ampla experiência em análise de benefícios e revisões.",
         },
       ],
       address: {
