@@ -11,6 +11,7 @@ import Seguranca from "./pages/Seguranca";
 import BlogArticle from "./pages/BlogArticle";
 import BlogPage from "./pages/Blog";
 import DeployCheck from "./pages/DeployCheck";
+import ReviewStats from "./pages/ReviewStats";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
