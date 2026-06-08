@@ -48,7 +48,7 @@ const RelatedArticles = ({ currentSlug, tags, category }: RelatedArticlesProps) 
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {scored.map(({ article }) => (
+            {finalRelated.map((article) => (
               <Link
                 to={`/blog/${article.slug}`}
                 key={article.slug}
