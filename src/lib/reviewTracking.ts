@@ -50,3 +50,35 @@ export function trackReviewClick() {
   const timeout = window.setTimeout(cleanup, 30 * 60 * 1000);
   document.addEventListener("visibilitychange", onVisible);
 }
+
+// URL web padrão (deep link universal do Google) — abre o app no iOS quando instalado
+export const GOOGLE_REVIEW_WEB_URL = "https://g.page/r/CRjPlDrLjgBcEAE/review";
+const GOOGLE_PLACE_ID = "ChIJ0R2t_ywfqwcRGM-UOsuOAFw";
+
+/**
+ * Abre a tela de avaliação priorizando o app do Google Maps no mobile,
+ * com fallback automático para o navegador caso o app não esteja instalado.
+ * Também registra o clique para rastreamento.
+ */
+export function openGoogleReview(e: React.MouseEvent<HTMLAnchorElement>) {
+  trackReviewClick();
+
+  const device = getDeviceType();
+  if (device === "desktop") return; // mantém o comportamento padrão (nova aba)
+
+  const ua = typeof navigator !== "undefined" ? navigator.userAgent : "";
+
+  // Android: usa intent:// para abrir direto no app, com fallback embutido para o navegador
+  if (/Android/i.test(ua)) {
+    e.preventDefault();
+    const fallback = encodeURIComponent(GOOGLE_REVIEW_WEB_URL);
+    window.location.href =
+      `intent://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}` +
+      `#Intent;scheme=https;package=com.google.android.apps.maps;` +
+      `S.browser_fallback_url=${fallback};end`;
+    return;
+  }
+
+  // iOS e demais: o link universal g.page abre o app quando instalado,
+  // ou o navegador como fallback — comportamento padrão do <a>.
+}
