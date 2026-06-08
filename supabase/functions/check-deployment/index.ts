@@ -118,8 +118,9 @@ Deno.serve(async (req) => {
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   } catch (err) {
+    console.error("check-deployment internal error:", err);
     return new Response(
-      JSON.stringify({ error: `Erro ao verificar: ${String(err)}` }),
+      JSON.stringify({ error: "Erro ao verificar a publicação." }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   }
