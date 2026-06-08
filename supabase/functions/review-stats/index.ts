@@ -67,8 +67,9 @@ Deno.serve(async (req) => {
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   } catch (e) {
+    console.error("review-stats internal error:", e);
     return new Response(
-      JSON.stringify({ error: String(e) }),
+      JSON.stringify({ error: "Erro interno no servidor." }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   }

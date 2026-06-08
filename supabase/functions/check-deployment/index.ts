@@ -2,6 +2,12 @@ import { corsHeaders } from "npm:@supabase/supabase-js@2/cors";
 
 const DEFAULT_URL = "https://www.cantarelliadvocacia.com.br";
 
+const ALLOWED_HOSTS = new Set([
+  "cantarelliadvocacia.com.br",
+  "www.cantarelliadvocacia.com.br",
+  "cantarelliadvocacia.lovable.app",
+]);
+
 interface ManifestItem {
   slug: string;
   lastUpdated: string | null;
@@ -12,6 +18,7 @@ function normalizeBaseUrl(input: unknown): string | null {
   try {
     const u = new URL(input.trim());
     if (u.protocol !== "http:" && u.protocol !== "https:") return null;
+    if (!ALLOWED_HOSTS.has(u.hostname)) return null;
     return `${u.protocol}//${u.host}`;
   } catch {
     return null;
@@ -111,8 +118,9 @@ Deno.serve(async (req) => {
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   } catch (err) {
+    console.error("check-deployment internal error:", err);
     return new Response(
-      JSON.stringify({ error: `Erro ao verificar: ${String(err)}` }),
+      JSON.stringify({ error: "Erro ao verificar a publicação." }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   }
