@@ -197,12 +197,7 @@ serve(async (req) => {
       </div>
     `;
 
-    const attachments = data.fileBase64 && data.fileName ? [
-      {
-        filename: data.fileName,
-        content: data.fileBase64,
-      }
-    ] : [];
+    const attachments = safeAttachment ? [safeAttachment] : [];
 
     const resendResponse = await fetch("https://api.resend.com/emails", {
       method: "POST",
