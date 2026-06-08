@@ -1,7 +1,7 @@
 import { Users, Target, Heart } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import Fade from "embla-carousel-fade";
+
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useCarouselCenter } from "@/hooks/useCarouselCenter";
 import { useState, useEffect, useRef } from "react";
