@@ -63,6 +63,74 @@ serve(async (req) => {
       );
     }
 
+    // Server-side input length limits to prevent abuse / oversized payloads
+    const limits: Record<string, number> = {
+      nome: 150,
+      email: 255,
+      telefone: 30,
+      linkedin: 300,
+      area: 50,
+      pretensaoSalarial: 50,
+      mensagem: 2000,
+    };
+    for (const [field, max] of Object.entries(limits)) {
+      const value = (data as Record<string, unknown>)[field];
+      if (typeof value === "string" && value.length > max) {
+        return new Response(
+          JSON.stringify({ error: "Dados inválidos." }),
+          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+    }
+
+    // Basic email format check
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      return new Response(
+        JSON.stringify({ error: "E-mail inválido." }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    // Server-side attachment validation (type, size, filename)
+    let safeAttachment: { filename: string; content: string } | null = null;
+    if (data.fileBase64 && data.fileName) {
+      const base64 = data.fileBase64.replace(/\s/g, "");
+      let bytes: Uint8Array;
+      try {
+        const binary = atob(base64);
+        bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+      } catch {
+        return new Response(
+          JSON.stringify({ error: "Arquivo inválido." }),
+          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+
+      const MAX_BYTES = 5_242_880; // 5 MB
+      if (bytes.length > MAX_BYTES) {
+        return new Response(
+          JSON.stringify({ error: "Arquivo excede o tamanho máximo de 5 MB." }),
+          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+
+      // Verify PDF magic bytes (%PDF-)
+      const header = new TextDecoder().decode(bytes.slice(0, 5));
+      if (header !== "%PDF-") {
+        return new Response(
+          JSON.stringify({ error: "Apenas arquivos PDF são aceitos." }),
+          { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+        );
+      }
+
+      // Sanitize filename: strip path separators, restrict charset and length
+      let cleanName = data.fileName.split(/[\\/]/).pop() ?? "curriculo.pdf";
+      cleanName = cleanName.replace(/[^a-zA-Z0-9._-]/g, "_").slice(0, 255);
+      if (!cleanName.toLowerCase().endsWith(".pdf")) cleanName += ".pdf";
+
+      safeAttachment = { filename: cleanName, content: base64 };
+    }
+
     const areaLabel = areaLabels[data.area] || escapeHtml(data.area);
 
     // Escape all user-supplied values
