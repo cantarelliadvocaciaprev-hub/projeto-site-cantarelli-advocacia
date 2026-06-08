@@ -1,5 +1,6 @@
 import { scrollBehavior } from "@/lib/motion";
 import { Instagram, Youtube, User, Facebook, Linkedin } from "lucide-react";
+import ReviewButton from "@/components/ReviewButton";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
