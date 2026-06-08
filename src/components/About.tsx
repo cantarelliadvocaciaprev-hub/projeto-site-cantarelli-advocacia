@@ -60,8 +60,6 @@ const About = () => {
   const stickySentinelRef = useRef<HTMLDivElement>(null);
   const [isStuck, setIsStuck] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
-  const [transition, setTransition] = useState<"slide" | "fade">("slide");
-  const isFade = transition === "fade";
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
