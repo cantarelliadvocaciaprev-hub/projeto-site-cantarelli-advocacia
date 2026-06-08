@@ -67,17 +67,22 @@ const BlogArticle = () => {
     }
   };
 
+  const canonicalUrl = `${SITE_URL}/blog/${article.slug}`;
+  const metaTitle = article.seoTitle ?? `${article.title} | Cantarelli Advocacia`;
+  const metaDescription = truncate(article.metaDescription ?? article.excerpt);
+  const ogImageUrl = toAbsoluteUrl(article.image);
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title={`${article.title} | Cantarelli Advocacia`}
-        description={article.excerpt}
+        title={metaTitle}
+        description={metaDescription}
         keywords={article.tags?.join(", ")}
         ogTitle={article.title}
-        ogDescription={article.excerpt}
-        ogImage={article.image}
+        ogDescription={metaDescription}
+        ogImage={ogImageUrl}
         ogType="article"
-        canonical={`https://cantarelliadvocacia.com.br/blog/${article.slug}`}
+        canonical={canonicalUrl}
       />
       <ArticleSchema article={article} />
       <Header />
