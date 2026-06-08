@@ -13,6 +13,18 @@ import RelatedArticles from "@/components/blog/RelatedArticles";
 import ArticleSchema from "@/components/blog/ArticleSchema";
 
 const WHATSAPP_URL = "https://wa.me/5581983421727?text=Olá,%20li%20um%20artigo%20no%20blog%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.";
+const SITE_URL = "https://cantarelliadvocacia.com.br";
+
+// Crawlers (LinkedIn/Facebook) require absolute og:image URLs.
+const toAbsoluteUrl = (path: string) =>
+  /^https?:\/\//.test(path) ? path : `${SITE_URL}${path.startsWith("/") ? "" : "/"}${path}`;
+
+// Trim to a clean meta-description length (≤160 chars) without cutting mid-word.
+const truncate = (text: string, max = 158) => {
+  if (text.length <= max) return text;
+  const slice = text.slice(0, max);
+  return `${slice.slice(0, slice.lastIndexOf(" "))}…`;
+};
 
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
