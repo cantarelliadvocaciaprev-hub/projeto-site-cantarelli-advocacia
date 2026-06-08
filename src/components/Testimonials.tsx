@@ -1,7 +1,7 @@
 import { Star, ExternalLink } from "lucide-react";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import { Button } from "@/components/ui/button";
-import { trackReviewClick } from "@/lib/reviewTracking";
+import { openGoogleReview } from "@/lib/reviewTracking";
 
 const Testimonials = () => {
   return (
@@ -34,7 +34,7 @@ const Testimonials = () => {
             href="https://g.page/r/CRjPlDrLjgBcEAE/review"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => trackReviewClick()}
+            onClick={openGoogleReview}
           >
             <Button className="gap-2 bg-primary hover:bg-primary/90">
               <Star className="w-4 h-4" />
