@@ -223,26 +223,43 @@ const About = () => {
 
           {/* Galeria de Imagens */}
           <div ref={galleryRef} className={`mt-16 transition-all duration-700 ${galleryVisible ? 'opacity-100 animate-slide-in-right-fade' : 'opacity-0'}`}>
-            <Carousel setApi={setCarouselApi} className="w-full max-w-5xl mx-auto px-10 md:px-12" opts={{
+            {/* Seletor de transição */}
+            <div className="flex justify-center gap-2 mb-6">
+              <button
+                type="button"
+                onClick={() => setTransition("slide")}
+                aria-pressed={!isFade}
+                className={`px-4 py-2 rounded-full text-sm font-body transition-colors ${!isFade ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-muted/80'}`}
+              >
+                Transição Slide
+              </button>
+              <button
+                type="button"
+                onClick={() => setTransition("fade")}
+                aria-pressed={isFade}
+                className={`px-4 py-2 rounded-full text-sm font-body transition-colors ${isFade ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-muted/80'}`}
+              >
+                Transição Fade
+              </button>
+            </div>
+            <Carousel key={transition} setApi={setCarouselApi} className="w-full max-w-5xl mx-auto px-10 md:px-12" opts={{
             align: "center",
             loop: true,
-            duration: 35
-          }} plugins={[Autoplay({
-            delay: 3000,
-            stopOnInteraction: false,
-            stopOnMouseEnter: true
-          })]}>
+            duration: isFade ? 50 : 35
+          }} plugins={isFade
+            ? [Fade(), Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })]
+            : [Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })]}>
               <CarouselContent className="-ml-3 md:-ml-4">
                 {galleryImages.map((image, index) => {
                 const isCenterSlide = index === centerIndex;
-                return <CarouselItem key={index} className="pl-3 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                return <CarouselItem key={index} className={`pl-3 md:pl-4 ${isFade ? 'basis-full' : 'basis-full sm:basis-1/2 lg:basis-1/3'}`}>
                       <div className="overflow-hidden rounded-lg">
                         <ImageWithSkeleton 
                           src={srcFromSrcset(image)} 
                           srcSet={image}
                           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                           alt={`Cantarelli Advocacia - Escritório de Direito Previdenciário em Recife - Imagem ${index + 1}`} 
-                          className={`w-full aspect-[4/5] rounded-lg bg-neutral-100 shadow-md transition-all duration-500 ease-in-out ${isCenterSlide ? 'carousel-center-item' : 'carousel-side-item'}`}
+                          className={`w-full aspect-[4/5] rounded-lg bg-neutral-100 shadow-md transition-all duration-500 ease-in-out ${!isFade && isCenterSlide ? 'carousel-center-item' : !isFade ? 'carousel-side-item' : ''}`}
                           style={{ objectFit: 'cover' }}
                         />
                       </div>
