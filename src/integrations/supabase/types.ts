@@ -14,7 +14,30 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      review_click_events: {
+        Row: {
+          created_at: string
+          device_type: string
+          event_type: string
+          id: string
+          user_agent: string | null
+        }
+        Insert: {
+          created_at?: string
+          device_type: string
+          event_type: string
+          id?: string
+          user_agent?: string | null
+        }
+        Update: {
+          created_at?: string
+          device_type?: string
+          event_type?: string
+          id?: string
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
