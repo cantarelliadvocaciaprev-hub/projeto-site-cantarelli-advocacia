@@ -1,7 +1,8 @@
-import { Star, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import { Button } from "@/components/ui/button";
-import { openGoogleReview } from "@/lib/reviewTracking";
+import ReviewButton from "@/components/ReviewButton";
+import { GOOGLE_REVIEW_WEB_URL } from "@/lib/reviewTracking";
 
 const Testimonials = () => {
   return (
@@ -21,7 +22,7 @@ const Testimonials = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
           <a
-            href="https://g.page/r/CRjPlDrLjgBcEAE/review"
+            href={GOOGLE_REVIEW_WEB_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -30,17 +31,7 @@ const Testimonials = () => {
               Ver mais avaliações no Google
             </Button>
           </a>
-          <a
-            href="https://g.page/r/CRjPlDrLjgBcEAE/review"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={openGoogleReview}
-          >
-            <Button className="gap-2 bg-primary hover:bg-primary/90">
-              <Star className="w-4 h-4" />
-              Avaliar no Google
-            </Button>
-          </a>
+          <ReviewButton />
         </div>
       </div>
     </section>

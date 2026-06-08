@@ -1,5 +1,6 @@
 import { scrollBehavior } from "@/lib/motion";
 import { Instagram, Youtube, User, Facebook, Linkedin } from "lucide-react";
+import ReviewButton from "@/components/ReviewButton";
 
 const TikTokIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
@@ -220,6 +221,14 @@ const Footer = () => {
               Sex: 08:30–12h
             </p>
           </div>
+        </div>
+
+        {/* Avaliação no Google */}
+        <div className="border-t border-border pt-8 pb-8 flex flex-col items-center text-center gap-3">
+          <p className="text-foreground font-body text-sm">
+            Foi atendido pela nossa equipe? Conte sua experiência no Google.
+          </p>
+          <ReviewButton />
         </div>
 
         {/* Bottom Section */}
