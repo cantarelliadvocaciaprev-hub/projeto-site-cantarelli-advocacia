@@ -1,14 +1,60 @@
 import { scrollBehavior } from "@/lib/motion";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Search, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
-import { blogArticles } from "@/data/blogArticles";
+import { blogArticles, type BlogArticle } from "@/data/blogArticles";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SEO from "@/components/SEO";
+
+// Pre-compute a normalized, searchable text blob per article (title + excerpt +
+// category + tags + full body + FAQ). Runs once at module load.
+const normalize = (s: string) =>
+  s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+const buildSearchIndex = (a: BlogArticle) => {
+  const bodyText = a.content
+    .map((c) => c.text ?? (c.items ? c.items.join(" ") : ""))
+    .join(" ");
+  const faqText = a.faq?.map((f) => `${f.question} ${f.answer}`).join(" ") ?? "";
+  return normalize(
+    [a.title, a.excerpt, a.category, (a.tags ?? []).join(" "), bodyText, faqText].join(" ")
+  );
+};
+
+const searchIndex: Record<string, string> = Object.fromEntries(
+  blogArticles.map((a) => [a.slug, buildSearchIndex(a)])
+);
+
+const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const Highlight = ({ text, term }: { text: string; term: string }) => {
+  const t = term.trim();
+  if (!t) return <>{text}</>;
+  const tokens = Array.from(new Set(t.split(/\s+/).filter((x) => x.length >= 2)));
+  if (!tokens.length) return <>{text}</>;
+  const pattern = new RegExp(`(${tokens.map(escapeRegExp).join("|")})`, "gi");
+  const parts = text.split(pattern);
+  return (
+    <>
+      {parts.map((p, i) =>
+        pattern.test(p) ? (
+          <mark key={i} className="bg-primary/20 text-foreground rounded px-0.5">
+            {p}
+          </mark>
+        ) : (
+          <span key={i}>{p}</span>
+        )
+      )}
+    </>
+  );
+};
 
 const ARTICLES_PER_PAGE = 12;
 
