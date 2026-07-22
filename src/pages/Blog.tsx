@@ -112,11 +112,26 @@ const Blog = () => {
     window.scrollTo({ top: 0, behavior: scrollBehavior() });
   };
 
+  // Keep the URL in sync with search + category so results are shareable and
+  // survive reloads. Debounces the `q` writes slightly to avoid a history spam.
+  useEffect(() => {
+    const t = setTimeout(() => {
+      const next = new URLSearchParams(searchParams);
+      if (search.trim()) next.set("q", search.trim());
+      else next.delete("q");
+      if (selectedCategory) next.set("cat", selectedCategory);
+      else next.delete("cat");
+      setSearchParams(next, { replace: true });
+    }, 200);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search, selectedCategory]);
+
   const clearFilters = () => {
     setSearch("");
     setSelectedCategory(null);
-    searchParams.delete("page");
-    setSearchParams(searchParams, { replace: true });
+    const next = new URLSearchParams();
+    setSearchParams(next, { replace: true });
   };
 
   // Reset to page 1 when filters change
