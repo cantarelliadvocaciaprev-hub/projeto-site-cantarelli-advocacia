@@ -217,6 +217,20 @@ const BlogArticle = () => {
           </div>
         </article>
 
+        {/* Share Buttons */}
+        <section className="pb-2">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <ShareButtons
+                title={article.title}
+                url={`${SITE_URL}/blog/${article.slug}`}
+              />
+            </div>
+          </div>
+        </section>
+
+
+
         {/* Mid-article WhatsApp CTA */}
         <section className="py-6 md:py-8">
           <div className="container mx-auto px-4">
