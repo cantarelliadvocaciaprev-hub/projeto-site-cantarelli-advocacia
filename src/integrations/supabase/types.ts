@@ -38,6 +38,36 @@ export type Database = {
         }
         Relationships: []
       }
+      share_click_events: {
+        Row: {
+          article_slug: string
+          article_title: string | null
+          created_at: string
+          device_type: string
+          id: string
+          network: string
+          user_agent: string | null
+        }
+        Insert: {
+          article_slug: string
+          article_title?: string | null
+          created_at?: string
+          device_type: string
+          id?: string
+          network: string
+          user_agent?: string | null
+        }
+        Update: {
+          article_slug?: string
+          article_title?: string | null
+          created_at?: string
+          device_type?: string
+          id?: string
+          network?: string
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
