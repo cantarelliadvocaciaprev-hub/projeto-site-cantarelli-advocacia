@@ -276,10 +276,10 @@ const Blog = () => {
                       </div>
                       <div className="p-4 md:p-5 flex flex-col flex-1">
                         <h2 className="text-sm md:text-base font-display font-bold text-foreground mb-2 leading-tight line-clamp-3 group-hover:text-primary transition-colors">
-                          {post.title}
+                          <Highlight text={post.title} term={search} />
                         </h2>
                         <p className="text-xs md:text-sm text-muted-foreground font-body line-clamp-3 mb-3 flex-1">
-                          {post.excerpt}
+                          <Highlight text={post.excerpt} term={search} />
                         </p>
                         <div className="flex items-center gap-1 text-primary text-xs md:text-sm font-semibold mt-auto group-hover:gap-2 transition-all">
                           <span>Leia Mais</span>
