@@ -76,6 +76,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     imagetools(),
     contentVersionPlugin(),
+    prerenderBlogArticlesPlugin(),
     mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {
