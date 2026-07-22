@@ -62,6 +62,9 @@ import autismoBpcAdultoImg from "@/assets/blog/autismo-bpc-adulto-2026.jpg";
 import licencaPaternidadeImg from "@/assets/blog/licenca-paternidade-lei-15371-2026.jpg";
 import salMatPrazo30Img from "@/assets/blog/salario-maternidade-prazo-30-dias-2026.jpg";
 import motoristaCobradorOnibusImg from "@/assets/blog/motorista-cobrador-onibus-aposentadoria-especial-2026.jpg";
+import stfInsalubridadeImg from "@/assets/blog/stf-aposentadoria-especial-insalubridade-2026.jpg";
+import reforma67MeiImg from "@/assets/blog/reforma-previdencia-67-anos-mei-2026.jpg";
+import agentesSaudeEndemiasImg from "@/assets/blog/aposentadoria-especial-agentes-saude-endemias-2026.jpg";
 
 
 export interface BlogArticleContent {
