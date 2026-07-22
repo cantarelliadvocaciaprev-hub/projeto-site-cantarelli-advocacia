@@ -1,21 +1,69 @@
 import { scrollBehavior } from "@/lib/motion";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Search, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
-import { blogArticles } from "@/data/blogArticles";
+import { blogArticles, type BlogArticle } from "@/data/blogArticles";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SEO from "@/components/SEO";
 
+// Pre-compute a normalized, searchable text blob per article (title + excerpt +
+// category + tags + full body + FAQ). Runs once at module load.
+const normalize = (s: string) =>
+  s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+const buildSearchIndex = (a: BlogArticle) => {
+  const bodyText = a.content
+    .map((c) => c.text ?? (c.items ? c.items.join(" ") : ""))
+    .join(" ");
+  const faqText = a.faq?.map((f) => `${f.question} ${f.answer}`).join(" ") ?? "";
+  return normalize(
+    [a.title, a.excerpt, a.category, (a.tags ?? []).join(" "), bodyText, faqText].join(" ")
+  );
+};
+
+const searchIndex: Record<string, string> = Object.fromEntries(
+  blogArticles.map((a) => [a.slug, buildSearchIndex(a)])
+);
+
+const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+const Highlight = ({ text, term }: { text: string; term: string }) => {
+  const t = term.trim();
+  if (!t) return <>{text}</>;
+  const tokens = Array.from(new Set(t.split(/\s+/).filter((x) => x.length >= 2)));
+  if (!tokens.length) return <>{text}</>;
+  const pattern = new RegExp(`(${tokens.map(escapeRegExp).join("|")})`, "gi");
+  const parts = text.split(pattern);
+  return (
+    <>
+      {parts.map((p, i) =>
+        pattern.test(p) ? (
+          <mark key={i} className="bg-primary/20 text-foreground rounded px-0.5">
+            {p}
+          </mark>
+        ) : (
+          <span key={i}>{p}</span>
+        )
+      )}
+    </>
+  );
+};
+
 const ARTICLES_PER_PAGE = 12;
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [search, setSearch] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [search, setSearch] = useState(() => searchParams.get("q") ?? "");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(
+    () => searchParams.get("cat")
+  );
 
   const currentPage = Number(searchParams.get("page") || "1");
 
@@ -29,15 +77,19 @@ const Blog = () => {
     if (selectedCategory) {
       list = list.filter((a) => a.category === selectedCategory);
     }
-    if (search.trim()) {
-      const q = search.toLowerCase();
-      list = list.filter(
-        (a) =>
-          a.title.toLowerCase().includes(q) ||
-          a.excerpt.toLowerCase().includes(q) ||
-          a.category.toLowerCase().includes(q) ||
-          a.tags?.some((t) => t.toLowerCase().includes(q))
-      );
+    const q = search.trim();
+    if (q) {
+      // Split into tokens (min 2 chars) — every token must appear (AND search),
+      // matched against the pre-indexed, accent-insensitive text blob.
+      const tokens = normalize(q)
+        .split(/\s+/)
+        .filter((t) => t.length >= 2);
+      if (tokens.length) {
+        list = list.filter((a) => {
+          const idx = searchIndex[a.slug] ?? "";
+          return tokens.every((t) => idx.includes(t));
+        });
+      }
     }
     return list;
   }, [search, selectedCategory]);
@@ -60,11 +112,26 @@ const Blog = () => {
     window.scrollTo({ top: 0, behavior: scrollBehavior() });
   };
 
+  // Keep the URL in sync with search + category so results are shareable and
+  // survive reloads. Debounces the `q` writes slightly to avoid a history spam.
+  useEffect(() => {
+    const t = setTimeout(() => {
+      const next = new URLSearchParams(searchParams);
+      if (search.trim()) next.set("q", search.trim());
+      else next.delete("q");
+      if (selectedCategory) next.set("cat", selectedCategory);
+      else next.delete("cat");
+      setSearchParams(next, { replace: true });
+    }, 200);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search, selectedCategory]);
+
   const clearFilters = () => {
     setSearch("");
     setSelectedCategory(null);
-    searchParams.delete("page");
-    setSearchParams(searchParams, { replace: true });
+    const next = new URLSearchParams();
+    setSearchParams(next, { replace: true });
   };
 
   // Reset to page 1 when filters change
@@ -125,7 +192,7 @@ const Blog = () => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Pesquisar..."
+                placeholder="Pesquisar por tema, palavra-chave ou conteúdo..."
                 value={search}
                 onChange={(e) => handleSearch(e.target.value)}
                 className="w-full pl-10 pr-10 py-3 rounded-xl border border-border bg-card text-foreground font-body text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all"
@@ -209,10 +276,10 @@ const Blog = () => {
                       </div>
                       <div className="p-4 md:p-5 flex flex-col flex-1">
                         <h2 className="text-sm md:text-base font-display font-bold text-foreground mb-2 leading-tight line-clamp-3 group-hover:text-primary transition-colors">
-                          {post.title}
+                          <Highlight text={post.title} term={search} />
                         </h2>
                         <p className="text-xs md:text-sm text-muted-foreground font-body line-clamp-3 mb-3 flex-1">
-                          {post.excerpt}
+                          <Highlight text={post.excerpt} term={search} />
                         </p>
                         <div className="flex items-center gap-1 text-primary text-xs md:text-sm font-semibold mt-auto group-hover:gap-2 transition-all">
                           <span>Leia Mais</span>
