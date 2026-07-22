@@ -150,13 +150,18 @@ export function prerenderBlogArticlesPlugin() {
         return;
       }
       const articles = parseArticles(src);
+      console.log(`[prerender-blog] parsed ${articles.length} articles`);
       if (articles.length === 0) return;
 
       const indexEntry = bundle["index.html"];
-      if (!indexEntry || indexEntry.type !== "asset") return;
+      if (!indexEntry || indexEntry.type !== "asset") {
+        console.warn("[prerender-blog] index.html not found in bundle; keys:", Object.keys(bundle).filter((k) => k.endsWith(".html")));
+        return;
+      }
       const baseHtml = String(indexEntry.source);
 
       const assetMap = buildAssetMap(bundle);
+      console.log(`[prerender-blog] asset map size: ${assetMap.size}`);
 
       for (const article of articles) {
         const canonical = `${SITE_URL}/blog/${article.slug}`;
