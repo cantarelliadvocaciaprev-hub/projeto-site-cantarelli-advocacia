@@ -5,6 +5,7 @@ import fs from "fs";
 import crypto from "crypto";
 import { componentTagger } from "lovable-tagger";
 import { imagetools } from "vite-imagetools";
+import { prerenderBlogArticlesPlugin } from "./scripts/prerender-blog-articles.mjs";
 
 // Builds a content manifest (version.json) from the blog data source.
 // This marker is emitted into the build output so the live site exposes a
@@ -75,6 +76,7 @@ export default defineConfig(({ mode }) => ({
     react(),
     imagetools(),
     contentVersionPlugin(),
+    prerenderBlogArticlesPlugin(),
     mode === "development" && componentTagger(),
   ].filter(Boolean),
   resolve: {
