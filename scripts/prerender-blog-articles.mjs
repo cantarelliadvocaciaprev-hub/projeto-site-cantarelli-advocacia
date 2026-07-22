@@ -123,7 +123,7 @@ function buildHeadBlock(article, ogImageUrl, canonical) {
 // Build map: source basename ("foo.jpg") -> emitted fileName ("assets/foo-<hash>.jpg")
 function buildAssetMap(bundle) {
   const map = new Map();
-  const assetRe = /^(?:.*\/)?(.+?)-[A-Za-z0-9_-]{6,}\.(jpg|jpeg|png|webp|avif)$/i;
+  const assetRe = /^(?:.*\/)?(.+)-[A-Za-z0-9_-]{8}\.(jpg|jpeg|png|webp|avif)$/i;
   for (const fileName of Object.keys(bundle)) {
     const info = bundle[fileName];
     if (info.type !== "asset") continue;
