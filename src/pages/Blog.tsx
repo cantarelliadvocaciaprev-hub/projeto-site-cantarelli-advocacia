@@ -192,7 +192,7 @@ const Blog = () => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Pesquisar..."
+                placeholder="Pesquisar por tema, palavra-chave ou conteúdo..."
                 value={search}
                 onChange={(e) => handleSearch(e.target.value)}
                 className="w-full pl-10 pr-10 py-3 rounded-xl border border-border bg-card text-foreground font-body text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-primary/40 transition-all"
