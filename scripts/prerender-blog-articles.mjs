@@ -139,10 +139,21 @@ function buildAssetMap(bundle) {
 
 export function prerenderBlogArticlesPlugin() {
   const articlesPath = path.resolve(process.cwd(), "src/data/blogArticles.ts");
+  let outDir = "dist";
+  let bundleAssetMap = new Map();
+
   return {
     name: "prerender-blog-articles",
     apply: "build",
+    configResolved(config) {
+      outDir = config.build?.outDir || "dist";
+    },
+    // Capture hashed asset filenames while the bundle exists in memory.
     generateBundle(_options, bundle) {
+      bundleAssetMap = buildAssetMap(bundle);
+    },
+    // Files are on disk here — clone dist/index.html into per-article HTMLs.
+    writeBundle() {
       let src;
       try {
         src = fs.readFileSync(articlesPath, "utf-8");
@@ -150,24 +161,24 @@ export function prerenderBlogArticlesPlugin() {
         return;
       }
       const articles = parseArticles(src);
-      console.log(`[prerender-blog] parsed ${articles.length} articles`);
       if (articles.length === 0) return;
 
-      const indexEntry = bundle["index.html"];
-      if (!indexEntry || indexEntry.type !== "asset") {
-        console.warn("[prerender-blog] index.html not found in bundle; keys:", Object.keys(bundle).filter((k) => k.endsWith(".html")));
+      const absOutDir = path.resolve(process.cwd(), outDir);
+      const indexPath = path.join(absOutDir, "index.html");
+      let baseHtml;
+      try {
+        baseHtml = fs.readFileSync(indexPath, "utf-8");
+      } catch {
+        console.warn("[prerender-blog] dist/index.html missing; skipping");
         return;
       }
-      const baseHtml = String(indexEntry.source);
 
-      const assetMap = buildAssetMap(bundle);
-      console.log(`[prerender-blog] asset map size: ${assetMap.size}`);
-
+      let written = 0;
       for (const article of articles) {
         const canonical = `${SITE_URL}/blog/${article.slug}`;
         let ogImageUrl = `${SITE_URL}/og-default.jpg`;
         if (article.imageBasename) {
-          const built = assetMap.get(article.imageBasename);
+          const built = bundleAssetMap.get(article.imageBasename);
           if (built) ogImageUrl = `${SITE_URL}/${built}`;
         }
 
@@ -176,12 +187,13 @@ export function prerenderBlogArticlesPlugin() {
           `${buildHeadBlock(article, ogImageUrl, canonical)}</head>`,
         );
 
-        this.emitFile({
-          type: "asset",
-          fileName: `blog/${article.slug}/index.html`,
-          source: html,
-        });
+        const dest = path.join(absOutDir, "blog", article.slug, "index.html");
+        fs.mkdirSync(path.dirname(dest), { recursive: true });
+        fs.writeFileSync(dest, html);
+        written += 1;
       }
+      console.log(`[prerender-blog] wrote ${written} per-article HTML files`);
     },
   };
 }
+
