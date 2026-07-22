@@ -60,8 +60,10 @@ const ARTICLES_PER_PAGE = 12;
 
 const Blog = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [search, setSearch] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [search, setSearch] = useState(() => searchParams.get("q") ?? "");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(
+    () => searchParams.get("cat")
+  );
 
   const currentPage = Number(searchParams.get("page") || "1");
 
@@ -75,15 +77,19 @@ const Blog = () => {
     if (selectedCategory) {
       list = list.filter((a) => a.category === selectedCategory);
     }
-    if (search.trim()) {
-      const q = search.toLowerCase();
-      list = list.filter(
-        (a) =>
-          a.title.toLowerCase().includes(q) ||
-          a.excerpt.toLowerCase().includes(q) ||
-          a.category.toLowerCase().includes(q) ||
-          a.tags?.some((t) => t.toLowerCase().includes(q))
-      );
+    const q = search.trim();
+    if (q) {
+      // Split into tokens (min 2 chars) — every token must appear (AND search),
+      // matched against the pre-indexed, accent-insensitive text blob.
+      const tokens = normalize(q)
+        .split(/\s+/)
+        .filter((t) => t.length >= 2);
+      if (tokens.length) {
+        list = list.filter((a) => {
+          const idx = searchIndex[a.slug] ?? "";
+          return tokens.every((t) => idx.includes(t));
+        });
+      }
     }
     return list;
   }, [search, selectedCategory]);
