@@ -101,6 +101,388 @@ export interface BlogArticle {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "stf-derruba-idade-minima-aposentadoria-especial-insalubridade-2026",
+    title: "STF Derruba Idade Mínima para Aposentadoria Especial por Insalubridade",
+    excerpt:
+      "O STF afastou a exigência de idade mínima para a aposentadoria especial de trabalhadores expostos a agentes insalubres. Entenda o que muda e quem pode ser beneficiado.",
+    seoTitle: "STF Derruba Idade Mínima Aposentadoria Especial 2026",
+    metaDescription:
+      "Decisão do STF afasta idade mínima para aposentadoria especial por insalubridade. Veja o que muda para trabalhadores expostos a agentes nocivos.",
+    category: "Aposentadoria Especial",
+    tags: [
+      "STF aposentadoria especial",
+      "idade mínima aposentadoria especial",
+      "aposentadoria por insalubridade",
+      "reforma da previdência",
+      "aposentadoria especial 2026",
+      "trabalhador insalubre INSS",
+    ],
+    readTime: "8 min",
+    keyTakeaways: [
+      "O STF afastou a exigência de idade mínima criada pela Reforma da Previdência para a aposentadoria especial por insalubridade",
+      "A decisão beneficia trabalhadores expostos de forma habitual e permanente a agentes nocivos à saúde",
+      "O tempo mínimo de contribuição em atividade especial continua sendo exigido (15, 20 ou 25 anos, conforme o grau de risco)",
+      "Cada caso exige análise da documentação técnica (PPP, LTCAT) para confirmar o direito",
+      "Segurados que tiveram o pedido negado por falta de idade mínima podem reavaliar seu direito",
+    ],
+    lastUpdated: "Julho 2026",
+    image: stfInsalubridadeImg,
+    imageAlt:
+      "Trabalhador industrial com capacete de proteção em frente ao Supremo Tribunal Federal, representando a decisão do STF sobre aposentadoria especial por insalubridade",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "O Supremo Tribunal Federal proferiu uma decisão de grande impacto para trabalhadores expostos a condições insalubres: afastou a exigência de idade mínima para a concessão da aposentadoria especial. A mudança revê um dos pontos mais criticados da Reforma da Previdência (EC 103/2019) e reabre discussões sobre pedidos negados nos últimos anos.",
+      },
+      {
+        type: "heading",
+        text: "O Que Foi Decidido",
+      },
+      {
+        type: "paragraph",
+        text: "O STF entendeu que a criação de idade mínima para a aposentadoria especial não se harmoniza com a natureza do benefício, que existe justamente para proteger quem trabalha em condições prejudiciais à saúde. Com isso, o requisito adicional de idade deixa de ser exigido para o reconhecimento do direito, quando cumpridos os demais requisitos legais.",
+      },
+      {
+        type: "highlight",
+        text: "A decisão não elimina a aposentadoria especial nem reduz suas exigências técnicas: apenas afasta a idade mínima adicional imposta pela Reforma da Previdência.",
+      },
+      {
+        type: "heading",
+        text: "O Que é a Aposentadoria Especial por Insalubridade",
+      },
+      {
+        type: "paragraph",
+        text: "Trata-se do benefício destinado a segurados do INSS que exercem atividade em condições prejudiciais à saúde ou à integridade física, com exposição habitual e permanente a agentes nocivos, como ruído elevado, calor, agentes químicos e biológicos.",
+      },
+      {
+        type: "list",
+        items: [
+          "15 anos de atividade especial para exposição de alto risco",
+          "20 anos para exposição de médio risco",
+          "25 anos para exposição de baixo risco (a maioria dos casos)",
+          "Comprovação da exposição por meio de documentos técnicos (PPP e LTCAT)",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Quem Pode Ser Beneficiado pela Decisão",
+      },
+      {
+        type: "paragraph",
+        text: "Podem se beneficiar trabalhadores que cumprem o tempo mínimo de atividade especial, mas que estavam sendo impedidos de se aposentar por não atingirem a idade mínima criada pela Reforma. Também podem reavaliar seus casos segurados que tiveram pedidos negados por esse motivo.",
+      },
+      {
+        type: "highlight",
+        text: "É essencial revisar a documentação técnica com um advogado previdenciário para saber se, com o novo entendimento do STF, o direito à aposentadoria especial já está garantido.",
+      },
+      {
+        type: "heading",
+        text: "Como Comprovar o Direito",
+      },
+      {
+        type: "paragraph",
+        text: "A comprovação da atividade especial continua exigindo documentação técnica consistente:",
+      },
+      {
+        type: "list",
+        items: [
+          "PPP (Perfil Profissiográfico Previdenciário) atualizado",
+          "LTCAT (Laudo Técnico das Condições Ambientais do Trabalho)",
+          "CTPS e vínculos registrados no CNIS",
+          "Laudos periciais em processos judiciais, quando existentes",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Como a Cantarelli Advocacia Pode Ajudar",
+      },
+      {
+        type: "paragraph",
+        text: "Nosso escritório analisa individualmente a documentação, verifica o enquadramento da atividade e orienta sobre a melhor estratégia — administrativa ou judicial — para garantir o reconhecimento do direito à aposentadoria especial diante da nova decisão do STF.",
+      },
+    ],
+    faq: [
+      {
+        question: "A decisão do STF acabou com a aposentadoria especial?",
+        answer:
+          "Não. A decisão apenas afastou a exigência de idade mínima criada pela Reforma. Os demais requisitos, como tempo mínimo de atividade especial e comprovação da exposição, continuam válidos.",
+      },
+      {
+        question: "Quem teve o pedido negado por falta de idade pode revisar?",
+        answer:
+          "Sim. Segurados que cumpriam o tempo de atividade especial, mas foram barrados pela idade mínima, podem revisar administrativamente ou judicialmente o pedido com base no novo entendimento.",
+      },
+      {
+        question: "Como comprovar a exposição a agentes insalubres?",
+        answer:
+          "A comprovação ocorre principalmente por meio do PPP e do LTCAT, que devem descrever a atividade, os agentes nocivos e a habitualidade e permanência da exposição.",
+      },
+      {
+        question: "A decisão vale para todos os trabalhadores?",
+        answer:
+          "A decisão orienta a análise dos pedidos daqui em diante e pode impactar processos em andamento. A aplicação depende do caso concreto e da análise técnica da atividade.",
+      },
+    ],
+  },
+  {
+    slug: "reforma-previdencia-estudo-idade-67-anos-mei-bonus-maes-2026",
+    title: "Reforma da Previdência em Estudo Prevê Idade Mínima de 67 Anos, MEI Mais Caro e Bônus para Mães",
+    excerpt:
+      "Nova proposta de Reforma da Previdência em discussão prevê idade mínima de 67 anos, aumento da contribuição do MEI e bônus por tempo de contribuição para mães. Entenda os pontos.",
+    seoTitle: "Nova Reforma da Previdência: 67 Anos, MEI e Bônus para Mães",
+    metaDescription:
+      "Proposta em estudo eleva idade mínima para 67 anos, aumenta contribuição do MEI e cria bônus por filho. Veja o que pode mudar e como se preparar.",
+    category: "Reforma da Previdência",
+    tags: [
+      "nova reforma da previdência",
+      "idade mínima 67 anos",
+      "MEI mais caro",
+      "bônus aposentadoria mães",
+      "reforma previdenciária 2026",
+      "planejamento previdenciário",
+    ],
+    readTime: "9 min",
+    keyTakeaways: [
+      "A proposta em estudo prevê elevar a idade mínima para aposentadoria para 67 anos, para homens e mulheres",
+      "A contribuição do MEI pode passar a ser calculada sobre o salário mínimo cheio, encarecendo o pagamento mensal",
+      "Está em análise um bônus por filho, que reduziria o tempo de contribuição exigido para mães",
+      "As mudanças ainda não estão em vigor e dependem de aprovação legislativa",
+      "O planejamento previdenciário é essencial para avaliar o melhor momento de se aposentar diante do cenário",
+    ],
+    lastUpdated: "Julho 2026",
+    image: reforma67MeiImg,
+    imageAlt:
+      "Mesa de reunião com documentos legislativos, livros jurídicos e calculadora, representando a discussão da nova Reforma da Previdência",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "Uma nova proposta de Reforma da Previdência está em estudo no governo federal, com pontos que podem impactar diretamente a vida de trabalhadores da iniciativa privada, MEIs e mães seguradas. Entre as principais mudanças em análise estão a elevação da idade mínima para 67 anos, o aumento da contribuição do MEI e a criação de um bônus por filho para mães.",
+      },
+      {
+        type: "highlight",
+        text: "Nenhuma das mudanças abaixo está em vigor. Trata-se de uma proposta em estudo, que ainda depende de discussão e aprovação pelo Congresso Nacional para produzir efeitos.",
+      },
+      {
+        type: "heading",
+        text: "Idade Mínima de 67 Anos",
+      },
+      {
+        type: "paragraph",
+        text: "Hoje, com base na Reforma de 2019 e suas regras de transição, a idade mínima segue em ampliação gradual. A proposta em estudo prevê fixar a idade mínima de 67 anos para homens e mulheres, o que representaria um aumento significativo em relação ao patamar atual.",
+      },
+      {
+        type: "heading",
+        text: "MEI Mais Caro",
+      },
+      {
+        type: "paragraph",
+        text: "Outra mudança em discussão é o aumento da contribuição previdenciária do Microempreendedor Individual (MEI). A proposta considera cobrar 11% sobre o salário mínimo integral, em vez dos 5% atuais, o que elevaria o valor mensal pago pelos MEIs à Previdência.",
+      },
+      {
+        type: "list",
+        items: [
+          "Aumento do valor mensal fixo pago pelo MEI",
+          "Impacto direto no orçamento de milhões de microempreendedores",
+          "Necessidade de revisar planejamento tributário e previdenciário",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Bônus para Mães",
+      },
+      {
+        type: "paragraph",
+        text: "A proposta prevê um bônus previdenciário por filho, que reduziria o tempo de contribuição exigido para mães seguradas. O objetivo é reconhecer o impacto da maternidade na trajetória contributiva feminina, mecanismo já adotado em outros países.",
+      },
+      {
+        type: "highlight",
+        text: "Ainda não há definição sobre quantos meses ou anos seriam concedidos por filho, nem sobre o número máximo de filhos considerados no bônus.",
+      },
+      {
+        type: "heading",
+        text: "O Que Isso Significa Para Quem Está Perto de se Aposentar",
+      },
+      {
+        type: "paragraph",
+        text: "Segurados que já cumpriram, ou estão próximos de cumprir, os requisitos das regras atuais devem redobrar a atenção. Direitos adquiridos até a data de eventual promulgação de uma nova Reforma são preservados, mas o planejamento previdenciário se torna ainda mais importante para escolher o melhor momento e a melhor regra.",
+      },
+      {
+        type: "heading",
+        text: "Como se Preparar",
+      },
+      {
+        type: "list",
+        items: [
+          "Solicite e revise o extrato CNIS para verificar vínculos e contribuições",
+          "Analise as regras de transição vigentes e simule qual é a mais vantajosa",
+          "Avalie o impacto de continuar contribuindo ou de solicitar o benefício agora",
+          "Considere um planejamento previdenciário formal com apoio jurídico",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Como a Cantarelli Advocacia Pode Ajudar",
+      },
+      {
+        type: "paragraph",
+        text: "Diante de um cenário de possíveis mudanças, nosso escritório realiza planejamento previdenciário completo, analisando o CNIS, simulando cenários e indicando a melhor estratégia para proteger seu direito à aposentadoria antes de eventuais novas regras.",
+      },
+    ],
+    faq: [
+      {
+        question: "A idade mínima já subiu para 67 anos?",
+        answer:
+          "Não. Trata-se de uma proposta em estudo. Enquanto não houver aprovação legislativa, valem as regras atuais e as transições da Reforma de 2019.",
+      },
+      {
+        question: "O MEI já vai pagar mais?",
+        answer:
+          "Ainda não. O aumento da contribuição do MEI faz parte da proposta em discussão e depende de aprovação. Até lá, permanece a alíquota atual de 5% do salário mínimo.",
+      },
+      {
+        question: "O bônus por filho será concedido para todas as mães?",
+        answer:
+          "A proposta prevê o bônus para mães seguradas, mas os critérios, o número máximo de filhos considerados e o tempo reduzido por filho ainda serão definidos pelo Congresso.",
+      },
+      {
+        question: "Devo antecipar minha aposentadoria por causa da possível reforma?",
+        answer:
+          "Não existe resposta única. Cada caso exige análise específica: em alguns cenários, aguardar é mais vantajoso; em outros, requerer o benefício agora é a melhor escolha. Um planejamento previdenciário indica o caminho correto.",
+      },
+    ],
+  },
+  {
+    slug: "aposentadoria-especial-agentes-saude-endemias-plenario-2026",
+    title: "Aposentadoria Especial para Agentes de Saúde e Endemias Vai a Plenário",
+    excerpt:
+      "Congresso analisa projeto que garante aposentadoria especial a agentes comunitários de saúde e de endemias. Entenda o que está em jogo, quem se enquadra e os próximos passos.",
+    seoTitle: "Aposentadoria Especial para Agentes de Saúde e Endemias 2026",
+    metaDescription:
+      "Projeto sobre aposentadoria especial de agentes de saúde e endemias vai a Plenário. Saiba quem tem direito, requisitos e como se preparar.",
+    category: "Aposentadoria Especial",
+    tags: [
+      "aposentadoria especial agente de saúde",
+      "aposentadoria agente de endemias",
+      "aposentadoria especial 2026",
+      "agente comunitário de saúde INSS",
+      "aposentadoria por insalubridade",
+      "PEC agente de saúde",
+    ],
+    readTime: "8 min",
+    keyTakeaways: [
+      "O projeto que trata da aposentadoria especial de agentes de saúde e endemias avança para votação em Plenário",
+      "A proposta busca reconhecer a exposição contínua a agentes biológicos, químicos e sociais no trabalho de campo",
+      "Se aprovada, permitirá aposentadoria com menos tempo de contribuição do que a regra comum",
+      "A comprovação do direito continuará dependendo de documentação técnica e do histórico da atividade",
+      "Agentes que já cumpriram longos períodos de atividade devem acompanhar de perto a tramitação",
+    ],
+    lastUpdated: "Julho 2026",
+    image: agentesSaudeEndemiasImg,
+    imageAlt:
+      "Agente comunitária de saúde uniformizada com crachá e maleta visitando residência em comunidade, representando o direito à aposentadoria especial",
+    author: "Thiago Cantarelli",
+    content: [
+      {
+        type: "paragraph",
+        text: "O trabalho dos agentes comunitários de saúde (ACS) e dos agentes de combate às endemias (ACE) é essencial para o SUS. Eles atuam em campo, expostos diariamente a agentes biológicos, químicos e riscos sociais. Um projeto que reconhece esse desgaste e garante aposentadoria especial a essa categoria avançou e caminha para votação em Plenário.",
+      },
+      {
+        type: "heading",
+        text: "O Que Está em Discussão",
+      },
+      {
+        type: "paragraph",
+        text: "A proposta trata do reconhecimento da atividade dos agentes de saúde e de endemias como atividade de risco, o que permitiria a concessão de aposentadoria especial com tempo de contribuição menor que a regra comum, em razão da exposição habitual a agentes nocivos e a situações de risco.",
+      },
+      {
+        type: "highlight",
+        text: "O projeto ainda não foi aprovado. A votação em Plenário é uma etapa importante, mas para produzir efeitos, ele precisa concluir a tramitação legislativa.",
+      },
+      {
+        type: "heading",
+        text: "Por Que a Categoria Reivindica o Benefício",
+      },
+      {
+        type: "list",
+        items: [
+          "Contato frequente com pacientes com doenças transmissíveis",
+          "Exposição a agentes químicos usados no combate a vetores (ex.: dengue, zika)",
+          "Trabalho em campo em áreas de risco social",
+          "Jornadas em condições climáticas adversas e deslocamentos constantes",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Quem Poderia Ser Beneficiado",
+      },
+      {
+        type: "paragraph",
+        text: "Poderiam ser beneficiados os agentes comunitários de saúde e os agentes de combate às endemias vinculados ao SUS, respeitados os requisitos que forem definidos pela legislação final, especialmente o tempo mínimo de atividade e a comprovação da exposição.",
+      },
+      {
+        type: "heading",
+        text: "Como Comprovar o Direito",
+      },
+      {
+        type: "paragraph",
+        text: "Mesmo com a aprovação, o reconhecimento do direito à aposentadoria especial continuará dependendo de documentação técnica e do histórico funcional:",
+      },
+      {
+        type: "list",
+        items: [
+          "PPP (Perfil Profissiográfico Previdenciário) emitido pelo ente público",
+          "LTCAT ou laudos ambientais equivalentes",
+          "Declarações e portarias que descrevam a atividade e a exposição",
+          "Registros de vínculos e tempo trabalhado no CNIS",
+        ],
+      },
+      {
+        type: "highlight",
+        text: "A ausência ou o preenchimento incorreto do PPP é uma das principais causas de negativa do INSS. A revisão da documentação é fundamental.",
+      },
+      {
+        type: "heading",
+        text: "O Que Fazer Agora",
+      },
+      {
+        type: "paragraph",
+        text: "Enquanto o projeto tramita, agentes com longos períodos de atividade devem organizar a documentação, solicitar PPP atualizado e verificar seu histórico contributivo. Caso a proposta seja aprovada, quem já tiver toda a documentação em ordem estará em melhor posição para requerer o benefício.",
+      },
+      {
+        type: "heading",
+        text: "Como a Cantarelli Advocacia Pode Ajudar",
+      },
+      {
+        type: "paragraph",
+        text: "Nosso escritório acompanha as mudanças legislativas e presta orientação individualizada a agentes de saúde e de endemias, analisando documentação, tempo de atividade e possibilidades atuais e futuras de aposentadoria especial.",
+      },
+    ],
+    faq: [
+      {
+        question: "A aposentadoria especial para agentes de saúde já está valendo?",
+        answer:
+          "Ainda não. O projeto está em tramitação e caminha para votação em Plenário. Só produzirá efeitos após aprovação final e publicação da lei.",
+      },
+      {
+        question: "Quem seria beneficiado pela proposta?",
+        answer:
+          "A proposta beneficia agentes comunitários de saúde e agentes de combate às endemias vinculados ao SUS, respeitados os requisitos que a legislação final estabelecer.",
+      },
+      {
+        question: "Já é possível pedir aposentadoria especial nessas atividades?",
+        answer:
+          "Depende do caso. Alguns pedidos já vêm sendo discutidos com base na exposição a agentes biológicos, mas o reconhecimento costuma exigir análise judicial. A nova lei tornaria o direito mais claro e seguro.",
+      },
+      {
+        question: "Que documentos devo guardar agora?",
+        answer:
+          "PPP, LTCAT ou laudos equivalentes, portarias de nomeação e descrição das atividades, além de comprovantes de vínculo e tempo de serviço. Manter tudo organizado facilita a análise futura.",
+      },
+    ],
+  },
+  {
     slug: "motoristas-cobradores-onibus-aposentadoria-especial-stj-2026",
     title: "Motoristas e Cobradores de Ônibus Têm Direito à Aposentadoria Especial, Decide STJ",
     excerpt:
