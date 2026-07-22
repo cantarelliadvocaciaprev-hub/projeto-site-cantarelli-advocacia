@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { Facebook, Linkedin, Link2, Check, Mail, MessageCircle } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { trackShareClick, type ShareNetwork } from "@/lib/shareTracking";
 
 interface ShareButtonsProps {
   title: string;
   url: string;
+  /** Slug do artigo, usado no rastreamento por post. */
+  articleSlug: string;
   /** Compact style for inline placement (e.g. under the title). */
   compact?: boolean;
 }
@@ -15,7 +18,7 @@ const XLogo = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const ShareButtons = ({ title, url, compact = false }: ShareButtonsProps) => {
+const ShareButtons = ({ title, url, articleSlug, compact = false }: ShareButtonsProps) => {
   const [copied, setCopied] = useState(false);
 
   const encodedUrl = encodeURIComponent(url);
@@ -25,33 +28,44 @@ const ShareButtons = ({ title, url, compact = false }: ShareButtonsProps) => {
     `Olha esse artigo da Cantarelli Advocacia:\n\n${title}\n${url}`
   );
 
-  const shares = [
+  const shares: {
+    name: string;
+    network: ShareNetwork;
+    href: string;
+    icon: JSX.Element;
+    className: string;
+  }[] = [
     {
       name: "WhatsApp",
+      network: "whatsapp",
       href: `https://wa.me/?text=${encodedTextWa}`,
       icon: <MessageCircle className="w-4 h-4" />,
       className: "bg-[#25D366] hover:bg-[#20BA5A] text-white border-transparent",
     },
     {
       name: "Facebook",
+      network: "facebook",
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
       icon: <Facebook className="w-4 h-4" />,
       className: "bg-[#1877F2] hover:bg-[#0e63cf] text-white border-transparent",
     },
     {
       name: "X / Twitter",
+      network: "x",
       href: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
       icon: <XLogo className="w-4 h-4" />,
       className: "bg-foreground hover:opacity-90 text-background border-transparent",
     },
     {
       name: "LinkedIn",
+      network: "linkedin",
       href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
       icon: <Linkedin className="w-4 h-4" />,
       className: "bg-[#0A66C2] hover:bg-[#084d95] text-white border-transparent",
     },
     {
       name: "E-mail",
+      network: "email",
       href: `mailto:?subject=${encodedTitle}&body=${encodedEmailBody}`,
       icon: <Mail className="w-4 h-4" />,
       className: "bg-card hover:bg-muted text-foreground border-border",
@@ -59,6 +73,7 @@ const ShareButtons = ({ title, url, compact = false }: ShareButtonsProps) => {
   ];
 
   const handleCopy = async () => {
+    trackShareClick("copy", articleSlug, title);
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
@@ -91,6 +106,7 @@ const ShareButtons = ({ title, url, compact = false }: ShareButtonsProps) => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Compartilhar no ${s.name}`}
+          onClick={() => trackShareClick(s.network, articleSlug, title)}
           className={`inline-flex items-center justify-center w-9 h-9 rounded-full border transition-all hover:scale-105 hover:shadow-md ${s.className}`}
         >
           {s.icon}

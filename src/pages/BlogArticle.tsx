@@ -224,6 +224,7 @@ const BlogArticle = () => {
               <ShareButtons
                 title={article.title}
                 url={`${SITE_URL}/blog/${article.slug}`}
+                articleSlug={article.slug}
               />
             </div>
           </div>
