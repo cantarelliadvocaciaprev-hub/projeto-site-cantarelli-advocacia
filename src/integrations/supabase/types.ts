@@ -44,6 +44,72 @@ export type Database = {
         }
         Relationships: []
       }
+      blog_posts: {
+        Row: {
+          author: string | null
+          body: string
+          category: string
+          created_at: string
+          excerpt: string
+          faq: Json
+          id: string
+          image_alt: string | null
+          image_url: string | null
+          key_takeaways: string[]
+          meta_description: string | null
+          published: boolean
+          published_at: string | null
+          read_time: string
+          seo_title: string | null
+          slug: string
+          tags: string[]
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          author?: string | null
+          body?: string
+          category?: string
+          created_at?: string
+          excerpt?: string
+          faq?: Json
+          id?: string
+          image_alt?: string | null
+          image_url?: string | null
+          key_takeaways?: string[]
+          meta_description?: string | null
+          published?: boolean
+          published_at?: string | null
+          read_time?: string
+          seo_title?: string | null
+          slug: string
+          tags?: string[]
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          author?: string | null
+          body?: string
+          category?: string
+          created_at?: string
+          excerpt?: string
+          faq?: Json
+          id?: string
+          image_alt?: string | null
+          image_url?: string | null
+          key_takeaways?: string[]
+          meta_description?: string | null
+          published?: boolean
+          published_at?: string | null
+          read_time?: string
+          seo_title?: string | null
+          slug?: string
+          tags?: string[]
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       page_view_events: {
         Row: {
           campaign: string | null

@@ -3,7 +3,8 @@ import { useState, useMemo, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Search, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
-import { blogArticles, type BlogArticle } from "@/data/blogArticles";
+import { type BlogArticle } from "@/data/blogArticles";
+import { useAllArticles } from "@/hooks/useAllArticles";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -27,10 +28,6 @@ const buildSearchIndex = (a: BlogArticle) => {
     [a.title, a.excerpt, a.category, (a.tags ?? []).join(" "), bodyText, faqText].join(" ")
   );
 };
-
-const searchIndex: Record<string, string> = Object.fromEntries(
-  blogArticles.map((a) => [a.slug, buildSearchIndex(a)])
-);
 
 const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
@@ -59,6 +56,7 @@ const Highlight = ({ text, term }: { text: string; term: string }) => {
 const ARTICLES_PER_PAGE = 12;
 
 const Blog = () => {
+  const { articles: blogArticles } = useAllArticles();
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(() => searchParams.get("q") ?? "");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(
@@ -67,9 +65,14 @@ const Blog = () => {
 
   const currentPage = Number(searchParams.get("page") || "1");
 
+  const searchIndex = useMemo<Record<string, string>>(
+    () => Object.fromEntries(blogArticles.map((a) => [a.slug, buildSearchIndex(a)])),
+    [blogArticles]
+  );
+
   const categories = useMemo(
     () => Array.from(new Set(blogArticles.map((a) => a.category))),
-    []
+    [blogArticles]
   );
 
   const filtered = useMemo(() => {
@@ -92,7 +95,7 @@ const Blog = () => {
       }
     }
     return list;
-  }, [search, selectedCategory]);
+  }, [search, selectedCategory, blogArticles, searchIndex]);
 
   const totalPages = Math.ceil(filtered.length / ARTICLES_PER_PAGE);
   const safePage = Math.min(Math.max(1, currentPage), totalPages || 1);

@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
-import { blogArticles } from "@/data/blogArticles";
+import { useAllArticles } from "@/hooks/useAllArticles";
 import ArticleFAQ from "@/components/blog/ArticleFAQ";
 import ArticleQuestionForm from "@/components/blog/ArticleQuestionForm";
 import RelatedArticles from "@/components/blog/RelatedArticles";
@@ -31,11 +31,16 @@ const truncate = (text: string, max = 158) => {
 
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
-  const article = blogArticles.find((a) => a.slug === slug);
+  const { articles, isLoading } = useAllArticles();
+  const article = articles.find((a) => a.slug === slug);
 
   useEffect(() => {
     if (article) trackArticleView(article.slug, article.title);
   }, [article]);
+
+  if (!article && isLoading) {
+    return <div className="min-h-screen bg-background" />;
+  }
 
   if (!article) {
     return (
