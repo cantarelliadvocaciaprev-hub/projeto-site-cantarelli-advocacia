@@ -14,6 +14,7 @@ import DeployCheck from "./pages/DeployCheck";
 import ReviewStats from "./pages/ReviewStats";
 import ArticleStats from "./pages/ArticleStats";
 import Dashboard from "./pages/Dashboard";
+import BlogAdmin from "./pages/BlogAdmin";
 import NotFound from "./pages/NotFound";
 import PageViewTracker from "./components/PageViewTracker";
 
@@ -39,6 +40,7 @@ const App = () => (
               <Route path="/admin/avaliacoes" element={<ReviewStats />} />
               <Route path="/admin/artigos" element={<ArticleStats />} />
               <Route path="/admin/painel" element={<Dashboard />} />
+              <Route path="/admin/blog" element={<BlogAdmin />} />
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
