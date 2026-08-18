@@ -130,19 +130,22 @@ const Dashboard = () => {
               <Card className="p-5">
                 <div className="flex items-center gap-2 text-muted-foreground mb-2">
                   <Eye className="w-4 h-4" />
-                  <span className="text-xs font-body uppercase">Visitas totais</span>
+                  <span className="text-xs font-body uppercase">Visitas no site</span>
                 </div>
-                <p className="text-2xl font-display font-bold">{stats.totals.views}</p>
+                <p className="text-2xl font-display font-bold">{stats.totals.siteVisits}</p>
                 <p className="text-xs text-muted-foreground font-body mt-1">
-                  {stats.totals.views7d} nos últimos 7 dias
+                  {stats.totals.siteVisits7d} nos últimos 7 dias
                 </p>
               </Card>
               <Card className="p-5">
                 <div className="flex items-center gap-2 text-muted-foreground mb-2">
                   <Eye className="w-4 h-4" />
-                  <span className="text-xs font-body uppercase">Últimos 30 dias</span>
+                  <span className="text-xs font-body uppercase">Leituras de artigos</span>
                 </div>
-                <p className="text-2xl font-display font-bold">{stats.totals.views30d}</p>
+                <p className="text-2xl font-display font-bold">{stats.totals.views}</p>
+                <p className="text-xs text-muted-foreground font-body mt-1">
+                  {stats.totals.views30d} nos últimos 30 dias
+                </p>
               </Card>
               <Card className="p-5">
                 <div className="flex items-center gap-2 text-muted-foreground mb-2">
