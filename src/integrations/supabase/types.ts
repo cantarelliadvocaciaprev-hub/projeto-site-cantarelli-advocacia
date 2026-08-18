@@ -44,6 +44,45 @@ export type Database = {
         }
         Relationships: []
       }
+      page_view_events: {
+        Row: {
+          campaign: string | null
+          created_at: string
+          device_type: string | null
+          id: string
+          medium: string | null
+          page_title: string | null
+          path: string
+          referrer: string | null
+          source: string
+          user_agent: string | null
+        }
+        Insert: {
+          campaign?: string | null
+          created_at?: string
+          device_type?: string | null
+          id?: string
+          medium?: string | null
+          page_title?: string | null
+          path: string
+          referrer?: string | null
+          source?: string
+          user_agent?: string | null
+        }
+        Update: {
+          campaign?: string | null
+          created_at?: string
+          device_type?: string | null
+          id?: string
+          medium?: string | null
+          page_title?: string | null
+          path?: string
+          referrer?: string | null
+          source?: string
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
       review_click_events: {
         Row: {
           created_at: string

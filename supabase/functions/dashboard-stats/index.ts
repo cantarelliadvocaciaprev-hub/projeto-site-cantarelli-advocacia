@@ -30,7 +30,7 @@ Deno.serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
     );
 
-    const [views, shares, reviews] = await Promise.all([
+    const [views, shares, reviews, pageViews] = await Promise.all([
       supabase
         .from("article_view_events")
         .select("article_slug, article_title, device_type, referrer, created_at"),
@@ -38,11 +38,15 @@ Deno.serve(async (req) => {
         .from("share_click_events")
         .select("article_slug, article_title, network, device_type, created_at"),
       supabase.from("review_click_events").select("event_type, device_type, created_at"),
+      supabase
+        .from("page_view_events")
+        .select("path, page_title, source, medium, campaign, device_type, created_at"),
     ]);
 
     if (views.error) throw views.error;
     if (shares.error) throw shares.error;
     if (reviews.error) throw reviews.error;
+    if (pageViews.error) throw pageViews.error;
 
     const now = Date.now();
     const day = 24 * 60 * 60 * 1000;
@@ -111,6 +115,43 @@ Deno.serve(async (req) => {
     const reviewsTotal = (reviews.data ?? []).length;
     const reviews7d = (reviews.data ?? []).filter((r) => within(r.created_at, 7)).length;
 
+    // Visitas de todas as páginas do site, com origem do tráfego
+    const sources = new Map<string, { source: string; total: number; last7d: number }>();
+    const campaigns: Record<string, number> = {};
+    const paths = new Map<
+      string,
+      { path: string; title: string | null; visits: number; visits7d: number }
+    >();
+    let siteVisits = 0;
+    let siteVisits7d = 0;
+
+    for (const pv of pageViews.data ?? []) {
+      siteVisits += 1;
+      const recent = within(pv.created_at, 7);
+      if (recent) siteVisits7d += 1;
+
+      const key = pv.source || "Direto";
+      const s = sources.get(key) ?? { source: key, total: 0, last7d: 0 };
+      s.total += 1;
+      if (recent) s.last7d += 1;
+      sources.set(key, s);
+
+      if (pv.campaign) campaigns[pv.campaign] = (campaigns[pv.campaign] ?? 0) + 1;
+
+      const p = paths.get(pv.path) ?? {
+        path: pv.path,
+        title: pv.page_title ?? null,
+        visits: 0,
+        visits7d: 0,
+      };
+      if (!p.title && pv.page_title) p.title = pv.page_title;
+      p.visits += 1;
+      if (recent) p.visits7d += 1;
+      paths.set(pv.path, p);
+
+      if (pv.device_type && pv.device_type in devices) devices[pv.device_type] += 1;
+    }
+
     const allPages = [...pages.values()].sort((a, b) => b.views - a.views);
     const totals = allPages.reduce(
       (acc, p) => ({
@@ -125,10 +166,23 @@ Deno.serve(async (req) => {
     const shares7d = (shares.data ?? []).filter((s) => within(s.created_at, 7)).length;
 
     return json({
-      totals: { ...totals, shares7d, reviewsTotal, reviews7d },
+      totals: {
+        ...totals,
+        shares7d,
+        reviewsTotal,
+        reviews7d,
+        siteVisits,
+        siteVisits7d,
+      },
       pages: allPages.slice(0, 50),
       sharesByNetwork,
       devices,
+      sources: [...sources.values()].sort((a, b) => b.total - a.total),
+      campaigns: Object.entries(campaigns)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([campaign, count]) => ({ campaign, count })),
+      topPaths: [...paths.values()].sort((a, b) => b.visits - a.visits).slice(0, 30),
       referrers: Object.entries(referrers)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10)

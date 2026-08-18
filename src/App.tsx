@@ -15,6 +15,8 @@ import ReviewStats from "./pages/ReviewStats";
 import ArticleStats from "./pages/ArticleStats";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
+import PageViewTracker from "./components/PageViewTracker";
+
 
 const queryClient = new QueryClient();
 
@@ -26,6 +28,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <PageViewTracker />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
