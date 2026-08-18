@@ -166,10 +166,23 @@ Deno.serve(async (req) => {
     const shares7d = (shares.data ?? []).filter((s) => within(s.created_at, 7)).length;
 
     return json({
-      totals: { ...totals, shares7d, reviewsTotal, reviews7d },
+      totals: {
+        ...totals,
+        shares7d,
+        reviewsTotal,
+        reviews7d,
+        siteVisits,
+        siteVisits7d,
+      },
       pages: allPages.slice(0, 50),
       sharesByNetwork,
       devices,
+      sources: [...sources.values()].sort((a, b) => b.total - a.total),
+      campaigns: Object.entries(campaigns)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 10)
+        .map(([campaign, count]) => ({ campaign, count })),
+      topPaths: [...paths.values()].sort((a, b) => b.visits - a.visits).slice(0, 30),
       referrers: Object.entries(referrers)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10)
