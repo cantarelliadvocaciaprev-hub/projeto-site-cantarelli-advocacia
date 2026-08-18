@@ -94,7 +94,9 @@ export function detectTrafficSource(
 export function trackPageView(path: string, pageTitle?: string) {
   try {
     const { source, medium, campaign, referrer } = detectTrafficSource();
-    void supabase.from("page_view_events").insert({
+    void supabase
+      .from("page_view_events")
+      .insert({
       path,
       page_title: pageTitle ?? (typeof document !== "undefined" ? document.title : null),
       source,
@@ -102,8 +104,12 @@ export function trackPageView(path: string, pageTitle?: string) {
       campaign,
       referrer,
       device_type: getDeviceType(),
-      user_agent: typeof navigator !== "undefined" ? navigator.userAgent : null,
-    });
+        user_agent: typeof navigator !== "undefined" ? navigator.userAgent : null,
+      })
+      .then(
+        () => {},
+        () => {},
+      );
   } catch {
     // silencioso
   }
