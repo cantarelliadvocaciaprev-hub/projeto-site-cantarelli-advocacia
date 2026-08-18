@@ -97,13 +97,13 @@ export function trackPageView(path: string, pageTitle?: string) {
     void supabase
       .from("page_view_events")
       .insert({
-      path,
-      page_title: pageTitle ?? (typeof document !== "undefined" ? document.title : null),
-      source,
-      medium,
-      campaign,
-      referrer,
-      device_type: getDeviceType(),
+        path,
+        page_title: pageTitle ?? (typeof document !== "undefined" ? document.title : null),
+        source,
+        medium,
+        campaign,
+        referrer,
+        device_type: getDeviceType(),
         user_agent: typeof navigator !== "undefined" ? navigator.userAgent : null,
       })
       .then(
