@@ -246,24 +246,96 @@ const Dashboard = () => {
               </Card>
 
               <Card className="p-5">
-                <h2 className="font-display font-semibold mb-4">Origem do tráfego</h2>
-                {stats.referrers.length === 0 ? (
-                  <p className="text-muted-foreground font-body text-sm">Sem dados ainda.</p>
+                <h2 className="font-display font-semibold mb-4">Campanhas (UTM)</h2>
+                {stats.campaigns.length === 0 ? (
+                  <p className="text-muted-foreground font-body text-sm">Sem campanhas ainda.</p>
                 ) : (
                   <ul className="space-y-2 font-body text-sm">
-                    {stats.referrers.map((r) => (
-                      <li key={r.source} className="flex items-center justify-between gap-2">
-                        <span className="flex items-center gap-2 truncate">
-                          <Globe className="w-4 h-4 text-muted-foreground shrink-0" />
-                          <span className="truncate">{r.source}</span>
-                        </span>
-                        <strong>{r.count}</strong>
+                    {stats.campaigns.map((c) => (
+                      <li key={c.campaign} className="flex items-center justify-between gap-2">
+                        <span className="truncate">{c.campaign}</span>
+                        <strong>{c.count}</strong>
                       </li>
                     ))}
                   </ul>
                 )}
               </Card>
             </div>
+
+            <Card className="p-5 sm:p-6">
+              <h2 className="font-display font-semibold mb-1">Origem do tráfego</h2>
+              <p className="text-xs text-muted-foreground font-body mb-4">
+                De onde os visitantes chegam (Google, Facebook, WhatsApp, direto...).
+              </p>
+              {stats.sources.length === 0 ? (
+                <p className="text-muted-foreground font-body text-sm">
+                  Sem dados ainda — as visitas começam a ser registradas após a publicação.
+                </p>
+              ) : (
+                <ul className="space-y-3 font-body text-sm">
+                  {stats.sources.map((s) => {
+                    const pct = stats.totals.siteVisits
+                      ? Math.round((s.total / stats.totals.siteVisits) * 100)
+                      : 0;
+                    return (
+                      <li key={s.source}>
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <span className="flex items-center gap-2 truncate">
+                            <Globe className="w-4 h-4 text-muted-foreground shrink-0" />
+                            <span className="truncate">{s.source}</span>
+                          </span>
+                          <span className="text-muted-foreground shrink-0">
+                            {s.last7d} em 7d · <strong className="text-foreground">{s.total}</strong>{" "}
+                            ({pct}%)
+                          </span>
+                        </div>
+                        <div className="h-2 rounded bg-muted overflow-hidden">
+                          <div className="h-full bg-primary" style={{ width: `${pct}%` }} />
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </Card>
+
+            <Card className="p-5 sm:p-6">
+              <h2 className="font-display font-semibold mb-4">Páginas do site mais visitadas</h2>
+              {stats.topPaths.length === 0 ? (
+                <p className="text-muted-foreground font-body text-sm">Sem dados ainda.</p>
+              ) : (
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm font-body">
+                    <thead>
+                      <tr className="text-left text-muted-foreground border-b border-border">
+                        <th className="py-2 pr-4">Página</th>
+                        <th className="py-2 px-2 text-right">Visitas</th>
+                        <th className="py-2 pl-2 text-right">7d</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {stats.topPaths.map((p) => (
+                        <tr key={p.path} className="border-b border-border/50">
+                          <td className="py-2 pr-4">
+                            <a
+                              href={p.path}
+                              className="hover:underline text-foreground"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {p.title || p.path}
+                            </a>
+                            <span className="block text-xs text-muted-foreground">{p.path}</span>
+                          </td>
+                          <td className="py-2 px-2 text-right font-semibold">{p.visits}</td>
+                          <td className="py-2 pl-2 text-right">{p.visits7d}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </Card>
 
             <Card className="p-5 sm:p-6">
               <h2 className="font-display font-semibold mb-4">Páginas mais visitadas</h2>
