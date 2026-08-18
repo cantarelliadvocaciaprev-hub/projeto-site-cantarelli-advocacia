@@ -33,10 +33,15 @@ type Stats = {
     shares7d: number;
     reviewsTotal: number;
     reviews7d: number;
+    siteVisits: number;
+    siteVisits7d: number;
   };
   pages: PageRow[];
   sharesByNetwork: Record<string, number>;
   devices: Record<string, number>;
+  sources: { source: string; total: number; last7d: number }[];
+  campaigns: { campaign: string; count: number }[];
+  topPaths: { path: string; title: string | null; visits: number; visits7d: number }[];
   referrers: { source: string; count: number }[];
   daily: { date: string; views: number; shares: number }[];
 };
