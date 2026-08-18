@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Clock, Shield, Share2, Lightbulb, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,7 @@ import ArticleQuestionForm from "@/components/blog/ArticleQuestionForm";
 import RelatedArticles from "@/components/blog/RelatedArticles";
 import ArticleSchema from "@/components/blog/ArticleSchema";
 import ShareButtons from "@/components/blog/ShareButtons";
+import { trackArticleView } from "@/lib/articleTracking";
 
 const WHATSAPP_URL = "https://wa.me/5581983421727?text=Olá,%20li%20um%20artigo%20no%20blog%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.";
 const SITE_URL = "https://cantarelliadvocacia.com.br";
@@ -30,6 +32,10 @@ const truncate = (text: string, max = 158) => {
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = blogArticles.find((a) => a.slug === slug);
+
+  useEffect(() => {
+    if (article) trackArticleView(article.slug, article.title);
+  }, [article]);
 
   if (!article) {
     return (

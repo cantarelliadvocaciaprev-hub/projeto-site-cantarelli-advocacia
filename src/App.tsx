@@ -12,6 +12,7 @@ import BlogArticle from "./pages/BlogArticle";
 import BlogPage from "./pages/Blog";
 import DeployCheck from "./pages/DeployCheck";
 import ReviewStats from "./pages/ReviewStats";
+import ArticleStats from "./pages/ArticleStats";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/blog/:slug" element={<BlogArticle />} />
               <Route path="/verificacao-deploy" element={<DeployCheck />} />
               <Route path="/admin/avaliacoes" element={<ReviewStats />} />
+              <Route path="/admin/artigos" element={<ArticleStats />} />
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
