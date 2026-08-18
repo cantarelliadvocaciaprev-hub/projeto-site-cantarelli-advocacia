@@ -30,7 +30,7 @@ Deno.serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
     );
 
-    const [views, shares, reviews] = await Promise.all([
+    const [views, shares, reviews, pageViews] = await Promise.all([
       supabase
         .from("article_view_events")
         .select("article_slug, article_title, device_type, referrer, created_at"),
@@ -38,11 +38,15 @@ Deno.serve(async (req) => {
         .from("share_click_events")
         .select("article_slug, article_title, network, device_type, created_at"),
       supabase.from("review_click_events").select("event_type, device_type, created_at"),
+      supabase
+        .from("page_view_events")
+        .select("path, page_title, source, medium, campaign, device_type, created_at"),
     ]);
 
     if (views.error) throw views.error;
     if (shares.error) throw shares.error;
     if (reviews.error) throw reviews.error;
+    if (pageViews.error) throw pageViews.error;
 
     const now = Date.now();
     const day = 24 * 60 * 60 * 1000;
