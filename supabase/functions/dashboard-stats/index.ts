@@ -115,6 +115,43 @@ Deno.serve(async (req) => {
     const reviewsTotal = (reviews.data ?? []).length;
     const reviews7d = (reviews.data ?? []).filter((r) => within(r.created_at, 7)).length;
 
+    // Visitas de todas as páginas do site, com origem do tráfego
+    const sources = new Map<string, { source: string; total: number; last7d: number }>();
+    const campaigns: Record<string, number> = {};
+    const paths = new Map<
+      string,
+      { path: string; title: string | null; visits: number; visits7d: number }
+    >();
+    let siteVisits = 0;
+    let siteVisits7d = 0;
+
+    for (const pv of pageViews.data ?? []) {
+      siteVisits += 1;
+      const recent = within(pv.created_at, 7);
+      if (recent) siteVisits7d += 1;
+
+      const key = pv.source || "Direto";
+      const s = sources.get(key) ?? { source: key, total: 0, last7d: 0 };
+      s.total += 1;
+      if (recent) s.last7d += 1;
+      sources.set(key, s);
+
+      if (pv.campaign) campaigns[pv.campaign] = (campaigns[pv.campaign] ?? 0) + 1;
+
+      const p = paths.get(pv.path) ?? {
+        path: pv.path,
+        title: pv.page_title ?? null,
+        visits: 0,
+        visits7d: 0,
+      };
+      if (!p.title && pv.page_title) p.title = pv.page_title;
+      p.visits += 1;
+      if (recent) p.visits7d += 1;
+      paths.set(pv.path, p);
+
+      if (pv.device_type && pv.device_type in devices) devices[pv.device_type] += 1;
+    }
+
     const allPages = [...pages.values()].sort((a, b) => b.views - a.views);
     const totals = allPages.reduce(
       (acc, p) => ({
