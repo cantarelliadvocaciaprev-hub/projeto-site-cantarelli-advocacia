@@ -13,6 +13,7 @@ import BlogPage from "./pages/Blog";
 import DeployCheck from "./pages/DeployCheck";
 import ReviewStats from "./pages/ReviewStats";
 import ArticleStats from "./pages/ArticleStats";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
