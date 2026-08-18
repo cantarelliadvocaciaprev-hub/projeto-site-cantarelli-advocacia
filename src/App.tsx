@@ -13,6 +13,7 @@ import BlogPage from "./pages/Blog";
 import DeployCheck from "./pages/DeployCheck";
 import ReviewStats from "./pages/ReviewStats";
 import ArticleStats from "./pages/ArticleStats";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
               <Route path="/verificacao-deploy" element={<DeployCheck />} />
               <Route path="/admin/avaliacoes" element={<ReviewStats />} />
               <Route path="/admin/artigos" element={<ArticleStats />} />
+              <Route path="/admin/painel" element={<Dashboard />} />
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
