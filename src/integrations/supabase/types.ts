@@ -14,6 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
+      article_view_events: {
+        Row: {
+          article_slug: string
+          article_title: string | null
+          created_at: string
+          device_type: string | null
+          id: string
+          referrer: string | null
+          user_agent: string | null
+        }
+        Insert: {
+          article_slug: string
+          article_title?: string | null
+          created_at?: string
+          device_type?: string | null
+          id?: string
+          referrer?: string | null
+          user_agent?: string | null
+        }
+        Update: {
+          article_slug?: string
+          article_title?: string | null
+          created_at?: string
+          device_type?: string | null
+          id?: string
+          referrer?: string | null
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
       review_click_events: {
         Row: {
           created_at: string
