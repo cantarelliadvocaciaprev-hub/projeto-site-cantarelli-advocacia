@@ -42,7 +42,7 @@
     "@radix-ui/react-toggle": "^1.1.9",
     "@radix-ui/react-toggle-group": "^1.1.10",
     "@radix-ui/react-tooltip": "^1.2.7",
-    "@supabase/supabase-js": "^2.91.0",
+    "@supabase/supabase-js": "^2.112.4",
     "@tanstack/react-query": "^5.83.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -92,5 +92,11 @@
     "vite": "^5.4.19",
     "vite-imagetools": "^10.0.0",
     "vitest": "^3.2.4"
+  },
+  "overrides": {
+    "ws": "^8.21.3"
+  },
+  "resolutions": {
+    "ws": "^8.21.3"
   }
 }
