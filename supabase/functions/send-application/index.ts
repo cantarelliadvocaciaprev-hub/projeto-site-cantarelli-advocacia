@@ -39,6 +39,42 @@ const escapeHtml = (s: string): string =>
    .replace(/"/g, '&quot;')
    .replace(/'/g, '&#039;');
 
+const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
+const SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+
+const hashIp = async (ip: string): Promise<string> => {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(ip));
+  return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
+};
+
+/** Returns true when the caller exceeded the allowed number of submissions. */
+const isRateLimited = async (ipHash: string): Promise<boolean> => {
+  const headers = {
+    apikey: SERVICE_ROLE_KEY,
+    Authorization: `Bearer ${SERVICE_ROLE_KEY}`,
+    "Content-Type": "application/json",
+  };
+  const since = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+  try {
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/application_send_log?select=id&ip_hash=eq.${ipHash}&created_at=gte.${since}`,
+      { headers: { ...headers, Prefer: "count=exact", Range: "0-0" } }
+    );
+    const range = res.headers.get("content-range") ?? "";
+    const total = Number(range.split("/")[1] ?? "0");
+    if (total >= 3) return true;
+
+    await fetch(`${SUPABASE_URL}/rest/v1/application_send_log`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify({ ip_hash: ipHash }),
+    });
+  } catch (e) {
+    console.error("Rate limit check failed:", e);
+  }
+  return false;
+};
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -53,7 +89,20 @@ serve(async (req) => {
       );
     }
 
+    // Abuse protection: max 3 submissions per IP per hour
+    const ip =
+      req.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
+      req.headers.get("cf-connecting-ip") ||
+      "unknown";
+    if (await isRateLimited(await hashIp(ip))) {
+      return new Response(
+        JSON.stringify({ error: "Muitas tentativas. Tente novamente mais tarde." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     const data: ApplicationData = await req.json();
+
 
     // Validate required fields
     if (!data.nome || !data.email || !data.telefone || !data.area) {
