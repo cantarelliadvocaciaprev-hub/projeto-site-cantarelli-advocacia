@@ -14,6 +14,24 @@ export type Database = {
   }
   public: {
     Tables: {
+      application_send_log: {
+        Row: {
+          created_at: string
+          id: string
+          ip_hash: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          ip_hash: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          ip_hash?: string
+        }
+        Relationships: []
+      }
       article_view_events: {
         Row: {
           article_slug: string
