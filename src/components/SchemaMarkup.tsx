@@ -6,7 +6,7 @@ interface BreadcrumbItem {
 }
 
 interface SchemaMarkupProps {
-  type: "organization" | "legalService" | "webpage" | "jobPosting" | "faqPage";
+  type: "organization" | "legalService" | "website" | "webpage" | "jobPosting" | "faqPage";
   breadcrumbs?: BreadcrumbItem[];
   pageTitle?: string;
   pageDescription?: string;
