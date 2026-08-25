@@ -6,7 +6,7 @@ interface BreadcrumbItem {
 }
 
 interface SchemaMarkupProps {
-  type: "organization" | "legalService" | "webpage" | "jobPosting" | "faqPage";
+  type: "organization" | "legalService" | "website" | "webpage" | "jobPosting" | "faqPage";
   breadcrumbs?: BreadcrumbItem[];
   pageTitle?: string;
   pageDescription?: string;
@@ -194,7 +194,14 @@ const SchemaMarkup = ({
       scripts.push(script);
     };
 
-    // Add schemas based on type
+    // Add schemas based on type.
+    // "website" emits only the WebSite node — used on pages that already
+    // render the richer LegalService node via <LegalServiceSchema />, so the
+    // organization entity is never duplicated in the same document.
+    if (type === "website") {
+      addSchema(webSiteSchema, "schema-website");
+    }
+
     if (type === "organization" || type === "legalService") {
       addSchema(organizationSchema, "schema-organization");
       addSchema(legalServiceSchema, "schema-legal-service");

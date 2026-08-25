@@ -4,6 +4,8 @@
 # Google
 User-agent: Googlebot
 Allow: /
+Disallow: /admin/
+Disallow: /verificacao-deploy
 
 User-agent: Googlebot-Image
 Allow: /
@@ -11,6 +13,8 @@ Allow: /
 # Bing
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
+Disallow: /verificacao-deploy
 
 # Social Media
 User-agent: Twitterbot
@@ -50,6 +54,8 @@ Allow: /
 # Default
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /verificacao-deploy
 
 # Sitemap
 Sitemap: https://cantarelliadvocacia.com.br/sitemap.xml
