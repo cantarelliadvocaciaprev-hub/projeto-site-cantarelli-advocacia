@@ -4,6 +4,8 @@
 # Google
 User-agent: Googlebot
 Allow: /
+Disallow: /admin/
+Disallow: /verificacao-deploy
 
 User-agent: Googlebot-Image
 Allow: /
@@ -11,6 +13,8 @@ Allow: /
 # Bing
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
+Disallow: /verificacao-deploy
 
 # Social Media
 User-agent: Twitterbot
