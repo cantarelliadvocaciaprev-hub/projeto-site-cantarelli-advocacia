@@ -218,7 +218,7 @@ const ContactSkeleton = () => (
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <SchemaMarkup type="legalService" />
+      <SchemaMarkup type="website" />
       <LegalServiceSchema />
       <SkipLinks />
       <Header />
