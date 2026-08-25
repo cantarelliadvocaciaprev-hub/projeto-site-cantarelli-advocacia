@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SEO from "@/components/SEO";
+import BlogListSchema from "@/components/blog/BlogListSchema";
 
 // Pre-compute a normalized, searchable text blob per article (title + excerpt +
 // category + tags + full body + FAQ). Runs once at module load.
@@ -176,6 +177,7 @@ const Blog = () => {
         keywords="blog direito previdenciário, notícias INSS 2026, aposentadoria blog, BPC LOAS artigos, reforma previdenciária"
         canonical="https://cantarelliadvocacia.com.br/blog"
       />
+      <BlogListSchema articles={blogArticles} />
       <Header />
       <main className="pt-24 pb-16 md:pt-28 md:pb-20 bg-background min-h-[80vh]">
         <div className="container mx-auto px-4">
