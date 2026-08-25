@@ -89,10 +89,38 @@ ${colorConfig
 
 const ChartTooltip = RechartsPrimitive.Tooltip;
 
+/**
+ * Recharts v3 no longer exposes `payload`/`label` on the public Tooltip and
+ * Legend prop types (they are injected internally), so the content components
+ * declare them locally with a loose, structural payload shape.
+ */
+type ChartPayloadItem = {
+  dataKey?: string | number;
+  name?: string;
+  value?: number | string;
+  color?: string;
+  payload?: Record<string, unknown> & { fill?: string };
+  [key: string]: unknown;
+};
+
 const ChartTooltipContent = React.forwardRef<
   HTMLDivElement,
-  React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
+  Omit<
+    React.ComponentProps<typeof RechartsPrimitive.Tooltip>,
+    "payload" | "label" | "formatter" | "labelFormatter" | "content" | "ref"
+  > &
     React.ComponentProps<"div"> & {
+      active?: boolean;
+      payload?: ChartPayloadItem[];
+      label?: React.ReactNode;
+      labelFormatter?: (value: React.ReactNode, payload: ChartPayloadItem[]) => React.ReactNode;
+      formatter?: (
+        value: number | string | undefined,
+        name: string,
+        item: ChartPayloadItem,
+        index: number,
+        itemPayload: Record<string, unknown> | undefined,
+      ) => React.ReactNode;
       hideLabel?: boolean;
       hideIndicator?: boolean;
       indicator?: "line" | "dot" | "dashed";
