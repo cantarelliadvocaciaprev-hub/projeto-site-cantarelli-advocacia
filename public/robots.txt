@@ -54,6 +54,8 @@ Allow: /
 # Default
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /verificacao-deploy
 
 # Sitemap
 Sitemap: https://cantarelliadvocacia.com.br/sitemap.xml
