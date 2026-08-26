@@ -80,7 +80,8 @@ function stripConflictingHeadTags(html) {
       /<meta\s+[^>]*?(name|property)\s*=\s*"(?:description|og:title|og:description|og:url|og:type|og:image|twitter:card|twitter:title|twitter:description|twitter:image)"[^>]*>\s*/gi,
       "",
     )
-    .replace(/<link\s+[^>]*?rel\s*=\s*"canonical"[^>]*>\s*/gi, "");
+    .replace(/<link\s+[^>]*?rel\s*=\s*"canonical"[^>]*>\s*/gi, "")
+    .replace(/<link\s+[^>]*?rel\s*=\s*"alternate"[^>]*?hreflang[^>]*>\s*/gi, "");
 }
 
 function buildHeadBlock(article, ogImageUrl, canonical) {
@@ -106,6 +107,8 @@ function buildHeadBlock(article, ogImageUrl, canonical) {
     <title>${escapeAttr(title)}</title>
     <meta name="description" content="${escapeAttr(description)}" />
     <link rel="canonical" href="${escapeAttr(canonical)}" />
+    <link rel="alternate" hreflang="pt-br" href="${escapeAttr(canonical)}" />
+    <link rel="alternate" hreflang="x-default" href="${escapeAttr(canonical)}" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="${escapeAttr(ogTitle)}" />
     <meta property="og:description" content="${escapeAttr(description)}" />
