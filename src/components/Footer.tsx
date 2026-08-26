@@ -155,8 +155,7 @@ const Footer = () => {
               <li>Madalena, Recife – PE</li>
               <li>CEP: 50720-715</li>
               <li className="pt-2">(81) 3049-3799</li>
-              <li>(81) 99544-1368 / (81) 98611-3970 – Comercial</li>
-              <li>(81) 98379-5595 – Comercial</li>
+              <li>(81) 99544-1368 / (81) 98611-3970 / (81) 98379-5595 – Comercial</li>
               <li>(81) 98342-1727 – WhatsApp</li>
               <li>(81) 98392-5828 – WhatsApp</li>
               <li>
