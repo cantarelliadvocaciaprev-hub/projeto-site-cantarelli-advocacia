@@ -72,6 +72,23 @@ const SEO = ({
         linkElement.setAttribute("href", canonical);
         document.head.appendChild(linkElement);
       }
+
+      // hreflang alternates: site is single-language (pt-BR), so each URL
+      // self-references and also serves as x-default for other languages.
+      const setAlternate = (hreflang: string, href: string) => {
+        let el = document.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`);
+        if (!el) {
+          el = document.createElement("link");
+          el.setAttribute("rel", "alternate");
+          el.setAttribute("hreflang", hreflang);
+          document.head.appendChild(el);
+        }
+        el.setAttribute("href", href);
+      };
+
+      setAlternate("pt-br", canonical);
+      setAlternate("x-default", canonical);
+      document.documentElement.setAttribute("lang", "pt-BR");
     }
 
     // Cleanup function to restore default title
