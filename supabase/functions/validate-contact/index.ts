@@ -11,6 +11,8 @@ const officialContacts: Record<string, { name: string; role: string }> = {
   "81995441368": { name: "Equipe Comercial", role: "Atendimento Comercial" },
   "8186113970": { name: "Equipe Comercial", role: "Atendimento Comercial" },
   "81986113970": { name: "Equipe Comercial", role: "Atendimento Comercial" },
+  "81983795595": { name: "Equipe Comercial", role: "Atendimento Comercial" },
+  "8183795595": { name: "Equipe Comercial", role: "Atendimento Comercial" },
   "81987718606": { name: "Setor Financeiro", role: "Atendimento Financeiro" },
   "81983421727": { name: "WhatsApp Oficial", role: "Atendimento WhatsApp" },
   "81983925828": { name: "WhatsApp Oficial", role: "Atendimento WhatsApp" },
