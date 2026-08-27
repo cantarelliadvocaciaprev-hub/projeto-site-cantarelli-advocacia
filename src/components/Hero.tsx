@@ -1,10 +1,13 @@
+import { useState } from "react";
 import { scrollBehavior } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
-import { Shield, Award } from "lucide-react";
+import { Shield, Award, Play } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import { useCountUp } from "@/hooks/useCountUp";
 import ImageWithSkeleton from "@/components/ImageWithSkeleton";
 const Hero = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
   const {
     count: clientsCount,
     elementRef: clientsRef
