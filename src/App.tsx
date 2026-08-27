@@ -33,21 +33,24 @@ const App = () => (
           <Sonner />
           <BrowserRouter>
             <PageViewTracker />
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
-              <Route path="/seguranca" element={<Seguranca />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/blog/:slug" element={<BlogArticle />} />
-              <Route path="/verificacao-deploy" element={<DeployCheck />} />
-              <Route path="/admin/avaliacoes" element={<ReviewStats />} />
-              <Route path="/admin/artigos" element={<ArticleStats />} />
-              <Route path="/admin/painel" element={<Dashboard />} />
-              <Route path="/admin/blog" element={<BlogAdmin />} />
+            <Suspense fallback={null}>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
+                <Route path="/seguranca" element={<Seguranca />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/:slug" element={<BlogArticle />} />
+                <Route path="/verificacao-deploy" element={<DeployCheck />} />
+                <Route path="/admin/avaliacoes" element={<ReviewStats />} />
+                <Route path="/admin/artigos" element={<ArticleStats />} />
+                <Route path="/admin/painel" element={<Dashboard />} />
+                <Route path="/admin/blog" element={<BlogAdmin />} />
 
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+
           </BrowserRouter>
         </TooltipProvider>
       </MotionConfig>
