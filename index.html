@@ -19,19 +19,15 @@
     <!-- AI and LLM Crawler Meta Tags -->
     <meta name="ai-content-declaration" content="This website provides expert legal services in Brazilian Social Security Law (Direito Previdenciário). Primary services include retirement planning, disability benefits, BPC/LOAS assistance, and INSS appeal representation.">
     <meta name="expertise-area" content="Direito Previdenciário, Aposentadoria, BPC LOAS, Planejamento Previdenciário, Revisão da Vida Toda, INSS">
-    <!-- Preload critical above-the-fold images for LCP optimization -->
-    <link rel="preload" as="image" href="/src/assets/hero-background.jpg" fetchpriority="high" />
-    <link rel="preload" as="image" href="/src/assets/logo-transparent.png" />
-    
-    <!-- Preconnect to external resources -->
+    <!-- Preconnect to critical font origins only -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.youtube.com">
-    <link rel="preconnect" href="https://i.ytimg.com">
+    <link rel="dns-prefetch" href="https://i.ytimg.com">
     <link rel="dns-prefetch" href="https://vlibras.gov.br">
-    
-    <!-- Load fonts with display swap for better performance -->
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Load fonts without blocking render -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"></noscript>
 
     
     
@@ -52,20 +48,32 @@
   <meta name="twitter:description" content="Especialistas em Direito Previdenciário em Recife/PE: aposentadorias, BPC LOAS, revisões e defesa contra o INSS. 17+ anos de experiência.">
   <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/gpt-engineer-file-uploads/oAVZtOygXbW2PkAr0aG4IhJcC5c2/uploads/1760713526521-Transparente 7.png">
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel Code (carregado após a página ficar interativa) -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '983535451371486');
-    fbq('track', 'PageView');
+    (function () {
+      var loaded = false;
+      function loadPixel() {
+        if (loaded) return;
+        loaded = true;
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '983535451371486');
+        fbq('track', 'PageView');
+      }
+      ['scroll','pointerdown','keydown','touchstart'].forEach(function (ev) {
+        window.addEventListener(ev, loadPixel, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () { setTimeout(loadPixel, 3500); });
+    })();
   </script>
   <!-- End Meta Pixel Code -->
+
 </head>
 
   <body>
@@ -89,16 +97,33 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- VLibras Widget -->
+    <!-- VLibras Widget (carregado sob demanda, fora do caminho crítico) -->
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
       <div vw-plugin-wrapper>
         <div class="vw-plugin-top-wrapper"></div>
       </div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
+      (function () {
+        function loadVLibras() {
+          var s = document.createElement('script');
+          s.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+          s.async = true;
+          s.onload = function () {
+            if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
+          };
+          document.body.appendChild(s);
+        }
+        window.addEventListener('load', function () {
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadVLibras, { timeout: 5000 });
+          } else {
+            setTimeout(loadVLibras, 3000);
+          }
+        });
+      })();
     </script>
+
   </body>
 </html>

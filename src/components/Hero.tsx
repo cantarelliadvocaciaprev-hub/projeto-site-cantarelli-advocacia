@@ -1,10 +1,13 @@
+import { useState } from "react";
 import { scrollBehavior } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
-import { Shield, Award } from "lucide-react";
+import { Shield, Award, Play } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import { useCountUp } from "@/hooks/useCountUp";
 import ImageWithSkeleton from "@/components/ImageWithSkeleton";
 const Hero = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
   const {
     count: clientsCount,
     elementRef: clientsRef
@@ -110,14 +113,39 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Vídeo à direita */}
+          {/* Vídeo à direita (facade: só carrega o player ao clicar) */}
           <div className="animate-slide-in-left" style={{
           animationDelay: "0.3s"
         }}>
-            <div className="relative rounded-lg overflow-hidden shadow-2xl aspect-video">
-              <iframe className="w-full h-full" src="https://www.youtube.com/embed/VHGLArs8qTI" title="Dr. Thiago Cantarelli - Cantarelli Advocacia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            <div className="relative rounded-lg overflow-hidden shadow-2xl aspect-video bg-muted">
+              {showVideo ? (
+                <iframe className="w-full h-full" src="https://www.youtube.com/embed/VHGLArs8qTI?autoplay=1" title="Dr. Thiago Cantarelli - Cantarelli Advocacia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setShowVideo(true)}
+                  aria-label="Reproduzir vídeo de apresentação do Dr. Thiago Cantarelli"
+                  className="group absolute inset-0 w-full h-full"
+                >
+                  <img
+                    src="https://i.ytimg.com/vi/VHGLArs8qTI/hqdefault.jpg"
+                    alt="Dr. Thiago Cantarelli apresentando a Cantarelli Advocacia"
+                    width={480}
+                    height={360}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute inset-0 flex items-center justify-center bg-background/30 transition-colors group-hover:bg-background/10">
+                    <span className="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground shadow-lg">
+                      <Play className="w-7 h-7 ml-1" />
+                    </span>
+                  </span>
+                </button>
+              )}
             </div>
           </div>
+
         </div>
       </div>
     </section>;
