@@ -5,18 +5,21 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { MotionConfig } from "framer-motion";
+import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
-import TrabalheConosco from "./pages/TrabalheConosco";
-import Seguranca from "./pages/Seguranca";
-import BlogArticle from "./pages/BlogArticle";
-import BlogPage from "./pages/Blog";
-import DeployCheck from "./pages/DeployCheck";
-import ReviewStats from "./pages/ReviewStats";
-import ArticleStats from "./pages/ArticleStats";
-import Dashboard from "./pages/Dashboard";
-import BlogAdmin from "./pages/BlogAdmin";
-import NotFound from "./pages/NotFound";
 import PageViewTracker from "./components/PageViewTracker";
+
+const TrabalheConosco = lazy(() => import("./pages/TrabalheConosco"));
+const Seguranca = lazy(() => import("./pages/Seguranca"));
+const BlogArticle = lazy(() => import("./pages/BlogArticle"));
+const BlogPage = lazy(() => import("./pages/Blog"));
+const DeployCheck = lazy(() => import("./pages/DeployCheck"));
+const ReviewStats = lazy(() => import("./pages/ReviewStats"));
+const ArticleStats = lazy(() => import("./pages/ArticleStats"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
+const BlogAdmin = lazy(() => import("./pages/BlogAdmin"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
 
 
 const queryClient = new QueryClient();
