@@ -3,8 +3,10 @@ import { scrollBehavior } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
 import { Shield, Award, Play } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground640 from "@/assets/hero-background-640.jpg";
+import heroBackground960 from "@/assets/hero-background-960.jpg";
+import heroBackground1280 from "@/assets/hero-background-1280.jpg";
 import { useCountUp } from "@/hooks/useCountUp";
-import ImageWithSkeleton from "@/components/ImageWithSkeleton";
 const Hero = () => {
   const [showVideo, setShowVideo] = useState(false);
 
@@ -27,17 +29,22 @@ const Hero = () => {
   };
   return <section id="home" className="relative min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 z-0">
-        <ImageWithSkeleton 
-          src={heroBackground} 
-          alt="Cantarelli Advocacia - Escritório de Advocacia Previdenciária em Recife especializado em aposentadorias e benefícios do INSS" 
-          className="w-full h-full animate-bg-slide-in"
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
-          enableLazyLoad={false}
-          // @ts-ignore - fetchpriority is valid but not in React types yet
+        <img
+          src={heroBackground960}
+          srcSet={`${heroBackground640} 640w, ${heroBackground960} 960w, ${heroBackground1280} 1280w, ${heroBackground} 1600w`}
+          sizes="100vw"
+          width={1600}
+          height={1066}
+          alt="Cantarelli Advocacia - Escritório de Advocacia Previdenciária em Recife especializado em aposentadorias e benefícios do INSS"
+          loading="eager"
+          decoding="sync"
+          // @ts-ignore - fetchpriority is valid HTML but not in React types yet
           fetchpriority="high"
+          className="absolute inset-0 w-full h-full object-cover object-center animate-bg-slide-in"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
       </div>
+
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
