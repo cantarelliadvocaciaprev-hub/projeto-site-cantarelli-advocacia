@@ -7,7 +7,6 @@ import heroBackground640 from "@/assets/hero-background-640.jpg";
 import heroBackground960 from "@/assets/hero-background-960.jpg";
 import heroBackground1280 from "@/assets/hero-background-1280.jpg";
 import { useCountUp } from "@/hooks/useCountUp";
-import ImageWithSkeleton from "@/components/ImageWithSkeleton";
 const Hero = () => {
   const [showVideo, setShowVideo] = useState(false);
 
