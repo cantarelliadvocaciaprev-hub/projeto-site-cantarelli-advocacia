@@ -112,8 +112,17 @@
           s.async = true;
           s.onload = function () {
             if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
+            // Acessibilidade: o widget injeta imagens sem alt
+            var fixAlt = function () {
+              document.querySelectorAll('[vw] img:not([alt]), img[src*="vlibras.gov.br"]:not([alt])').forEach(function (img) {
+                img.setAttribute('alt', 'VLibras - tradutor de Língua Brasileira de Sinais');
+              });
+            };
+            fixAlt();
+            new MutationObserver(fixAlt).observe(document.body, { childList: true, subtree: true });
           };
           document.body.appendChild(s);
+
         }
         window.addEventListener('load', function () {
           if ('requestIdleCallback' in window) {
