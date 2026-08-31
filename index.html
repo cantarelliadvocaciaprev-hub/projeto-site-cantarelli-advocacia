@@ -106,24 +106,33 @@
     </div>
     <script>
       (function () {
+        // Acessibilidade: o widget VLibras injeta imagens sem alt
+        function fixAlt() {
+          var imgs = document.querySelectorAll('img:not([alt])');
+          for (var i = 0; i < imgs.length; i++) {
+            imgs[i].setAttribute('alt', 'VLibras - tradutor de Língua Brasileira de Sinais');
+          }
+        }
+        function watchAlt() {
+          fixAlt();
+          new MutationObserver(fixAlt).observe(document.documentElement, { childList: true, subtree: true });
+          var tries = 0;
+          var t = setInterval(function () {
+            fixAlt();
+            if (++tries > 20) clearInterval(t);
+          }, 500);
+        }
         function loadVLibras() {
           var s = document.createElement('script');
           s.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
           s.async = true;
           s.onload = function () {
             if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
-            // Acessibilidade: o widget injeta imagens sem alt
-            var fixAlt = function () {
-              document.querySelectorAll('[vw] img:not([alt]), img[src*="vlibras.gov.br"]:not([alt])').forEach(function (img) {
-                img.setAttribute('alt', 'VLibras - tradutor de Língua Brasileira de Sinais');
-              });
-            };
-            fixAlt();
-            new MutationObserver(fixAlt).observe(document.body, { childList: true, subtree: true });
+            watchAlt();
           };
           document.body.appendChild(s);
-
         }
+
         window.addEventListener('load', function () {
           if ('requestIdleCallback' in window) {
             requestIdleCallback(loadVLibras, { timeout: 5000 });
