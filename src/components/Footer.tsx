@@ -252,7 +252,7 @@ const Footer = () => {
           <p className="text-muted-foreground font-body text-sm mb-2">
             © {new Date().getFullYear()} Cantarelli Advocacia. Todos os direitos reservados.
           </p>
-          <p className="text-muted-foreground/70 font-body text-xs">
+          <p className="text-muted-foreground font-body text-xs">
             Cuidando de pessoas, protegendo direitos.
           </p>
         </div>

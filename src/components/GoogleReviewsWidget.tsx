@@ -67,7 +67,7 @@ const Stars = ({ count = 5 }: { count?: number }) => (
     {Array.from({ length: 5 }).map((_, i) => (
       <Star
         key={i}
-        className={`w-4 h-4 ${i < count ? "fill-yellow-400 text-yellow-400" : "text-muted-foreground/30"}`}
+        className={`w-4 h-4 ${i < count ? "fill-yellow-400 text-yellow-400" : "text-muted-foreground/60"}`}
       />
     ))}
   </div>

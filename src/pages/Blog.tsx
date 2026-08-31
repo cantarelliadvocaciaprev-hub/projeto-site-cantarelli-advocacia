@@ -344,7 +344,7 @@ const Blog = () => {
             </>
           ) : (
             <div className="text-center py-16 max-w-md mx-auto">
-              <Search className="w-12 h-12 text-muted-foreground/40 mx-auto mb-4" />
+              <Search className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
               <h2 className="text-lg font-display font-bold text-foreground mb-2">
                 Nenhum artigo encontrado
               </h2>
