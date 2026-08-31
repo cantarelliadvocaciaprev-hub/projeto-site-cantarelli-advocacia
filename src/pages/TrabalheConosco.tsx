@@ -384,7 +384,7 @@ const TrabalheConosco = () => {
                     }
                     required
                   >
-                    <SelectTrigger className="bg-background border-border text-foreground focus:ring-primary/20">
+                    <SelectTrigger aria-label="Área de interesse" className="bg-background border-border text-foreground focus:ring-primary/20">
                       <SelectValue placeholder="Selecione uma área" />
                     </SelectTrigger>
                     <SelectContent className="bg-popover border-border z-50">
