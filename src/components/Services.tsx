@@ -84,7 +84,7 @@ const Services = () => {
           <p className="text-xl text-muted-foreground font-body max-w-2xl mx-auto">
             Oferecemos soluções completas em Direito Previdenciário, com expertise em todas as modalidades de benefícios do INSS.
           </p>
-          <p className="text-sm text-muted-foreground/70 font-body mt-2">
+          <p className="text-sm text-muted-foreground font-body mt-2">
             Última atualização: Janeiro de 2026
           </p>
         </div>

@@ -317,7 +317,7 @@ const TrabalheConosco = () => {
                     required
                     value={formData.nome}
                     onChange={handleInputChange}
-                    className="bg-background border-border text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:ring-primary/20"
+                    className="bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20"
                     placeholder="Seu nome completo"
                   />
                 </div>
@@ -334,7 +334,7 @@ const TrabalheConosco = () => {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="bg-background border-border text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:ring-primary/20"
+                    className="bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -351,7 +351,7 @@ const TrabalheConosco = () => {
                     required
                     value={formData.telefone}
                     onChange={handleInputChange}
-                    className="bg-background border-border text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:ring-primary/20"
+                    className="bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20"
                     placeholder="(00) 00000-0000"
                   />
                 </div>
@@ -367,7 +367,7 @@ const TrabalheConosco = () => {
                     type="url"
                     value={formData.linkedin}
                     onChange={handleInputChange}
-                    className="bg-background border-border text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:ring-primary/20"
+                    className="bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20"
                     placeholder="https://linkedin.com/in/seu-perfil"
                   />
                 </div>
@@ -413,7 +413,7 @@ const TrabalheConosco = () => {
                     type="text"
                     value={formData.pretensaoSalarial}
                     onChange={handleInputChange}
-                    className="bg-background border-border text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:ring-primary/20"
+                    className="bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20"
                     placeholder="Ex: R$ 3.000,00 ou A combinar"
                   />
                 </div>
@@ -493,7 +493,7 @@ const TrabalheConosco = () => {
                     value={formData.mensagem}
                     onChange={handleInputChange}
                     rows={4}
-                    className="bg-background border-border text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:ring-primary/20 resize-none"
+                    className="bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 resize-none"
                     placeholder="Conte-nos um pouco sobre você e por que deseja fazer parte do nosso time..."
                   />
                 </div>

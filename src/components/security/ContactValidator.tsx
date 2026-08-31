@@ -98,7 +98,7 @@ const ContactValidator = () => {
             placeholder="(00) 00000-0000"
             value={phoneNumber}
             onChange={handlePhoneChange}
-            className="bg-background border-border text-foreground placeholder:text-muted-foreground/50 focus:border-primary focus:ring-primary/20 text-center text-lg font-body"
+            className="bg-background border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-primary/20 text-center text-lg font-body"
           />
         </div>
 
