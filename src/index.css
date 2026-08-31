@@ -18,7 +18,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 200 5% 25%;
 
-    --primary: 42 30% 42%; /* Dourado mais escuro para melhor contraste */
+    --primary: 42 30% 34%; /* Dourado escuro - contraste AA */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 39 30% 92%; /* Bege */
@@ -27,7 +27,7 @@ All colors MUST be HSL.
     --muted: 206 11% 79%; /* Cinza suave #c5c9ce */
     --muted-foreground: 200 5% 35%; /* Mais escuro para melhor contraste */
 
-    --accent: 42 30% 42%; /* Dourado accent mais escuro */
+    --accent: 42 30% 34%; /* Dourado accent - contraste AA */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 45%; /* Vermelho mais escuro */
@@ -35,12 +35,12 @@ All colors MUST be HSL.
 
     --border: 206 11% 70%;
     --input: 206 11% 70%;
-    --ring: 42 30% 42%;
+    --ring: 42 30% 34%;
 
     --radius: 0.5rem;
     
     /* Custom tokens */
-    --gold: 42 30% 42%;
+    --gold: 42 30% 34%;
     --beige: 39 30% 92%;
     --gray-soft: 206 11% 79%;
     --gray-dark: 200 5% 25%;
@@ -72,8 +72,8 @@ All colors MUST be HSL.
     --popover: 200 3% 25%;
     --popover-foreground: 39 30% 92%;
 
-    --primary: 42 24% 52%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 42 30% 66%;
+    --primary-foreground: 200 5% 12%;
 
     --secondary: 200 3% 30%;
     --secondary-foreground: 39 30% 92%;
@@ -81,15 +81,15 @@ All colors MUST be HSL.
     --muted: 200 3% 30%;
     --muted-foreground: 206 11% 79%;
 
-    --accent: 42 24% 52%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 42 30% 66%;
+    --accent-foreground: 200 5% 12%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 39 30% 92%;
 
     --border: 200 3% 30%;
     --input: 200 3% 30%;
-    --ring: 42 24% 52%;
+    --ring: 42 30% 66%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
