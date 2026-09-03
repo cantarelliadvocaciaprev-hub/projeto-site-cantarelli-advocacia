@@ -221,6 +221,48 @@ export type Database = {
         }
         Relationships: []
       }
+      whatsapp_click_events: {
+        Row: {
+          campaign: string | null
+          context_label: string | null
+          created_at: string
+          cta_location: string
+          device_type: string | null
+          id: string
+          medium: string | null
+          path: string
+          referrer: string | null
+          source: string | null
+          user_agent: string | null
+        }
+        Insert: {
+          campaign?: string | null
+          context_label?: string | null
+          created_at?: string
+          cta_location: string
+          device_type?: string | null
+          id?: string
+          medium?: string | null
+          path: string
+          referrer?: string | null
+          source?: string | null
+          user_agent?: string | null
+        }
+        Update: {
+          campaign?: string | null
+          context_label?: string | null
+          created_at?: string
+          cta_location?: string
+          device_type?: string | null
+          id?: string
+          medium?: string | null
+          path?: string
+          referrer?: string | null
+          source?: string | null
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
