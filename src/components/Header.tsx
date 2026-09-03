@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/hover-card";
 import ThemeToggle from "@/components/ThemeToggle";
 import logo from "@/assets/logo-transparent.png";
+import { openWhatsApp } from "@/lib/whatsappTracking";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -175,10 +176,7 @@ const Header = () => {
             <ThemeToggle />
             <Button
               onClick={() =>
-                window.open(
-                  "https://wa.me/5581983421727?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.",
-                  "_blank"
-                )
+                openWhatsApp("header")
               }
               className="bg-primary hover:bg-primary/90 text-primary-foreground text-sm"
             >
@@ -220,10 +218,7 @@ const Header = () => {
               <li>
                 <Button
                   onClick={() =>
-                    window.open(
-                      "https://wa.me/5581983421727?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.",
-                      "_blank"
-                    )
+                    openWhatsApp("header-mobile")
                   }
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
                 >

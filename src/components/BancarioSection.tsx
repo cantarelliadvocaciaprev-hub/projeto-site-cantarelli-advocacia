@@ -9,6 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { openWhatsApp } from "@/lib/whatsappTracking";
 
 const BancarioSection = () => {
   const { isVisible, elementRef } = useScrollAnimation(0.1);
@@ -217,7 +218,7 @@ const BancarioSection = () => {
         {/* CTA */}
         <div className="text-center">
           <Button
-            onClick={() => window.open("https://wa.me/5581983421727?text=Olá,%20sou%20bancário%20e%20gostaria%20de%20saber%20sobre%20meus%20direitos%20previdenciários.", "_blank")}
+            onClick={() => openWhatsApp("bancario", "Olá, sou bancário e gostaria de saber sobre meus direitos previdenciários.")}
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
           >

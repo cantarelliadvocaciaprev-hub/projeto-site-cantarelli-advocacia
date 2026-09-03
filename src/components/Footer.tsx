@@ -12,6 +12,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import thiagoImg from "@/assets/team/thiago-cantarelli.jpg";
 import izabelaImg from "@/assets/team/izabela-farias.jpg";
+import { openWhatsApp } from "@/lib/whatsappTracking";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -234,10 +235,7 @@ const Footer = () => {
             <Button
               variant="outline"
               onClick={() =>
-                window.open(
-                  "https://wa.me/5581983421727?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20agendar%20um%20atendimento.",
-                  "_blank"
-                )
+                openWhatsApp("footer", "Olá, estava no site da Cantarelli e gostaria de agendar um atendimento.")
               }
               className="gap-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >

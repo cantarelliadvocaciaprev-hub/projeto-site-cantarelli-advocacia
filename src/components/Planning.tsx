@@ -2,6 +2,7 @@ import { scrollBehavior } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
 import { Search, Calculator, FileText, CheckCircle2 } from "lucide-react";
 import planningBg from "@/assets/planning-bg.jpg";
+import { openWhatsApp } from "@/lib/whatsappTracking";
 
 const Planning = () => {
   const steps = [
@@ -84,7 +85,7 @@ const Planning = () => {
 
         <div className="text-center animate-fade-in">
           <Button
-            onClick={() => window.open("https://wa.me/5581983421727?text=Olá,%20desejo%20realizar%20o%20orçamento%20do%20Planejamento%20Previdenciário.", "_blank")}
+            onClick={() => openWhatsApp("planejamento", "Olá, desejo realizar o orçamento do Planejamento Previdenciário.")}
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6"
           >
