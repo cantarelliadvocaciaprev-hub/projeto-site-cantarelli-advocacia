@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { ShieldAlert, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
+import { openWhatsApp } from "@/lib/whatsappTracking";
   Dialog,
   DialogContent,
   DialogHeader,
@@ -27,10 +28,7 @@ const SecurityModal = () => {
   };
 
   const handleReport = () => {
-    window.open(
-      "https://wa.me/5581983421727?text=Olá,%20gostaria%20de%20denunciar%20uma%20tentativa%20de%20golpe.",
-      "_blank"
-    );
+    openWhatsApp("seguranca", "Olá, gostaria de denunciar uma tentativa de golpe.");
     handleClose();
   };
 

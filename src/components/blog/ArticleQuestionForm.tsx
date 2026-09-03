@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MessageCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { trackWhatsAppClick, buildWhatsAppUrl } from "@/lib/whatsappTracking";
+import { trackWhatsAppClick } from "@/lib/whatsappTracking";
 
 const WHATSAPP_BASE = "https://wa.me/5581983421727";
 

@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { toast } from "sonner";
-import { openWhatsApp, trackWhatsAppClick, buildWhatsAppUrl } from "@/lib/whatsappTracking";
+import { openWhatsApp, trackWhatsAppClick } from "@/lib/whatsappTracking";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

@@ -9,6 +9,7 @@ import SEO from "@/components/SEO";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import LegalServiceSchema from "@/components/schemas/LegalServiceSchema";
 import Breadcrumb from "@/components/Breadcrumb";
+import { openWhatsApp } from "@/lib/whatsappTracking";
 
 const WHATSAPP =
   "https://wa.me/5581983421727?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.";
@@ -143,7 +144,7 @@ const Contato = () => {
                   </ul>
                   <Button
                     size="sm"
-                    onClick={() => window.open(WHATSAPP, "_blank")}
+                    onClick={() => openWhatsApp("pagina-contato")}
                     className="mt-3 bg-primary hover:bg-primary/90 text-primary-foreground"
                   >
                     <MessageCircle className="w-4 h-4 mr-2" aria-hidden="true" />
@@ -251,7 +252,7 @@ const Contato = () => {
                   oficiais listados nesta página.
                 </p>
                 <Button
-                  onClick={() => window.open(WHATSAPP, "_blank")}
+                  onClick={() => openWhatsApp("pagina-contato")}
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
                 >
                   Fale com especialista
