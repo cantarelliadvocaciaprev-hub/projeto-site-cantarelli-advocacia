@@ -96,8 +96,8 @@ const Header = () => {
     },
     { 
       label: "Contato", 
-      id: "contact", 
-      type: "section",
+      id: "/contato", 
+      type: "page",
       icon: Phone,
       preview: "Entre em contato conosco pelo WhatsApp ou formulário"
     },
