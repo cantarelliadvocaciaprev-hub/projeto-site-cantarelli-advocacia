@@ -30,7 +30,7 @@ Deno.serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
     );
 
-    const [views, shares, reviews, pageViews] = await Promise.all([
+    const [views, shares, reviews, pageViews, waClicks] = await Promise.all([
       supabase
         .from("article_view_events")
         .select("article_slug, article_title, device_type, referrer, created_at"),
@@ -41,12 +41,16 @@ Deno.serve(async (req) => {
       supabase
         .from("page_view_events")
         .select("path, page_title, source, medium, campaign, device_type, created_at"),
+      supabase
+        .from("whatsapp_click_events")
+        .select("path, cta_location, context_label, source, device_type, created_at"),
     ]);
 
     if (views.error) throw views.error;
     if (shares.error) throw shares.error;
     if (reviews.error) throw reviews.error;
     if (pageViews.error) throw pageViews.error;
+    if (waClicks.error) throw waClicks.error;
 
     const now = Date.now();
     const day = 24 * 60 * 60 * 1000;
@@ -152,6 +156,31 @@ Deno.serve(async (req) => {
       if (pv.device_type && pv.device_type in devices) devices[pv.device_type] += 1;
     }
 
+    // Cliques nos botões de WhatsApp (leads)
+    const waRows = waClicks.data ?? [];
+    const waTotal = waRows.length;
+    const waTotal7d = waRows.filter((w) => within(w.created_at, 7)).length;
+    const waTotal30d = waRows.filter((w) => within(w.created_at, 30)).length;
+
+    const countBy = (key: "cta_location" | "path" | "source") => {
+      const map: Record<string, number> = {};
+      for (const w of waRows) {
+        const k = (w as Record<string, string | null>)[key] || "Direto";
+        map[k] = (map[k] ?? 0) + 1;
+      }
+      return Object.entries(map)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 20)
+        .map(([label, count]) => ({ label, count }));
+    };
+
+    const waDaily = new Map<string, number>();
+    for (const w of waRows) {
+      if (!within(w.created_at, 30)) continue;
+      const date = new Date(w.created_at).toISOString().slice(0, 10);
+      waDaily.set(date, (waDaily.get(date) ?? 0) + 1);
+    }
+
     const allPages = [...pages.values()].sort((a, b) => b.views - a.views);
     const totals = allPages.reduce(
       (acc, p) => ({
@@ -173,6 +202,17 @@ Deno.serve(async (req) => {
         reviews7d,
         siteVisits,
         siteVisits7d,
+        whatsappTotal: waTotal,
+        whatsappTotal7d: waTotal7d,
+        whatsappTotal30d: waTotal30d,
+      },
+      whatsapp: {
+        byLocation: countBy("cta_location"),
+        byPath: countBy("path"),
+        bySource: countBy("source"),
+        daily: [...waDaily.entries()]
+          .sort((a, b) => a[0].localeCompare(b[0]))
+          .map(([date, count]) => ({ date, count })),
       },
       pages: allPages.slice(0, 50),
       sharesByNetwork,
