@@ -14,6 +14,7 @@ import RelatedArticles from "@/components/blog/RelatedArticles";
 import ArticleSchema from "@/components/blog/ArticleSchema";
 import ShareButtons from "@/components/blog/ShareButtons";
 import { trackArticleView } from "@/lib/articleTracking";
+import { trackWhatsAppClick } from "@/lib/whatsappTracking";
 
 const WHATSAPP_URL = "https://wa.me/5581983421727?text=Olá,%20li%20um%20artigo%20no%20blog%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.";
 const SITE_URL = "https://cantarelliadvocacia.com.br";
@@ -136,7 +137,7 @@ const BlogArticle = () => {
                   <Share2 className="w-4 h-4 mr-2" />
                   Compartilhar
                 </Button>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("artigo", article.title)}>
                   <Button size="sm" className="bg-[#25D366] hover:bg-[#20BA5A] text-white">
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Fale com Especialista
@@ -255,7 +256,7 @@ const BlogArticle = () => {
                 <p className="text-sm md:text-base text-muted-foreground mb-4 max-w-lg mx-auto">
                   Fale agora com um advogado especialista e tire todas as suas dúvidas sem compromisso.
                 </p>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("artigo", article.title)}>
                   <Button size="lg" className="bg-[#25D366] hover:bg-[#20BA5A] text-white">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Falar pelo WhatsApp
@@ -314,7 +315,7 @@ const BlogArticle = () => {
                 Nossa equipe de advogados especialistas em Direito Previdenciário está pronta para analisar seu caso e garantir seus direitos.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("artigo", article.title)}>
                   <Button size="lg" className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Fale com um Especialista

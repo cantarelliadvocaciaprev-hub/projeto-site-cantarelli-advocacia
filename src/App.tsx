@@ -11,6 +11,7 @@ import PageViewTracker from "./components/PageViewTracker";
 
 const TrabalheConosco = lazy(() => import("./pages/TrabalheConosco"));
 const Seguranca = lazy(() => import("./pages/Seguranca"));
+const Contato = lazy(() => import("./pages/Contato"));
 const BlogArticle = lazy(() => import("./pages/BlogArticle"));
 const BlogPage = lazy(() => import("./pages/Blog"));
 const DeployCheck = lazy(() => import("./pages/DeployCheck"));
@@ -38,6 +39,7 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
                 <Route path="/seguranca" element={<Seguranca />} />
+                <Route path="/contato" element={<Contato />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<BlogArticle />} />
                 <Route path="/verificacao-deploy" element={<DeployCheck />} />

@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { toast } from "sonner";
+import { openWhatsApp, trackWhatsAppClick } from "@/lib/whatsappTracking";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -40,6 +41,7 @@ const Contact = () => {
     );
 
     // Abrir WhatsApp
+    trackWhatsAppClick("contato-formulario");
     window.open(`https://wa.me/5581983421727?text=${whatsappMessage}`, "_blank");
 
     toast.success("Mensagem enviada! Entraremos em contato em breve.");
@@ -104,7 +106,7 @@ const Contact = () => {
                   </p>
                   <Button
                     size="sm"
-                    onClick={() => window.open("https://wa.me/5581983421727?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.", "_blank")}
+                    onClick={() => openWhatsApp("contato-secao")}
                     className="mt-2 bg-primary hover:bg-primary/90 text-primary-foreground"
                   >
                     Chamar no WhatsApp

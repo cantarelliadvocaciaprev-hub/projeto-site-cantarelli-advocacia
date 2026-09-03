@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
+import { trackWhatsAppClick } from "@/lib/whatsappTracking";
 
 interface ValidationResult {
   status: "safe" | "danger" | null;
@@ -167,6 +168,7 @@ const ContactValidator = () => {
                     </p>
                     <a
                       href="https://wa.me/5581983421727?text=Olá,%20gostaria%20de%20denunciar%20uma%20tentativa%20de%20golpe."
+                      onClick={() => trackWhatsAppClick("validador-contato")}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-xs font-body text-[#b22222] hover:underline mt-2"

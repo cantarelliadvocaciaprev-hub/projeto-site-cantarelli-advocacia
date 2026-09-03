@@ -11,6 +11,7 @@ import {
   Tablet,
   Monitor,
   Globe,
+  MessageCircle,
 } from "lucide-react";
 
 const FUNCTIONS_URL = `https://${import.meta.env.VITE_SUPABASE_PROJECT_ID}.supabase.co/functions/v1/dashboard-stats`;
@@ -35,6 +36,15 @@ type Stats = {
     reviews7d: number;
     siteVisits: number;
     siteVisits7d: number;
+    whatsappTotal: number;
+    whatsappTotal7d: number;
+    whatsappTotal30d: number;
+  };
+  whatsapp: {
+    byLocation: { label: string; count: number }[];
+    byPath: { label: string; count: number }[];
+    bySource: { label: string; count: number }[];
+    daily: { date: string; count: number }[];
   };
   pages: PageRow[];
   sharesByNetwork: Record<string, number>;
@@ -55,6 +65,23 @@ const networkLabels: Record<string, string> = {
   email: "E-mail",
   copy: "Copiar link",
   native: "Compartilhar",
+};
+
+const ctaLabels: Record<string, string> = {
+  "botao-flutuante": "Botão flutuante",
+  header: "Menu (topo)",
+  "header-mobile": "Menu (celular)",
+  hero: "Topo da home",
+  footer: "Rodapé",
+  "contato-secao": "Seção de contato",
+  "contato-formulario": "Formulário de contato",
+  "pagina-contato": "Página /contato",
+  planejamento: "Planejamento previdenciário",
+  bancario: "Seção bancários",
+  artigo: "Artigo do blog",
+  "artigo-pergunta": "Pergunta no artigo",
+  seguranca: "Segurança / denúncia",
+  "validador-contato": "Validador de contato",
 };
 
 const Dashboard = () => {
@@ -159,6 +186,18 @@ const Dashboard = () => {
               </Card>
               <Card className="p-5">
                 <div className="flex items-center gap-2 text-muted-foreground mb-2">
+                  <MessageCircle className="w-4 h-4" />
+                  <span className="text-xs font-body uppercase">Cliques no WhatsApp</span>
+                </div>
+                <p className="text-2xl font-display font-bold">
+                  {stats.totals.whatsappTotal}
+                </p>
+                <p className="text-xs text-muted-foreground font-body mt-1">
+                  {stats.totals.whatsappTotal7d} nos últimos 7 dias
+                </p>
+              </Card>
+              <Card className="p-5">
+                <div className="flex items-center gap-2 text-muted-foreground mb-2">
                   <Star className="w-4 h-4" />
                   <span className="text-xs font-body uppercase">Cliques em avaliar</span>
                 </div>
@@ -168,6 +207,62 @@ const Dashboard = () => {
                 </p>
               </Card>
             </div>
+
+            <Card className="p-5 sm:p-6">
+              <h2 className="font-display font-semibold mb-1">
+                Leads pelo WhatsApp
+              </h2>
+              <p className="text-xs text-muted-foreground font-body mb-4">
+                De onde as pessoas clicam para falar com a equipe.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <h3 className="text-sm font-display font-semibold mb-2">Por botão</h3>
+                  {stats.whatsapp.byLocation.length === 0 ? (
+                    <p className="text-muted-foreground font-body text-sm">Sem dados ainda.</p>
+                  ) : (
+                    <ul className="space-y-2 font-body text-sm">
+                      {stats.whatsapp.byLocation.map((r) => (
+                        <li key={r.label} className="flex items-center justify-between gap-2">
+                          <span>{ctaLabels[r.label] ?? r.label}</span>
+                          <strong>{r.count}</strong>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                <div>
+                  <h3 className="text-sm font-display font-semibold mb-2">Por página</h3>
+                  {stats.whatsapp.byPath.length === 0 ? (
+                    <p className="text-muted-foreground font-body text-sm">Sem dados ainda.</p>
+                  ) : (
+                    <ul className="space-y-2 font-body text-sm">
+                      {stats.whatsapp.byPath.map((r) => (
+                        <li key={r.label} className="flex items-center justify-between gap-2">
+                          <span className="truncate" title={r.label}>{r.label}</span>
+                          <strong>{r.count}</strong>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                <div>
+                  <h3 className="text-sm font-display font-semibold mb-2">Por origem</h3>
+                  {stats.whatsapp.bySource.length === 0 ? (
+                    <p className="text-muted-foreground font-body text-sm">Sem dados ainda.</p>
+                  ) : (
+                    <ul className="space-y-2 font-body text-sm">
+                      {stats.whatsapp.bySource.map((r) => (
+                        <li key={r.label} className="flex items-center justify-between gap-2">
+                          <span>{r.label}</span>
+                          <strong>{r.count}</strong>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            </Card>
 
             <Card className="p-5 sm:p-6">
               <h2 className="font-display font-semibold mb-4">

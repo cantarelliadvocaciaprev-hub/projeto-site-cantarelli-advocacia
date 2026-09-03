@@ -7,6 +7,7 @@ import heroBackground640 from "@/assets/hero-background-640.jpg";
 import heroBackground960 from "@/assets/hero-background-960.jpg";
 import heroBackground1280 from "@/assets/hero-background-1280.jpg";
 import { useCountUp } from "@/hooks/useCountUp";
+import { openWhatsApp } from "@/lib/whatsappTracking";
 const Hero = () => {
   const [showVideo, setShowVideo] = useState(false);
 
@@ -85,7 +86,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button onClick={() => window.open("https://wa.me/5581983421727?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.", "_blank")} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6">
+              <Button onClick={() => openWhatsApp("hero")} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6">
                 Agende seu atendimento
               </Button>
               <Button onClick={() => document.getElementById("about")?.scrollIntoView({

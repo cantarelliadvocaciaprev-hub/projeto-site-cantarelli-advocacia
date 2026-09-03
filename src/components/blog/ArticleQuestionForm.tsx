@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MessageCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { trackWhatsAppClick } from "@/lib/whatsappTracking";
 
 const WHATSAPP_BASE = "https://wa.me/5581983421727";
 
@@ -16,6 +17,7 @@ const ArticleQuestionForm = ({ articleTitle }: ArticleQuestionFormProps) => {
     const text = encodeURIComponent(
       `Olá! Li o artigo "${articleTitle}" no blog da Cantarelli e tenho uma dúvida:\n\n${question.trim()}`
     );
+    trackWhatsAppClick("artigo-pergunta", articleTitle);
     window.open(`${WHATSAPP_BASE}?text=${text}`, "_blank", "noopener,noreferrer");
     setQuestion("");
   };
