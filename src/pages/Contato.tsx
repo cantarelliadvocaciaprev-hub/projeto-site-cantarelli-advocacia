@@ -77,7 +77,7 @@ const Contato = () => {
 
       <main id="main-content" tabIndex={-1} className="pt-28 pb-20">
         <div className="container mx-auto px-4">
-          <Breadcrumb items={[{ name: "Contato", url: "/contato" }]} />
+          <Breadcrumb items={[{ label: "Contato", href: "/contato" }]} />
 
           <header className="max-w-3xl mt-8 mb-12">
             <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
