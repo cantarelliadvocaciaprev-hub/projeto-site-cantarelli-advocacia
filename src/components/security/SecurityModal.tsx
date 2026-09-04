@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { ShieldAlert, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
-import { openWhatsApp } from "@/lib/whatsappTracking";
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { openWhatsApp } from "@/lib/whatsappTracking";
 
 const SecurityModal = () => {
   const [isOpen, setIsOpen] = useState(false);
