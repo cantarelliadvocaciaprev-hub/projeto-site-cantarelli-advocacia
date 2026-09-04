@@ -1,11 +1,11 @@
 import { MessageCircle } from "lucide-react";
 import {
-import { openWhatsApp } from "@/lib/whatsappTracking";
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { openWhatsApp } from "@/lib/whatsappTracking";
 
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
