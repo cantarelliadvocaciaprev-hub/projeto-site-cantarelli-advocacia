@@ -10,57 +10,46 @@ type Review = {
 // Avaliações reais do perfil da Cantarelli Advocacia no Google
 const REVIEWS: Review[] = [
   {
-    name: "Isaura Aragão",
-    initial: "I",
-    timeAgo: "há 1 dia",
-    text: "Ótimo atendimento, gostei muito do profissional que me atendeu.",
+    name: "Ana Carla",
+    initial: "A",
+    timeAgo: "há 1 mês",
+    text: "Muito satisfeita com o atendimento tanto do Dr. Thiago como de todos do escritório.",
   },
   {
-    name: "Deive Freire",
-    initial: "D",
-    timeAgo: "há 10 dias",
-    text: "Excelente atendimento.",
+    name: "Paulinha Machado",
+    initial: "P",
+    timeAgo: "há 1 mês",
+    text: "Esse escritório merece as 5 estrelas: os horários são pontuais, você é atendido pelo próprio Dr. Tiago Cantarelli e a equipe planeja o melhor para a sua necessidade. A organização e a recepção são impecáveis e você é orientada no passo a passo, com acompanhamento até o final.",
   },
   {
-    name: "Leila Leonel Nunes Leonel",
-    initial: "L",
-    timeAgo: "há 11 dias",
-    text: "Muito dedicado e atencioso.",
-  },
-  {
-    name: "Eveline Gibson Almeida",
-    initial: "E",
-    timeAgo: "há 11 dias",
-    text: "A equipe da Cantarelli Advocacia me atendeu muitíssimo bem. Fiquei muito satisfeita.",
-  },
-  {
-    name: "Denise Gomes",
-    initial: "D",
-    timeAgo: "há 13 dias",
-    text: "Agradeço ao grupo Cantarelli pelo excelente atendimento.",
+    name: "Rodrigo Solano",
+    initial: "R",
+    timeAgo: "há 1 mês",
+    text: "Sempre muito prestativos e foco 100% em entender e resolver a necessidade do cliente. Isso faz toda diferença e me senti muito respeitado.",
   },
   {
     name: "Cristianne Boulitreau",
     initial: "C",
-    timeAgo: "há 13 dias",
-    text: "A minha experiência foi excelente, recomendo a todos.",
+    timeAgo: "há 3 meses",
+    text: "A minha experiência no Cantarelli Advocacia foi maravilhosa, fui muito bem recebida por todos. O acolhimento desde o primeiro momento até o cuidado comigo foi essencial nessa caminhada. Gratidão a todos e todas que fazem esta empresa.",
   },
   {
-    name: "Alex Lino",
+    name: "Alecsiano Silva",
     initial: "A",
-    timeAgo: "há 13 dias",
-    text: "Top! Todos estão de parabéns pelo atendimento.",
+    timeAgo: "há 4 meses",
+    text: "Muito satisfeito com a recepção e atendimento, o qual superou minhas expectativas, abordando o assunto tecnicamente com simplicidade, citando todas as possibilidades, sem imposição de valores e exploração financeira.",
   },
   {
-    name: "Jadicélio Avelar",
-    initial: "J",
-    timeAgo: "há 22 dias",
-    text: "Ótimo atendimento, muito profissional e atencioso.",
+    name: "Eveline Gibson Almeida",
+    initial: "E",
+    timeAgo: "há 6 meses",
+    text: "A equipe da Cantarelli Advocacia me atendeu muitíssimo bem. Fiquei muito satisfeita.",
   },
 ];
 
 const RATING = "4.9";
-const REVIEW_COUNT = 99;
+const REVIEW_COUNT = 133;
+
 
 const Stars = ({ count = 5 }: { count?: number }) => (
   <div className="flex gap-0.5" aria-hidden="true">
