@@ -127,7 +127,7 @@ const SchemaMarkup = ({
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: "4.9",
-        reviewCount: "3100",
+        reviewCount: "133",
       },
     };
 
