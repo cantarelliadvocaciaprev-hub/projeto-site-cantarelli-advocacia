@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="pb-6 lg:pb-0 lg:pr-6 lg:border-r border-primary/30">
             <img src={logo} alt="Cantarelli Advocacia" className="h-16 w-auto mb-4" />
             <p className="text-muted-foreground font-body text-sm mb-4">
-              Especialistas em Direito Previdenciário com mais de 17 anos de experiência.
+              Especialistas em Direito Previdenciário com mais de 15 anos de experiência.
             </p>
             <p className="text-sm text-muted-foreground font-body">
               Thiago Cantarelli Sociedade Individual de Advocacia
@@ -259,7 +259,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Cantarelli Advocacia. Todos os direitos reservados.
           </p>
           <p className="text-muted-foreground font-body text-xs">
-            Cuidando de pessoas, protegendo direitos.
+            Seu futuro planejado. Sua previdência segura.
           </p>
         </div>
       </div>

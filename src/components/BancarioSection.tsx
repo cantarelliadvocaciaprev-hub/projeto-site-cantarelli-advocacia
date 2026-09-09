@@ -23,7 +23,7 @@ const BancarioSection = () => {
     {
       criterion: "Natureza",
       b31: "Temporário - durante incapacidade",
-      b91: "Permanente - indenização vitalícia",
+      b91: "Indenização mensal até à aposentadoria",
     },
     {
       criterion: "Valor",
@@ -43,7 +43,7 @@ const BancarioSection = () => {
     {
       criterion: "Acúmulo",
       b31: "Não acumula com trabalho",
-      b91: "Acumula com salário e aposentadoria",
+      b91: "Acumula com salário e pode continuar trabalhando",
     },
   ];
 
@@ -104,7 +104,7 @@ const BancarioSection = () => {
             style={{ fontSize: '18px' }}
           >
             <strong>Bancários com LER/DORT ou Síndrome de Burnout têm direito ao Auxílio-Acidente (B91)</strong>, 
-            benefício permanente que paga 50% do salário e acumula com aposentadoria. 
+            indenização que paga 50% do salário do benefício. 
             O Nexo Concausal comprova a relação entre a doença e as metas abusivas do banco, 
             garantindo também estabilidade de 12 meses e continuidade dos depósitos de FGTS.
           </p>

@@ -15,7 +15,7 @@ const Services = () => {
   }, {
     icon: Target,
     title: "Auxílio-Acidente",
-    description: "Indenização de 50% para trabalhadores com sequelas permanentes de acidentes de trabalho."
+    description: "Indenização de 50% para trabalhadores com sequelas permanentes de acidentes de trabalho, ou de qualquer outra natureza."
   }, {
     icon: Users,
     title: "BPC Autista",
@@ -85,7 +85,7 @@ const Services = () => {
             Oferecemos soluções completas em Direito Previdenciário, com expertise em todas as modalidades de benefícios do INSS.
           </p>
           <p className="text-sm text-muted-foreground font-body mt-2">
-            Última atualização: Janeiro de 2026
+            Última atualização: Setembro de 2026
           </p>
         </div>
 

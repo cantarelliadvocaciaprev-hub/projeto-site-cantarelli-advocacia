@@ -32,8 +32,8 @@ const SchemaMarkup = ({
       url: "https://cantarelliadvocacia.com.br",
       logo: "https://cantarelliadvocacia.com.br/logo.png",
       description:
-        "Escritório especializado em Direito Previdenciário com mais de 17 anos de experiência em Recife/PE.",
-      foundingDate: "2007",
+        "Escritório especializado em Direito Previdenciário com mais de 15 anos de experiência em Recife/PE.",
+      foundingDate: "2012",
       founder: {
         "@type": "Person",
         name: "Dr. Thiago Cantarelli",
@@ -151,7 +151,7 @@ const SchemaMarkup = ({
       name: pageTitle || "Cantarelli Advocacia",
       description:
         pageDescription ||
-        "Especialistas em Direito Previdenciário com mais de 17 anos de experiência.",
+        "Especialistas em Direito Previdenciário com mais de 15 anos de experiência.",
       url: pageUrl || "https://cantarelliadvocacia.com.br",
       isPartOf: {
         "@type": "WebSite",

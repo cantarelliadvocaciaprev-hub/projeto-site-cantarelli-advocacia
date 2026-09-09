@@ -91,7 +91,7 @@ const About = () => {
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
             <p className="text-xl text-muted-foreground font-body leading-relaxed max-w-3xl mx-auto">
-              Há mais de 20 anos, transformando origens simples em liderança na advocacia previdenciária.
+              Há mais de 15 anos, transformando origens simples em liderança na advocacia previdenciária.
             </p>
           </div>
 
@@ -120,7 +120,7 @@ const About = () => {
 
             <div className="text-foreground font-body space-y-5">
               <p className="text-lg leading-relaxed">
-                A nossa história não começou em grandes salas comerciais ou com estruturas imponentes. Em abril de 2008, nascia a Cantarelli Advocacia: um projeto que ganhou vida de forma simples, movido pela coragem, por pouquíssimos recursos e por um propósito inabalável: garantir dignidade a quem dedicou uma vida inteira ao trabalho.
+                A nossa história não começou em grandes salas comerciais ou com estruturas imponentes. Em abril de 2012, nascia a Cantarelli Advocacia: um projeto que ganhou vida de forma simples, movido pela coragem, por pouquíssimos recursos e por um propósito inabalável: garantir dignidade a quem dedicou uma vida inteira ao trabalho.
               </p>
               <p className="text-lg leading-relaxed">
                 Sabemos exatamente o valor do esforço de quem vem de baixo, porque essa também é a nossa raiz. Foi essa vivência que moldou nossa sensibilidade para entender que, por trás de cada documento ou pedido de aposentadoria, existe uma vida real que não pode esperar.
