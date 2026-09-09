@@ -9,7 +9,7 @@ const LegalServiceSchema = () => {
       name: "Cantarelli Advocacia",
       alternateName: "Thiago Cantarelli Sociedade Individual de Advocacia",
       description:
-        "Cantarelli Advocacia é um escritório especializado em Direito Previdenciário com mais de 17 anos de experiência em Recife/PE. Oferecemos serviços de planejamento previdenciário, aposentadorias, revisões de benefícios, BPC/LOAS e defesa contra o INSS.",
+        "Cantarelli Advocacia é um escritório especializado em Direito Previdenciário com mais de 15 anos de experiência em Recife/PE. Oferecemos serviços de planejamento previdenciário, aposentadorias, revisões de benefícios, BPC/LOAS e defesa contra o INSS.",
       url: "https://cantarelliadvocacia.com.br",
       logo: {
         "@type": "ImageObject",
@@ -18,7 +18,7 @@ const LegalServiceSchema = () => {
         height: 512,
       },
       image: "https://cantarelliadvocacia.com.br/logo.png",
-      foundingDate: "2008-04",
+      foundingDate: "2012-04",
       founder: [
         {
           "@type": "Person",
