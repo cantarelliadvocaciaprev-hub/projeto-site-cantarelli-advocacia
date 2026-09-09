@@ -33,7 +33,7 @@ const SchemaMarkup = ({
       logo: "https://cantarelliadvocacia.com.br/logo.png",
       description:
         "Escritório especializado em Direito Previdenciário com mais de 15 anos de experiência em Recife/PE.",
-      foundingDate: "2007",
+      foundingDate: "2012",
       founder: {
         "@type": "Person",
         name: "Dr. Thiago Cantarelli",
