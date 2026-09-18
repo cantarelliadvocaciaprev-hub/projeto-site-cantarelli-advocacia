@@ -102,7 +102,8 @@ const Contact = () => {
                     WhatsApp: (81) 98342-1727<br />
                     Comercial: (81) 99544-1368 / (81) 98611-3970 / (81) 98379-5595<br />
                     WhatsApp: (81) 98392-5828<br />
-                    Financeiro: (81) 98771-8606
+                    Financeiro: (81) 98771-8606<br />
+                    Controladoria: (81) 98660-6421
                   </p>
                   <Button
                     size="sm"

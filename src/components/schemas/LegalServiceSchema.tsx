@@ -210,7 +210,7 @@ const LegalServiceSchema = () => {
         bestRating: "5",
         worstRating: "1",
         ratingCount: "3100",
-        reviewCount: "133",
+        reviewCount: "141",
       },
       contactPoint: [
         {

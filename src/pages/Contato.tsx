@@ -35,6 +35,7 @@ const PHONES = [
   },
   { label: "WhatsApp Comercial", value: "(81) 98392-5828", tel: "+5581983925828" },
   { label: "Financeiro", value: "(81) 98771-8606", tel: "+5581987718606" },
+  { label: "Controladoria", value: "(81) 98660-6421", tel: "+5581986606421" },
 ];
 
 const CITIES = [
