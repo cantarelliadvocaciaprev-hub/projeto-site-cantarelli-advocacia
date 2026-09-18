@@ -18,6 +18,8 @@ const officialContacts: Record<string, { name: string; role: string }> = {
   "81983925828": { name: "WhatsApp Oficial", role: "Atendimento WhatsApp" },
   "81986348775": { name: "Setor Administrativo", role: "Atendimento Administrativo" },
   "81997264914": { name: "Dr. Thiago Cantarelli", role: "Advogado" },
+  "81986606421": { name: "Controladoria", role: "Atendimento Controladoria" },
+  "8186606421": { name: "Controladoria", role: "Atendimento Controladoria" },
 };
 
 serve(async (req) => {

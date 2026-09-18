@@ -10,6 +10,12 @@ type Review = {
 // Avaliações reais do perfil da Cantarelli Advocacia no Google
 const REVIEWS: Review[] = [
   {
+    name: "Elia Silva",
+    initial: "E",
+    timeAgo: "há 2 semanas",
+    text: "Minha experiência inicialmente está sendo de um caminho amplo, pois percebi que diante do diálogo profissional alguns impecilios poderão ser destruídos. Até logo, desde já obrigada.",
+  },
+  {
     name: "Ana Carla",
     initial: "A",
     timeAgo: "há 1 mês",
@@ -18,14 +24,8 @@ const REVIEWS: Review[] = [
   {
     name: "Paulinha Machado",
     initial: "P",
-    timeAgo: "há 1 mês",
+    timeAgo: "há 2 meses",
     text: "Esse escritório merece as 5 estrelas: os horários são pontuais, você é atendido pelo próprio Dr. Tiago Cantarelli e a equipe planeja o melhor para a sua necessidade. A organização e a recepção são impecáveis e você é orientada no passo a passo, com acompanhamento até o final.",
-  },
-  {
-    name: "Rodrigo Solano",
-    initial: "R",
-    timeAgo: "há 1 mês",
-    text: "Sempre muito prestativos e foco 100% em entender e resolver a necessidade do cliente. Isso faz toda diferença e me senti muito respeitado.",
   },
   {
     name: "Cristianne Boulitreau",
@@ -40,15 +40,15 @@ const REVIEWS: Review[] = [
     text: "Muito satisfeito com a recepção e atendimento, o qual superou minhas expectativas, abordando o assunto tecnicamente com simplicidade, citando todas as possibilidades, sem imposição de valores e exploração financeira.",
   },
   {
-    name: "Eveline Gibson Almeida",
-    initial: "E",
-    timeAgo: "há 6 meses",
-    text: "A equipe da Cantarelli Advocacia me atendeu muitíssimo bem. Fiquei muito satisfeita.",
+    name: "Rodrigo Solano",
+    initial: "R",
+    timeAgo: "há 5 meses",
+    text: "Sempre muito prestativos e foco 100% em entender e resolver a necessidade do cliente. Isso faz toda diferença e me senti muito respeitado.",
   },
 ];
 
 const RATING = "4.9";
-const REVIEW_COUNT = 133;
+const REVIEW_COUNT = 141;
 
 
 const Stars = ({ count = 5 }: { count?: number }) => (
