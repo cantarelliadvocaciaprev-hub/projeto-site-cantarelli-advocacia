@@ -1,5 +1,6 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { corsHeaders } from "npm:@supabase/supabase-js@2/cors";
+import { checkAdminPassword } from "../_shared/adminAuth.ts";
 
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), {
@@ -13,9 +14,6 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const expected = Deno.env.get("REVIEW_STATS_PASSWORD");
-    if (!expected) return json({ error: "Configuração ausente no servidor." }, 500);
-
     let password = "";
     try {
       const body = await req.json();
@@ -23,7 +21,8 @@ Deno.serve(async (req) => {
     } catch {
       password = "";
     }
-    if (password !== expected) return json({ error: "Senha incorreta." }, 401);
+    const auth = await checkAdminPassword(req, password);
+    if (!auth.ok) return json({ error: auth.error }, auth.status);
 
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,

@@ -1,4 +1,5 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.58.0";
+import { checkAdminPassword } from "../_shared/adminAuth.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -47,18 +48,14 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const expected = Deno.env.get("REVIEW_STATS_PASSWORD");
-    if (!expected) return json({ error: "Painel não configurado." }, 500);
-
     const { password, action, post } = (await req.json()) as {
       password?: string;
       action?: string;
       post?: PostPayload;
     };
 
-    if (!password || password !== expected) {
-      return json({ error: "Senha inválida." }, 401);
-    }
+    const auth = await checkAdminPassword(req, password);
+    if (!auth.ok) return json({ error: auth.error }, auth.status);
 
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
@@ -97,7 +94,7 @@ Deno.serve(async (req) => {
         category: (post.category ?? "").trim() || "Previdenciário",
         tags: Array.isArray(post.tags) ? post.tags.slice(0, 20) : [],
         read_time: (post.read_time ?? "").trim() || "5 min",
-        image_url: post.image_url?.trim() || null,
+        image_url: /^https:\/\//i.test(post.image_url?.trim() ?? "") ? post.image_url!.trim().slice(0, 1000) : null,
         image_alt: post.image_alt?.trim() || null,
         author: post.author?.trim() || "Thiago Cantarelli",
         body: post.body,
