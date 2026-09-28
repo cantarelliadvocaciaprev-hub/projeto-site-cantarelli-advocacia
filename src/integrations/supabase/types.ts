@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      admin_login_attempts: {
+        Row: {
+          created_at: string
+          id: string
+          ip_hash: string
+          success: boolean
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          ip_hash: string
+          success?: boolean
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          ip_hash?: string
+          success?: boolean
+        }
+        Relationships: []
+      }
       application_send_log: {
         Row: {
           created_at: string
@@ -125,6 +146,30 @@ export type Database = {
           tags?: string[]
           title?: string
           updated_at?: string
+        }
+        Relationships: []
+      }
+      google_reviews_cache: {
+        Row: {
+          fetched_at: string
+          id: number
+          rating: number
+          review_count: number
+          reviews: Json
+        }
+        Insert: {
+          fetched_at?: string
+          id?: number
+          rating?: number
+          review_count?: number
+          reviews?: Json
+        }
+        Update: {
+          fetched_at?: string
+          id?: number
+          rating?: number
+          review_count?: number
+          reviews?: Json
         }
         Relationships: []
       }
