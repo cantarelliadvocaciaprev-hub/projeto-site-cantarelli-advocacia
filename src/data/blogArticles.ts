@@ -67,6 +67,14 @@ import reforma67MeiImg from "@/assets/blog/reforma-previdencia-67-anos-mei-2026.
 import agentesSaudeEndemiasImg from "@/assets/blog/aposentadoria-especial-agentes-saude-endemias-2026.jpg";
 
 
+import bpcSuspensoImg from "@/assets/blog/bpc-suspenso-2026.jpg";
+import invalidezCortadaImg from "@/assets/blog/invalidez-cortada-2026.jpg";
+import beneficioCessadoImg from "@/assets/blog/beneficio-cessado-2026.jpg";
+import depoisPericiaImg from "@/assets/blog/depois-pericia-2026.jpg";
+import invalidezDefinitivaImg from "@/assets/blog/invalidez-definitiva-2026.jpg";
+import visaoMonocularImg from "@/assets/blog/visao-monocular-2026.jpg";
+import pppAposentadoriaImg from "@/assets/blog/ppp-aposentadoria-2026.jpg";
+
 export interface BlogArticleContent {
   type: "paragraph" | "heading" | "subheading" | "list" | "highlight";
   text?: string;
@@ -100,6 +108,354 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    slug: "bpc-suspenso-o-que-fazer",
+    title: "O Que Fazer se Meu BPC For Suspenso? Motivos e Como Reativar",
+    excerpt: "Teve o BPC/LOAS suspenso ou bloqueado? Entenda os motivos mais comuns, os prazos para se defender e o que pode ser feito para tentar reativar o benefício.",
+    seoTitle: "BPC Suspenso: O Que Fazer e Como Reativar (2026)",
+    metaDescription: "BPC/LOAS suspenso ou bloqueado? Veja os principais motivos, o prazo de defesa e os caminhos para pedir a reativação do benefício.",
+    date: "28 de Setembro, 2026",
+    category: "BPC/LOAS",
+    tags: ["BPC suspenso", "LOAS bloqueado", "CadÚnico", "Reativar BPC", "INSS"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "CadÚnico desatualizado é um dos motivos mais comuns de suspensão do BPC",
+      "Antes de cortar, o INSS deve notificar e abrir prazo de defesa",
+      "Suspensão é diferente de cessação: na suspensão ainda é possível regularizar",
+      "Perder o prazo de defesa ou recurso pode dificultar a reativação"
+    ],
+    image: bpcSuspensoImg,
+    imageAlt: "Senhora preocupada lendo carta do INSS e olhando o celular na mesa da cozinha",
+    content: [
+      { type: "paragraph", text: "Descobrir que o BPC/LOAS foi suspenso costuma gerar muita preocupação, principalmente porque o benefício é, muitas vezes, a única renda da família. A boa notícia é que a suspensão nem sempre é definitiva: em muitos casos há prazo para apresentar defesa ou regularizar a situação." },
+      { type: "heading", text: "Suspensão, Bloqueio e Cessação: Qual a Diferença?" },
+      { type: "list", items: [
+        "Bloqueio: o pagamento fica retido temporariamente, geralmente por pendência cadastral ou falta de prova de vida",
+        "Suspensão: o INSS interrompe o pagamento enquanto apura uma possível irregularidade",
+        "Cessação: o benefício é encerrado. Ainda cabe recurso ou ação judicial, conforme o caso"
+      ]},
+      { type: "heading", text: "Motivos Mais Comuns de Suspensão do BPC" },
+      { type: "list", items: [
+        "Cadastro Único (CadÚnico) desatualizado ou com informações divergentes",
+        "Renda familiar por pessoa considerada acima do limite legal",
+        "Ausência de CPF de todos os membros da família no CadÚnico",
+        "Não atendimento a convocação para revisão ou perícia",
+        "Cruzamento de dados que indica vínculo de emprego ou outro benefício",
+        "Mudança na composição familiar não informada"
+      ]},
+      { type: "highlight", text: "Muitas suspensões acontecem por falhas cadastrais ou por renda calculada de forma equivocada. Gastos com remédios, fraldas e tratamento, por exemplo, podem ser considerados na análise da renda em determinadas situações." },
+      { type: "heading", text: "O Que Fazer ao Receber a Notificação" },
+      { type: "list", items: [
+        "Leia com atenção a carta ou a mensagem no Meu INSS e anote o prazo de defesa",
+        "Verifique se o CadÚnico está atualizado no CRAS do seu município",
+        "Reúna documentos que comprovem renda, composição familiar e despesas",
+        "Apresente a defesa dentro do prazo, com documentos que contestem o motivo apontado",
+        "Se a decisão for mantida, avalie o recurso administrativo ou a via judicial"
+      ]},
+      { type: "heading", text: "Quando Procurar um Advogado" },
+      { type: "paragraph", text: "Se o motivo da suspensão não estiver claro, se a renda foi calculada incluindo valores que não deveriam entrar na conta ou se o prazo está perto de acabar, a orientação especializada pode fazer diferença. Cada caso tem particularidades que precisam ser analisadas com cuidado." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Agir rápido é essencial quando o BPC é suspenso. A Cantarelli Advocacia pode analisar a notificação, verificar se houve erro do INSS e orientar sobre o melhor caminho para o seu caso." }
+    ],
+    faq: [
+      { question: "O INSS pode suspender o BPC sem avisar?", answer: "Em regra, não. Antes de suspender ou cessar por suspeita de irregularidade, o INSS deve notificar o beneficiário e abrir prazo para defesa. Bloqueios por pendência cadastral, porém, podem ocorrer de forma automática." },
+      { question: "Atualizei o CadÚnico. O BPC volta automaticamente?", answer: "Nem sempre. Em alguns casos o desbloqueio ocorre após o cruzamento de dados; em outros, é necessário pedir a reativação no INSS. Vale acompanhar pelo Meu INSS." },
+      { question: "Recebo os valores atrasados se o BPC for reativado?", answer: "Se ficar demonstrado que a suspensão foi indevida, é possível pedir o pagamento dos valores do período em que o benefício ficou sem pagamento." },
+      { question: "Quanto tempo tenho para recorrer?", answer: "O prazo para recurso administrativo contra a decisão do INSS é, em regra, de 30 dias a partir da ciência da decisão." }
+    ]
+  },
+  {
+    slug: "aposentadoria-por-invalidez-pode-ser-cortada",
+    title: "Aposentadoria por Invalidez Pode Ser Cortada ou Cancelada?",
+    excerpt: "A aposentadoria por invalidez não é vitalícia em todos os casos. Saiba quando o INSS pode revisar ou cancelar o benefício, quem fica dispensado das perícias e como se proteger.",
+    seoTitle: "Aposentadoria por Invalidez Pode Ser Cortada? (2026)",
+    metaDescription: "Entenda quando a aposentadoria por invalidez pode ser cortada ou cancelada pelo INSS, quem está isento da perícia de revisão e como agir.",
+    date: "28 de Setembro, 2026",
+    category: "Aposentadoria por Invalidez",
+    tags: ["Aposentadoria por invalidez", "Incapacidade permanente", "Perícia de revisão", "Pente-fino", "INSS"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "O INSS pode convocar o aposentado por invalidez para perícia de revisão",
+      "Aposentados com 60 anos ou mais, em regra, ficam dispensados da revisão",
+      "Voltar a trabalhar pode levar ao cancelamento do benefício",
+      "Quando há recuperação, a lei prevê pagamento gradual por um período antes do corte"
+    ],
+    image: invalidezCortadaImg,
+    imageAlt: "Segurado com laudos médicos conversando com advogado sobre aposentadoria por invalidez",
+    content: [
+      { type: "paragraph", text: "A aposentadoria por invalidez, hoje chamada de aposentadoria por incapacidade permanente, é concedida a quem não tem condições de voltar a trabalhar. Mesmo assim, muitos segurados não sabem que o benefício pode ser reavaliado pelo INSS e, em algumas situações, cortado." },
+      { type: "heading", text: "Quando o INSS Pode Cortar a Aposentadoria por Invalidez" },
+      { type: "list", items: [
+        "Quando a perícia de revisão conclui que houve recuperação da capacidade para o trabalho",
+        "Quando o aposentado volta a trabalhar por conta própria",
+        "Quando o segurado não comparece à perícia após ser convocado",
+        "Quando se identifica irregularidade na concessão"
+      ]},
+      { type: "heading", text: "Quem Está Dispensado da Perícia de Revisão" },
+      { type: "list", items: [
+        "Aposentados com 60 anos de idade ou mais",
+        "Aposentados com 55 anos ou mais que recebem o benefício há pelo menos 15 anos (contando o auxílio-doença anterior)",
+        "Pessoas com HIV/AIDS, conforme previsão legal"
+      ]},
+      { type: "highlight", text: "A dispensa da revisão tem exceções: ela não vale, por exemplo, quando o próprio segurado pede a perícia para receber o adicional de 25% ou quando há suspeita de fraude." },
+      { type: "heading", text: "E Se a Perícia Disser Que Estou Recuperado?" },
+      { type: "paragraph", text: "Quando a recuperação é reconhecida após alguns anos de benefício, a lei prevê a chamada mensalidade de recuperação: o pagamento é reduzido de forma gradual por um período, em vez de ser cortado de uma só vez. Além disso, a decisão pode ser contestada com recurso ou ação judicial, apresentando laudos e exames atualizados." },
+      { type: "heading", text: "Como Se Proteger" },
+      { type: "list", items: [
+        "Mantenha o acompanhamento médico e guarde laudos, receitas e exames recentes",
+        "Atualize seus dados de contato no Meu INSS para não perder convocações",
+        "Compareça à perícia levando toda a documentação médica",
+        "Não assuma atividade remunerada sem orientação, pois isso pode levar ao cancelamento"
+      ]},
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Receber uma convocação para perícia ou uma notificação de corte não significa, necessariamente, perder o benefício. A Cantarelli Advocacia pode analisar sua situação e orientar sobre defesa, recurso ou ação judicial." }
+    ],
+    faq: [
+      { question: "A aposentadoria por invalidez é para sempre?", answer: "Nem sempre. Ela pode ser revista enquanto o segurado não se enquadrar nas hipóteses de dispensa da perícia, como ter 60 anos ou mais." },
+      { question: "Aposentado por invalidez pode trabalhar?", answer: "Em regra, não. O retorno voluntário à atividade pode levar ao cancelamento do benefício a partir da data do retorno." },
+      { question: "O INSS pode cortar sem perícia?", answer: "O corte por recuperação depende de perícia. Se o segurado não comparecer à convocação, porém, o benefício pode ser suspenso." },
+      { question: "Posso recorrer do corte da aposentadoria por invalidez?", answer: "Sim. É possível apresentar recurso administrativo, em regra no prazo de 30 dias, ou buscar a Justiça com laudos que comprovem a incapacidade." }
+    ]
+  },
+  {
+    slug: "beneficio-cessado-inss-o-que-significa",
+    title: "Benefício Cessado no INSS: O Que Significa e O Que Fazer",
+    excerpt: "Apareceu 'cessado' no Meu INSS? Entenda o que significa essa situação, os motivos mais comuns e quais caminhos existem para tentar restabelecer o benefício.",
+    seoTitle: "Benefício Cessado INSS: O Que Significa? (2026)",
+    metaDescription: "Viu 'benefício cessado' no Meu INSS? Saiba o que significa, por que acontece e o que fazer para pedir o restabelecimento do benefício.",
+    date: "28 de Setembro, 2026",
+    category: "Benefícios INSS",
+    tags: ["Benefício cessado", "Meu INSS", "Restabelecimento", "Auxílio-doença", "Recurso INSS"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Cessado significa que o benefício foi encerrado e deixou de ser pago",
+      "No auxílio por incapacidade, a cessação costuma ocorrer na data prevista pela perícia (DCB)",
+      "É possível pedir prorrogação antes da data de cessação",
+      "Após a cessação, cabe recurso, novo pedido ou ação judicial, conforme o caso"
+    ],
+    image: beneficioCessadoImg,
+    imageAlt: "Homem preocupado consultando a situação do benefício no celular",
+    content: [
+      { type: "paragraph", text: "Quando o Meu INSS mostra a situação 'cessado', significa que o benefício foi encerrado e não será mais pago. Isso pode acontecer por diferentes motivos, e entender a causa é o primeiro passo para saber se é possível restabelecer o pagamento." },
+      { type: "heading", text: "Principais Motivos de Cessação" },
+      { type: "list", items: [
+        "Fim do prazo definido na perícia do auxílio por incapacidade temporária (DCB)",
+        "Perícia de revisão que concluiu pela recuperação da capacidade",
+        "Fim do prazo legal da pensão por morte",
+        "Revisão do BPC com renda considerada acima do limite",
+        "Retorno ao trabalho ou concessão de outro benefício não acumulável",
+        "Falecimento do titular"
+      ]},
+      { type: "heading", text: "Benefício Concedido e Depois Cessado: É Normal?" },
+      { type: "paragraph", text: "Sim, é comum no auxílio por incapacidade temporária (antigo auxílio-doença). Ao conceder, o INSS já fixa uma data prevista para o fim do benefício. Se você continua sem condições de trabalhar, precisa pedir a prorrogação antes dessa data." },
+      { type: "highlight", text: "O pedido de prorrogação deve ser feito nos 15 dias que antecedem a data de cessação. Depois que o benefício é cessado, não é mais possível prorrogar, sendo necessário recorrer ou fazer novo pedido." },
+      { type: "heading", text: "O Que Fazer Após a Cessação" },
+      { type: "list", items: [
+        "Confira no Meu INSS o motivo e a data da cessação",
+        "Avalie se cabe recurso administrativo, em regra no prazo de 30 dias",
+        "Reúna laudos e exames atualizados, se a cessação foi por perícia",
+        "Considere a ação judicial de restabelecimento quando houver elementos que indiquem erro"
+      ]},
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "A cessação não é necessariamente o fim do caminho. A Cantarelli Advocacia pode verificar o motivo do encerramento e orientar sobre a melhor estratégia para o seu caso." }
+    ],
+    faq: [
+      { question: "O que significa 'situação do benefício: cessado'?", answer: "Significa que o benefício foi encerrado pelo INSS e deixou de ser pago a partir da data de cessação informada." },
+      { question: "Benefício cessado pode voltar?", answer: "Pode, em alguns casos, por meio de recurso administrativo ou ação judicial de restabelecimento, quando se demonstra que o segurado ainda tinha direito." },
+      { question: "Qual a diferença entre cessado e suspenso?", answer: "Suspenso indica interrupção temporária enquanto algo é apurado ou regularizado. Cessado indica encerramento do benefício." },
+      { question: "Tenho direito aos atrasados se o benefício for restabelecido?", answer: "Se ficar reconhecido que a cessação foi indevida, é possível pedir os valores desde a data em que o pagamento foi interrompido." }
+    ]
+  },
+  {
+    slug: "quanto-tempo-depois-da-pericia-sai-o-beneficio",
+    title: "Quanto Tempo Depois da Perícia Sai o Benefício do INSS?",
+    excerpt: "Fez a perícia médica e está aguardando? Entenda como acompanhar o resultado, o que influencia o prazo e o que fazer se o benefício for negado.",
+    seoTitle: "Quanto Tempo Depois da Perícia Sai o Benefício? 2026",
+    metaDescription: "Saiba quanto tempo depois da perícia do INSS sai o resultado e o pagamento, como acompanhar pelo Meu INSS e o que fazer se for negado.",
+    date: "28 de Setembro, 2026",
+    category: "Benefícios INSS",
+    tags: ["Perícia INSS", "Resultado perícia", "Auxílio-doença", "Aposentadoria por invalidez", "Meu INSS"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "O resultado da perícia costuma aparecer no Meu INSS após a conclusão da análise",
+      "O prazo varia conforme a demanda da agência e a documentação apresentada",
+      "Se aprovado, os valores podem ser pagos de forma retroativa",
+      "Se negado, é possível recorrer ou buscar a Justiça"
+    ],
+    image: depoisPericiaImg,
+    imageAlt: "Mulher aguardando em sala de espera segurando pasta com exames médicos",
+    content: [
+      { type: "paragraph", text: "Depois da perícia médica do INSS, a espera pelo resultado gera ansiedade. Não existe um prazo único: o tempo depende da análise administrativa, da demanda da agência e de eventuais pendências no pedido." },
+      { type: "heading", text: "Como Acompanhar o Resultado" },
+      { type: "list", items: [
+        "Acesse o Meu INSS e consulte 'Consultar Pedidos'",
+        "Verifique se há exigências pendentes, como envio de documentos",
+        "Ligue para a central 135 para informações sobre o andamento",
+        "Confira a carta de concessão ou de indeferimento assim que disponível"
+      ]},
+      { type: "heading", text: "O Que Pode Atrasar o Resultado" },
+      { type: "list", items: [
+        "Exigências de documentos não cumpridas",
+        "Divergências no CNIS (cadastro de contribuições)",
+        "Necessidade de análise de qualidade de segurado ou carência",
+        "Alta demanda na agência"
+      ]},
+      { type: "highlight", text: "Quando o benefício é concedido, os valores costumam ser pagos desde a data de início fixada pelo INSS, que pode ser anterior à perícia. Por isso, a demora na análise não significa, necessariamente, perda de valores." },
+      { type: "heading", text: "E Se o Benefício For Negado?" },
+      { type: "paragraph", text: "O indeferimento após a perícia é comum e nem sempre reflete a real condição de saúde do segurado. É possível apresentar recurso administrativo, em regra em até 30 dias, ou ingressar com ação judicial, na qual é feita nova perícia por médico nomeado pelo juiz." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se o resultado está demorando além do razoável ou foi negado, a Cantarelli Advocacia pode analisar o processo e orientar sobre os próximos passos." }
+    ],
+    faq: [
+      { question: "O resultado da perícia sai na hora?", answer: "Em alguns casos o perito já registra a conclusão, mas o resultado oficial e a concessão dependem da análise administrativa e aparecem depois no Meu INSS." },
+      { question: "Quando cai o primeiro pagamento?", answer: "Após a concessão, o pagamento segue o calendário do INSS. Os valores do período entre a data de início e a concessão costumam ser pagos juntos." },
+      { question: "O INSS tem prazo para analisar o pedido?", answer: "Existem prazos de referência para análise, mas atrasos acontecem. Em demoras excessivas, pode ser possível buscar medidas judiciais." },
+      { question: "Posso fazer outra perícia se discordar?", answer: "Sim. Pelo recurso administrativo ou pela ação judicial, na qual um perito do Judiciário faz nova avaliação." }
+    ]
+  },
+  {
+    slug: "quando-aposentadoria-por-invalidez-se-torna-definitiva",
+    title: "Quando a Aposentadoria por Invalidez Se Torna Definitiva?",
+    excerpt: "Muitos aposentados por invalidez querem saber quando deixam de ser chamados para perícia. Entenda as regras de idade e tempo de benefício que tornam a aposentadoria mais estável.",
+    seoTitle: "Quando a Aposentadoria por Invalidez Fica Definitiva?",
+    metaDescription: "Veja quando a aposentadoria por invalidez se torna definitiva: regras de idade, tempo de benefício, exceções e como se proteger do pente-fino.",
+    date: "28 de Setembro, 2026",
+    category: "Aposentadoria por Invalidez",
+    tags: ["Aposentadoria por invalidez definitiva", "60 anos", "Perícia de revisão", "Incapacidade permanente", "INSS"],
+    readTime: "6 min",
+    keyTakeaways: [
+      "Aos 60 anos, em regra, o aposentado por invalidez deixa de ser convocado para revisão",
+      "Com 55 anos e 15 anos de benefício, também há dispensa",
+      "A dispensa tem exceções, como suspeita de fraude",
+      "Retornar ao trabalho continua sendo motivo de cancelamento"
+    ],
+    image: invalidezDefinitivaImg,
+    imageAlt: "Aposentado tranquilo tomando café na varanda de casa",
+    content: [
+      { type: "paragraph", text: "A aposentadoria por incapacidade permanente pode ser revisada pelo INSS por meio de perícias periódicas. Porém, a lei prevê situações em que o segurado fica dispensado dessas revisões, o que popularmente se chama de aposentadoria 'definitiva'." },
+      { type: "heading", text: "Regras de Dispensa da Perícia" },
+      { type: "list", items: [
+        "Ter 60 anos de idade ou mais",
+        "Ter 55 anos ou mais e receber benefício por incapacidade há pelo menos 15 anos, somando o auxílio-doença que antecedeu a aposentadoria",
+        "Ser pessoa com HIV/AIDS"
+      ]},
+      { type: "highlight", text: "O tempo recebendo auxílio por incapacidade temporária antes da aposentadoria conta para os 15 anos exigidos. Vale conferir seu histórico no Meu INSS." },
+      { type: "heading", text: "Exceções: Quando Pode Haver Perícia Mesmo Assim" },
+      { type: "list", items: [
+        "Quando o próprio segurado pede avaliação para o adicional de 25%",
+        "Quando o segurado pede para voltar ao trabalho alegando recuperação",
+        "Quando há suspeita de fraude ou irregularidade",
+        "Para subsidiar decisão judicial de curatela"
+      ]},
+      { type: "heading", text: "Cuidados Que Continuam Valendo" },
+      { type: "paragraph", text: "Mesmo dispensado da perícia, o aposentado por invalidez não pode retornar voluntariamente ao trabalho, sob risco de cancelamento. Também é importante manter a prova de vida e os dados atualizados." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você foi convocado para perícia mesmo se enquadrando nas regras de dispensa, pode haver erro. A Cantarelli Advocacia pode analisar a convocação e orientar sobre seus direitos." }
+    ],
+    faq: [
+      { question: "Com 60 anos a aposentadoria por invalidez vira aposentadoria por idade?", answer: "Não há conversão automática. O benefício continua sendo por incapacidade permanente, mas o segurado passa a ser dispensado das perícias de revisão, salvo exceções." },
+      { question: "Fui convocado mesmo tendo mais de 60 anos. É correto?", answer: "Só em situações excepcionais previstas em lei. Se não for o caso, vale buscar orientação para verificar se a convocação é indevida." },
+      { question: "O tempo de auxílio-doença conta para os 15 anos?", answer: "Sim. O período de auxílio por incapacidade temporária que precedeu a aposentadoria entra na contagem." }
+    ]
+  },
+  {
+    slug: "visao-monocular-aposentadoria-direitos-inss",
+    title: "Visão Monocular Aposenta? Direitos no INSS em 2026",
+    excerpt: "A visão monocular é reconhecida por lei como deficiência. Entenda quais direitos previdenciários isso pode garantir, como a aposentadoria da pessoa com deficiência e o BPC.",
+    seoTitle: "Visão Monocular Aposenta? Direitos e Valor no INSS 2026",
+    metaDescription: "Visão monocular é deficiência por lei. Veja se dá direito à aposentadoria PcD, BPC/LOAS e outros benefícios do INSS, e como comprovar.",
+    date: "28 de Setembro, 2026",
+    category: "Aposentadoria PcD",
+    tags: ["Visão monocular", "Aposentadoria PcD", "Lei 14.126", "Deficiência visual", "BPC/LOAS"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "A Lei 14.126/2021 reconhece a visão monocular como deficiência sensorial visual",
+      "Pode garantir acesso à aposentadoria da pessoa com deficiência, com regras mais favoráveis",
+      "O INSS faz avaliação biopsicossocial para definir o grau da deficiência",
+      "O BPC/LOAS pode ser possível quando também há baixa renda familiar"
+    ],
+    image: visaoMonocularImg,
+    imageAlt: "Oftalmologista examinando o olho de paciente em consultório",
+    content: [
+      { type: "paragraph", text: "Quem enxerga apenas com um olho enfrenta limitações reais no dia a dia e no trabalho. Desde 2021, a Lei 14.126 classifica a visão monocular como deficiência sensorial visual, o que abre portas para direitos previdenciários específicos." },
+      { type: "heading", text: "Quais Benefícios Podem Ser Possíveis" },
+      { type: "list", items: [
+        "Aposentadoria por idade da pessoa com deficiência: 60 anos (homem) ou 55 anos (mulher), com 15 anos de contribuição na condição de deficiente",
+        "Aposentadoria por tempo de contribuição da pessoa com deficiência, com tempo reduzido conforme o grau (leve, moderado ou grave)",
+        "BPC/LOAS, quando também há baixa renda familiar",
+        "Auxílio por incapacidade, se houver incapacidade para a atividade habitual"
+      ]},
+      { type: "highlight", text: "Ter visão monocular não gera aposentadoria automaticamente. O INSS realiza avaliação médica e social para definir o grau da deficiência e desde quando ela existe, o que impacta diretamente o tempo exigido." },
+      { type: "heading", text: "Qual o Valor da Aposentadoria PcD?" },
+      { type: "paragraph", text: "Na aposentadoria PcD por tempo de contribuição, o valor corresponde a 100% da média salarial. Na aposentadoria PcD por idade, o cálculo parte de 70% da média, com acréscimo de 1% por grupo de 12 contribuições. As regras da pessoa com deficiência, em geral, não aplicam as reduções da reforma de 2019." },
+      { type: "heading", text: "Documentos Importantes" },
+      { type: "list", items: [
+        "Laudos oftalmológicos com CID e data de início da condição",
+        "Exames que comprovem a perda visual",
+        "Documentos que mostrem as limitações no trabalho e no cotidiano",
+        "CNIS com o histórico de contribuições"
+      ]},
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "A visão monocular pode fazer diferença no seu planejamento previdenciário. A Cantarelli Advocacia pode analisar seu histórico e avaliar qual benefício é mais vantajoso no seu caso." }
+    ],
+    faq: [
+      { question: "Visão monocular é considerada deficiência?", answer: "Sim. A Lei 14.126/2021 classifica a visão monocular como deficiência sensorial visual para todos os efeitos legais." },
+      { question: "Quem tem visão monocular aposenta mais cedo?", answer: "Pode aposentar com regras mais favoráveis pela aposentadoria da pessoa com deficiência, desde que o grau e o tempo com deficiência sejam reconhecidos na avaliação do INSS." },
+      { question: "Visão monocular dá direito ao BPC/LOAS?", answer: "Pode dar, desde que a deficiência gere impedimento de longo prazo e a renda familiar por pessoa esteja dentro do critério legal." }
+    ]
+  },
+  {
+    slug: "o-que-e-ppp-aposentadoria-especial",
+    title: "O Que É PPP Para Aposentadoria? Guia Completo 2026",
+    excerpt: "O PPP é o principal documento para comprovar atividade especial no INSS. Entenda o que é, quem deve fornecer, o que precisa constar e o que fazer se estiver errado.",
+    seoTitle: "O Que É PPP Para Aposentadoria Especial? (2026)",
+    metaDescription: "Entenda o que é o PPP (Perfil Profissiográfico Previdenciário), como conseguir, o que deve constar e como ele influencia a aposentadoria especial.",
+    date: "28 de Setembro, 2026",
+    category: "Aposentadoria Especial",
+    tags: ["PPP", "Perfil Profissiográfico Previdenciário", "Aposentadoria especial", "LTCAT", "Insalubridade"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "O PPP registra a exposição do trabalhador a agentes nocivos à saúde",
+      "A empresa é obrigada a fornecer o documento, inclusive na rescisão",
+      "O PPP deve ser baseado em laudo técnico (LTCAT)",
+      "Erros no PPP podem reduzir ou impedir o reconhecimento do tempo especial"
+    ],
+    image: pppAposentadoriaImg,
+    imageAlt: "Trabalhador industrial com capacete e protetor auricular segurando documentos",
+    content: [
+      { type: "paragraph", text: "O Perfil Profissiográfico Previdenciário (PPP) é o documento que descreve as atividades do trabalhador e os agentes nocivos aos quais ele esteve exposto, como ruído, calor, produtos químicos e agentes biológicos. Ele é a principal prova para a aposentadoria especial e para a conversão de tempo especial." },
+      { type: "heading", text: "O Que Deve Constar no PPP" },
+      { type: "list", items: [
+        "Dados da empresa e do trabalhador",
+        "Cargo, setor e descrição das atividades",
+        "Agentes nocivos, intensidade ou concentração e técnica de medição",
+        "Informações sobre EPI e EPC",
+        "Responsáveis técnicos pelos registros ambientais",
+        "Assinatura do representante legal da empresa"
+      ]},
+      { type: "highlight", text: "Desde 2023, o PPP passou a ser emitido em formato eletrônico por meio do eSocial para os períodos mais recentes. Para períodos anteriores, continua valendo o PPP em papel." },
+      { type: "heading", text: "Quem Deve Fornecer o PPP" },
+      { type: "paragraph", text: "A empresa é obrigada a elaborar e manter o PPP atualizado e a entregá-lo ao trabalhador na rescisão do contrato ou quando solicitado. Se a empresa fechou, é possível buscar outros meios de prova, como laudos de empresas similares, conforme o caso." },
+      { type: "heading", text: "Erros Comuns no PPP" },
+      { type: "list", items: [
+        "Ausência de responsável técnico no período",
+        "Intensidade do ruído sem indicação da metodologia",
+        "Descrição genérica das atividades",
+        "Indicação de EPI eficaz sem análise real da exposição",
+        "Períodos faltando ou datas divergentes da carteira de trabalho"
+      ]},
+      { type: "heading", text: "E Se o PPP Estiver Errado?" },
+      { type: "paragraph", text: "É possível pedir a correção diretamente à empresa. Se ela se recusar, a correção pode ser buscada judicialmente. Em processos previdenciários, também é possível requerer perícia técnica para comprovar as condições reais de trabalho." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Um PPP bem preenchido pode ser decisivo no reconhecimento do tempo especial. A Cantarelli Advocacia pode analisar seus documentos e identificar falhas antes do pedido ao INSS." }
+    ],
+    faq: [
+      { question: "O que significa PPP?", answer: "Perfil Profissiográfico Previdenciário, documento que registra o histórico laboral e a exposição a agentes nocivos." },
+      { question: "A empresa pode se recusar a entregar o PPP?", answer: "Não. O fornecimento é obrigação legal da empresa. A recusa pode ser questionada, inclusive na Justiça do Trabalho." },
+      { question: "Só o PPP basta para a aposentadoria especial?", answer: "Muitas vezes é a principal prova, mas o INSS pode exigir o LTCAT ou outros documentos, e falhas no PPP podem exigir provas complementares." },
+      { question: "Autônomo pode ter PPP?", answer: "O PPP é emitido pela empresa. Contribuintes individuais podem comprovar atividade especial por outros meios, como laudos técnicos, conforme o caso." }
+    ]
+  },
   {
     slug: "stf-derruba-idade-minima-aposentadoria-especial-insalubridade-2026",
     title: "STF Derruba Idade Mínima para Aposentadoria Especial por Insalubridade",
