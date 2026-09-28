@@ -35,6 +35,14 @@ export function trackWhatsAppClick(
   contextLabel?: string,
 ) {
   try {
+    // Conversões para anúncios (só existem se o visitante aceitou os cookies)
+    const w = window as unknown as {
+      gtag?: (...a: unknown[]) => void;
+      fbq?: (...a: unknown[]) => void;
+    };
+    w.gtag?.("event", "generate_lead", { method: "whatsapp", cta_location: ctaLocation });
+    w.fbq?.("track", "Contact", { content_name: ctaLocation });
+
     const { source, medium, campaign, referrer } = detectTrafficSource();
     void supabase
       .from("whatsapp_click_events")
