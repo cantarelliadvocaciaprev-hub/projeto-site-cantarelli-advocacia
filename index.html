@@ -50,9 +50,10 @@
 
   <!-- Meta Pixel Code (carregado após a página ficar interativa) -->
   <script>
+    // Meta Pixel só é carregado após o visitante aceitar os cookies (LGPD)
     (function () {
       var loaded = false;
-      function loadPixel() {
+      window.__loadMetaPixel = function () {
         if (loaded) return;
         loaded = true;
         !function(f,b,e,v,n,t,s)
@@ -63,13 +64,15 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('consent', 'grant');
         fbq('init', '983535451371486');
         fbq('track', 'PageView');
-      }
-      ['scroll','pointerdown','keydown','touchstart'].forEach(function (ev) {
-        window.addEventListener(ev, loadPixel, { once: true, passive: true });
-      });
-      window.addEventListener('load', function () { setTimeout(loadPixel, 3500); });
+      };
+      try {
+        if (localStorage.getItem('cookie-consent') === 'accepted') {
+          window.addEventListener('load', function () { setTimeout(window.__loadMetaPixel, 2500); });
+        }
+      } catch (e) {}
     })();
   </script>
   <!-- End Meta Pixel Code -->
@@ -77,9 +80,6 @@
 </head>
 
   <body>
-    <!-- Meta Pixel (noscript fallback) -->
-    <noscript><img height="1" width="1" style="display:none" alt=""
-      src="https://www.facebook.com/tr?id=983535451371486&amp;ev=PageView&amp;noscript=1" /></noscript>
 
     <!-- Single Page Apps for GitHub Pages - Redirect Script -->
     <script type="text/javascript">
