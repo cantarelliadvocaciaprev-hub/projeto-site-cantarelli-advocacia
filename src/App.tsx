@@ -8,6 +8,7 @@ import { MotionConfig } from "framer-motion";
 import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import PageViewTracker from "./components/PageViewTracker";
+import CookieConsent from "./components/CookieConsent";
 
 const TrabalheConosco = lazy(() => import("./pages/TrabalheConosco"));
 const Seguranca = lazy(() => import("./pages/Seguranca"));
@@ -34,6 +35,7 @@ const App = () => (
           <Sonner />
           <BrowserRouter>
             <PageViewTracker />
+            <CookieConsent />
             <Suspense fallback={null}>
               <Routes>
                 <Route path="/" element={<Index />} />
