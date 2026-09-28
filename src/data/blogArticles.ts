@@ -2847,6 +2847,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "tendinite-ler-aposentadoria-invalidez",
     title: "Qual Tipo de Tendinite Aposenta? Entenda Quando a LER Gera Invalidez",
+    seoTitle: "Tendinite Aposenta? Qual Tipo Dá Direito ao INSS (2026) | Cantarelli",
+    metaDescription: "Tendinite aposenta? Saiba qual tipo de tendinite e LER (epicondilite, manguito rotador) pode gerar aposentadoria por invalidez ou auxílio-acidente no INSS.",
     excerpt: "Nem toda tendinite dá direito à aposentadoria, mas quando a LER/DORT se torna incapacitante, o INSS pode conceder benefício por invalidez. Saiba quando isso acontece.",
     category: "Aposentadoria",
     tags: ["Tendinite", "LER", "DORT", "Invalidez", "INSS"],
@@ -2888,6 +2890,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "autismo-aposentadoria-pessoa-com-deficiencia",
     title: "Qual Grau de Autismo Aposenta? Entenda a Aposentadoria da Pessoa com Deficiência",
+    seoTitle: "Qual Grau de Autismo Aposenta? Regras do INSS 2026 | Cantarelli",
+    metaDescription: "Qual grau de autismo aposenta? Entenda a aposentadoria da pessoa com deficiência para autistas, graus leve, moderado e grave, e como comprovar no INSS.",
     excerpt: "Pessoas com Transtorno do Espectro Autista (TEA) podem ter direito à aposentadoria por deficiência com tempo reduzido. Entenda os critérios e como garantir o benefício.",
     category: "Autismo",
     tags: ["Autismo", "TEA", "PCD", "Deficiência", "INSS"],
@@ -2934,6 +2938,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "processo-auxilio-acidente-justica-prazos",
     title: "Como Funciona um Processo de Auxílio-Acidente na Justiça? Entenda os Prazos",
+    seoTitle: "Quanto Tempo Demora um Processo de Auxílio-Acidente? 2026 | Cantarelli",
+    metaDescription: "Quanto tempo demora um processo de auxílio-acidente na Justiça? Veja as etapas, a perícia judicial, os atrasados e quando buscar um advogado previdenciário.",
     excerpt: "Teve o auxílio-acidente negado pelo INSS? Entenda como funciona o processo judicial, quais os prazos envolvidos e como um advogado pode ajudar.",
     category: "Benefícios",
     tags: ["Auxílio-Acidente", "Processo Judicial", "INSS", "Prazos"],
@@ -3217,6 +3223,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "quem-recebe-loas-pode-receber-pensao-por-morte",
     title: "Quem Recebe LOAS Pode Receber Pensão por Morte do Marido?",
+    seoTitle: "Quem Recebe LOAS Pode Receber Pensão por Morte? (2026) | Cantarelli",
+    metaDescription: "Quem recebe LOAS pode receber pensão por morte do marido? Entenda a regra do INSS, quando é possível trocar o benefício e o que analisar antes de pedir.",
     excerpt: "Descubra se é possível acumular o BPC/LOAS com a pensão por morte do cônjuge e quais são as regras de acumulação de benefícios do INSS.",
     category: "BPC/LOAS",
     tags: ["LOAS", "Pensão por Morte", "Acumulação", "INSS", "BPC"],
@@ -3289,6 +3297,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "deficiencia-auditiva-aposentadoria-pcd",
     title: "Deficiência Auditiva Aposenta? Conheça Seus Direitos no INSS",
+    seoTitle: "Deficiência Auditiva Aposenta? Regras do INSS em 2026 | Cantarelli",
+    metaDescription: "Deficiência auditiva aposenta? Veja quem tem direito à aposentadoria da pessoa com deficiência, o grau de perda exigido e os documentos para o INSS.",
     excerpt: "Entenda quando a perda auditiva garante aposentadoria da pessoa com deficiência ou por invalidez e quais documentos são necessários.",
     category: "Autismo",
     tags: ["PCD", "Deficiência Auditiva", "INSS", "Aposentadoria"],
@@ -3323,6 +3333,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "depressao-aposentadoria-por-invalidez",
     title: "Depressão Aposenta por Invalidez? Entenda os Requisitos do INSS",
+    seoTitle: "Depressão Aposenta por Invalidez? Requisitos INSS 2026 | Cantarelli",
+    metaDescription: "Depressão aposenta por invalidez? Saiba quando o INSS concede o benefício, quais laudos e tratamentos comprovam a incapacidade e o papel da perícia.",
     excerpt: "Saiba quando a depressão grave e outros transtornos mentais podem gerar aposentadoria por invalidez e como provar a incapacidade.",
     category: "Incapacidade",
     tags: ["Depressão", "Invalidez", "Saúde Mental", "INSS", "Auxílio-Doença"],
@@ -3829,6 +3841,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "aposentadoria-por-pontos-2026-regras",
     title: "Aposentadoria por Pontos 2026: Quantos Pontos Você Precisa?",
+    seoTitle: "Aposentadoria por Pontos 2026: Tabela Homem e Mulher | Cantarelli",
+    metaDescription: "Aposentadoria por pontos 2026: veja a tabela de pontos para homem e mulher, o tempo de contribuição exigido e como calcular sua pontuação no INSS.",
     excerpt: "A regra de pontos exige 92 pontos para mulheres e 102 para homens em 2026. Entenda como calcular e se essa é a melhor regra para você.",
     category: "Aposentadoria",
     tags: ["Pontos", "Regra de Transição", "INSS", "2026", "Reforma"],
@@ -4173,6 +4187,8 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "bpc-loas-autismo-adulto-como-garantir",
     title: "BPC/LOAS para Adulto com Autismo: Requisitos e Como Garantir o Benefício",
+    seoTitle: "BPC/LOAS para Adulto com Autismo: Quem Tem Direito 2026 | Cantarelli",
+    metaDescription: "Adulto com autismo tem direito ao BPC/LOAS? Veja os requisitos de renda, laudos, avaliação do INSS e o que fazer se o pedido for negado.",
     excerpt: "Adultos com TEA que não contribuíram ao INSS podem ter direito ao BPC/LOAS. Entenda os critérios de renda, a avaliação e como superar o indeferimento.",
     category: "Autismo",
     tags: ["BPC", "LOAS", "Autismo", "TEA", "Adulto"],
