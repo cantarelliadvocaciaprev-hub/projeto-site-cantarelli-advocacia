@@ -68,9 +68,24 @@
         fbq('init', '983535451371486');
         fbq('track', 'PageView');
       };
+      var gaLoaded = false;
+      window.__loadGA = function () {
+        if (gaLoaded) return;
+        gaLoaded = true;
+        var id = 'G-003968';
+        var sc = document.createElement('script');
+        sc.async = true;
+        sc.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+        document.head.appendChild(sc);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        gtag('consent', 'default', { ad_storage: 'granted', analytics_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
+        gtag('js', new Date());
+        gtag('config', id);
+      };
       try {
         if (localStorage.getItem('cookie-consent') === 'accepted') {
-          window.addEventListener('load', function () { setTimeout(window.__loadMetaPixel, 2500); });
+          window.addEventListener('load', function () { setTimeout(function(){ window.__loadMetaPixel(); window.__loadGA(); }, 2500); });
         }
       } catch (e) {}
     })();

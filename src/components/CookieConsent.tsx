@@ -9,6 +9,8 @@ declare global {
   interface Window {
     __loadMetaPixel?: () => void;
     fbq?: (...args: unknown[]) => void;
+    __loadGA?: () => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -31,7 +33,9 @@ const CookieConsent = () => {
       first.current = false;
       return;
     }
-    if (consent === "accepted" && window.fbq) window.fbq("track", "PageView");
+    if (consent !== "accepted") return;
+    window.fbq?.("track", "PageView");
+    window.gtag?.("event", "page_view", { page_path: location.pathname, page_location: window.location.href });
   }, [location.pathname, consent]);
 
   const choose = (value: "accepted" | "rejected") => {
@@ -41,7 +45,10 @@ const CookieConsent = () => {
       /* ignore */
     }
     setConsent(value);
-    if (value === "accepted") window.__loadMetaPixel?.();
+    if (value === "accepted") {
+      window.__loadMetaPixel?.();
+      window.__loadGA?.();
+    }
   };
 
   if (consent) return null;
