@@ -121,7 +121,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Novo benefício do INSS para mulher afastada do trabalho por medida protetiva da Lei Maria da Penha. Veja quem tem direito e os documentos exigidos.",
     date: "15 de Outubro, 2026",
     lastUpdated: "Outubro 2026",
-    category: "Novidades INSS",
+    category: "Direitos Previdenciários",
     tags: ["Lei Maria da Penha", "Afastamento protetivo", "Novidades INSS", "Violência doméstica", "Direitos da mulher"],
     readTime: "7 min",
     keyTakeaways: [
@@ -166,7 +166,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Entenda a Instrução Normativa 212/2026 do INSS: pensão para filho nascido após o óbito, auxílio-acidente, CNIS sem salário e alíquota de 5%, 11% e 12%.",
     date: "15 de Outubro, 2026",
     lastUpdated: "Outubro 2026",
-    category: "Novidades INSS",
+    category: "Direitos Previdenciários",
     tags: ["IN 212/2026", "Instrução Normativa INSS", "Auxílio-acidente", "Pensão por morte", "CNIS"],
     readTime: "8 min",
     keyTakeaways: [
@@ -452,7 +452,7 @@ export const blogArticles: BlogArticle[] = [
     seoTitle: "Benefício Cessado INSS: O Que Significa? (2026)",
     metaDescription: "Viu 'benefício cessado' no Meu INSS? Saiba o que significa, por que acontece e o que fazer para pedir o restabelecimento do benefício.",
     date: "28 de Setembro, 2026",
-    category: "Benefícios INSS",
+    category: "Direitos Previdenciários",
     tags: ["Benefício cessado", "Meu INSS", "Restabelecimento", "Auxílio-doença", "Recurso INSS"],
     readTime: "7 min",
     keyTakeaways: [
@@ -501,7 +501,7 @@ export const blogArticles: BlogArticle[] = [
     seoTitle: "Quanto Tempo Depois da Perícia Sai o Benefício? 2026",
     metaDescription: "Saiba quanto tempo depois da perícia do INSS sai o resultado e o pagamento, como acompanhar pelo Meu INSS e o que fazer se for negado.",
     date: "28 de Setembro, 2026",
-    category: "Benefícios INSS",
+    category: "Direitos Previdenciários",
     tags: ["Perícia INSS", "Resultado perícia", "Auxílio-doença", "Aposentadoria por invalidez", "Meu INSS"],
     readTime: "7 min",
     keyTakeaways: [
@@ -1213,7 +1213,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Lei Estabelece Limite de 30 Dias para o INSS Pagar o Salário-Maternidade",
     excerpt:
       "Nova regra fixa prazo máximo de 30 dias para o INSS analisar e pagar o salário-maternidade. Entenda o que mudou, quem tem direito e o que fazer se o prazo não for cumprido.",
-    category: "Benefícios",
+    category: "Direitos Previdenciários",
     tags: ["Salário-Maternidade", "INSS", "Prazo", "Benefícios", "2026"],
     readTime: "8 min",
     keyTakeaways: [
@@ -1329,7 +1329,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Licença-Paternidade Ampliada: O Que Muda com a Lei 15.371/2026",
     excerpt:
       "A nova lei amplia gradualmente a licença-paternidade para até 20 dias, cria o salário-paternidade e garante estabilidade no emprego. Entenda todos os seus direitos.",
-    category: "Benefícios",
+    category: "Direitos Previdenciários",
     tags: ["Licença-Paternidade", "Salário-Paternidade", "Lei 15.371", "INSS", "CLT", "2026"],
     readTime: "9 min",
     keyTakeaways: [
@@ -1627,7 +1627,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt:
       "O antigo auxílio-doença agora é chamado de auxílio por incapacidade temporária. Saiba como funciona o pedido, a perícia e o que fazer se seu benefício for negado.",
     date: "10 de Março, 2026",
-    category: "Benefícios",
+    category: "Direitos Previdenciários",
     tags: ["Auxílio-Doença", "Perícia Médica", "INSS", "Incapacidade"],
     readTime: "6 min",
     keyTakeaways: [
@@ -2618,7 +2618,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt:
       "O auxílio-acidente é um benefício pago ao trabalhador que sofre acidente e fica com sequelas permanentes. Entenda quem tem direito, quanto recebe e como pedir em 2026.",
     date: "21 de Março, 2026",
-    category: "Benefícios",
+    category: "Auxílio-Acidente",
     tags: ["Acidente", "Sequela", "Indenização", "INSS"],
     readTime: "6 min",
     keyTakeaways: [
@@ -2978,7 +2978,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Doença Ocupacional e Burnout: Direitos no INSS em 2026",
     excerpt: "Burnout, LER/DORT e doenças ocupacionais garantem benefícios específicos no INSS. Veja como comprovar e quais são seus direitos.",
     date: "20 de Março, 2026",
-    category: "Benefícios",
+    category: "Direitos Previdenciários",
     tags: ["Burnout", "LER/DORT", "Doença Ocupacional", "CAT"],
     readTime: "6 min",
     keyTakeaways: [
@@ -3064,7 +3064,7 @@ export const blogArticles: BlogArticle[] = [
     title: "Salário-Maternidade em 2026: Quem Tem Direito e Como Funciona",
     excerpt: "Entenda quem pode receber o salário-maternidade em 2026, qual o valor, duração e como solicitar esse benefício do INSS.",
     date: "18 de Março, 2026",
-    category: "Benefícios",
+    category: "Direitos Previdenciários",
     tags: ["Maternidade", "Gestante", "Adoção", "INSS"],
     readTime: "6 min",
     keyTakeaways: [
@@ -3528,7 +3528,7 @@ export const blogArticles: BlogArticle[] = [
     seoTitle: "Quanto Tempo Demora um Processo de Auxílio-Acidente? 2026 | Cantarelli",
     metaDescription: "Quanto tempo demora um processo de auxílio-acidente na Justiça? Veja as etapas, a perícia judicial, os atrasados e quando buscar um advogado previdenciário.",
     excerpt: "Teve o auxílio-acidente negado pelo INSS? Entenda como funciona o processo judicial, quais os prazos envolvidos e como um advogado pode ajudar.",
-    category: "Benefícios",
+    category: "Auxílio-Acidente",
     tags: ["Auxílio-Acidente", "Processo Judicial", "INSS", "Prazos"],
     readTime: "7 min",
     keyTakeaways: [
@@ -3568,7 +3568,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "salario-maternidade-desempregada-quem-tem-direito",
     title: "Salário-Maternidade para Desempregada: Quem Tem Direito?",
     excerpt: "Ficou desempregada e descobriu a gravidez? Saiba que você pode ter direito ao salário-maternidade mesmo sem estar trabalhando. Entenda os requisitos.",
-    category: "Benefícios",
+    category: "Direitos Previdenciários",
     tags: ["Salário-Maternidade", "Desempregada", "INSS", "Gestante"],
     readTime: "6 min",
     keyTakeaways: [
@@ -3608,7 +3608,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "quanto-tempo-demora-processo-auxilio-acidente",
     title: "Quanto Tempo Demora um Processo de Auxílio-Acidente?",
     excerpt: "Entenda os prazos médios de um processo de auxílio-acidente no INSS e na Justiça, e como acelerar a obtenção do seu benefício.",
-    category: "Benefícios",
+    category: "Auxílio-Acidente",
     tags: ["Auxílio-Acidente", "Prazos", "INSS", "Processo"],
     readTime: "6 min",
     keyTakeaways: [
@@ -3851,7 +3851,7 @@ export const blogArticles: BlogArticle[] = [
     lastUpdated: "Outubro 2026",
     title: "Quem Recebe Auxílio-Acidente Pode Trabalhar Normal? Entenda Como Funciona",
     excerpt: "Muitos segurados não sabem que o auxílio-acidente pode ser recebido junto com o salário. Entenda as regras e saiba como esse benefício funciona na prática.",
-    category: "Benefícios",
+    category: "Auxílio-Acidente",
     tags: ["Auxílio-Acidente", "Trabalho", "INSS", "Benefício"],
     readTime: "6 min",
     keyTakeaways: [
@@ -4262,7 +4262,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "pente-fino-inss-2026-como-se-proteger",
     title: "Pente-Fino do INSS 2026: Como se Proteger e Não Perder Seu Benefício",
     excerpt: "O INSS intensificou a revisão de benefícios em 2026. Saiba como funciona o pente-fino e o que fazer para proteger sua aposentadoria ou auxílio.",
-    category: "Benefícios",
+    category: "Direitos Previdenciários",
     tags: ["Pente-Fino", "INSS", "Revisão", "Benefícios", "2026"],
     readTime: "8 min",
     keyTakeaways: [
@@ -4297,7 +4297,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "auxilio-reclusao-2026-quem-tem-direito",
     title: "Auxílio-Reclusão 2026: Quem Tem Direito e Como Solicitar",
     excerpt: "O auxílio-reclusão é um benefício pago aos dependentes do segurado preso. Entenda as regras atualizadas para 2026 e quem pode receber.",
-    category: "Benefícios",
+    category: "Direitos Previdenciários",
     tags: ["Auxílio-Reclusão", "Dependentes", "INSS", "2026"],
     readTime: "6 min",
     keyTakeaways: [
@@ -4365,7 +4365,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "prova-de-vida-inss-2026-como-funciona",
     title: "Prova de Vida INSS 2026: Como Funciona e Como Fazer pela Internet",
     excerpt: "A prova de vida do INSS em 2026 é majoritariamente digital. Entenda o novo processo, os prazos e como evitar a suspensão do seu benefício.",
-    category: "Benefícios",
+    category: "Direitos Previdenciários",
     tags: ["Prova de Vida", "INSS", "Digital", "Aposentadoria", "2026"],
     readTime: "6 min",
     keyTakeaways: [
@@ -4470,7 +4470,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "periodo-de-graca-inss-quando-perde-qualidade",
     title: "Período de Graça do INSS: Quando Você Perde a Qualidade de Segurado?",
     excerpt: "O período de graça mantém seus direitos no INSS mesmo sem contribuir. Entenda os prazos e como não perder a proteção previdenciária.",
-    category: "Benefícios",
+    category: "Direitos Previdenciários",
     tags: ["Período de Graça", "Qualidade de Segurado", "INSS", "Contribuição"],
     readTime: "7 min",
     keyTakeaways: [
@@ -4505,7 +4505,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "margem-consignavel-inss-2026-novas-regras",
     title: "Margem Consignável INSS 2026: Novas Regras e Como Calcular",
     excerpt: "As regras da margem consignável para aposentados mudaram em 2026. Entenda os novos limites, como calcular e como se proteger de fraudes.",
-    category: "Benefícios",
+    category: "Direitos Previdenciários",
     tags: ["Consignado", "Margem", "Aposentadoria", "INSS", "2026"],
     readTime: "6 min",
     keyTakeaways: [
