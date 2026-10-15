@@ -74,6 +74,11 @@ import depoisPericiaImg from "@/assets/blog/depois-pericia-2026.jpg";
 import invalidezDefinitivaImg from "@/assets/blog/invalidez-definitiva-2026.jpg";
 import visaoMonocularImg from "@/assets/blog/visao-monocular-2026.jpg";
 import pppAposentadoriaImg from "@/assets/blog/ppp-aposentadoria-2026.jpg";
+import mariaPenhaImg from "@/assets/blog/beneficio-maria-da-penha-inss-2026.jpg";
+import in212Img from "@/assets/blog/instrucao-normativa-212-inss-2026.jpg";
+import esperaPericiaImg from "@/assets/blog/espera-pericia-inss-2026.jpg";
+import valorAuxDoencaImg from "@/assets/blog/valor-auxilio-doenca-2026.jpg";
+import demoraAnaliseImg from "@/assets/blog/demora-analise-inss-2026.jpg";
 
 export interface BlogArticleContent {
   type: "paragraph" | "heading" | "subheading" | "list" | "highlight";
@@ -108,6 +113,229 @@ export interface BlogArticle {
 }
 
 export const blogArticles: BlogArticle[] = [
+  {
+    slug: "beneficio-maria-da-penha-inss-afastamento",
+    title: "Benefício Lei Maria da Penha do INSS: Quem Tem Direito e Como Funciona",
+    excerpt: "O INSS passou a pagar a renda da segurada afastada do trabalho por medida protetiva da Lei Maria da Penha. Entenda quem tem direito, quais documentos são exigidos e como pedir.",
+    seoTitle: "Benefício Maria da Penha INSS: Quem Tem Direito (2026)",
+    metaDescription: "Novo benefício do INSS para mulher afastada do trabalho por medida protetiva da Lei Maria da Penha. Veja quem tem direito e os documentos exigidos.",
+    date: "15 de Outubro, 2026",
+    lastUpdated: "Outubro 2026",
+    category: "Novidades INSS",
+    tags: ["Lei Maria da Penha", "Afastamento protetivo", "Novidades INSS", "Violência doméstica", "Direitos da mulher"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "A Portaria Conjunta MPS/INSS nº 48, de 9/10/2026, regulamentou o Benefício de Afastamento Protetivo",
+      "Tem direito a segurada do INSS de qualquer categoria afastada do trabalho por decisão judicial criminal",
+      "É preciso apresentar a decisão judicial e comprovar a qualidade de segurada",
+      "O atendimento deve ser prioritário e sigiloso"
+    ],
+    image: mariaPenhaImg,
+    imageAlt: "Mulher sentada à mesa da cozinha segurando documentos com expressão tranquila",
+    content: [
+      { type: "paragraph", text: "Em outubro de 2026, o Ministério da Previdência Social e o INSS publicaram a Portaria Conjunta nº 48, que regulamenta o \"Benefício de Afastamento Protetivo – Lei Maria da Penha\". A medida cumpre decisão do Supremo Tribunal Federal e garante renda à mulher que precisa se afastar do trabalho por causa de medida protetiva de urgência." },
+      { type: "heading", text: "Quem Tem Direito ao Benefício" },
+      { type: "list", items: [
+        "Segurada do INSS de qualquer categoria: empregada, doméstica, contribuinte individual, MEI, facultativa ou segurada especial",
+        "Que tenha sido afastada do trabalho por decisão judicial, na esfera criminal, com base na Lei Maria da Penha",
+        "Que tenha qualidade de segurada na data de início do afastamento (ou, se não houver essa data, na data da decisão)"
+      ]},
+      { type: "heading", text: "Documentos Exigidos" },
+      { type: "list", items: [
+        "Decisão judicial que determinou o afastamento do trabalho",
+        "Documentos pessoais (RG e CPF)",
+        "Comprovação de vínculo ou de contribuições ao INSS, quando os dados não constarem no CNIS"
+      ]},
+      { type: "highlight", text: "Segundo o Ministério da Previdência, o atendimento deve ser prioritário e sigiloso. O parecer que embasou a medida também prevê a cobrança, do agressor, dos valores pagos pelo INSS." },
+      { type: "heading", text: "Pontos de Atenção" },
+      { type: "paragraph", text: "Por ser uma regra nova, ainda podem surgir dúvidas sobre valor, duração e forma de pedido em cada situação, principalmente para quem tem contribuições irregulares ou está no período de graça. Erros no pedido podem atrasar a análise." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se você ou alguém próximo está afastada do trabalho por medida protetiva, a Cantarelli Advocacia pode analisar o caso com total sigilo e orientar sobre o pedido junto ao INSS. Em situação de risco, ligue 180 (Central de Atendimento à Mulher) ou 190." }
+    ],
+    faq: [
+      { question: "Preciso ter carteira assinada para receber?", answer: "Não. Pela portaria, seguradas de qualquer categoria do INSS podem ter direito, desde que mantenham a qualidade de segurada." },
+      { question: "Medida protetiva sem afastamento do trabalho dá direito?", answer: "O benefício é voltado para a segurada afastada do trabalho por decisão judicial. A análise depende do conteúdo da decisão." },
+      { question: "O atendimento é sigiloso?", answer: "Sim. O Ministério da Previdência informou que o atendimento a essas mulheres deve ser prioritário e sigiloso." }
+    ]
+  },
+  {
+    slug: "instrucao-normativa-212-inss-o-que-mudou",
+    title: "Instrução Normativa 212/2026 do INSS: O Que Mudou nos Benefícios",
+    excerpt: "A IN PRES/INSS nº 212/2026 alterou regras de pensão por morte, auxílio-acidente, CNIS e contribuições com alíquota reduzida. Veja o que muda para quem vai pedir um benefício.",
+    seoTitle: "IN 212/2026 do INSS: O Que Mudou nos Benefícios",
+    metaDescription: "Entenda a Instrução Normativa 212/2026 do INSS: pensão para filho nascido após o óbito, auxílio-acidente, CNIS sem salário e alíquota de 5%, 11% e 12%.",
+    date: "15 de Outubro, 2026",
+    lastUpdated: "Outubro 2026",
+    category: "Novidades INSS",
+    tags: ["IN 212/2026", "Instrução Normativa INSS", "Auxílio-acidente", "Pensão por morte", "CNIS"],
+    readTime: "8 min",
+    keyTakeaways: [
+      "A IN 212/2026 foi publicada no Diário Oficial em 11/08/2026 e altera a IN 128/2022",
+      "Filho nascido após a morte do segurado pode receber pensão a partir do nascimento",
+      "A lista de sequelas do auxílio-acidente passa a ser exemplificativa",
+      "Contribuições de 5%, 11% ou 12% contam para aposentadoria por idade, mas exigem complemento para tempo de contribuição"
+    ],
+    image: in212Img,
+    imageAlt: "Documentos oficiais, óculos e caneta sobre mesa de escritório de advocacia",
+    content: [
+      { type: "paragraph", text: "A Instrução Normativa PRES/INSS nº 212, publicada em 11 de agosto de 2026, atualizou a IN nº 128/2022, que é o principal manual interno usado pelos servidores do INSS para analisar pedidos de benefício. As mudanças afetam diretamente aposentadorias, pensões e o auxílio-acidente." },
+      { type: "heading", text: "1. Pensão por Morte para Filho Nascido Após o Óbito" },
+      { type: "paragraph", text: "O filho nascido depois da morte do segurado pode receber pensão por morte a partir da data do nascimento. Isso não gera pagamento referente ao período anterior ao nascimento e não dispensa a comprovação da filiação e dos demais requisitos." },
+      { type: "heading", text: "2. Auxílio-Acidente: Lista de Sequelas Exemplificativa" },
+      { type: "paragraph", text: "A lista de sequelas usada pelo INSS para o auxílio-acidente passa a ser exemplificativa. Na prática, sequelas que não estão expressamente listadas também podem ser analisadas, desde que reduzam a capacidade para o trabalho habitual." },
+      { type: "heading", text: "3. Meses sem Salário no CNIS" },
+      { type: "paragraph", text: "Para o empregado, inclusive doméstico e avulso, quando existir vínculo no CNIS mas não constar a remuneração de algum mês, a norma prevê o uso do salário mínimo naquela competência, conforme o art. 19-E do Regulamento. Corrigir o valor real pode aumentar o benefício, por isso vale revisar o CNIS antes do pedido." },
+      { type: "heading", text: "4. Contribuições com Alíquota Reduzida (5%, 11% ou 12%)" },
+      { type: "list", items: [
+        "Contam para a aposentadoria programada e para a aposentadoria por idade",
+        "Para aposentadoria por tempo de contribuição e contagem recíproca, é necessário complementar até 20%",
+        "A regra também se aplica ao salário-maternidade concedido com base nessas contribuições"
+      ]},
+      { type: "heading", text: "5. Atenção às Exigências do INSS" },
+      { type: "highlight", text: "Em situações previstas na norma, deixar de responder a uma exigência dentro do prazo pode levar ao encerramento do pedido. Acompanhe o Meu INSS com frequência." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "As mudanças podem abrir oportunidades para quem teve pedido negado, mas também trazem novas exigências. A Cantarelli Advocacia pode analisar como a IN 212/2026 se aplica ao seu caso." }
+    ],
+    faq: [
+      { question: "A IN 212/2026 vale para pedidos antigos?", answer: "As instruções normativas orientam a análise feita pelo INSS a partir da sua vigência. Casos antigos precisam ser avaliados individualmente." },
+      { question: "Paguei como MEI (5%). Posso me aposentar por tempo de contribuição?", answer: "Pela norma, esses períodos contam para aposentadoria por idade. Para tempo de contribuição, é preciso complementar a alíquota até 20%." },
+      { question: "Minha sequela não está na lista do INSS. Ainda tenho chance no auxílio-acidente?", answer: "Com a lista exemplificativa, outras sequelas podem ser consideradas, desde que comprovada a redução da capacidade para o trabalho habitual." }
+    ]
+  },
+  {
+    slug: "inss-paga-tempo-de-espera-pericia",
+    title: "O INSS Paga o Tempo de Espera pela Perícia? Entenda os Atrasados",
+    excerpt: "Esperando a perícia do INSS há meses? Saiba se o período de espera é pago, a partir de quando o benefício conta e o que fazer se a demora for excessiva.",
+    seoTitle: "O INSS Paga o Tempo de Espera pela Perícia? (2026)",
+    metaDescription: "Entenda se o INSS paga os atrasados do período de espera pela perícia, a partir de quando conta o benefício e o que fazer em caso de demora.",
+    date: "15 de Outubro, 2026",
+    lastUpdated: "Outubro 2026",
+    category: "Auxílio-Doença",
+    tags: ["Perícia INSS", "Atrasados INSS", "Auxílio por incapacidade", "Demora perícia", "INSS"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Se o benefício for concedido, os valores podem retroagir à data de início ou do pedido",
+      "Para o empregado, os primeiros 15 dias de afastamento são pagos pela empresa",
+      "Pedidos feitos até 30 dias após o afastamento tendem a preservar mais atrasados",
+      "Demora excessiva pode ser questionada administrativa ou judicialmente"
+    ],
+    image: esperaPericiaImg,
+    imageAlt: "Homem aguardando atendimento em sala de espera segurando pasta com exames",
+    content: [
+      { type: "paragraph", text: "\"O INSS paga o tempo de espera pela perícia?\" é uma das dúvidas mais pesquisadas no Google. A resposta curta: se o benefício for concedido, o período de espera em regra entra no cálculo dos atrasados. Mas há detalhes importantes." },
+      { type: "heading", text: "A Partir de Quando o Benefício Conta" },
+      { type: "list", items: [
+        "Empregado: o INSS paga a partir do 16º dia de afastamento, se o pedido for feito em até 30 dias",
+        "Pedido feito depois de 30 dias do afastamento: o benefício conta, em regra, a partir da data do pedido",
+        "Contribuinte individual, MEI e facultativo: a partir do início da incapacidade, se o pedido for feito em até 30 dias"
+      ]},
+      { type: "highlight", text: "Por isso, quanto antes o pedido for feito, menor o risco de perder valores. A data marcada para a perícia não é a data que define o início do benefício." },
+      { type: "heading", text: "E se a Perícia For Negada?" },
+      { type: "paragraph", text: "Se o perito não reconhecer a incapacidade, não há pagamento do período. Cabe recurso em 30 dias ou ação judicial, e, se a incapacidade for reconhecida depois, os atrasados podem ser pagos desde a data correta." },
+      { type: "heading", text: "Demora Excessiva" },
+      { type: "paragraph", text: "Quando a espera ultrapassa os prazos previstos, é possível questionar a demora. Em alguns casos, o INSS permite a análise documental pelo Atestmed, sem perícia presencial." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Guarde atestados, exames e comprovantes do pedido. A Cantarelli Advocacia pode verificar se as datas do seu benefício foram fixadas corretamente." }
+    ],
+    faq: [
+      { question: "Os atrasados são pagos de uma vez?", answer: "Na via administrativa, os valores atrasados costumam ser pagos junto com o primeiro pagamento ou em seguida. Na via judicial, seguem as regras de pagamento da Justiça." },
+      { question: "Posso trabalhar enquanto espero a perícia?", answer: "Trabalhar enquanto se alega incapacidade pode prejudicar o pedido. Cada caso deve ser avaliado." },
+      { question: "O que é o Atestmed?", answer: "É a análise do pedido de auxílio por incapacidade com base em atestado e documentos médicos enviados pelo Meu INSS, sem perícia presencial, nas situações permitidas." }
+    ]
+  },
+  {
+    slug: "valor-auxilio-doenca-como-calcular",
+    title: "Qual o Valor do Auxílio-Doença? Como o INSS Calcula em 2026",
+    excerpt: "Quanto o INSS paga de auxílio-doença? Entenda a regra dos 91%, o limite pela média dos 12 últimos salários, o teto e o que pode reduzir ou aumentar o valor.",
+    seoTitle: "Valor do Auxílio-Doença: Como o INSS Calcula (2026)",
+    metaDescription: "Veja como é calculado o valor do auxílio-doença (auxílio por incapacidade temporária): 91% da média, limite dos 12 últimos salários e teto do INSS.",
+    date: "15 de Outubro, 2026",
+    lastUpdated: "Outubro 2026",
+    category: "Auxílio-Doença",
+    tags: ["Valor auxílio-doença", "Cálculo INSS", "Auxílio por incapacidade temporária", "Teto INSS"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "O auxílio-doença corresponde a 91% do salário de benefício",
+      "O valor não pode ser maior que a média dos 12 últimos salários de contribuição",
+      "Nunca é menor que um salário mínimo nem maior que o teto do INSS",
+      "Erros no CNIS podem reduzir o valor do benefício"
+    ],
+    image: valorAuxDoencaImg,
+    imageAlt: "Homem com braço imobilizado analisando contas e calculadora em casa",
+    content: [
+      { type: "paragraph", text: "\"Qual o valor máximo que o INSS paga de auxílio-doença?\" é uma das perguntas mais buscadas por quem precisa se afastar. O benefício, hoje chamado de auxílio por incapacidade temporária, segue uma regra de cálculo definida em lei." },
+      { type: "heading", text: "Como o Valor é Calculado" },
+      { type: "list", items: [
+        "O INSS calcula a média de todos os salários de contribuição desde julho de 1994",
+        "O benefício corresponde a 91% dessa média (salário de benefício)",
+        "Esse valor fica limitado à média dos 12 últimos salários de contribuição",
+        "O resultado não pode ser inferior ao salário mínimo nem superior ao teto do INSS"
+      ]},
+      { type: "highlight", text: "O limite pela média dos 12 últimos salários faz com que quem teve redução recente de salário receba menos do que esperava. Vale conferir o cálculo na carta de concessão." },
+      { type: "heading", text: "Auxílio-Doença Acidentário (B91)" },
+      { type: "paragraph", text: "Quando a incapacidade decorre de acidente de trabalho ou doença ocupacional, o cálculo é o mesmo, mas o benefício garante estabilidade de 12 meses no emprego após o retorno e depósito do FGTS durante o afastamento." },
+      { type: "heading", text: "O Que Pode Reduzir o Valor" },
+      { type: "list", items: [
+        "Salários faltando ou errados no CNIS (a IN 212/2026 prevê o salário mínimo em meses de vínculo sem remuneração)",
+        "Vínculos não registrados",
+        "Contribuições abaixo do mínimo"
+      ]},
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Se o valor parecer baixo, pode haver erro no cálculo ou no CNIS. A Cantarelli Advocacia pode revisar a carta de concessão e indicar se há base para pedir correção." }
+    ],
+    faq: [
+      { question: "O auxílio-doença pode ser maior que meu salário?", answer: "Não. O valor fica limitado à média dos 12 últimos salários de contribuição e ao teto do INSS." },
+      { question: "Quem ganha salário mínimo recebe quanto?", answer: "O benefício nunca é inferior ao salário mínimo vigente." },
+      { question: "Dá para pedir revisão do valor?", answer: "Sim. Se houver erro no cálculo ou no CNIS, é possível pedir revisão administrativa ou judicial, observado o prazo de 10 anos." }
+    ]
+  },
+  {
+    slug: "quanto-tempo-demora-analise-inss",
+    title: "Quanto Tempo Demora a Análise do INSS? Prazos e o Que Fazer",
+    excerpt: "Pedido \"em análise\" há meses no Meu INSS? Veja os prazos que o INSS deve cumprir para cada benefício, o que significa cada status e quais medidas podem ser tomadas.",
+    seoTitle: "Quanto Tempo Demora a Análise do INSS? (2026)",
+    metaDescription: "Veja os prazos de análise do INSS para aposentadoria, BPC, pensão e auxílio, o que significa cada status no Meu INSS e o que fazer se demorar.",
+    date: "15 de Outubro, 2026",
+    lastUpdated: "Outubro 2026",
+    category: "Direitos Previdenciários",
+    tags: ["Demora INSS", "Prazo análise INSS", "Meu INSS", "Em análise", "Mandado de segurança"],
+    readTime: "7 min",
+    keyTakeaways: [
+      "Acordo homologado pelo STF (RE 1.171.152) fixou prazos de 30 a 90 dias conforme o benefício",
+      "Responder às exigências no prazo evita o encerramento do pedido",
+      "Status \"em análise\" não significa que o pedido foi aprovado ou negado",
+      "Demora excessiva pode ser questionada judicialmente"
+    ],
+    image: demoraAnaliseImg,
+    imageAlt: "Casal de idosos olhando o celular com expressão de preocupação aguardando resposta",
+    content: [
+      { type: "paragraph", text: "\"Quanto tempo demora a análise do INSS?\" está entre as dúvidas mais pesquisadas sobre previdência. A demora preocupa porque, muitas vezes, a família depende do benefício para se manter." },
+      { type: "heading", text: "Prazos Definidos no Acordo do STF" },
+      { type: "list", items: [
+        "Aposentadorias (exceto por invalidez): até 90 dias",
+        "BPC/LOAS, pensão por morte e auxílio-reclusão: até 60 dias",
+        "Aposentadoria por invalidez: até 45 dias",
+        "Salário-maternidade e auxílio-doença: até 30 dias",
+        "Em casos com perícia ou avaliação social, os prazos contam a partir da realização delas"
+      ]},
+      { type: "highlight", text: "Na prática, muitos pedidos ultrapassam esses prazos. Acompanhar o Meu INSS e responder rapidamente às exigências é fundamental: com a IN 212/2026, a falta de resposta no prazo pode encerrar o pedido." },
+      { type: "heading", text: "O Que Significa Cada Status" },
+      { type: "list", items: [
+        "Em análise: o pedido aguarda ou está sendo avaliado por um servidor",
+        "Exigência: o INSS pediu documentos ou informações e há prazo para resposta",
+        "Concluído: há decisão. Abra o processo para ver se foi deferido ou indeferido"
+      ]},
+      { type: "heading", text: "O Que Fazer se Demorar Demais" },
+      { type: "paragraph", text: "Quando o prazo é ultrapassado sem justificativa, é possível reclamar na Ouvidoria e, em muitos casos, buscar a Justiça para que o INSS analise o pedido. O caminho adequado depende de cada situação." },
+      { type: "heading", text: "Conclusão" },
+      { type: "paragraph", text: "Um pedido bem instruído desde o início costuma evitar exigências e atrasos. A Cantarelli Advocacia pode revisar a documentação e acompanhar o seu processo." }
+    ],
+    faq: [
+      { question: "Fazer novo pedido acelera a análise?", answer: "Em geral não. Pedidos duplicados podem até atrapalhar. O ideal é acompanhar o pedido original." },
+      { question: "Se demorar, perco os atrasados?", answer: "Não. Se o benefício for concedido, os valores costumam retroagir à data do pedido (DER)." },
+      { question: "Quanto tempo tenho para cumprir uma exigência?", answer: "O prazo aparece na própria exigência no Meu INSS, geralmente de 30 dias. Fique atento para não perder." }
+    ]
+  },
   {
     slug: "bpc-suspenso-o-que-fazer",
     title: "O Que Fazer se Meu BPC For Suspenso? Motivos e Como Reativar",
@@ -1505,12 +1733,13 @@ export const blogArticles: BlogArticle[] = [
       "A duração para cônjuges varia de 3 anos a vitalícia conforme a idade e tempo de casamento",
       "Filhos recebem até 21 anos (ou 24 se universitários, em alguns casos judiciais)",
     ],
-    lastUpdated: "Março 2026",
+    lastUpdated: "Outubro 2026",
     image: pensaoImg,
     imageAlt:
       "Família analisando documentos financeiros sobre pensão por morte e planejamento previdenciário",
     author: "Thiago Cantarelli",
     content: [
+      { type: "highlight", text: "Atualização (Outubro 2026): a Instrução Normativa PRES/INSS nº 212/2026 passou a prever que o filho nascido após a morte do segurado pode receber pensão a partir da data do nascimento, desde que comprovada a filiação." },
       {
         type: "paragraph",
         text: "A pensão por morte é um dos benefícios previdenciários mais importantes para a proteção da família. Após o falecimento de um segurado do INSS, seus dependentes podem ter direito a receber um valor mensal. Em 2026, as regras continuam seguindo o formato da Reforma da Previdência, com alguns detalhes que merecem atenção.",
@@ -2398,12 +2627,13 @@ export const blogArticles: BlogArticle[] = [
       "Somente segurados empregados, avulsos e segurados especiais têm direito",
       "A sequela deve reduzir permanentemente a capacidade para o trabalho",
     ],
-    lastUpdated: "Março 2026",
+    lastUpdated: "Outubro 2026",
     image: auxAcidenteImg,
     imageAlt:
       "Trabalhador brasileiro em consulta com advogado previdenciário sobre auxílio-acidente e documentos",
     author: "Thiago Cantarelli",
     content: [
+      { type: "highlight", text: "Atualização (Outubro 2026): com a Instrução Normativa PRES/INSS nº 212/2026, a lista de sequelas usada pelo INSS no auxílio-acidente passou a ser exemplificativa. Sequelas não listadas também podem ser analisadas." },
       {
         type: "paragraph",
         text: "O auxílio-acidente é um benefício de natureza indenizatória, concedido ao segurado do INSS que, após consolidação das lesões decorrentes de acidente de qualquer natureza, apresenta sequelas que impliquem redução da capacidade para o trabalho que exercia habitualmente.",
@@ -2938,11 +3168,12 @@ export const blogArticles: BlogArticle[] = [
       "MEI contribui com 5% do salário mínimo e tem cobertura previdenciária básica",
       "É possível complementar contribuições passadas para melhorar o valor do benefício",
     ],
-    lastUpdated: "Março 2026",
+    lastUpdated: "Outubro 2026",
     image: contribuinteIndividualImg,
     imageAlt: "Idoso recebendo pagamento de benefício previdenciário em agência bancária",
     author: "Thiago Cantarelli",
     content: [
+      { type: "highlight", text: "Atualização (Outubro 2026): pela Instrução Normativa PRES/INSS nº 212/2026, contribuições com alíquota de 5%, 11% ou 12% contam para aposentadoria por idade, mas exigem complementação até 20% para aposentadoria por tempo de contribuição." },
       {
         type: "paragraph",
         text: "Milhões de brasileiros trabalham como autônomos, profissionais liberais ou microempreendedores individuais (MEI). Em 2026, é fundamental entender as regras de contribuição ao INSS para garantir acesso a benefícios como aposentadoria, auxílio-doença e salário-maternidade.",
@@ -3617,6 +3848,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: "auxilio-acidente-pode-trabalhar",
+    lastUpdated: "Outubro 2026",
     title: "Quem Recebe Auxílio-Acidente Pode Trabalhar Normal? Entenda Como Funciona",
     excerpt: "Muitos segurados não sabem que o auxílio-acidente pode ser recebido junto com o salário. Entenda as regras e saiba como esse benefício funciona na prática.",
     category: "Benefícios",
@@ -3631,6 +3863,7 @@ export const blogArticles: BlogArticle[] = [
     image: auxAcidenteTrabalharImg,
     imageAlt: "Trabalhador de construção civil com equipamento de segurança que recebe auxílio-acidente e continua trabalhando",
     content: [
+      { type: "highlight", text: "Atualização (Outubro 2026): a Instrução Normativa PRES/INSS nº 212/2026 tornou exemplificativa a lista de sequelas do auxílio-acidente, ampliando os casos que podem ser analisados." },
       { type: "paragraph", text: "Uma das dúvidas mais frequentes sobre o auxílio-acidente é se o segurado pode continuar trabalhando enquanto recebe o benefício. A resposta é sim — e essa é justamente a característica que diferencia o auxílio-acidente de outros benefícios por incapacidade." },
       { type: "heading", text: "O Que é o Auxílio-Acidente?" },
       { type: "paragraph", text: "O auxílio-acidente é um benefício indenizatório pago pelo INSS ao segurado que sofreu um acidente ou doença que resultou em sequelas permanentes que reduzem sua capacidade de trabalho. Diferente do auxílio-doença, ele não exige afastamento do trabalho." },
@@ -3889,6 +4122,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: "mei-aposentadoria-direitos-beneficios",
+    lastUpdated: "Outubro 2026",
     title: "MEI Tem Direito a Aposentadoria? Entenda os Benefícios e Limitações",
     excerpt: "Descubra quais benefícios do INSS o MEI tem direito, como funciona a contribuição e como garantir aposentadoria por tempo de contribuição.",
     category: "Contribuição",
@@ -3903,6 +4137,7 @@ export const blogArticles: BlogArticle[] = [
     image: meiAposentImg,
     imageAlt: "Microempreendedor individual e direitos previdenciários",
     content: [
+      { type: "highlight", text: "Atualização (Outubro 2026): pela Instrução Normativa PRES/INSS nº 212/2026, as contribuições de 5% do MEI contam para aposentadoria por idade; para tempo de contribuição, é necessário complementar até 20%." },
       { type: "paragraph", text: "O Microempreendedor Individual (MEI) tem direitos previdenciários garantidos, mas com limitações importantes que muitos desconhecem. A contribuição reduzida de 5% sobre o salário mínimo garante acesso a alguns benefícios, mas não a todos." },
       { type: "heading", text: "Como o MEI Contribui para o INSS?" },
       { type: "paragraph", text: "O MEI paga uma contribuição mensal fixa via DAS (Documento de Arrecadação do Simples Nacional), que inclui 5% do salário mínimo para o INSS (R$ 81,05 em 2026), mais valores de ICMS e ISS conforme a atividade." },
