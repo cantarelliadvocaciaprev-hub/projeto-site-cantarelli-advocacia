@@ -216,6 +216,14 @@ const Contact = () => {
                 title="Localização Cantarelli Advocacia"
               />
             </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Cantarelli+Advocacia+Estrada+dos+Rem%C3%A9dios+2115+Madalena+Recife+PE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-3 text-primary font-body hover:underline"
+            >
+              <MapPin className="w-4 h-4" /> Abrir no Google Maps
+            </a>
           </div>
         </div>
       </div>
