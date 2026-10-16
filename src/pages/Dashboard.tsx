@@ -12,6 +12,7 @@ import {
   Monitor,
   Globe,
   MessageCircle,
+  HelpCircle,
 } from "lucide-react";
 
 const FUNCTIONS_URL = `https://${import.meta.env.VITE_SUPABASE_PROJECT_ID}.supabase.co/functions/v1/dashboard-stats`;
