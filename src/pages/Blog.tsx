@@ -11,6 +11,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SEO from "@/components/SEO";
 import BlogListSchema from "@/components/blog/BlogListSchema";
+import ArticleAssistant from "@/components/blog/ArticleAssistant";
 
 // Pre-compute a normalized, searchable text blob per article (title + excerpt +
 // category + tags + full body + FAQ). Runs once at module load.
@@ -196,6 +197,8 @@ const Blog = () => {
               Novidades do INSS, regras de aposentadoria e dicas para garantir seus direitos.
             </p>
           </div>
+
+          <ArticleAssistant articles={blogArticles} />
 
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-6">
