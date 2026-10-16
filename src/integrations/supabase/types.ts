@@ -83,6 +83,39 @@ export type Database = {
         }
         Relationships: []
       }
+      assistant_questions: {
+        Row: {
+          created_at: string
+          device_type: string | null
+          id: string
+          ip_hash: string | null
+          matched_count: number
+          matched_slugs: string[]
+          question: string
+          summary: string | null
+        }
+        Insert: {
+          created_at?: string
+          device_type?: string | null
+          id?: string
+          ip_hash?: string | null
+          matched_count?: number
+          matched_slugs?: string[]
+          question: string
+          summary?: string | null
+        }
+        Update: {
+          created_at?: string
+          device_type?: string | null
+          id?: string
+          ip_hash?: string | null
+          matched_count?: number
+          matched_slugs?: string[]
+          question?: string
+          summary?: string | null
+        }
+        Relationships: []
+      }
       blog_posts: {
         Row: {
           author: string | null
