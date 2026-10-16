@@ -194,7 +194,15 @@ Deno.serve(async (req) => {
     const articles = (parsed.articles ?? [])
       .filter((a: any) => slugs.has(a.slug))
       .slice(0, 4);
-    return json({ summary: String(parsed.summary ?? ""), articles });
+    const summary = String(parsed.summary ?? "");
+    await logQuestion({
+      question,
+      summary,
+      slugs: articles.map((a: any) => a.slug),
+      ip,
+      ua: req.headers.get("user-agent"),
+    });
+    return json({ summary, articles });
   } catch {
     return json({ error: "Não foi possível analisar sua dúvida agora." }, 502);
   }
