@@ -29,7 +29,7 @@ Deno.serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
     );
 
-    const [views, shares, reviews, pageViews, waClicks] = await Promise.all([
+    const [views, shares, reviews, pageViews, waClicks, questions] = await Promise.all([
       supabase
         .from("article_view_events")
         .select("article_slug, article_title, device_type, referrer, created_at"),
@@ -43,6 +43,11 @@ Deno.serve(async (req) => {
       supabase
         .from("whatsapp_click_events")
         .select("path, cta_location, context_label, source, device_type, created_at"),
+      supabase
+        .from("assistant_questions")
+        .select("question, summary, matched_slugs, matched_count, device_type, created_at")
+        .order("created_at", { ascending: false })
+        .limit(200),
     ]);
 
     if (views.error) throw views.error;
