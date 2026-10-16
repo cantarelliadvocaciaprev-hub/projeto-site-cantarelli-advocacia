@@ -76,6 +76,12 @@ const Blog = () => {
     [blogArticles]
   );
 
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const a of blogArticles) counts[a.category] = (counts[a.category] ?? 0) + 1;
+    return counts;
+  }, [blogArticles]);
+
   const filtered = useMemo(() => {
     let list = blogArticles;
     if (selectedCategory) {
