@@ -76,6 +76,12 @@ const Blog = () => {
     [blogArticles]
   );
 
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const a of blogArticles) counts[a.category] = (counts[a.category] ?? 0) + 1;
+    return counts;
+  }, [blogArticles]);
+
   const filtered = useMemo(() => {
     let list = blogArticles;
     if (selectedCategory) {
@@ -219,25 +225,43 @@ const Blog = () => {
             <div className="flex flex-wrap gap-2 justify-center">
               <button
                 onClick={() => handleCategory(null)}
-                className={`px-3 py-1.5 rounded-full text-xs md:text-sm font-semibold transition-all ${
+                className={`px-3 py-1.5 rounded-full text-xs md:text-sm font-semibold transition-all inline-flex items-center gap-1.5 ${
                   !selectedCategory
                     ? "bg-primary text-primary-foreground shadow-md"
                     : "bg-card border border-border text-muted-foreground hover:border-primary hover:text-foreground"
                 }`}
               >
-                Todos
+                <span>Todos</span>
+                <span
+                  className={`text-[10px] md:text-xs font-bold px-1.5 py-0.5 rounded-full ${
+                    !selectedCategory
+                      ? "bg-primary-foreground/20 text-primary-foreground"
+                      : "bg-muted text-muted-foreground"
+                  }`}
+                >
+                  {blogArticles.length}
+                </span>
               </button>
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => handleCategory(selectedCategory === cat ? null : cat)}
-                  className={`px-3 py-1.5 rounded-full text-xs md:text-sm font-semibold transition-all ${
+                  className={`px-3 py-1.5 rounded-full text-xs md:text-sm font-semibold transition-all inline-flex items-center gap-1.5 ${
                     selectedCategory === cat
                       ? "bg-primary text-primary-foreground shadow-md"
                       : "bg-card border border-border text-muted-foreground hover:border-primary hover:text-foreground"
                   }`}
                 >
-                  {cat}
+                  <span>{cat}</span>
+                  <span
+                    className={`text-[10px] md:text-xs font-bold px-1.5 py-0.5 rounded-full ${
+                      selectedCategory === cat
+                        ? "bg-primary-foreground/20 text-primary-foreground"
+                        : "bg-muted text-muted-foreground"
+                    }`}
+                  >
+                    {categoryCounts[cat] ?? 0}
+                  </span>
                 </button>
               ))}
             </div>
