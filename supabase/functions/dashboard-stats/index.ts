@@ -232,6 +232,19 @@ Deno.serve(async (req) => {
         .slice(0, 10)
         .map(([source, count]) => ({ source, count })),
       daily: [...daily.values()].sort((a, b) => a.date.localeCompare(b.date)),
+      assistantQuestions: {
+        total: (questions.data ?? []).length,
+        last7d: (questions.data ?? []).filter((q: any) => within(q.created_at, 7)).length,
+        unanswered: (questions.data ?? []).filter((q: any) => (q.matched_count ?? 0) === 0).length,
+        recent: (questions.data ?? []).slice(0, 50).map((q: any) => ({
+          question: q.question,
+          summary: q.summary,
+          matched_slugs: q.matched_slugs ?? [],
+          matched_count: q.matched_count ?? 0,
+          device_type: q.device_type,
+          created_at: q.created_at,
+        })),
+      },
     });
   } catch (e) {
     console.error("dashboard-stats internal error:", e);
