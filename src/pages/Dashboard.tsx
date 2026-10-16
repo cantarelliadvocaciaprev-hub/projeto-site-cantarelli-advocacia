@@ -55,6 +55,19 @@ type Stats = {
   topPaths: { path: string; title: string | null; visits: number; visits7d: number }[];
   referrers: { source: string; count: number }[];
   daily: { date: string; views: number; shares: number }[];
+  assistantQuestions?: {
+    total: number;
+    last7d: number;
+    unanswered: number;
+    recent: {
+      question: string;
+      summary: string | null;
+      matched_slugs: string[];
+      matched_count: number;
+      device_type: string | null;
+      created_at: string;
+    }[];
+  };
 };
 
 const networkLabels: Record<string, string> = {
