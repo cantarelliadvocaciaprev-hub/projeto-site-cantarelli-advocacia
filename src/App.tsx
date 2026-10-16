@@ -20,6 +20,7 @@ const ReviewStats = lazy(() => import("./pages/ReviewStats"));
 const ArticleStats = lazy(() => import("./pages/ArticleStats"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const BlogAdmin = lazy(() => import("./pages/BlogAdmin"));
+const AssistantQuestions = lazy(() => import("./pages/AssistantQuestions"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 
@@ -49,6 +50,7 @@ const App = () => (
                 <Route path="/admin/artigos" element={<ArticleStats />} />
                 <Route path="/admin/painel" element={<Dashboard />} />
                 <Route path="/admin/blog" element={<BlogAdmin />} />
+                <Route path="/admin/duvidas" element={<AssistantQuestions />} />
 
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
