@@ -21,6 +21,7 @@ const ArticleStats = lazy(() => import("./pages/ArticleStats"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const BlogAdmin = lazy(() => import("./pages/BlogAdmin"));
 const AssistantQuestions = lazy(() => import("./pages/AssistantQuestions"));
+const SearchQueries = lazy(() => import("./pages/SearchQueries"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 
