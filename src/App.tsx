@@ -50,6 +50,7 @@ const App = () => (
                 <Route path="/admin/artigos" element={<ArticleStats />} />
                 <Route path="/admin/painel" element={<Dashboard />} />
                 <Route path="/admin/blog" element={<BlogAdmin />} />
+                <Route path="/admin/duvidas" element={<AssistantQuestions />} />
 
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
