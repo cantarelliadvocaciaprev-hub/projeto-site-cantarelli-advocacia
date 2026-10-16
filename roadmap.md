@@ -1,0 +1,2 @@
+- [ ] Conectar chave própria do Google Maps do usuário (abrir picker com "New connection" + "Use your own credentials")
+- [ ] Identificar categorias do blog com < 4 artigos e criar ~5 novos artigos em cada
