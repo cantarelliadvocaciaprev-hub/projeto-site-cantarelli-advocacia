@@ -12,6 +12,7 @@ import {
   Monitor,
   Globe,
   MessageCircle,
+  HelpCircle,
 } from "lucide-react";
 
 const FUNCTIONS_URL = `https://${import.meta.env.VITE_SUPABASE_PROJECT_ID}.supabase.co/functions/v1/dashboard-stats`;
@@ -54,6 +55,19 @@ type Stats = {
   topPaths: { path: string; title: string | null; visits: number; visits7d: number }[];
   referrers: { source: string; count: number }[];
   daily: { date: string; views: number; shares: number }[];
+  assistantQuestions?: {
+    total: number;
+    last7d: number;
+    unanswered: number;
+    recent: {
+      question: string;
+      summary: string | null;
+      matched_slugs: string[];
+      matched_count: number;
+      device_type: string | null;
+      created_at: string;
+    }[];
+  };
 };
 
 const networkLabels: Record<string, string> = {
@@ -475,6 +489,64 @@ const Dashboard = () => {
                 </div>
               )}
             </Card>
+
+            {stats.assistantQuestions && (
+              <Card className="p-5 sm:p-6">
+                <div className="flex items-center gap-2 mb-1">
+                  <HelpCircle className="w-4 h-4 text-primary" />
+                  <h2 className="font-display font-semibold">
+                    Dúvidas dos visitantes (assistente do blog)
+                  </h2>
+                </div>
+                <p className="text-xs text-muted-foreground font-body mb-4">
+                  {stats.assistantQuestions.total} perguntas no total ·{" "}
+                  {stats.assistantQuestions.last7d} nos últimos 7 dias ·{" "}
+                  <strong className="text-destructive">
+                    {stats.assistantQuestions.unanswered} sem artigo correspondente
+                  </strong>{" "}
+                  (candidatas a virar post).
+                </p>
+                {stats.assistantQuestions.recent.length === 0 ? (
+                  <p className="text-muted-foreground font-body text-sm">Sem dúvidas ainda.</p>
+                ) : (
+                  <ul className="space-y-3 font-body text-sm max-h-[480px] overflow-y-auto pr-1">
+                    {stats.assistantQuestions.recent.map((q, i) => {
+                      const date = new Date(q.created_at).toLocaleDateString("pt-BR", {
+                        day: "2-digit",
+                        month: "2-digit",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      });
+                      const unanswered = q.matched_count === 0;
+                      return (
+                        <li
+                          key={i}
+                          className={`p-3 rounded-lg border ${
+                            unanswered
+                              ? "border-destructive/40 bg-destructive/5"
+                              : "border-border bg-muted/30"
+                          }`}
+                        >
+                          <div className="flex items-start justify-between gap-2 mb-1">
+                            <p className="text-foreground">{q.question}</p>
+                            <span className="text-xs text-muted-foreground shrink-0">{date}</span>
+                          </div>
+                          {unanswered ? (
+                            <p className="text-xs text-destructive font-semibold">
+                              Nenhum artigo correspondente — considerar criar conteúdo.
+                            </p>
+                          ) : (
+                            <p className="text-xs text-muted-foreground">
+                              Indicou: {q.matched_slugs.join(", ")}
+                            </p>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </Card>
+            )}
           </div>
         )}
       </div>

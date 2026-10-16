@@ -1,7 +1,47 @@
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.58.0";
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
+
+async function hashIp(ip: string): Promise<string> {
+  const data = new TextEncoder().encode(ip);
+  const buf = await crypto.subtle.digest("SHA-256", data);
+  return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+function detectDevice(ua: string | null): string | null {
+  if (!ua) return null;
+  if (/tablet|ipad/i.test(ua)) return "tablet";
+  if (/mobi|android|iphone/i.test(ua)) return "mobile";
+  return "desktop";
+}
+
+async function logQuestion(params: {
+  question: string;
+  summary: string;
+  slugs: string[];
+  ip: string;
+  ua: string | null;
+}) {
+  try {
+    const url = Deno.env.get("SUPABASE_URL");
+    const key = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    if (!url || !key) return;
+    const client = createClient(url, key);
+    await client.from("assistant_questions").insert({
+      question: params.question,
+      summary: params.summary.slice(0, 2000),
+      matched_slugs: params.slugs,
+      matched_count: params.slugs.length,
+      device_type: detectDevice(params.ua),
+      ip_hash: await hashIp(params.ip),
+    });
+  } catch (e) {
+    console.error("log question failed", e);
+  }
+}
 
 const GATEWAY = "https://ai.gateway.lovable.dev/v1/responses";
 const MODEL = "openai/gpt-6-astra";
@@ -154,7 +194,15 @@ Deno.serve(async (req) => {
     const articles = (parsed.articles ?? [])
       .filter((a: any) => slugs.has(a.slug))
       .slice(0, 4);
-    return json({ summary: String(parsed.summary ?? ""), articles });
+    const summary = String(parsed.summary ?? "");
+    await logQuestion({
+      question,
+      summary,
+      slugs: articles.map((a: any) => a.slug),
+      ip,
+      ua: req.headers.get("user-agent"),
+    });
+    return json({ summary, articles });
   } catch {
     return json({ error: "Não foi possível analisar sua dúvida agora." }, 502);
   }
