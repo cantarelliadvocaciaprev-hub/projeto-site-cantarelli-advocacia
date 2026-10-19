@@ -1,2 +1,4 @@
-- [ ] Conectar chave própria do Google Maps do usuário (abrir picker com "New connection" + "Use your own credentials")
-- [ ] Identificar categorias do blog com < 4 artigos e criar ~5 novos artigos em cada
+- [ ] Conectar chave própria do Google Maps — aguarda chave e confirmação dos domínios autorizados do usuário
+- [x] Identificar oito categorias com menos de quatro artigos e acrescentar cinco artigos em cada (40 novos)
+- [x] Atualizar catálogo, contadores e sitemap dos artigos
+- [ ] Verificar contagens e navegação dos novos artigos
