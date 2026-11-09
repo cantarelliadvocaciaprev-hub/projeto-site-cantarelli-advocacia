@@ -92,9 +92,18 @@ export function detectTrafficSource(
  * Registra uma visita de página com a origem do tráfego.
  * Nunca lança erro: rastreamento não pode quebrar a página.
  */
+export function getSessionTrafficSource(): TrafficSource {
+  const current = detectTrafficSource();
+  try {
+    return preserveAttribution(current, window.sessionStorage);
+  } catch {
+    return current;
+  }
+}
+
 export function trackPageView(path: string, pageTitle?: string) {
   try {
-    const { source, medium, campaign, referrer } = preserveAttribution(detectTrafficSource(), typeof sessionStorage === "undefined" ? undefined : sessionStorage);
+    const { source, medium, campaign, referrer } = getSessionTrafficSource();
     void supabase
       .from("page_view_events")
       .insert({

@@ -1,3 +1,4 @@
+- [x] Reforçar preservação da origem inicial nas visitas e cliques de WhatsApp — seis testes e fluxo no navegador confirmaram origem/meio/campanha, com publicidade bloqueada após recusa
 - [ ] Conectar chave própria do Google Maps — aguarda chave e confirmação dos domínios autorizados do usuário
 - [x] Otimizar fotografias em WebP, fontes, carregamento e dimensões sem remover conteúdo
 - [x] Revisar metadados, navegação, pré-renderização e dados estruturados — teste gerou 119 artigos e 15 páginas públicas
