@@ -1,7 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import { getDeviceType } from "@/lib/reviewTracking";
-import { detectTrafficSource } from "@/lib/pageTracking";
-import { preserveAttribution } from "@/lib/attribution";
+import { getSessionTrafficSource } from "@/lib/pageTracking";
 
 export const WHATSAPP_NUMBER = "5581983421727";
 
@@ -48,7 +47,7 @@ export function trackWhatsAppClick(
     w.fbq?.("track", "Contact", { content_name: ctaLocation });
     }
 
-    const { source, medium, campaign, referrer } = preserveAttribution(detectTrafficSource(), typeof sessionStorage === "undefined" ? undefined : sessionStorage);
+    const { source, medium, campaign, referrer } = getSessionTrafficSource();
     void supabase
       .from("whatsapp_click_events")
       .insert({
