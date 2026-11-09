@@ -9,9 +9,9 @@ const TikTokIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 import { useNavigate, useLocation } from "react-router-dom";
-import logo from "@/assets/logo.png";
-import thiagoImg from "@/assets/team/thiago-cantarelli.jpg";
-import izabelaImg from "@/assets/team/izabela-farias.jpg";
+import logo from "@/assets/logo.png?format=webp&quality=78";
+import thiagoImg from "@/assets/team/thiago-cantarelli.jpg?format=webp&quality=78";
+import izabelaImg from "@/assets/team/izabela-farias.jpg?format=webp&quality=78";
 import { openWhatsApp } from "@/lib/whatsappTracking";
 
 const Footer = () => {
@@ -42,7 +42,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Logo e descrição */}
           <div className="pb-6 lg:pb-0 lg:pr-6 lg:border-r border-primary/30">
-            <img src={logo} alt="Cantarelli Advocacia" className="h-16 w-auto mb-4" />
+            <img decoding="async" loading="lazy" width={1525} height={1678} src={logo} alt="Cantarelli Advocacia" className="h-16 w-auto mb-4" />
             <p className="text-muted-foreground font-body text-sm mb-4">
               Especialistas em Direito Previdenciário com mais de 15 anos de experiência.
             </p>
@@ -153,6 +153,7 @@ const Footer = () => {
                   Trabalhe Conosco
                 </button>
               </li>
+              <li><a href="/politica-de-privacidade" className="text-muted-foreground hover:text-primary font-body text-sm">Política de Privacidade</a></li>
             </ul>
           </div>
 
@@ -235,6 +236,9 @@ const Footer = () => {
           </div>
         </div>
 
+        <nav aria-label="Serviços previdenciários" className="border-t border-border py-6 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
+          {[{href:"/advogado-previdenciario-recife",label:"Advogado previdenciário"},{href:"/bpc-loas-recife",label:"BPC/LOAS"},{href:"/aposentadoria-recife",label:"Aposentadoria"},{href:"/auxilio-doenca-negado-recife",label:"Auxílio-doença negado"},{href:"/pensao-por-morte-recife",label:"Pensão por morte"},{href:"/revisao-de-beneficios-recife",label:"Revisão"},{href:"/planejamento-previdenciario-recife",label:"Planejamento"}].map((x)=><a key={x.href} href={x.href} className="text-muted-foreground hover:text-primary min-h-11 inline-flex items-center">{x.label}</a>)}
+        </nav>
         {/* Avaliação no Google + Agendamento */}
         <div className="border-t border-border pt-8 pb-8 flex flex-col items-center text-center gap-3">
           <p className="text-foreground font-body text-sm">

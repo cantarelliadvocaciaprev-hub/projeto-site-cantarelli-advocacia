@@ -22,7 +22,10 @@ const SEO = ({
   canonical,
 }: SEOProps) => {
   useEffect(() => {
-    document.title = title;
+    const fit = (text: string, max: number) => text.length <= max ? text : `${text.slice(0, max - 1).trimEnd()}…`;
+    const pageTitle = fit(title, 60);
+    const pageDescription = fit(description, 155);
+    document.title = pageTitle;
 
     const updateMetaTag = (name: string, content: string, isProperty = false) => {
       const attribute = isProperty ? "property" : "name";
@@ -38,15 +41,15 @@ const SEO = ({
       }
     };
 
-    updateMetaTag("description", description);
+    updateMetaTag("description", pageDescription);
 
     if (keywords) {
       updateMetaTag("keywords", keywords);
     }
 
     // Open Graph
-    updateMetaTag("og:title", ogTitle || title, true);
-    updateMetaTag("og:description", ogDescription || description, true);
+    updateMetaTag("og:title", ogTitle || pageTitle, true);
+    updateMetaTag("og:description", ogDescription || pageDescription, true);
     updateMetaTag("og:image", ogImage, true);
     updateMetaTag("og:type", ogType, true);
     updateMetaTag("og:site_name", "Cantarelli Advocacia", true);
@@ -95,7 +98,7 @@ const SEO = ({
     return () => {
       document.title = "Cantarelli Advocacia | Especialistas em Direito Previdenciário - Recife/PE";
     };
-  }, [title, description, keywords, ogTitle, ogDescription, ogImage, canonical]);
+  }, [title, description, keywords, ogTitle, ogDescription, ogImage, ogType, canonical]);
 
   return null;
 };

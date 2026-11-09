@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Alexandria', 'sans-serif'],
-        body: ['Alexandria', 'sans-serif'],
-        alexandria: ['Alexandria', 'sans-serif'],
+        display: ['Alexandria', 'Alexandria Fallback', 'sans-serif'],
+        body: ['Alexandria', 'Alexandria Fallback', 'sans-serif'],
+        alexandria: ['Alexandria', 'Alexandria Fallback', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -23,6 +23,8 @@ const BlogAdmin = lazy(() => import("./pages/BlogAdmin"));
 const AssistantQuestions = lazy(() => import("./pages/AssistantQuestions"));
 const SearchQueries = lazy(() => import("./pages/SearchQueries"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const ServicePage = lazy(() => import("./pages/ServicePage"));
+const Privacy = lazy(() => import("./pages/Privacy"));
 
 
 
@@ -46,6 +48,17 @@ const App = () => (
                 <Route path="/contato" element={<Contato />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<BlogArticle />} />
+                <Route path="/advogado-previdenciario-recife" element={<ServicePage />} />
+                <Route path="/bpc-loas-recife" element={<ServicePage />} />
+                <Route path="/aposentadoria-recife" element={<ServicePage />} />
+                <Route path="/auxilio-doenca-negado-recife" element={<ServicePage />} />
+                <Route path="/pensao-por-morte-recife" element={<ServicePage />} />
+                <Route path="/revisao-de-beneficios-recife" element={<ServicePage />} />
+                <Route path="/planejamento-previdenciario-recife" element={<ServicePage />} />
+                <Route path="/advogado-previdenciario-olinda" element={<ServicePage />} />
+                <Route path="/jaboatao" element={<ServicePage />} />
+                <Route path="/paulista" element={<ServicePage />} />
+                <Route path="/politica-de-privacidade" element={<Privacy />} />
                 <Route path="/verificacao-deploy" element={<DeployCheck />} />
                 <Route path="/admin/avaliacoes" element={<ReviewStats />} />
                 <Route path="/admin/artigos" element={<ArticleStats />} />

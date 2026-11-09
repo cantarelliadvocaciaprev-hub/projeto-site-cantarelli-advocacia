@@ -96,7 +96,7 @@ const ArticleAssistant = ({ articles }: { articles: BlogArticle[] }) => {
                       to={`/blog/${r.slug}`}
                       className="group flex gap-3 p-3 rounded-xl border border-border bg-background hover:border-primary transition-colors"
                     >
-                      <img src={a.image} alt={a.imageAlt} className="w-20 h-14 object-cover rounded-md flex-shrink-0" loading="lazy" />
+                      <img decoding="async" width={1200} height={800} src={a.image} alt={a.imageAlt} className="w-20 h-14 object-cover rounded-md flex-shrink-0" loading="lazy" />
                       <div className="min-w-0">
                         <p className="text-sm font-display font-bold text-foreground group-hover:text-primary line-clamp-2">{a.title}</p>
                         <p className="text-xs text-muted-foreground font-body mt-1">{r.reason}</p>
@@ -109,7 +109,7 @@ const ArticleAssistant = ({ articles }: { articles: BlogArticle[] }) => {
             </ul>
           )}
           <a
-            href="https://wa.me/5581983421727"
+            href={`https://wa.me/5581983421727?text=${encodeURIComponent(`Olá, usei o assistente do blog (${window.location.pathname}) e gostaria de atendimento.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"

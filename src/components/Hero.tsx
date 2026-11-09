@@ -2,10 +2,10 @@ import { useState } from "react";
 import { scrollBehavior } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
 import { Shield, Award, Play } from "lucide-react";
-import heroBackground from "@/assets/hero-background.jpg";
-import heroBackground640 from "@/assets/hero-background-640.jpg";
-import heroBackground960 from "@/assets/hero-background-960.jpg";
-import heroBackground1280 from "@/assets/hero-background-1280.jpg";
+import heroBackground from "@/assets/hero-background.jpg?format=webp&quality=78";
+import heroBackground640 from "@/assets/hero-background-640.jpg?format=webp&quality=78";
+import heroBackground960 from "@/assets/hero-background-960.jpg?format=webp&quality=78";
+import heroBackground1280 from "@/assets/hero-background-1280.jpg?format=webp&quality=78";
 import { useCountUp } from "@/hooks/useCountUp";
 import { openWhatsApp } from "@/lib/whatsappTracking";
 const Hero = () => {
@@ -38,10 +38,10 @@ const Hero = () => {
           height={1066}
           alt="Cantarelli Advocacia - Escritório de Advocacia Previdenciária em Recife especializado em aposentadorias e benefícios do INSS"
           loading="eager"
-          decoding="sync"
+          decoding="async"
           // @ts-ignore - fetchpriority is valid HTML but not in React types yet
           fetchpriority="high"
-          className="absolute inset-0 w-full h-full object-cover object-center animate-bg-slide-in"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/60" />
       </div>

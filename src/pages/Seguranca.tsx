@@ -11,7 +11,7 @@ import SecurityModal from "@/components/security/SecurityModal";
 import OfficialChannelsBar from "@/components/security/OfficialChannelsBar";
 import ContactValidator from "@/components/security/ContactValidator";
 import ScamInfoCards from "@/components/security/ScamInfoCards";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "@/assets/hero-background.jpg?format=webp&quality=78";
 
 const Seguranca = () => {
   return (
@@ -55,7 +55,7 @@ const Seguranca = () => {
       <section id="main-content" tabIndex={-1} className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-8 pb-16">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
-          <img
+          <img decoding="async" loading="lazy" width={1600} height={1066}
             src={heroBackground}
             alt=""
             className="w-full h-full object-cover"

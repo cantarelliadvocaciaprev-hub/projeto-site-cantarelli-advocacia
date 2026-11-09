@@ -15,7 +15,34 @@ import path from "node:path";
 
 const SITE_URL = "https://cantarelliadvocacia.com.br";
 
-const FIELDS = ["slug", "title", "excerpt", "seoTitle", "metaDescription", "imageAlt"];
+const FIELDS = ["slug", "title", "excerpt", "seoTitle", "metaDescription", "imageAlt", "date", "lastUpdated"];
+
+// Balanced array extraction avoids executing the typed article source during builds.
+function extractArray(block, field) {
+  const start = block.search(new RegExp(`${field}\\s*:\\s*\\[`));
+  if (start < 0) return [];
+  const begin = block.indexOf("[", start);
+  let depth = 0, quoted = false, escaped = false;
+  for (let i = begin; i < block.length; i++) {
+    const c = block[i];
+    if (quoted) { if (escaped) escaped = false; else if (c === "\\") escaped = true; else if (c === '"') quoted = false; continue; }
+    if (c === '"') { quoted = true; continue; }
+    if (c === "[") depth++;
+    if (c === "]" && --depth === 0) {
+      try { return JSON.parse(block.slice(begin, i + 1).replace(/([{,]\s*)(\w+)\s*:/g, '$1"$2":').replace(/,\s*([}\]])/g, "$1")); } catch { return []; }
+    }
+  }
+  return [];
+}
+
+function dateValue(value) {
+  if (!value) return undefined;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
+  const months = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+  const m = value.toLowerCase().match(/^(\d{1,2}) de ([a-zç]+),? (\d{4})$/);
+  const month = m ? months.indexOf(m[2]) + 1 : 0;
+  return m && month ? `${m[3]}-${String(month).padStart(2, "0")}-${m[1].padStart(2, "0")}` : undefined;
+}
 
 function extractField(block, field) {
   const re = new RegExp(`${field}\\s*:\\s*(?:\\r?\\n\\s*)?"((?:[^"\\\\]|\\\\.)*)"`);
@@ -42,6 +69,9 @@ function parseArticles(src) {
     const article = {};
     for (const f of FIELDS) article[f] = extractField(block, f);
 
+    article.content = extractArray(block, "content");
+    article.faq = extractArray(block, "faq");
+    article.keyTakeaways = extractArray(block, "keyTakeaways");
     const imageMatch = block.match(/image\s*:\s*(\w+)/);
     article.imageBasename = imageMatch ? importMap.get(imageMatch[1]) ?? null : null;
 
@@ -55,7 +85,7 @@ function parseArticles(src) {
   return articles;
 }
 
-function truncate(text, max = 158) {
+function truncate(text, max = 155) {
   if (!text) return "";
   const clean = text.trim();
   if (clean.length <= max) return clean;
@@ -85,7 +115,7 @@ function stripConflictingHeadTags(html) {
 }
 
 function buildHeadBlock(article, ogImageUrl, canonical) {
-  const title = article.seoTitle || `${article.title} | Cantarelli Advocacia`;
+  const title = truncate(article.seoTitle || `${article.title} | Cantarelli Advocacia`, 60);
   const description = truncate(article.metaDescription || article.excerpt);
   const ogTitle = article.title;
 
@@ -95,6 +125,8 @@ function buildHeadBlock(article, ogImageUrl, canonical) {
     headline: article.title,
     description,
     image: ogImageUrl,
+    datePublished: dateValue(article.date),
+    dateModified: dateValue(article.lastUpdated) ?? dateValue(article.date),
     mainEntityOfPage: canonical,
     author: { "@type": "Organization", name: "Cantarelli Advocacia" },
     publisher: {
@@ -144,6 +176,7 @@ export function prerenderBlogArticlesPlugin() {
   const articlesPath = path.resolve(process.cwd(), "src/data/blogArticles.ts");
   let outDir = "dist";
   let bundleAssetMap = new Map();
+  let lcpFile;
 
   return {
     name: "prerender-blog-articles",
@@ -154,6 +187,14 @@ export function prerenderBlogArticlesPlugin() {
     // Capture hashed asset filenames while the bundle exists in memory.
     generateBundle(_options, bundle) {
       bundleAssetMap = buildAssetMap(bundle);
+      for (const [filename, asset] of Object.entries(bundle)) {
+        if (asset.type !== "asset") continue;
+        for (const original of [...(asset.originalFileNames ?? []), ...(asset.names ?? []), asset.name ?? ""]) {
+          const basename = path.basename(original).split("?")[0];
+          if (/\.(jpg|png|webp|avif)$/i.test(basename)) bundleAssetMap.set(basename, filename);
+          if (basename === "hero-background-960.jpg") lcpFile = filename;
+        }
+      }
     },
     // Files are on disk here — clone dist/index.html into per-article HTMLs.
     writeBundle() {
@@ -176,6 +217,14 @@ export function prerenderBlogArticlesPlugin() {
         return;
       }
 
+      if (lcpFile) {
+        baseHtml = baseHtml.replace("</head>", `<link rel="preload" as="image" href="/${lcpFile}" fetchpriority="high"></head>`);
+        fs.writeFileSync(indexPath, baseHtml);
+      }
+      const noHeroPreload = baseHtml.replace(/<link[^>]+rel="preload"[^>]+as="image"[^>]*>/g, "");
+      const wrap = (body) => `<main id="prerender-content" style="max-width:72rem;margin:auto;padding:2rem"><nav><a href="/">Cantarelli Advocacia</a> · <a href="/blog">Blog</a> · <a href="/contato">Contato</a></nav>${body}</main>`;
+      const injectBody = (html, body) => html.replace('<div id="root"></div>', `<div id="root">${wrap(body)}</div>`);
+      const sectionHtml = (sections) => sections.map(section => section.type === "list" ? `<ul>${(section.items ?? []).map(item => `<li>${escapeAttr(item)}</li>`).join("")}</ul>` : section.type === "heading" ? `<h2>${escapeAttr(section.text)}</h2>` : section.type === "subheading" ? `<h3>${escapeAttr(section.text)}</h3>` : `<p>${escapeAttr(section.text)}</p>`).join("");
       let written = 0;
       for (const article of articles) {
         const canonical = `${SITE_URL}/blog/${article.slug}`;
@@ -185,17 +234,37 @@ export function prerenderBlogArticlesPlugin() {
           if (built) ogImageUrl = `${SITE_URL}/${built}`;
         }
 
-        const html = stripConflictingHeadTags(baseHtml).replace(
+        let html = stripConflictingHeadTags(noHeroPreload).replace(
           /<\/head>/i,
           `${buildHeadBlock(article, ogImageUrl, canonical)}</head>`,
         );
 
+        html = injectBody(html, `<h1>${escapeAttr(article.title)}</h1><p>${escapeAttr(article.excerpt)}</p>${sectionHtml(article.content)}<h2>Perguntas frequentes</h2>${article.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="/advogado-previdenciario-recife">Orientação previdenciária em Recife</a>`);
         const dest = path.join(absOutDir, "blog", article.slug, "index.html");
         fs.mkdirSync(path.dirname(dest), { recursive: true });
         fs.writeFileSync(dest, html);
         written += 1;
       }
-      console.log(`[prerender-blog] wrote ${written} per-article HTML files`);
+      const pages = JSON.parse(fs.readFileSync(path.resolve("src/data/servicePages.json"), "utf8"));
+      for (const page of pages) {
+        const canonical = `${SITE_URL}/${page.slug}`;
+        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle: page.title, excerpt: page.description }, `${SITE_URL}/${bundleAssetMap.get("office-building.jpg") ?? ""}`, canonical)}</head>`), `<h1>${escapeAttr(page.title)}</h1><p>${escapeAttr(page.description)}</p>${page.sections.map(section => `<h2>${escapeAttr(section.heading)}</h2><p>${escapeAttr(section.text)}</p>`).join("")}<h2>Perguntas frequentes</h2>${page.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="https://wa.me/5581983421727">Fale com especialista</a>`).replace('content="article"', 'content="website"');
+        const dest = path.join(absOutDir, page.slug, "index.html");
+        fs.mkdirSync(path.dirname(dest), { recursive: true }); fs.writeFileSync(dest, html);
+      }
+      // Institutional HTML remains meaningful even before the application loads.
+      const staticPages = [
+        { slug: "contato", title: "Contato em Recife | Cantarelli Advocacia", description: "Endereço, canais oficiais e horário de atendimento da Cantarelli Advocacia na Madalena, Recife.", body: "<h1>Contato, endereço e horário em Recife – PE</h1><p>Estrada dos Remédios, 2115, Madalena, Recife – PE, CEP 50720-715.</p><p>Telefone: (81) 3049-3799. WhatsApp: (81) 98342-1727.</p><p>Segunda a quinta: 08:30–17:00. Sexta: 08:30–12:00.</p><a href=\"https://wa.me/5581983421727\">Fale com especialista</a>" },
+        { slug: "blog", title: "Blog Previdenciário | Cantarelli Advocacia", description: "Artigos sobre INSS, aposentadorias, BPC/LOAS e benefícios por incapacidade.", body: `<h1>Blog</h1><ul>${articles.map(article => `<li><a href="/blog/${article.slug}">${escapeAttr(article.title)}</a></li>`).join("")}</ul>` },
+        { slug: "seguranca", title: "Segurança | Cantarelli Advocacia", description: "Confira os canais oficiais e proteja-se contra golpes do falso advogado.", body: "<h1>Sua Segurança é Nossa Prioridade</h1><p>Confirme contatos pelos canais oficiais. Desconfie de pedidos de pagamento para liberar valores.</p><a href=\"/contato\">Contatos oficiais</a>" },
+        { slug: "trabalhe-conosco", title: "Trabalhe Conosco | Cantarelli Advocacia", description: "Conheça os setores do escritório e envie sua candidatura pelo formulário.", body: "<h1>Trabalhe Conosco</h1><p>Conheça os setores da Cantarelli Advocacia e envie sua candidatura pelo formulário do site.</p>" },
+        { slug: "politica-de-privacidade", title: "Política de Privacidade | Cantarelli Advocacia", description: "Informações sobre tratamento de dados, dúvidas do blog e escolhas de cookies.", body: "<h1>Política de Privacidade</h1><p>Thiago Cantarelli Sociedade Individual de Advocacia, CNPJ 26.191.013/0001-89, é responsável pelo tratamento no site.</p><p>Formulários abrem o WhatsApp; dúvidas do assistente são armazenadas para análise interna. Não informe dados sensíveis. Google Analytics e Meta Pixel dependem de aceite de cookies.</p><p>Solicite informações e exerça direitos pelo e-mail contato@cantarelliadvocacia.com.br.</p>" }
+      ];
+      for (const page of staticPages) {
+        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle: page.title, excerpt: page.description }, `${SITE_URL}/${bundleAssetMap.get("office-building.jpg") ?? ""}`, `${SITE_URL}/${page.slug}`)}</head>`), page.body).replace('content="article"', 'content="website"');
+        const dest = path.join(absOutDir, page.slug, "index.html"); fs.mkdirSync(path.dirname(dest), { recursive: true }); fs.writeFileSync(dest, html);
+      }
+      console.log(`[prerender-blog] wrote ${written} articles and ${pages.length + staticPages.length} public pages`);
     },
   };
 }

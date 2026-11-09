@@ -1,6 +1,7 @@
 import { supabase } from "@/integrations/supabase/client";
 import { getDeviceType } from "@/lib/reviewTracking";
 import { detectTrafficSource } from "@/lib/pageTracking";
+import { preserveAttribution } from "@/lib/attribution";
 
 export const WHATSAPP_NUMBER = "5581983421727";
 
@@ -23,6 +24,7 @@ export type WhatsAppLocation =
 
 const DEFAULT_MESSAGE =
   "Olá, estava no site da Cantarelli e gostaria de um atendimento.";
+const pageMessage = () => typeof window === "undefined" ? DEFAULT_MESSAGE : `Olá, estava na página ${window.location.pathname} do site da Cantarelli e gostaria de um atendimento.`;
 
 /** Monta a URL do WhatsApp com a mensagem já preenchida. */
 export function buildWhatsAppUrl(message: string = DEFAULT_MESSAGE) {
@@ -43,7 +45,7 @@ export function trackWhatsAppClick(
     w.gtag?.("event", "generate_lead", { method: "whatsapp", cta_location: ctaLocation });
     w.fbq?.("track", "Contact", { content_name: ctaLocation });
 
-    const { source, medium, campaign, referrer } = detectTrafficSource();
+    const { source, medium, campaign, referrer } = preserveAttribution(detectTrafficSource(), typeof sessionStorage === "undefined" ? undefined : sessionStorage);
     void supabase
       .from("whatsapp_click_events")
       .insert({
@@ -71,7 +73,7 @@ export function trackWhatsAppClick(
  */
 export function openWhatsApp(
   ctaLocation: WhatsAppLocation,
-  message: string = DEFAULT_MESSAGE,
+  message: string = pageMessage(),
   contextLabel?: string,
 ) {
   trackWhatsAppClick(ctaLocation, contextLabel);

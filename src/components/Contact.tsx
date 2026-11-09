@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { toast } from "sonner";
 import { openWhatsApp, trackWhatsAppClick } from "@/lib/whatsappTracking";
+import { trackContactEvent } from "@/lib/contactEvents";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -42,6 +43,7 @@ const Contact = () => {
 
     // Abrir WhatsApp
     trackWhatsAppClick("contato-formulario");
+    trackContactEvent("contact_form_submit");
     window.open(`https://wa.me/5581983421727?text=${whatsappMessage}`, "_blank");
 
     toast.success("Mensagem enviada! Entraremos em contato em breve.");
@@ -184,7 +186,8 @@ const Contact = () => {
               </div>
               <div>
                 <Textarea
-                  placeholder="Sua mensagem *"
+                  aria-label="Assunto da mensagem"
+                  placeholder="Assunto ou dúvida *"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   maxLength={1000}
@@ -193,6 +196,7 @@ const Contact = () => {
                   className="w-full resize-none"
                 />
               </div>
+              <p className="text-xs text-muted-foreground">Ao enviar, o WhatsApp será aberto com os dados preenchidos. Não envie CPF, documentos ou dados de terceiros. <a href="/politica-de-privacidade" className="text-primary underline">Política de privacidade</a>.</p>
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
@@ -217,6 +221,7 @@ const Contact = () => {
               />
             </div>
             <a
+              onClick={() => trackContactEvent("click_directions")}
               href="https://www.google.com/maps/search/?api=1&query=Cantarelli+Advocacia+Estrada+dos+Rem%C3%A9dios+2115+Madalena+Recife+PE"
               target="_blank"
               rel="noopener noreferrer"

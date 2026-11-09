@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "@/assets/hero-background.jpg?format=webp&quality=78";
 
 const NotFound = () => {
   const location = useLocation();
@@ -22,6 +22,7 @@ const NotFound = () => {
       <SEO
         title="Página não encontrada | Cantarelli Advocacia"
         description="A página que você está procurando não foi encontrada. Volte para a página inicial da Cantarelli Advocacia."
+        canonical="https://cantarelliadvocacia.com.br/404"
       />
       <Header />
 
@@ -29,7 +30,7 @@ const NotFound = () => {
       <section className="relative flex-1 flex items-center justify-center overflow-hidden pt-24 pb-16">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
-          <img
+          <img decoding="async" loading="lazy" width={1600} height={1066}
             src={heroBackground}
             alt=""
             className="w-full h-full object-cover"
@@ -128,7 +129,9 @@ const NotFound = () => {
                 {[
                   { label: "Quem Somos", path: "/#about" },
                   { label: "Áreas de Atuação", path: "/#services" },
-                  { label: "Contato", path: "/#contact" },
+                  { label: "Contato", path: "/contato" },
+                  { label: "Blog", path: "/blog" },
+                  { label: "Serviços previdenciários", path: "/advogado-previdenciario-recife" },
                   { label: "Segurança", path: "/seguranca" },
                   { label: "Trabalhe Conosco", path: "/trabalhe-conosco" },
                 ].map((link, index) => (

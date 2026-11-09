@@ -9,7 +9,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import ThemeToggle from "@/components/ThemeToggle";
-import logo from "@/assets/logo-transparent.png";
+import logo from "@/assets/logo-transparent.png?format=webp&quality=78";
 import { openWhatsApp } from "@/lib/whatsappTracking";
 
 const Header = () => {
@@ -122,7 +122,7 @@ const Header = () => {
             onClick={() => scrollToSection("home")}
             className="flex items-center gap-2"
           >
-            <img
+            <img decoding="async" loading="lazy" width={1920} height={385}
               src={logo}
               alt="Cantarelli Advocacia"
               className="h-10 w-auto"
@@ -189,7 +189,8 @@ const Header = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+              className="min-h-11 min-w-11 inline-flex items-center justify-center"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -215,6 +216,7 @@ const Header = () => {
                   </button>
                 </li>
               ))}
+              <li><a href="/advogado-previdenciario-recife" className="flex min-h-11 items-center px-3 text-primary">Serviços previdenciários</a></li>
               <li>
                 <Button
                   onClick={() =>

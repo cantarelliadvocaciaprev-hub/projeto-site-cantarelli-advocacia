@@ -15,7 +15,7 @@ const ArticleQuestionForm = ({ articleTitle }: ArticleQuestionFormProps) => {
   const handleSend = () => {
     if (!question.trim()) return;
     const text = encodeURIComponent(
-      `Olá! Li o artigo "${articleTitle}" no blog da Cantarelli e tenho uma dúvida:\n\n${question.trim()}`
+      `Olá! Li o artigo "${articleTitle}" (${window.location.pathname}) no blog da Cantarelli e tenho uma dúvida:\n\n${question.trim()}`
     );
     trackWhatsAppClick("artigo-pergunta", articleTitle);
     window.open(`${WHATSAPP_BASE}?text=${text}`, "_blank", "noopener,noreferrer");

@@ -1,4 +1,6 @@
 import { lazy, Suspense } from "react";
+import Hero from "@/components/Hero";
+import SEO from "@/components/SEO";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -15,7 +17,6 @@ import {
 import { Skeleton } from "@/components/ui/skeleton";
 
 // Lazy load heavy components
-const Hero = lazy(() => import("@/components/Hero"));
 const About = lazy(() => import("@/components/About"));
 const Services = lazy(() => import("@/components/Services"));
 const BancarioSection = lazy(() => import("@/components/BancarioSection"));
@@ -218,14 +219,13 @@ const ContactSkeleton = () => (
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <SEO title="Advogado Previdenciário em Recife | Cantarelli Advocacia" description="Escritório especialista em Direito Previdenciário em Recife/PE: aposentadorias, BPC LOAS, revisões e defesa contra o INSS. 17+ anos de experiência." canonical="https://cantarelliadvocacia.com.br/" />
       <SchemaMarkup type="website" />
       <LegalServiceSchema />
       <SkipLinks />
       <Header />
       <main id="main-content" tabIndex={-1}>
-        <Suspense fallback={<HeroSkeleton />}>
-          <Hero />
-        </Suspense>
+        <Hero />
         <Suspense fallback={<AboutSkeleton />}>
           <About />
         </Suspense>

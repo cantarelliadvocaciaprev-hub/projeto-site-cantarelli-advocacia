@@ -4,39 +4,19 @@ interface ArticleSchemaProps {
   article: BlogArticle;
 }
 
-// Maps Portuguese month names to ISO month numbers for schema dates
-const PT_MONTHS: Record<string, string> = {
-  janeiro: "01",
-  fevereiro: "02",
-  março: "03",
-  marco: "03",
-  abril: "04",
-  maio: "05",
-  junho: "06",
-  julho: "07",
-  agosto: "08",
-  setembro: "09",
-  outubro: "10",
-  novembro: "11",
-  dezembro: "12",
-};
-
-const toIsoDate = (value?: string, fallback = "2026-01-01"): string => {
-  if (!value) return fallback;
-  // Already ISO (YYYY-MM-DD)
-  if (/^\d{4}-\d{2}-\d{2}/.test(value)) return value.slice(0, 10);
-  // Format like "Junho 2026"
-  const match = value.trim().toLowerCase().match(/([a-zç]+)\s+(\d{4})/);
-  if (match) {
-    const month = PT_MONTHS[match[1]] ?? "01";
-    return `${match[2]}-${month}-01`;
-  }
-  return fallback;
+const toIsoDate = (value?: string): string | undefined => {
+  if (!value) return undefined;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
+  const months = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+  const match = value.toLowerCase().match(/^(\d{1,2}) de ([a-zç]+),? (\d{4})$/);
+  if (!match) return undefined;
+  const month = months.indexOf(match[2]) + 1;
+  return month ? `${match[3]}-${String(month).padStart(2, "0")}-${match[1].padStart(2, "0")}` : undefined;
 };
 
 const ArticleSchema = ({ article }: ArticleSchemaProps) => {
-  const datePublished = toIsoDate(article.date, "2026-01-01");
-  const dateModified = toIsoDate(article.lastUpdated, datePublished);
+  const datePublished = toIsoDate(article.date);
+  const dateModified = toIsoDate(article.lastUpdated) ?? datePublished;
 
   // Build plain-text article body from structured content
   const articleBody = article.content

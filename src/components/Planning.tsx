@@ -1,7 +1,7 @@
 import { scrollBehavior } from "@/lib/motion";
 import { Button } from "@/components/ui/button";
 import { Search, Calculator, FileText, CheckCircle2 } from "lucide-react";
-import planningBg from "@/assets/planning-bg.jpg";
+import planningBg from "@/assets/planning-bg.jpg?format=webp&quality=78";
 import { openWhatsApp } from "@/lib/whatsappTracking";
 
 const Planning = () => {
