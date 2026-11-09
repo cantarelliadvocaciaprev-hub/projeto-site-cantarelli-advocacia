@@ -9,9 +9,9 @@ const TikTokIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 import { useNavigate, useLocation } from "react-router-dom";
-import logo from "@/assets/logo.png";
-import thiagoImg from "@/assets/team/thiago-cantarelli.jpg";
-import izabelaImg from "@/assets/team/izabela-farias.jpg";
+import logo from "@/assets/logo.png?format=webp&quality=78";
+import thiagoImg from "@/assets/team/thiago-cantarelli.jpg?format=webp&quality=78";
+import izabelaImg from "@/assets/team/izabela-farias.jpg?format=webp&quality=78";
 import { openWhatsApp } from "@/lib/whatsappTracking";
 
 const Footer = () => {
@@ -42,7 +42,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Logo e descrição */}
           <div className="pb-6 lg:pb-0 lg:pr-6 lg:border-r border-primary/30">
-            <img src={logo} alt="Cantarelli Advocacia" className="h-16 w-auto mb-4" />
+            <img decoding="async" loading="lazy" width={1525} height={1678} src={logo} alt="Cantarelli Advocacia" className="h-16 w-auto mb-4" />
             <p className="text-muted-foreground font-body text-sm mb-4">
               Especialistas em Direito Previdenciário com mais de 15 anos de experiência.
             </p>

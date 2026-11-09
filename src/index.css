@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Alexandria';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/__l5e/assets-v1/3f60b9f5-7995-4fd7-a609-955baecc83d4/alexandria-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Alexandria Fallback';
+  src: local('Arial');
+  size-adjust: 111%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -240,7 +255,7 @@ All colors MUST be HSL.
   /* Animação de gradiente deslizante */
   .animate-gradient-shift {
     background-size: 200% auto;
-    animation: gradientShift 4s ease infinite;
+    /* Keep the same gradient without repainting it on every frame. */
   }
 
   @keyframes gradientShift {

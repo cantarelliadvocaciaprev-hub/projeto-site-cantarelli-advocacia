@@ -152,7 +152,7 @@ const BlogArticle = () => {
         <section className="py-6 md:py-8">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <img
+              <img decoding="async" loading="lazy" width={1200} height={800}
                 src={article.image}
                 alt={article.imageAlt}
                 className="w-full h-52 sm:h-64 md:h-96 object-cover rounded-xl shadow-lg"

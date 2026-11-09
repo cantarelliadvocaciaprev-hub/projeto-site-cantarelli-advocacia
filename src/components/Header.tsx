@@ -9,7 +9,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import ThemeToggle from "@/components/ThemeToggle";
-import logo from "@/assets/logo-transparent.png";
+import logo from "@/assets/logo-transparent.png?format=webp&quality=78";
 import { openWhatsApp } from "@/lib/whatsappTracking";
 
 const Header = () => {
@@ -122,7 +122,7 @@ const Header = () => {
             onClick={() => scrollToSection("home")}
             className="flex items-center gap-2"
           >
-            <img
+            <img decoding="async" loading="lazy" width={1920} height={385}
               src={logo}
               alt="Cantarelli Advocacia"
               className="h-10 w-auto"

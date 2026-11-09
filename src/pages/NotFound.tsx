@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import SEO from "@/components/SEO";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "@/assets/hero-background.jpg?format=webp&quality=78";
 
 const NotFound = () => {
   const location = useLocation();
@@ -29,7 +29,7 @@ const NotFound = () => {
       <section className="relative flex-1 flex items-center justify-center overflow-hidden pt-24 pb-16">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
-          <img
+          <img decoding="async" loading="lazy" width={1600} height={1066}
             src={heroBackground}
             alt=""
             className="w-full h-full object-cover"

@@ -35,7 +35,7 @@ const BlogHighlights = () => {
             >
               <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <img
+                  <img decoding="async" width={1200} height={800}
                     src={post.image}
                     alt={post.imageAlt}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"

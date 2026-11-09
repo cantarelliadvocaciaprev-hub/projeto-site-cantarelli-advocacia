@@ -56,7 +56,7 @@ const ImageWithSkeleton = ({
         />
       )}
       {isInView && (
-        <img
+        <img width={1200} height={800}
           src={src}
           alt={alt}
           loading={enableLazyLoad ? "lazy" : "eager"}
@@ -64,7 +64,7 @@ const ImageWithSkeleton = ({
           // @ts-ignore - fetchpriority is valid HTML attribute
           fetchpriority={fetchpriority}
           className={cn(
-            "w-full h-full transition-opacity duration-500",
+            "w-full h-full object-cover transition-opacity duration-500",
             isLoaded ? "opacity-100" : "opacity-0"
           )}
           onLoad={() => setIsLoaded(true)}
