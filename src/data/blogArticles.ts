@@ -4488,7 +4488,7 @@ export const blogArticles: BlogArticle[] = [
         "Quando a pensão pode ser paga a outros dependentes ou não depende de reavaliação de renda familiar"
       ]},
       { type: "heading", text: "Exceções e Decisões Judiciais" },
-      { type: "paragraph", text: "A regra de não acumulação do art. 20, §4º, da LOAS costuma ser aplicada pelos tribunais. Por isso, a pergunta prática geralmente não é "como acumular", e sim qual benefício manter e se a pensão foi corretamente concedida e calculada." },
+      { type: "paragraph", text: "A regra de não acumulação do art. 20, §4º, da LOAS costuma ser aplicada pelos tribunais. Por isso, a pergunta prática geralmente não é “como acumular”, e sim qual benefício manter e se a pensão foi corretamente concedida e calculada." },
       { type: "highlight", text: "Cada caso é único. A análise de um advogado previdenciário é essencial para determinar qual benefício é mais vantajoso e se há possibilidade de acumulação no seu caso específico." },
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "Se você recebe BPC/LOAS e perdeu o cônjuge, procure orientação jurídica antes de tomar qualquer decisão. A Cantarelli Advocacia pode analisar qual benefício é mais vantajoso e se existe possibilidade legal de acumulação no seu caso." }
