@@ -57,7 +57,7 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-alexandria font-bold mb-6 leading-normal lg:text-6xl bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-gradient-shift pb-1">
-              Cantarelli Advocacia — Direito Previdenciário em Recife
+              Seu futuro planejado. Sua previdência segura.
             </h1>
             {/* AI Snippet Box - Snippet-First Architecture for GEO */}
             <div 
