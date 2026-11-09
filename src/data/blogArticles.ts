@@ -4073,45 +4073,53 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: "tendinite-ler-aposentadoria-invalidez",
-    title: "Qual Tipo de Tendinite Aposenta? Entenda Quando a LER Gera Invalidez",
-    seoTitle: "Tendinite Aposenta? Qual Tipo Dá Direito ao INSS (2026) | Cantarelli",
-    metaDescription: "Tendinite aposenta? Saiba qual tipo de tendinite e LER (epicondilite, manguito rotador) pode gerar aposentadoria por invalidez ou auxílio-acidente no INSS.",
-    excerpt: "Nem toda tendinite dá direito à aposentadoria, mas quando a LER/DORT se torna incapacitante, o INSS pode conceder benefício por invalidez. Saiba quando isso acontece.",
+    title: "Qual Tipo de Tendinite Aposenta? Entenda os Requisitos do INSS",
+    seoTitle: "Qual Tipo de Tendinite Aposenta? INSS | Cantarelli Advocacia",
+    metaDescription: "Tendinite no ombro, punho ou cotovelo aposenta? Entenda incapacidade, perícia e requisitos do INSS para aposentadoria, auxílio-doença e auxílio-acidente.",
+    excerpt: "Nenhum tipo de tendinite aposenta automaticamente. A limitação para trabalhar, a possibilidade de reabilitação e os requisitos previdenciários definem qual benefício pode ser cabível.",
     category: "Aposentadoria",
     tags: ["Tendinite", "LER", "DORT", "Invalidez", "INSS"],
     readTime: "7 min",
     keyTakeaways: [
-      "Tendinite crônica e LER/DORT podem gerar aposentadoria por invalidez quando há incapacidade total e permanente para o trabalho.",
-      "O nexo causal entre a doença e o trabalho precisa ser comprovado por perícia médica e documentos como o PPP e laudos médicos.",
-      "Um advogado previdenciário pode identificar se o seu caso se enquadra como doença ocupacional e garantir o benefício correto.",
-      "Mesmo que o INSS negue, é possível reverter a decisão na Justiça com provas adequadas."
+      "O diagnóstico, o CID ou o local da tendinite não asseguram aposentadoria: é necessário avaliar a incapacidade e a possibilidade de reabilitação.",
+      "A aposentadoria por incapacidade permanente exige incapacidade para atividade que garanta a subsistência e impossibilidade de reabilitação.",
+      "Incapacidade temporária e sequela que reduz a capacidade habitual correspondem a benefícios diferentes, com requisitos próprios.",
+      "Qualidade de segurado, carência e eventual relação com o trabalho devem ser analisadas junto com as provas médicas."
     ],
     image: tendiniteLerImg,
     imageAlt: "Pessoa com dor no punho por tendinite em ambiente de trabalho, representando LER e aposentadoria por invalidez",
     content: [
-      { type: "paragraph", text: "A tendinite é uma das doenças ocupacionais mais comuns no Brasil, afetando milhões de trabalhadores que realizam movimentos repetitivos. Quando essa condição evolui para uma Lesão por Esforço Repetitivo (LER) ou Distúrbio Osteomuscular Relacionado ao Trabalho (DORT), pode se tornar incapacitante e gerar direito a benefícios do INSS." },
-      { type: "heading", text: "Quando a Tendinite Dá Direito à Aposentadoria?" },
-      { type: "paragraph", text: "Nem toda tendinite gera direito à aposentadoria. Para isso, é necessário que a doença cause incapacidade total e permanente para o trabalho, sem possibilidade de reabilitação profissional. Isso geralmente ocorre nos graus III e IV da classificação médica, quando há dor constante, perda de força e limitação funcional grave." },
-      { type: "heading", text: "Tipos de Tendinite que Podem Aposentar" },
+      { type: "paragraph", text: "Nenhum tipo de tendinite garante, por si só, aposentadoria no INSS. Tendinite no ombro, punho ou cotovelo pode causar limitações relevantes, mas o benefício depende do efeito dessas limitações sobre o trabalho e do preenchimento dos requisitos previdenciários. Para a aposentadoria por incapacidade permanente, antiga aposentadoria por invalidez, a Lei nº 8.213/1991 exige incapacidade e impossibilidade de reabilitação para uma atividade que garanta a subsistência." },
+      { type: "heading", text: "Tendinite no Ombro, Punho ou Cotovelo: O Que Muda?" },
       { type: "list", items: [
-        "Tendinite crônica de De Quervain (punho e polegar)",
-        "Epicondilite lateral e medial (cotovelo)",
-        "Tendinite do manguito rotador (ombro)",
-        "Síndrome do túnel do carpo associada à LER",
-        "Tenossinovite crônica dos flexores"
+        "Ombro: tendinopatia do manguito rotador, inclusive do supraespinhoso, pode limitar elevação do braço, alcance e transporte de cargas.",
+        "Cotovelo: epicondilite lateral ou medial pode comprometer movimentos repetitivos, preensão e uso de ferramentas.",
+        "Punho e polegar: tenossinovite de De Quervain e outras lesões tendíneas podem dificultar digitação, pinça e tarefas manuais."
       ]},
-      { type: "heading", text: "Como Comprovar a Incapacidade?" },
-      { type: "paragraph", text: "A comprovação da incapacidade exige laudos médicos detalhados, exames de imagem (ressonância magnética, ultrassom), Perfil Profissiográfico Previdenciário (PPP) e Comunicação de Acidente de Trabalho (CAT). Um advogado previdenciário pode organizar toda essa documentação e identificar a melhor estratégia." },
-      { type: "highlight", text: "Importante: se a tendinite foi causada ou agravada pelo trabalho, ela pode ser reconhecida como doença ocupacional, o que garante benefícios diferenciados como o auxílio-acidente e estabilidade no emprego." },
-      { type: "heading", text: "INSS Negou? O Que Fazer?" },
-      { type: "paragraph", text: "Caso o INSS negue o benefício, é possível recorrer administrativamente ou entrar com ação judicial. Na Justiça, um perito independente avalia o caso, o que frequentemente resulta em decisões favoráveis ao segurado. A Cantarelli Advocacia tem experiência comprovada em casos de LER/DORT e pode analisar seu caso sem compromisso." },
-      { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "Se você sofre de tendinite crônica que compromete sua capacidade de trabalhar, pode ter direito à aposentadoria por invalidez. Não tente resolver sozinho — procure orientação jurídica especializada para garantir seus direitos." }
+      { type: "paragraph", text: "Esses exemplos não são uma lista de doenças que aposentam. A mesma lesão pode produzir consequências diferentes para pessoas com ocupações distintas. O CID M65 ou outro código médico identifica uma condição clínica, mas não substitui a avaliação da capacidade laboral. Síndrome do túnel do carpo envolve compressão de nervo e não é sinônimo de tendinite, embora possa coexistir em quadros de LER/DORT." },
+      { type: "heading", text: "Quais São os Requisitos da Aposentadoria por Tendinite?" },
+      { type: "paragraph", text: "O artigo 42 da Lei nº 8.213/1991 exige que a pessoa seja considerada incapaz e sem possibilidade de reabilitação para atividade que garanta sua subsistência. Também é necessário verificar a qualidade de segurado e, quando exigida, a carência. Não basta estar impossibilitado de exercer apenas uma tarefa se houver possibilidade de reabilitação compatível com o caso." },
+      { type: "paragraph", text: "Em regra, os benefícios por incapacidade exigem 12 contribuições mensais. A lei dispensa essa carência em situações como acidente de qualquer natureza e doença profissional ou do trabalho. A dispensa não elimina os demais requisitos. Ter tendinite antes da filiação não gera direito automaticamente, mas a incapacidade decorrente de progressão ou agravamento pode ser considerada, conforme os artigos 42 e 59." },
+      { type: "heading", text: "Aposentadoria, Auxílio-Doença e Auxílio-Acidente: Diferenças" },
+      { type: "list", items: [
+        "Aposentadoria por incapacidade permanente: quando a incapacidade impede atividade que garanta a subsistência e não há possibilidade de reabilitação.",
+        "Auxílio por incapacidade temporária, antigo auxílio-doença: quando o segurado fica incapaz para seu trabalho ou atividade habitual por mais de 15 dias consecutivos, observadas as regras da categoria e os demais requisitos.",
+        "Auxílio-acidente: indenização por sequela consolidada que reduz a capacidade para o trabalho habitual, nas categorias de segurados abrangidas pela lei. Não exige incapacidade total e não pode ser acumulado com aposentadoria."
+      ]},
+      { type: "highlight", text: "Quando a doença foi causada ou agravada pelo trabalho, pode ser necessário analisar o nexo ocupacional. Esse reconhecimento não concede automaticamente aposentadoria, auxílio-acidente ou estabilidade: cada direito depende de seus requisitos específicos." },
+      { type: "heading", text: "O Que os Documentos Precisam Esclarecer?" },
+      { type: "paragraph", text: "Laudos e relatórios podem esclarecer a evolução da lesão, limitações funcionais, tratamentos e prognóstico. Exames complementam a avaliação, mas não demonstram incapacidade sozinhos. Na análise jurídica, importa relacionar essas informações às tarefas efetivamente exercidas, ao histórico de afastamentos e às possibilidades de reabilitação. CAT, registros ocupacionais e PPP, quando pertinentes, podem ajudar a examinar a relação com o trabalho; não são uma exigência universal para todo benefício por tendinite." },
+      { type: "heading", text: "E se o INSS Negar o Benefício?" },
+      { type: "paragraph", text: "Uma negativa pode decorrer de divergência sobre incapacidade, carência, qualidade de segurado ou documentação. Antes de definir eventual recurso ou ação judicial, é importante compreender o motivo da decisão. A avaliação de um advogado previdenciário pode identificar quais provas são relevantes e quais caminhos são juridicamente cabíveis, sem garantia de concessão ou de prazo." },
+      { type: "heading", text: "Base Legal e Orientação Especializada" },
+      { type: "paragraph", text: "Base legal: Lei nº 8.213/1991, especialmente artigos 18, § 1º, 20, 21, 25, 26, 42, 59 e 86. A versão atualizada pode ser consultada na Câmara dos Deputados: https://www2.camara.leg.br/legin/fed/lei/1991/lei-8213-24-julho-1991-363650-normaatualizada-pl.html. Este conteúdo é informativo e não substitui a análise individual. A Cantarelli Advocacia, em Recife, pode avaliar o histórico previdenciário e os documentos do caso. Fale com especialista." }
     ],
     faq: [
-      { question: "A tendinite pode voltar após tratamento e gerar novo benefício?", answer: "Sim. Se houver recidiva com nova incapacidade, é possível solicitar novo auxílio-doença ou até aposentadoria por invalidez." },
-      { question: "Quais profissões têm maior incidência de tendinite/LER?", answer: "Digitadores, operadores de caixa, metalúrgicos, costureiras e profissionais de limpeza estão entre os mais afetados." },
-      { question: "Fisioterapia é obrigatória antes de pedir aposentadoria por tendinite?", answer: "Não é obrigatória, mas o INSS considera se o segurado esgotou as possibilidades de tratamento antes de conceder a invalidez." }
+      { question: "Qual tipo de tendinite aposenta?", answer: "Nenhum tipo concede aposentadoria automaticamente. A tendinite precisa causar incapacidade que impeça atividade capaz de garantir a subsistência, sem possibilidade de reabilitação, além dos demais requisitos previdenciários." },
+      { question: "Epicondilite lateral do cotovelo pode aposentar?", answer: "Pode fundamentar um benefício quando suas consequências forem incapacitantes, mas o diagnóstico isolado não basta. A avaliação considera limitações, trabalho exercido, prognóstico e reabilitação." },
+      { question: "Tendinopatia do supraespinhoso ou CID M65 dá aposentadoria?", answer: "O nome da lesão e o CID não determinam o benefício. É necessário examinar a repercussão funcional e os requisitos legais; dependendo do caso, pode haver incapacidade temporária, permanente ou nenhuma incapacidade previdenciária." },
+      { question: "A tendinite precisa ter relação com o trabalho para gerar benefício?", answer: "Não necessariamente para benefícios por incapacidade. A relação ocupacional pode influenciar o enquadramento e a dispensa de carência, mas precisa ser examinada com as provas do caso." },
+      { question: "Quem continua trabalhando pode receber auxílio-acidente por tendinite?", answer: "O auxílio-acidente permite continuar trabalhando, mas exige sequela consolidada que reduza a capacidade habitual e enquadramento em categoria de segurado abrangida. Não é devido apenas porque existe dor ou diagnóstico de tendinite." }
     ]
   },
   {
