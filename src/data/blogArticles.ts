@@ -2177,7 +2177,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "Em 2026, a pontuação exigida é de 92 pontos para mulheres e 102 para homens. A soma de idade + tempo de contribuição deve atingir esse mínimo. É a regra mais utilizada por quem começou a trabalhar cedo.",
+        text: "Em 2026, a pontuação exigida é de 93 pontos para mulheres e 103 para homens. A soma de idade + tempo de contribuição deve atingir esse mínimo. É a regra mais utilizada por quem começou a trabalhar cedo.",
       },
       {
         type: "subheading",
@@ -2185,7 +2185,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "A idade mínima em 2026 é de 59 anos para mulheres e 64 para homens, com tempo mínimo de 30 e 35 anos de contribuição, respectivamente. A cada ano, 6 meses são adicionados à idade mínima.",
+        text: "A idade mínima em 2026 é de 59 anos e seis meses para mulheres e 64 anos e seis meses para homens, com tempo mínimo de 30 e 35 anos de contribuição, respectivamente. A cada ano, 6 meses são adicionados à idade mínima.",
       },
       {
         type: "subheading",
@@ -3919,7 +3919,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "A idade mínima para professores em 2026 é de 54 anos para mulheres e 59 anos para homens, mantendo o tempo mínimo de 25 e 30 anos de contribuição em magistério, respectivamente.",
+        text: "A idade mínima para professores em 2026 é de 54 anos e seis meses para mulheres e 59 anos e seis meses para homens, mantendo o tempo mínimo de 25 e 30 anos de contribuição em magistério, respectivamente.",
       },
       {
         type: "subheading",
@@ -4358,8 +4358,8 @@ export const blogArticles: BlogArticle[] = [
       { type: "list", items: [
         "Pedágio de 50%: para quem faltavam até 2 anos para se aposentar em novembro de 2019",
         "Pedágio de 100%: exige idade mínima (57 mulheres, 60 homens) + tempo faltante x2",
-        "Pontos progressivos: soma de idade + tempo de contribuição (92 pontos para mulheres, 102 para homens em 2026)",
-        "Idade mínima progressiva: 59 anos para mulheres e 64 para homens em 2026"
+        "Pontos progressivos: soma de idade + tempo de contribuição (93 pontos para mulheres, 103 para homens em 2026)",
+        "Idade mínima progressiva: 59 anos e seis meses para mulheres e 64 anos e seis meses para homens em 2026"
       ]},
       { type: "heading", text: "O Que Pode Reduzir Seu Benefício?" },
       { type: "paragraph", text: "O principal fator que reduz o valor da aposentadoria é o coeficiente de cálculo. Após a Reforma, o cálculo é de 60% da média + 2% por ano que exceder 15 anos (mulheres) ou 20 anos (homens). Aposentar-se com poucos anos além do mínimo resulta em benefício significativamente menor." },
@@ -4400,8 +4400,8 @@ export const blogArticles: BlogArticle[] = [
       ]},
       { type: "heading", text: "Regras de Transição para Mulheres em 2026" },
       { type: "list", items: [
-        "Pontos: 92 pontos (idade + tempo de contribuição) com mínimo de 30 anos de contribuição",
-        "Idade mínima progressiva: 59 anos com 30 anos de contribuição",
+        "Pontos: 93 pontos (idade + tempo de contribuição) com mínimo de 30 anos de contribuição",
+        "Idade mínima progressiva: 59 anos e seis meses com 30 anos de contribuição",
         "Pedágio de 50%: para quem faltava até 2 anos em novembro/2019",
         "Pedágio de 100%: 57 anos de idade + tempo que faltava x2"
       ]},
@@ -5082,12 +5082,13 @@ export const blogArticles: BlogArticle[] = [
     title: "Aposentadoria por Pontos 2026: Quantos Pontos Você Precisa?",
     seoTitle: "Aposentadoria por Pontos 2026: Tabela Homem e Mulher | Cantarelli",
     metaDescription: "Aposentadoria por pontos 2026: veja a tabela de pontos para homem e mulher, o tempo de contribuição exigido e como calcular sua pontuação no INSS.",
-    excerpt: "A regra de pontos exige 92 pontos para mulheres e 102 para homens em 2026. Entenda como calcular e se essa é a melhor regra para você.",
+    excerpt: "A regra de pontos exige 93 pontos para mulheres e 103 para homens em 2026. Entenda como calcular e se essa é a melhor regra para você.",
+    lastUpdated: "9 de Novembro, 2026",
     category: "Aposentadoria",
     tags: ["Pontos", "Regra de Transição", "INSS", "2026", "Reforma"],
     readTime: "7 min",
     keyTakeaways: [
-      "Em 2026: mulheres precisam de 92 pontos e homens de 102 pontos",
+      "Em 2026: mulheres precisam de 93 pontos e homens de 103 pontos",
       "Pontos = idade + tempo de contribuição",
       "É necessário ter no mínimo 30 anos (mulher) ou 35 anos (homem) de contribuição",
       "Essa pode não ser a regra mais vantajosa — compare com as demais"
@@ -5095,14 +5096,14 @@ export const blogArticles: BlogArticle[] = [
     image: aposentPontosImg,
     imageAlt: "Trabalhador calculando pontos necessários para aposentadoria por regra de transição do INSS em 2026",
     content: [
-      { type: "paragraph", text: "A regra de transição por pontos é uma das mais utilizadas por segurados que buscam a aposentadoria em 2026. Ela combina idade e tempo de contribuição em uma pontuação mínima que aumenta a cada ano. Entender como funciona é essencial para planejar o melhor momento de se aposentar." },
+      { type: "paragraph", text: "Em 2026, a regra de transição por pontos exige 93 pontos para mulheres e 103 para homens, além de pelo menos 30 e 35 anos de contribuição, respectivamente. Ela combina idade e tempo de contribuição em uma pontuação mínima que aumenta a cada ano. Entender como funciona é essencial para planejar o melhor momento de se aposentar." },
       { type: "heading", text: "Quantos Pontos São Necessários em 2026?" },
-      { type: "paragraph", text: "A pontuação mínima em 2026 é de 92 pontos para mulheres e 102 pontos para homens. Esses pontos são calculados somando a idade com o tempo de contribuição. Por exemplo: uma mulher com 57 anos e 35 anos de contribuição tem 92 pontos e pode se aposentar por essa regra." },
+      { type: "paragraph", text: "A pontuação mínima em 2026 é de 93 pontos para mulheres e 103 pontos para homens. Esses pontos são calculados somando a idade com o tempo de contribuição. Por exemplo: uma mulher com 58 anos e 35 anos de contribuição tem 93 pontos e pode se aposentar por essa regra." },
       { type: "heading", text: "Requisitos Completos" },
-      { type: "list", items: ["Mulheres: 92 pontos + mínimo de 30 anos de contribuição", "Homens: 102 pontos + mínimo de 35 anos de contribuição", "Já estar contribuindo antes da Reforma de 2019 (13/11/2019)", "A pontuação aumenta 1 ponto por ano até atingir o limite (100 para mulheres, 105 para homens)"] },
+      { type: "list", items: ["Mulheres: 93 pontos + mínimo de 30 anos de contribuição", "Homens: 103 pontos + mínimo de 35 anos de contribuição", "Já estar contribuindo antes da Reforma de 2019 (13/11/2019)", "A pontuação aumenta 1 ponto por ano até atingir o limite (100 para mulheres, 105 para homens)"] },
       { type: "heading", text: "Como Calcular Seus Pontos" },
-      { type: "paragraph", text: "O cálculo é simples: some sua idade atual com seu tempo total de contribuição ao INSS. Lembre-se de que tempo especial pode ser convertido com fator multiplicador, aumentando sua pontuação." },
-      { type: "highlight", text: "Exemplo prático: João tem 60 anos e 42 anos de contribuição. Seus pontos: 60 + 42 = 102 pontos. Ele pode se aposentar pela regra de pontos em 2026." },
+      { type: "paragraph", text: "O cálculo é simples: some sua idade atual com seu tempo total de contribuição ao INSS. A conversão de tempo especial em comum exige comprovação e é limitada ao trabalho anterior a 13/11/2019; não se aplica automaticamente a qualquer período." },
+      { type: "highlight", text: "Exemplo prático: João tem 61 anos e 42 anos de contribuição. Seus pontos: 61 + 42 = 103 pontos. A pontuação é um dos critérios; a concessão depende da conferência dos demais requisitos e do histórico contributivo." },
       { type: "heading", text: "Valor do Benefício pela Regra de Pontos" },
       { type: "paragraph", text: "O cálculo segue a regra geral pós-reforma: 60% da média salarial + 2% para cada ano acima de 20 anos de contribuição (homem) ou 15 anos (mulher). Quem tem muitos anos de contribuição pode alcançar 100% ou até mais da média." },
       { type: "heading", text: "Essa É a Melhor Regra Para Você?" },

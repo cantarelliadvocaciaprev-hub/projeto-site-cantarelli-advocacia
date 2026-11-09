@@ -42,8 +42,11 @@ export function trackWhatsAppClick(
       gtag?: (...a: unknown[]) => void;
       fbq?: (...a: unknown[]) => void;
     };
+    if (localStorage.getItem("cookie-consent") === "accepted") {
+    w.gtag?.("event", "click_whatsapp", { page_path: window.location.pathname, cta_location: ctaLocation });
     w.gtag?.("event", "generate_lead", { method: "whatsapp", cta_location: ctaLocation });
     w.fbq?.("track", "Contact", { content_name: ctaLocation });
+    }
 
     const { source, medium, campaign, referrer } = preserveAttribution(detectTrafficSource(), typeof sessionStorage === "undefined" ? undefined : sessionStorage);
     void supabase

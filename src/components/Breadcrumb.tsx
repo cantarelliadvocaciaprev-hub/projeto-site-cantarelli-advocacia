@@ -35,7 +35,8 @@ const Breadcrumb = ({ items, variant = "light" }: BreadcrumbProps) => {
   const iconColor = variant === "dark" ? "text-[#a38b58]" : "text-primary";
 
   return (
-    <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm font-body">
+    <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-sm font-body">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{label:"Início",href:"/"}, ...items].map((item,index) => ({ "@type":"ListItem",position:index+1,name:item.label,item:`https://cantarelliadvocacia.com.br${item.href ?? window.location.pathname}` })) }) }} />
       <button
         onClick={() => handleClick("/")}
         className={`flex items-center gap-1 ${textColor} ${hoverColor} transition-colors`}

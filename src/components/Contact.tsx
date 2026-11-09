@@ -20,7 +20,7 @@ const Contact = () => {
     e.preventDefault();
     
     // Validação básica
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.name.trim() || !formData.phone.trim() || !formData.message.trim()) {
       toast.error("Por favor, preencha todos os campos obrigatórios.");
       return;
     }
@@ -34,7 +34,7 @@ const Contact = () => {
 
     // Criar mensagem para WhatsApp
     const whatsappMessage = encodeURIComponent(
-      `*Nova mensagem do site*\n\n` +
+      `*Nova mensagem do site (${window.location.pathname})*\n\n` +
       `*Nome:* ${formData.name}\n` +
       `*Email:* ${formData.email}\n` +
       `*Telefone:* ${formData.phone || "Não informado"}\n\n` +
@@ -46,7 +46,7 @@ const Contact = () => {
     trackContactEvent("contact_form_submit");
     window.open(`https://wa.me/5581983421727?text=${whatsappMessage}`, "_blank");
 
-    toast.success("Mensagem enviada! Entraremos em contato em breve.");
+    toast.success("Confirme o envio da mensagem no WhatsApp.");
     
     // Limpar formulário
     setFormData({
@@ -100,7 +100,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-display font-bold text-foreground mb-1">Telefones</h4>
                   <p className="text-muted-foreground font-body">
-                    Tel: (81) 3049-3799<br />
+                    Tel: <a href="tel:+558130493799" onClick={() => trackContactEvent("click_phone")} className="underline">(81) 3049-3799</a><br />
                     WhatsApp: (81) 98342-1727<br />
                     Comercial: (81) 99544-1368 / (81) 98611-3970 / (81) 98379-5595<br />
                     WhatsApp: (81) 98392-5828<br />
@@ -155,6 +155,7 @@ const Contact = () => {
               <div>
                 <Input
                   type="text"
+                  aria-label="Nome completo"
                   placeholder="Nome completo *"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -166,18 +167,20 @@ const Contact = () => {
               <div>
                 <Input
                   type="email"
-                  placeholder="E-mail *"
+                  aria-label="E-mail opcional"
+                  placeholder="E-mail (opcional)"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   maxLength={255}
-                  required
                   className="w-full"
                 />
               </div>
               <div>
                 <Input
                   type="tel"
-                  placeholder="Telefone (opcional)"
+                  aria-label="WhatsApp"
+                  placeholder="WhatsApp *"
+                  required
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   maxLength={20}

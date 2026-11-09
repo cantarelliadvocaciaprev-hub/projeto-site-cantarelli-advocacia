@@ -16,7 +16,7 @@ export default function ServicePage() {
   if (!page) return null;
   const canonical = `https://cantarelliadvocacia.com.br/${page.slug}`;
   return <div className="min-h-screen bg-background">
-    <SEO title={page.title} description={page.description} canonical={canonical} />
+    <SEO title={`${page.title} | Cantarelli Advocacia`} description={page.description} canonical={canonical} />
     <LegalServiceSchema />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: page.faq.map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) }) }} />
     <Header />
