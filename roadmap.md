@@ -1,4 +1,9 @@
 - [ ] Conectar chave própria do Google Maps — aguarda chave e confirmação dos domínios autorizados do usuário
+- [ ] Otimizar imagens, fontes, carregamento e estabilidade sem remover conteúdo
+- [ ] Revisar metadados, navegação, pré-renderização e dados estruturados
+- [ ] Criar páginas locais e de serviços com conteúdo informativo, sem tutorial de requerimento
+- [ ] Melhorar contatos, privacidade e atribuição de origem; verificar eventos
+- [ ] Testar páginas, acessibilidade e fluxos; relatar limites de hospedagem e medição real
 - [x] Corrigir título principal da página inicial — nome, especialidade e Recife conferidos em computador e celular
 - [x] Otimizar artigo sobre tendinite — título, descrição e requisitos revisados com dados da Semrush e Lei 8.213; página e testes conferidos
 - [x] Testar o assistente com uma dúvida previdenciária e conferir resumo e abertura do WhatsApp — resposta real sobre BPC suspenso exibida; janela do WhatsApp abriu no número oficial
