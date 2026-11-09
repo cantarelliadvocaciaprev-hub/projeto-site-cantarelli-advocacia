@@ -23,4 +23,12 @@ describe("Ampliação das categorias com menos de quatro artigos", () => {
     expect(blogArticles).toHaveLength(119);
     expect(new Set(blogArticles.map((article) => article.slug)).size).toBe(119);
   });
+
+  it("applies the official 2026 general transition of 93 and 103 points", () => {
+    const article = blogArticles.find(item => item.slug === "aposentadoria-por-pontos-2026-regras");
+    expect(article?.keyTakeaways[0]).toBe("Em 2026: mulheres precisam de 93 pontos e homens de 103 pontos");
+    const text = article?.content.map(section => section.text ?? section.items?.join(" ")).join(" ");
+    expect(text).not.toMatch(/92 pontos|102 pontos/);
+    expect(text).toContain("61 + 42 = 103");
+  });
 });
