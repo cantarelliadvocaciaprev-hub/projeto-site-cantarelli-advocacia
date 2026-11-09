@@ -6,3 +6,4 @@
 - Preserve first-entry attribution in session storage through internal navigation so contact clicks retain their campaign; never store personal identifiers in campaign tags.
 - Use build-time WebP transformations for imported photography and reserve image dimensions to reduce bandwidth and layout shifts.
 - Emit real public text and page metadata in the existing prerender plugin; do not advertise private routes or fabricate article timestamps.
+- Bound prerender output with a fixed page cap to prevent oversized deployments; test the generator in temporary directories without rebuilding the app.

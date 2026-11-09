@@ -1,9 +1,13 @@
 - [ ] Conectar chave própria do Google Maps — aguarda chave e confirmação dos domínios autorizados do usuário
-- [ ] Otimizar imagens, fontes, carregamento e estabilidade sem remover conteúdo
-- [ ] Revisar metadados, navegação, pré-renderização e dados estruturados
-- [ ] Criar páginas locais e de serviços com conteúdo informativo, sem tutorial de requerimento
-- [ ] Melhorar contatos, privacidade e atribuição de origem; verificar eventos
-- [ ] Testar páginas, acessibilidade e fluxos; relatar limites de hospedagem e medição real
+- [x] Otimizar fotografias em WebP, fontes, carregamento e dimensões sem remover conteúdo
+- [x] Revisar metadados, navegação, pré-renderização e dados estruturados — teste gerou 119 artigos e 15 páginas públicas
+- [x] Criar dez páginas locais e de serviços, com mais de 600 palavras e cinco FAQs cada
+- [x] Melhorar contatos, privacidade e atribuição — WhatsApp e consentimento testados
+- [x] Testar páginas em computador e celular, teclado, sumário e contatos — 27 testes passaram
+- [ ] Confirmar metas PageSpeed e Core Web Vitals — depende de publicação e nova medição; dados reais usam janela de 28 dias
+- [ ] Marcar eventos como conversões no GA4 — depende de acesso à propriedade e confirmação do ID completo
+- [ ] Confirmar coordenadas e perfil oficial do Google/Jusbrasil — depende dos dados do escritório
+- [ ] Validar cache de assets e proteção contra enquadramento — depende das opções oferecidas pela hospedagem
 - [x] Corrigir título principal da página inicial — nome, especialidade e Recife conferidos em computador e celular
 - [x] Otimizar artigo sobre tendinite — título, descrição e requisitos revisados com dados da Semrush e Lei 8.213; página e testes conferidos
 - [x] Testar o assistente com uma dúvida previdenciária e conferir resumo e abertura do WhatsApp — resposta real sobre BPC suspenso exibida; janela do WhatsApp abriu no número oficial
