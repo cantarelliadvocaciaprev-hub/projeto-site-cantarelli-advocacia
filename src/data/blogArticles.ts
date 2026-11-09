@@ -4255,39 +4255,43 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "quanto-tempo-demora-processo-auxilio-acidente",
     title: "Quanto Tempo Demora um Processo de Auxílio-Acidente?",
-    excerpt: "Entenda os prazos médios de um processo de auxílio-acidente no INSS e na Justiça, e como acelerar a obtenção do seu benefício.",
+    seoTitle: "Quanto Tempo Demora o Auxílio-Acidente no INSS e na Justiça? | Cantarelli",
+    metaDescription: "Quanto tempo demora o auxílio-acidente? Veja o prazo legal de análise do INSS, as etapas do processo judicial e o que costuma atrasar a decisão.",
+    lastUpdated: "9 de Novembro, 2026",
+    excerpt: "Entenda o prazo de análise do INSS, as etapas de um processo judicial de auxílio-acidente e os fatores que influenciam a duração.",
     category: "Auxílio-Acidente",
     tags: ["Auxílio-Acidente", "Prazos", "INSS", "Processo"],
     readTime: "6 min",
     keyTakeaways: [
-      "O pedido administrativo no INSS leva em média 45 a 90 dias para ser analisado.",
-      "Na Justiça, o processo pode durar de 6 meses a 2 anos dependendo da comarca.",
-      "A tutela antecipada pode garantir o recebimento do benefício enquanto o processo tramita.",
-      "Ter documentação completa e um advogado especialista acelera significativamente o processo."
+      "Não existe prazo fixo: a análise no INSS depende da fila de perícias e da documentação apresentada.",
+      "Na Justiça, a duração varia conforme a vara, a perícia judicial e a existência de recursos.",
+      "Em casos específicos, o juiz pode antecipar os efeitos da decisão (tutela de urgência), mas isso não é automático.",
+      "Documentação organizada evita exigências e retrabalho, embora não assegure um prazo menor."
     ],
     image: tempoProcessoAuxImg,
     imageAlt: "Calendário e ampulheta representando o tempo de duração de um processo de auxílio-acidente",
     content: [
       { type: "paragraph", text: "Uma das maiores preocupações de quem precisa do auxílio-acidente é saber quanto tempo vai demorar para conseguir o benefício. Os prazos variam conforme a via escolhida (administrativa ou judicial) e a complexidade do caso." },
       { type: "heading", text: "Prazos na Via Administrativa (INSS)" },
-      { type: "paragraph", text: "Quando o pedido é feito diretamente ao INSS, o prazo médio de análise é de 45 a 90 dias. No entanto, em períodos de grande demanda, esse prazo pode se estender. A perícia médica é agendada dentro desse período e o resultado costuma sair na mesma data." },
+      { type: "paragraph", text: "A Lei 9.784/1999 prevê prazo de até 30 dias, prorrogável, para a decisão após a conclusão da instrução, e o INSS assumiu prazos-alvo de análise em acordo homologado no STF (RE 1.171.152). Na prática, a espera varia conforme a agenda de perícias na sua região e eventuais exigências de documentos. O andamento pode ser acompanhado pelo Meu INSS." },
       { type: "heading", text: "Prazos na Via Judicial" },
       { type: "list", items: [
-        "Juizado Especial Federal (até 60 salários mínimos): 6 a 12 meses em média",
-        "Vara Federal comum: 1 a 2 anos em média",
-        "Recurso em segunda instância: mais 6 a 12 meses",
-        "Com tutela antecipada deferida: benefício pode começar em 30 a 60 dias"
+        "Juizado Especial Federal (causas até 60 salários mínimos): costuma ter rito mais simples",
+        "Acidente de trabalho (B91 → auxílio-acidente acidentário): a ação tramita na Justiça Estadual",
+        "Perícia judicial: geralmente é a etapa que mais influencia a duração",
+        "Recursos do INSS ou do segurado podem prolongar o processo",
+        "Tutela de urgência: depende de prova e de decisão do juiz, não é garantida"
       ]},
-      { type: "heading", text: "Como Acelerar o Processo?" },
-      { type: "paragraph", text: "A documentação é o fator mais importante para agilizar o processo. Laudos médicos detalhados, exames de imagem, CAT (Comunicação de Acidente de Trabalho) e o PPP devem estar organizados antes de dar entrada no pedido." },
-      { type: "highlight", text: "Um advogado previdenciário experiente sabe exatamente quais documentos são necessários e como apresentá-los de forma estratégica para reduzir o tempo do processo." },
+      { type: "heading", text: "O Que Costuma Atrasar o Processo?" },
+      { type: "paragraph", text: "Exigências por falta de documentos, perícias remarcadas e divergências entre laudos são causas frequentes de demora. Laudos que descrevam a sequela e a redução da capacidade, exames, CAT (quando houver) e registros do afastamento ajudam a perícia a avaliar o caso com mais clareza." },
+      { type: "highlight", text: "Um advogado previdenciário pode verificar se o caso é acidentário ou previdenciário, qual a via adequada e se a documentação está completa — sem que isso represente promessa de resultado ou de prazo." },
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "O tempo de um processo de auxílio-acidente depende de vários fatores, mas com a documentação certa e orientação jurídica especializada, é possível reduzir significativamente essa espera. A Cantarelli Advocacia pode ajudar você a conseguir seu benefício no menor prazo possível." }
+      { type: "paragraph", text: "Não há como prever com exatidão quanto tempo um processo de auxílio-acidente vai durar: isso depende da via, da perícia e de eventuais recursos. Se você tem sequela de acidente e dúvidas sobre o seu caso, fale com um especialista da Cantarelli Advocacia para uma análise individual." }
     ],
     faq: [
-      { question: "Existe como acelerar o processo na Justiça?", answer: "Sim. Juntar documentação completa desde o início, solicitar perícia antecipada e optar pelo JEF quando possível aceleram o trâmite." },
+      { question: "Dá para acelerar o processo na Justiça?", answer: "Não há como garantir um prazo menor. Documentação completa desde o início reduz exigências, e a tutela de urgência pode ser pedida quando há prova suficiente, mas a decisão cabe ao juiz." },
       { question: "O processo pode ser arquivado se eu não comparecer?", answer: "Sim. A ausência injustificada em audiências ou perícias pode levar ao arquivamento da ação. É fundamental comparecer a todos os atos." },
-      { question: "Recurso do INSS após sentença favorável atrasa muito?", answer: "O recurso na Turma Recursal do JEF costuma levar de 6 a 12 meses adicionais. Na Justiça Federal comum, pode levar mais." }
+      { question: "Recurso do INSS após sentença favorável atrasa muito?", answer: "Pode prolongar o processo. O tempo depende da carga de trabalho da Turma Recursal ou do tribunal responsável." }
     ]
   },
   {
@@ -4459,7 +4463,8 @@ export const blogArticles: BlogArticle[] = [
     slug: "quem-recebe-loas-pode-receber-pensao-por-morte",
     title: "Quem Recebe LOAS Pode Receber Pensão por Morte do Marido?",
     seoTitle: "Quem Recebe LOAS Pode Receber Pensão por Morte? (2026) | Cantarelli",
-    metaDescription: "Quem recebe LOAS pode receber pensão por morte do marido? Entenda a regra do INSS, quando é possível trocar o benefício e o que analisar antes de pedir.",
+    metaDescription: "Quem recebe LOAS pode receber pensão por morte do marido ou companheiro? Veja por que a lei não permite acumular e quando vale optar pela pensão.",
+    lastUpdated: "9 de Novembro, 2026",
     excerpt: "Descubra se é possível acumular o BPC/LOAS com a pensão por morte do cônjuge e quais são as regras de acumulação de benefícios do INSS.",
     category: "BPC/LOAS",
     tags: ["LOAS", "Pensão por Morte", "Acumulação", "INSS", "BPC"],
@@ -4467,7 +4472,7 @@ export const blogArticles: BlogArticle[] = [
     keyTakeaways: [
       "Em regra, não é possível acumular o BPC/LOAS com a pensão por morte — a pessoa deve optar pelo mais vantajoso.",
       "A pensão por morte geralmente é mais vantajosa por oferecer valor superior e 13º salário.",
-      "Em alguns casos judiciais, tem sido reconhecido o direito de acumulação quando os valores são baixos.",
+      "A jurisprudência majoritária mantém a proibição de acumular; exceções são raras e dependem de análise individual.",
       "É fundamental analisar cada caso individualmente antes de tomar a decisão."
     ],
     image: loasPensaoMorteImg,
@@ -4480,10 +4485,10 @@ export const blogArticles: BlogArticle[] = [
       { type: "list", items: [
         "Quando o valor da pensão é superior ao BPC (R$ 1.621,00 em 2026)",
         "Quando a pensão garante 13º salário (que o BPC não oferece)",
-        "Quando a pensão gera menos restrições de renda familiar"
+        "Quando a pensão pode ser paga a outros dependentes ou não depende de reavaliação de renda familiar"
       ]},
       { type: "heading", text: "Exceções e Decisões Judiciais" },
-      { type: "paragraph", text: "Alguns tribunais têm reconhecido o direito de acumular BPC e pensão por morte em situações excepcionais, especialmente quando ambos os valores são muito baixos e a vedação da acumulação coloca a pessoa em situação de extrema vulnerabilidade social." },
+      { type: "paragraph", text: "A regra de não acumulação do art. 20, §4º, da LOAS costuma ser aplicada pelos tribunais. Por isso, a pergunta prática geralmente não é "como acumular", e sim qual benefício manter e se a pensão foi corretamente concedida e calculada." },
       { type: "highlight", text: "Cada caso é único. A análise de um advogado previdenciário é essencial para determinar qual benefício é mais vantajoso e se há possibilidade de acumulação no seu caso específico." },
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "Se você recebe BPC/LOAS e perdeu o cônjuge, procure orientação jurídica antes de tomar qualquer decisão. A Cantarelli Advocacia pode analisar qual benefício é mais vantajoso e se existe possibilidade legal de acumulação no seu caso." }
@@ -4534,35 +4539,36 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "deficiencia-auditiva-aposentadoria-pcd",
     title: "Deficiência Auditiva Aposenta? Conheça Seus Direitos no INSS",
-    seoTitle: "Deficiência Auditiva Aposenta? Regras do INSS em 2026 | Cantarelli",
-    metaDescription: "Deficiência auditiva aposenta? Veja quem tem direito à aposentadoria da pessoa com deficiência, o grau de perda exigido e os documentos para o INSS.",
-    excerpt: "Entenda quando a perda auditiva garante aposentadoria da pessoa com deficiência ou por invalidez e quais documentos são necessários.",
+    seoTitle: "Perda Auditiva Bilateral Aposenta? Regras do INSS 2026 | Cantarelli",
+    lastUpdated: "9 de Novembro, 2026",
+    metaDescription: "Surdez ou perda auditiva bilateral aposenta? Veja como funciona a aposentadoria da pessoa com deficiência, a avaliação do INSS e os laudos usados.",
+    excerpt: "Entenda quando a perda auditiva pode dar acesso à aposentadoria da pessoa com deficiência ou por invalidez e quais documentos são necessários.",
     category: "Autismo",
     tags: ["PCD", "Deficiência Auditiva", "INSS", "Aposentadoria"],
     readTime: "7 min",
     keyTakeaways: [
-      "Perda auditiva bilateral pode garantir aposentadoria PCD com tempo reduzido",
+      "Perda auditiva bilateral pode dar acesso à aposentadoria PCD com requisitos reduzidos, conforme o grau reconhecido",
       "A avaliação é biopsicossocial, não apenas audiométrica",
-      "Surdez unilateral também pode ser reconhecida dependendo do grau",
+      "A surdez unilateral exige análise individual; o reconhecimento depende da avaliação biopsicossocial",
       "Laudo audiológico e histórico médico são fundamentais"
     ],
     image: defAuditivaImg,
     imageAlt: "Documentos de aposentadoria por deficiência auditiva",
     content: [
-      { type: "paragraph", text: "A deficiência auditiva é uma das condições que pode garantir acesso à aposentadoria da pessoa com deficiência, com redução no tempo de contribuição e na idade mínima. Porém, muitos segurados não sabem que têm esse direito ou desconhecem os critérios utilizados pelo INSS na avaliação." },
-      { type: "heading", text: "Quando a Perda Auditiva Garante Aposentadoria?" },
-      { type: "paragraph", text: "A Lei Complementar 142/2013 garante aposentadoria com requisitos reduzidos para pessoas com deficiência. A perda auditiva pode ser classificada como deficiência leve, moderada ou grave, dependendo do grau de comprometimento e das barreiras enfrentadas no dia a dia." },
-      { type: "list", items: ["Perda auditiva bilateral acima de 41 dB pode ser considerada deficiência", "Surdez profunda bilateral (acima de 91 dB) geralmente é classificada como grave", "Uso de aparelho auditivo não elimina o reconhecimento da deficiência", "A avaliação considera impactos sociais, laborais e de comunicação"] },
+      { type: "paragraph", text: "A deficiência auditiva é uma das condições que podem dar acesso à aposentadoria da pessoa com deficiência, com redução no tempo de contribuição e na idade mínima. Porém, muitos segurados não sabem que têm esse direito ou desconhecem os critérios utilizados pelo INSS na avaliação." },
+      { type: "heading", text: "Quando a Perda Auditiva Pode Dar Direito à Aposentadoria?" },
+      { type: "paragraph", text: "A Lei Complementar 142/2013 prevê aposentadoria com requisitos reduzidos para pessoas com deficiência. A perda auditiva pode ser classificada como deficiência leve, moderada ou grave, dependendo do grau de comprometimento e das barreiras enfrentadas no dia a dia." },
+      { type: "list", items: ["Como referência, o Decreto 3.298/1999 considera deficiência auditiva a perda bilateral de 41 dB ou mais, aferida por audiograma", "O grau (leve, moderado ou grave) é definido pela avaliação biopsicossocial, não só pelo número em decibéis", "Uso de aparelho auditivo não elimina o reconhecimento da deficiência", "A avaliação considera impactos sociais, laborais e de comunicação"] },
       { type: "heading", text: "Como é Feita a Avaliação pelo INSS?" },
       { type: "paragraph", text: "O INSS realiza avaliação biopsicossocial com perito médico e assistente social. Não basta apresentar o audiograma — são avaliados os impedimentos de longo prazo e as barreiras que a pessoa enfrenta na participação social e no trabalho." },
-      { type: "highlight", text: "Importante: mesmo que você use aparelho auditivo e consiga trabalhar, ainda pode ter direito à aposentadoria PCD se a deficiência auditiva impõe barreiras significativas." },
+      { type: "highlight", text: "Importante: mesmo que você use aparelho auditivo e consiga trabalhar, a deficiência auditiva ainda pode ser reconhecida se impõe barreiras de longo prazo — a conclusão depende da avaliação do INSS." },
       { type: "heading", text: "Documentos Necessários" },
       { type: "list", items: ["Audiometria tonal e vocal recente", "Laudos de otorrinolaringologista", "Relatórios de fonoaudiólogo", "Histórico médico completo", "CNIS atualizado"] },
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "Se você tem deficiência auditiva e contribui para o INSS, pode ter direito a se aposentar com requisitos reduzidos. A Cantarelli Advocacia pode analisar seu caso e identificar a melhor estratégia para garantir seus direitos." }
+      { type: "paragraph", text: "Se você tem deficiência auditiva e contribui para o INSS, pode ter direito a se aposentar com requisitos reduzidos. Fale com um especialista da Cantarelli Advocacia para uma análise individual do seu histórico e dos seus laudos." }
     ],
     faq: [
-      { question: "Implante coclear elimina o direito à aposentadoria PCD?", answer: "Não. Mesmo com implante coclear, a pessoa continua sendo considerada deficiente auditiva para fins previdenciários." },
+      { question: "Implante coclear elimina o direito à aposentadoria PCD?", answer: "Não automaticamente. O implante não afasta, por si só, o reconhecimento da deficiência; a avaliação considera as limitações e barreiras que permanecem." },
       { question: "Surdez congênita tem tratamento diferente da adquirida?", answer: "Não para fins previdenciários. O que importa é o grau de limitação atual, independente de a surdez ser congênita ou adquirida." },
       { question: "Laudo audiológico é suficiente para comprovar deficiência auditiva?", answer: "É um documento importante, mas a avaliação do INSS é biopsicossocial. Outros laudos e relatórios complementam o processo." }
     ]
@@ -5081,7 +5087,7 @@ export const blogArticles: BlogArticle[] = [
     slug: "aposentadoria-por-pontos-2026-regras",
     title: "Aposentadoria por Pontos 2026: Quantos Pontos Você Precisa?",
     seoTitle: "Aposentadoria por Pontos 2026: Tabela Homem e Mulher | Cantarelli",
-    metaDescription: "Aposentadoria por pontos 2026: veja a tabela de pontos para homem e mulher, o tempo de contribuição exigido e como calcular sua pontuação no INSS.",
+    metaDescription: "Aposentadoria por pontos em 2026: 93 pontos para mulher e 103 para homem. Veja a tabela até 2033, o tempo mínimo de contribuição e como somar seus pontos.",
     excerpt: "A regra de pontos exige 93 pontos para mulheres e 103 para homens em 2026. Entenda como calcular e se essa é a melhor regra para você.",
     lastUpdated: "9 de Novembro, 2026",
     category: "Aposentadoria",
@@ -5098,14 +5104,14 @@ export const blogArticles: BlogArticle[] = [
     content: [
       { type: "paragraph", text: "Em 2026, a regra de transição por pontos exige 93 pontos para mulheres e 103 para homens, além de pelo menos 30 e 35 anos de contribuição, respectivamente. Ela combina idade e tempo de contribuição em uma pontuação mínima que aumenta a cada ano. Entender como funciona é essencial para planejar o melhor momento de se aposentar." },
       { type: "heading", text: "Quantos Pontos São Necessários em 2026?" },
-      { type: "paragraph", text: "A pontuação mínima em 2026 é de 93 pontos para mulheres e 103 pontos para homens. Esses pontos são calculados somando a idade com o tempo de contribuição. Por exemplo: uma mulher com 58 anos e 35 anos de contribuição tem 93 pontos e pode se aposentar por essa regra." },
+      { type: "paragraph", text: "A pontuação mínima em 2026 é de 93 pontos para mulheres e 103 pontos para homens. Esses pontos são calculados somando a idade com o tempo de contribuição. Por exemplo: uma mulher com 58 anos e 35 anos de contribuição soma 93 pontos e atinge a pontuação dessa regra; a concessão depende da conferência do CNIS e dos demais requisitos." },
       { type: "heading", text: "Requisitos Completos" },
       { type: "list", items: ["Mulheres: 93 pontos + mínimo de 30 anos de contribuição", "Homens: 103 pontos + mínimo de 35 anos de contribuição", "Já estar contribuindo antes da Reforma de 2019 (13/11/2019)", "A pontuação aumenta 1 ponto por ano até atingir o limite (100 para mulheres, 105 para homens)"] },
       { type: "heading", text: "Como Calcular Seus Pontos" },
       { type: "paragraph", text: "O cálculo é simples: some sua idade atual com seu tempo total de contribuição ao INSS. A conversão de tempo especial em comum exige comprovação e é limitada ao trabalho anterior a 13/11/2019; não se aplica automaticamente a qualquer período." },
       { type: "highlight", text: "Exemplo prático: João tem 61 anos e 42 anos de contribuição. Seus pontos: 61 + 42 = 103 pontos. A pontuação é um dos critérios; a concessão depende da conferência dos demais requisitos e do histórico contributivo." },
       { type: "heading", text: "Valor do Benefício pela Regra de Pontos" },
-      { type: "paragraph", text: "O cálculo segue a regra geral pós-reforma: 60% da média salarial + 2% para cada ano acima de 20 anos de contribuição (homem) ou 15 anos (mulher). Quem tem muitos anos de contribuição pode alcançar 100% ou até mais da média." },
+      { type: "paragraph", text: "O cálculo segue a regra geral pós-reforma: 60% da média salarial + 2% para cada ano acima de 20 anos de contribuição (homem) ou 15 anos (mulher). Com bastante tempo de contribuição, o percentual pode chegar a 100% da média ou ultrapassá-lo, sempre limitado ao teto do INSS." },
       { type: "heading", text: "Essa É a Melhor Regra Para Você?" },
       { type: "paragraph", text: "Não necessariamente. Existem outras regras de transição (pedágio de 50%, pedágio de 100%, idade progressiva) que podem ser mais vantajosas dependendo do seu perfil. Um planejamento previdenciário compara todas as opções e identifica a melhor estratégia." }
     ],
