@@ -1,5 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import { getDeviceType } from "@/lib/reviewTracking";
+import { preserveAttribution } from "@/lib/attribution";
 
 export type TrafficSource = {
   source: string;
@@ -93,7 +94,7 @@ export function detectTrafficSource(
  */
 export function trackPageView(path: string, pageTitle?: string) {
   try {
-    const { source, medium, campaign, referrer } = detectTrafficSource();
+    const { source, medium, campaign, referrer } = preserveAttribution(detectTrafficSource(), typeof sessionStorage === "undefined" ? undefined : sessionStorage);
     void supabase
       .from("page_view_events")
       .insert({

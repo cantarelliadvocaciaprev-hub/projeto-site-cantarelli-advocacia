@@ -65,7 +65,7 @@ const CookieConsent = () => {
           <Cookie className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
           <p className="font-body text-sm text-muted-foreground">
             Usamos cookies para melhorar sua experiência, medir o acesso ao site e mostrar
-            conteúdos relevantes nas redes sociais, conforme a LGPD. Você pode aceitar ou recusar.
+            conteúdos relevantes nas redes sociais, conforme a LGPD. Você pode aceitar ou recusar. <a href="/politica-de-privacidade" className="text-primary underline">Política de privacidade</a>.
           </p>
         </div>
         <div className="flex shrink-0 gap-2">

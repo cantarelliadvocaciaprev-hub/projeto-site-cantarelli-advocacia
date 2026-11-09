@@ -15,6 +15,7 @@ import ArticleSchema from "@/components/blog/ArticleSchema";
 import ShareButtons from "@/components/blog/ShareButtons";
 import { trackArticleView } from "@/lib/articleTracking";
 import { trackWhatsAppClick } from "@/lib/whatsappTracking";
+import servicePages from "@/data/servicePages.json";
 
 const WHATSAPP_URL = "https://wa.me/5581983421727?text=Olá,%20li%20um%20artigo%20no%20blog%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.";
 const SITE_URL = "https://cantarelliadvocacia.com.br";
@@ -84,6 +85,8 @@ const BlogArticle = () => {
   const metaTitle = article.seoTitle ?? `${article.title} | Cantarelli Advocacia`;
   const metaDescription = truncate(article.metaDescription ?? article.excerpt);
   const ogImageUrl = toAbsoluteUrl(article.image);
+  const service = servicePages.find((page) => page.categories.includes(article.category)) ?? servicePages[0];
+  const articleWhatsAppUrl = `https://wa.me/5581983421727?text=${encodeURIComponent(`Olá, li o artigo "${article.title}" (/blog/${article.slug}) e gostaria de atendimento.`)}`;
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -137,7 +140,7 @@ const BlogArticle = () => {
                   <Share2 className="w-4 h-4 mr-2" />
                   Compartilhar
                 </Button>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("artigo", article.title)}>
+                <a href={articleWhatsAppUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("artigo", article.title)}>
                   <Button size="sm" className="bg-[#25D366] hover:bg-[#20BA5A] text-white">
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Fale com Especialista
@@ -256,7 +259,7 @@ const BlogArticle = () => {
                 <p className="text-sm md:text-base text-muted-foreground mb-4 max-w-lg mx-auto">
                   Fale agora com um advogado especialista e tire todas as suas dúvidas sem compromisso.
                 </p>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("artigo", article.title)}>
+                <a href={articleWhatsAppUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("artigo", article.title)}>
                   <Button size="lg" className="bg-[#25D366] hover:bg-[#20BA5A] text-white">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Falar pelo WhatsApp
@@ -266,6 +269,8 @@ const BlogArticle = () => {
             </div>
           </div>
         </section>
+
+        <section className="pb-6"><div className="container mx-auto px-4"><div className="max-w-4xl mx-auto"><Link to={`/${service.slug}`} className="text-primary font-semibold underline min-h-11 inline-flex items-center">Conheça a orientação sobre {service.title}</Link></div></div></section>
 
         {/* FAQ Section */}
         {article.faq && article.faq.length > 0 && (

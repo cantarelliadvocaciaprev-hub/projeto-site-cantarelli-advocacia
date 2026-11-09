@@ -39,6 +39,8 @@ const SEO = ({
     };
 
     updateMetaTag("description", description);
+    updateMetaTag("og:image:width", "1200", true);
+    updateMetaTag("og:image:height", "630", true);
 
     if (keywords) {
       updateMetaTag("keywords", keywords);

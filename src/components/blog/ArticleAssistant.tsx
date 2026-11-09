@@ -109,7 +109,7 @@ const ArticleAssistant = ({ articles }: { articles: BlogArticle[] }) => {
             </ul>
           )}
           <a
-            href="https://wa.me/5581983421727"
+            href={`https://wa.me/5581983421727?text=${encodeURIComponent(`Olá, usei o assistente do blog (${window.location.pathname}) e gostaria de atendimento.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"

@@ -22,6 +22,7 @@ const NotFound = () => {
       <SEO
         title="Página não encontrada | Cantarelli Advocacia"
         description="A página que você está procurando não foi encontrada. Volte para a página inicial da Cantarelli Advocacia."
+        canonical="https://cantarelliadvocacia.com.br/404"
       />
       <Header />
 
@@ -128,7 +129,9 @@ const NotFound = () => {
                 {[
                   { label: "Quem Somos", path: "/#about" },
                   { label: "Áreas de Atuação", path: "/#services" },
-                  { label: "Contato", path: "/#contact" },
+                  { label: "Contato", path: "/contato" },
+                  { label: "Blog", path: "/blog" },
+                  { label: "Serviços previdenciários", path: "/advogado-previdenciario-recife" },
                   { label: "Segurança", path: "/seguranca" },
                   { label: "Trabalhe Conosco", path: "/trabalhe-conosco" },
                 ].map((link, index) => (

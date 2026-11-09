@@ -10,6 +10,7 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 import LegalServiceSchema from "@/components/schemas/LegalServiceSchema";
 import Breadcrumb from "@/components/Breadcrumb";
 import { openWhatsApp } from "@/lib/whatsappTracking";
+import { trackContactEvent } from "@/lib/contactEvents";
 
 const WHATSAPP =
   "https://wa.me/5581983421727?text=Olá,%20estava%20no%20site%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.";
@@ -113,13 +114,14 @@ const Contato = () => {
                     size="sm"
                     variant="outline"
                     className="mt-3"
-                    onClick={() =>
+                    onClick={() => {
+                      trackContactEvent("click_directions");
                       window.open(
                         "https://www.google.com/maps/dir/?api=1&destination=" +
                           encodeURIComponent(ADDRESS),
                         "_blank"
-                      )
-                    }
+                      );
+                    }}
                   >
                     <Navigation className="w-4 h-4 mr-2" aria-hidden="true" />
                     Como chegar
@@ -139,7 +141,7 @@ const Contato = () => {
                     {PHONES.map((p) => (
                       <li key={p.label}>
                         <span className="text-foreground font-medium">{p.label}:</span>{" "}
-                        {p.value}
+                        <a href={`tel:${p.tel}`} onClick={() => trackContactEvent("click_phone")} className="hover:text-primary underline-offset-4 hover:underline">{p.value}</a>
                       </li>
                     ))}
                   </ul>

@@ -153,6 +153,7 @@ const Footer = () => {
                   Trabalhe Conosco
                 </button>
               </li>
+              <li><a href="/politica-de-privacidade" className="text-muted-foreground hover:text-primary font-body text-sm">Política de Privacidade</a></li>
             </ul>
           </div>
 
@@ -235,6 +236,9 @@ const Footer = () => {
           </div>
         </div>
 
+        <nav aria-label="Serviços previdenciários" className="border-t border-border py-6 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
+          {[{href:"/advogado-previdenciario-recife",label:"Advogado previdenciário"},{href:"/bpc-loas-recife",label:"BPC/LOAS"},{href:"/aposentadoria-recife",label:"Aposentadoria"},{href:"/auxilio-doenca-negado-recife",label:"Auxílio-doença negado"},{href:"/pensao-por-morte-recife",label:"Pensão por morte"},{href:"/revisao-de-beneficios-recife",label:"Revisão"},{href:"/planejamento-previdenciario-recife",label:"Planejamento"}].map((x)=><a key={x.href} href={x.href} className="text-muted-foreground hover:text-primary min-h-11 inline-flex items-center">{x.label}</a>)}
+        </nav>
         {/* Avaliação no Google + Agendamento */}
         <div className="border-t border-border pt-8 pb-8 flex flex-col items-center text-center gap-3">
           <p className="text-foreground font-body text-sm">

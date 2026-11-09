@@ -189,7 +189,8 @@ const Header = () => {
             <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+              className="min-h-11 min-w-11 inline-flex items-center justify-center"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -215,6 +216,7 @@ const Header = () => {
                   </button>
                 </li>
               ))}
+              <li><a href="/advogado-previdenciario-recife" className="flex min-h-11 items-center px-3 text-primary">Serviços previdenciários</a></li>
               <li>
                 <Button
                   onClick={() =>
