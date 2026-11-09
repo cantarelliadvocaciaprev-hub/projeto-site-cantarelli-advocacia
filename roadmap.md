@@ -1,5 +1,6 @@
 - [ ] Conectar chave própria do Google Maps — aguarda chave e confirmação dos domínios autorizados do usuário
-- [ ] Corrigir título principal da página inicial e verificar o apontamento de SEO do artigo sobre tendinite
+- [x] Corrigir título principal da página inicial — nome, especialidade e Recife conferidos em computador e celular
+- [ ] Otimizar artigo sobre tendinite — oportunidade de conteúdo aguarda confirmação do usuário
 - [x] Testar o assistente com uma dúvida previdenciária e conferir resumo e abertura do WhatsApp — resposta real sobre BPC suspenso exibida; janela do WhatsApp abriu no número oficial
 - [x] Solicitar publicação do site após verificar a segurança — verificações básicas sem problemas; análise profunda não executada
 - [x] Identificar oito categorias com menos de quatro artigos e acrescentar cinco artigos em cada (40 novos)
