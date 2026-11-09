@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { officeSchema } from "@/components/schemas/LegalServiceSchema";
 
 interface BreadcrumbItem {
   name: string;
@@ -30,7 +31,7 @@ const SchemaMarkup = ({
       name: "Cantarelli Advocacia",
       alternateName: "Thiago Cantarelli Sociedade Individual de Advocacia",
       url: "https://cantarelliadvocacia.com.br",
-      logo: "https://cantarelliadvocacia.com.br/logo.png",
+      logo: officeSchema.logo,
       description:
         "Escritório especializado em Direito Previdenciário com mais de 15 anos de experiência em Recife/PE.",
       foundingDate: "2012",
@@ -72,64 +73,7 @@ const SchemaMarkup = ({
     };
 
     // LegalService Schema
-    const legalServiceSchema = {
-      "@context": "https://schema.org",
-      "@type": "LegalService",
-      name: "Cantarelli Advocacia",
-      image: "https://cantarelliadvocacia.com.br/logo.png",
-      "@id": "https://cantarelliadvocacia.com.br",
-      url: "https://cantarelliadvocacia.com.br",
-      telephone: "+55-81-3049-3799",
-      priceRange: "$$",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Estrada dos Remédios, 2115",
-        addressLocality: "Recife",
-        addressRegion: "PE",
-        postalCode: "50720-715",
-        addressCountry: "BR",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: -8.0631,
-        longitude: -34.9131,
-      },
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-          opens: "08:30",
-          closes: "17:00",
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: "Friday",
-          opens: "08:30",
-          closes: "12:00",
-        },
-      ],
-      areaServed: {
-        "@type": "Country",
-        name: "Brasil",
-      },
-      serviceType: [
-        "Direito Previdenciário",
-        "Aposentadoria por Idade",
-        "Aposentadoria por Tempo de Contribuição",
-        "Aposentadoria por Invalidez",
-        "Aposentadoria Especial",
-        "BPC/LOAS",
-        "Pensão por Morte",
-        "Auxílio-Doença",
-        "Revisão de Benefícios",
-        "Planejamento Previdenciário",
-      ],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "145",
-      },
-    };
+    const legalServiceSchema = officeSchema;
 
     // WebSite Schema
     const webSiteSchema = {
@@ -139,7 +83,7 @@ const SchemaMarkup = ({
       url: "https://cantarelliadvocacia.com.br",
       potentialAction: {
         "@type": "SearchAction",
-        target: "https://cantarelliadvocacia.com.br/?s={search_term_string}",
+        target: "https://cantarelliadvocacia.com.br/blog?q={search_term_string}",
         "query-input": "required name=search_term_string",
       },
     };

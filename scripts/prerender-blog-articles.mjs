@@ -13,6 +13,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
+const MAX_PRERENDER_PAGES = 1000;
 const SITE_URL = "https://cantarelliadvocacia.com.br";
 
 const FIELDS = ["slug", "title", "excerpt", "seoTitle", "metaDescription", "imageAlt", "date", "lastUpdated"];
@@ -114,14 +115,14 @@ function stripConflictingHeadTags(html) {
     .replace(/<link\s+[^>]*?rel\s*=\s*"alternate"[^>]*?hreflang[^>]*>\s*/gi, "");
 }
 
-function buildHeadBlock(article, ogImageUrl, canonical) {
+function buildHeadBlock(article, ogImageUrl, canonical, kind = "Article") {
   const title = truncate(article.seoTitle || `${article.title} | Cantarelli Advocacia`, 60);
   const description = truncate(article.metaDescription || article.excerpt);
   const ogTitle = article.title;
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": kind,
     headline: article.title,
     description,
     image: ogImageUrl,
@@ -141,7 +142,7 @@ function buildHeadBlock(article, ogImageUrl, canonical) {
     <link rel="canonical" href="${escapeAttr(canonical)}" />
     <link rel="alternate" hreflang="pt-br" href="${escapeAttr(canonical)}" />
     <link rel="alternate" hreflang="x-default" href="${escapeAttr(canonical)}" />
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="${kind === "Article" ? "article" : "website"}" />
     <meta property="og:title" content="${escapeAttr(ogTitle)}" />
     <meta property="og:description" content="${escapeAttr(description)}" />
     <meta property="og:url" content="${escapeAttr(canonical)}" />
@@ -204,7 +205,7 @@ export function prerenderBlogArticlesPlugin() {
       } catch {
         return;
       }
-      const articles = parseArticles(src);
+      const articles = parseArticles(src).slice(0, MAX_PRERENDER_PAGES - 20);
       if (articles.length === 0) return;
 
       const absOutDir = path.resolve(process.cwd(), outDir);
@@ -248,7 +249,7 @@ export function prerenderBlogArticlesPlugin() {
       const pages = JSON.parse(fs.readFileSync(path.resolve("src/data/servicePages.json"), "utf8"));
       for (const page of pages) {
         const canonical = `${SITE_URL}/${page.slug}`;
-        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle: page.title, excerpt: page.description }, `${SITE_URL}/${bundleAssetMap.get("office-building.jpg") ?? ""}`, canonical)}</head>`), `<h1>${escapeAttr(page.title)}</h1><p>${escapeAttr(page.description)}</p>${page.sections.map(section => `<h2>${escapeAttr(section.heading)}</h2><p>${escapeAttr(section.text)}</p>`).join("")}<h2>Perguntas frequentes</h2>${page.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="https://wa.me/5581983421727">Fale com especialista</a>`).replace('content="article"', 'content="website"');
+        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle: page.title, excerpt: page.description }, `${SITE_URL}/${bundleAssetMap.get("office-building.jpg") ?? ""}`, canonical, "WebPage")}</head>`), `<h1>${escapeAttr(page.title)}</h1><p>${escapeAttr(page.description)}</p>${page.sections.map(section => `<h2>${escapeAttr(section.heading)}</h2><p>${escapeAttr(section.text)}</p>`).join("")}<h2>Perguntas frequentes</h2>${page.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="https://wa.me/5581983421727">Fale com especialista</a>`).replace('content="article"', 'content="website"');
         const dest = path.join(absOutDir, page.slug, "index.html");
         fs.mkdirSync(path.dirname(dest), { recursive: true }); fs.writeFileSync(dest, html);
       }
@@ -261,7 +262,7 @@ export function prerenderBlogArticlesPlugin() {
         { slug: "politica-de-privacidade", title: "Política de Privacidade | Cantarelli Advocacia", description: "Informações sobre tratamento de dados, dúvidas do blog e escolhas de cookies.", body: "<h1>Política de Privacidade</h1><p>Thiago Cantarelli Sociedade Individual de Advocacia, CNPJ 26.191.013/0001-89, é responsável pelo tratamento no site.</p><p>Formulários abrem o WhatsApp; dúvidas do assistente são armazenadas para análise interna. Não informe dados sensíveis. Google Analytics e Meta Pixel dependem de aceite de cookies.</p><p>Solicite informações e exerça direitos pelo e-mail contato@cantarelliadvocacia.com.br.</p>" }
       ];
       for (const page of staticPages) {
-        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle: page.title, excerpt: page.description }, `${SITE_URL}/${bundleAssetMap.get("office-building.jpg") ?? ""}`, `${SITE_URL}/${page.slug}`)}</head>`), page.body).replace('content="article"', 'content="website"');
+        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle: page.title, excerpt: page.description }, `${SITE_URL}/${bundleAssetMap.get("office-building.jpg") ?? ""}`, `${SITE_URL}/${page.slug}`, "WebPage")}</head>`), page.body).replace('content="article"', 'content="website"');
         const dest = path.join(absOutDir, page.slug, "index.html"); fs.mkdirSync(path.dirname(dest), { recursive: true }); fs.writeFileSync(dest, html);
       }
       console.log(`[prerender-blog] wrote ${written} articles and ${pages.length + staticPages.length} public pages`);

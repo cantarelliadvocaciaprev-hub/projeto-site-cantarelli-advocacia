@@ -10,15 +10,17 @@ describe("Contact keyboard navigation", () => {
 
     // The natural tab sequence from the contact info column to the form.
     const whatsappButton = screen.getByRole("button", { name: /chamar no whatsapp/i });
+    const phoneLink = screen.getByRole("link", { name: /3049-3799/i });
     const emailLink = screen.getByRole("link", { name: /contato@cantarelliadvocacia/i });
     const nameInput = screen.getByPlaceholderText(/nome completo/i);
     const emailInput = screen.getByPlaceholderText(/^e-mail/i);
-    const phoneInput = screen.getByPlaceholderText(/telefone/i);
+    const phoneInput = screen.getByRole("textbox", { name: /^whatsapp$/i });
     const messageInput = screen.getByRole("textbox", { name: /assunto da mensagem/i });
     const privacyLink = screen.getByRole("link", { name: /política de privacidade/i });
     const submitButton = screen.getByRole("button", { name: /enviar mensagem/i });
 
     const order = [
+      phoneLink,
       whatsappButton,
       emailLink,
       nameInput,
@@ -44,7 +46,7 @@ describe("Contact keyboard navigation", () => {
       await user.tab({ shift: true });
       expect(reverse[i]).toHaveFocus();
     }
-    expect(whatsappButton).toHaveFocus();
+    expect(phoneLink).toHaveFocus();
   });
 
   it("uses no positive tabIndex values that would break the tab order", () => {
