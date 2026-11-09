@@ -16,8 +16,8 @@ import ShareButtons from "@/components/blog/ShareButtons";
 import { trackArticleView } from "@/lib/articleTracking";
 import { trackWhatsAppClick } from "@/lib/whatsappTracking";
 import servicePages from "@/data/servicePages.json";
+import Breadcrumb from "@/components/Breadcrumb";
 
-const WHATSAPP_URL = "https://wa.me/5581983421727?text=Olá,%20li%20um%20artigo%20no%20blog%20da%20Cantarelli%20e%20gostaria%20de%20um%20atendimento.";
 const SITE_URL = "https://cantarelliadvocacia.com.br";
 
 // Crawlers (LinkedIn/Facebook) require absolute og:image URLs.
@@ -103,11 +103,12 @@ const BlogArticle = () => {
       <ArticleSchema article={article} />
       <Header />
       
-      <main className="flex-1">
+      <main id="main-content" className="flex-1 pt-20">
         {/* Hero Section */}
         <section className="relative py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              <Breadcrumb items={[{ label: "Blog", href: "/blog" }, { label: article.title, href: `/blog/${article.slug}` }]} />
               <Link 
                 to="/blog" 
                 className="inline-flex items-center text-primary hover:text-primary/80 mb-6 transition-colors font-semibold text-sm"
@@ -129,6 +130,7 @@ const BlogArticle = () => {
                   <Clock className="w-4 h-4" />
                   <span>{article.readTime} de leitura</span>
                 </div>
+                {article.lastUpdated && <span>Atualizado em {article.lastUpdated}</span>}
               </div>
 
               <div className="flex gap-3">
@@ -188,6 +190,12 @@ const BlogArticle = () => {
           </div>
         </section>
 
+        <nav aria-label="Sumário do artigo" className="container mx-auto px-4 py-5">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-xl font-bold mb-3">Neste artigo</h2>
+            <ul className="space-y-1">{article.content.map((section, index) => section.type === "heading" ? <li key={index}><a href={`#secao-${index}`} className="text-primary underline min-h-11 inline-flex items-center">{section.text}</a></li> : null)}</ul>
+          </div>
+        </nav>
         {/* Article Content */}
         <article className="py-6 md:py-8">
           <div className="container mx-auto px-4">
@@ -200,12 +208,12 @@ const BlogArticle = () => {
                     </p>
                   )}
                   {section.type === "heading" && (
-                    <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mt-8 md:mt-12 mb-4">
+                    <h2 id={`secao-${idx}`} className="scroll-mt-28 text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mt-8 md:mt-12 mb-4">
                       {section.text}
                     </h2>
                   )}
                   {section.type === "subheading" && (
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-display font-semibold text-foreground mt-6 md:mt-8 mb-3">
+                    <h3 id={`secao-${idx}`} className="scroll-mt-28 text-lg sm:text-xl md:text-2xl font-display font-semibold text-foreground mt-6 md:mt-8 mb-3">
                       {section.text}
                     </h3>
                   )}
@@ -320,7 +328,7 @@ const BlogArticle = () => {
                 Nossa equipe de advogados especialistas em Direito Previdenciário está pronta para analisar seu caso e garantir seus direitos.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("artigo", article.title)}>
+                <a href={articleWhatsAppUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("artigo", article.title)}>
                   <Button size="lg" className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Fale com um Especialista

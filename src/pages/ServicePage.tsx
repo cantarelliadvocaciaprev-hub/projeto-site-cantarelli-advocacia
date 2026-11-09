@@ -18,6 +18,7 @@ export default function ServicePage() {
   return <div className="min-h-screen bg-background">
     <SEO title={page.title} description={page.description} canonical={canonical} />
     <LegalServiceSchema />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: page.faq.map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) }) }} />
     <Header />
     <main id="main-content" className="pt-28 pb-16">
       <div className="container mx-auto px-4 max-w-5xl">
