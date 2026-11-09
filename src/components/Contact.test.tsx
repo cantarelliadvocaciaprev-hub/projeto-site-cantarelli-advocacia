@@ -14,7 +14,8 @@ describe("Contact keyboard navigation", () => {
     const nameInput = screen.getByPlaceholderText(/nome completo/i);
     const emailInput = screen.getByPlaceholderText(/^e-mail/i);
     const phoneInput = screen.getByPlaceholderText(/telefone/i);
-    const messageInput = screen.getByPlaceholderText(/sua mensagem/i);
+    const messageInput = screen.getByRole("textbox", { name: /assunto da mensagem/i });
+    const privacyLink = screen.getByRole("link", { name: /política de privacidade/i });
     const submitButton = screen.getByRole("button", { name: /enviar mensagem/i });
 
     const order = [
@@ -24,6 +25,7 @@ describe("Contact keyboard navigation", () => {
       emailInput,
       phoneInput,
       messageInput,
+      privacyLink,
       submitButton,
     ];
 
