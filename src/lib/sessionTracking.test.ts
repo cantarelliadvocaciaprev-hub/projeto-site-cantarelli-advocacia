@@ -1,8 +1,8 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const { insert, from } = vi.hoisted(() => {
-  const insert = vi.fn(() => Promise.resolve({ error: null }));
-  return { insert, from: vi.fn(() => ({ insert })) };
+  const insert = vi.fn((_payload: Record<string, unknown>) => Promise.resolve({ error: null }));
+  return { insert, from: vi.fn((_table: string) => ({ insert })) };
 });
 vi.mock("@/integrations/supabase/client", () => ({ supabase: { from } }));
 import { getSessionTrafficSource, trackPageView } from "./pageTracking";
@@ -25,7 +25,7 @@ describe("session attribution across visit and WhatsApp events", () => {
     window.history.replaceState({}, "", "/contato?utm_source=facebook&utm_campaign=outro");
     trackWhatsAppClick("pagina-contato");
     expect(from.mock.calls.map(([name]) => name)).toEqual(["page_view_events", "whatsapp_click_events"]);
-    for (const [payload] of insert.mock.calls as unknown as [Record<string, unknown>][]) {
+    for (const [payload] of insert.mock.calls) {
       expect(payload).toMatchObject({ source: "Instagram", medium: "social", campaign: "bio" });
     }
     expect(getSessionTrafficSource()).toMatchObject({ source: "Instagram", medium: "social", campaign: "bio" });
