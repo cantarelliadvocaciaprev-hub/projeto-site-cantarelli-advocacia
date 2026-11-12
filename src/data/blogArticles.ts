@@ -1278,7 +1278,7 @@ export const blogArticles: BlogArticle[] = [
     readTime: "7 min",
     keyTakeaways: [
       "A Lei 14.126/2021 reconhece a visão monocular como deficiência sensorial visual",
-      "Pode garantir acesso à aposentadoria da pessoa com deficiência, com regras mais favoráveis",
+      "Pode permitir acesso à aposentadoria da pessoa com deficiência, conforme a avaliação do grau, com regras mais favoráveis",
       "O INSS faz avaliação biopsicossocial para definir o grau da deficiência",
       "O BPC/LOAS pode ser possível quando também há baixa renda familiar"
     ],
@@ -1438,7 +1438,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "highlight",
-        text: "É essencial revisar a documentação técnica com um advogado previdenciário para saber se, com o novo entendimento do STF, o direito à aposentadoria especial já está garantido.",
+        text: "É essencial revisar a documentação técnica com um advogado previdenciário para avaliar se, com o novo entendimento do STF, os requisitos da aposentadoria especial podem ser reconhecidos no caso.",
       },
       {
         type: "heading",
@@ -1463,7 +1463,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "Nosso escritório analisa individualmente a documentação, verifica o enquadramento da atividade e orienta sobre a melhor estratégia — administrativa ou judicial — para garantir o reconhecimento do direito à aposentadoria especial diante da nova decisão do STF.",
+        text: "Nosso escritório analisa individualmente a documentação, verifica o enquadramento da atividade e orienta sobre a melhor estratégia — administrativa ou judicial — para buscar o reconhecimento do direito à aposentadoria especial diante da nova decisão do STF.",
       },
     ],
     faq: [
@@ -1965,7 +1965,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "highlight",
-        text: "Reunir e organizar a documentação correta desde o início é a melhor forma de evitar atrasos. Em situações de demora ou recusa, o acompanhamento de um advogado pode ser decisivo para garantir o benefício.",
+        text: "Reunir e organizar a documentação correta desde o início é a melhor forma de evitar atrasos. Em situações de demora ou recusa, o acompanhamento de um advogado pode ajudar a identificar as medidas cabíveis.",
       },
       {
         type: "heading",
@@ -2149,7 +2149,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "A nova lei traz direitos importantes, mas também pode gerar dúvidas sobre a aplicação prática — especialmente em situações de negativa do empregador, demissão durante o período de estabilidade ou dificuldades na concessão do salário-paternidade pelo INSS. Se você está enfrentando qualquer uma dessas situações, a Cantarelli Advocacia pode avaliar seu caso e garantir que seus direitos sejam plenamente respeitados."
+        text: "A nova lei traz direitos importantes, mas também pode gerar dúvidas sobre a aplicação prática — especialmente em situações de negativa do empregador, demissão durante o período de estabilidade ou dificuldades na concessão do salário-paternidade pelo INSS. Se você está enfrentando qualquer uma dessas situações, a Cantarelli Advocacia pode avaliar seu caso e orientar sobre os caminhos cabíveis."
       }
     ],
     faq: [
@@ -2292,7 +2292,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "A escolha da regra de transição correta é uma das decisões financeiras mais importantes da sua vida. Não aceite apenas o que o INSS calcula automaticamente — busque orientação especializada para garantir o melhor benefício possível. A Cantarelli Advocacia tem mais de 15 anos de experiência ajudando segurados em Recife e em todo o Brasil.",
+        text: "A escolha da regra de transição correta é uma das decisões financeiras mais importantes da sua vida. Não aceite apenas o que o INSS calcula automaticamente — busque orientação especializada para comparar as regras aplicáveis ao seu caso. A Cantarelli Advocacia tem mais de 15 anos de experiência ajudando segurados em Recife e em todo o Brasil.",
       },
     ],
   faq: [
@@ -2311,7 +2311,7 @@ export const blogArticles: BlogArticle[] = [
     tags: ["Auxílio-Doença", "Perícia Médica", "INSS", "Incapacidade"],
     readTime: "6 min",
     keyTakeaways: [
-      "O pedido pode ser feito com auxílio de um advogado especialista para maior chance de aprovação",
+      "O pedido pode ser acompanhado por advogado, que ajuda a organizar documentos e provas",
       "A perícia médica por telemedicina foi ampliada em 2026 para mais municípios",
       "Recurso administrativo contra indeferimento tem prazo de 30 dias",
     ],
@@ -2374,7 +2374,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "highlight",
-        text: "Importante: Em ações judiciais, é possível obter tutela antecipada (decisão urgente) que garante o pagamento do benefício enquanto o processo tramita. Consulte um advogado especialista.",
+        text: "Importante: Em ações judiciais, é possível pedir tutela de urgência; se o juiz a conceder, o benefício pode ser pago enquanto o processo tramita. A decisão depende das provas do caso.",
       },
       {
         type: "heading",
@@ -2530,7 +2530,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "A pensão por morte é um direito fundamental para a proteção da família após a perda de um ente querido. Conhecer as regras e ter toda a documentação em ordem agiliza o processo e evita indeferimentos. A Cantarelli Advocacia está à disposição para orientar você e sua família em todo o processo.",
+        text: "A pensão por morte é um direito fundamental para a proteção da família após a perda de um ente querido. Conhecer as regras e ter toda a documentação em ordem reduz o risco de exigências e indeferimentos por falta de documentos. A Cantarelli Advocacia está à disposição para orientar você e sua família em todo o processo.",
       },
     ],
   faq: [
@@ -2874,7 +2874,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "highlight",
-        text: "O diagnóstico previdenciário evita indeferimentos e garante que o segurado PCD entre com o pedido no momento mais vantajoso, com toda a documentação correta.",
+        text: "O diagnóstico previdenciário ajuda a identificar o momento e a regra mais adequados e a organizar a documentação, reduzindo o risco de indeferimento por falhas formais.",
       },
       {
         type: "heading",
@@ -2926,7 +2926,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "A aposentadoria da pessoa com deficiência é um direito garantido por lei com regras mais favoráveis que a aposentadoria comum. Se você é PCD ou conhece alguém nessa situação, procure um advogado previdenciário para realizar o diagnóstico previdenciário e garantir o melhor benefício possível. A Cantarelli Advocacia é especialista em aposentadoria PCD em Recife e atende todo o Brasil.",
+        text: "A aposentadoria da pessoa com deficiência é um direito garantido por lei com regras mais favoráveis que a aposentadoria comum. Se você é PCD ou conhece alguém nessa situação, procure um advogado previdenciário para realizar o diagnóstico previdenciário e comparar as regras aplicáveis. A Cantarelli Advocacia atua em aposentadoria PCD em Recife e atende todo o Brasil.",
       },
     ],
   faq: [
@@ -2945,7 +2945,7 @@ export const blogArticles: BlogArticle[] = [
     tags: ["Ruído", "85 dB", "Tempo Especial", "Autônomo"],
     readTime: "8 min",
     keyTakeaways: [
-      "Exposição a ruído acima de 85 dB garante direito à aposentadoria especial com 25 anos de contribuição",
+      "Exposição a ruído acima de 85 dB pode permitir aposentadoria especial com 25 anos de atividade especial, observadas a idade mínima ou a pontuação exigidas após a Reforma",
       "O uso de EPI não descaracteriza a exposição ao ruído para fins de aposentadoria especial (decisão do STF)",
       "Contribuintes individuais podem ter tempo especial reconhecido judicialmente, mesmo sem vínculo CLT",
       "O PPP e o LTCAT são documentos indispensáveis para comprovar a exposição",
@@ -3049,7 +3049,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "highlight",
-        text: "O INSS costuma negar o tempo especial para contribuintes individuais na via administrativa. Porém, na via judicial, há ampla jurisprudência favorável. Um advogado especialista pode fazer toda a diferença.",
+        text: "O INSS costuma negar o tempo especial para contribuintes individuais na via administrativa. Na via judicial, há precedentes que admitem o reconhecimento quando a exposição a agentes nocivos é comprovada (Súmula 62 da TNU), mas cada caso depende das provas.",
       },
       {
         type: "heading",
@@ -3174,7 +3174,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "O processo de solicitação do BPC/LOAS envolve critérios técnicos complexos, como a análise de renda per capita, inscrição no CadÚnico e avaliação médica e social. Erros na documentação ou no enquadramento podem resultar em indeferimento. Um advogado previdenciário garante que todo o processo seja conduzido corretamente, aumentando significativamente as chances de aprovação.",
+        text: "O processo de solicitação do BPC/LOAS envolve critérios técnicos complexos, como a análise de renda per capita, inscrição no CadÚnico e avaliação médica e social. Erros na documentação ou no enquadramento podem resultar em indeferimento. Um advogado previdenciário pode ajudar a conferir requisitos e documentos antes do pedido, sem que isso assegure a concessão.",
       },
       {
         type: "heading",
@@ -3182,7 +3182,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "Se o BPC for negado, existem duas opções: recurso administrativo ao CRPS (Conselho de Recursos da Previdência Social) ou ação judicial. Na via judicial, o juiz pode considerar outros critérios de miserabilidade além da renda per capita de 1/4 do salário mínimo, o que aumenta as chances de concessão.",
+        text: "Se o BPC for negado, existem duas opções: recurso administrativo ao CRPS (Conselho de Recursos da Previdência Social) ou ação judicial. Na via judicial, o juiz pode considerar outros critérios de miserabilidade além da renda per capita de 1/4 do salário mínimo, conforme entendimento do STF (RE 567.985) e do STJ, sem que isso assegure a concessão.",
       },
       {
         type: "highlight",
@@ -3283,7 +3283,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "Se você recebe aposentadoria, pensão ou auxílio do INSS, vale a pena verificar se existe alguma revisão aplicável ao seu caso. A Cantarelli Advocacia oferece análise gratuita do seu benefício para identificar possíveis revisões.",
+        text: "Se você recebe aposentadoria, pensão ou auxílio do INSS, vale a pena verificar se existe alguma revisão aplicável ao seu caso. A Cantarelli Advocacia pode analisar seu benefício para verificar se há revisões cabíveis.",
       },
     ],
   faq: [
@@ -3357,7 +3357,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "O auxílio-acidente exige comprovação de sequela permanente por perícia médica, o que torna o processo técnico e sujeito a indeferimentos. Um advogado previdenciário pode reunir a documentação médica adequada, orientar sobre a CAT (Comunicação de Acidente de Trabalho) e, se necessário, recorrer administrativa ou judicialmente para garantir a concessão do benefício.",
+        text: "O auxílio-acidente exige comprovação de sequela permanente por perícia médica, o que torna o processo técnico e sujeito a indeferimentos. Um advogado previdenciário pode reunir a documentação médica adequada, orientar sobre a CAT (Comunicação de Acidente de Trabalho) e, se necessário, recorrer administrativa ou judicialmente, quando cabível.",
       },
       {
         type: "heading",
@@ -3365,7 +3365,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "Se você sofreu um acidente e ficou com sequelas que afetam sua capacidade de trabalho, procure orientação jurídica para garantir o auxílio-acidente. A Cantarelli Advocacia atua na concessão e revisão desse benefício em Recife e em todo o Brasil.",
+        text: "Se você sofreu um acidente e ficou com sequelas que afetam sua capacidade de trabalho, procure orientação jurídica para avaliar o direito ao auxílio-acidente. A Cantarelli Advocacia atua na concessão e revisão desse benefício em Recife e em todo o Brasil.",
       },
     ],
   faq: [
@@ -3460,7 +3460,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "O diagnóstico previdenciário é o primeiro passo para garantir uma aposentadoria justa e vantajosa. A Cantarelli Advocacia realiza diagnósticos completos para segurados em Recife/PE e em todo o Brasil, com análise gratuita inicial.",
+        text: "O diagnóstico previdenciário é um passo importante para planejar a aposentadoria com informação. A Cantarelli Advocacia realiza diagnósticos completos para segurados em Recife/PE e em todo o Brasil.",
       },
     ],
   faq: [
@@ -3550,7 +3550,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "A aposentadoria por invalidez é essencial para quem perdeu a capacidade de trabalhar. Se você teve o benefício negado ou quer saber se tem direito, a Cantarelli Advocacia é especialista em incapacidade e pode analisar seu caso gratuitamente.",
+        text: "A aposentadoria por invalidez é essencial para quem perdeu a capacidade de trabalhar. Se você teve o benefício negado ou quer saber se tem direito, a Cantarelli Advocacia atua em benefícios por incapacidade e pode analisar seu caso.",
       },
     ],
   faq: [
@@ -3644,7 +3644,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "Não deixe que erros ou omissões no seu tempo de contribuição prejudiquem sua aposentadoria. A Cantarelli Advocacia realiza a análise completa do seu histórico previdenciário para garantir que todos os períodos sejam contabilizados corretamente.",
+        text: "Não deixe que erros ou omissões no seu tempo de contribuição prejudiquem sua aposentadoria. A Cantarelli Advocacia realiza a análise completa do seu histórico previdenciário para verificar se todos os períodos foram contabilizados corretamente.",
       },
     ],
   faq: [
@@ -3730,7 +3730,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "Se você desenvolveu uma doença em razão do trabalho, incluindo Burnout, é fundamental buscar orientação jurídica especializada. A Cantarelli Advocacia pode ajudar a comprovar o nexo causal e garantir todos os seus direitos previdenciários e trabalhistas.",
+        text: "Se você desenvolveu uma doença em razão do trabalho, incluindo Burnout, é fundamental buscar orientação jurídica especializada. A Cantarelli Advocacia pode ajudar a reunir provas do nexo causal e orientar sobre os direitos previdenciários e trabalhistas aplicáveis.",
       },
     ],
   faq: [
@@ -3825,7 +3825,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "O salário-maternidade é um direito fundamental da segurada. Se você teve o pedido negado ou tem dúvidas sobre o seu caso, a Cantarelli Advocacia pode analisar sua situação e garantir o recebimento do benefício.",
+        text: "O salário-maternidade é um direito fundamental da segurada. Se você teve o pedido negado ou tem dúvidas sobre o seu caso, a Cantarelli Advocacia pode analisar sua situação e orientar sobre os caminhos cabíveis.",
       },
     ],
   faq: [
@@ -3909,7 +3909,7 @@ export const blogArticles: BlogArticle[] = [
       },
       {
         type: "paragraph",
-        text: "Se você é autônomo ou MEI e quer garantir uma aposentadoria justa, a Cantarelli Advocacia pode orientar sobre a melhor forma de contribuição e realizar o planejamento previdenciário completo.",
+        text: "Se você é autônomo ou MEI e quer planejar sua aposentadoria, a Cantarelli Advocacia pode orientar sobre a melhor forma de contribuição e realizar o planejamento previdenciário completo.",
       },
     ],
   faq: [
@@ -4192,7 +4192,7 @@ export const blogArticles: BlogArticle[] = [
       ]},
       { type: "heading", text: "Qual Grau de Autismo se Enquadra?" },
       { type: "paragraph", text: "O grau de deficiência não é determinado apenas pelo diagnóstico de autismo, mas pela avaliação funcional realizada por perícia médica e social do INSS. São analisadas as barreiras enfrentadas no dia a dia, a necessidade de suporte e o impacto nas atividades laborais e sociais." },
-      { type: "highlight", text: "Atenção: muitas pessoas com autismo nível 1 (antigo Asperger) são classificadas como deficiência leve ou moderada, o que já garante redução significativa no tempo de contribuição." },
+      { type: "highlight", text: "Atenção: muitas pessoas com autismo nível 1 (antigo Asperger) podem ser classificadas como deficiência leve ou moderada na avaliação biopsicossocial; a redução do tempo depende do grau reconhecido nessa avaliação." },
       { type: "heading", text: "Documentação Necessária" },
       { type: "list", items: [
         "Laudos médicos e neuropsicológicos detalhados",
@@ -4228,7 +4228,7 @@ export const blogArticles: BlogArticle[] = [
     image: processoAuxAcidenteImg,
     imageAlt: "Tribunal com balança da justiça e martelo, representando processo judicial de auxílio-acidente",
     content: [
-      { type: "paragraph", text: "Quando o INSS nega o auxílio-acidente, muitos segurados ficam sem saber o que fazer. A boa notícia é que é possível recorrer à Justiça Federal para garantir esse benefício. Entenda como funciona o processo e quais são os prazos envolvidos." },
+      { type: "paragraph", text: "Quando o INSS nega o auxílio-acidente, muitos segurados ficam sem saber o que fazer. A boa notícia é que é possível recorrer à Justiça para que o pedido seja reexaminado. Entenda como funciona o processo e quais são os prazos envolvidos." },
       { type: "heading", text: "O Que é o Auxílio-Acidente?" },
       { type: "paragraph", text: "O auxílio-acidente é um benefício indenizatório pago pelo INSS ao segurado que sofreu um acidente (de qualquer natureza) ou desenvolveu doença que resultou em redução permanente da capacidade para o trabalho. Ele é pago junto com o salário, como uma espécie de compensação." },
       { type: "heading", text: "Quando Entrar na Justiça?" },
@@ -4244,7 +4244,7 @@ export const blogArticles: BlogArticle[] = [
       { type: "heading", text: "Valores Retroativos" },
       { type: "paragraph", text: "Se o juiz reconhecer o direito ao auxílio-acidente, o segurado pode receber todos os valores retroativos desde a data em que o benefício deveria ter sido concedido. Isso pode representar uma quantia significativa." },
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "Não aceite a negativa do INSS como decisão final. A Cantarelli Advocacia tem experiência em processos de auxílio-acidente e pode avaliar seu caso para garantir que você receba o benefício que merece." }
+      { type: "paragraph", text: "Não aceite a negativa do INSS como decisão final. A Cantarelli Advocacia tem experiência em processos de auxílio-acidente e pode avaliar seu caso e indicar os caminhos juridicamente cabíveis." }
     ],
     faq: [
       { question: "Posso entrar com ação judicial sem ter passado pelo INSS antes?", answer: "Em regra, é necessário o prévio requerimento administrativo. Sem ele, a ação pode ser extinta por falta de interesse processual." },
@@ -4284,7 +4284,7 @@ export const blogArticles: BlogArticle[] = [
       { type: "heading", text: "INSS Negou? Saiba o Que Fazer" },
       { type: "paragraph", text: "Se o INSS indeferiu seu pedido de salário-maternidade, não desista. Um advogado previdenciário pode analisar se houve erro na contagem do período de graça ou na verificação da carência e, se necessário, ingressar com ação judicial para garantir seus direitos." },
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "Se você está desempregada e grávida, pode ter direito ao salário-maternidade. A Cantarelli Advocacia pode avaliar seu caso gratuitamente e orientá-la sobre os próximos passos para garantir esse benefício." }
+      { type: "paragraph", text: "Se você está desempregada e grávida, pode ter direito ao salário-maternidade. A Cantarelli Advocacia pode avaliar seu caso e orientá-la sobre os próximos passos." }
     ],
     faq: [
       { question: "Demissão durante a gravidez dá direito à estabilidade?", answer: "Sim. A gestante tem estabilidade desde a confirmação da gravidez até 5 meses após o parto, mesmo em contrato de experiência." },
@@ -4345,7 +4345,7 @@ export const blogArticles: BlogArticle[] = [
       "Os motivos mais comuns de negativa do BPC são: renda familiar acima do limite, deficiência não reconhecida na perícia e irregularidade no CadÚnico.",
       "É possível recorrer administrativamente em até 30 dias após a negativa.",
       "Na via judicial, o critério de renda pode ser flexibilizado, considerando gastos com saúde e medicamentos.",
-      "Um advogado especialista aumenta significativamente as chances de reverter a negativa."
+      "Um advogado pode avaliar se a negativa tem fundamentos questionáveis e quais provas são relevantes."
     ],
     image: bpcNegadoImg,
     imageAlt: "Idoso preocupado segurando carta de negativa do BPC LOAS do INSS",
@@ -4453,7 +4453,7 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "Muitas mulheres não sabem que determinados períodos podem ser computados para a aposentadoria, como período de salário-maternidade, tempo como segurada facultativa (dona de casa) e atividade rural exercida antes de 1991." },
       { type: "highlight", text: "Muitas mulheres se aposentam recebendo menos do que poderiam por falta de planejamento. Cada ano de contribuição pode representar até 2% a mais no valor do benefício." },
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "Não se aposente sem antes fazer um planejamento previdenciário completo. A Cantarelli Advocacia pode analisar seu histórico contributivo e identificar a regra mais vantajosa para o seu caso, garantindo o maior benefício possível." }
+      { type: "paragraph", text: "Não se aposente sem antes fazer um planejamento previdenciário completo. A Cantarelli Advocacia pode analisar seu histórico contributivo e identificar a regra mais vantajosa para o seu caso." }
     ],
     faq: [
       { question: "Período como dona de casa conta para aposentadoria?", answer: "Somente se houver contribuição como segurada facultativa. O tempo sem contribuição não é computado pelo INSS." },
@@ -4645,7 +4645,7 @@ export const blogArticles: BlogArticle[] = [
     faq: [
       { question: "Depressão com tentativa de suicídio tem peso maior na perícia?", answer: "Sim. Registros de internação psiquiátrica e tentativas de suicídio são fortes indicadores de incapacidade total para fins previdenciários." },
       { question: "Remédio controlado é prova suficiente de depressão para o INSS?", answer: "É um indício, mas não suficiente isoladamente. Laudos médicos detalhados com CID e descrição funcional são fundamentais." },
-      { question: "Fibromialgia junto com depressão aumenta as chances?", answer: "Sim. A combinação de patologias (multicomorbidade) é considerada na avaliação e pode reforçar a incapacidade total." }
+      { question: "Fibromialgia junto com depressão aumenta as chances?", answer: "Pode influenciar. A combinação de patologias (multicomorbidade) é considerada na avaliação e pode reforçar a incapacidade total." }
     ]
   },
   {
@@ -4673,7 +4673,7 @@ export const blogArticles: BlogArticle[] = [
       { type: "heading", text: "Erros Comuns que Reduzem o Benefício" },
       { type: "list", items: ["Contribuir sobre o salário mínimo quando poderia recolher mais", "Não corrigir erros no CNIS antes de se aposentar", "Ignorar períodos de trabalho rural ou informal", "Não considerar atividade especial para conversão de tempo"] },
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "A aposentadoria por idade exige planejamento para garantir o melhor valor possível. A Cantarelli Advocacia oferece diagnóstico previdenciário completo para identificar a estratégia mais vantajosa para o seu caso." }
+      { type: "paragraph", text: "A aposentadoria por idade se beneficia de planejamento para comparar valores e regras. A Cantarelli Advocacia oferece diagnóstico previdenciário completo para identificar a estratégia mais vantajosa para o seu caso." }
     ],
     faq: [
       { question: "Quem contribuiu como MEI precisa complementar para aposentadoria por idade?", answer: "Não para a aposentadoria por idade. A contribuição de 5% do MEI já garante esse tipo de aposentadoria com valor de um salário mínimo." },
@@ -4706,7 +4706,7 @@ export const blogArticles: BlogArticle[] = [
       { type: "heading", text: "Documentos Importantes" },
       { type: "list", items: ["Ressonância magnética da coluna", "Laudos de ortopedista ou neurocirurgião", "CAT (Comunicação de Acidente de Trabalho) se ocupacional", "Relatórios de fisioterapia", "Receituários e exames complementares"] },
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "Se você tem hérnia de disco que compromete sua capacidade de trabalho, procure orientação jurídica especializada. A Cantarelli Advocacia pode analisar seu caso e identificar o melhor caminho para garantir seus direitos previdenciários." }
+      { type: "paragraph", text: "Se você tem hérnia de disco que compromete sua capacidade de trabalho, procure orientação jurídica especializada. A Cantarelli Advocacia pode analisar seu caso e identificar os caminhos cabíveis." }
     ],
     faq: [
       { question: "Ressonância magnética que mostra hérnia garante o benefício?", answer: "Não automaticamente. O INSS avalia a incapacidade funcional, não apenas o diagnóstico por imagem. A correlação clínica é fundamental." },
@@ -4739,7 +4739,7 @@ export const blogArticles: BlogArticle[] = [
       { type: "heading", text: "Riscos de Não Contribuir" },
       { type: "paragraph", text: "O motorista que não contribui perde a qualidade de segurado e fica sem proteção em caso de acidente, doença ou invalidez. Além disso, pode ser cobrado retroativamente pela Receita Federal com juros e multas." },
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "Se você é motorista de aplicativo, contribuir para o INSS é obrigatório e garante sua proteção previdenciária. A Cantarelli Advocacia pode orientar sobre a melhor forma de contribuição para garantir o maior benefício futuro." }
+      { type: "paragraph", text: "Se você é motorista de aplicativo, contribuir para o INSS é obrigatório e garante sua proteção previdenciária. A Cantarelli Advocacia pode orientar sobre a melhor forma de contribuição conforme seus objetivos previdenciários." }
     ],
     faq: [
       { question: "Motorista de aplicativo tem direito a seguro-desemprego?", answer: "Não. O seguro-desemprego é exclusivo para empregados com carteira assinada. Motoristas de app são contribuintes individuais." },
@@ -4772,7 +4772,7 @@ export const blogArticles: BlogArticle[] = [
       { type: "heading", text: "Como Provar a Incapacidade" },
       { type: "paragraph", text: "A perícia do INSS avaliará laudos cardiológicos, exames como ecocardiograma, cateterismo, teste ergométrico, holter e eletrocardiograma. Quanto mais detalhada a documentação médica, maiores as chances de aprovação." },
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "Se você tem doença cardíaca grave que impede seu trabalho, pode ter direito a benefícios do INSS sem carência. A Cantarelli Advocacia está preparada para analisar seu caso e garantir seus direitos." }
+      { type: "paragraph", text: "Se você tem doença cardíaca grave que impede seu trabalho, pode ter direito a benefícios do INSS sem carência. A Cantarelli Advocacia pode analisar seu caso e orientar sobre os caminhos cabíveis." }
     ],
     faq: [
       { question: "Arritmia cardíaca controlada com medicamento dá direito?", answer: "Geralmente não, se estiver controlada. Mas se houver restrições severas de atividade e risco de morte súbita, pode haver direito." },
@@ -4806,7 +4806,7 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "A Comunicação de Acidente de Trabalho (CAT) é o documento que formaliza o acidente. A empresa é obrigada a emitir a CAT, mas caso se recuse, o próprio trabalhador, o sindicato, o médico ou o SUS podem emitir." },
       { type: "highlight", text: "Se a empresa não emitiu a CAT, não desista. A Justiça pode reconhecer o acidente de trabalho mesmo sem a CAT, desde que comprovado o nexo causal." },
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "Se você sofreu acidente de trabalho, seus direitos são amplos e específicos. A Cantarelli Advocacia pode orientar sobre todos os benefícios a que você tem direito e garantir que nenhum direito seja perdido." }
+      { type: "paragraph", text: "Se você sofreu acidente de trabalho, seus direitos são amplos e específicos. A Cantarelli Advocacia pode orientar sobre os benefícios que podem ser cabíveis no seu caso." }
     ],
     faq: [
       { question: "Acidente durante intervalo de almoço dentro da empresa é acidente de trabalho?", answer: "Sim. Acidentes ocorridos nas dependências da empresa durante o horário de trabalho, inclusive intervalos, são considerados acidentes de trabalho." },
@@ -4878,7 +4878,7 @@ export const blogArticles: BlogArticle[] = [
     ],
     faq: [
       { question: "Diabetes gestacional dá direito a algum benefício?", answer: "Não para aposentadoria, mas a gestante tem direito ao salário-maternidade. Se a diabetes persistir e gerar incapacidade, pode buscar auxílio-doença." },
-      { question: "Amputação por diabetes garante aposentadoria por invalidez?", answer: "Geralmente sim. A amputação de membro é forte indicador de incapacidade, especialmente se limitar significativamente a capacidade de trabalho." },
+      { question: "Amputação por diabetes garante aposentadoria por invalidez?", answer: "Não automaticamente. A amputação pode ser um indicador relevante de incapacidade, especialmente se limitar significativamente a capacidade de trabalho." },
       { question: "Uso de insulina é prova de gravidade para o INSS?", answer: "É um indício de diabetes avançado, mas não garante benefício por si só. A perícia avalia a incapacidade funcional, não apenas o tratamento." }
     ]
   },
@@ -5341,7 +5341,7 @@ export const blogArticles: BlogArticle[] = [
       { type: "heading", text: "União Estável Homoafetiva" },
       { type: "paragraph", text: "Desde a decisão do STF em 2011, a união estável homoafetiva tem os mesmos direitos que a heteroafetiva. O INSS deve conceder pensão por morte ao companheiro do mesmo sexo nos mesmos termos." },
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "Se você vivia em união estável e perdeu seu companheiro, tem direito à pensão por morte. A Cantarelli Advocacia pode ajudar na comprovação e garantir que seus direitos sejam respeitados." }
+      { type: "paragraph", text: "Se você vivia em união estável e perdeu seu companheiro, pode ter direito à pensão por morte, desde que comprovados a união e os demais requisitos legais. A Cantarelli Advocacia pode ajudar na organização das provas." }
     ],
     faq: [
       { question: "Posso receber pensão por morte mesmo sem ter morado junto?", answer: "Sim. A coabitação não é requisito obrigatório para a união estável, conforme entendimento consolidado dos tribunais." },
@@ -5385,7 +5385,7 @@ export const blogArticles: BlogArticle[] = [
         "Comprovantes de gastos com tratamentos e medicamentos"
       ]},
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "O BPC/LOAS é um direito fundamental para famílias de crianças com autismo. A Cantarelli Advocacia pode orientar sobre a documentação adequada e acompanhar todo o processo para garantir a concessão do benefício." }
+      { type: "paragraph", text: "O BPC/LOAS é um direito fundamental para famílias de crianças com autismo. A Cantarelli Advocacia pode orientar sobre a documentação adequada e acompanhar o processo." }
     ],
     faq: [
       { question: "A criança precisa estar na escola para receber o BPC?", answer: "Não é obrigatório estar matriculada, mas a frequência escolar é um fator positivo na avaliação social." },
@@ -5480,7 +5480,7 @@ export const blogArticles: BlogArticle[] = [
     tags: ["BPC", "LOAS", "Autismo", "TEA", "Adulto"],
     readTime: "7 min",
     keyTakeaways: [
-      "O BPC garante R$ 1.621,00 mensais para autistas adultos de baixa renda",
+      "O BPC paga um salário mínimo (R$ 1.621,00 em 2026) a autistas adultos que cumprem os requisitos de deficiência e baixa renda",
       "A renda familiar per capita deve ser inferior a R$ 405,25 em 2026",
       "A Justiça frequentemente flexibiliza o critério de renda quando há gastos com tratamentos",
       "O benefício não é aposentadoria e não gera 13º salário"
@@ -5741,7 +5741,7 @@ export const blogArticles: BlogArticle[] = [
     readTime: "8 min",
     keyTakeaways: [
       "LER/DORT, perda auditiva e doenças respiratórias são as doenças ocupacionais mais comuns",
-      "A emissão da CAT é obrigatória e garante direitos como estabilidade de 12 meses",
+      "A emissão da CAT é obrigatória; a estabilidade de 12 meses depende, em regra, de afastamento superior a 15 dias com auxílio-doença acidentário (art. 118 da Lei 8.213/1991)",
       "O nexo técnico epidemiológico (NTEP) pode reconhecer a doença ocupacional automaticamente",
       "O benefício acidentário (B91) tem vantagens sobre o benefício comum (B31)"
     ],
@@ -5767,7 +5767,7 @@ export const blogArticles: BlogArticle[] = [
       { type: "heading", text: "Nexo Técnico Epidemiológico (NTEP)" },
       { type: "paragraph", text: "O NTEP é um mecanismo que estabelece automaticamente a relação entre a doença e a atividade econômica da empresa. Quando o CNAE da empresa é correlacionado à doença do trabalhador, presume-se que a doença é ocupacional, invertendo o ônus da prova." },
       { type: "heading", text: "Conclusão" },
-      { type: "paragraph", text: "Se você desenvolveu uma doença em razão do trabalho, seus direitos vão muito além do afastamento temporário. A Cantarelli Advocacia pode avaliar seu caso e garantir todos os benefícios a que você tem direito." }
+      { type: "paragraph", text: "Se você desenvolveu uma doença em razão do trabalho, seus direitos vão muito além do afastamento temporário. A Cantarelli Advocacia pode avaliar seu caso e os benefícios que podem ser cabíveis." }
     ],
     faq: [
       { question: "Burnout é considerado doença ocupacional?", answer: "Sim. Desde a inclusão na CID-11 pela OMS, a síndrome de burnout é reconhecida como doença ocupacional quando vinculada ao trabalho." },
