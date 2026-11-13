@@ -16,4 +16,5 @@
 - [x] Identificar oito categorias com menos de quatro artigos e acrescentar cinco artigos em cada (40 novos)
 - [x] Atualizar catálogo, contadores e sitemap dos artigos
 - [x] Verificar contagens e navegação dos novos artigos — nove testes passaram; filtro PcD e abertura do artigo conferidos no site de prévia
-- [ ] Inventariar referências jurídicas dos 119 artigos e comparar com as referências do escritório — levantamento em andamento; comparação aguarda material do escritório
+- [x] Inventariar referências jurídicas dos 119 artigos — relatório e planilha com citações, trechos, URLs e prioridades de conferência entregues
+- [ ] Comparar referências e revisar artigos divergentes — aguarda documentos ou links jurídicos adotados pelo escritório
