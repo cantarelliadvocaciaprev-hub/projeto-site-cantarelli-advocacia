@@ -4710,7 +4710,7 @@ export const blogArticles: BlogArticle[] = [
     ],
     faq: [
       { question: "Ressonância magnética que mostra hérnia garante o benefício?", answer: "Não automaticamente. O INSS avalia a incapacidade funcional, não apenas o diagnóstico por imagem. A correlação clínica é fundamental." },
-      { question: "Trabalho braçal com hérnia de disco tem mais chances?", answer: "Sim. A perícia considera a atividade habitual. Trabalhadores braçais com hérnia têm mais chance de comprovar incapacidade." },
+      { question: "Trabalho braçal com hérnia de disco pesa na perícia?", answer: "Pode pesar. A perícia considera a atividade habitual. Trabalhadores braçais com hérnia têm mais chance de comprovar incapacidade." },
       { question: "Hérnia de disco pode gerar auxílio-acidente além do auxílio-doença?", answer: "Sim. Se após a alta do auxílio-doença restarem sequelas que reduzam a capacidade de trabalho, o auxílio-acidente pode ser concedido." }
     ]
   },
@@ -4770,7 +4770,7 @@ export const blogArticles: BlogArticle[] = [
       { type: "paragraph", text: "A cardiopatia grave está na lista de doenças que dispensam o período de carência (12 meses de contribuição). Isso significa que, mesmo com poucas contribuições, se a doença for grave e incapacitante, o segurado pode obter o benefício." },
       { type: "highlight", text: "Importante: a isenção de carência aplica-se à aposentadoria por invalidez e ao auxílio-doença. Porém, é necessário ter qualidade de segurado (estar contribuindo ou no período de graça)." },
       { type: "heading", text: "Como Provar a Incapacidade" },
-      { type: "paragraph", text: "A perícia do INSS avaliará laudos cardiológicos, exames como ecocardiograma, cateterismo, teste ergométrico, holter e eletrocardiograma. Quanto mais detalhada a documentação médica, maiores as chances de aprovação." },
+      { type: "paragraph", text: "A perícia do INSS avaliará laudos cardiológicos, exames como ecocardiograma, cateterismo, teste ergométrico, holter e eletrocardiograma. Documentação médica detalhada ajuda a perícia a compreender as limitações, sem assegurar a aprovação." },
       { type: "heading", text: "Conclusão" },
       { type: "paragraph", text: "Se você tem doença cardíaca grave que impede seu trabalho, pode ter direito a benefícios do INSS sem carência. A Cantarelli Advocacia pode analisar seu caso e orientar sobre os caminhos cabíveis." }
     ],
