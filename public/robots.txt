@@ -26,30 +26,29 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# AI Agents and LLM Crawlers
-User-agent: GPTBot
-Allow: /
-
+# AI SEARCH (official documentation reviewed 2026-11-16)
+# https://platform.openai.com/docs/bots
+# https://privacy.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
+# https://docs.perplexity.ai/docs/resources/perplexity-crawlers
+User-agent: OAI-SearchBot
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
 User-agent: ChatGPT-User
+User-agent: Claude-User
+User-agent: Perplexity-User
 Allow: /
+Disallow: /admin/
+Disallow: /verificacao-deploy
 
+# AI TRAINING — explicitly allowed by the office on 2026-11-16
+# Google-Extended also controls Gemini grounding; it does not control Google Search.
+# https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers
+User-agent: GPTBot
+User-agent: ClaudeBot
 User-agent: Google-Extended
 Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Anthropic-AI
-Allow: /
-
-User-agent: cohere-ai
-Allow: /
-
-User-agent: CCBot
-Allow: /
+Disallow: /admin/
+Disallow: /verificacao-deploy
 
 # Default
 User-agent: *

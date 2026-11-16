@@ -15,8 +15,9 @@ import path from "node:path";
 
 const MAX_PRERENDER_PAGES = 1000;
 const SITE_URL = "https://cantarelliadvocacia.com.br";
+const publicUrls = JSON.parse(fs.readFileSync(new URL("../src/data/publicUrls.json", import.meta.url), "utf8"));
 
-const FIELDS = ["slug", "title", "excerpt", "seoTitle", "metaDescription", "imageAlt", "date", "lastUpdated"];
+const FIELDS = ["slug", "title", "excerpt", "seoTitle", "metaDescription", "imageAlt", "date", "lastUpdated", "category"];
 
 // Balanced array extraction avoids executing the typed article source during builds.
 function extractArray(block, field) {
@@ -51,7 +52,7 @@ function extractField(block, field) {
   return m ? m[1].replace(/\\"/g, '"').replace(/\\n/g, " ") : null;
 }
 
-function parseArticles(src) {
+export function parseArticles(src) {
   // Import identifier -> source basename
   const importMap = new Map();
   const importRe = /import\s+(\w+)\s+from\s+"@\/assets\/blog\/([^"?]+)(?:\?[^"]*)?"/g;
@@ -90,7 +91,7 @@ function truncate(text, max = 155) {
   if (!text) return "";
   const clean = text.trim();
   if (clean.length <= max) return clean;
-  const slice = clean.slice(0, max);
+  const slice = clean.slice(0, max - 1);
   const cut = slice.lastIndexOf(" ");
   return `${slice.slice(0, cut > 0 ? cut : max)}…`;
 }
@@ -115,7 +116,7 @@ function stripConflictingHeadTags(html) {
     .replace(/<link\s+[^>]*?rel\s*=\s*"alternate"[^>]*?hreflang[^>]*>\s*/gi, "");
 }
 
-function buildHeadBlock(article, ogImageUrl, canonical, kind = "Article") {
+function buildHeadBlock(article, ogImageUrl, canonical, kind = "BlogPosting") {
   const title = truncate(article.seoTitle || `${article.title} | Cantarelli Advocacia`, 60);
   const description = truncate(article.metaDescription || article.excerpt);
   const ogTitle = article.title;
@@ -125,7 +126,7 @@ function buildHeadBlock(article, ogImageUrl, canonical, kind = "Article") {
     "@type": kind,
     headline: article.title,
     description,
-    image: ogImageUrl,
+    ...(ogImageUrl ? { image: ogImageUrl } : {}),
     datePublished: dateValue(article.date),
     dateModified: dateValue(article.lastUpdated) ?? dateValue(article.date),
     mainEntityOfPage: canonical,
@@ -135,6 +136,21 @@ function buildHeadBlock(article, ogImageUrl, canonical, kind = "Article") {
       name: "Cantarelli Advocacia",
     },
   };
+  const isPost = kind === "BlogPosting";
+  const breadcrumb = [{ "@type": "ListItem", position: 1, name: "Início", item: SITE_URL }];
+  if (canonical !== SITE_URL) {
+    if (isPost) breadcrumb.push({ "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` });
+    breadcrumb.push({ "@type": "ListItem", position: breadcrumb.length + 1, name: article.title, item: canonical });
+  }
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": ["Organization", "LegalService"], "@id": `${SITE_URL}/#organization`, name: "Cantarelli Advocacia", url: SITE_URL, telephone: "+558130493799", address: { "@type": "PostalAddress", streetAddress: "Estrada dos Remédios, 2115", addressLocality: "Recife", addressRegion: "PE", postalCode: "50720-715", addressCountry: "BR" } },
+      { "@type": "WebSite", "@id": `${SITE_URL}/#website`, name: "Cantarelli Advocacia", url: SITE_URL },
+      { "@type": "BreadcrumbList", itemListElement: breadcrumb },
+      jsonLd,
+    ],
+  };
 
   return `
     <title>${escapeAttr(title)}</title>
@@ -142,17 +158,14 @@ function buildHeadBlock(article, ogImageUrl, canonical, kind = "Article") {
     <link rel="canonical" href="${escapeAttr(canonical)}" />
     <link rel="alternate" hreflang="pt-br" href="${escapeAttr(canonical)}" />
     <link rel="alternate" hreflang="x-default" href="${escapeAttr(canonical)}" />
-    <meta property="og:type" content="${kind === "Article" ? "article" : "website"}" />
+    <meta property="og:type" content="${isPost ? "article" : "website"}" />
     <meta property="og:title" content="${escapeAttr(ogTitle)}" />
     <meta property="og:description" content="${escapeAttr(description)}" />
     <meta property="og:url" content="${escapeAttr(canonical)}" />
-    <meta property="og:image" content="${escapeAttr(ogImageUrl)}" />
-    <meta property="og:image:alt" content="${escapeAttr(article.imageAlt || ogTitle)}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${escapeAttr(ogTitle)}" />
     <meta name="twitter:description" content="${escapeAttr(description)}" />
-    <meta name="twitter:image" content="${escapeAttr(ogImageUrl)}" />
-    <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+    <script id="schema-public-page" type="application/ld+json">${JSON.stringify(graph).replace(/</g, "\\u003c")}</script>
   `;
 }
 
@@ -229,7 +242,7 @@ export function prerenderBlogArticlesPlugin() {
       let written = 0;
       for (const article of articles) {
         const canonical = `${SITE_URL}/blog/${article.slug}`;
-        let ogImageUrl = `${SITE_URL}/og-default.jpg`;
+        let ogImageUrl;
         if (article.imageBasename) {
           const built = bundleAssetMap.get(article.imageBasename);
           if (built) ogImageUrl = `${SITE_URL}/${built}`;
@@ -240,7 +253,10 @@ export function prerenderBlogArticlesPlugin() {
           `${buildHeadBlock(article, ogImageUrl, canonical)}</head>`,
         );
 
-        html = injectBody(html, `<h1>${escapeAttr(article.title)}</h1><p>${escapeAttr(article.excerpt)}</p>${sectionHtml(article.content)}<h2>Perguntas frequentes</h2>${article.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="/advogado-previdenciario-recife">Orientação previdenciária em Recife</a>`);
+        const services = JSON.parse(fs.readFileSync(path.resolve("src/data/servicePages.json"), "utf8"));
+        const service = services.find(page => page.categories.includes(article.category)) ?? services[0];
+        const related = articles.filter(other => other.slug !== article.slug).map(other => ({ article: other, score: (other.category === article.category ? 2 : 0) + other.tags.filter(tag => article.tags.includes(tag)).length * 3 })).sort((a, b) => b.score - a.score).slice(0, 3).map(item => item.article);
+        html = injectBody(html, `<h1>${escapeAttr(article.title)}</h1><p>${escapeAttr(article.excerpt)}</p><h2>Pontos Principais</h2><ul>${article.keyTakeaways.map(item => `<li>${escapeAttr(item)}</li>`).join("")}</ul>${sectionHtml(article.content)}<h2>Perguntas frequentes</h2>${article.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="/${service.slug}">Conheça a orientação sobre ${escapeAttr(service.title)}</a><h2>Leia também</h2><ul>${related.map(other => `<li><a href="/blog/${other.slug}">${escapeAttr(other.title)}</a></li>`).join("")}</ul>`);
         const dest = path.join(absOutDir, "blog", article.slug, "index.html");
         fs.mkdirSync(path.dirname(dest), { recursive: true });
         fs.writeFileSync(dest, html);
@@ -249,24 +265,63 @@ export function prerenderBlogArticlesPlugin() {
       const pages = JSON.parse(fs.readFileSync(path.resolve("src/data/servicePages.json"), "utf8"));
       for (const page of pages) {
         const canonical = `${SITE_URL}/${page.slug}`;
-        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle: page.title, excerpt: page.description }, `${SITE_URL}/${bundleAssetMap.get("office-building.jpg") ?? ""}`, canonical, "WebPage")}</head>`), `<h1>${escapeAttr(page.title)}</h1><p>${escapeAttr(page.description)}</p>${page.sections.map(section => `<h2>${escapeAttr(section.heading)}</h2><p>${escapeAttr(section.text)}</p>`).join("")}<h2>Perguntas frequentes</h2>${page.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="https://wa.me/5581983421727">Fale com especialista</a>`).replace('content="article"', 'content="website"');
+        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle: page.title, excerpt: page.description }, undefined, canonical, "WebPage")}</head>`), `<h1>${escapeAttr(page.title)}</h1><p>${escapeAttr(page.description)}</p>${page.sections.map(section => `<h2>${escapeAttr(section.heading)}</h2><p>${escapeAttr(section.text)}</p>`).join("")}<h2>Perguntas frequentes</h2>${page.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="https://wa.me/5581983421727">Fale com especialista</a>`).replace('content="article"', 'content="website"');
         const dest = path.join(absOutDir, page.slug, "index.html");
         fs.mkdirSync(path.dirname(dest), { recursive: true }); fs.writeFileSync(dest, html);
       }
       // Institutional HTML remains meaningful even before the application loads.
       const staticPages = [
         { slug: "contato", title: "Contato em Recife | Cantarelli Advocacia", description: "Endereço, canais oficiais e horário de atendimento da Cantarelli Advocacia na Madalena, Recife.", body: "<h1>Contato, endereço e horário em Recife – PE</h1><p>Estrada dos Remédios, 2115, Madalena, Recife – PE, CEP 50720-715.</p><p>Telefone: (81) 3049-3799. WhatsApp: (81) 98342-1727.</p><p>Segunda a quinta: 08:30–17:00. Sexta: 08:30–12:00.</p><a href=\"https://wa.me/5581983421727\">Fale com especialista</a>" },
-        { slug: "blog", title: "Blog Previdenciário | Cantarelli Advocacia", description: "Artigos sobre INSS, aposentadorias, BPC/LOAS e benefícios por incapacidade.", body: `<h1>Blog</h1><ul>${articles.map(article => `<li><a href="/blog/${article.slug}">${escapeAttr(article.title)}</a></li>`).join("")}</ul>` },
+        { slug: "blog", title: "Blog Previdenciário | Cantarelli Advocacia", description: "Artigos, notícias e atualizações sobre Direito Previdenciário, INSS, aposentadorias, BPC/LOAS e mais. Conteúdo atualizado por especialistas.", body: `<h1>Blog</h1><p>Novidades do INSS, regras de aposentadoria e dicas para garantir seus direitos.</p><ul>${[...articles].sort((a,b) => { const rank = slug => { const i = publicUrls.featuredSlugs.indexOf(slug); return i < 0 ? publicUrls.featuredSlugs.length : i; }; return rank(a.slug) - rank(b.slug); }).map(article => `<li><a href="/blog/${article.slug}">${escapeAttr(article.title)}</a><p>${escapeAttr(article.excerpt)}</p></li>`).join("")}</ul>` },
         { slug: "seguranca", title: "Segurança | Cantarelli Advocacia", description: "Confira os canais oficiais e proteja-se contra golpes do falso advogado.", body: "<h1>Sua Segurança é Nossa Prioridade</h1><p>Confirme contatos pelos canais oficiais. Desconfie de pedidos de pagamento para liberar valores.</p><a href=\"/contato\">Contatos oficiais</a>" },
         { slug: "trabalhe-conosco", title: "Trabalhe Conosco | Cantarelli Advocacia", description: "Conheça os setores do escritório e envie sua candidatura pelo formulário.", body: "<h1>Trabalhe Conosco</h1><p>Conheça os setores da Cantarelli Advocacia e envie sua candidatura pelo formulário do site.</p>" },
         { slug: "politica-de-privacidade", title: "Política de Privacidade | Cantarelli Advocacia", description: "Informações sobre tratamento de dados, dúvidas do blog e escolhas de cookies.", body: "<h1>Política de Privacidade</h1><p>Thiago Cantarelli Sociedade Individual de Advocacia, CNPJ 26.191.013/0001-89, é responsável pelo tratamento no site.</p><p>Formulários abrem o WhatsApp; dúvidas do assistente são armazenadas para análise interna. Não informe dados sensíveis. Google Analytics e Meta Pixel dependem de aceite de cookies.</p><p>Solicite informações e exerça direitos pelo e-mail contato@cantarelliadvocacia.com.br.</p>" }
       ];
       for (const page of staticPages) {
-        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle: page.title, excerpt: page.description }, `${SITE_URL}/${bundleAssetMap.get("office-building.jpg") ?? ""}`, `${SITE_URL}/${page.slug}`, "WebPage")}</head>`), page.body).replace('content="article"', 'content="website"');
+        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle: page.title, excerpt: page.description }, undefined, `${SITE_URL}/${page.slug}`, "WebPage")}</head>`), page.body).replace('content="article"', 'content="website"');
         const dest = path.join(absOutDir, page.slug, "index.html"); fs.mkdirSync(path.dirname(dest), { recursive: true }); fs.writeFileSync(dest, html);
       }
-      console.log(`[prerender-blog] wrote ${written} articles and ${pages.length + staticPages.length} public pages`);
+      const heroPath = path.resolve("src/components/Hero.tsx");
+      const heroSource = fs.existsSync(heroPath) ? fs.readFileSync(heroPath, "utf8") : "";
+      const heroText = value => value.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+      const h1 = heroText(heroSource.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? "Seu futuro planejado. Sua previdência segura.");
+      const paragraphs = [...heroSource.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)].filter(match => !match[1].includes("{")).map(match => `<p>${escapeAttr(heroText(match[1]))}</p>`).join("");
+      const featured = publicUrls.featuredSlugs.flatMap(slug => articles.filter(article => article.slug === slug));
+      const homeBody = `<h1>${escapeAttr(h1)}</h1>${paragraphs}<h2>Áreas de Atuação</h2><ul>${pages.map(page => `<li><a href="/${page.slug}">${escapeAttr(page.title)}</a></li>`).join("")}</ul><h2>Blog</h2><ul>${featured.map(article => `<li><a href="/blog/${article.slug}">${escapeAttr(article.title)}</a></li>`).join("")}</ul><a href="https://wa.me/5581983421727">Agende seu atendimento</a>`;
+      fs.writeFileSync(indexPath, injectBody(stripConflictingHeadTags(baseHtml).replace("</head>", `${buildHeadBlock({ title: "Advogado Previdenciário em Recife | Cantarelli Advocacia", seoTitle: "Advogado Previdenciário em Recife | Cantarelli Advocacia", excerpt: "Escritório especialista em Direito Previdenciário em Recife/PE: aposentadorias, BPC LOAS, revisões e defesa contra o INSS. 17+ anos de experiência." }, undefined, SITE_URL, "WebPage")}</head>`), homeBody));
+      // Recovery pages are real HTML with the destination canonical, NOT HTTP redirects.
+      for (const [alias, target] of Object.entries(publicUrls.aliases)) {
+        const source = path.join(absOutDir, target, "index.html");
+        if (!fs.existsSync(source)) continue;
+        const dest = path.join(absOutDir, alias, "index.html");
+        fs.mkdirSync(path.dirname(dest), { recursive: true });
+        fs.copyFileSync(source, dest);
+      }
+      const sitemapPath = path.resolve("public/sitemap.xml");
+      const existing = fs.existsSync(sitemapPath) ? fs.readFileSync(sitemapPath, "utf8") : "";
+      const sitemap = buildSitemap(articles, pages, staticPages, existing);
+      fs.writeFileSync(path.join(absOutDir, "sitemap.xml"), sitemap);
+      console.log(`[prerender-blog] wrote ${written} articles, home, ${pages.length + staticPages.length} public pages and sitemap`);
     },
   };
+}
+
+export function buildSitemap(articles, services, staticPages, existing = "") {
+  // Unknown existing dates are preserved; never use build time or today's date.
+  const oldDates = new Map([...existing.matchAll(/<url>([\s\S]*?)<\/url>/g)].map(match => {
+    const loc = match[1].match(/<loc>(.*?)<\/loc>/)?.[1]?.replace(/\/$/, "");
+    return [loc, match[1].match(/<lastmod>(.*?)<\/lastmod>/)?.[1]];
+  }));
+  const entries = [
+    { url: SITE_URL },
+    ...staticPages.map(page => ({ url: `${SITE_URL}/${page.slug}` })),
+    ...services.map(page => ({ url: `${SITE_URL}/${page.slug}` })),
+    ...articles.map(article => ({ url: `${SITE_URL}/blog/${article.slug}`, modified: dateValue(article.lastUpdated) })),
+  ];
+  const urls = [...new Map(entries.map(entry => [entry.url, entry])).values()];
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(entry => {
+    const modified = entry.modified ?? oldDates.get(entry.url);
+    return `  <url><loc>${escapeAttr(entry.url)}</loc>${modified ? `<lastmod>${escapeAttr(modified)}</lastmod>` : ""}</url>`;
+  }).join("\n")}\n</urlset>\n`;
 }
 
