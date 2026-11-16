@@ -9,6 +9,7 @@ import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import PageViewTracker from "./components/PageViewTracker";
 import CookieConsent from "./components/CookieConsent";
+import { legacyUrls } from "./lib/publicUrls";
 
 const TrabalheConosco = lazy(() => import("./pages/TrabalheConosco"));
 const Seguranca = lazy(() => import("./pages/Seguranca"));
@@ -48,6 +49,8 @@ const App = () => (
                 <Route path="/contato" element={<Contato />} />
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/:slug" element={<BlogArticle />} />
+                {Object.keys(legacyUrls).map(path => <Route key={path} path={path} element={<BlogArticle />} />)}
+                <Route path="/cantarelliadvocacia.com.br/*" element={<BlogArticle />} />
                 <Route path="/advogado-previdenciario-recife" element={<ServicePage />} />
                 <Route path="/bpc-loas-recife" element={<ServicePage />} />
                 <Route path="/aposentadoria-recife" element={<ServicePage />} />

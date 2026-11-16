@@ -44,7 +44,7 @@ const RelatedArticles = ({ currentSlug, tags, category }: RelatedArticlesProps) 
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-xl md:text-2xl font-display font-bold text-foreground mb-6 text-center">
-            Artigos Relacionados
+            Leia também
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

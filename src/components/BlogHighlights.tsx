@@ -3,10 +3,11 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { blogArticles } from "@/data/blogArticles";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { featuredSlugs } from "@/lib/publicUrls";
 
 const BlogHighlights = () => {
   const { isVisible, elementRef } = useScrollAnimation(0.1);
-  const latestArticles = blogArticles.slice(0, 4);
+  const latestArticles = featuredSlugs.flatMap(slug => blogArticles.filter(article => article.slug === slug));
 
   return (
     <section className="py-16 md:py-20 bg-card overflow-hidden">
