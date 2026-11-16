@@ -15,7 +15,8 @@ export function normalizeInternalPath(input: string): string {
   const [pathname] = value.split(/[?#]/);
   const cleanPath = pathname.replace(/\/+$/, "") || "/";
   const suffix = value.slice(pathname.length);
-  return `${legacyUrls[cleanPath] ?? cleanPath}${suffix}`;
+  const repaired = /^\/(?:doenca-cardiaca-aposentadoria-invalidez)$/.test(cleanPath) ? `/blog${cleanPath}` : cleanPath;
+  return `${legacyUrls[repaired] ?? repaired}${suffix}`;
 }
 
 export function canonicalUrl(input: string): string {
