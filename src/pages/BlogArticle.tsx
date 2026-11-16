@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useLocation, Link } from "react-router-dom";
 import { ArrowLeft, Clock, Shield, Share2, Lightbulb, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -17,6 +17,7 @@ import { trackArticleView } from "@/lib/articleTracking";
 import { trackWhatsAppClick } from "@/lib/whatsappTracking";
 import servicePages from "@/data/servicePages.json";
 import Breadcrumb from "@/components/Breadcrumb";
+import { normalizeInternalPath } from "@/lib/publicUrls";
 
 const SITE_URL = "https://cantarelliadvocacia.com.br";
 
@@ -33,8 +34,10 @@ const truncate = (text: string, max = 158) => {
 
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { pathname } = useLocation();
+  const resolvedSlug = normalizeInternalPath(pathname).replace(/^\/blog\//, "");
   const { articles, isLoading } = useAllArticles();
-  const article = articles.find((a) => a.slug === slug);
+  const article = articles.find((a) => a.slug === resolvedSlug || a.slug === slug);
 
   useEffect(() => {
     if (article) trackArticleView(article.slug, article.title);
@@ -47,6 +50,7 @@ const BlogArticle = () => {
   if (!article) {
     return (
       <div className="min-h-screen bg-background flex flex-col">
+        <SEO title="Artigo não encontrado | Cantarelli Advocacia" description="O artigo procurado não foi encontrado. Consulte os artigos do blog da Cantarelli Advocacia." noindex />
         <Header />
         <main className="flex-1 flex items-center justify-center">
           <div className="text-center">

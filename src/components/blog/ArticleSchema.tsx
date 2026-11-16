@@ -36,7 +36,7 @@ const ArticleSchema = ({ article }: ArticleSchemaProps) => {
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: article.title,
     description: article.excerpt,
     image: absoluteImage,
@@ -51,10 +51,6 @@ const ArticleSchema = ({ article }: ArticleSchemaProps) => {
       "@type": "Organization",
       name: "Cantarelli Advocacia",
       url: "https://cantarelliadvocacia.com.br",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://cantarelliadvocacia.com.br/logo.png",
-      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",

@@ -12,6 +12,7 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SEO from "@/components/SEO";
 import BlogListSchema from "@/components/blog/BlogListSchema";
 import ArticleAssistant from "@/components/blog/ArticleAssistant";
+import { featuredSlugs } from "@/lib/publicUrls";
 
 // Pre-compute a normalized, searchable text blob per article (title + excerpt +
 // category + tags + full body + FAQ). Runs once at module load.
@@ -84,7 +85,10 @@ const Blog = () => {
   }, [blogArticles]);
 
   const filtered = useMemo(() => {
-    let list = blogArticles;
+    let list = [...blogArticles].sort((a, b) => {
+      const rank = (slug: string) => { const index = featuredSlugs.indexOf(slug); return index < 0 ? featuredSlugs.length : index; };
+      return rank(a.slug) - rank(b.slug);
+    });
     if (selectedCategory) {
       list = list.filter((a) => a.category === selectedCategory);
     }
@@ -179,7 +183,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <SEO
-        title="Blog | Cantarelli Advocacia - Notícias sobre Direito Previdenciário"
+        title="Blog Previdenciário | Cantarelli Advocacia"
         description="Artigos, notícias e atualizações sobre Direito Previdenciário, INSS, aposentadorias, BPC/LOAS e mais. Conteúdo atualizado por especialistas."
         keywords="blog direito previdenciário, notícias INSS 2026, aposentadoria blog, BPC LOAS artigos, reforma previdenciária"
         canonical="https://cantarelliadvocacia.com.br/blog"

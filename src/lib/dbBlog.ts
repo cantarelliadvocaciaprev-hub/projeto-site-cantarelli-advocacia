@@ -1,5 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import type { BlogArticle, BlogArticleContent, BlogFAQ } from "@/data/blogArticles";
+import { normalizeInternalPath } from "./publicUrls";
 
 export type DbBlogPost = {
   id: string;
@@ -90,7 +91,7 @@ const formatDate = (iso: string | null) => {
 };
 
 export const dbPostToArticle = (post: DbBlogPost): BlogArticle => ({
-  slug: post.slug,
+  slug: normalizeInternalPath(post.slug).replace(/^\/blog\//, "").replace(/^\//, ""),
   title: post.title,
   excerpt: post.excerpt,
   seoTitle: post.seo_title ?? undefined,
