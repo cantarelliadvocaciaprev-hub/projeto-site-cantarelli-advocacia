@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { blogArticles, type BlogArticle } from "@/data/blogArticles";
 import { fetchPublishedPosts } from "@/lib/dbBlog";
+import { enrichArticle } from "@/lib/blogEditorial.mjs";
 
 /**
  * Artigos estáticos do repositório + artigos publicados pelo painel.
@@ -17,7 +18,7 @@ export const useAllArticles = () => {
   const articles: BlogArticle[] = [
     ...dbArticles,
     ...blogArticles.filter((a) => !dbSlugs.has(a.slug)),
-  ];
+  ].map(enrichArticle);
 
   return { articles, isLoading };
 };

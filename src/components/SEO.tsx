@@ -37,7 +37,7 @@ const SEO = ({
       if (pathname.startsWith("/blog/")) breadcrumbs.push({ "@type": "ListItem", position: 2, name: "Blog", item: canonicalUrl("/blog") });
       breadcrumbs.push({ "@type": "ListItem", position: breadcrumbs.length + 1, name: title, item: pageCanonical });
     }
-    graphScript.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": [officeSchema, { "@type": "WebSite", name: "Cantarelli Advocacia", url: canonicalUrl("/") }, { "@type": "BreadcrumbList", itemListElement: breadcrumbs }] });
+    graphScript.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": [officeSchema, { "@type": "WebSite", name: "Cantarelli Advocacia", url: canonicalUrl("/") }, ...(pathname.startsWith("/blog/") ? [] : [{ "@type": "BreadcrumbList", itemListElement: breadcrumbs }])] });
     if (!graphScript.parentNode) document.head.appendChild(graphScript);
     const fit = (text: string, max: number) => {
       const clean = text.trim();

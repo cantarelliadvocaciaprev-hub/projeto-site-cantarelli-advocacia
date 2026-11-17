@@ -29,13 +29,13 @@ test("prerender contains real article text, service text and correct page schema
     assert.doesNotMatch(service, /"@type":"Article"/);
     assert.match(service, /<h2>/);
     const aliases = JSON.parse(fs.readFileSync(path.join(root, "src/data/publicUrls.json"), "utf8")).aliases;
-    const articles = fs.readdirSync("output/blog").filter(name => name !== "index.html" && !Object.hasOwn(aliases, `/blog/${name}`));
+    const articles = fs.readdirSync("output/blog").filter(name => name !== "index.html" && name !== "tema" && !Object.hasOwn(aliases, `/blog/${name}`));
     assert.equal(articles.length, 119);
     for (const slug of articles) {
       const html = fs.readFileSync(`output/blog/${slug}/index.html`, "utf8");
       assert.match(html, /<h2>/, slug);
       assert.equal([...html.matchAll(/<h1[ >]/g)].length, 1, slug);
-      assert.equal([...html.matchAll(/href="\/blog\//g)].length, 3, `three related articles: ${slug}`);
+      assert.ok([...html.matchAll(/href="\/blog\//g)].length >= 4, `hub and related articles: ${slug}`);
     }
     const home = fs.readFileSync("output/index.html", "utf8");
     assert.match(home, /Seu futuro planejado\. Sua previdência segura\./);
@@ -45,7 +45,7 @@ test("prerender contains real article text, service text and correct page schema
       assert.ok(html.includes(`href="https://cantarelliadvocacia.com.br${target}"`));
     }
     const sitemap = fs.readFileSync("output/sitemap.xml", "utf8");
-    assert.equal([...sitemap.matchAll(/<loc>/g)].length, 135);
+    assert.equal([...sitemap.matchAll(/<loc>/g)].length, 141);
     assert.doesNotMatch(sitemap, /\/admin|verificacao-deploy|<loc>https:\/\/www\./);
   } finally {
     process.chdir(root);

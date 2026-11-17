@@ -16,6 +16,7 @@ const Seguranca = lazy(() => import("./pages/Seguranca"));
 const Contato = lazy(() => import("./pages/Contato"));
 const BlogArticle = lazy(() => import("./pages/BlogArticle"));
 const BlogPage = lazy(() => import("./pages/Blog"));
+const BlogTopic = lazy(() => import("./pages/BlogTopic"));
 const DeployCheck = lazy(() => import("./pages/DeployCheck"));
 const ReviewStats = lazy(() => import("./pages/ReviewStats"));
 const ArticleStats = lazy(() => import("./pages/ArticleStats"));
@@ -48,6 +49,7 @@ const App = () => (
                 <Route path="/seguranca" element={<Seguranca />} />
                 <Route path="/contato" element={<Contato />} />
                 <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/tema/:slug" element={<BlogTopic />} />
                 <Route path="/blog/:slug" element={<BlogArticle />} />
                 {Object.keys(legacyUrls).map(path => <Route key={path} path={path} element={<BlogArticle />} />)}
                 <Route path="/cantarelliadvocacia.com.br/*" element={<BlogArticle />} />

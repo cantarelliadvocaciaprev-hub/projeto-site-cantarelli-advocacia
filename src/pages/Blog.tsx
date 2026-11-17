@@ -13,6 +13,7 @@ import SEO from "@/components/SEO";
 import BlogListSchema from "@/components/blog/BlogListSchema";
 import ArticleAssistant from "@/components/blog/ArticleAssistant";
 import { featuredSlugs } from "@/lib/publicUrls";
+import { topics, topicFor, sortUpdated } from "@/lib/blogEditorial.mjs";
 
 // Pre-compute a normalized, searchable text blob per article (title + excerpt +
 // category + tags + full body + FAQ). Runs once at module load.
@@ -67,6 +68,7 @@ const Blog = () => {
   );
 
   const currentPage = Number(searchParams.get("page") || "1");
+  const selectedTopic = searchParams.get("tema");
 
   const searchIndex = useMemo<Record<string, string>>(
     () => Object.fromEntries(blogArticles.map((a) => [a.slug, buildSearchIndex(a)])),
@@ -85,10 +87,8 @@ const Blog = () => {
   }, [blogArticles]);
 
   const filtered = useMemo(() => {
-    let list = [...blogArticles].sort((a, b) => {
-      const rank = (slug: string) => { const index = featuredSlugs.indexOf(slug); return index < 0 ? featuredSlugs.length : index; };
-      return rank(a.slug) - rank(b.slug);
-    });
+    let list = sortUpdated(blogArticles);
+    if (selectedTopic) list = list.filter(a => topicFor(a).slug === selectedTopic);
     if (selectedCategory) {
       list = list.filter((a) => a.category === selectedCategory);
     }
@@ -107,7 +107,7 @@ const Blog = () => {
       }
     }
     return list;
-  }, [search, selectedCategory, blogArticles, searchIndex]);
+  }, [search, selectedCategory, selectedTopic, blogArticles, searchIndex]);
 
   const totalPages = Math.ceil(filtered.length / ARTICLES_PER_PAGE);
   const safePage = Math.min(Math.max(1, currentPage), totalPages || 1);
@@ -162,7 +162,7 @@ const Blog = () => {
     setSearchParams(searchParams, { replace: true });
   };
 
-  const hasFilters = search || selectedCategory;
+  const hasFilters = search || selectedCategory || selectedTopic;
 
   const getPageNumbers = () => {
     const pages: (number | "ellipsis")[] = [];
@@ -203,6 +203,8 @@ const Blog = () => {
           </div>
 
           <ArticleAssistant articles={blogArticles} />
+          <nav aria-label="Temas do blog" className="flex flex-wrap justify-center gap-x-5 gap-y-3 my-6">{topics.map(topic => <Link key={topic.slug} to={`/blog/tema/${topic.slug}`} className="text-primary underline text-sm">{topic.title}</Link>)}</nav>
+          <div className="max-w-2xl mx-auto mb-6"><label htmlFor="blog-topic" className="text-sm font-semibold">Tema</label><select id="blog-topic" value={selectedTopic ?? ""} onChange={event => { const next = new URLSearchParams(searchParams); if(event.target.value) next.set("tema",event.target.value); else next.delete("tema"); next.delete("page"); setSearchParams(next,{replace:true}); }} className="mt-2 w-full bg-card border border-border rounded-md p-3 text-foreground"><option value="">Todos os temas</option>{topics.map(topic => <option key={topic.slug} value={topic.slug}>{topic.title}</option>)}</select></div>
 
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-6">

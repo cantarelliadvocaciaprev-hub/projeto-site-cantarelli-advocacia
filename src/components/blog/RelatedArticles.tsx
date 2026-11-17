@@ -3,14 +3,17 @@ import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import type { BlogArticle } from "@/data/blogArticles";
 import { blogArticles } from "@/data/blogArticles";
+import { enrichArticle, relatedFor } from "@/lib/blogEditorial.mjs";
 
 interface RelatedArticlesProps {
   currentSlug: string;
   tags: string[];
   category: string;
+  article?: BlogArticle;
+  articles?: BlogArticle[];
 }
 
-const RelatedArticles = ({ currentSlug, tags, category }: RelatedArticlesProps) => {
+const RelatedArticles = ({ currentSlug, tags, category, article, articles }: RelatedArticlesProps) => {
   // Score articles by tag overlap, then category match
   const others = blogArticles.filter((a) => a.slug !== currentSlug);
   const scored = others
@@ -34,7 +37,8 @@ const RelatedArticles = ({ currentSlug, tags, category }: RelatedArticlesProps) 
       if (!related.some((r) => r.slug === a.slug)) related.push(a);
     }
   }
-  const finalRelated = related.slice(0, 3);
+  const current = article ?? blogArticles.find(item => item.slug === currentSlug);
+  const finalRelated = current ? relatedFor(enrichArticle(current), articles ?? blogArticles) : related.slice(0, 3);
 
   if (finalRelated.length === 0) return null;
 

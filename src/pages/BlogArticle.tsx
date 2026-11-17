@@ -18,6 +18,8 @@ import { trackWhatsAppClick } from "@/lib/whatsappTracking";
 import servicePages from "@/data/servicePages.json";
 import Breadcrumb from "@/components/Breadcrumb";
 import { normalizeInternalPath } from "@/lib/publicUrls";
+import { topicFor } from "@/lib/blogEditorial.mjs";
+import { ArticleDates, QuickAnswer, ArticleSources } from "@/components/blog/ArticleEditorial";
 
 const SITE_URL = "https://cantarelliadvocacia.com.br";
 
@@ -89,7 +91,8 @@ const BlogArticle = () => {
   const metaTitle = article.seoTitle ?? `${article.title} | Cantarelli Advocacia`;
   const metaDescription = truncate(article.metaDescription ?? article.excerpt);
   const ogImageUrl = toAbsoluteUrl(article.image);
-  const service = servicePages.find((page) => page.categories.includes(article.category)) ?? servicePages[0];
+  const topic = topicFor(article);
+  const service = servicePages.find((page) => page.slug === article.serviceSlug) ?? servicePages[0];
   const articleWhatsAppUrl = `https://wa.me/5581983421727?text=${encodeURIComponent(`Olá, li o artigo "${article.title}" (/blog/${article.slug}) e gostaria de atendimento.`)}`;
 
   return (
@@ -112,7 +115,7 @@ const BlogArticle = () => {
         <section className="relative py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Breadcrumb items={[{ label: "Blog", href: "/blog" }, { label: article.title, href: `/blog/${article.slug}` }]} />
+              <Breadcrumb items={[{ label: "Blog", href: "/blog" }, {label:topic.title,href:`/blog/tema/${topic.slug}`}, { label: article.title, href: `/blog/${article.slug}` }]} />
               <Link 
                 to="/blog" 
                 className="inline-flex items-center text-primary hover:text-primary/80 mb-6 transition-colors font-semibold text-sm"
@@ -128,13 +131,14 @@ const BlogArticle = () => {
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4 leading-tight">
                 {article.title}
               </h1>
+              <ArticleDates article={article} />
+              <QuickAnswer article={article} />
               
               <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />
                   <span>{article.readTime} de leitura</span>
                 </div>
-                {article.lastUpdated && <span>Atualizado em {article.lastUpdated}</span>}
               </div>
 
               <div className="flex gap-3">
@@ -147,7 +151,7 @@ const BlogArticle = () => {
                   Compartilhar
                 </Button>
                 <a href={articleWhatsAppUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("artigo", article.title)}>
-                  <Button size="sm" className="bg-[#25D366] hover:bg-[#20BA5A] text-white">
+                  <Button size="sm">
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Fale com Especialista
                   </Button>
@@ -197,7 +201,7 @@ const BlogArticle = () => {
         <nav aria-label="Sumário do artigo" className="container mx-auto px-4 py-5">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-xl font-bold mb-3">Neste artigo</h2>
-            <ul className="space-y-1">{article.content.map((section, index) => section.type === "heading" ? <li key={index}><a href={`#secao-${index}`} className="text-primary underline min-h-11 inline-flex items-center">{section.text}</a></li> : null)}</ul>
+            <ul className="space-y-1">{article.content.map((section, index) => section.type === "heading" || section.type === "subheading" ? <li key={index} className={section.type === "subheading" ? "pl-4" : ""}><a href={`#secao-${index}`} className="text-primary underline min-h-11 inline-flex items-center">{section.text}</a></li> : null)}</ul>
           </div>
         </nav>
         {/* Article Content */}
@@ -243,6 +247,7 @@ const BlogArticle = () => {
             </div>
           </div>
         </article>
+        {["processo-auxilio-acidente-justica-prazos", "quanto-tempo-demora-processo-auxilio-acidente"].includes(article.slug) && <section className="container mx-auto px-4 pb-6"><p className="max-w-4xl mx-auto"><Link className="text-primary underline" to={`/blog/${article.slug === "quanto-tempo-demora-processo-auxilio-acidente" ? "processo-auxilio-acidente-justica-prazos" : "quanto-tempo-demora-processo-auxilio-acidente"}`}>{article.slug === "quanto-tempo-demora-processo-auxilio-acidente" ? "Para as etapas do processo judicial, veja o artigo sobre o processo de auxílio-acidente na Justiça." : "Para a duração total no INSS e na Justiça, veja o artigo sobre quanto tempo demora o auxílio-acidente."}</Link></p></section>}
 
         {/* Share Buttons */}
         <section className="pb-2">
@@ -263,16 +268,16 @@ const BlogArticle = () => {
         <section className="py-6 md:py-8">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-[#25D366]/10 border border-[#25D366]/30 rounded-xl p-5 md:p-8 text-center">
-                <MessageCircle className="w-10 h-10 text-[#25D366] mx-auto mb-3" />
+              <div className="bg-primary/5 border border-border rounded-lg p-5 md:p-8 text-center">
+                <MessageCircle className="w-10 h-10 text-primary mx-auto mb-3" />
                 <h3 className="text-lg md:text-xl font-display font-bold text-foreground mb-2">
                   Tem dúvidas sobre o seu caso?
                 </h3>
                 <p className="text-sm md:text-base text-muted-foreground mb-4 max-w-lg mx-auto">
-                  Fale agora com um advogado especialista e tire todas as suas dúvidas sem compromisso.
+                  Atendimento online e em Recife para análise individual do seu caso.
                 </p>
                 <a href={articleWhatsAppUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("artigo", article.title)}>
-                  <Button size="lg" className="bg-[#25D366] hover:bg-[#20BA5A] text-white">
+                  <Button size="lg">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Falar pelo WhatsApp
                   </Button>
@@ -288,6 +293,7 @@ const BlogArticle = () => {
         {article.faq && article.faq.length > 0 && (
           <ArticleFAQ faq={article.faq} articleTitle={article.title} />
         )}
+        <ArticleSources article={article} />
 
         {/* Question Form */}
         <ArticleQuestionForm articleTitle={article.title} />
@@ -319,6 +325,8 @@ const BlogArticle = () => {
           currentSlug={article.slug}
           tags={article.tags ?? []}
           category={article.category}
+          article={article}
+          articles={articles}
         />
 
         {/* CTA Section */}
@@ -329,11 +337,11 @@ const BlogArticle = () => {
                 Precisa de ajuda com seu benefício?
               </h2>
               <p className="text-sm md:text-base text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto">
-                Nossa equipe de advogados especialistas em Direito Previdenciário está pronta para analisar seu caso e garantir seus direitos.
+                Nossa equipe pode analisar seu histórico e esclarecer as alternativas jurídicas aplicáveis ao seu caso.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                 <a href={articleWhatsAppUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("artigo", article.title)}>
-                  <Button size="lg" className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20BA5A] text-white">
+                  <Button size="lg" className="w-full sm:w-auto">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Fale com um Especialista
                   </Button>

@@ -12,6 +12,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { enrichArticle, topicFor, topics, relatedFor, sortUpdated, isoDate } from "../src/lib/blogEditorial.mjs";
 
 const MAX_PRERENDER_PAGES = 1000;
 const SITE_URL = "https://cantarelliadvocacia.com.br";
@@ -84,7 +85,7 @@ export function parseArticles(src) {
 
     if (article.slug && article.title) articles.push(article);
   }
-  return articles;
+  return articles.map(enrichArticle);
 }
 
 function truncate(text, max = 155) {
@@ -127,10 +128,10 @@ function buildHeadBlock(article, ogImageUrl, canonical, kind = "BlogPosting") {
     headline: article.title,
     description,
     ...(ogImageUrl ? { image: ogImageUrl } : {}),
-    datePublished: dateValue(article.date),
-    dateModified: dateValue(article.lastUpdated) ?? dateValue(article.date),
+    datePublished: isoDate(article.publishedAt),
+    dateModified: isoDate(article.updatedAt),
     mainEntityOfPage: canonical,
-    author: { "@type": "Organization", name: "Cantarelli Advocacia" },
+    author: article.author ? { "@type": "Person", name: article.author } : undefined,
     publisher: {
       "@type": "Organization",
       name: "Cantarelli Advocacia",
@@ -139,7 +140,11 @@ function buildHeadBlock(article, ogImageUrl, canonical, kind = "BlogPosting") {
   const isPost = kind === "BlogPosting";
   const breadcrumb = [{ "@type": "ListItem", position: 1, name: "Início", item: SITE_URL }];
   if (canonical !== SITE_URL) {
-    if (isPost) breadcrumb.push({ "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` });
+    if (isPost) {
+      breadcrumb.push({ "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` });
+      const topic = topicFor(article);
+      breadcrumb.push({ "@type": "ListItem", position: 3, name: topic.title, item: `${SITE_URL}/blog/tema/${topic.slug}` });
+    }
     breadcrumb.push({ "@type": "ListItem", position: breadcrumb.length + 1, name: article.title, item: canonical });
   }
   const graph = {
@@ -149,6 +154,7 @@ function buildHeadBlock(article, ogImageUrl, canonical, kind = "BlogPosting") {
       { "@type": "WebSite", "@id": `${SITE_URL}/#website`, name: "Cantarelli Advocacia", url: SITE_URL },
       { "@type": "BreadcrumbList", itemListElement: breadcrumb },
       jsonLd,
+      ...(isPost && article.faq?.length ? [{ "@type": "FAQPage", mainEntity: article.faq.map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) }] : []),
     ],
   };
 
@@ -238,7 +244,7 @@ export function prerenderBlogArticlesPlugin() {
       const noHeroPreload = baseHtml.replace(/<link[^>]+rel="preload"[^>]+as="image"[^>]*>/g, "");
       const wrap = (body) => `<main id="prerender-content" style="max-width:72rem;margin:auto;padding:2rem"><nav><a href="/">Cantarelli Advocacia</a> · <a href="/blog">Blog</a> · <a href="/contato">Contato</a></nav>${body}</main>`;
       const injectBody = (html, body) => html.replace('<div id="root"></div>', `<div id="root">${wrap(body)}</div>`);
-      const sectionHtml = (sections) => sections.map(section => section.type === "list" ? `<ul>${(section.items ?? []).map(item => `<li>${escapeAttr(item)}</li>`).join("")}</ul>` : section.type === "heading" ? `<h2>${escapeAttr(section.text)}</h2>` : section.type === "subheading" ? `<h3>${escapeAttr(section.text)}</h3>` : `<p>${escapeAttr(section.text)}</p>`).join("");
+      const sectionHtml = (sections) => sections.map((section,index) => section.type === "list" ? `<ul>${(section.items ?? []).map(item => `<li>${escapeAttr(item)}</li>`).join("")}</ul>` : section.type === "heading" ? `<h2 id="secao-${index}">${escapeAttr(section.text)}</h2>` : section.type === "subheading" ? `<h3 id="secao-${index}">${escapeAttr(section.text)}</h3>` : `<p>${escapeAttr(section.text)}</p>`).join("");
       const pages = JSON.parse(fs.readFileSync(path.resolve("src/data/servicePages.json"), "utf8"));
       let written = 0;
       for (const article of articles) {
@@ -254,9 +260,16 @@ export function prerenderBlogArticlesPlugin() {
           `${buildHeadBlock(article, ogImageUrl, canonical)}</head>`,
         );
 
-        const service = pages.find(page => page.categories.includes(article.category)) ?? pages[0];
-        const related = articles.filter(other => other.slug !== article.slug).map(other => ({ article: other, score: (other.category === article.category ? 2 : 0) + other.tags.filter(tag => article.tags.includes(tag)).length * 3 })).sort((a, b) => b.score - a.score).slice(0, 3).map(item => item.article);
-        html = injectBody(html, `<h1>${escapeAttr(article.title)}</h1><p>${escapeAttr(article.excerpt)}</p><h2>Pontos Principais</h2><ul>${article.keyTakeaways.map(item => `<li>${escapeAttr(item)}</li>`).join("")}</ul>${sectionHtml(article.content)}<h2>Perguntas frequentes</h2>${article.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="/${service.slug}">Conheça a orientação sobre ${escapeAttr(service.title)}</a><h2>Leia também</h2><ul>${related.map(other => `<li><a href="/blog/${other.slug}">${escapeAttr(other.title)}</a></li>`).join("")}</ul>`);
+        const service = pages.find(page => page.slug === article.serviceSlug) ?? pages[0];
+        const topic = topicFor(article);
+        const related = relatedFor(article, articles);
+        const dates = `${article.author ? `<p>Por ${escapeAttr(article.author)}</p>` : ""}${article.publishedAt ? `<p>Publicado em <time datetime="${article.publishedAt}">${article.publishedAt}</time></p>` : ""}${article.updatedAt ? `<p>Atualizado em <time datetime="${article.updatedAt}">${article.updatedAt}</time></p>` : ""}`;
+        const answer = article.quickAnswer ? `<aside><h2>Resposta rápida</h2><p>${escapeAttr(article.quickAnswer)}</p></aside>` : "";
+        const sources = article.sources.length ? `<h2>Fontes e base legal</h2><ul>${article.sources.map(source => `<li><a href="${escapeAttr(source.url)}">${escapeAttr(source.title)}</a></li>`).join("")}</ul>` : "";
+        const toc = `<nav aria-label="Sumário do artigo"><h2>Neste artigo</h2><ul>${article.content.map((section,index) => ["heading","subheading"].includes(section.type) ? `<li><a href="#secao-${index}">${escapeAttr(section.text)}</a></li>` : "").join("")}</ul></nav>`;
+        const fresh = article.asOf && article.asOfSource ? `<p>Valores e regras em vigor em ${escapeAttr(article.asOf)} — fonte: <a href="${escapeAttr(article.asOfSource)}">Fonte oficial</a></p>` : "";
+        const reviewer = article.reviewedBy && isoDate(article.reviewedAt) ? `<p>Conteúdo revisado por ${escapeAttr(article.reviewedBy)} em ${escapeAttr(article.reviewedAt)}</p><a href="/#sobre">Conheça o escritório</a>` : "";
+        html = injectBody(html, `<a href="/blog/tema/${topic.slug}">${escapeAttr(topic.title)}</a><h1>${escapeAttr(article.title)}</h1>${dates}${answer}${toc}${ogImageUrl ? `<img src="${ogImageUrl}" alt="${escapeAttr(article.imageAlt)}" width="1200" height="800" loading="lazy">` : ""}<h2>Pontos Principais</h2><ul>${article.keyTakeaways.map(item => `<li>${escapeAttr(item)}</li>`).join("")}</ul>${sectionHtml(article.content)}<h2>Perguntas frequentes</h2>${article.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}${sources}${fresh}<aside><h2>Aviso</h2><p>Este conteúdo é informativo e não substitui a análise individual do seu caso.</p></aside>${reviewer}<a href="/${service.slug}">Orientação jurídica — atendimento online e em Recife</a><h2>Leia também</h2><ul>${related.map(other => `<li><a href="/blog/${other.slug}">${escapeAttr(other.title)}</a></li>`).join("")}</ul>`);
         const dest = path.join(absOutDir, "blog", article.slug, "index.html");
         fs.mkdirSync(path.dirname(dest), { recursive: true });
         fs.writeFileSync(dest, html);
@@ -269,10 +282,17 @@ export function prerenderBlogArticlesPlugin() {
         const dest = path.join(absOutDir, page.slug, "index.html");
         fs.mkdirSync(path.dirname(dest), { recursive: true }); fs.writeFileSync(dest, html);
       }
+      for (const topic of topics) {
+        const posts = sortUpdated(articles.filter(article => topicFor(article).slug === topic.slug));
+        const canonical = `${SITE_URL}/blog/tema/${topic.slug}`;
+        const body = `<h1>${escapeAttr(topic.title)}</h1><p>${escapeAttr(topic.description)}</p><a href="/${topic.serviceSlug}">Orientação jurídica — atendimento online e em Recife</a><ul>${posts.map(post => `<li><a href="/blog/${post.slug}">${escapeAttr(post.title)}</a><p>${escapeAttr(post.excerpt)}</p></li>`).join("")}</ul>`;
+        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>",`${buildHeadBlock({title:topic.title,seoTitle:`${topic.title} | Cantarelli Advocacia`,excerpt:topic.description},undefined,canonical,"WebPage")}</head>`),body);
+        const dest = path.join(absOutDir,"blog","tema",topic.slug,"index.html"); fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,html);
+      }
       // Institutional HTML remains meaningful even before the application loads.
       const staticPages = [
         { slug: "contato", title: "Contato em Recife | Cantarelli Advocacia", description: "Endereço, canais oficiais e horário de atendimento da Cantarelli Advocacia na Madalena, Recife.", body: "<h1>Contato, endereço e horário em Recife – PE</h1><p>Estrada dos Remédios, 2115, Madalena, Recife – PE, CEP 50720-715.</p><p>Telefone: (81) 3049-3799. WhatsApp: (81) 98342-1727.</p><p>Segunda a quinta: 08:30–17:00. Sexta: 08:30–12:00.</p><a href=\"https://wa.me/5581983421727\">Fale com especialista</a>" },
-        { slug: "blog", title: "Blog Previdenciário | Cantarelli Advocacia", description: "Artigos, notícias e atualizações sobre Direito Previdenciário, INSS, aposentadorias, BPC/LOAS e mais. Conteúdo atualizado por especialistas.", body: `<h1>Blog</h1><p>Novidades do INSS, regras de aposentadoria e dicas para garantir seus direitos.</p><ul>${[...articles].sort((a,b) => { const rank = slug => { const i = publicUrls.featuredSlugs.indexOf(slug); return i < 0 ? publicUrls.featuredSlugs.length : i; }; return rank(a.slug) - rank(b.slug); }).map(article => `<li><a href="/blog/${article.slug}">${escapeAttr(article.title)}</a><p>${escapeAttr(article.excerpt)}</p></li>`).join("")}</ul>` },
+        { slug: "blog", title: "Blog Previdenciário | Cantarelli Advocacia", description: "Artigos, notícias e atualizações sobre Direito Previdenciário, INSS, aposentadorias, BPC/LOAS e mais. Conteúdo atualizado por especialistas.", body: `<nav aria-label="Temas do blog">${topics.map(topic => `<a href="/blog/tema/${topic.slug}">${escapeAttr(topic.title)}</a>`).join(" · ")}</nav><h1>Blog</h1><p>Novidades do INSS, regras de aposentadoria e dicas para garantir seus direitos.</p><ul>${sortUpdated(articles).map(article => `<li><a href="/blog/${article.slug}">${escapeAttr(article.title)}</a><p>${escapeAttr(article.excerpt)}</p></li>`).join("")}</ul>` },
         { slug: "seguranca", title: "Segurança | Cantarelli Advocacia", description: "Confira os canais oficiais e proteja-se contra golpes do falso advogado.", body: "<h1>Sua Segurança é Nossa Prioridade</h1><p>Confirme contatos pelos canais oficiais. Desconfie de pedidos de pagamento para liberar valores.</p><a href=\"/contato\">Contatos oficiais</a>" },
         { slug: "trabalhe-conosco", title: "Trabalhe Conosco | Cantarelli Advocacia", description: "Conheça os setores do escritório e envie sua candidatura pelo formulário.", body: "<h1>Trabalhe Conosco</h1><p>Conheça os setores da Cantarelli Advocacia e envie sua candidatura pelo formulário do site.</p>" },
         { slug: "politica-de-privacidade", title: "Política de Privacidade | Cantarelli Advocacia", description: "Informações sobre tratamento de dados, dúvidas do blog e escolhas de cookies.", body: "<h1>Política de Privacidade</h1><p>Thiago Cantarelli Sociedade Individual de Advocacia, CNPJ 26.191.013/0001-89, é responsável pelo tratamento no site.</p><p>Formulários abrem o WhatsApp; dúvidas do assistente são armazenadas para análise interna. Não informe dados sensíveis. Google Analytics e Meta Pixel dependem de aceite de cookies.</p><p>Solicite informações e exerça direitos pelo e-mail contato@cantarelliadvocacia.com.br.</p>" }
@@ -316,7 +336,8 @@ export function buildSitemap(articles, services, staticPages, existing = "") {
     { url: SITE_URL },
     ...staticPages.map(page => ({ url: `${SITE_URL}/${page.slug}` })),
     ...services.map(page => ({ url: `${SITE_URL}/${page.slug}` })),
-    ...articles.map(article => ({ url: `${SITE_URL}/blog/${article.slug}`, modified: dateValue(article.lastUpdated) })),
+    ...topics.map(topic => ({url:`${SITE_URL}/blog/tema/${topic.slug}`})),
+    ...articles.map(article => ({ url: `${SITE_URL}/blog/${article.slug}`, modified: isoDate(article.updatedAt || article.lastUpdated) })),
   ];
   const urls = [...new Map(entries.map(entry => [entry.url, entry])).values()];
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(entry => {

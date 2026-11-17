@@ -8,3 +8,4 @@
 - Emit real public text and page metadata in the existing prerender plugin; do not advertise private routes or fabricate article timestamps.
 - Bound prerender output with a fixed page cap to prevent oversized deployments; test the generator in temporary directories without rebuilding the app.
 - Share canonical origin, legacy URL aliases and featured article slugs between public navigation and prerendering; aliases serve recovery content, not simulated HTTP 301s.
+- Share blog topic assignment, editorial fields, dates and related-link selection between the browser and prerender generator so public HTML matches the article model; unknown editorial facts stay empty.

@@ -132,6 +132,17 @@ export interface BlogFAQ {
 }
 
 export interface BlogArticle {
+  publishedAt?: string;
+  updatedAt?: string;
+  quickAnswer?: string;
+  sources?: { title: string; url: string }[];
+  relatedSlugs?: string[];
+  serviceSlug?: string;
+  reviewedBy?: string;
+  reviewedAt?: string;
+  asOf?: string;
+  validUntil?: string;
+  asOfSource?: string;
   slug: string;
   title: string;
   excerpt: string;
