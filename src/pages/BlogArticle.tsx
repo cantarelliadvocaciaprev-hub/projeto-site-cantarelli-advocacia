@@ -93,7 +93,7 @@ const BlogArticle = () => {
   const articleWhatsAppUrl = `https://wa.me/5581983421727?text=${encodeURIComponent(`Olá, li o artigo "${article.title}" (/blog/${article.slug}) e gostaria de atendimento.`)}`;
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col overflow-x-clip">
       <SEO
         title={metaTitle}
         description={metaDescription}

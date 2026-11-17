@@ -264,7 +264,8 @@ export function prerenderBlogArticlesPlugin() {
       }
       for (const page of pages) {
         const canonical = `${SITE_URL}/${page.slug}`;
-        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle: page.title, excerpt: page.description }, undefined, canonical, "WebPage")}</head>`), `<h1>${escapeAttr(page.title)}</h1><p>${escapeAttr(page.description)}</p>${page.sections.map(section => `<h2>${escapeAttr(section.heading)}</h2><p>${escapeAttr(section.text)}</p>`).join("")}<h2>Perguntas frequentes</h2>${page.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="https://wa.me/5581983421727">Fale com especialista</a>`).replace('content="article"', 'content="website"');
+        const seoTitle = page.slug === "advogado-previdenciario-recife" ? "Orientação Previdenciária em Recife | Cantarelli Advocacia" : `${page.title} | Cantarelli Advocacia`;
+        const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle, excerpt: page.description }, undefined, canonical, "WebPage")}</head>`), `<h1>${escapeAttr(page.title)}</h1><p>${escapeAttr(page.description)}</p>${page.sections.map(section => `<h2>${escapeAttr(section.heading)}</h2><p>${escapeAttr(section.text)}</p>`).join("")}<h2>Perguntas frequentes</h2>${page.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="https://wa.me/5581983421727">Fale com especialista</a>`).replace('content="article"', 'content="website"');
         const dest = path.join(absOutDir, page.slug, "index.html");
         fs.mkdirSync(path.dirname(dest), { recursive: true }); fs.writeFileSync(dest, html);
       }

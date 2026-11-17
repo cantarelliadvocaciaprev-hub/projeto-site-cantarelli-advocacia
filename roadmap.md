@@ -25,3 +25,4 @@
 - [ ] Aplicar alterações técnicas no domínio público e conferir código-fonte após publicação — aguarda nova publicação
 - [ ] Implementar 301 personalizados e trocar www 302 por 301 — hospedagem não oferece controle desses redirecionamentos; exige camada externa de domínio/CDN
 - [ ] Medir e reduzir JS/CSS não usado e bloqueios restantes — números do roteiro não reproduzidos; depende de auditoria de performance atual
+- [x] Conferir as 135 páginas em celular/computador e temas claro/escuro — 540 combinações; corrigidos excesso lateral dos artigos, título duplicado e serviço com barra final; links relacionados abertos

@@ -9,14 +9,15 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { openWhatsApp } from "@/lib/whatsappTracking";
 import officeImage from "@/assets/office-building.jpg?format=webp&quality=78";
+import { normalizeInternalPath } from "@/lib/publicUrls";
 
 export default function ServicePage() {
   const { pathname } = useLocation();
-  const page = servicePages.find((item) => `/${item.slug}` === pathname);
+  const page = servicePages.find((item) => `/${item.slug}` === normalizeInternalPath(pathname));
   if (!page) return null;
   const canonical = `https://cantarelliadvocacia.com.br/${page.slug}`;
   return <div className="min-h-screen bg-background">
-    <SEO title={`${page.title} | Cantarelli Advocacia`} description={page.description} canonical={canonical} />
+    <SEO title={page.slug === "advogado-previdenciario-recife" ? "Orientação Previdenciária em Recife | Cantarelli Advocacia" : `${page.title} | Cantarelli Advocacia`} description={page.description} canonical={canonical} />
     <LegalServiceSchema />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: page.faq.map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) }) }} />
     <Header />

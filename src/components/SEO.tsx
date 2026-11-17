@@ -39,7 +39,13 @@ const SEO = ({
     }
     graphScript.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": [officeSchema, { "@type": "WebSite", name: "Cantarelli Advocacia", url: canonicalUrl("/") }, { "@type": "BreadcrumbList", itemListElement: breadcrumbs }] });
     if (!graphScript.parentNode) document.head.appendChild(graphScript);
-    const fit = (text: string, max: number) => text.length <= max ? text : `${text.slice(0, max - 1).trimEnd()}…`;
+    const fit = (text: string, max: number) => {
+      const clean = text.trim();
+      if (clean.length <= max) return clean;
+      const slice = clean.slice(0, max - 1);
+      const boundary = slice.lastIndexOf(" ");
+      return `${slice.slice(0, boundary > 0 ? boundary : max - 1)}…`;
+    };
     const pageTitle = fit(title, 60);
     const pageDescription = fit(description, 155);
     document.title = pageTitle;

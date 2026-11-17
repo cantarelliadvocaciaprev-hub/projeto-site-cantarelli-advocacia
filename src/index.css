@@ -258,14 +258,6 @@ All colors MUST be HSL.
     /* Keep the same gradient without repainting it on every frame. */
   }
 
-  @keyframes gradientShift {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
 }
 
 /* Acessibilidade: respeitar prefers-reduced-motion em todo o site.
