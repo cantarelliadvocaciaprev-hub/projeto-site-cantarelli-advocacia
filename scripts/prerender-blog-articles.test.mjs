@@ -34,6 +34,8 @@ test("prerender contains real article text, service text and correct page schema
     for (const slug of articles) {
       const html = fs.readFileSync(`output/blog/${slug}/index.html`, "utf8");
       assert.match(html, /<h2>/, slug);
+      assert.equal([...html.matchAll(/<h1[ >]/g)].length, 1, slug);
+      assert.equal([...html.matchAll(/href="\/blog\//g)].length, 4, `blog navigation plus three related articles: ${slug}`);
     }
     const home = fs.readFileSync("output/index.html", "utf8");
     assert.match(home, /Seu futuro planejado\. Sua previdência segura\./);
@@ -49,6 +51,18 @@ test("prerender contains real article text, service text and correct page schema
     process.chdir(root);
     fs.rmSync(dir, { recursive: true, force: true });
   }
+});
+
+test("search and permitted training agents all exclude private pages", () => {
+  const robots = fs.readFileSync("public/robots.txt", "utf8");
+  for (const agent of ["OAI-SearchBot", "Claude-SearchBot", "PerplexityBot", "GPTBot", "ClaudeBot", "Google-Extended"]) {
+    const group = robots.split(/\n\s*\n/).find(block => block.includes(`User-agent: ${agent}\n`));
+    assert.ok(group, agent);
+    assert.match(group, /Allow: \/\n/);
+    assert.match(group, /Disallow: \/admin\//);
+    assert.match(group, /Disallow: \/verificacao-deploy/);
+  }
+  assert.match(robots, /Sitemap: https:\/\/cantarelliadvocacia.com.br\/sitemap.xml/);
 });
 
 test("sitemap preserves unknown dates and adds only page-specific update dates", () => {
