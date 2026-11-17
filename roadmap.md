@@ -18,6 +18,7 @@
 - [x] Verificar contagens e navegação dos novos artigos — nove testes passaram; filtro PcD e abertura do artigo conferidos no site de prévia
 - [x] Inventariar referências jurídicas dos 119 artigos — relatório e planilha com citações, trechos, URLs e prioridades de conferência entregues
 - [ ] Comparar referências e revisar artigos divergentes — aguarda documentos ou links jurídicos adotados pelo escritório
+- [ ] Revisar os cinco novos artigos de auxílio-acidente e as atualizações de 2027 contra o material jurídico do escritório — novos textos ainda não integrados ao catálogo; aguarda material de referência e eventuais rascunhos externos
 - [ ] Acrescentar cinco artigos de auxílio-acidente e fotografias próprias de cada tema
 - [ ] Atualizar artigos anuais para 2027 sem alterar datas de normas, fontes e URLs já indexadas
 - [ ] Corrigir informações anuais não confirmadas e anomalias nas imagens indicadas; conferir testes e navegação
