@@ -21,4 +21,7 @@
 - [ ] Acrescentar cinco artigos de auxílio-acidente e fotografias próprias de cada tema
 - [ ] Atualizar artigos anuais para 2027 sem alterar datas de normas, fontes e URLs já indexadas
 - [ ] Corrigir informações anuais não confirmadas e anomalias nas imagens indicadas; conferir testes e navegação
-- [ ] Corrigir URLs canônicas, sitemap, robots, HTML inicial, metadados e links conforme roteiro técnico; documentar limites de 301 e cache da hospedagem
+- [x] Corrigir URLs canônicas, sitemap, robots, HTML inicial, metadados e links conforme roteiro técnico — 135 URLs publicadas retornam 200; sete aliases recuperam conteúdo na prévia; cache anual de assets confirmado
+- [ ] Aplicar alterações técnicas no domínio público e conferir código-fonte após publicação — aguarda nova publicação
+- [ ] Implementar 301 personalizados e trocar www 302 por 301 — hospedagem não oferece controle desses redirecionamentos; exige camada externa de domínio/CDN
+- [ ] Medir e reduzir JS/CSS não usado e bloqueios restantes — números do roteiro não reproduzidos; depende de auditoria de performance atual

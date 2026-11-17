@@ -35,7 +35,7 @@ test("prerender contains real article text, service text and correct page schema
       const html = fs.readFileSync(`output/blog/${slug}/index.html`, "utf8");
       assert.match(html, /<h2>/, slug);
       assert.equal([...html.matchAll(/<h1[ >]/g)].length, 1, slug);
-      assert.equal([...html.matchAll(/href="\/blog\//g)].length, 4, `blog navigation plus three related articles: ${slug}`);
+      assert.equal([...html.matchAll(/href="\/blog\//g)].length, 3, `three related articles: ${slug}`);
     }
     const home = fs.readFileSync("output/index.html", "utf8");
     assert.match(home, /Seu futuro planejado\. Sua previdência segura\./);
