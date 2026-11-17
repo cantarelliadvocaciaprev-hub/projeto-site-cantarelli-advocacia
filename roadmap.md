@@ -20,6 +20,8 @@
 - [ ] Comparar referências e revisar artigos divergentes — aguarda documentos ou links jurídicos adotados pelo escritório
 - [ ] Revisar os cinco novos artigos de auxílio-acidente e as atualizações de 2027 contra o material jurídico do escritório — novos textos ainda não integrados ao catálogo; aguarda material de referência e eventuais rascunhos externos
 - [ ] Acrescentar cinco artigos de auxílio-acidente e fotografias próprias de cada tema
+- [x] Preparar cinco fotografias distintas para os futuros artigos de auxílio-acidente — quatro fotos existentes inspecionadas e quinta criada em 1536×1024; 119 artigos estáticos com arquivos de foto presentes; integração aguarda os textos
+- [ ] Conferir artigos do painel sem foto — consulta ao Lovable Cloud indisponível nesta conferência
 - [ ] Atualizar artigos anuais para 2027 sem alterar datas de normas, fontes e URLs já indexadas
 - [ ] Corrigir informações anuais não confirmadas e anomalias nas imagens indicadas; conferir testes e navegação
 - [x] Corrigir URLs canônicas, sitemap, robots, HTML inicial, metadados e links conforme roteiro técnico — 135 URLs publicadas retornam 200; sete aliases recuperam conteúdo na prévia; cache anual de assets confirmado
