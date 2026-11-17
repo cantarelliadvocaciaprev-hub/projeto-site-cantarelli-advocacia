@@ -1,7 +1,7 @@
 /** GA4 events, sent only after cookie consent. Never throws. */
 type Params = Record<string, string | number | undefined>;
 const CONSENT_KEY = "cookie-consent";
-let lastWhatsApp = 0;
+const lastSent: Record<string, number> = {};
 
 export const hasConsent = () => {
   try { return localStorage.getItem(CONSENT_KEY) === "accepted"; } catch { return false; }
@@ -15,7 +15,9 @@ const serviceFromPath = () => {
 export function trackEvent(name: string, params: Params = {}) {
   try {
     if (typeof window === "undefined" || !hasConsent()) return;
-    if (name === "whatsapp_click") lastWhatsApp = Date.now();
+    const now = Date.now();
+    if (now - (lastSent[name] ?? 0) < 1500 && /_click$|form_submit/.test(name)) return;
+    lastSent[name] = now;
     window.gtag?.("event", name, {
       page_path: window.location.pathname,
       page_title: document.title,
@@ -49,8 +51,6 @@ export function installClickTracking() {
     if (!a) return;
     const name = classifyLink(a.getAttribute("href") || "", window.location.origin);
     if (!name) return;
-    // WhatsApp buttons already report through trackWhatsAppClick; avoid duplicates.
-    if (name === "whatsapp_click" && Date.now() - lastWhatsApp < 1500) return;
     trackEvent(name, name === "outbound_click" ? { link_url: a.href.split("?")[0] } : {});
   }, { capture: true });
 }
