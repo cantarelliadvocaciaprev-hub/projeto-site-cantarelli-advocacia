@@ -218,7 +218,7 @@ export function prerenderBlogArticlesPlugin() {
       } catch {
         return;
       }
-      const articles = parseArticles(src).slice(0, MAX_PRERENDER_PAGES - 20);
+      const articles = parseArticles(src).slice(0, MAX_PRERENDER_PAGES - 32);
       if (articles.length === 0) return;
 
       const absOutDir = path.resolve(process.cwd(), outDir);
@@ -239,6 +239,7 @@ export function prerenderBlogArticlesPlugin() {
       const wrap = (body) => `<main id="prerender-content" style="max-width:72rem;margin:auto;padding:2rem"><nav><a href="/">Cantarelli Advocacia</a> · <a href="/blog">Blog</a> · <a href="/contato">Contato</a></nav>${body}</main>`;
       const injectBody = (html, body) => html.replace('<div id="root"></div>', `<div id="root">${wrap(body)}</div>`);
       const sectionHtml = (sections) => sections.map(section => section.type === "list" ? `<ul>${(section.items ?? []).map(item => `<li>${escapeAttr(item)}</li>`).join("")}</ul>` : section.type === "heading" ? `<h2>${escapeAttr(section.text)}</h2>` : section.type === "subheading" ? `<h3>${escapeAttr(section.text)}</h3>` : `<p>${escapeAttr(section.text)}</p>`).join("");
+      const pages = JSON.parse(fs.readFileSync(path.resolve("src/data/servicePages.json"), "utf8"));
       let written = 0;
       for (const article of articles) {
         const canonical = `${SITE_URL}/blog/${article.slug}`;
@@ -253,8 +254,7 @@ export function prerenderBlogArticlesPlugin() {
           `${buildHeadBlock(article, ogImageUrl, canonical)}</head>`,
         );
 
-        const services = JSON.parse(fs.readFileSync(path.resolve("src/data/servicePages.json"), "utf8"));
-        const service = services.find(page => page.categories.includes(article.category)) ?? services[0];
+        const service = pages.find(page => page.categories.includes(article.category)) ?? pages[0];
         const related = articles.filter(other => other.slug !== article.slug).map(other => ({ article: other, score: (other.category === article.category ? 2 : 0) + other.tags.filter(tag => article.tags.includes(tag)).length * 3 })).sort((a, b) => b.score - a.score).slice(0, 3).map(item => item.article);
         html = injectBody(html, `<h1>${escapeAttr(article.title)}</h1><p>${escapeAttr(article.excerpt)}</p><h2>Pontos Principais</h2><ul>${article.keyTakeaways.map(item => `<li>${escapeAttr(item)}</li>`).join("")}</ul>${sectionHtml(article.content)}<h2>Perguntas frequentes</h2>${article.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="/${service.slug}">Conheça a orientação sobre ${escapeAttr(service.title)}</a><h2>Leia também</h2><ul>${related.map(other => `<li><a href="/blog/${other.slug}">${escapeAttr(other.title)}</a></li>`).join("")}</ul>`);
         const dest = path.join(absOutDir, "blog", article.slug, "index.html");
@@ -262,7 +262,6 @@ export function prerenderBlogArticlesPlugin() {
         fs.writeFileSync(dest, html);
         written += 1;
       }
-      const pages = JSON.parse(fs.readFileSync(path.resolve("src/data/servicePages.json"), "utf8"));
       for (const page of pages) {
         const canonical = `${SITE_URL}/${page.slug}`;
         const html = injectBody(stripConflictingHeadTags(noHeroPreload).replace("</head>", `${buildHeadBlock({ title: page.title, seoTitle: page.title, excerpt: page.description }, undefined, canonical, "WebPage")}</head>`), `<h1>${escapeAttr(page.title)}</h1><p>${escapeAttr(page.description)}</p>${page.sections.map(section => `<h2>${escapeAttr(section.heading)}</h2><p>${escapeAttr(section.text)}</p>`).join("")}<h2>Perguntas frequentes</h2>${page.faq.map(faq => `<details><summary>${escapeAttr(faq.question)}</summary><p>${escapeAttr(faq.answer)}</p></details>`).join("")}<a href="https://wa.me/5581983421727">Fale com especialista</a>`).replace('content="article"', 'content="website"');

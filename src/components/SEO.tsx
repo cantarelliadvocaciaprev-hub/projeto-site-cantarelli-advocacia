@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { canonicalUrl } from "@/lib/publicUrls";
+import { officeSchema } from "@/components/schemas/LegalServiceSchema";
 
 interface SEOProps {
   title: string;
@@ -28,6 +29,16 @@ const SEO = ({
   const { pathname } = useLocation();
   useEffect(() => {
     const pageCanonical = canonicalUrl(canonical ?? pathname);
+    const graphScript = document.getElementById("schema-public-page") ?? document.createElement("script");
+    graphScript.id = "schema-public-page";
+    graphScript.setAttribute("type", "application/ld+json");
+    const breadcrumbs = [{ "@type": "ListItem", position: 1, name: "Início", item: canonicalUrl("/") }];
+    if (pageCanonical !== canonicalUrl("/")) {
+      if (pathname.startsWith("/blog/")) breadcrumbs.push({ "@type": "ListItem", position: 2, name: "Blog", item: canonicalUrl("/blog") });
+      breadcrumbs.push({ "@type": "ListItem", position: breadcrumbs.length + 1, name: title, item: pageCanonical });
+    }
+    graphScript.textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": [officeSchema, { "@type": "WebSite", name: "Cantarelli Advocacia", url: canonicalUrl("/") }, { "@type": "BreadcrumbList", itemListElement: breadcrumbs }] });
+    if (!graphScript.parentNode) document.head.appendChild(graphScript);
     const fit = (text: string, max: number) => text.length <= max ? text : `${text.slice(0, max - 1).trimEnd()}…`;
     const pageTitle = fit(title, 60);
     const pageDescription = fit(description, 155);
@@ -103,6 +114,7 @@ const SEO = ({
 
     // Cleanup function to restore default title
     return () => {
+      graphScript.remove();
       document.title = "Cantarelli Advocacia | Especialistas em Direito Previdenciário - Recife/PE";
     };
   }, [title, description, keywords, ogTitle, ogDescription, ogImage, ogType, canonical, pathname, noindex]);
