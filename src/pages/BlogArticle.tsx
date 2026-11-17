@@ -268,7 +268,7 @@ const BlogArticle = () => {
         <section className="py-6 md:py-8">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-primary/5 border border-border rounded-lg p-5 md:p-8 text-center">
+              <div data-cta-service={service?.slug ?? ""} className="bg-primary/5 border border-border rounded-lg p-5 md:p-8 text-center">
                 <MessageCircle className="w-10 h-10 text-primary mx-auto mb-3" />
                 <h3 className="text-lg md:text-xl font-display font-bold text-foreground mb-2">
                   Tem dúvidas sobre o seu caso?
@@ -332,7 +332,7 @@ const BlogArticle = () => {
         {/* CTA Section */}
         <section className="py-10 md:py-12 bg-primary/5">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+            <div data-cta-service={service?.slug ?? ""} className="max-w-4xl mx-auto text-center">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-foreground mb-4">
                 Precisa de ajuda com seu benefício?
               </h2>

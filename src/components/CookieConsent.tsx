@@ -1,3 +1,4 @@
+import { installClickTracking, startWebVitals } from "@/lib/analytics";
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Cookie } from "lucide-react";
@@ -26,6 +27,10 @@ const CookieConsent = () => {
   const [consent, setConsent] = useState<string | null>(() => readConsent());
   const location = useLocation();
   const first = useRef(true);
+  useEffect(() => {
+    installClickTracking();
+    if (readConsent() === "accepted") startWebVitals();
+  }, []);
 
   // Registra cada troca de página no Meta Pixel (somente com consentimento)
   useEffect(() => {
@@ -35,7 +40,8 @@ const CookieConsent = () => {
     }
     if (consent !== "accepted") return;
     window.fbq?.("track", "PageView");
-    window.gtag?.("event", "page_view", { page_path: location.pathname, page_location: window.location.href });
+    const t = setTimeout(() => window.gtag?.("event", "page_view", { page_path: location.pathname, page_location: window.location.href, page_title: document.title }), 300);
+    return () => clearTimeout(t);
   }, [location.pathname, consent]);
 
   const choose = (value: "accepted" | "rejected") => {
@@ -48,6 +54,8 @@ const CookieConsent = () => {
     if (value === "accepted") {
       window.__loadMetaPixel?.();
       window.__loadGA?.();
+      window.gtag?.("consent", "update", { ad_storage: "granted", analytics_storage: "granted", ad_user_data: "granted", ad_personalization: "granted" });
+      startWebVitals();
     }
   };
 

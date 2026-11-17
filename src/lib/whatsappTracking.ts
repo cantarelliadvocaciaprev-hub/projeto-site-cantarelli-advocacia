@@ -1,3 +1,4 @@
+import { trackEvent } from "@/lib/analytics";
 import { supabase } from "@/integrations/supabase/client";
 import { getDeviceType } from "@/lib/reviewTracking";
 import { getSessionTrafficSource } from "@/lib/pageTracking";
@@ -41,9 +42,8 @@ export function trackWhatsAppClick(
       gtag?: (...a: unknown[]) => void;
       fbq?: (...a: unknown[]) => void;
     };
+    trackEvent("whatsapp_click", { cta_location: ctaLocation });
     if (localStorage.getItem("cookie-consent") === "accepted") {
-    w.gtag?.("event", "click_whatsapp", { page_path: window.location.pathname, cta_location: ctaLocation });
-    w.gtag?.("event", "generate_lead", { method: "whatsapp", cta_location: ctaLocation });
     w.fbq?.("track", "Contact", { content_name: ctaLocation });
     }
 

@@ -71,13 +71,16 @@
         document.head.appendChild(sc);
         window.dataLayer = window.dataLayer || [];
         window.gtag = function () { window.dataLayer.push(arguments); };
-        gtag('consent', 'default', { ad_storage: 'granted', analytics_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
+        gtag('consent', 'default', { ad_storage: 'denied', analytics_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500 });
+        gtag('consent', 'update', { ad_storage: 'granted', analytics_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
         gtag('js', new Date());
         gtag('config', id);
       };
       try {
         if (localStorage.getItem('cookie-consent') === 'accepted') {
-          window.addEventListener('load', function () { setTimeout(function(){ window.__loadMetaPixel(); window.__loadGA(); }, 3000); });
+          var go = function () { window.__loadMetaPixel(); window.__loadGA(); };
+          ['pointerdown','keydown','scroll'].forEach(function (ev) { window.addEventListener(ev, go, { once: true, passive: true }); });
+          window.addEventListener('load', function () { setTimeout(go, 2500); });
         }
       } catch (e) {}
     })();

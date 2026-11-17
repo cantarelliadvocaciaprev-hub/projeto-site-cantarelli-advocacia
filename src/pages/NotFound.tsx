@@ -1,3 +1,4 @@
+import { trackEvent } from "@/lib/analytics";
 import { scrollBehavior } from "@/lib/motion";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -14,7 +15,7 @@ const NotFound = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+    trackEvent("page_not_found", { page_path: location.pathname, referrer: document.referrer ? new URL(document.referrer).origin : "" });
   }, [location.pathname]);
 
   return (
