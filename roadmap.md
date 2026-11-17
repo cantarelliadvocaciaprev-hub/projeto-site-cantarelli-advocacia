@@ -22,7 +22,8 @@
 - [ ] Acrescentar cinco artigos de auxílio-acidente e fotografias próprias de cada tema
 - [x] Preparar cinco fotografias distintas para os futuros artigos de auxílio-acidente — quatro fotos existentes inspecionadas e quinta criada em 1536×1024; 119 artigos estáticos com arquivos de foto presentes; integração aguarda os textos
 - [ ] Conferir artigos do painel sem foto — consulta ao Lovable Cloud indisponível nesta conferência
-- [ ] Aplicar Fase 3: modelo de artigo, campos editoriais, seis hubs, links, HTML inicial e testes sem reescrever conteúdo jurídico; listar informações não confirmadas
+- [x] Aplicar estrutura da Fase 3: campos editoriais, seis hubs, datas existentes, aviso, sumário H2/H3, links relacionados e HTML inicial — 504 combinações sem excesso lateral ou H1/breadcrumb duplicados; testes passaram; pendências editoriais listadas
+- [ ] Completar Fase 3: respostas rápidas restantes, fontes estruturadas, autoria/revisão/foto, vigência, FAQs adicionais e páginas de serviço solicitadas — aguarda informações confirmadas e conteúdo jurídico do escritório; editor administrativo/HTML de posts exclusivos do painel depende do Lovable Cloud indisponível
 - [ ] Atualizar artigos anuais para 2027 sem alterar datas de normas, fontes e URLs já indexadas
 - [ ] Corrigir informações anuais não confirmadas e anomalias nas imagens indicadas; conferir testes e navegação
 - [x] Corrigir URLs canônicas, sitemap, robots, HTML inicial, metadados e links conforme roteiro técnico — 135 URLs publicadas retornam 200; sete aliases recuperam conteúdo na prévia; cache anual de assets confirmado
