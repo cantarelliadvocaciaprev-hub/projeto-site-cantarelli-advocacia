@@ -44,7 +44,7 @@ test("prerender contains real article text, service text and correct page schema
     }
     const sitemap = fs.readFileSync("output/sitemap.xml", "utf8");
     assert.equal([...sitemap.matchAll(/<loc>/g)].length, 135);
-    assert.doesNotMatch(sitemap, /\/admin|verificacao-deploy|www\./);
+    assert.doesNotMatch(sitemap, /\/admin|verificacao-deploy|<loc>https:\/\/www\./);
   } finally {
     process.chdir(root);
     fs.rmSync(dir, { recursive: true, force: true });
